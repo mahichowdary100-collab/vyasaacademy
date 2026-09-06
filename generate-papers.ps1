@@ -16,5 +16,8 @@ foreach ($f in $files) {
     }
 }
 
-$papers | ConvertTo-Json | Set-Content $outputFile -Encoding UTF8
+$papers = @($papers)
+$json = $papers | ConvertTo-Json
+if ($json -notmatch '^\s*\[') { $json = "[$json]" }
+Set-Content $outputFile -Value $json -Encoding UTF8
 Write-Host "Generated papers.json with $($papers.Count) paper(s)"

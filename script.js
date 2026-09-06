@@ -97,15 +97,17 @@ fetch('papers/papers.json')
   .then(r => r.json())
   .then(papers => {
     const container = document.getElementById('papersList');
-    if (!papers.length) return;
+    if (!papers || !papers.length) return;
     const groups = {};
     papers.forEach(p => {
-      const g = p.folder || 'Other';
+      const parts = p.folder.split(' / ');
+      const g = parts.slice(0, 2).join(' / ');
+      const subject = parts.slice(2).join(' / ') || 'Other';
       if (!groups[g]) groups[g] = [];
-      groups[g].push(p);
+      groups[g].push({ ...p, subject });
     });
     let html = '';
-    Object.keys(groups).forEach(group => {
+    Object.keys(groups).sort().forEach(group => {
       html += `<div class="papers-group"><h3 class="papers-group-title"><i class="fas fa-folder-open"></i> ${group}</h3>`;
       groups[group].forEach(p => {
         html += `
@@ -113,6 +115,7 @@ fetch('papers/papers.json')
             <i class="fas fa-file-pdf"></i>
             <div class="paper-info">
               <h4>${p.name.replace(/\.pdf$/i, '')}</h4>
+              <span class="paper-subject">${p.subject}</span>
               <span>${p.size} &middot; ${p.date}</span>
             </div>
             <span class="paper-download"><i class="fas fa-download"></i> Download</span>
