@@ -109,6 +109,42 @@ $pages = @(
     hero = "CBSE and ICSE coaching for Arekere students"
     sub = "Located close to Arekere, Vyasa Academy delivers expert maths and science tuition for Classes VI to XII in Bangalore - small batches, KCET and Olympiad preparation."
     about = "Students from Arekere choose Vyasa Academy for high-quality CBSE and ICSE tuition in Bangalore. Based in Hulimavu, we offer maths and science coaching for Classes VI to XII with individual attention and proven board results."
+  },
+  @{
+    slug = "best-tuition-centre-hulimavu"
+    title = "Best Tuition Centre in Hulimavu | Vyasa Academy"
+    desc = "Best tuition centre in Hulimavu, Bangalore for Classes VI-XII. Expert CBSE and ICSE maths and science coaching with proven board results."
+    h1 = 'Best Tuition Centre in <span class="highlight">Hulimavu</span>'
+    hero = "A tuition centre Hulimavu parents trust"
+    sub = "Vyasa Academy is recognised as the best tuition centre in Hulimavu for Classes VI to XII - experienced faculty, small batches, and a proven record of top scores."
+    about = "Vyasa Academy is the best tuition centre in Hulimavu, Bangalore for CBSE and ICSE students. We offer expert maths and science coaching for Classes VI to XII with small batches, KCET and Olympiad preparation, and a strong record of exam toppers."
+  },
+  @{
+    slug = "best-coaching-centre-hulimavu"
+    title = "Best Coaching Centre in Hulimavu | Vyasa Academy"
+    desc = "Best coaching centre in Hulimavu, Bangalore. CBSE and ICSE coaching for Classes VI-XII with experienced faculty, small batches, and proven results."
+    h1 = 'Best Coaching Centre in <span class="highlight">Hulimavu</span>'
+    hero = "Coaching centre known for student success"
+    sub = "One of the best coaching centres in Hulimavu for Classes VI to XII - disciplined approach, expert faculty, and consistent results in CBSE, ICSE and KCET."
+    about = "Vyasa Academy has earned a reputation as the best coaching centre in Hulimavu, Bangalore. Our CBSE and ICSE coaching for Classes VI to XII blends experienced faculty, small batches, and personal attention for proven academic results."
+  },
+  @{
+    slug = "tuition-classes-near-bannerghatta-road"
+    title = "Tuition Classes near Bannerghatta Road | Vyasa Academy"
+    desc = "Tuition classes near Bannerghatta Road, Bangalore for CBSE and ICSE Classes VI-XII. Maths and science coaching in Hulimavu, Bangalore."
+    h1 = 'Tuition Classes near <span class="highlight">Bannerghatta Road</span>'
+    hero = "Convenient CBSE and ICSE coaching off Bannerghatta Road"
+    sub = "Located in Hulimavu just off Bannerghatta Road, Vyasa Academy offers expert maths and science tuition for Classes VI to XII with proven results."
+    about = "Vyasa Academy is a leading tuition centre near Bannerghatta Road, Bangalore. Based in Hulimavu, we offer CBSE and ICSE maths and science coaching for Classes VI to XII, close to Bannerghatta Road and easy to reach for families in the area."
+  },
+  @{
+    slug = "cbse-tuition-bangalore"
+    title = "CBSE Tuition in Bangalore | Vyasa Academy"
+    desc = "CBSE tuition in Bangalore for Classes VI-XII. Expert maths and science coaching, small batches, KCET and Olympiad prep in Hulimavu, Bangalore."
+    h1 = 'CBSE Tuition in <span class="highlight">Bangalore</span>'
+    hero = "Quality CBSE coaching for Bangalore students"
+    sub = "Vyasa Academy offers expert CBSE tuition in Bangalore for Classes VI to XII - experienced faculty, small batches, and a proven record of top board scores."
+    about = "Vyasa Academy provides trusted CBSE tuition in Bangalore for Classes VI to XII. Located in Hulimavu, we specialise in maths and science coaching with small batches, KCET and Olympiad preparation, and consistent academic results."
   }
 )
 
