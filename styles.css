@@ -705,6 +705,12 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
 
 .slider-dots { display: flex; gap: 8px; }
 
+.testimonial-review-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
 .dot {
   width: 10px;
   height: 10px;
