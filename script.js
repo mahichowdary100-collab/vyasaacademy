@@ -93,7 +93,7 @@ document.querySelector('.testimonials-slider').addEventListener('mouseleave', ()
   }, 5000);
 });
 // ===== PRACTICE PAPERS =====
-fetch('papers/papers.json')
+fetch('/papers/papers.json')
   .then(r => r.json())
   .then(papers => {
     const container = document.getElementById('papersList');
