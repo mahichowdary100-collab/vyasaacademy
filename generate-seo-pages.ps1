@@ -73,6 +73,42 @@ $pages = @(
     hero = "Premier tuition for CBSE and ICSE students"
     sub = "Recognised as one of the best tuition centres in Bangalore for Classes VI to XII - expert faculty, small batches, and a proven record of top scores at Vyasa Academy, Hulimavu."
     about = "Vyasa Academy is one of the best tuition centres in Bangalore, offering affordable, high-quality CBSE and ICSE coaching for Classes VI to XII. From mathematics and science to KCET and Olympiad preparation, we help students across Bangalore achieve academic excellence."
+  },
+  @{
+    slug = "tuition-in-jp-nagar"
+    title = "Tuition in JP Nagar, Bangalore | Vyasa Academy"
+    desc = "Tuition classes in JP Nagar, Bangalore for CBSE and ICSE Classes VI-XII. Maths and science coaching with proven results near JP Nagar, Hulimavu."
+    h1 = 'Tuition Classes in <span class="highlight">JP Nagar</span>'
+    hero = "CBSE and ICSE coaching for JP Nagar students"
+    sub = "Conveniently located near JP Nagar, Vyasa Academy offers expert maths and science tuition for Classes VI to XII - small batches and a proven track record in Bangalore."
+    about = "Students from JP Nagar trust Vyasa Academy for high-quality CBSE and ICSE tuition in Bangalore. Located in Hulimavu near JP Nagar, we offer maths and science coaching for Classes VI to XII with small batches and personal attention."
+  },
+  @{
+    slug = "tuition-in-bilekahalli"
+    title = "Tuition in Bilekahalli, Bangalore | Vyasa Academy"
+    desc = "Tuition classes in Bilekahalli, Bangalore for CBSE and ICSE Classes VI-XII. Expert maths and science coaching near Bilekahalli, Hulimavu."
+    h1 = 'Tuition Classes in <span class="highlight">Bilekahalli</span>'
+    hero = "CBSE and ICSE coaching for Bilekahalli students"
+    sub = "Located in Hulimavu, right next to Bilekahalli, Vyasa Academy provides expert maths and science tuition for Classes VI to XII with a proven record of board toppers."
+    about = "Vyasa Academy is a trusted tuition centre for CBSE and ICSE students from Bilekahalli and nearby areas in Bangalore. Maths and science coaching for Classes VI to XII, exam-focused preparation, and small class sizes."
+  },
+  @{
+    slug = "tuition-in-mico-layout"
+    title = "Tuition in MICO Layout, Bangalore | Vyasa Academy"
+    desc = "Tuition classes in MICO Layout, Bangalore for CBSE and ICSE Classes VI-XII. Maths and science coaching near MICO Layout, Hulimavu."
+    h1 = 'Tuition Classes in <span class="highlight">MICO Layout</span>'
+    hero = "CBSE and ICSE coaching for MICO Layout students"
+    sub = "Families from MICO Layout trust Vyasa Academy for quality maths and science tuition in Bangalore - Classes VI to XII, competitive exam prep, and proven results."
+    about = "Vyasa Academy offers CBSE and ICSE tuition for students from MICO Layout and surrounding areas in Bangalore. Conveniently located in Hulimavu, we provide maths and science coaching for Classes VI to XII with a strong record of academic success."
+  },
+  @{
+    slug = "tuition-in-arekere"
+    title = "Tuition in Arekere, Bangalore | Vyasa Academy"
+    desc = "Tuition classes in Arekere, Bangalore for CBSE and ICSE Classes VI-XII. Maths and science coaching near Arekere, Hulimavu."
+    h1 = 'Tuition Classes in <span class="highlight">Arekere</span>'
+    hero = "CBSE and ICSE coaching for Arekere students"
+    sub = "Located close to Arekere, Vyasa Academy delivers expert maths and science tuition for Classes VI to XII in Bangalore - small batches, KCET and Olympiad preparation."
+    about = "Students from Arekere choose Vyasa Academy for high-quality CBSE and ICSE tuition in Bangalore. Based in Hulimavu, we offer maths and science coaching for Classes VI to XII with individual attention and proven board results."
   }
 )
 
