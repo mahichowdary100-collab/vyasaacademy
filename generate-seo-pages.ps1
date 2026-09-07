@@ -64,6 +64,15 @@ $pages = @(
     hero = "Advanced coaching for PU, CBSE and ICSE"
     sub = "Class 12 advanced maths and science coaching in Hulimavu with focused exam strategy and KCET preparation at Vyasa Academy."
     about = "Vyasa Academy provides Class 12 tuition in Hulimavu, Bangalore for PU, CBSE and ICSE students - advanced maths and science coaching with focused exam strategy and KCET preparation."
+  },
+  @{
+    slug = "tuition-centre-bangalore"
+    title = "Best Tuition Centre in Bangalore | Vyasa Academy"
+    desc = "Best tuition centre in Bangalore for Classes VI-XII. CBSE and ICSE maths and science coaching, KCET and Olympiad prep in Hulimavu, Bangalore."
+    h1 = 'Best Tuition Centre in <span class="highlight">Bangalore</span>'
+    hero = "Premier tuition for CBSE and ICSE students"
+    sub = "Recognised as one of the best tuition centres in Bangalore for Classes VI to XII - expert faculty, small batches, and a proven record of top scores at Vyasa Academy, Hulimavu."
+    about = "Vyasa Academy is one of the best tuition centres in Bangalore, offering affordable, high-quality CBSE and ICSE coaching for Classes VI to XII. From mathematics and science to KCET and Olympiad preparation, we help students across Bangalore achieve academic excellence."
   }
 )
 
