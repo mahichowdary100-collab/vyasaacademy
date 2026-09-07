@@ -5,7 +5,7 @@ $pages = @(
   @{
     slug = "cbse-tuition-hulimavu"
     title = "CBSE Tuition in Hulimavu, Bangalore | Vyasa Academy"
-    desc = "CBSE tuition in Hulimavu, Bangalore for Classes VI-XII. Expert maths and science coaching, small batches near Bilekahalli and MICO Layout."
+    desc = "CBSE tuition in Hulimavu, Bangalore for Classes VI-XII. Expert maths and science coaching in small batches near Bilekahalli and MICO Layout. Enquire today."
     h1 = 'CBSE Tuition in <span class="highlight">Hulimavu</span>'
     hero = "Expert CBSE tuition for Classes VI to XII"
     sub = "Focused CBSE coaching at Vyasa Academy, Hulimavu - experienced faculty, small batches, and proven board results for students across Hulimavu, Bilekahalli, and MICO Layout."
@@ -14,7 +14,7 @@ $pages = @(
   @{
     slug = "icse-tuition-hulimavu"
     title = "ICSE Tuition in Hulimavu, Bangalore | Vyasa Academy"
-    desc = "ICSE tuition in Hulimavu, Bangalore for Classes VI-XII. Experienced faculty, individual attention, and strong foundation for board exams."
+    desc = "ICSE tuition in Hulimavu, Bangalore for Classes VI-XII. Experienced faculty, individual attention, and a strong foundation for board exams at Vyasa Academy."
     h1 = 'ICSE Tuition in <span class="highlight">Hulimavu</span>'
     hero = "Expert ICSE tuition for Classes VI to XII"
     sub = "Subject-wise ICSE coaching at Vyasa Academy, Hulimavu - experienced faculty and personal attention to help students excel in board exams and beyond."
@@ -23,7 +23,7 @@ $pages = @(
   @{
     slug = "maths-tuition-hulimavu"
     title = "Maths Tuition in Hulimavu, Bangalore | Vyasa Academy"
-    desc = "Maths tuition in Hulimavu, Bangalore for CBSE and ICSE Classes VI-XII. Led by Mahendra Babu Chennupati with 10+ years of experience."
+    desc = "Maths tuition in Hulimavu, Bangalore for CBSE and ICSE Classes VI-XII. Led by Mahendra Babu Chennupati with 10+ years of experience and proven results."
     h1 = 'Maths Tuition in <span class="highlight">Hulimavu</span>'
     hero = "Strong maths foundations for CBSE and ICSE"
     sub = "Led by Mahendra Babu Chennupati with 10+ years of experience, our maths tuition in Hulimavu builds strong foundations and exam confidence for Classes VI to XII."
@@ -41,7 +41,7 @@ $pages = @(
   @{
     slug = "kcet-coaching-hulimavu"
     title = "KCET Coaching in Hulimavu, Bangalore | Vyasa Academy"
-    desc = "KCET coaching in Hulimavu, Bangalore for PCM aspirants. Structured coaching, mock tests, and strategy at Vyasa Academy."
+    desc = "KCET coaching in Hulimavu, Bangalore for PCM aspirants. Structured classes, practice papers, and mock tests with exam strategy at Vyasa Academy."
     h1 = 'KCET Coaching in <span class="highlight">Hulimavu</span>'
     hero = "Structured KCET preparation for aspiring engineers"
     sub = "PCM foundations, mock tests, and exam strategy built into a structured KCET coaching program at Vyasa Academy, Hulimavu."
@@ -50,7 +50,7 @@ $pages = @(
   @{
     slug = "class-10-tuition-hulimavu"
     title = "Class 10 Tuition in Hulimavu, Bangalore | Vyasa Academy"
-    desc = "Class 10 board exam tuition in Hulimavu for CBSE and ICSE. Maths and science coaching with mock tests and doubt-clearing at Vyasa Academy."
+    desc = "Class 10 board exam tuition in Hulimavu for CBSE and ICSE. Maths and science coaching with mock tests, practice papers and doubt clearing at Vyasa Academy."
     h1 = 'Class 10 Tuition in <span class="highlight">Hulimavu</span>'
     hero = "Board exam preparation for CBSE and ICSE"
     sub = "Class 10 maths and science coaching in Hulimavu with mock tests, practice papers, and one-on-one doubt clearing at Vyasa Academy."
@@ -59,7 +59,7 @@ $pages = @(
   @{
     slug = "class-12-tuition-hulimavu"
     title = "Class 12 Tuition in Hulimavu, Bangalore | Vyasa Academy"
-    desc = "Class 12 tuition in Hulimavu for PU, CBSE and ICSE. Advanced maths and science coaching with exam strategy at Vyasa Academy."
+    desc = "Class 12 tuition in Hulimavu for PU, CBSE and ICSE. Advanced maths and science coaching with structured exam strategy and KCET preparation."
     h1 = 'Class 12 Tuition in <span class="highlight">Hulimavu</span>'
     hero = "Advanced coaching for PU, CBSE and ICSE"
     sub = "Class 12 advanced maths and science coaching in Hulimavu with focused exam strategy and KCET preparation at Vyasa Academy."
@@ -86,7 +86,7 @@ $pages = @(
   @{
     slug = "tuition-in-bilekahalli"
     title = "Tuition in Bilekahalli, Bangalore | Vyasa Academy"
-    desc = "Tuition classes in Bilekahalli, Bangalore for CBSE and ICSE Classes VI-XII. Expert maths and science coaching near Bilekahalli, Hulimavu."
+    desc = "Tuition classes in Bilekahalli, Bangalore for CBSE and ICSE Classes VI-XII. Expert maths and science coaching near Bilekahalli with proven board results."
     h1 = 'Tuition Classes in <span class="highlight">Bilekahalli</span>'
     hero = "CBSE and ICSE coaching for Bilekahalli students"
     sub = "Located in Hulimavu, right next to Bilekahalli, Vyasa Academy provides expert maths and science tuition for Classes VI to XII with a proven record of board toppers."
@@ -95,7 +95,7 @@ $pages = @(
   @{
     slug = "tuition-in-mico-layout"
     title = "Tuition in MICO Layout, Bangalore | Vyasa Academy"
-    desc = "Tuition classes in MICO Layout, Bangalore for CBSE and ICSE Classes VI-XII. Maths and science coaching near MICO Layout, Hulimavu."
+    desc = "Tuition classes in MICO Layout, Bangalore for CBSE and ICSE Classes VI-XII. Maths and science coaching near MICO Layout with proven academic results."
     h1 = 'Tuition Classes in <span class="highlight">MICO Layout</span>'
     hero = "CBSE and ICSE coaching for MICO Layout students"
     sub = "Families from MICO Layout trust Vyasa Academy for quality maths and science tuition in Bangalore - Classes VI to XII, competitive exam prep, and proven results."
@@ -104,7 +104,7 @@ $pages = @(
   @{
     slug = "tuition-in-arekere"
     title = "Tuition in Arekere, Bangalore | Vyasa Academy"
-    desc = "Tuition classes in Arekere, Bangalore for CBSE and ICSE Classes VI-XII. Maths and science coaching near Arekere, Hulimavu."
+    desc = "Tuition classes in Arekere, Bangalore for CBSE and ICSE Classes VI-XII. Maths and science coaching near Arekere with small batches. Visit Vyasa Academy."
     h1 = 'Tuition Classes in <span class="highlight">Arekere</span>'
     hero = "CBSE and ICSE coaching for Arekere students"
     sub = "Located close to Arekere, Vyasa Academy delivers expert maths and science tuition for Classes VI to XII in Bangalore - small batches, KCET and Olympiad preparation."
@@ -113,7 +113,7 @@ $pages = @(
   @{
     slug = "best-tuition-centre-hulimavu"
     title = "Best Tuition Centre in Hulimavu | Vyasa Academy"
-    desc = "Best tuition centre in Hulimavu, Bangalore for Classes VI-XII. Expert CBSE and ICSE maths and science coaching with proven board results."
+    desc = "Best tuition centre in Hulimavu, Bangalore for Classes VI-XII. Expert CBSE and ICSE maths and science coaching in small batches with proven results."
     h1 = 'Best Tuition Centre in <span class="highlight">Hulimavu</span>'
     hero = "A tuition centre Hulimavu parents trust"
     sub = "Vyasa Academy is recognised as the best tuition centre in Hulimavu for Classes VI to XII - experienced faculty, small batches, and a proven record of top scores."
@@ -131,7 +131,7 @@ $pages = @(
   @{
     slug = "tuition-classes-near-bannerghatta-road"
     title = "Tuition Classes near Bannerghatta Road | Vyasa Academy"
-    desc = "Tuition classes near Bannerghatta Road, Bangalore for CBSE and ICSE Classes VI-XII. Maths and science coaching in Hulimavu, Bangalore."
+    desc = "Tuition classes near Bannerghatta Road, Bangalore for CBSE and ICSE Classes VI-XII. Maths and science coaching in Hulimavu, Bangalore. Book a visit."
     h1 = 'Tuition Classes near <span class="highlight">Bannerghatta Road</span>'
     hero = "Convenient CBSE and ICSE coaching off Bannerghatta Road"
     sub = "Located in Hulimavu just off Bannerghatta Road, Vyasa Academy offers expert maths and science tuition for Classes VI to XII with proven results."
@@ -148,12 +148,55 @@ $pages = @(
   }
 )
 
+function Set-ContentUtf8 {
+  param([string]$Path, [string]$Value)
+  [System.IO.File]::WriteAllText($Path, $Value, [System.Text.UTF8Encoding]::new($false))
+}
+
+$nl = "`n"
+
 foreach ($p in $pages) {
   $dir = Join-Path $base $p.slug
   New-Item -ItemType Directory -Path $dir -Force | Out-Null
+  $pageUrl = "https://www.vyasaacademy.in/$($p.slug)/"
+  $pageTitle = $p.title
+  $pageDesc = $p.desc
 
-  $titleOld = '<title>Vyasa Academy | CBSE & ICSE Tuitions for VI-XII</title>'
-  $titleNew = "<title>$($p.title)</title>`r`n  <meta name=`"description`" content=`"$($p.desc)`" />`r`n  <link rel=`"canonical`" href=`"https://www.vyasaacademy.in/$($p.slug)/`" />"
+  $titleOld = '<title>Vyasa Academy | CBSE &amp; ICSE Tuitions for VI-XII</title>'
+  $titleNew = "<title>$pageTitle</title>$nl  <meta name=`"description`" content=`"$pageDesc`" />$nl  <link rel=`"canonical`" href=`"$pageUrl`" />$nl  <meta property=`"og:type`" content=`"website`" />$nl  <meta property=`"og:site_name`" content=`"Vyasa Academy`" />$nl  <meta property=`"og:title`" content=`"$pageTitle`" />$nl  <meta property=`"og:description`" content=`"$pageDesc`" />$nl  <meta property=`"og:url`" content=`"$pageUrl`" />$nl  <meta property=`"og:image`" content=`"https://www.vyasaacademy.in/images/classroom.png`" />$nl  <meta property=`"og:locale`" content=`"en_IN`" />$nl  <meta name=`"twitter:card`" content=`"summary_large_image`" />$nl  <meta name=`"twitter:title`" content=`"$pageTitle`" />$nl  <meta name=`"twitter:description`" content=`"$pageDesc`" />$nl  <meta name=`"twitter:image`" content=`"https://www.vyasaacademy.in/images/classroom.png`" />"
+
+  $crumbOld = '<script type="application/ld+json">' + $nl + '  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.vyasaacademy.in/"
+      }
+    ]
+  }
+  </script>'
+  $crumbNew = '<script type="application/ld+json">' + $nl + '  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.vyasaacademy.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "' + $p.title.Replace(' | Vyasa Academy', '') + '",
+        "item": "' + $pageUrl + '"
+      }
+    ]
+  }
+  </script>'
 
   $h1Old = '<h1>Welcome to <span class="highlight">Vyasa Academy</span></h1>'
   $h1New = "<h1>$($p.h1)</h1>"
@@ -169,6 +212,7 @@ foreach ($p in $pages) {
 
   $page = $html
   $page = $page.Replace($titleOld, $titleNew)
+  $page = $page.Replace($crumbOld, $crumbNew)
   $page = $page.Replace($h1Old, $h1New)
   $page = $page.Replace($heroOld, $heroNew)
   $page = $page.Replace($subOld, $subNew)
@@ -178,6 +222,6 @@ foreach ($p in $pages) {
   $page = $page.Replace('href="styles.css"', 'href="/styles.css"')
   $page = $page.Replace('src="script.js"', 'src="/script.js"')
 
-  Set-Content -Path (Join-Path $dir "index.html") -Value $page -Encoding UTF8
+  Set-ContentUtf8 -Path (Join-Path $dir "index.html") -Value $page
   Write-Host "Generated $($p.slug)/index.html"
 }
