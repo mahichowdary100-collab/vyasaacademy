@@ -225,12 +225,14 @@ function Get-CardHtml($a) {
 }
 
 function Get-CtaHtml($a) {
+  $intro = 'At our tuition centre in Hulimavu, Bangalore, we teach CBSE and ICSE students in small batches with individual attention, regular mock tests and doubt clearing for Classes VI-XII.'
+  if ($a.cta) { $intro = $a.cta }
   $buttons = @()
   foreach ($c in $a.courses) {
     $buttons += "<a href=""$($c.url)"" class=""btn btn-primary"">$($c.label)</a>"
   }
   $buttons += '<a href="https://wa.me/919494901006" target="_blank" rel="noopener" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>'
-  return "<section class=""blog-cta"">$nl  <h2>Get these concepts explained properly</h2>$nl  <p>At our tuition centre in Hulimavu, Bangalore, we teach CBSE and ICSE students in small batches with individual attention, regular mock tests and doubt clearing for Classes VI-XII.</p>$nl  <div class=""blog-cta-buttons"">$nl    $($buttons -join "$nl    ")$nl  </div>$nl</section>"
+  return "<section class=""blog-cta"">$nl  <h2>Get these concepts explained properly</h2>$nl  <p>$intro</p>$nl  <div class=""blog-cta-buttons"">$nl    $($buttons -join "$nl    ")$nl  </div>$nl</section>"
 }
 
 function Get-SharingHtml($a) {
