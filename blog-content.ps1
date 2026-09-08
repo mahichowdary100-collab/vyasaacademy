@@ -68,6 +68,13 @@ $script:blogAuthors = @(
     name     = 'Venu Chennupati'
     jobTitle = 'Co-Founder & Mathematics Faculty'
     bio      = 'Co-Founder of Vyasa Academy specialising in mathematics coaching with a focus on problem-solving and conceptual clarity.'
+  },
+  @{
+    key      = 'vyasa'
+    name     = 'Vyasa Academy'
+    jobTitle = 'Academic Content Team'
+    bio      = 'Study guides written by the teaching faculty at Vyasa Academy, Hulimavu, Bangalore, to help CBSE and ICSE students learn chemistry with clarity.'
+    url      = 'https://www.vyasaacademy.in/#about'
   }
 )
 
@@ -885,6 +892,544 @@ $script:blogArticles = @(
       @{ t = 'p'; s = @('Open the book, close it, and attempt a problem that was not assigned as homework.','If you breeze through because you know what to do next, you understand.','If you stall until you peek at the answer, you were memorising.','That honest test will tell you exactly which chapter needs the why-step next.') },
       @{ t = 'h2'; s = 'The concluding advice' },
       @{ t = 'p'; s = @('Use memory as the tape and understanding as the map, and the two work together.','Commit the tables and routines to memory, invest two minutes in every why, and test yourself with changed problems.','That balance is what turns mathematics from a list into a skill.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-study-chemistry-effectively-for-cbse-board-exams'
+    title    = 'How to Study Chemistry Effectively for CBSE Board Exams'
+    cat      = 'chemistry'
+    author   = 'vyasa'
+    pub      = '2026-09-08'
+    upd      = '2026-09-08'
+    excerpt  = 'Chemistry mixes formulas, reactions and facts. The three-branch study method helps CBSE students learn physical, organic and inorganic chemistry properly.'
+    keywords = @('how to study chemistry','CBSE chemistry preparation','chemistry board exam strategy','physical organic and inorganic chemistry')
+    related  = @('importance-of-ncert-for-cbse-chemistry-preparation','how-to-prepare-chemistry-last-30-days-before-board-exams','how-to-write-better-chemistry-answers-in-cbse-exams','how-to-build-a-study-routine')
+    cta      = 'Chemistry becomes manageable when each branch is studied the way it behaves. The Science and Chemistry coaching at Vyasa Academy in Hulimavu teaches all three branches with regular practice tests.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Chemistry sits halfway between physics and biology: it has equations like a maths problem and facts like a history chapter.','Students who treat it as pure memorising blank out on application questions, while students who treat it as pure reasoning miss the facts the paper rewards.','The solution is to study chemistry as three subjects, because physically it is three subjects.') },
+      @{ t = 'h2'; s = 'Chemistry has three different learning styles' },
+      @{ t = 'p'; s = @('Almost every chapter in the chemistry syllabus belongs to one of three branches, and each branch rewards a different method.') },
+      @{ t = 'ul'; i = @('Physical chemistry behaves like small physics: it rewards formulas, numericals and unit discipline.','Organic chemistry behaves like logic: it rewards understanding functional groups and seeing reactions as patterns.','Inorganic chemistry behaves like structured memory: it rewards the periodic table, organised revision and repeated recall.') },
+      @{ t = 'p'; s = @('Plan your week so each branch gets the treatment it needs.','Read our <a href="/blog/how-to-study-physics-for-cbse-class-12/">physics study guide</a> for the numerical mindset, and our <a href="/blog/how-to-memorise-the-periodic-table/">periodic table article</a> for the inorganic mindset.') },
+      @{ t = 'h2'; s = 'Read the NCERT actively, not passively' },
+      @{ t = 'p'; s = @('Passive reading is moving your eyes over sentences.','Active reading is stopping after each section and answering a question you set yourself.','For chemistry, read one topic, close the book, and write two lines: what happened and under what conditions.','Then check the book and add only what you missed.') },
+      @{ t = 'h2'; s = 'Record the conditions with every concept' },
+      @{ t = 'p'; s = @('Chemistry is full of statements that are true only under conditions.','A reaction may need a catalyst, a particular temperature, or light.','Whenever you write a note, add the condition in a corner box: that is the part examiners love to test, and the part rote revision forgets.') },
+      @{ t = 'h2'; s = 'Run a weekly three-branch rotation' },
+      @{ t = 'ol'; i = @('Monday and Tuesday: physical chemistry, half concept revision and half numericals.','Wednesday and Thursday: organic chemistry, one functional group with all its labelled reactions.','Friday: inorganic chemistry, the periodic table plus one group or compound family in detail.','Saturday: one mixed test pulling questions from all three branches, marked and logged.','Sunday: fix the biggest mistake from that test, and nothing else.') },
+      @{ t = 'p'; s = @('This rotation keeps every branch in memory at once instead of letting two of them rot while you binge on the third.') },
+      @{ t = 'h2'; s = 'Use the official syllabus as your checklist' },
+      @{ t = 'p'; s = @('Print the current CBSE syllabus list from the official source and tick every topic as you learn it.','Next to each tick write a confidence mark: strong, shaky, or still unclear.','Your revision plan then writes itself: rebuild the shaky topics first and the unclear ones with a teacher or a fresh source.','Do not trust your memory to know what you have covered; the checklist will tell you honestly.') },
+      @{ t = 'h2'; s = 'Revision that actually sticks' },
+      @{ t = 'p'; s = @('In the final weeks, revise by recall, not by rereading.','Close the book and write what you remember about each topic on a blank page, then compare.','The gaps you find are the only things that need your time, and chemistry revision compresses into a few tight sessions.') },
+      @{ t = 'h2'; s = 'The closing advice' },
+      @{ t = 'p'; s = @('Effective chemistry study follows the nature of the branch: formulas for physical, patterns for organic, structured memory for inorganic.','Read actively, record conditions, rotate the branches weekly, and revise by recall.','Keep that rhythm and the subject stops being a memorising marathon.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-score-better-in-cbse-class-12-chemistry'
+    title    = 'How to Score Better in CBSE Class 12 Chemistry'
+    cat      = 'chemistry'
+    author   = 'vyasa'
+    pub      = '2026-09-07'
+    upd      = '2026-09-07'
+    excerpt  = 'Class 12 chemistry marks leak from small habits. Diagnose the branch where you lose marks, then fix format, formulas and recall systematically.'
+    keywords = @('CBSE Class 12 chemistry','score well in class 12 chemistry','class 12 chemistry strategy','chemistry board preparation')
+    related  = @('how-to-study-chemistry-effectively-for-cbse-board-exams','importance-of-ncert-for-cbse-chemistry-preparation','how-to-prepare-chemistry-last-30-days-before-board-exams','cbse-class-12-board-exam-revision-plan')
+    cta      = 'Class 12 chemistry rewards consistent coaching with regular class tests and feedback. The Class 12 Science program at Vyasa Academy in Hulimavu provides both.'
+    courses  = @(
+      @{ label = 'Class 12 Tuition in Hulimavu'; url = '/class-12-tuition-hulimavu/' },
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Class 12 chemistry spreads its marks across three branches and the practical work, so a general improvement plan helped by one lucky chapter rarely last.','The score goes up when you find out exactly where the marks leak, because the leaks are usually only two or three.','Here is how to find them and close them.') },
+      @{ t = 'h2'; s = 'Diagnose your mark leaks first' },
+      @{ t = 'p'; s = @('Take your most recent full chemistry paper and a three-column sheet labelled physical, organic and inorganic.','Award every lost mark to one of the three columns and add a note for the cause: wrong formula, half-remembered reaction, spelling, no condition, or calculation slip.','The column with the most marks is your project for the month.','Most students discover one branch is doing almost all the damage.') },
+      @{ t = 'h2'; s = 'Physical chemistry: units and method first' },
+      @{ t = 'p'; s = @('Physical chemistry errors are usually method errors.','Write the formula, substitute with units, and let the units check your work before you trust the number.','NCERT examples first, then a few more of the same type, then a timed set.','The approach is identical to the puzzle solving described in our <a href="/blog/how-to-prepare-physical-chemistry-numericals/">physical chemistry numericals guide</a>.') },
+      @{ t = 'h2'; s = 'Organic chemistry: build by functional group' },
+      @{ t = 'p'; s = @('Class 12 organic questions reward students who can move between related compounds.','Build one reaction map per functional group: what makes it, what it becomes, and the conditions each step needs.','Practise conversion problems daily and read <a href="/blog/how-to-avoid-common-mistakes-in-organic-chemistry/">common organic mistakes</a> before the exam so you recognise the traps.') },
+      @{ t = 'h2'; s = 'Inorganic chemistry: test yourself, do not skim' },
+      @{ t = 'p'; s = @('Inorganic chapters feel familiar when you read them and empty when you close the book.','So revise the way the exam finds you: recall pages written from memory, names and formulas the examiner will spell-check, and the periodic table as your base map.','A <a href="/blog/how-to-remember-the-periodic-table/">recall routine for the periodic table</a> lifts every inorganic chapter at once.') },
+      @{ t = 'h2'; s = 'Answer formatting is worth real marks' },
+      @{ t = 'ul'; i = @('Write balanced chemical equations with state symbols where the question expects them.','Give IUPAC names with careful spelling; a wrong letter costs the mark.','Show the reasoning sentence before a reason-based answer.','Mark separate parts of a question clearly and follow the working conventions taught for each type.') },
+      @{ t = 'h2'; s = 'A weekly plan that raises the average' },
+      @{ t = 'ol'; i = @('Monday: attack the weakest branch from your diagnosis sheet with focused practice.','Wednesday: one full previous-year paper, timed, with all answers formatted properly.','Friday: review the paper, log every lost mark by cause.','Weekend: redo from memory the reactions and formulas that leaked, then the periodic table once.') },
+      @{ t = 'p'; s = @('Run this rhythm for a month and the weakest column shrinks visibly, which is exactly what lifts an overall score.') },
+      @{ t = 'h2'; s = 'The honest close' },
+      @{ t = 'p'; s = @('A better Class 12 chemistry score is a diagnostic project.','Find the leaking branch, fix its method, format answers the way examiners mark them, and revise by recall.','Do that steadily and the improvement is not luck.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-study-organic-chemistry-easily'
+    title    = 'How to Study Organic Chemistry Easily'
+    cat      = 'chemistry'
+    author   = 'vyasa'
+    pub      = '2026-09-06'
+    upd      = '2026-09-06'
+    excerpt  = 'Organic chemistry looks like an endless list of reactions, but it runs on a small set of patterns. Learn functional groups as the organising idea.'
+    keywords = @('how to study organic chemistry','organic chemistry class 12','organic chemistry tips','reaction mechanisms easy')
+    related  = @('how-to-remember-chemical-reactions','how-to-avoid-common-mistakes-in-organic-chemistry','best-strategy-to-learn-chemical-equations','understanding-concepts-vs-memorising-mathematics')
+    cta      = 'Organic chemistry becomes easy when a teacher shows you the patterns behind the reactions. The Chemistry batches at Vyasa Academy in Hulimavu are built around exactly that approach.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Students panic about organic chemistry because the chapter looks like four hundred unrelated reactions.','It is not four hundred unrelated reactions.','It is a small set of reaction patterns acting on a small set of buildings blocks called functional groups.','Once you see the pattern, the chapter shrinks to something manageable.') },
+      @{ t = 'h2'; s = 'Meet the functional groups first' },
+      @{ t = 'p'; s = @('A functional group is a small cluster of atoms that gives a molecule its behaviour.','If you know the group, you can predict what the molecule will do even when you have never seen that exact compound before.') },
+      @{ t = 'ul'; i = @('Alkenes and alkynes: double and triple carbon bonds, reactive at the pi bond.','Alcohols: an OH group, the source of many addition and oxidation reactions.','Aldehydes and ketones: the carbonyl group, the centre of a large family of reactions.','Carboxylic acids and derivatives: the acid group and everything made from it.','Amines and haloalkanes: nitrogen and halogen groups with their own reaction patterns.') },
+      @{ t = 'p'; s = @('Draw each group, learn its name, and note one thing it reliably does.','That one note becomes a prediction tool for the whole chapter.') },
+      @{ t = 'h2'; s = 'Organise reactions around the group, not the chapter' },
+      @{ t = 'p'; s = @('Most students learn reactions in chapter order and end up with a jumbled list.','Instead, build one page per functional group that answers three questions: what makes it, what it changes into, and which reagent drives each change.','Crossover questions in exams then become easy because you are already navigating between groups.') },
+      @{ t = 'h2'; s = 'Use mechanism sentences, not reaction dumps' },
+      @{ t = 'p'; s = @('Write each reaction as a sentence instead of a wall of arrows: this reagent attacks this site, the bond breaks, and the product forms.','Add the condition at the end: temperature, catalyst, or light.','A sentence is easier to remember than an arrow because it has a story, and the story is exactly how an examiner frames a question.') },
+      @{ t = 'h2'; s = 'Practise conversions like small puzzles' },
+      @{ t = 'p'; s = @('Conversion problems ask you to turn one compound into another in a few steps.','Treat them as a chain: from the starting group to a middle group to the target group.','Attempt one conversion daily from the previous-year question set and show every step.','The pattern appears after a dozen conversions.') },
+      @{ t = 'h2'; s = 'A 15-minute daily reaction review' },
+      @{ t = 'ul'; i = @('Write the list of functional groups from memory.','For one group, write every reaction you know with its conditions.','Cover one side of each reaction and predict the missing part.','Note the gap you found and recheck it in the book immediately.') },
+      @{ t = 'h2'; s = 'Why this beats memorising the list' },
+      @{ t = 'p'; s = @('Rote memory of reactions fails the moment the exam changes a detail.','Pattern knowledge survives every variation because it works from the functional group and the reagent, which is how the question was written in the first place.','Read our comparison of <a href="/blog/understanding-concepts-vs-memorising-mathematics/">concepts versus memorising</a>, which applies to organic chemistry more than any other branch.') },
+      @{ t = 'h2'; s = 'The final word' },
+      @{ t = 'p'; s = @('Organic chemistry runs on patterns: functional groups, their habits, and the conditions that drive each change.','Learn the groups, build reaction maps, and write reactions as sentences.','The four hundred reactions then organise themselves into a handful of themes, and the chapter stops being heavy.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-remember-chemical-reactions'
+    title    = 'How to Remember Chemical Reactions'
+    cat      = 'chemistry'
+    author   = 'vyasa'
+    pub      = '2026-09-05'
+    upd      = '2026-09-05'
+    excerpt  = 'Chemical reactions stick when you group them by family, write them in sentences, and recall them with the no-look method. Here is the full system.'
+    keywords = @('remember chemical reactions','chemical reactions revision','how to memorise reactions','reaction notebook')
+    related  = @('how-to-study-organic-chemistry-easily','best-strategy-to-learn-chemical-equations','how-to-balance-chemical-equations-easily','how-to-remember-mathematical-formulas')
+    cta      = 'Reactions are easier to keep with a teacher checking your recall work. The Chemistry coaching at Vyasa Academy in Hulimavu runs periodic reaction tests before every exam cycle.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('A chapter of chemistry can contain dozens of reactions, and the brain refuses to hold a flat list of that size.','It will hold a few families comfortably.','So the trick is compression: group reactions into families, write them the same way every time, and recall them from memory on a schedule.') },
+      @{ t = 'h2'; s = 'Group reactions by family first' },
+      @{ t = 'p'; s = @('Most reactions belong to a recognisable type.','Give every reaction a family label when you first meet it.') },
+      @{ t = 'ul'; i = @('Combination and decomposition: two things join, or one thing splits.','Displacement: one element replaces another in a compound.','Double displacement and precipitation: partners swap and a solid may form.','Acid-base: neutralisation with salt and water as the usual products.','Oxidation and reduction: electron gain and loss, often tested together.','Organic addition, substitution and elimination: the three workhorse patterns of carbon chemistry.') },
+      @{ t = 'p'; s = @('Once a reaction has a family label, it stops being an isolated fact and starts being an example of something you already know.') },
+      @{ t = 'h2'; s = 'Write every reaction in a standard sentence' },
+      @{ t = 'p'; s = @('Use one format for every reaction in your notebook: reactants, the arrow, conditions above the arrow, and products.','Add a one-line note under each: what the reaction is for and the classic condition to remember.','A uniform format lets your eye compare reactions side by side, which is how patterns become visible.') },
+      @{ t = 'h2'; s = 'Conditions are part of the reaction' },
+      @{ t = 'p'; s = @('The same reactants can give different products under different conditions.','That is why the conditions live on the arrow: the catalyst, the temperature, the light, or the acid.','When you revise, cover the products and ask which conditions were needed.','Examiners test conditions precisely because students memorise only the visible parts.') },
+      @{ t = 'h2'; s = 'Use the no-look method for revision' },
+      @{ t = 'ol'; i = @('Cover the products and write them from memory using only the reactants.','Then cover the reactants and write what must have been there to make the given products.','Then cover everything except the family label and rebuild the whole reaction.','Check, mark the gaps, and repeat only the gaps.') },
+      @{ t = 'h2'; s = 'Schedule recall like a formula routine' },
+      @{ t = 'p'; s = @('A reaction seen once a week fades; one recalled a day, then three days, then a week, then a month, stays.','Link this to the same schedule you use for formulas in <a href="/blog/how-to-remember-mathematical-formulas/">our formula memory article</a>, because both work on the same memory rules.','Ten reactions recalled on schedule hold better than fifty reactions reread once.') },
+      @{ t = 'h2'; s = 'The quick review habit' },
+      @{ t = 'p'; s = @('End each study session with two fast questions: name one reaction from today and its condition, and name one reaction from last week without peeking.','That tiny bridge is what moves reactions from short-term memory into the layer the exam actually accesses.') },
+      @{ t = 'h2'; s = 'The takeaway' },
+      @{ t = 'p'; s = @('Reactions are remembered by family, format and recall schedule, not by repetition.','Label the family, write in one sentence format, keep conditions on the arrow, and revise with the no-look method.','Do that and a long chapter compresses into a few pages your brain can genuinely hold.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-prepare-physical-chemistry-numericals'
+    title    = 'How to Prepare Physical Chemistry Numericals'
+    cat      = 'chemistry'
+    author   = 'vyasa'
+    pub      = '2026-09-04'
+    upd      = '2026-09-04'
+    excerpt  = 'Physical chemistry numericals follow methods, so practice converts directly into marks. A five-line solution layout and unit checks keep the slips out.'
+    keywords = @('physical chemistry numericals','chemistry numericals practice','physical chemistry tips','mole concept numericals')
+    related  = @('how-to-study-chemistry-effectively-for-cbse-board-exams','common-mistakes-students-make-in-chemistry-exams','how-to-improve-calculation-speed-and-accuracy','how-to-build-a-study-routine')
+    cta      = 'Physical chemistry numericals are best learned under a teacher who checks method, not just the final answer. The Chemistry coaching at Vyasa Academy in Hulimavu reviews every step.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'Maths Tuition in Hulimavu'; url = '/maths-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Physical chemistry numericals are the highest-leverage practice in chemistry.','Unlike organic or inorganic chapters, they reward method practice so directly that doing twenty well-chosen problems changes your score.','The catch is that slips happen in predictable places, and those can be trained away.') },
+      @{ t = 'h2'; s = 'Understand the concept before the formula' },
+      @{ t = 'p'; s = @('Every numerical chapter is one idea wearing different numbers.','The mole concept is the core idea that feeds stoichiometry, concentration, and many gas problems.','Spend time explaining the idea in your own words before touching the formula sheet.','A formula you understand is one you can also check, and that check is what saves the marks.') },
+      @{ t = 'h2'; s = 'Learn a five-line solution layout' },
+      @{ t = 'ol'; i = @('Given: write every value from the question with its unit.','Find: write exactly what is being asked.','Formula: write the relationship you will use.','Substitution: put the values in with their units.','Answer: the result, the unit, and a sensible rounding.') },
+      @{ t = 'p'; s = @('The layout is not decoration.','It means an examiner can follow your method, your method check works, and a mistake is findable instead of buried in one long jumbled line.') },
+      @{ t = 'h2'; s = 'Let the units check your work' },
+      @{ t = 'p'; s = @('Track units through every step.','If the answer should be in grams per litre and your calculation produces litres per gram, something flipped.','Students who write units through the working catch a large share of their own slips before the examiner ever sees them.','The same discipline appears in our <a href="/blog/how-to-improve-calculation-speed-and-accuracy/">calculation accuracy guide</a>, adapted for science.') },
+      @{ t = 'h2'; s = 'Master the standard problem types first' },
+      @{ t = 'p'; s = @('Each chapter has a small set of classic problem shapes: find the moles, find the mass, find the concentration, find the change, or find the equilibrium value.','Practise one shape until it is automatic, then move to the next.','Compile the shapes into a one-page method list so you can identify a problem type at a glance during revision.') },
+      @{ t = 'h2'; s = 'Estimate before you calculate' },
+      @{ t = 'p'; s = @('Quickly round the values and estimate the answer before doing the exact work.','If your final answer diverges wildly from the estimate, a slip happened somewhere.','Estimation is the cheapest error detector in physical chemistry, and it takes fifteen seconds.') },
+      @{ t = 'h2'; s = 'Log your slip types' },
+      @{ t = 'p'; s = @('Keep a one-column slip list: every wrong numerical gets one line with the cause, sign error, unit, wrong formula, or substitution mistake.','Before each practice session read the list for ten seconds.','Your personal slip list predicts most of the marks you lose, so check it deliberately.') },
+      @{ t = 'h2'; s = 'A practical weekly rhythm' },
+      @{ t = 'ol'; i = @('Two days: one chapter of numericals, twelve problems with the five-line layout.','One day: the slip list plus a timed set of ten mixed problems.','One day: redo the problems you got wrong last week from memory.') },
+      @{ t = 'h2'; s = 'The bottom line' },
+      @{ t = 'p'; s = @('Physical chemistry numericals reward method discipline.','Understand the concept, use the five-line layout, track units, estimate the answer, and log your slips.','Follow the rhythm for a month and the branch turns from a risk into a reliable source of marks.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-master-inorganic-chemistry'
+    title    = 'How to Master Inorganic Chemistry'
+    cat      = 'chemistry'
+    author   = 'vyasa'
+    pub      = '2026-09-03'
+    upd      = '2026-09-03'
+    excerpt  = 'Inorganic chemistry feels like enormous lists until you rebuild it around the periodic table, trends and patterns. An organised revision method that works.'
+    keywords = @('master inorganic chemistry','inorganic chemistry revision','periodic table trends','inorganic chemistry study tips')
+    related  = @('how-to-remember-the-periodic-table','how-to-memorise-the-periodic-table','how-to-study-chemistry-effectively-for-cbse-board-exams','how-to-clear-doubts-faster')
+    cta      = 'Inorganic chemistry becomes manageable when the periodic table is taught as a map. The Chemistry coaching at Vyasa Academy in Hulimavu uses exactly that approach in small batches.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Inorganic chemistry intimidates students because it looks like a giant catalogue of elements and compounds.','But the subject is a map with a legend.','The map is the periodic table, the legend is that small set of patterns, and everything else is an example.','Master the legend and the catalogue stops being scary.') },
+      @{ t = 'h2'; s = 'Rebuild around the periodic table' },
+      @{ t = 'p'; s = @('Every inorganic chapter is simpler when you can picture where the elements sit.','A group tells you the valence electrons and the typical behaviour; a period tells you how the elements change as you cross it.','Learn the layout properly once and it becomes your filing system for thousands of facts.','Start with our <a href="/blog/how-to-remember-the-periodic-table/">periodic table retention routine</a>, then use the table every time you study.') },
+      @{ t = 'h2'; s = 'Learn the four core trends' },
+      @{ t = 'p'; s = @('A handful of trends drive most inorganic questions: atomic radius, electronegativity, ionisation energy, and metallic character.','For each trend, memorise one line of reasoning: what it is, and how it changes across a period and down a group.','When a fact seems random, ask which trend it is an example of.','The reasoning you use to predict beats the fact you try to remember.') },
+      @{ t = 'h2'; s = 'Organise compounds by family, not by page' },
+      @{ t = 'p'; s = @('Make one page per family, such as the alkali metals or the halogens, and answer the same five questions for each: typical formulas, common oxidation states, key reactions, characteristic colours or smells, and notable exceptions.','Filling the same five boxes for every family produces a pattern that you could never get from reading chapters front to back.') },
+      @{ t = 'h2'; s = 'Turn pages into tables and lists' },
+      @{ t = 'ul'; i = @('Make a colour-and-state table for the compounds you meet in practical chapters.','Make an exception list: the facts that break the trend, because exams test exactly those.','Make a reason list: one sentence of logic for each standard fact, so answers write themselves.') },
+      @{ t = 'h2'; s = 'Use a group-of-the-day revision habit' },
+      @{ t = 'p'; s = @('Institute a five-minute daily routine: pick one group of the periodic table, write every fact you remember about it from memory, then check your notes and top up.','Twenty groups means twenty five-minute sessions spread across a month.','The day you reach the last group, repeat the first one and watch how much has stuck.') },
+      @{ t = 'h2'; s = 'Practise the answer style the paper wants' },
+      @{ t = 'p'; s = @('Inorganic questions often ask why something happens or why a fact is true.','Answer with the pattern first and the example second: the trend, then the specific element.','When a doubt appears about a genuine exception, write it down and clear it with a source or a teacher; see how to handle doubts efficiently in our <a href="/blog/how-to-clear-doubts-faster/">doubt-clearing guide</a>.') },
+      @{ t = 'h2'; s = 'The overall method' },
+      @{ t = 'p'; s = @('Inorganic mastery is periodic-table fluency plus organised revision.','Learn the four trends, file every fact by family, make exception lists, and run the group-of-the-day recall.','Do all five and the enormous catalogue collapses into a map you can actually navigate.') }
+    )
+  },
+
+  @{
+    slug     = 'common-mistakes-students-make-in-chemistry-exams'
+    title    = 'Common Mistakes Students Make in Chemistry Exams'
+    cat      = 'chemistry'
+    author   = 'vyasa'
+    pub      = '2026-09-02'
+    upd      = '2026-09-02'
+    excerpt  = 'Most chemistry marks are lost to repeatable errors: equations not balanced, missing conditions, spelling, and skipped working. Fix these in one pass.'
+    keywords = @('common chemistry exam mistakes','chemistry exam errors','how to avoid mistakes in chemistry','chemistry board exam tips')
+    related  = @('how-to-write-better-chemistry-answers-in-cbse-exams','how-to-study-chemistry-effectively-for-cbse-board-exams','how-to-prepare-physical-chemistry-numericals','10-common-mistakes-in-maths-and-how-to-fix-them')
+    cta      = 'Long-marts in chemistry usually come from small repeatable errors. The Chemistry batches at Vyasa Academy in Hulimavu drill the correction of exactly these habits.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('When students compare answers after an exam, most of the marks they lost were lost the same way every time: an unbalanced equation, a missing condition, a misspelt name, a half-written working.','None of these are knowledge gaps.','They are habits, and habits can be corrected in a single focused pass.') },
+      @{ t = 'h2'; s = 'Mistake 1: equations not balanced' },
+      @{ t = 'p'; s = @('An unbalanced equation signals that the chemistry collapsed, no matter how correct the rest of the answer looks.','Fix the habit by checking every equation twice before you finish the answer, and by practising balancing deliberately.','Use the step-by-step method in our <a href="/blog/how-to-balance-chemical-equations-easily/">balancing equations guide</a>.') },
+      @{ t = 'h2'; s = 'Mistake 2: conditions left off the arrow' },
+      @{ t = 'p'; s = @('Temperature, catalyst, pressure and light are part of the reaction, not decoration.','A reaction written without its conditions is incomplete in exactly the way examiners mark incomplete.','Write the condition above the arrow as a reflex, even in your rough drafts.') },
+      @{ t = 'h2'; s = 'Mistake 3: careless spelling of names' },
+      @{ t = 'p'; s = @('IUPAC names and the names of compounds are marked for correctness.','One wrong letter can turn a right answer into a wrong one.','When you revise, spell ten names aloud per session and write them without looking.','Keep a spelling-watch list of the names you have ever misspelt.') },
+      @{ t = 'h2'; s = 'Mistake 4: hiding the working in numericals' },
+      @{ t = 'p'; s = @('Final answers without the method earn little credit even when correct.','Show the formula, the substitution and the unit chain.','A numerical written with full working scores partial credit even if the final digit is off, which is exactly why skipping the working is so expensive.') },
+      @{ t = 'h2'; s = 'Mistake 5: answering half the question' },
+      @{ t = 'p'; s = @('Questions that ask state and define, or name and explain, are two-part questions.','Answer both parts and mark them clearly as separate items.','Underline the key verb in the question before you write, so predict, compare, and give the reason are each addressed.') },
+      @{ t = 'h2'; s = 'Mistake 6: ignoring sign, unit and arrow errors' },
+      @{ t = 'p'; s = @('Watch the sign in energy and electron-gain problems, the unit in every answer, and the direction of the arrows in organic conversions.','These three form the bulk of physical chemistry slips.','Our <a href="/blog/how-to-prepare-physical-chemistry-numericals/">numericals guide</a> shows the layout that catches them.') },
+      @{ t = 'h2'; s = 'How to purge all six in one month' },
+      @{ t = 'ol'; i = @('Week one: attack equation balancing and conditions together on practice problems.','Week two: target spelling and halves of two-part questions in written answers.','Week three: numerical working, units and signs in a timed set.','Week four: do one full paper checking only these six habits, and tick each habit off as you check.') },
+      @{ t = 'h2'; s = 'Frequently asked questions' },
+      @{ t = 'h3'; s = 'Is it better to finish the paper or be accurate?' },
+      @{ t = 'p'; s = @('Do the accuracy-busy work first and use good pacing to reach the rest.','A paper finished fast with the same six mistakes repeated scores less than a steadier paper with the habits removed.','Balance both by practising timed papers early, as the mistake list becomes automatic.') },
+      @{ t = 'h3'; s = 'Should I redo the whole answer when I spot a slip?' },
+      @{ t = 'p'; s = @('No.','Cross the mistaken line once, write the correction beside it, and move on.','A clean paper is marked faster and the examiner reads your fixed answer, not your struggle.') },
+      @{ t = 'h2'; s = 'The takeaway' },
+      @{ t = 'p'; s = @('The marks lost in chemistry go to a short list of habits: balancing, conditions, spelling, working, two-part answers, and signs and units.','Correct them deliberately for a month and they stop costing you marks forever.') }
+    )
+  },
+
+  @{
+    slug     = 'best-strategy-to-learn-chemical-equations'
+    title    = 'Best Strategy to Learn Chemical Equations'
+    cat      = 'chemistry'
+    author   = 'vyasa'
+    pub      = '2026-09-01'
+    upd      = '2026-09-01'
+    excerpt  = 'The best way to learn chemical equations is to read them as sentences, learn the families, and practise writing them from memory. This strategy works.'
+    keywords = @('learn chemical equations','chemical equations strategy','writing chemical equations','chemistry equation practice')
+    related  = @('how-to-balance-chemical-equations-easily','how-to-remember-chemical-reactions','how-to-remember-the-periodic-table','how-to-master-inorganic-chemistry')
+    cta      = 'Chemical equations become second nature with guided daily practice. The Chemistry coaching at Vyasa Academy in Hulimavu runs equation drills until students write them from memory.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Students believe there are thousands of chemical equations to remember, so they freeze.','There are not thousands.','There are a few families of reactions, each written the same way, and the exam simply asks you to recognise the family and write the pattern.','Here is the strategy built on that idea.') },
+      @{ t = 'h2'; s = 'Read an equation like a sentence' },
+      @{ t = 'p'; s = @('An equation is a sentence with a grammar: substances on the left are the inputs, substances on the right are the outputs, and the arrow states what happens.','Say each equation aloud as a sentence, such as which reactants combine to give which products under which conditions.','When you can say the sentence, you can write the equation, because writing it is just spelling the sentence in symbols.') },
+      @{ t = 'h2'; s = 'Learn by family, not by page order' },
+      @{ t = 'ul'; i = @('Acid-base equations: what reacts with an acid and what comes out.','Precipitation equations: which ion pairs form the solid.','Combustion equations: what burns in oxygen and what is produced.','Redox equations: what is oxidised and what is reduced.','Organic family equations: what each functional group does.') },
+      @{ t = 'p'; s = @('Give a one-line rule to every family.','Once the rule is clear, a new chapter just adds products to rules you already hold.') },
+      @{ t = 'h2'; s = 'Write the skeleton before you balance' },
+      @{ t = 'p'; s = @('Trying to balance and write the products at the same time causes chaos.','First write the correct formulas of the reactant and product, then count atoms, then balance.','Separate the two jobs and both become reliable.','The full balancing technique is in our <a href="/blog/how-to-balance-chemical-equations-easily/">balancing guide</a>.') },
+      @{ t = 'h2'; s = 'Practise from memory, not from the book' },
+      @{ t = 'p'; s = @('Cover the products and write the full equation from the family name and the reactants.','Then cover everything and write the whole equation cold.','Memory practice that hurts is the practice that works; reading the equation again is just pretending to learn it.') },
+      @{ t = 'h2'; s = 'Use an equation error log' },
+      @{ t = 'p'; s = @('Every time you write an equation wrong, add one line to a log with the cause: formula mistake, missing condition, or balance error.','Redo only the wrong entries each week.','Ten correct rewrites of your own errors beat fifty clean equations stared at from a textbook.') },
+      @{ t = 'h2'; s = 'Weave the periodic table in' },
+      @{ t = 'p'; s = @('Many equation errors come from wrong formulas, and formula writing comes from the periodic table.','Valency patterns for the representative groups remove the guesswork from writing formulas in the first place.','Keep a <a href="/blog/how-to-remember-the-periodic-table/">periodic table recall routine</a> running and equation writing becomes mechanical.') },
+      @{ t = 'h2'; s = 'The summary' },
+      @{ t = 'p'; s = @('Chemical equations are learned by sentence grammar, family rules, and memory practice.','Read them aloud, separate writing from balancing, keep an error log, and practise cold.','That is the whole strategy, and it works on every chapter the syllabus adds.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-balance-chemical-equations-easily'
+    title    = 'How to Balance Chemical Equations Easily'
+    cat      = 'chemistry'
+    author   = 'vyasa'
+    pub      = '2026-08-31'
+    upd      = '2026-08-31'
+    excerpt  = 'Balancing equations needs a system, not luck. Write correct formulas first, count atoms, and adjust coefficients one element at a time.'
+    keywords = @('balance chemical equations','balancing equations easy','chemical equation balancing steps','class 10 chemistry balancing')
+    related  = @('best-strategy-to-learn-chemical-equations','how-to-remember-chemical-reactions','common-mistakes-students-make-in-chemistry-exams','how-to-improve-mathematics-problem-solving-skills')
+    cta      = 'Balancing equations is a skill students master fastest with guided practice. The Class 10 Chemistry coaching at Vyasa Academy in Hulimavu gives every student that practice.'
+    courses  = @(
+      @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' },
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Students lose marks because they try to balance while also writing the products, juggling four jobs at once.','Balancing is actually a calm, mechanical method.','Work through it step by step on every equation and the method becomes automatic, which is what the word easily means here.') },
+      @{ t = 'h2'; s = 'Step 1: write the correct formulas first' },
+      @{ t = 'p'; s = @('Never start balancing until every formula on both sides is correct.','A wrong formula preserved by balancing is still a wrong equation.','Build formulas from valency: exchange the valencies of the ions, then simplify the ratio.','Formula errors are the hidden cause of most balancing struggles.') },
+      @{ t = 'h2'; s = 'Step 2: draw a simple atom count table' },
+      @{ t = 'p'; s = @('List every element and count its atoms on each side.','A small table shows instantly which elements are already equal and which are not.','Working from a table instead of your head prevents the double-counting that makes balancing feel impossible.') },
+      @{ t = 'h2'; s = 'Step 3: balance one element at a time' },
+      @{ t = 'ol'; i = @('Pick an element that appears once on each side and only adjust the coefficient in front of its compound.','Move to the next unruly element and repeat.','Balance oxygen near the end, because it appears in several compounds and fixes itself last.','Do not change subscripts, only coefficients.','Finish by recounting every element to confirm equality.') },
+      @{ t = 'h2'; s = 'Step 4: reduce the coefficients' },
+      @{ t = 'p'; s = @('If all the coefficients share a common factor, divide them down.','A balanced equation should also be the simplest whole-number version, which is the form examiners expect.','Check that fractions were cleared and that no element needs the common factor removed.') },
+      @{ t = 'h2'; s = 'Watch the two common traps' },
+      @{ t = 'p'; s = @('Multiplying the subscript instead of the coefficient changes the compound, and that is the classic error.','The other trap is adding water or oxygen to force balance instead of looking for the error in the formulas.','When an equation refuses to balance, check the formulas first, then the count table.') },
+      @{ t = 'h2'; s = 'Practice the method on twelve equations' },
+      @{ t = 'p'; s = @('Work through twelve textbook equations with the four steps written out each time.','The repetition is not about memorising answers; it is about making step three automatic.','After twelve, new equations balance on the first try because the method, not memory, is doing the work.','The strategy behind this practice is explained in our <a href="/blog/best-strategy-to-learn-chemical-equations/">chemical equation strategy guide</a>.') },
+      @{ t = 'h2'; s = 'The bottom line' },
+      @{ t = 'p'; s = @('Balancing is the product of a sequence: correct formulas, a count table, one element at a time, oxygen last.','Practise the sequence deliberately and balancing becomes a mechanical habit rather than a moment of luck.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-remember-the-periodic-table'
+    title    = 'How to Remember the Periodic Table'
+    cat      = 'chemistry'
+    author   = 'vyasa'
+    pub      = '2026-08-30'
+    upd      = '2026-08-30'
+    excerpt  = 'The way to truly remember the periodic table is to own it: write it out from memory, link elements to behaviour, and review by recall.'
+    keywords = @('remember periodic table','periodic table retention','write periodic table from memory','periodic table revision')
+    related  = @('how-to-memorise-the-periodic-table','how-to-master-inorganic-chemistry','best-strategy-to-learn-chemical-equations','how-to-study-chemistry-effectively-for-cbse-board-exams')
+    cta      = 'Learning to write the periodic table from memory transforms how students handle inorganic chapters. Chemistry coaching at Vyasa Academy in Hulimavu teaches the table as a working map.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('There is a difference between recognising the periodic table and remembering it.','Recognition happens when the table sits open in front of you; remembering happens when you can rebuild it on a blank page.','The second skill, not the first, is what makes inorganic chemistry feel easy, so this article is about building it.') },
+      @{ t = 'h2'; s = 'Draw the blank skeleton first' },
+      @{ t = 'p'; s = @('Get the layout into muscle memory before filling in elements.','Draw the seven periods as rows and label the group columns 1 to 18.','Note where the blocks live: the s-block on the left, the p-block on the right, the d-block in the middle.','A skeleton you can draw without thinking is the frame every element will later hang on.') },
+      @{ t = 'h2'; s = 'Fill it from memory in layers' },
+      @{ t = 'ol'; i = @('Layer one: the first twenty elements and their positions.','Layer two: the well-known groups beside them, alkali metals, alkaline earth metals, halogens and noble gases.','Layer three: the rows that appear most often in your syllabus, like the elements studied in practical chapters.','Layer four: the transition row you actually need for class work, filled by repeated recall not by staring.') },
+      @{ t = 'p'; s = @('Each layer is a writing session from memory, then a check against the real table.','Do not read the table into your eyes and hope; write it from your head and compare.') },
+      @{ t = 'h2'; s = 'Link each element to what it does' },
+      @{ t = 'p'; s = @('Elements stick when they are tied to behaviour, not to a number.','For each element you list, add one fact you can picture: what it looks like, what it reacts with, or where it is used.','The fact is the hook and the position is the shelf; the hook pulls the shelf into your memory first.') },
+      @{ t = 'h2'; s = 'Let the trends do the heavy lifting' },
+      @{ t = 'p'; s = @('Rather than memorising thirty facts about thirty elements, remember the four trends: atomic radius, electronegativity, ionisation energy and metallic character.','These predict behaviour across a period and down a group.','A question on an element you have never revised becomes answerable from the trend, which is the real power of remembering the map.') },
+      @{ t = 'h2'; s = 'Review by recall on a schedule' },
+      @{ t = 'ul'; i = @('Day one: write the skeleton plus the first layer from memory, twice.','Day three: add layers two and three, again from memory.','Day seven: the whole table cold, then tick off what you nailed.','Each following week: one full cold write in five minutes.') },
+      @{ t = 'p'; s = @('Five minutes a week keeps the table permanently yours.','This is the retention half of the story; the familiar memorisation tricks are covered in our <a href="/blog/how-to-memorise-the-periodic-table/">companion article</a>.') },
+      @{ t = 'h2'; s = 'Why this method wins in inorganic chapters' },
+      @{ t = 'p'; s = @('Every inorganic chapter hands you elements you already placed on your map.','Location, group behaviour and trends combine to answer most questions without separate memorisation.','Our <a href="/blog/how-to-master-inorganic-chemistry/">inorganic mastery guide</a> builds directly on this skill.') },
+      @{ t = 'h2'; s = 'The close' },
+      @{ t = 'p'; s = @('Remembering the periodic table means rebuilding it from memory: draw the skeleton, fill it in layers, link elements to behaviour, and review by recall.','Do that and the table stops being a chart on the wall and becomes the working map of your chemistry.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-prepare-chemistry-last-30-days-before-board-exams'
+    title    = 'How to Prepare Chemistry in the Last 30 Days Before Board Exams'
+    cat      = 'chemistry'
+    author   = 'vyasa'
+    pub      = '2026-08-29'
+    upd      = '2026-08-29'
+    excerpt  = 'In the final month, chemistry prep switches from learning to drilling: full papers, recall revision, and a personal error list. A practical 30-day plan.'
+    keywords = @('last 30 days chemistry preparation','chemistry revision plan board exam','final month chemistry strategy','CBSE chemistry revision')
+    related  = @('importance-of-ncert-for-cbse-chemistry-preparation','how-to-study-chemistry-effectively-for-cbse-board-exams','how-to-score-better-in-cbse-class-12-chemistry','how-to-manage-time-in-mathematics-board-exam')
+    cta      = 'The last month works best with structured revision and mock tests. The Chemistry batches at Vyasa Academy in Hulimavu run exactly this cycle before every board exam.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Thirty days before the board exam is the boundary between learning and drilling.','New learning in the final month creates more anxiety than marks, so the plan here turns deliberate: revise what you know, expose what you do not, and rehearse the real experience of the paper.') },
+      @{ t = 'h2'; s = 'A week-by-week shape for the month' },
+      @{ t = 'ol'; i = @('Days 30 to 22: two full revisions of the syllabus by branch, using recall pages, not rereading.','Days 21 to 12: one full previous-year paper every two days, timed, under exam conditions.','Days 11 to 5: fix the error list, redo the leak topics, and shrink notes to a single sheet.','Days 5 to 1: recall-only revision, light fresh practice, and sleep discipline.') },
+      @{ t = 'p'; s = @('Adjust the slice sizes to your real deadlines, but keep the shape: revise, then drill, then fix, then polish.') },
+      @{ t = 'h2'; s = 'Use the five-column leak sheet' },
+      @{ t = 'p'; s = @('Keep one page with five columns: chapter, what leaked, the cause, the fix, and the redo date.','Every mark lost in a mock earns one line in this sheet.','The sheet is your real revision plan; everything else is just reading.','By the final week the sheet should have shrunk to a handful of topics, which is a satisfying and honest measure of readiness.') },
+      @{ t = 'h2'; s = 'Made your answer sheets like the real paper' },
+      @{ t = 'p'; s = @('During the drill weeks, write answers on paper with the same layout you will use in the hall: balanced equations, visible working, neat headings.','Formatting is part of the score, and the final month is the time to make it automatic.','Our guide on <a href="/blog/how-to-write-better-chemistry-answers-in-cbse-exams/">writing better chemistry answers</a> lists the layout rules to rehearse.') },
+      @{ t = 'h2'; s = 'The recall-only week' },
+      @{ t = 'p'; s = @('In the final days, do not open a fresh chapter.','Close the book and write.','For each branch, produce the recall page and any reaction map you can build from memory.','Compare, top up the gaps you find, and protect your sleep, because stored memory needs rest to be delivered cleanly.') },
+      @{ t = 'h2'; s = 'Keep time management rehearsed' },
+      @{ t = 'p'; s = @('A chemistry paper is lost to poor pacing as often as to hard questions.','Budget minutes per section, do a first pass for easy marks, and keep a buffer for checking.','The same budget in a science paper is described in our <a href="/blog/how-to-manage-time-in-mathematics-board-exam/">time management guide</a>, and the habit transfers directly.') },
+      @{ t = 'h2'; s = 'The honest close' },
+      @{ t = 'p'; s = @('The final thirty days turn preparation into performance.','Revise by recall, drill real papers, fix the leak sheet, and polish the response format.','Run the shape faithfully and you walk into the hall having already performed under exam conditions many times.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-write-better-chemistry-answers-in-cbse-exams'
+    title    = 'How to Write Better Chemistry Answers in CBSE Exams'
+    cat      = 'chemistry'
+    author   = 'vyasa'
+    pub      = '2026-08-28'
+    upd      = '2026-08-28'
+    excerpt  = 'Chemistry marks are awarded for how answers are structured. Balanced equations, visible reasoning, neat presentation and correct names make the difference.'
+    keywords = @('write chemistry answers','chemistry answer writing','how to present chemistry answers','CBSE chemistry answer presentation')
+    related  = @('common-mistakes-students-make-in-chemistry-exams','how-to-study-chemistry-effectively-for-cbse-board-exams','importance-of-ncert-for-cbse-chemistry-preparation','how-to-prepare-practical-chemistry-for-board-exams')
+    cta      = 'Answer writing is a skill that improves fast with feedback. The Chemistry coaching at Vyasa Academy in Hulimavu marks answer sheets the way examiners do, before the exam.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Two students can know the same chemistry and still score differently, because the exam is marked on the written answer, not on the knowledge inside your head.','Answer writing is a learnable skill with rules, and students who apply the rules quietly collect marks that others throw away.','Here are the rules that matter most.') },
+      @{ t = 'h2'; s = 'Show the reasoning sentence' },
+      @{ t = 'p'; s = @('For any question that asks why or explain, write the reason in a short clear sentence before any detail.','Then support it with the specific fact or reaction.','The examiner is scanning for the reason; putting it first means it cannot be missed.') },
+      @{ t = 'h2'; s = 'Write equations exactly as examiners count them' },
+      @{ t = 'ul'; i = @('Balance every equation before you consider the answer finished.','Add state symbols where the question expects them.','Put conditions and catalysts above or below the arrow.','Number the equations when the answer has several, so each step is visible.') },
+      @{ t = 'p'; s = @('An equation is the unit of chemistry marking.','One balanced equation with its condition earns its marks cleanly; an unbalanced attempt earns none.') },
+      @{ t = 'h2'; s = 'Structure multi-part questions visibly' },
+      @{ t = 'p'; s = @('If a question has two or three labelled parts, answer each part under its own heading and label it.','Leave a line between parts.','A serial answer force{s} the examiner to hunt for parts, and hunting costs you clarity and time.') },
+      @{ t = 'h2'; s = 'Control names, formulas and spellings' },
+      @{ t = 'p'; s = @('IUPAC names earn marks only when correct, and misspellings punish right chemistry.','Practise writing the ten names most common in your syllabus every revision session.','Keep formulas consistent between the question and your answer, including ionic charges where relevant.') },
+      @{ t = 'h2'; s = 'Handle the rough work the right way' },
+      @{ t = 'p'; s = @('Use the margin or the allotted rough columns for scratch calculation.','The fair answer should contain the method sentences and the final result, with the scratchwork kept separate.','A clean paper reads like a model solution, and model solutions are the easiest for an examiner to award full marks.') },
+      @{ t = 'h2'; s = 'Revise the format like content' },
+      @{ t = 'p'; s = @('Treat answer layout as part of revision.','In your mocks, check for five things after every answer: reasoning sentence, balanced equation with condition, labelled parts, correct name, and visible working.','After a month of checking, the format writes itself because it became a habit.') },
+      @{ t = 'h2'; s = 'The final pointer' },
+      @{ t = 'p'; s = @('Better chemistry answers come from structure, not from longer essays.','Put the reason first, balance the equations, label the parts, and keep the layout clean.','Do that in every mock and you will do it in the hall without thinking.') }
+    )
+  },
+
+  @{
+    slug     = 'importance-of-ncert-for-cbse-chemistry-preparation'
+    title    = 'Importance of NCERT for CBSE Chemistry Preparation'
+    cat      = 'chemistry'
+    author   = 'vyasa'
+    pub      = '2026-08-27'
+    upd      = '2026-08-27'
+    excerpt  = 'NCERT textbooks are the foundation of CBSE chemistry preparation. Learn how to use them actively for concepts, reactions and board question practice.'
+    keywords = @('NCERT chemistry importance','NCERT textbook study','CBSE chemistry NCERT','how to read NCERT chemistry')
+    related  = @('how-to-study-chemistry-effectively-for-cbse-board-exams','how-to-prepare-chemistry-last-30-days-before-board-exams','how-to-score-better-in-cbse-class-12-chemistry','cbse-class-10-board-exam-preparation-strategy')
+    cta      = 'NCERT-based coaching makes a real difference in boards preparation. The Chemistry batches at Vyasa Academy in Hulimavu are taught with the NCERT as the working textbook.'
+    courses  = @(
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' },
+      @{ label = 'Class 12 Tuition in Hulimavu'; url = '/class-12-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Questions in CBSE chemistry papers are built around NCERT material, so the textbook is not optional reading, it is the syllabus made physical.','But holding the book is not the same as using it.','This article is about the practical difference between owning the NCERT and actually working through it.') },
+      @{ t = 'h2'; s = 'Why the NCERT anchors the paper' },
+      @{ t = 'p'; s = @('Board questions are frequently written so that a student who has studied the textbook carefully can answer them, keeping the terminology, the reactions and the examples consistent with what was taught.','Reference books add depth, but the core language of the exam is the textbook, so the phrasing matters.','Study the NCERT first and use every other source as a supplement, not a replacement, to avoid two different versions of the same answer.') },
+      @{ t = 'h2'; s = 'Read one section actively' },
+      @{ t = 'p'; s = @('Split each chapter into its headed sections and read one section at a time.','After each section, close the book and write two lines: the main idea and the key reaction or concept.','Then reread the section only to collect what you missed.','Active reading takes longer per page and stores much more per hour.') },
+      @{ t = 'h2'; s = 'Turn the in-text questions into your test set' },
+      @{ t = 'p'; s = @('The questions at the end of each NCERT chapter and the inline examples are a ready-made practice set.','Attempt them on paper before looking at solutions, then compare your wording with the model style.','Doing this chapter by chapter is the closest legal shortcut to thinking like the question setter.') },
+      @{ t = 'h2'; s = 'Keep the NCERT language for definitions' },
+      @{ t = 'p'; s = @('Definitions and named laws are safest in the textbook wording.','When an answer needs a definition, produce the NCERT phrasing rather than your paraphrase of it.','For explanations, the model sentence structure shown in the book is a reliable template for your own answers.') },
+      @{ t = 'h2'; s = 'The revision copy: one book, two passes' },
+      @{ t = 'ol'; i = @('First pass: read actively, marking nothing until the section is understood.','Second pass: underline the key lines and build the recall pages.','Revision: recall from your pages, then check the underlined lines only.') },
+      @{ t = 'p'; s = @('Two honest passes beat ten skimmed ones, and the marked copy becomes a fast revision tool for the final month described in our <a href="/blog/how-to-prepare-chemistry-last-30-days-before-board-exams/">30-day plan</a>.') },
+      @{ t = 'h2'; s = 'When to bring in more material' },
+      @{ t = 'p'; s = @('After the NCERT chapters and their questions are genuinely done, add previous-year questions and one supplementary book if your teacher recommends it.','The supplement should extend the textbook, never replace its versions of reactions and definitions.','Students who keep this sequence rarely find themselves learning conflicting answers at exam time.') },
+      @{ t = 'h2'; s = 'The takeaway' },
+      @{ t = 'p'; s = @('The NCERT is the foundation because the paper speaks its language.','Read it actively, practise its questions, keep its definitions, and let supplements extend from it.','That is the most reliable chemistry preparation routine a CBSE student can build.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-avoid-common-mistakes-in-organic-chemistry'
+    title    = 'How to Avoid Common Mistakes in Organic Chemistry'
+    cat      = 'chemistry'
+    author   = 'vyasa'
+    pub      = '2026-08-26'
+    upd      = '2026-08-26'
+    excerpt  = 'Organic chemistry has a short list of classic errors: wrong conditions, misspelt names, missed functional groups and broken conversions. Fix them all.'
+    keywords = @('organic chemistry mistakes','organic chemistry errors','avoid organic chemistry mistakes','organic chemistry conversions')
+    related  = @('how-to-study-organic-chemistry-easily','how-to-remember-chemical-reactions','common-mistakes-students-make-in-chemistry-exams','how-to-clear-doubts-faster')
+    cta      = 'The classic organic mistakes disappear fastest with a teacher who points them out on your own work. The Chemistry coaching at Vyasa Academy in Hulimavu does exactly that.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Organic chemistry punishes a small set of mistakes more than it punishes ignorance.','The same five errors appear on paper after paper: wrong conditions, broken conversions, misspelt names, missed functional groups and unbalanced organic equations.','Fix those five and most organic mark loss disappears.') },
+      @{ t = 'h2'; s = 'Mistake 1: separating the condition from the reaction' },
+      @{ t = 'p'; s = @('In organic chemistry the same starting compound can do different things under different conditions, so the condition is the reaction.','Write temperature, catalyst, light and reagent concentration above the arrow every time.','When you revise a reaction family, ask why the condition matters for that family.') },
+      @{ t = 'h2'; s = 'Mistake 2: broken conversion chains' },
+      @{ t = 'p'; s = @('Conversion questions fail when a missing step breaks the chain.','Work backwards from the target compound to the starting one when you are stuck, and validate each step by writing the reagent and condition.','Practise one conversion daily and always show every intermediate; an examiner awards each correct step.','The pattern-first method for conversions is developed in our <a href="/blog/how-to-study-organic-chemistry-easily/">organic chemistry guide</a>.') },
+      @{ t = 'h2'; s = 'Mistake 3: misspelt and miswritten names' },
+      @{ t = 'p'; s = @('Names must be written exactly.','Keep a personal list of the IUPAC names you miswrite and review it aloud.','When writing any structure from a name, decode the name left to right: chain, then substituents, then functional group, and check the final carbon count.') },
+      @{ t = 'h2'; s = 'Mistake 4: missing the functional group reaction' },
+      @{ t = 'p'; s = @('A reaction you cannot place on a group map is a reaction you will forget.','Before the exam, every reaction you know should sit on a functional group page: what forms the group and what the group becomes.','Never learn a reaction in isolation, because the exam nearly always crosses groups.') },
+      @{ t = 'h2'; s = 'Mistake 5: unbalanced or inconsistent organic equations' },
+      @{ t = 'p'; s = @('Organic equations still obey conservation.','Balance carbon and hydrogen first, make oxygen the last check, and keep the same name for the same compound throughout the answer.','Practice the balancing sequence from our <a href="/blog/how-to-balance-chemical-equations-easily/">balancing guide</a> so it runs automatically.') },
+      @{ t = 'h2'; s = 'A four-day error purge' },
+      @{ t = 'ol'; i = @('Day one: write every reaction with its conditions and check the top of each arrow.','Day two: redo three conversions with every step shown.','Day three: spell twenty names from memory and list your ten worst.','Day four: one mixed organic test, then log the five habits you must check next time.') },
+      @{ t = 'h2'; s = 'Frequently asked questions' },
+      @{ t = 'h3'; s = 'Do I need to learn named reactions?' },
+      @{ t = 'p'; s = @('Learn the reactions the syllabus actually covers, with their conditions and mechanisms, and avoid treating a list of names as the curriculum.','When a named reaction appears, learn its mechanism as a pattern rather than its name alone.') },
+      @{ t = 'h3'; s = 'Why do organic questions feel unlike my practice?' },
+      @{ t = 'p'; s = @('Because direct repetition and the exam version tend to differ in details.','Study from the pattern, so that a changed reagent or a new starting group is still recognisable.','That is the difference between practising questions and learning the subject.') },
+      @{ t = 'h2'; s = 'The close' },
+      @{ t = 'p'; s = @('Avoiding organic mistakes is a checklist, not a talent: keep conditions on the arrow, show every conversion step, spell names exactly, place every reaction on a group map, and balance the equations.','Run the four-day purge once and those habits will work in the hall without thinking.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-prepare-practical-chemistry-for-board-exams'
+    title    = 'How to Prepare Practical Chemistry for Board Exams'
+    cat      = 'chemistry'
+    author   = 'vyasa'
+    pub      = '2026-08-25'
+    upd      = '2026-08-25'
+    excerpt  = 'Practical chemistry marks come from the record, the viva, and actually knowing the experiments. A clear preparation plan for board practicals.'
+    keywords = @('chemistry practical preparation','board exam practicles','chemistry viva preparation','lab record chemistry')
+    related  = @('how-to-study-chemistry-effectively-for-cbse-board-exams','how-to-write-better-chemistry-answers-in-cbse-exams','science-foundations-for-classes-6-to-8','how-to-clear-doubts-faster')
+    cta      = 'Practical chemistry is prepared in real lab conditions. The Science coaching at Vyasa Academy in Hulimavu gives students supervised practice of experiments and their records.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Practical chemistry can pull scores sideways if it is treated as a box to tick.','The viva and the record carry marks, and both are prepared exactly like a written chapter, but with your hands in the game.','Here is how to prepare them properly.') },
+      @{ t = 'h2'; s = 'Know the shape of the practical assessment' },
+      @{ t = 'p'; s = @('The practical work ties together what you did in the lab, the record you wrote, and the questions the examiner asks about it.','Prepare all three as one unit rather than cramming your record the night before.','Do not invent an experiment you never performed; the examiner is more interested in honest work done carefully.') },
+      @{ t = 'h2'; s = 'Learn each experiment as a procedure' },
+      @{ t = 'ul'; i = @('The aim: what question the experiment answers.','The apparatus and chemicals: what the setup needs.','The steps: written in the exact order you performed them.','The observation: what you actually saw, with colour and condition.','The result and inference: what the observation concludes.') },
+      @{ t = 'p'; s = @('When you can recite these five parts for every experiment in your syllabus, the practical paper has lost most of its uncertainty.') },
+      @{ t = 'h2'; s = 'Write and maintain the record as you go' },
+      @{ t = 'p'; s = @('Keep the lab record up to date after each session instead of copying it later.','Write observations in ink where required, attach every slip or printout from your school, and label diagrams clearly.','A record that tells a consistent story of real work reads well in the viva and leaves the examiner with nothing to forgive.') },
+      @{ t = 'h2'; s = 'Prepare for the viva with a question bank' },
+      @{ t = 'p'; s = @('Build a short list of likely viva questions for each experiment: why this chemical, why this step, what would happen if the temperature changed, and what the colour indicates.','Answer them aloud without notes.','Pair the viva practice with the reasoning style used in the written exam, as described in our <a href="/blog/how-to-write-better-chemistry-answers-in-cbse-exams/">answer writing guide</a>.') },
+      @{ t = 'h2'; s = 'Practise the skills that keep hands steady' },
+      @{ t = 'p'; s = @('Hold glassware correctly, read a meniscus, and handle the spirit lamp or burner the way your teacher demonstrated.','Measure carefully and record values as they read.','Small motor skills feel familiar only after repetition, so practise the setup at least twice under real conditions.') },
+      @{ t = 'h2'; s = 'Use the days before the practical well' },
+      @{ t = 'ol'; i = @('Re-draw every labelled diagram from memory.','Say each procedure aloud once, watching for gaps.','Drill repeat the viva questions with a partner or aloud to yourself.','On the day, go through the five parts for the experiment you are assigned before touching the setup.') },
+      @{ t = 'h2'; s = 'The closing note' },
+      @{ t = 'p'; s = @('Practical chemistry is prepared by procedure, record and viva, all three together.','Learn the five parts of every experiment, keep the record honest, and rehearse the questions aloud.','Steady hands and honest records are marks waiting to be collected.') }
     )
   }
 )

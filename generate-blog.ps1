@@ -275,7 +275,7 @@ function Get-ArticleLd($a) {
       '@type' = 'Person'
       'name' = $au.name
       'jobTitle' = $au.jobTitle
-      'url' = "$domain/#person-$(if ($au.key -eq 'mahendra'){ 'mahendra' } else { 'venu' })"
+      'url' = if ($au.url) { $au.url } else { "$domain/#person-$(if ($au.key -eq 'mahendra'){ 'mahendra' } else { 'venu' })" }
     }
     'publisher' = @{
       '@type' = 'EducationalOrganization'
