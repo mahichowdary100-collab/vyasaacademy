@@ -2560,6 +2560,13 @@ $script:blogArticles = @(
       @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' },
       @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
     )
+    faq = @(
+      @{ q = 'When should a Class 10 student start the full study plan?'; a = 'The plan works from any point, but starting by the middle of the year gives the four phases time to breathe. Students who start later should compress the foundation and mastery phases and protect the revision and rehearsal phases, because those convert knowledge into marks fastest.' },
+      @{ q = 'Do I have to follow the same schedule every day?'; a = 'No. The plan runs on a weekly rhythm that fits school and tuition hours and adjusts on Sunday. The subjects in rotation change each week, but the core habit of one planned task per study block stays the same.' },
+      @{ q = 'What does the one-page tracking sheet need on it?'; a = 'The syllabus map with chapters ticked, the phase you are in, and the error log. A ten-minute Sunday check of three numbers, chapters done, chapter tests passed, and errors logged, is enough to keep the whole plan honest.' },
+      @{ q = 'My school tests clash with the plan. What should I do?'; a = 'Reorder the rhythm so the school-test subject leads for a few days, then return. The plan is designed to bend around real life instead of collapsing, and that adjustment is part of the weekly review.' },
+      @{ q = 'How much time should revision and full papers get?'; a = 'From two months out, one full paper per subject per week with strict marking, and recall-based revision in the final month. The rehearsal phase is never squeezed, because it is what turns preparation into performance.' }
+    )
     body = @(
       @{ t = 'p'; s = @('A complete study plan is not a long to-do list; it is an operating system.','It decides what to study, when to study it, how to check that studying worked, and what to do when the plan slips.','This guide walks through the whole system in four phases, with a weekly rhythm and a one-page way to track it.','For the subject-level detail, each phase links to the matching article in this hub.') },
       @{ t = 'h2'; s = 'What a real study plan contains' },
@@ -2608,6 +2615,13 @@ $script:blogArticles = @(
       @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' },
       @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
     )
+    faq = @(
+      @{ q = 'Can these strategies guarantee 90 percent?'; a = 'No method can guarantee a percentage. The strategies are designed to remove the soft marks that capable students lose, which gives every student a realistic chance to work toward the bracket they are capable of reaching.' },
+      @{ q = 'Which marks matter most for a high score?'; a = 'The easy marks: definitions, formulas, diagrams, formats, units and signs. Most students lose the most marks on questions they already knew, so securing those comes before attempting any hard topic.' },
+      @{ q = 'How often should I practise full papers?'; a = 'From two months before the boards, one complete paper per subject every week, in exam timing, marked as strictly as an examiner would. The honest marking time afterwards is where most of the improvement happens.' },
+      @{ q = 'Is it enough to focus only on mathematics and science?'; a = 'No. Consistent moderate effort in social science and languages protects the total, because a high bracket needs balanced strength. Neglected lighter subjects leak marks exactly in the final month.' },
+      @{ q = 'What should I do in the last fifteen minutes of a paper?'; a = 'Train to finish fifteen minutes early and use that window only for checks: units, signs, labels and any unanswered questions. This habit catches slips and rescues borderline marks in every subject.' }
+    )
     body = @(
       @{ t = 'p'; s = @('A 90 percent result is a target many Class 10 students set, and the honest framing is that these strategies help students work toward it.','No method guarantees a percentage, but the habits below reliably remove the soft marks that keep capable students below their target.','The logic is simple: secure everything you already know, then build one layer of skill on top.') },
       @{ t = 'h2'; s = 'Score the paper, not just the subject' },
@@ -2646,6 +2660,12 @@ $script:blogArticles = @(
     courses  = @(
       @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' },
       @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    faq = @(
+      @{ q = 'How many hours should I study each day?'; a = 'There is no fixed number that works for everyone. Build the timetable around your school, tuition, sleep and energy, and protect those fixed blocks first. Consistency over months matters far more than any daily hour target.' },
+      @{ q = 'Should I study every subject every day?'; a = 'No. Keep three subjects rotating, with mathematics almost daily for warmth, one science branch per day, and a language or social science in shorter blocks. Five subjects daily spreads attention too thin to deepen anything.' },
+      @{ q = 'When is the best time to study weak subjects?'; a = 'On your most alert hours, usually the two hours after proper rest or after school settles. Put the subject you avoid on your best hours and the one you enjoy near the end, so the session finishes on energy instead of exhaustion.' },
+      @{ q = 'How many breaks should a study day have?'; a = 'A five-minute break after every forty minutes of focus protects the next block. Include meal time, movement and a fixed stopping hour. A timetable that plans rest is more effective, not less strict.' }
     )
     body = @(
       @{ t = 'p'; s = @('The best Class 10 timetable is not the ambitious one printed on the internet; it is the one that still fits your life in week four.','A schedule built from school hours, tuition, sleep and energy beats a schedule built from wishes.','Here is how to build that timetable, with flexible shapes instead of fixed hour claims.') },
@@ -2690,6 +2710,13 @@ $script:blogArticles = @(
       @{ label = 'Maths Tuition in Hulimavu'; url = '/maths-tuition-hulimavu/' },
       @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' }
     )
+    faq = @(
+      @{ q = 'Is the NCERT textbook enough for Class 10 mathematics?'; a = 'It is the base that the board questions build on, so it comes first and gets finished completely. Exemplar problems and previous-year questions come after the NCERT, not before it. A student who owns the NCERT exercises owns most of the battle.' },
+      @{ q = 'How can I stop repeating the same mistakes in mathematics?'; a = 'Keep one page per chapter with every wrong answer written as a single line: the question, the wrong step, the correction. Read that page before each practice session. Most lost marks are repeated slips, not missing ideas.' },
+      @{ q = 'How many times should I practise a new method?'; a = 'Three passes: solve it right after it is taught, redo it from memory after two days, then attempt the chapter and previous-year questions. The recall pass is what builds the automatic method the paper rewards.' },
+      @{ q = 'What should a full mathematics practice session look like?'; a = 'From two months out, one complete paper each week in a single three-hour stretch, with a pre-planned time budget per section and no help, then forty minutes of strict marking. The review is where pace and presentation improve.' },
+      @{ q = 'How do I prepare for numericals that carry step marks?'; a = 'Show every substitution step, draw the rough figure when the question can take one, box the final answer and write the unit. The answer sheet is read by an examiner, so anything not written down cannot earn marks.' }
+    )
     body = @(
       @{ t = 'p'; s = @('Class 10 mathematics rewards the prepared student in a direct way: the papers relies on methods, and methods are built by structured practice.','The plan below stacks four layers, from the textbook up to the full timed paper.','Follow the layers in order and the subject stops being a scramble.') },
       @{ t = 'h2'; s = 'Layer 1: NCERT first, always' },
@@ -2728,6 +2755,13 @@ $script:blogArticles = @(
     courses  = @(
       @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
       @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' }
+    )
+    faq = @(
+      @{ q = 'Should I study physics, chemistry and biology equally every day?'; a = 'No. Rotate the branches with one branch as the main block each day and a small recall element from the other two. A weekly timed mixed set keeps all three honest, so no branch rests longer than a few days.' },
+      @{ q = 'How do I prepare for definition questions in science?'; a = 'Keep a running bank of definitions in exactly the NCERT wording and review it in short recall sessions: cover, say, check. The bank covers a large share of the one-mark questions almost by itself.' },
+      @{ q = 'What is the best way to learn diagrams?'; a = 'Keep a list of every diagram the syllabus asks for and redraw one each day from memory with clean pencil labels. Labelling and correct spelling matter, because a drawn figure without labels is treated as incomplete.' },
+      @{ q = 'How should I handle science numericals?'; a = 'Make one method card per problem type with the steps and formula order, then solve a fresh set weekly with full working. Every answer needs a unit, and every substitution step should stay visible for step marks.' },
+      @{ q = 'Do activity and practical questions need separate preparation?'; a = 'Yes. Rehearse each required experiment as a short story: aim, setup, observation, conclusion. The activity questions test whether you know the setup and the result, not just the name of the experiment.' }
     )
     body = @(
       @{ t = 'p'; s = @('A Class 10 Science paper mixes definitions, explanations, numericals, diagrams and activity-based questions.','Students who prepare the content but not the question types lose marks in every category except the one they know.','This guide tackles the paper by its question types, then balances the three branches into a weekly rhythm.') },
@@ -2771,6 +2805,13 @@ $script:blogArticles = @(
       @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' },
       @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
     )
+    faq = @(
+      @{ q = 'Why does re-reading not work for revision?'; a = 'Re-reading creates recognition, and recognition feels like learning. The exam needs retrieval, pulling the idea out with the book shut. Close the book, attempt to recall, then check, and the memory strengthens even on failed attempts.' },
+      @{ q = 'How long before the boards should revision start?'; a = 'Revision works best when it is spaced, so running micro-recall cycles from the middle of the year beats a concentrated final-month push. The one-page summaries should exist well before the last month so the final weeks only recall them.' },
+      @{ q = 'What should a single revision session contain?'; a = 'One subject, one recall attempt against a blank page, a check against your notes, fixing only the missing points, and a one-line log of the gaps. The whole cycle is shorter than a full re-read and produces more.' },
+      @{ q = 'What is the revision plan for mathematics?'; a = 'Solve, do not just read. One problem set per chapter with methods pulled from memory, and the formula sheet rewritten cold every few days. Recognising a method in a book is not the same as running it in the hall.' },
+      @{ q = 'How do previous-year papers fit into revision?'; a = 'Attempt one per subject weekly under timing, mark it strictly, and let the miss list become the top of next week revision plan. The paper shows where the syllabus really matters better than a reading plan can.' }
+    )
     body = @(
       @{ t = 'p'; s = @('Most Class 10 students confuse recognition with revision: they re-read a chapter, feel the warmth of familiarity, and call it done.','Real revision is retrieval, pulling the idea out with the book shut.','This guide gives the recall-first system, the one-page shrink, and the paper that steers the whole plan.') },
       @{ t = 'h2'; s = 'Revision that works is retrieval' },
@@ -2812,6 +2853,13 @@ $script:blogArticles = @(
     courses  = @(
       @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' },
       @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    faq = @(
+      @{ q = 'Is one month enough when the syllabus is not finished?'; a = 'The final month is for rehearsal, not new learning. Anything still unlearned gets a lower priority. The month converts what is already known into performance, and trying to learn new topics usually weakens the whole plan.' },
+      @{ q = 'How many full papers should I sit in the final month?'; a = 'Roughly one full paper per subject every three or four days, in exam timing, with a strict marking session after each. Between papers, revise exactly the misses from the last paper.' },
+      @{ q = 'When should I stop testing myself?'; a = 'About two days before the first paper, heavy testing stops completely. After that, review only summaries, the error log and the memory lists, and protect full sleep.' },
+      @{ q = 'What should a typical final-month day look like?'; a = 'A morning recall block of memory lists, a midday main task such as a topic or a paper, afternoon marking and logging, an evening review of summaries, and one timed element somewhere every day.' },
+      @{ q = 'What is the biggest mistake of the final month?'; a = 'The night-before cram. By design the last days are light, so there is nothing left to cram. Students who stop new material early and sleep fully arrive at each paper calm and rehearsed.' }
     )
     body = @(
       @{ t = 'p'; s = @('Thirty days is not enough time to learn a new syllabus, and it is exactly enough time to turn what you already know into performance.','The final month has one job: rehearsal.','This guide splits the month into four short phases and gives the rule for every day in it.') },
@@ -2985,6 +3033,13 @@ $script:blogArticles = @(
       @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' },
       @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
     )
+    faq = @(
+      @{ q = 'Which previous-year papers should I practise first?'; a = 'Start with the most recent papers, because they are the closest preview of the current question style. Work them chapter-wise first, then as full timed papers, marking everything strictly.' },
+      @{ q = 'Do previous-year questions repeat in the boards?'; a = 'Papers are practice data, not a crystal ball. Treat them as a way to learn the question shapes, the marking and your own gaps, and never build the whole plan on a guess that a specific question will repeat.' },
+      @{ q = 'How many previous years should I collect?'; a = 'Three to five recent years is enough to see patterns in question angles. More papers mostly repeat the same lessons, so the value is in marking and learning from the ones you have, not in collecting more.' },
+      @{ q = 'When should I start solving full previous-year papers?'; a = 'From about two months out, one full paper per subject weekly under the real timing and with no help. Before that, work chapter-wise sets right after each chapter in your preparation.' },
+      @{ q = 'What is the biggest mistake with previous-year papers?'; a = 'Reading the paper instead of sitting it under time, and marking generously. The learning is in the strict marking and the miss list, so an unmarked paper is a wasted hour.' }
+    )
     body = @(
       @{ t = 'p'; s = @('Previous-year question papers are the closest honest preview of a Class 10 board paper that exists.','They show the shape of questions, the marking style, and the pace the paper demands.','Used the right way, they also reveal your personal gaps faster than any chapter list.') },
       @{ t = 'h2'; s = 'What previous-year papers are for' },
@@ -3067,6 +3122,12 @@ $script:blogArticles = @(
     courses  = @(
       @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' },
       @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    faq = @(
+      @{ q = 'Should I study anything new the night before an exam?'; a = 'No. The last night protects recall, sleep and calm. Review only the one-page summaries and the memory lists for the subject, stop early, and let the night sleep do its part.' },
+      @{ q = 'What should I carry into the exam hall?'; a = 'The admit card, the pens and the station that the rules allow, and nothing that increases risk. Removing every risk at the door keeps calm in the hall.' },
+      @{ q = 'What do I do in the first ten minutes of a paper?'; a = 'Read the whole paper, mark the easy and the heavy questions, and begin with two easy questions you are fully sure of. The momentum carries into the harder questions and protects the time budget.' },
+      @{ q = 'What if my nerves spike in the hall?'; a = 'Stop, breathe slowly in for four counts and out for four counts for about a minute, then return to the first easy question. Practise the drill during mocks so it works automatically on the day.' }
     )
     body = @(
       @{ t = 'p'; s = @('Everything that can be learned has been learned by the last 48 hours; the final stretch is about arriving sharp and staying calm.','These last-minute tips protect the knowledge you already have instead of replacing it with panic.') },
@@ -3192,6 +3253,13 @@ $script:blogArticles = @(
       @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' },
       @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
     )
+    faq = @(
+      @{ q = 'Why can I not concentrate even when I sit down to study?'; a = 'Concentration follows structure, not mood. The brain needs one specific task, a timed block and a clean, quiet desk. Plan the task the night before, start with it in a timed block, and the focus follows.' },
+      @{ q = 'How long should a study block be?'; a = 'Thirty to forty minutes of one task, then a true five-minute break: stand, water, look away. Five focused blocks beat an afternoon of half-attention.' },
+      @{ q = 'How do I stop my phone from breaking my focus?'; a = 'Put it in another room or in a bag on silent, never on the desk, and turn notifications off before the block. Every removed distraction is a decision the brain no longer has to make.' },
+      @{ q = 'What should I do when I feel overwhelmed by the syllabus?'; a = 'Shrink the day: three tasks written tonight and only one task open at a time during blocks. If a new task appears mid-block, note it on a scrap and return. Heavy anxiety or sleep trouble deserves a conversation with parents, a teacher or a counsellor.' },
+      @{ q = 'Which is the most underrated focus tool?'; a = 'Sleep and movement. Seven hours of sleep is part of the plan, and a short walk clears the fog that re-reading cannot. If the schedule cannot fit movement, the schedule needs editing, not the student.' }
+    )
     body = @(
       @{ t = 'p'; s = @('Board preparation feels stressful when the work feels vague, and it feels vague when there is no focus system.','Focus is not a personality trait; it is a routine you can build in a week.','This guide pairs a simple focus system with honest ways to handle the stress spikes.') },
       @{ t = 'h2'; s = 'Focus is a skill, not a mood' },
@@ -3276,6 +3344,12 @@ $script:blogArticles = @(
     courses  = @(
       @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' },
       @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    faq = @(
+      @{ q = 'Should I still be learning in the final week?'; a = 'No, the final week settles and recalls. Anything still unknown stays unknown, so the week runs in recall mode: summaries, memory lists, the error log, figures and formats.' },
+      @{ q = 'How many papers should I sit in the final week?'; a = 'One light full paper early in the week, around day five, is enough to keep the timing reflex alive. From day four onward there is no heavy testing, and the last two days are pure memory work.' },
+      @{ q = 'What should the day before the first paper look like?'; a = 'Review only the first subject summaries and memory list, retell the three hardest ideas aloud, stop by early evening, pack the bag and sleep fully. The last hour of study buys little; the last hour of sleep buys recall.' },
+      @{ q = 'When should I completely stop new material?'; a = 'By day four before the first paper. Everything new is dropped and the week subtracts with purpose, because the anxiety of the final week comes from trying to add.' }
     )
     body = @(
       @{ t = 'p'; s = @('Seven days before the boards is too late to learn and exactly right to settle.','The final week converts a year of preparation into a calm, rehearsed body of recall.','This strategy runs the week in one job: produce memory material daily, keep it light, and taper into the first paper.') },

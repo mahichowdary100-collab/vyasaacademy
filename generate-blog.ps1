@@ -286,6 +286,26 @@ function Get-ArticleLd($a) {
   }
 }
 
+function Get-FaqLd($faq) {
+  $list = @()
+  foreach ($f in $faq) {
+    $list += @{
+      '@type' = 'Question'
+      'name' = $f.q
+      'acceptedAnswer' = @{
+        '@type' = 'Answer'
+        'text' = $f.a
+        'upvoteCount' = 0
+      }
+    }
+  }
+  return New-Ld @{
+    '@context' = 'https://schema.org'
+    '@type' = 'FAQPage'
+    'mainEntity' = $list
+  }
+}
+
 # ================= BUILD ARTICLE PAGES =================
 foreach ($a in $blogArticles) {
   $catName = $catMap[$a.cat]
@@ -312,12 +332,24 @@ foreach ($a in $blogArticles) {
     @{ name = $a.title; url = $url }
   )
 
-  $head = Build-Head $a.title $a.excerpt $url "article" @((Get-ArticleLd $a), (Get-BreadcrumbLd $crumbItems)) $featImg
+  $blocks = @($a.body)
+  if ($a.faq -and $a.faq.Count -gt 0) {
+    $blocks += @{ t = 'h2'; s = 'Frequently asked questions' }
+    foreach ($fa in $a.faq) {
+      $blocks += @{ t = 'h3'; s = $fa.q }
+      $blocks += @{ t = 'p'; s = @($fa.a) }
+    }
+  }
+
+  $ldBlocks = @((Get-ArticleLd $a), (Get-BreadcrumbLd $crumbItems))
+  if ($a.faq -and $a.faq.Count -gt 0) { $ldBlocks += Get-FaqLd $a.faq }
+
+  $head = Build-Head $a.title $a.excerpt $url "article" $ldBlocks $featImg
 
   # render body blocks
   $bodyHtml = @()
   $i = 0
-  foreach ($b in $a.body) { $bodyHtml += Get-BlockHtml $b $i; $i++ }
+  foreach ($b in $blocks) { $bodyHtml += Get-BlockHtml $b $i; $i++ }
 
   $relatedHtml = @()
   foreach ($rs in $a.related) {
@@ -327,7 +359,7 @@ foreach ($a in $blogArticles) {
   $metaLine = "By <a href=""/#about"">$($au.name)</a> | $pubDisp | $read min read"
   if ($a.upd -ne $a.pub) { $metaLine += " | Updated $updDisp" }
 
-  $main = "<main class=""blog-page"">$nl  <div class=""container blog-container"">$nl    $(Get-CrumbsBar $crumbItems)$nl    <article class=""blog-article"">$nl      <header class=""blog-article-header"">$nl        <a class=""blog-cat-badge"" href=""/blog/$($a.cat)/"">$catName</a>$nl        <h1>$($a.title)</h1>$nl        <p class=""blog-article-meta"">$metaLine</p>$nl      </header>$nl      $featuredHtml$nl      $(Get-TocHtml $a.body)$nl      <div class=""blog-content"">$nl$($bodyHtml -join "$nl$nl")$nl      </div>$nl      $(Get-SharingHtml $a)$nl      $(Get-AuthorBox $a)$nl      $(Get-CtaHtml $a)"
+  $main = "<main class=""blog-page"">$nl  <div class=""container blog-container"">$nl    $(Get-CrumbsBar $crumbItems)$nl    <article class=""blog-article"">$nl      <header class=""blog-article-header"">$nl        <a class=""blog-cat-badge"" href=""/blog/$($a.cat)/"">$catName</a>$nl        <h1>$($a.title)</h1>$nl        <p class=""blog-article-meta"">$metaLine</p>$nl      </header>$nl      $featuredHtml$nl      $(Get-TocHtml $blocks)$nl      <div class=""blog-content"">$nl$($bodyHtml -join "$nl$nl")$nl      </div>$nl      $(Get-SharingHtml $a)$nl      $(Get-AuthorBox $a)$nl      $(Get-CtaHtml $a)"
   if ($relatedHtml.Count -gt 0) {
     $main += "$nl      <section class=""blog-related"">$nl        <h2>Related reading</h2>$nl        <div class=""blog-grid"">$nl$($relatedHtml -join "$nl")$nl        </div>$nl      </section>"
   }
