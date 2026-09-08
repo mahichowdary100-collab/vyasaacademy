@@ -140,10 +140,12 @@ $navHtml = Get-NavHtml
 $footerHtml = Get-FooterHtml
 
 function Build-Head($title,$desc,$url,$pageType,$ldBlocks) {
+  $titleHtml = $title -replace '&', '&amp;'
+  $descHtml = $desc -replace '&', '&amp;'
   $s = "<!DOCTYPE html>$nl<html lang=""en"">$nl<head>$nl  <meta charset=""UTF-8"" />$nl  <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"" />"
-  $s += "$nl<title>$title</title>$nl  <meta name=""description"" content=""$desc"" />$nl  <link rel=""canonical"" href=""$url"" />"
-  $s += "$nl  <meta property=""og:type"" content=""$pageType"" />$nl  <meta property=""og:site_name"" content=""Vyasa Academy"" />$nl  <meta property=""og:title"" content=""$title"" />$nl  <meta property=""og:description"" content=""$desc"" />$nl  <meta property=""og:url"" content=""$url"" />$nl  <meta property=""og:image"" content=""$ogImage"" />$nl  <meta property=""og:locale"" content=""en_IN"" />"
-  $s += "$nl  <meta name=""twitter:card"" content=""summary_large_image"" />$nl  <meta name=""twitter:title"" content=""$title"" />$nl  <meta name=""twitter:description"" content=""$desc"" />$nl  <meta name=""twitter:image"" content=""$ogImage"" />"
+  $s += "$nl<title>$titleHtml</title>$nl  <meta name=""description"" content=""$descHtml"" />$nl  <link rel=""canonical"" href=""$url"" />"
+  $s += "$nl  <meta property=""og:type"" content=""$pageType"" />$nl  <meta property=""og:site_name"" content=""Vyasa Academy"" />$nl  <meta property=""og:title"" content=""$titleHtml"" />$nl  <meta property=""og:description"" content=""$descHtml"" />$nl  <meta property=""og:url"" content=""$url"" />$nl  <meta property=""og:image"" content=""$ogImage"" />$nl  <meta property=""og:locale"" content=""en_IN"" />"
+  $s += "$nl  <meta name=""twitter:card"" content=""summary_large_image"" />$nl  <meta name=""twitter:title"" content=""$titleHtml"" />$nl  <meta name=""twitter:description"" content=""$descHtml"" />$nl  <meta name=""twitter:image"" content=""$ogImage"" />"
   $s += "$nl  <link rel=""stylesheet"" href=""/styles.css"" />$nl  <link rel=""preconnect"" href=""https://fonts.googleapis.com"" />$nl  <link href=""https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"" rel=""stylesheet"" />$nl  <link rel=""stylesheet"" href=""https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"" />"
   foreach ($j in $ldBlocks) {
     $s += "$nl  <script type=""application/ld+json"">$nl$j$nl  </script>"
