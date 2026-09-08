@@ -1956,5 +1956,554 @@ $script:blogArticles = @(
       @{ t = 'h2'; s = 'The final word' },
       @{ t = 'p'; s = @('Active recall, spaced revision, flashcards, concept maps and timed self-testing are the five tools that make biology stick.','Run them together on a weekly rhythm and the subject stops requiring marathon study sessions.','Start with one technique today and add the rest over a week.') }
     )
+  },
+
+  @{
+    slug     = 'how-to-make-science-interesting-for-students'
+    title    = 'How to Make Science Interesting for Students'
+    cat      = 'science'
+    author   = 'vyasa'
+    pub      = '2026-09-08'
+    upd      = '2026-09-08'
+    excerpt  = 'Science becomes interesting when it connects to real life. Start from questions, use everyday objects, and let small experiments do the teaching.'
+    keywords = @('make science interesting','how to enjoy science','science at home','science curiosity for students')
+    related  = @('why-do-students-find-science-difficult','how-experiments-help-students-understand-science','how-parents-can-help-children-develop-interest-in-science','science-foundations-for-classes-6-to-8')
+    cta      = 'Interest in science grows fastest with guidance and small experiments. The Science programs at Vyasa Academy in Hulimavu are built to keep that curiosity alive through Classes 6 to 10.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Students rarely find science boring because the subject is boring; they find it disconnected from the lives they actually live.','A chapter on force seems far away until it explains why a bike slows when you stop pedalling.','Interest follows connection, and connection is something anyone can build.') },
+      @{ t = 'h2'; s = 'Start from the question, not the definition' },
+      @{ t = 'p'; s = @('A definition asks a student to accept a fact.','A question asks them to notice the world.','Begin with something like why does an ice cube melt faster on some surfaces, and let the definition arrive as the answer.','Starting from questions keeps the mind moving, which is the state where interest lives.') },
+      @{ t = 'h2'; s = 'Use the home as a laboratory' },
+      @{ t = 'ul'; i = @('Kitchen: observe what happens when water boils, why dough rises, or how sugar dissolves faster in hot liquid.','Bathroom: steam on a mirror explains condensation before the chapter reaches it.','Garden: a watering can and sunlight make plant matter and evaporation visible.','Gadgets: a phone tells you about circuits, energy and signals every single day.') },
+      @{ t = 'p'; s = @('None of these need special equipment, and each one is a real observation of the ideas the syllabus later names.') },
+      @{ t = 'h2'; s = 'Connect science to what students already love' },
+      @{ t = 'p'; s = @('A student who loves cricket can be curious about why a ball stops, spins, or travels in a curve, all of which are physics in motion.','A student who loves food can wonder about cooking, fermentation and digestion, all of which are chemistry and biology.','Find the interest the student already has and point the science at it.','The subject stops being a lesson and starts being a tool they want.') },
+      @{ t = 'h2'; s = 'Let small, safe experiments do the teaching' },
+      @{ t = 'p'; s = @('A two-minute observation beats a twenty-minute lecture for staying power.','Try simple activities with adult supervision where needed, and let the student predict the outcome before running the test.','The prediction-and-check loop is exactly what scientists do, and doing it feels like play.','Our article on <a href="/blog/how-experiments-help-students-understand-science/">how experiments build understanding</a> explains why this works.') },
+      @{ t = 'h2'; s = 'Turn discoveries into a daily habit' },
+      @{ t = 'p'; s = @('Ask for one science fact or one new observation each day, at dinner or on the way home.','The daily fact keeps science present without turning it into a task.','Over a term, those daily moments become a body of confidence a textbook alone cannot build.') },
+      @{ t = 'h2'; s = 'Protect interest from the fear of difficulty' },
+      @{ t = 'p'; s = @('Interest dies when a student feels permanently confused.','Pace the material so small wins keep happening, and clear doubts before they pile up.','The causes of that fear and the fixes for each are laid out in our <a href="/blog/why-do-students-find-science-difficult/">why science feels difficult</a> article.') },
+      @{ t = 'h2'; s = 'Quick ideas for this week' },
+      @{ t = 'ol'; i = @('Tonight: ask one question about something in the room and find the answer together.','This weekend: run one safe home experiment and record the prediction before the result.','All week: notice one science moment in daily life each day and say it out loud.') },
+      @{ t = 'h2'; s = 'The closing thought' },
+      @{ t = 'p'; s = @('Interest in science is built the way the subject itself works: by questions, observations and connection to the real world.','Start small, keep it daily, and let the student do the discovering.','Over time, the subject stops being a chapter and becomes a way of looking at everything.') }
+    )
+  },
+
+  @{
+    slug     = 'why-do-students-find-science-difficult'
+    title    = 'Why Do Students Find Science Difficult?'
+    cat      = 'science'
+    author   = 'vyasa'
+    pub      = '2026-09-07'
+    upd      = '2026-09-07'
+    excerpt  = 'Science feels hard for a handful of reasons that can each be fixed. Diagnose the real cause behind the difficulty and treat that exact cause.'
+    keywords = @('why science is difficult','science hard to understand','science fear students','problems learning science')
+    related  = @('how-to-make-science-interesting-for-students','how-to-improve-conceptual-understanding-in-science','how-to-clear-doubts-faster','science-foundations-for-classes-6-to-8')
+    cta      = 'When a child finds science difficult, a patient teacher makes the difference. The small-batch Science classes at Vyasa Academy in Hulimavu are designed to diagnose and fix the real cause.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Science is not difficult the way mountains are difficult.','It feels difficult for a list of specific reasons, and each reason has a specific fix.','A student who names the real cause stops fighting a fog and starts fixing the problem.','Here are the causes we see most often.') },
+      @{ t = 'h2'; s = 'Cause 1: the vocabulary wall' },
+      @{ t = 'p'; s = @('Science introduces dozens of new words per chapter, and a word you cannot pronounce is a word you cannot think with.','The fix is systematic: learn terms in small groups, say them aloud, and connect each to its root meaning.','Treat terminology as a vocabulary lesson, not as separate science facts.','Our <a href="/blog/how-to-learn-scientific-names-and-biological-terms/">terminology method</a> works for all of science, not just biology.') },
+      @{ t = 'h2'; s = 'Cause 2: concepts you cannot see' },
+      @{ t = 'p'; s = @('Electricity, force, energy and molecules are invisible, and the brain struggles with what it cannot picture.','The fix is translation: turn each invisible idea into a picture, an analogy or a diagram you can draw strongly.','An analogy for current as water flowing, or energy as a currency, gives the invisible idea a visible friend.','Drawing out ideas is the core skill in our <a href="/blog/how-to-improve-conceptual-understanding-in-science/">conceptual understanding guide</a>.') },
+      @{ t = 'h2'; s = 'Cause 3: formulas before understanding' },
+      @{ t = 'p'; s = @('When a student memorises the formula but never understood the idea behind it, the formula becomes dead weight.','The fix is to ask one question before the formula: what is this really describing?','A formula with a story survives every new problem; a formula memorised in a vacuum collapses on the first variation.') },
+      @{ t = 'h2'; s = 'Cause 4: treating biology as pure memory' },
+      @{ t = 'p'; s = @('Biology absorbs facts so easily that students never build the process underneath them.','The fix is to learn each topic as a flowchart first and attach the facts to its steps.','Process knowledge answers the application questions that memory-only revision misses.') },
+      @{ t = 'h2'; s = 'Cause 5: a syllabus that gets ahead of doubts' },
+      @{ t = 'p'; s = @('Confusion in one chapter grows because the next chapter stands on top of it.','The fix is to clear doubts quickly and never let them accumulate.','A doubt cleared the same week is a small task; a doubt cleared after three chapters is a burden.','See how to handle doubts fast in our <a href="/blog/how-to-clear-doubts-faster/">doubt-clearing guide</a>.') },
+      @{ t = 'h2'; s = 'Cause 6: fear of being wrong' },
+      @{ t = 'p'; s = @('Science classes that punish wrong answers create silence, and silence hides confusion.','The fix is to treat the wrong answer as data: what did the answer assume, and where did the reasoning turn?','Students who can say I got this wrong, help me see why learn faster than students who work hard to appear right.') },
+      @{ t = 'h2'; s = 'Find which cause is yours' },
+      @{ t = 'ol'; i = @('If questions feel unreadable, the cause is vocabulary.','If you know the words but cannot picture the idea, the cause is invisible concepts.','If you know the idea but freeze on problems, the cause is formulas before understanding.','If you can repeat the chapter but fail application questions, the cause is memory without process.') },
+      @{ t = 'h2'; s = 'The honest close' },
+      @{ t = 'p'; s = @('Science feels difficult for named reasons, not for a lack of ability.','Find the dominant cause, apply its fix for a few weeks, and the fog clears.','The middle-school habits that prevent most of these causes are described in our <a href="/blog/science-foundations-for-classes-6-to-8/">foundations article</a>.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-improve-conceptual-understanding-in-science'
+    title    = 'How to Improve Conceptual Understanding in Science'
+    cat      = 'science'
+    author   = 'vyasa'
+    pub      = '2026-09-06'
+    upd      = '2026-09-06'
+    excerpt  = 'Understanding beats memorising in science. Learn the why before the what, explain ideas back, and test yourself with changed problems.'
+    keywords = @('conceptual understanding science','understand science deeply','science concepts study','how to understand science not memorise')
+    related  = @('understanding-concepts-vs-memorising-mathematics','how-to-make-science-interesting-for-students','why-do-students-find-science-difficult','important-study-techniques-for-biology-students')
+    cta      = 'Understanding is built under guidance, where a teacher asks the right why questions. The Science coaching at Vyasa Academy in Hulimavu teaches concepts first and formulas after.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('A student can memorise the whole chapter and still fail a question phrased one degree differently from the book.','Understanding is the skill that survives variation, because it works from first principles instead of from the original example.','It is also learnable, and the methods below are how.') },
+      @{ t = 'h2'; s = 'Learn the why before the what' },
+      @{ t = 'p'; s = @('Before a formula, a law or a definition, ask why it makes sense.','Why does a moving object keep moving without a force? Why does a plant need light?','The why is a short story, and stories are what the memory can hold.','When the why is clear, the what becomes obvious instead of arbitrary.') },
+      @{ t = 'h2'; s = 'Explain it to someone who just met it' },
+      @{ t = 'p'; s = @('Close the book and explain the idea in simple words to a study partner, a parent, or a wall.','Understanding appears at the exact moment you can teach something, and gaps appear at the exact sentence where you stall.','The stall is the learning point: re-open the text exactly there and close it again.') },
+      @{ t = 'h2'; s = 'Connect science to itself' },
+      @{ t = 'p'; s = @('Physics, chemistry and biology are not three separate subjects in the syllabus; the same ideas keep reappearing.','Energy appears in physics, in reactions in chemistry, and in every living process in biology.','Process and change appear in all three.','When you notice a repeat, mark it and say: I met this idea before.','Those cross-connections are what the exam often tests and what pure memorising misses.') },
+      @{ t = 'h2'; s = 'Draw a concept map per chapter' },
+      @{ t = 'p'; s = @('Put the chapters main idea in the centre and connect the sub-ideas with labelled lines.','Draw it once after studying, then redraw it from memory the next day.','The lines you forget are the relationships you still have to learn.','A concept map is also the fastest chapter revision tool there is, as described in our <a href="/blog/important-study-techniques-for-biology-students/">study techniques guide</a>.') },
+      @{ t = 'h2'; s = 'Ask what-if questions' },
+      @{ t = 'ol'; i = @('Change one variable in the situation and predict the result.','Change the units or the scale and see what surprises you.','Reverse the question and work backwards from the answer.','Ask what would break if this idea were different.') },
+      @{ t = 'p'; s = @('If you can handle these changes, you have understanding; if you stall, you have only the original template.','The same test is explained for mathematics in our <a href="/blog/understanding-concepts-vs-memorising-mathematics/">concepts versus memorising</a> article.') },
+      @{ t = 'h2'; s = 'Detect the difference in yourself' },
+      @{ t = 'p'; s = @('Open the chapter, close it, and attempt a question that was not homework.','Feeling smooth means understanding; reaching for the answer means memorising.','Run this honest test weekly and let it choose what you restudy, and your study time will concentrate exactly where it should.') },
+      @{ t = 'h2'; s = 'The takeaway' },
+      @{ t = 'p'; s = @('Conceptual understanding is the habit of asking why, connecting ideas, drawing maps, and testing with change.','It is built with a few minutes of honest self-questioning per chapter, not with extra hours.','Build it and science stops being a memorising load.') }
+    )
+  },
+
+  @{
+    slug     = 'best-way-to-study-science-for-cbse-students'
+    title    = 'Best Way to Study Science for CBSE Students'
+    cat      = 'science'
+    author   = 'vyasa'
+    pub      = '2026-09-05'
+    upd      = '2026-09-05'
+    excerpt  = 'One subject, three learning styles. Study physics by method, chemistry by pattern and biology by process, then balance all three weekly.'
+    keywords = @('how to study science','best science study method','CBSE science study plan','science study schedule')
+    related  = @('how-to-improve-conceptual-understanding-in-science','how-to-build-a-study-routine','how-to-score-higher-marks-in-cbse-science','how-to-prepare-physics-chemistry-biology-class-10')
+    cta      = 'A balanced science study plan is easiest to follow with a guide who keeps weekly rhythm. The Science batches at Vyasa Academy in Hulimavu teach all three branches in balance.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('The CBSE science paper is really three different papers sharing a cover: calculation-heavy physics, equation-heavy chemistry, and fact-and-figure-heavy biology.','Treating them identically is the fastest way to underperform.','The best way is to study each branch the way it behaves, and balance all three in the same week.') },
+      @{ t = 'h2'; s = 'Physics rewards method' },
+      @{ t = 'p'; s = @('Learn a concept, then practise its problem types until the method is automatic.','Write the given values, the formula, the substitution with units, and the final answer every time.','Two passes on every set: first with help, then blind and timed.','The second pass is the one that builds the real skill.') },
+      @{ t = 'h2'; s = 'Chemistry rewards pattern' },
+      @{ t = 'p'; s = @('Chemistry feels like lists, but the lists are organised by families: acid and base, displacement, precipitation, and the reaction families of the organic chapters.','Learn each family rule, keep conditions on the arrow, and practise writing equations from memory.','A balance between the branches of chemistry is described in our <a href="/blog/how-to-study-chemistry-effectively-for-cbse-board-exams/">chemistry study guide</a>.') },
+      @{ t = 'h2'; s = 'Biology rewards process' },
+      @{ t = 'p'; s = @('Biology is structure and process together: how blood moves, how a seed grows, how traits pass on.','Learn each topic as a flowchart, attach the terms to its steps, and keep a figure rotation.','Terminology and figures are the two habits that make biology branch ahead of the rest.') },
+      @{ t = 'h2'; s = 'Read the NCERT actively every week' },
+      @{ t = 'p'; s = @('The NCERT is the base of the CBSE paper for all three branches.','Read one section, close the book, retell it in two written lines, then continue.','Do this across the week for all three branches so each stays warm.') },
+      @{ t = 'h2'; s = 'A balanced weekly diet' },
+      @{ t = 'ol'; i = @('Monday: physics, concept plus one problem set, second pass blind.','Tuesday: chemistry, one family of reactions written from memory.','Wednesday: biology, one chapter as a flowchart plus one figure.','Thursday: mixed practice, five questions from each branch.','Friday: correct the weeks mistakes and log them.','Saturday: one timed mixed set, then a recall page per branch.') },
+      @{ t = 'p'; s = @('Six sessions a week sounds heavy, but each one is short and focused.','The balance is what makes the difference, not the total hours.') },
+      @{ t = 'h2'; s = 'Track your three-branch balance' },
+      @{ t = 'p'; s = @('Keep a one-page log of minutes per branch and marks lost per branch.','Students are surprised to discover one branch silently eats the whole week.','The log keeps the balance honest and leads revision the week after.') },
+      @{ t = 'h2'; s = 'The close' },
+      @{ t = 'p'; s = @('The best way to study CBSE science is to stop treating it as one subject.','Use the method style for physics, pattern style for chemistry, and process style for biology, in one balanced rhythm.','Do that for a term and all three branches move together.') }
+    )
+  },
+
+  @{
+    slug     = 'how-experiments-help-students-understand-science'
+    title    = 'How Experiments Help Students Understand Science'
+    cat      = 'science'
+    author   = 'vyasa'
+    pub      = '2026-09-04'
+    upd      = '2026-09-04'
+    excerpt  = 'Experiments turn invisible ideas into experiences. Predict first, observe, record, then connect the result back to the concept.'
+    keywords = @('science experiments learning','importance of experiments','hands on science learning','science practical understanding')
+    related  = @('how-to-make-science-interesting-for-students','how-to-prepare-practical-chemistry-for-board-exams','science-foundations-for-classes-6-to-8','best-way-to-study-science-for-cbse-students')
+    cta      = 'Guided practical sessions make concepts permanent. The Science coaching at Vyasa Academy in Hulimavu combines classroom concept work with regular experiment practice.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Science read from a book lives in the front of the mind for a day; science done with your own hands lives much longer.','An experiment turns an invisible idea into an event you saw happen, and events are what memory keeps.','Here is the method that makes experiments teach properly.') },
+      @{ t = 'h2'; s = 'One experiment is worth many paragraphs' },
+      @{ t = 'p'; s = @('Reading about a reaction gives you a description; watching the colour change gives you a memory.','The experiment does in two minutes what a page of description does in twenty.','Attendance matters less than attention: a student who predicts, watches and explains learns more than one who merely copies the record.') },
+      @{ t = 'h2'; s = 'Predict before you perform' },
+      @{ t = 'p'; s = @('Before running any experiment, write one line predicting what will happen and why.','This turns the activity into a test of your thinking, and the moment of comparison is where learning lands.','A prediction that fails is even better, because the surprise forces a real explanation, which is the textbook concept arriving in context.') },
+      @{ t = 'h2'; s = 'Record observations in a table' },
+      @{ t = 'ul'; i = @('Write what you observed, not what you expected: colours, temperatures, times, and states.','Use a small table with the variable you changed, the observation, and the result.','A neat observation table is also exactly what a practical record should contain.','Silence the phone, rest the chat, and give the observation your full eyes.') },
+      @{ t = 'h2'; s = 'Connect the result back to the concept' },
+      @{ t = 'p'; s = @('After the experiment, close with one sentence linking the observation to the syllabus idea it illustrates.','If a seed absorbs water and a sprout appears, the sentence is that water is essential for germination and growth.','That linking sentence is the whole point of doing the experiment in the first place, and it is the answer to the question the board will ask.') },
+      @{ t = 'h2'; s = 'Treat mistakes as the best data' },
+      @{ t = 'p'; s = @('A wrong measurement or a failed first attempt is not an embarrassment; it is the variable you did not control.','Ask what changed between the failed run and the clean one, and you have just done real scientific reasoning.','Students who handle failed attempts this way stop fearing the practical part of the exam entirely, which is the mindset built in our <a href="/blog/how-to-prepare-practical-chemistry-for-board-exams/">practical preparation guide</a>.') },
+      @{ t = 'h2'; s = 'Simple experiments at home' },
+      @{ t = 'ol'; i = @('Place a glass on ice and watch condensation form: moisture in air becomes visible.','Mix vinegar and baking soda in a bowl and observe the produced gas.','Drop a raisin in water and then in a sugar solution, and compare buoyancy.','Cover shining glasses with a cardboard and test if light passes through.') },
+      @{ t = 'p'; s = @('Each of these is safe, cheap and directly connected to topics in the class 6 to 10 syllabus.','Run one a week with adult supervision and the prediction-and-check loop becomes a habit.') },
+      @{ t = 'h2'; s = 'The closing note' },
+      @{ t = 'p'; s = @('Experiments teach because they turn ideas into events.','Predict first, observe honestly, record in a table, and close with the linking sentence.','Do that with the school practicals and at home, and science stops being text and starts being experience.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-score-higher-marks-in-cbse-science'
+    title    = 'How to Score Higher Marks in CBSE Science'
+    cat      = 'science'
+    author   = 'vyasa'
+    pub      = '2026-09-03'
+    upd      = '2026-09-03'
+    excerpt  = 'Find the weakest branch first, lead with the highest-leak topics, and rehearse the answer format each branch demands.'
+    keywords = @('score higher marks in science','CBSE science marks','science exam strategy','improve science score')
+    related  = @('how-to-score-higher-marks-in-cbse-class-10-mathematics','how-to-prepare-science-class-10-board-exams','how-to-write-better-answers-in-cbse-science-exams','common-mistakes-students-make-in-science-exams')
+    cta      = 'Higher marks come from the right diagnostics. The Science coaching at Vyasa Academy in Hulimavu builds a personal error log and a branch-wise plan for every student.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Two students study the same number of hours and score very differently, because scoring is not about the hours, it is about where those hours go.','The path to higher marks in CBSE science is a short one: measure your branches, spend on the weakest lead, rehearse the answer format, and log every loss.') },
+      @{ t = 'h2'; s = 'Find the branch that leaks the most' },
+      @{ t = 'p'; s = @('Start with a three-column error log: one column for physics losses, one for chemistry, one for biology.','After the next two practice tests, count the losses per branch.','Most students discover one branch quietly takes half of all lost marks.','That branch is the start of the plan, because marks in the weakest branch rise the fastest.') },
+      @{ t = 'h2'; s = 'Lead with the highest-leak topics' },
+      @{ t = 'p'; s = @('Opening the paper to the thousands, per branch, identifies the topics that cost the most.','Revised by the highest leak first and you lift the average with the fewest sessions.','A student who fixes three such topics a month ends the term with a branch transformed.') },
+      @{ t = 'h2'; s = 'Anchor on the NCERT, target the answer format' },
+      @{ t = 'p'; s = @('The mark scheme rewards NCERT-style phrasing: the words the chapter used are the words the examiner expects.','Study from the NCERT, but practise typing the final answer in the board format.','Convention training, separate from content learning, is what turns knowledge into marks.','The full format rules are in our <a href="/blog/how-to-write-better-answers-in-cbse-science-exams/">answer-writing guide</a>.') },
+      @{ t = 'h2'; s = 'Rehearse each branch the way it is marked' },
+      @{ t = 'ul'; i = @('Physics: given values, the formula, substitution with units, final answer, one line after.','Chemistry: balanced equations with conditions on the arrow, reversible or not, and names.','Biology: the term first, the flow step, and a labelled figure where the question shows it.') },
+      @{ t = 'p'; s = @('A physics answer with working earns marks even when the final value slips; a clean formula line alone does not.','Learning the format per branch is worth several marks across the paper.') },
+      @{ t = 'h2'; s = 'Practise questions, not re-reading' },
+      @{ t = 'p'; s = @('Re-reading feels like work but produces almost nothing for the paper.','Five attempted questions, checked honestly, teach more than two hours of reading.','Set the weekly target in questions attempted, not pages read, and the numbers climb.') },
+      @{ t = 'h2'; s = 'Guard the last ten minutes' },
+      @{ t = 'p'; s = @('Lost marks are most often left in the last ten minutes: skipped units, unlabelled diagrams and half-answered short questions.','Keep ten minutes at the end of every practice paper, purely for a unit and label check.','Make it a routine now and it will run automatically in the exam hall.') },
+      @{ t = 'h2'; s = 'A monthly rhythm that raises the average' },
+      @{ t = 'ol'; i = @('Take one full practice paper and fill the error log.','Fix the three highest-leak topics in the following two weeks.','Re-take only the failed branches, not the full paper.','Measure again and move the plan to the next weakest branch.') },
+      @{ t = 'h2'; s = 'The point to remember' },
+      @{ t = 'p'; s = @('Higher marks follow where the plan points: weakest branch first, highest-leak topics next, answer format rehearsed, and every loss logged.','The log turns studying from a guess into a measurement, and scores rise with the measurement.') }
+    )
+  },
+
+  @{
+    slug     = 'common-mistakes-students-make-in-science-exams'
+    title    = 'Common Mistakes Students Make in Science Exams'
+    cat      = 'science'
+    author   = 'vyasa'
+    pub      = '2026-09-02'
+    upd      = '2026-09-02'
+    excerpt  = 'Six marks-eating habits across the science paper, plus a one-month plan to purge each of them before the next exam.'
+    keywords = @('science exam mistakes','science paper common errors','exam mistakes science','CBSE science errors')
+    related  = @('how-to-write-better-answers-in-cbse-science-exams','common-mistakes-students-make-in-biology-exams','common-mistakes-in-mathematics-exams','common-mistakes-students-make-in-chemistry-exams')
+    cta      = 'Mistakes are habits, and habits are coachable. The Science classes at Vyasa Academy in Hulimavu build a private mistake log for each student and fix it weekly.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Most mark loss in a science exam does not come from not knowing the topic; it comes from a fixed set of habits.','Each habit below is a small, specific habit and each has a small, specific fix.','Clear these and the same knowledge quietly earns more marks.') },
+      @{ t = 'h2'; s = 'Mistake 1: answering a different question than asked' },
+      @{ t = 'p'; s = @('Why, how, what happens, define, draw, compare: each verb asks for a different answer shape.','Students often rewrite the whole chapter when the question asked for one sentence.','Underline the verb before writing, answer exactly that verb, and move on.') },
+      @{ t = 'h2'; s = 'Mistake 2: equations and formulas without their conditions' },
+      @{ t = 'ul'; i = @('Chemistry: equations need to be balanced, with state symbols and conditions on the arrow.','Physics: formulas need units written with the values, not only the numbers.','Biology: a process needs its sequence, not just its name.') },
+      @{ t = 'p'; s = @('The condition is where the marks live. A balanced equation with no conditions earns half marks; the same with conditions earns more.','Practise writing the conditions as part of the answer, never as an afterthought.') },
+      @{ t = 'h2'; s = 'Mistake 3: diagrams that are not labelled properly' },
+      @{ t = 'p'; s = @('A drawn figure with no labels is treated as an incomplete answer, and spelling errors in labels cost marks.','Label every key part, write labels in pencil so corrections are clean, and spell laboratory, artery and mitochondria correctly.','The full diagram grammar is in our <a href="/blog/importance-of-diagrams-in-science-exams/">diagrams article</a>.') },
+      @{ t = 'h2'; s = 'Mistake 4: no working shown for numericals' },
+      @{ t = 'p'; s = @('Science papers award step marks for showing the method, even when the final answer is wrong.','Students who hide their working depend on one perfect final answer, which is the riskiest way to answer.','Show given values, the formula, the substitution and the answer, every time.') },
+      @{ t = 'h2'; s = 'Mistake 5: memorised answers that panic on change' },
+      @{ t = 'p'; s = @('Textbook questions get rephrased every year, and a memorised answer collapses on the first new wording.','The defence is understanding built with the concept methods and practised on varied questions.','A student who understands one example handles a hundred phrasings of it.') },
+      @{ t = 'h2'; s = 'Mistake 6: uneven time across the paper' },
+      @{ t = 'p'; s = @('Long answers swallow the middle of the paper and short questions are left to the last two rushed minutes.','Decide the time budget before the exam: roughly a minute for each mark, with ten minutes saved for review.','Clock-watch in practice papers until the rhythm becomes natural, exactly the habit used by our <a href="/blog/how-to-manage-time-during-biology-exams/">time management guide</a>.') },
+      @{ t = 'h2'; s = 'A one-month habit purge' },
+      @{ t = 'ol'; i = @('Week 1: underline the verb in every practice question before answering.','Week 2: write conditions with every equation, formula and process answer.','Week 3: label every diagram and review your labels table before tests.','Week 4: time every practice paper, with a reserved review block.') },
+      @{ t = 'h2'; s = 'The honest summary' },
+      @{ t = 'p'; s = @('The six mistakes are all habits, and habits change with a month of aimed practice.','Fix the verb, fix the conditions, fix the labels, show the working, protect understanding, and time the paper.','Repeat that month and the same knowledge meets the examiner in much better shape.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-prepare-physics-chemistry-biology-class-10'
+    title    = 'How to Prepare Physics, Chemistry and Biology for Class 10'
+    cat      = 'science'
+    author   = 'vyasa'
+    pub      = '2026-09-01'
+    upd      = '2026-09-01'
+    excerpt  = 'A branch-by-branch Class 10 Science plan: physics by method, chemistry by equation, biology by figure and term, all in one balanced timetable.'
+    keywords = @('class 10 science preparation','prepare physics class 10','prepare chemistry class 10','prepare biology class 10')
+    related  = @('how-to-prepare-science-class-10-board-exams','how-to-improve-conceptual-understanding-in-science','how-to-remember-scientific-concepts-easily','importance-of-diagrams-in-science-exams')
+    cta      = 'Class 10 Science needs all three branches moving together. The Class 10 Science batches at Vyasa Academy in Hulimavu cover physics, chemistry and biology in one weekly plan.'
+    courses  = @(
+      @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' },
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Class 10 Science is one exam built from three branches that ask three different things of you.','Physics wants a method, chemistry wants a balanced sentence, biology wants a figure and a term together.','Prepare each branch the way it asks, and the whole paper comes together.') },
+      @{ t = 'h2'; s = 'Physics in Class 10 Science: methods first' },
+      @{ t = 'p'; s = @('The core of Class 10 physics is light, electricity, magnetic effects and human-eye applications, plus some force and motion.','For each chapter, collect the problem types, learn one clean pattern for each, and practise a new set blind.','Ray diagrams deserve handwriting practice: your lines and labels must be exam-draw clean.','The drawing and method habits are woven through our <a href="/blog/importance-of-diagrams-in-science-exams/">diagram guide</a>.') },
+      @{ t = 'h2'; s = 'Chemistry in Class 10 Science: equations and patterns' },
+      @{ t = 'p'; s = @('Class 10 chemistry is reactions: chemical equations, acids bases and salts, metals and non-metals, carbon and its compounds.','Instead of memorising equations one by one, learn each family rule and write fresh examples from it.','Balance automatically, keep conditions on the arrow, and practise writing the family from memory.','The equation habits transfer directly from our <a href="/blog/how-to-balance-chemical-equations-easily/">balancing guide</a>.') },
+      @{ t = 'h2'; s = 'Biology in Class 10 Science: the term-figure pair' },
+      @{ t = 'p'; s = @('Class 10 biology is life processes, control and coordination, reproduction, heredity, and our environment.','Learn each topic as a process: blood flows, neurons signal, seeds grow.','Attach the glossary terms to the right step and keep a figure rotation so every diagram is hand-ready.','Terminology and figures together are the biology routine expanded in our <a href="/blog/how-to-learn-scientific-names-and-biological-terms/">terminology guide</a>.') },
+      @{ t = 'h2'; s = 'The practical and record bits' },
+      @{ t = 'p'; s = @('Class 10 science carries practical work alongside the theory.','Know the aim, the observation and the conclusion of each required practical, and keep the record neat.','The practical logic is the same across branches and is detailed in our <a href="/blog/how-to-prepare-practical-chemistry-for-board-exams/">practical preparation article</a>.') },
+      @{ t = 'h2'; s = 'One balanced weekly timetable' },
+      @{ t = 'ol'; i = @('Monday: physics, one method plus a timed set of its problems.','Tuesday: chemistry, one reaction family written from memory.','Wednesday: biology, one chapter flowchart plus one figure.','Thursday: mixed practice, two questions per branch.','Friday: error log review and concept redraw.','Saturday: one timed mixed paper, self-marked honestly.') },
+      @{ t = 'p'; s = @('The exact days can shift, but the shape should not: together with all three branches in the same week, or the weakest one silently disappears.') },
+      @{ t = 'h2'; s = 'Past papers by branch type' },
+      @{ t = 'p'; s = @('Past papers are easiest on yourself when you sort questions by type: the numericals, the equation writing, the figure questions.','This trains each branch rhythm separately. Then attempt whole papers under time for the final stretch.') },
+      @{ t = 'h2'; s = 'The final reminder' },
+      @{ t = 'p'; s = @('Prepare Class 10 Science branch by branch: methods for physics, equations for chemistry, figures and terms for biology.','Keep the weekly balance, do the practicals properly, and attempt branch-sorted practice.','The three skills reinforce each other and the paper rewards all three.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-remember-scientific-concepts-easily'
+    title    = 'How to Remember Scientific Concepts Easily'
+    cat      = 'science'
+    author   = 'vyasa'
+    pub      = '2026-08-31'
+    upd      = '2026-08-31'
+    excerpt  = 'Understanding holds memory. Add analogies, pictures, mnemonics and spaced recall, and scientific concepts stop slipping away.'
+    keywords = @('remember science concepts','science memory techniques','easy way to remember science','concept memory strategies')
+    related  = @('how-to-learn-scientific-names-and-biological-terms','understanding-concepts-vs-memorising-mathematics','how-to-remember-long-biology-answers','how-to-remember-mathematical-formulas')
+    cta      = 'Memory techniques work best when matched to the concept. The Science coaching at Vyasa Academy in Hulimavu teaches students which recall tool fits each topic.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('A scientific concept that slips away was never fully held; it was merely met.','Memory follows understanding, and understanding can be built deliberately.','Five tools make the difference between meeting an idea and remembering it.') },
+      @{ t = 'h2'; s = 'Tool 1: memory follows understanding' },
+      @{ t = 'p'; s = @('You can memorise a paragraph about osmosis and lose it in a week, or understand why water moves toward salt and keep it for years.','Understanding compresses the idea into a small core, and a small core is easy to store.','Learn the why first, then the labels stay attached by themselves.') },
+      @{ t = 'h2'; s = 'Tool 2: reach for an analogy' },
+      @{ t = 'p'; s = @('An analogy hangs a new idea on an old, familiar one.','Current is the flow of water along a pipe; voltage is the pressure behind it.','Energy is the community currency that every system spends.','A good analogy keeps the logic visible, and you can redraw the logic long after the textbook page is closed.') },
+      @{ t = 'h2'; s = 'Tool 3: use a mnemonic for lists' },
+      @{ t = 'p'; s = @('For a sequence or a classification, build the first letters into one memorable phrase.','The sillier the phrase, the stronger it sticks, because the brain calls nonsense more readily than sense.','Mnemonics shine for lists and sequences; they should never replace understanding of the idea under the list.','The matching rule for when a mnemonic helps is already used for the chemistry sets in our <a href="/blog/how-to-remember-chemical-reactions/">reactions memory guide</a>.') },
+      @{ t = 'h2'; s = 'Tool 4: turn the concept into a picture' },
+      @{ t = 'p'; s = @('Draw the idea in its own little diagram: the ray, the circuit, the cycle, the flow of a process.','A picture you have drawn is a possession, not a loan.','Redraw it from memory the next day and compare; the parts that differ are the parts to restudy.') },
+      @{ t = 'h2'; s = 'Tool 5: the teach-back test' },
+      @{ t = 'p'; s = @('After studying, close the book and teach the idea to someone or something.','Talking forces the brain to organise: what you can say clearly, you know; where you stall, you have found the gap.','Two minutes of teach-back does more for retention than twenty minutes of re-reading.') },
+      @{ t = 'h2'; s = 'Spaced recall on a schedule' },
+      @{ t = 'p'; s = @('Strengthen each concept after one day, three days, a week, then a month.','Each recall that succeeds locks the memory longer.','A simple three-column log of date, concept, and recall result keeps the schedule honest.') },
+      @{ t = 'h2'; s = 'A toolkit at a glance' },
+      @{ t = 'ul'; i = @('A list that repeats: mnemonic.','A process that flows: flowchart redrawn from memory.','An invisible idea: an analogy.','A structure: a labelled picture.','A prediction: spaced recall on the calendar.') },
+      @{ t = 'h2'; s = 'The close' },
+      @{ t = 'p'; s = @('Concepts are easy to remember the moment you stop carrying them as raw facts.','Understand the why, hang it on an analogy, picture it, teach it, and review it on a schedule.','Those same habits are the explanation in our <a href="/blog/how-to-remember-long-biology-answers/">long-answer memory guide</a>.') }
+    )
+  },
+
+  @{
+    slug     = 'importance-of-diagrams-in-science-exams'
+    title    = 'Importance of Diagrams in Science Exams'
+    cat      = 'science'
+    author   = 'vyasa'
+    pub      = '2026-08-30'
+    upd      = '2026-08-30'
+    excerpt  = 'Diagrams carry marks in all three branches of science. Learn the diagram grammar and keep a figure bank that rotates.'
+    keywords = @('diagrams in science exams','science diagram marks','how to draw science diagrams','diagram writing science')
+    related  = @('importance-of-diagrams-in-biology-board-exams','how-to-remember-biology-diagrams-easily','how-to-revise-science-effectively-before-exams','how-to-score-higher-marks-in-cbse-science')
+    cta      = 'Well-practised diagrams are free marks. The Science coaching at Vyasa Academy in Hulimavu keeps a figure bank for every student and rotates it weekly.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('In a science paper, a well-drawn diagram can earn marks in three separate places: for the figure itself, for the labels, and for the working it supports.','Students who can draw the figures cleanly leave marks on the table less often.','Here is the diagram system that works across physics, chemistry and biology.') },
+      @{ t = 'h2'; s = 'Diagrams carry marks in all three branches' },
+      @{ t = 'ul'; i = @('Physics: ray diagrams for light and mirrors, circuit diagrams, magnetic field lines, ray optics patterns.','Chemistry: apparatus setups for practicals, structure diagrams for atoms and molecules where asked.','Biology: the labelled structures of cells, systems, organs and processes.') },
+      @{ t = 'p'; s = @('The marking principle is the same: the figure proves you understand the structure or the idea, and the labels prove you can name it.') },
+      @{ t = 'h2'; s = 'The grammar of a good diagram' },
+      @{ t = 'ol'; i = @('Use pencil and a clean ruler for straight lines and arrows.','Label with thin, straight horizontal lines ending exactly on the part.','Spell labels correctly; laboratory, artery and mitochondria are common failures.','Write the title or the figure name where the question asks for it.','Keep the diagram inside the answer space with margin to breathe.') },
+      @{ t = 'p'; s = @('These are the same grammar rules the biology exam version enforces, expanded in our <a href="/blog/importance-of-diagrams-in-biology-board-exams/">biology diagrams guide</a>.') },
+      @{ t = 'h2'; s = 'Physics: ray and circuit diagrams earn their place' },
+      @{ t = 'p'; s = @('For ray optics, draw normal lines, incident and reflected rays with arrows, and mark angles and focal points.','For circuits, use standard symbols for cells, resistors and switches, and draw neat connecting wires.','A messy ray diagram risks the whole question even when every idea is right.') },
+      @{ t = 'h2'; s = 'Chemistry: apparatus and structure figures' },
+      @{ t = 'p'; s = @('Practical questions reward labelled apparatus setups: the flask, the condenser, the delivery tube, the receiving vessel.','Where structure figures are asked, keep shells and bonds neat and labelled.','Precision beats artistry here: a straight line and a correct label will do.') },
+      @{ t = 'h2'; s = 'Biology: the labelled structures' },
+      @{ t = 'p'; s = @('Biology rewards the most from figures because so much of it is structure.','A cell, a neuron, the human heart, the human eye, a flower, a seed, a reflex arc: draw each once, label it, and keep it.','The biology figure routine that makes these hand-ready is in our <a href="/blog/how-to-remember-biology-diagrams-easily/">figure rotation guide</a>.') },
+      @{ t = 'h2'; s = 'Build a figure bank and rotate it' },
+      @{ t = 'ol'; i = @('Assemble a list of every diagram the syllabus asks for, across all three branches.','Draw each one from memory on its own card once a week.','Circle the labels you forgot first; those are next weeks focus.','Rotate so every figure is redrawn at least twice before the exam.') },
+      @{ t = 'p'; s = @('A figure bank turns diagram preparation from panic into a boring rotation routine, and the exam becomes a familiar redraw.') },
+      @{ t = 'h2'; s = 'When drawing is a waste of time' },
+      @{ t = 'p'; s = @('If the question does not ask for a figure, a labelled drawing usually adds nothing, and time spent drawing is time lost.','Match the tool to the question: the full figure where the verb asks for draw or label, a crisp sentence elsewhere.','A diagram is a mark-earning tool, not a decoration, so spend the time only where the marks live.') },
+      @{ t = 'h2'; s = 'The last word' },
+      @{ t = 'p'; s = @('Diagrams reward preparation, not talent.','Follow the grammar, keep the figure bank, and rotate every figure twice.','In all three branches of the science paper, the drawn answer is some of the surest marks available.') }
+    )
+  },
+
+  @{
+    slug     = 'how-parents-can-help-children-develop-interest-in-science'
+    title    = 'How Parents Can Help Children Develop Interest in Science'
+    cat      = 'science'
+    author   = 'vyasa'
+    pub      = '2026-08-29'
+    upd      = '2026-08-29'
+    excerpt  = 'Build a question culture at home: use everyday moments, keep mistakes normal, match science to interests, and join the discovery.'
+    keywords = @('parents help child science','develop interest in science','science at home parents','child curiosity science')
+    related  = @('how-to-make-science-interesting-for-students','science-foundations-for-classes-6-to-8','how-experiments-help-students-understand-science','how-to-clear-doubts-faster')
+    cta      = 'Parents create the curiosity; a good program grows it. The Science batches at Vyasa Academy in Hulimavu give children the questions, experiments and pace curiosity needs.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('A child who loves science usually had someone at home who treated questions like treasure.','You do not need a science degree to build that love; you need a few habits that cost nothing.','These are the habits that work.') },
+      @{ t = 'h2'; s = 'Build a question culture at home' },
+      @{ t = 'p'; s = @('When a child asks why the sky is blue or why ice floats, answer or say let us find out together.','The parent who answers with curiosity teaches more than any answer could.','Make the rule that no question is silly, and questions will keep coming, because questions are the whole engine of science.') },
+      @{ t = 'h2'; s = 'Use everyday moments as experiments' },
+      @{ t = 'ul'; i = @('Cooking: asking what makes dough rise or sauce thicken is a chemistry question.','Weather: thunder, rain and clouds are physics and the water cycle in action.','Shopping: reading labels is a mini lesson in reading the world.','Garden: growth, leaves and insects are biology happening in an hour a week.') },
+      @{ t = 'p'; s = @('None of these need a kit. The point is simple: science is allowed to happen outside the textbook.','The five-article method behind these home observations lives in our <a href="/blog/how-experiments-help-students-understand-science/">experiments guide</a>.') },
+      @{ t = 'h2'; s = 'Match science to what your child already loves' },
+      @{ t = 'p'; s = @('A child who loves sports can meet momentum through cricket and cycling.','A child who loves cooking can meet reactions through baking and fermenting.','A child who loves nature is already a biologist waiting for terms.','Connect science to the interest the child already has, and the curiosity feels like belonging, not like school.') },
+      @{ t = 'h2'; s = 'Keep mistakes normal' },
+      @{ t = 'p'; s = @('If a wrong answer is met with a frown, the child learns to stay silent, and silence is where curiosity dies.','Ask the wrong answer what it was thinking, and thank them for trying.','A child who can say I got it wrong, help me see why grows faster than one who works to seem right.','The importance of this single habit is the subject of our <a href="/blog/how-to-make-science-interesting-for-students/">interest article</a>.') },
+      @{ t = 'h2'; s = 'Encourage the learning-log habit' },
+      @{ t = 'p'; s = @('Give your child a plain notebook: one page a week, one new thing learned and one question still open.','The log becomes their own science summary over the years, and it teaches revision discipline from inside the home.','This is the exact habit our middle-school foundation article recommends in <a href="/blog/science-foundations-for-classes-6-to-8/">science foundations</a>.') },
+      @{ t = 'h2'; s = 'Talk a little science in daily conversation' },
+      @{ t = 'p'; s = @('One minute a day of science in conversation, without turning it into a lesson, keeps the subject present and approachable.','Ask which part of the lesson they found interesting today, not what marks they got.','The question shifts attention from performance to wonder, which is where long-term interest grows.') },
+      @{ t = 'h2'; s = 'When outside help makes sense' },
+      @{ t = 'p'; s = @('A parent supplies curiosity, and a good program supplies the experiment, the pace and the questioning that a busy home cannot always give.','When doubt-clearing starts lagging, structured batches with a small class size are the natural next step.','Small-group science coaching gives the child the safe space to ask the Why questions out loud.') },
+      @{ t = 'h2'; s = 'The parent guide, in one line' },
+      @{ t = 'p'; s = @('Keep questions welcome, use everyday moments, keep mistakes normal, and join the discovery.','The child who is allowed to wonder at home carries that wonder into every science class.','That is the strongest gift a parent can give, and it costs nothing but attention.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-prepare-science-class-10-board-exams'
+    title    = 'How to Prepare Science for Class 10 Board Exams'
+    cat      = 'science'
+    author   = 'vyasa'
+    pub      = '2026-08-28'
+    upd      = '2026-08-28'
+    excerpt  = 'A branch-by-branch Class 10 Science plan from first reading to final mock, anchored on the NCERT and the official syllabus.'
+    keywords = @('prepare science class 10 board','science board exam plan','class 10 science strategy','NCERT class 10 science')
+    related  = @('how-to-score-higher-marks-in-cbse-science','how-to-prepare-physics-chemistry-biology-class-10','how-to-revise-science-effectively-before-exams','cbse-class-10-board-exam-preparation-strategy')
+    cta      = 'Board preparation is a plan, not a panic. The Class 10 Science batches at Vyasa Academy in Hulimavu run the NCERT-based plan with weekly practice papers.'
+    courses  = @(
+      @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' },
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('The Class 10 Science board paper is designed to reward students who know the NCERT and can perform under time.','The plan below turns that into a working rhythm, from the first reading to the final mock.','It covers all three branches because the paper asks for all three in one sitting.') },
+      @{ t = 'h2'; s = 'Step 1: anchor on the NCERT and the syllabus' },
+      @{ t = 'p'; s = @('Print the official syllabus and tick every topic as you finish it.','Read the NCERT chapter once completely, then read the second time asking, for every paragraph, how would the paper test this.','The board leans on NCERT wording, so collect the definitions exactly as the textbook writes them.') },
+      @{ t = 'h2'; s = 'Step 2: physics by numerical and derivation rhythm' },
+      @{ t = 'p'; s = @('Class 10 physics answers live or die on method: given values, formula, substitution with units, answer.','Practise the light ray diagram set and the circuit set until they are hand-fast.','A weekly timed numerical set keeps the speed where the paper needs it.') },
+      @{ t = 'h2'; s = 'Step 3: chemistry by reaction bank' },
+      @{ t = 'p'; s = @('Build one page of named reactions per chapter from the NCERT, each with its balanced equation and conditions.','Learn the family rule behind each set so you can write fresh examples under exam stress.','Writing the bank from memory once a week makes the reactions automatic.') },
+      @{ t = 'h2'; s = 'Step 4: biology by process plus figure' },
+      @{ t = 'p'; s = @('For every biology chapter, learn the process as a flowchart, attach the glossary terms to its steps, and keep the required figures in a rotation.','The term-figure pair is what the marks ask for and what memory-only revision misses.','The branch-level detail sits in our <a href="/blog/how-to-prepare-physics-chemistry-biology-class-10/">branch preparation guide</a>.') },
+      @{ t = 'h2'; s = 'Step 5: keep the practical component alive' },
+      @{ t = 'p'; s = @('Know the aim, setup, observation and conclusion of each required practical, and keep the practical record orderly.','Practical marks are easy marks when the record is clean and the principles are understood, exactly the system in our <a href="/blog/how-to-prepare-practical-chemistry-for-board-exams/">practical guide</a>.') },
+      @{ t = 'h2'; s = 'Step 6: a twelve-week shape with four phases' },
+      @{ t = 'ol'; i = @('Weeks 1-4: subject-wise first pass of the entire syllabus, with daily small tasks.','Weeks 5-8: second pass, chapter-wise questions and error log building.','Weeks 9-11: previous-year papers under time, branch-sorted and then whole.','Week 12: recall-only revision, figure bank rotation, and final mock.') },
+      @{ t = 'p'; s = @('If twelve weeks are not available, compress: keep every phase but shrink the time per phase proportionally.') },
+      @{ t = 'h2'; s = 'Step 7: mocks under exam conditions' },
+      @{ t = 'p'; s = @('At least four full papers, in the board timing, at a desk, with no phone in reach.','Mark them honestly, log every loss, and the error log becomes the revision plan for the last days.','This is the same mock discipline the general board plan applies across subjects in our <a href="/blog/cbse-class-10-board-exam-preparation-strategy/">board strategy article</a>.') },
+      @{ t = 'h2'; s = 'The final note' },
+      @{ t = 'p'; s = @('Science for the Class 10 board is won by the plan, not by the last-week cram.','Anchor on the NCERT, train each branch distinctly, keep the practicals alive, and take honest mocks.','Run the twelve-week shape and the paper stops being a mystery.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-revise-science-effectively-before-exams'
+    title    = 'How to Revise Science Effectively Before Exams'
+    cat      = 'science'
+    author   = 'vyasa'
+    pub      = '2026-08-27'
+    upd      = '2026-08-27'
+    excerpt  = 'Recall drives science revision. Revise physics by solving, chemistry by writing and biology by drawing, then mock test under time.'
+    keywords = @('revise science effectively','science revision plan','science last revision','exam revision science')
+    related  = @('how-to-prepare-science-class-10-board-exams','how-to-score-higher-marks-in-cbse-science','how-to-revise-biology-before-board-exams','how-to-build-a-study-routine')
+    cta      = 'Revision is where grades are secured. The Science coaching at Vyasa Academy in Hulimavu runs recall-first revision cycles across all three branches.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Re-reading a chapter feels like revision but improves the paper almost nothing.','Revision that works is recall: your brain should do the heavy lifting while the book stays shut.','Here is a recall-first revision plan for all three branches of science.') },
+      @{ t = 'h2'; s = 'The principle: recall, then check' },
+      @{ t = 'p'; s = @('Close the book and try to retrieve the idea: write it, draw it, or say it.','Only after the attempt, open the book and check.','The retrieval attempt is what strengthens memory; the reading after it is just confirmation.','Build the session around many short attempts, not one long look.') },
+      @{ t = 'h2'; s = 'Physics revision cycle: derive and solve' },
+      @{ t = 'ol'; i = @('List the chapters and the method types inside each.','For each, redo one representative numerical with the working written out.','Redraw the required ray and circuit diagrams from memory.','Attempt a timed set of five unseen problems.') },
+      @{ t = 'p'; s = @('Physics revises itself fastest at the problem, so the cycle ends with solving, not with re-reading notes.') },
+      @{ t = 'h2'; s = 'Chemistry revision cycle: write and balance' },
+      @{ t = 'ol'; i = @('For each chapter, write the reaction bank from memory.','Balance each equation and write the conditions on the arrow.','Say what family each reaction belongs to and why.','Check against the NCERT page and mark the ones that slipped.') },
+      @{ t = 'p'; s = @('Chemistry that is written from memory is revision; chemistry that is read is only recognition, which evaporates by the lecture the next day.') },
+      @{ t = 'h2'; s = 'Biology revision cycle: draw and name' },
+      @{ t = 'ol'; i = @('Redraw the chapters key figures from memory.','Label them and correct every label that slipped.','Recount each process as a flowchart from memory.','Write the ten most likely one-marker terms for the chapter.') },
+      @{ t = 'p'; s = @('The term-figure pair makes biology revision fast and leaves the figures hand-ready for the hall, using the routine from our <a href="/blog/how-to-revise-biology-before-board-exams/">biology revision guide</a>.') },
+      @{ t = 'h2'; s = 'Use previous-year papers as the backbone' },
+      @{ t = 'p'; s = @('Attempt previous-year papers under time, one per week, and mark honestly.','Use the collected losses to pick the topics for the following weeks revision.','The paper tells your revision what to do, better than any reading list.') },
+      @{ t = 'h2'; s = 'The final week: recall-only plus rest' },
+      @{ t = 'ul'; i = @('Switch to pure recall: quick lists, mind maps and figure redraws.','Stop new content completely; new material late costs more calm than it earns marks.','Sleep at least seven hours each night of that week.','Run one full practice paper two days before, then stop heavy testing.') },
+      @{ t = 'p'; s = @('The night-before rush is not revision; it is panic, and the science paper rewards the rested mind.') },
+      @{ t = 'h2'; s = 'Turn mistakes into the plan' },
+      @{ t = 'p'; s = @('The mistake log from earlier practice is the most precise revision list you will ever have.','Revise exactly the logged losses, in leak order, and the revision effort concentrates where the marks actually leak.') },
+      @{ t = 'h2'; s = 'The closing reminder' },
+      @{ t = 'p'; s = @('Recall first, check after, and revise each branch the way it behaves: solve for physics, write for chemistry, draw for biology.','Use papers to guide it and the mistake log to aim it.','That is science revision that actually raises marks.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-write-better-answers-in-cbse-science-exams'
+    title    = 'How to Write Better Answers in CBSE Science Exams'
+    cat      = 'science'
+    author   = 'vyasa'
+    pub      = '2026-08-26'
+    upd      = '2026-08-26'
+    excerpt  = 'Answer the verb, use the format each branch rewards, rely on NCERT wording for definitions, and match length to mark value.'
+    keywords = @('write better science answers','CBSE science answer writing','science answer format','CBSE science marks answer')
+    related  = @('how-to-write-high-scoring-biology-answers','how-to-write-better-chemistry-answers-in-cbse-exams','common-mistakes-students-make-in-science-exams','how-to-score-higher-marks-in-cbse-science')
+    cta      = 'Better answers come out of rehearsed format. The Science coaching at Vyasa Academy in Hulimavu trains students to write each branch in the way the examiner marks it.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Two students who know the same topic can score differently purely because of how they write it.','Examiners mark fast, and they mark the shape of the answer as much as its content.','Writing better science answers is a skill you can train with these five habits.') },
+      @{ t = 'h2'; s = 'Read the verb and underline the parts' },
+      @{ t = 'p'; s = @('Define asks for a definition; explain asks for reasoning; compare asks for both sides; draw asks for a figure.','Underline the verb and the exact object before writing one word.','Answers that answer a different verb than was asked earn sympathy, not marks.') },
+      @{ t = 'h2'; s = 'Physics answers: working an examiner can follow' },
+      @{ t = 'ol'; i = @('Write the given values with their units first.','State the formula, in symbols.','Substitute with the units.','Show the final answer with its unit.','Add one line of conclusion if the question asks for it.') },
+      @{ t = 'p'; s = @('Step marks in physics go to the journey, so make the journey visible.','A hidden working is a lost half-question.') },
+      @{ t = 'h2'; s = 'Chemistry answers: balanced equations with conditions' },
+      @{ t = 'p'; s = @('Write the equation balanced, with state symbols and the conditions on or under the arrow.','Name the reaction family when the topic is organic, and state reversible or irreversible where it matters.','The answer format for chemistry is rehearsed fully in our <a href="/blog/how-to-write-better-chemistry-answers-in-cbse-exams/">chemistry answer guide</a>.') },
+      @{ t = 'h2'; s = 'Biology answers: terms first, figures where useful' },
+      @{ t = 'p'; s = @('Open with the term the question names; then give the flow or process; then attach a labelled figure when asked.','Use the NCERT wording for definitions, since the board writes with it.','Keep the figure clean and the labels spelled right, with the habits from our <a href="/blog/how-to-write-high-scoring-biology-answers/">biology answer guide</a>.') },
+      @{ t = 'h2'; s = 'Use the NCERT wording for definitions' },
+      @{ t = 'p'; s = @('The board prints its mark scheme from NCERT phrasing, so a standard, textbook answer is the safest.','Learn definitions exactly and prefer those words even when you can explain the idea in your own.','Your own explanation is a great study tool; for the paper, the NCERT words are the safest.') },
+      @{ t = 'h2'; s = 'Match the length to the mark value' },
+      @{ t = 'p'; s = @('A one-marker wants a crisp line; a five-marker wants the term, the working, and the conclusion.','Students who write long answers for short questions run out of time, while their long answers lose the key line.','Let the mark value decide the length, and leave room to return.') },
+      @{ t = 'h2'; s = 'Self-mark like an examiner' },
+      @{ t = 'ol'; i = @('After each practice answer, draw a rough examiners count of marks.','Underline the key points you included and the key point you forgot.','Rewrite the weakest answer in the ideal shape.','Repeat this exercise weekly until the shape becomes automatic.') },
+      @{ t = 'p'; s = @('Self-marking is the fastest way to internalise the format, because you start seeing your own answers through the marking eye.') },
+      @{ t = 'h2'; s = 'The one-line rule' },
+      @{ t = 'p'; s = @('Answer the exact verb, follow the format each branch rewards, use NCERT wording, match length to marks, and self-mark like an examiner.','Five habits, trained over a few weeks, and the same knowledge starts earning its full value.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-improve-science-marks-through-regular-practice'
+    title    = 'How to Improve Science Marks Through Regular Practice'
+    cat      = 'science'
+    author   = 'vyasa'
+    pub      = '2026-08-25'
+    upd      = '2026-08-25'
+    excerpt  = 'Short daily beats long weekly. Use the 40-minute practice diet across all three branches and let the error log steer every session.'
+    keywords = @('regular science practice','daily science practice','improve science with practice','science practice routine')
+    related  = @('how-daily-practice-improves-mathematics-performance','how-to-score-higher-marks-in-cbse-science','how-to-revise-science-effectively-before-exams','how-to-improve-calculation-speed-and-accuracy')
+    cta      = 'Regular practice is the difference between knowing and performing. The Science batches at Vyasa Academy in Hulimavu run the practice-first cycle every single week.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Science marks improve the same way every other skill does: through practice that happens regularly and is watched by the learner.','Cramming a full chapter once feels productive but fades; a short daily practice habit builds a permanent rise.','This is how to run that practice across all three branches.') },
+      @{ t = 'h2'; s = 'Why short practice compounds' },
+      @{ t = 'p'; s = @('The brain strengthens a skill each time it is retrieved, and frequent retrievals build more than rare long ones.','A daily half-hour practicing beats a weekly three-hour session, because nothing fades between the daily hits.','Short practice also keeps science present without burnout, which is exactly what a long weekend cram never does.') },
+      @{ t = 'h2'; s = 'A 40-minute daily practice diet' },
+      @{ t = 'ol'; i = @('Minutes 1-10: recall. Close the book and rewrite the concept of the day from memory.','Minutes 11-25: one attempt set. Physics numericals or chemistry equations for the given topic.','Minutes 26-35: one biology figure or term round for that topic.','Minutes 36-40: check everything and log the mistakes.') },
+      @{ t = 'p'; s = @('Round-robin the branches through the week so each branch gets its own practice rhythm, the pattern behind our <a href="/blog/best-way-to-study-science-for-cbse-students/">best study method article</a>.') },
+      @{ t = 'h2'; s = 'The error log drives the next session' },
+      @{ t = 'p'; s = @('Keep a small log: topic, question, and what went wrong.','Each new session opens with ten minutes redoing the previous days errors.','The log is the steering wheel: it makes practice aim at weakness instead of wandering over easy material.','What you cannot do well is exactly what the log keeps in front of you.') },
+      @{ t = 'h2'; s = 'Spaced redos, the leak list on rotation' },
+      @{ t = 'p'; s = @('Every log entry deserves a revisit after one day, three days and seven days.','The revisit is short, but its the repetition that turns a leak into a strength.','Rotating the redos keeps every branch warm without exploding the time budget.') },
+      @{ t = 'h2'; s = 'A weekly timed review' },
+      @{ t = 'p'; s = @('Once a week, attempt one timed set of twelve questions, three from each branch.','Mark honestly and add the losses to the log.','The timed review measures what the daily practice has built, and it is the closest mirror of the real paper.') },
+      @{ t = 'h2'; s = 'Consistency beats intensity' },
+      @{ t = 'p'; s = @('A student who practices 40 minutes daily for a term moves more marks than one who pulls an heroic weekend before every test.','The daily habit also protects against the last-week panic that erases good learning.','Set the daily target tiny enough to always be done, and the habit outlasts any motivation.') },
+      @{ t = 'h2'; s = 'The practice rules, restated' },
+      @{ t = 'p'; s = @('Practice in short daily doses, let the log pick the topics, redraw the leaks on rotation, and test once a week under time.','Run those rules for a term and the science average moves in a straight line.','The same mechanics drive the mathematics version in our <a href="/blog/how-daily-practice-improves-mathematics-performance/">daily practice article</a>.') }
+    )
   }
 )
