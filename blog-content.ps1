@@ -1431,5 +1431,530 @@ $script:blogArticles = @(
       @{ t = 'h2'; s = 'The closing note' },
       @{ t = 'p'; s = @('Practical chemistry is prepared by procedure, record and viva, all three together.','Learn the five parts of every experiment, keep the record honest, and rehearse the questions aloud.','Steady hands and honest records are marks waiting to be collected.') }
     )
+  },
+
+  @{
+    slug     = 'how-to-study-biology-effectively-for-cbse-board-exams'
+    title    = 'How to Study Biology Effectively for CBSE Board Exams'
+    cat      = 'biology'
+    author   = 'vyasa'
+    pub      = '2026-09-08'
+    upd      = '2026-09-08'
+    excerpt  = 'Biology rewards reasoning plus terminology. A process-first framework, a term notebook and diagram discipline prepare students properly for CBSE boards.'
+    keywords = @('how to study biology','CBSE biology preparation','biology board exam strategy','biology study methods')
+    related  = @('importance-of-diagrams-in-biology-board-exams','how-to-prepare-biology-using-ncert','how-to-remember-long-biology-answers','how-to-build-a-study-routine')
+    cta      = 'Biology rewards students who learn processes, not just pages. The Science coaching at Vyasa Academy in Hulimavu teaches biology with diagrams, term practice and regular revision tests.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Biology sits between two traps: students either treat it as pure memorising or as pure reading.','The first trap empties the answer sheet on application questions, and the second disappears the facts the paper requires.','The way out is to treat biology as two skills working together: understanding processes and holding terminology.') },
+      @{ t = 'h2'; s = 'Learn processes, then the facts attach' },
+      @{ t = 'p'; s = @('Every biology topic is a process wearing details: how blood circulates, how a seed germinates, how inheritance passes from parents to offspring.','Learn the sequence first, as a chain of steps with arrows.','Then let the definitions and names hang on those steps.','A fact attached to a process is remembered; a fact memorised alone is forgotten.') },
+      @{ t = 'h2'; s = 'Keep a terminology notebook' },
+      @{ t = 'ul'; i = @('One page per chapter with the new terms, each defined in one line.','Add the word root where it helps, since terms like photosynthesis are built from understandable parts.','Say each term aloud twice, because biology spelling is part of the score.','Mark the terms you have ever misspelt and review only those.') },
+      @{ t = 'p'; s = @('The notebook is not decorative.','A term you can define in one line is a term you can use in an answer, and answer language is where the paper is marked.') },
+      @{ t = 'h2'; s = 'Make diagrams a daily habit' },
+      @{ t = 'p'; s = @('Biology questions expect figures: a labelled diagram earns its marks faster than any paragraph.','Pick one important figure per study session and draw it twice, once with help and once from memory.','The gap between the two drawings is your real learning target.','See which figures repay this practice in our <a href="/blog/importance-of-diagrams-in-biology-board-exams/">diagram importance guide</a>.') },
+      @{ t = 'h2'; s = 'Build the flowcharts from the text' },
+      @{ t = 'p'; s = @('Digestion, respiration, the movement of blood and the nitrogen cycle are sequences.','Convert each textbook paragraph into a five to six step flowchart with arrows and one label per box.','A chapter revised as flowcharts takes minutes, because you rebuild the chain from memory instead of rereading prose.') },
+      @{ t = 'h2'; s = 'Run a weekly biology rhythm' },
+      @{ t = 'ol'; i = @('Three days a week: one chapter, half concept and half terminology plus one figure.','One day: rebuild the weeks flowcharts from memory and correct the gaps.','One day: a set of previous-year questions answered in full sentences with diagrams.','Sunday: a recall page for the whole month, written cold.') },
+      @{ t = 'h2'; s = 'Ground everything in the NCERT' },
+      @{ t = 'p'; s = @('Keep definitions in the textbook language and read each chapter section actively, closing the book after each section to retell it in your own words.','The textbook is the source of both the vocabulary and the facts, and our <a href="/blog/how-to-prepare-biology-using-ncert/">preparing with NCERT guide</a> shows the full routine.') },
+      @{ t = 'h2'; s = 'The closing advice' },
+      @{ t = 'p'; s = @('Effective biology study is process plus terminology.','Learn sequences before names, keep a term notebook, draw figures daily, and convert chapters into flowcharts.','Keep that rhythm and the subject becomes a subject you reason about instead of one you only memorise.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-score-better-in-cbse-class-12-biology'
+    title    = 'How to Score Better in CBSE Class 12 Biology'
+    cat      = 'biology'
+    author   = 'vyasa'
+    pub      = '2026-09-07'
+    upd      = '2026-09-07'
+    excerpt  = 'Class 12 biology scores rise when revision is targeted: high-yield chapters, strong figures, correct terminology and structured answers.'
+    keywords = @('CBSE Class 12 biology','score well in class 12 biology','class 12 biology strategy','biology board preparation class 12')
+    related  = @('how-to-study-biology-effectively-for-cbse-board-exams','how-to-prepare-biology-using-ncert','how-to-revise-biology-before-board-exams','how-to-write-high-scoring-biology-answers')
+    cta      = 'Class 12 biology is best prepared with focused revision and answer practice. The Class 12 Science program at Vyasa Academy in Hulimavu provides both with regular feedback.'
+    courses  = @(
+      @{ label = 'Class 12 Tuition in Hulimavu'; url = '/class-12-tuition-hulimavu/' },
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Class 12 biology is a long syllabus, and a long syllabus cannot be lifted by a general effort.','It rises when you target the chapters that carry the most weight in your preparation, protect the figures, and make terminology automatic.','Here is the plan built on that idea.') },
+      @{ t = 'h2'; s = 'Lead with the highest-yield chapters' },
+      @{ t = 'p'; s = @('Start every revision cycle with the chapters that combine high question frequency with high mark value in your own practice papers: genetics, ecology and human physiology are the usual first movers.','These are also the chapters where concepts link, so strength here lifts related topics too.','Approach genetics with focused practice, as described in our <a href="/blog/how-to-study-genetics-easily/">genetics guide</a>, and ecology with key terms, as in our <a href="/blog/how-to-prepare-ecology-for-cbse-exams/">ecology guide</a>.') },
+      @{ t = 'h2'; s = 'Protect the figures' },
+      @{ t = 'p'; s = @('In biology, a clear labelled figure is frequently worth more than the paragraph beside it.','Keep a running figure list per chapter and draw each from memory on a weekly rotation.','The figures in the highest-yield chapters go first.','Examiner-friendly drawing is covered in our <a href="/blog/importance-of-diagrams-in-biology-board-exams/">diagrams article</a>.') },
+      @{ t = 'h2'; s = 'Make terminology automatic' },
+      @{ t = 'ul'; i = @('Write each chapters term list on a flashcard set, definition in one line.','Run the set until every card is answered instantly.','Spell the ten most common terms, like photosynthesis and respiration, every session.','Use the correct term in every practice answer, because examiners mark the vocabulary.') },
+      @{ t = 'h2'; s = 'Rehearse the answer style' },
+      @{ t = 'p'; s = @('Class 12 biology questions reward structure: the defining sentence first, the explanation second, and a labelled diagram where it genuinely helps.','Practise this shape on every previous-year question.','Our <a href="/blog/how-to-write-high-scoring-biology-answers/">high-scoring answers guide</a> gives the exact layout to rehearse.') },
+      @{ t = 'h2'; s = 'A two-month scoring routine' },
+      @{ t = 'ol'; i = @('Month one: high-yield chapters twice, figures on rotation, term cards completed.','Month two: one full previous-year paper weekly, marked against the five habits below.','Every paper: log lost marks by cause, chapters, figures, terminology, or structure.','Final week: redo only the logged causes and the term cards.') },
+      @{ t = 'h2'; s = 'The honest close' },
+      @{ t = 'p'; s = @('A better Class 12 biology score is a targeting exercise.','Lead with high-yield chapters, protect the figures, automate the terms and rehearse the answer shape.','Run the routine for two months and the improvement shows up on every practice paper before it shows on the board.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-remember-biology-diagrams-easily'
+    title    = 'How to Remember Biology Diagrams Easily'
+    cat      = 'biology'
+    author   = 'vyasa'
+    pub      = '2026-09-06'
+    upd      = '2026-09-06'
+    excerpt  = 'Diagrams stay in memory when you build them from structures to labels, not the other way around. A layered drawing method for every biology figure.'
+    keywords = @('remember biology diagrams','biology diagrams easy','labelled diagrams biology','diagram drawing method')
+    related  = @('importance-of-diagrams-in-biology-board-exams','how-to-remember-long-biology-answers','important-study-techniques-for-biology-students','how-to-study-biology-for-cbse-boards')
+    cta      = 'Drawing figures from memory is a trained habit. The Science coaching at Vyasa Academy in Hulimavu runs diagram practice until students reproduce the important figures cleanly.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Students try to memorise a diagram the way they memorise a picture, and then the details drop out under pressure.','The memory-friendly way is the opposite: build the figure from its structures upward, and let the labels be the last layer.','Here is the layered method that makes figures stay.') },
+      @{ t = 'h2'; s = 'Step 1: draw the skeleton shape' },
+      @{ t = 'p'; s = @('Every diagram has a recognisable silhouette first.','A neuron is a long line with branch endings; a nephron is a loop; a flower is concentric rings.','Practise the skeleton until you can produce it in seconds.','The skeleton is the anchor, and every later detail hangs on it.') },
+      @{ t = 'h2'; s = 'Step 2: add the parts in a fixed order' },
+      @{ t = 'p'; s = @('Learn the parts as a fixed list and always draw them in that order, front to back or top to bottom.','The list becomes the sequence your hand follows, so a part is never missed.','Draw the main structures first, the smaller ones second, and the directional arrows last.') },
+      @{ t = 'h2'; s = 'Step 3: label from the parts, not the textbook' },
+      @{ t = 'p'; s = @('Labels are the final layer and the easiest to forget.','After drawing the parts, cover the textbook figure and write every label you know beside your own drawing.','Then compare and add the missing labels in a different colour.','The missing-colour labels are exactly the ones you must redraw tomorrow.') },
+      @{ t = 'h2'; s = 'Use a numbering trick for labels' },
+      @{ t = 'p'; s = @('When a figure has many small parts, memorise a numbered list that matches the order you draw them in.','Rebuild the list aloud and you rebuild the labels, because numbers give the labels a rhythm.','This is the same skeleton logic used for recalling long answers in our <a href="/blog/how-to-remember-long-biology-answers/">long answer guide</a>.') },
+      @{ t = 'h2'; s = 'Test on a rotation, not all at once' },
+      @{ t = 'ul'; i = @('Today: draw the daily figure from memory and mark the missing labels.','Day three: redraw todays figure twice from memory.','Day seven: the whole months figure list, drawn from memory in a timed session.','Week after: one random figure cold, five minutes, no help.') },
+      @{ t = 'p'; s = @('The rotation does the memorising; each drawing is a fresh recall, and recall is the only memory exercise that works.') },
+      @{ t = 'h2'; s = 'Learn why the diagram exists' },
+      @{ t = 'p'; s = @('A figure with a question attached is easier to hold: why does this structure have this shape, and what does it do?','Understanding the role of each part doubles the number of memory hooks.','The shorter memorising path is the same one behind the technique list in our <a href="/blog/important-study-techniques-for-biology-students/">study techniques article</a>.') },
+      @{ t = 'h2'; s = 'The takeaway' },
+      @{ t = 'p'; s = @('Diagrams are remembered in layers: skeleton, parts in a fixed order, then labels from your own drawing.','Practise on a spaced rotation and test from memory every time.','Do that and the figure you feared becomes one you can produce in the exam in minutes.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-learn-scientific-names-and-biological-terms'
+    title    = 'How to Learn Scientific Names and Biological Terms'
+    cat      = 'biology'
+    author   = 'vyasa'
+    pub      = '2026-09-05'
+    upd      = '2026-09-05'
+    excerpt  = 'Scientific names and terms are a vocabulary system, not a random list. Learn the building blocks, say them aloud, and test with flashcards.'
+    keywords = @('scientific names biology','biological terms','how to memorise biology names','biological terminology')
+    related  = @('important-study-techniques-for-biology-students','how-to-remember-long-biology-answers','how-to-prepare-biology-using-ncert','how-to-remember-mathematical-formulas')
+    cta      = 'Scientific terminology is a vocabulary skill best built under guidance. The Science coaching at Vyasa Academy in Hulimavu includes structured terminology practice for every chapter.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Scientific names look frightening because they are written in an unfamiliar language.','But they are built from a small set of repeating parts, exactly like everyday words.','Once you see the parts, names stop being random letter strings and start being descriptions.') },
+      @{ t = 'h2'; s = 'See the parts inside the names' },
+      @{ t = 'p'; s = @('The name photosynthesis describes itself: photo means light and synthesis means making, so the word tells you what the process does.','Many scientific names follow this pattern, combining a root for the part with a root for the process.','When you meet a new term, ask what its pieces describe.','The description becomes the memory hook.') },
+      @{ t = 'h2'; s = 'Learn a working root list' },
+      @{ t = 'ul'; i = @('Common roots for parts: haem (blood), cardio (heart), nephro (kidney), cyto (cell).','Common roots for processes: opsis (seeing), lysis (breaking), genesis (origin).','Common class clues: arrangement, number, and habitat often appear in the middle of names.') },
+      @{ t = 'p'; s = @('A list of fifteen roots unlocks hundreds of terms, because the same parts repeat across every chapter.') },
+      @{ t = 'h2'; s = 'Say the words out loud' },
+      @{ t = 'p'; s = @('A term you have pronounced is a term you can begin to spell and remember.','Say each new term twice, slowly, breaking it into syllables.','Then write it once while saying it.','Spelling in biology is marked, and the talking route is the fastest way to make spelling automatic.') },
+      @{ t = 'h2'; s = 'Group names by family and habitat' },
+      @{ t = 'p'; s = @('Scientific names follow a naming system: the genus name comes first, the species name second, and the combination identifies one organism.','Learn names in their families instead of one at a time, and connect each to something you know about the organism, its habitat or its use.','A name attached to a story is a name that survives.') },
+      @{ t = 'h2'; s = 'Test with flashcards, not rereading' },
+      @{ t = 'p'; s = @('One side of the card holds the organism or term, the other holds the name and meaning.','Run the deck until every card answers instantly, then rotate only the cards you missed.','Flashcards beat rereading because every card is a recall, and recall is what the exam performs.','The flashcard habit is one of the five core techniques in our <a href="/blog/important-study-techniques-for-biology-students/">study techniques article</a>.') },
+      @{ t = 'h2'; s = 'Space the reviews' },
+      @{ t = 'p'; s = @('Review a new deck after a day, after three days, after a week, and after a month.','The spacing moves terms from short-term to long-term memory with far less effort than one long cramming session.','This is the same spaced recall behind the formula routine in our <a href="/blog/how-to-remember-mathematical-formulas/">formula memory guide</a>.') },
+      @{ t = 'h2'; s = 'The closing point' },
+      @{ t = 'p'; s = @('Scientific names are a vocabulary system.','Learn the root parts, say terms aloud, group names in their families, and test with spaced flashcards.','Do that and terminology stops being a wall of Latin and becomes a language you can actually read.') }
+    )
+  },
+
+  @{
+    slug     = 'best-strategy-to-prepare-human-biology'
+    title    = 'Best Strategy to Prepare Human Biology'
+    cat      = 'biology'
+    author   = 'vyasa'
+    pub      = '2026-09-04'
+    upd      = '2026-09-04'
+    excerpt  = 'Human biology is a set of connected systems. Learn each system as a pathway through the body, link structure to function, and compare systems with tables.'
+    keywords = @('human biology preparation','human physiology study','digestive system flow','human body systems biology')
+    related  = @('how-to-study-biology-effectively-for-cbse-board-exams','importance-of-diagrams-in-biology-board-exams','how-to-write-high-scoring-biology-answers','how-to-clear-doubts-faster')
+    cta      = 'Human biology is best learned as connected systems, with a teacher to keep the pathways straight. The Science coaching at Vyasa Academy in Hulimavu teaches it that way.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Human biology chapters look like a pile of organs and names, but every organ belongs to a system, and every system is a pathway through the body.','The strategy is to learn the pathway first and attach the organs to it.','Here is how that works for the chapters that use the human body.') },
+      @{ t = 'h2'; s = 'Learn each system as a route' },
+      @{ t = 'p'; s = @('Ask one question per system: what is the order of travel?','For the circulatory system, a student should be able to trace blood from the heart through the arteries, capillaries and veins and back to the heart.','For digestion, trace food from the mouth through every region and note what each region adds.','When the route is clear, the organs stop being a list.') },
+      @{ t = 'h2'; s = 'Link structure to function' },
+      @{ t = 'ul'; i = @('The small intestine has a folded surface because absorption needs more area.','The alveoli have thin walls because gases must cross quickly.','The nephron is a long coiled tubule so filtration and reabsorption each have room to happen.','For every structure, ask what job its shape makes possible.') },
+      @{ t = 'p'; s = @('A structure with a job description is a structure remembered, and exam questions usually test exactly this link of shape to role.') },
+      @{ t = 'h2'; s = 'Draw the flowcharts for the routes' },
+      @{ t = 'p'; s = @('Convert the route of each system into a flowchart with arrows and one label per stop.','Blood flow, the digestive route, the path of a breath of air, and the journey through the nephron are all flowcharts.','Rebuild each from memory during revision, and the route writes itself in the exam.') },
+      @{ t = 'h2'; s = 'Use tables to compare systems' },
+      @{ t = 'p'; s = @('Questions love comparisons.','Build a table per theme: organ, its function, its location, and the disorder linked to it.','Comparison tables make revision fast and give you ready-made answer structure, because an exam question phrased as compare is already half answered by your table.') },
+      @{ t = 'h2'; s = 'Practise the labelled figures' },
+      @{ t = 'p'; s = @('The heart, the nephron, the neuron, the respiratory tract and the digestive system regularly appear as labelled figures.','Draw each from memory on a rotation and keep your own annotated versions.','The drawing method is the same as in our <a href="/blog/how-to-remember-biology-diagrams-easily/">diagram memory guide</a>.') },
+      @{ t = 'h2'; s = 'A weekly human-biology block' },
+      @{ t = 'ol'; i = @('Session one: one system as a route flowchart.','Session two: the same system, structure and function links.','Session three: the comparison table and one labelled figure.','Session four: answer three previous-year questions on the system with the flowchart as the skeleton.') },
+      @{ t = 'h2'; s = 'The close' },
+      @{ t = 'p'; s = @('Human biology is a set of routes with organs attached.','Learn each system as a pathway, link shape to role, draw the flowcharts and compare with tables.','Run the weekly block and the human body chapters become the most satisfying part of the paper.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-study-genetics-easily'
+    title    = 'How to Study Genetics Easily'
+    cat      = 'biology'
+    author   = 'vyasa'
+    pub      = '2026-09-03'
+    upd      = '2026-09-03'
+    excerpt  = 'Genetics is logic with a small vocabulary. Master the terms, draw the crosses systematically, and the chapter becomes predictable puzzles.'
+    keywords = @('how to study genetics','genetics class 12','Mendelian genetics','genetics for boards','how to draw punnett square')
+    related  = @('important-study-techniques-for-biology-students','how-to-prepare-biology-using-ncert','how-to-revise-biology-before-board-exams','how-to-improve-mathematics-problem-solving-skills')
+    cta      = 'Genetics is the rare chapter where logic practice pays off fast, but it needs the right exercises. The Science coaching at Vyasa Academy in Hulimavu covers genetics with guided cross practice.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Genetics looks technical because of its vocabulary, but at its core it is a small set of rules applied carefully.','Once the terms are clear and the crosses are drawn in a fixed way, the chapter behaves like predictable puzzles.','Here is how to get there.') },
+      @{ t = 'h2'; s = 'Lock the vocabulary before the crosses' },
+      @{ t = 'p'; s = @('Words like gene, allele, genotype, phenotype, dominant and recessive do all the work in genetics.','Define each in one line with a concrete example: a dominant allele is one whose trait appears even when the pair carries a different allele.','Without these definitions in your own words, every question reads like a foreign language.','Use the term-building method from our <a href="/blog/how-to-learn-scientific-names-and-biological-terms/">terminology guide</a> to make them stick.') },
+      @{ t = 'h2'; s = 'Draw every cross the same way' },
+      @{ t = 'ol'; i = @('Write the genotypes of the parents.','Separate the alleles into the possible gametes each parent forms.','Set up a square with one parents gametes across the top and the others down the side.','Combine each row and column to fill the inside.','Read the results: genotypes and phenotypes in their ratios.') },
+      @{ t = 'p'; s = @('Keep the order identical on every problem.','A fixed sequence prevents the small slips that turn a right idea into a wrong answer.') },
+      @{ t = 'h2'; s = 'Learn patterns, but derive them too' },
+      @{ t = 'p'; s = @('Familiar ratios such as the 3:1 outcome in a certain monohybrid case and the 9:3:3:1 outcome in a classical dihybrid case are worth knowing about.','But prove each on paper once instead of trusting memory.','Deriving a ratio from the cross you drew makes the pattern yours, and questions reward exactly that understanding rather than the memorised number.') },
+      @{ t = 'h2'; s = 'Practise the question types' },
+      @{ t = 'ul'; i = @('Crosses: monohybrid and dihybrid problems drawn with a square.','Ratios: reading and explaining the ratios that fall out of a cross.','Pedigree logic: following which trait appears in which generation.','Event and reasoning questions: explaining why a trait skips a generation or appears more in one sex.') },
+      @{ t = 'p'; s = @('Do one of each type per week and label your drawing for every answer, since the sketch is often part of the expected explanation.') },
+      @{ t = 'h2'; s = 'Link genetics to cell division' },
+      @{ t = 'p'; s = @('The rules of inheritance happen because chromosomes and their alleles separate during cell division.','Knowing the separation step explains why gametes carry one allele per gene.','Connect the two chapters and the logic of every ratio becomes visible at once.') },
+      @{ t = 'h2'; s = 'A short practice plan' },
+      @{ t = 'ol'; i = @('Week one: vocabulary cards plus ten monohybrid crosses with full squares.','Week two: five dihybrid crosses and the ratio derivations.','Week three: pedigree and reasoning questions with explanations written in full sentences.','Week four: one mixed previous-year set timed, marked, and the slips logged.') },
+      @{ t = 'h2'; s = 'The bottom line' },
+      @{ t = 'p'; s = @('Genetics is logic wearing a small vocabulary.','Lock the terms, draw every cross in the same order, derive the ratios once, and practise the question types.','Do that and the chapter converts from a memorising problem into a problem-solving strength.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-prepare-ecology-for-cbse-exams'
+    title    = 'How to Prepare Ecology for CBSE Exams'
+    cat      = 'biology'
+    author   = 'vyasa'
+    pub      = '2026-09-02'
+    upd      = '2026-09-02'
+    excerpt  = 'Ecology is a high-value branch where terms, chains, pyramids and nutrient cycles meet daily examples. A practical preparation route through it.'
+    keywords = @('prepare ecology','ecology CBSE','ecosystem biology','food chain and food web','prepare ecology for exams')
+    related  = @('how-to-study-biology-effectively-for-cbse-board-exams','how-to-score-better-in-cbse-class-12-biology','how-to-prepare-biology-using-ncert','how-to-revise-biology-before-board-exams')
+    cta      = 'Ecology is among the most scoring-friendly branches when the terms are pinned down. The Science coaching at Vyasa Academy in Hulimavu builds ecology with term tests and diagram practice.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Ecology asks you to understand how living things interact with each other and their surroundings, and the branch rewards students who master a small set of terms and examples.','The definitions are precise, the figures are simple, and many questions run straight off the textbook.','Here is the route through it.') },
+      @{ t = 'h2'; s = 'Pin down the ladder of terms' },
+      @{ t = 'p'; s = @('Ecology builds a ladder of organisation: species, population, community, ecosystem, biome and biosphere.','Learn the ladder as one sentence with each rung defined by what it includes.','A population is one species in one place; a community adds all the species interacting; an ecosystem adds the non-living surroundings.','Every ecology question assumes this ladder, so learn it once and correctly.') },
+      @{ t = 'h2'; s = 'Learn food chains and webs as diagrams' },
+      @{ t = 'p'; s = @('A food chain is a tidy arrow picture: producer, primary consumer, secondary consumer and so on.','A food web crosses several chains into a network.','Draw both from the examples in your textbook, then build one of your own from a familiar habitat.','The arrows always point in the direction of energy flow, which is the most tested detail.') },
+      @{ t = 'h2'; s = 'Handle the trophic levels and pyramids' },
+      @{ t = 'ul'; i = @('Name the trophic levels and what eats what.','Learn why each pyramid narrows: much of the energy is used and lost at each step rather than passed on.','Compare the three kinds of pyramids, number, biomass and energy, and when each shape can differ.','Label the example organisms correctly on a drawn pyramid.') },
+      @{ t = 'h2'; s = 'Lean on examples for every term' },
+      @{ t = 'p'; s = @('Terms stick when they carry an example: the deer is a herbivore, the eagle a predator near the top.','For each definition, note one real organism that illustrates it.','The example turns the definition from a statement into a picture, and pictures are what your memory keeps.') },
+      @{ t = 'h2'; s = 'Map the nutrient cycles as flowcharts' },
+      @{ t = 'p'; s = @('The carbon, nitrogen and other nutrient cycles are circular flowcharts.','Draw each cycle as a circle of boxes connected by arrows named with the process happening between them.','Trace the cycle aloud from memory until your finger can walk the whole loop.','The flowchart habit is the engine of <a href="/blog/how-to-study-biology-effectively-for-cbse-board-exams/">effective biology study</a> and applies here directly.') },
+      @{ t = 'h2'; s = 'Practise the question style with data' },
+      @{ t = 'p'; s = @('Ecology questions often hand you a small set, a chain, or a case, and ask you to interpret it.','Practise the previous-year style: identify levels, draw the pyramid, explain a term, or complete a cycle.','Answer each with the correct vocabulary and a neat mini-diagram where possible.') },
+      @{ t = 'h2'; s = 'The summary' },
+      @{ t = 'p'; s = @('Ecology is a high-value branch built from a term ladder, chain figures, pyramid shapes and cycle flowcharts, each with an example attached.','Pin the ladder, draw the diagrams, carry an example for every term and map the cycles.','Follow that route and ecology becomes one of the most reliable parts of the paper.') }
+    )
+  },
+
+  @{
+    slug     = 'common-mistakes-students-make-in-biology-exams'
+    title    = 'Common Mistakes Students Make in Biology Exams'
+    cat      = 'biology'
+    author   = 'vyasa'
+    pub      = '2026-09-01'
+    upd      = '2026-09-01'
+    excerpt  = 'Biology marks leak from spelling, unlabelled diagrams, missed terms, and answers that miss the question. Correct these six habits before the boards.'
+    keywords = @('biology exam mistakes','biology common errors','avoid mistakes in biology','biology answer problems')
+    related  = @('how-to-write-high-scoring-biology-answers','how-to-study-biology-effectively-for-cbse-board-exams','how-to-manage-time-during-biology-exams','10-common-mistakes-in-maths-and-how-to-fix-them')
+    cta      = 'Most biology mark loss is habit loss, and habits change with feedback. The Science coaching at Vyasa Academy in Hulimavu marks practice answers exactly the way examiners do.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('When students look back at a biology paper, the marks disappear in the same places every time: a misspelt term, a diagram without its label lines, an answer that missed the second part of the question.','None of these are gaps in knowledge.','They are habits, and a deliberate month of checking removes most of them.') },
+      @{ t = 'h2'; s = 'Mistake 1: spelling and terminology slips' },
+      @{ t = 'p'; s = @('Biology answers are marked for vocabulary.','A wrong letter in terms like photosynthesis or respiration costs the mark even when the idea is right.','Keep a spelling-watch list of the terms you have ever misspelt and say them aloud when you write them.','The voice route is covered in our <a href="/blog/how-to-learn-scientific-names-and-biological-terms/">terminology guide</a>.') },
+      @{ t = 'h2'; s = 'Mistake 2: diagrams without discipline' },
+      @{ t = 'p'; s = @('A figure earns marks only when the label lines touch the exact part and the names are spelt correctly.','Wobbly arrows and missing pointer lines turn a good drawing into a decorative one.','Practise drawing the label lines as a straight stroke and check that every structure shown has a name.','See how examiners value figures in our <a href="/blog/importance-of-diagrams-in-biology-board-exams/">diagram article</a>.') },
+      @{ t = 'h2'; s = 'Mistake 3: answering only half the question' },
+      @{ t = 'p'; s = @('Questions that say name and explain, or define and give an example, are two-part questions.','Underline the verbs before you start and answer each part under its own label.','Exam answers are marked part by part, so a missing half loses half the marks.') },
+      @{ t = 'h2'; s = 'Mistake 4: padding instead of precision' },
+      @{ t = 'p'; s = @('Long, vague answers do not impress; they dilute the markable terms.','Answer in clean sentences that open with the key term and close with the specific fact.','Precision earns more than volume, and it saves the time that long rambling consumes.') },
+      @{ t = 'h2'; s = 'Mistake 5: no example where one is natural' },
+      @{ t = 'p'; s = @('When a definition allows it, add one organism or one case as support.','The example turns a generic answer into a specific one, and specificity is what examiners reward.','Keep one example per key term from your revision notes ready to produce.') },
+      @{ t = 'h2'; s = 'Mistake 6: rushing the final review' },
+      @{ t = 'p'; s = @('The last ten minutes usually catch the errors: spelling, unlabelled parts, a missing arrow direction.','Reserve a review pass for exactly these checks instead of closing the paper early.','Pacing advice for fitting that review in is in our <a href="/blog/how-to-manage-time-during-biology-exams/">time management guide</a>.') },
+      @{ t = 'h2'; s = 'How to purge all six in a month' },
+      @{ t = 'ol'; i = @('Week one: spelling-watch list plus terminology practice every session.','Week two: draw one labelled figure daily and check the discipline of the lines.','Week three: write answers that underline every verb and label every part.','Week four: one full paper checked only for these six habits.') },
+      @{ t = 'h2'; s = 'Frequently asked questions' },
+      @{ t = 'h3'; s = 'Should I draw a diagram even when it is not asked for?' },
+      @{ t = 'p'; s = @('Add one only when it genuinely supports the answer and the question lets you.','A clear labelled figure alongside the explanation is welcome; a rushed sketch that wastes time is not.','Judge by whether the diagram helps the examiner see the point faster.') },
+      @{ t = 'h3'; s = 'Is the extra mark worth the extra diagram time?' },
+      @{ t = 'p'; s = @('Practise drawing the core figures until they take under two minutes.','Then a useful diagram costs little time and protects the answer.','Practised speed is the deciding factor, not whether diagrams are worth it.') },
+      @{ t = 'h2'; s = 'The close' },
+      @{ t = 'p'; s = @('The marks lost in biology go to a short list of habits: spelling, diagram discipline, two-part answers, precision, examples, and the final review.','Correct all six deliberately for a month and they stop costing marks at the boards.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-write-high-scoring-biology-answers'
+    title    = 'How to Write High-Scoring Biology Answers'
+    cat      = 'biology'
+    author   = 'vyasa'
+    pub      = '2026-08-31'
+    upd      = '2026-08-31'
+    excerpt  = 'High-scoring biology answers open with the key term, use exact terminology, and add a labelled diagram where it helps. A writing system for boards.'
+    keywords = @('biology answer writing','high scoring biology answers','biology answer presentation','how to write biology answers')
+    related  = @('common-mistakes-students-make-in-biology-exams','importance-of-diagrams-in-biology-board-exams','how-to-study-biology-effectively-for-cbse-board-exams','how-to-write-better-chemistry-answers-in-cbse-exams')
+    cta      = 'Answer writing improves fastest when a teacher marks your work like an examiner. The Science coaching at Vyasa Academy in Hulimavu gives that feedback on every practice answer.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Two students can hold the same biology and score differently because the examiner marks what is written, not what is known.','High-scoring answers follow a repeatable shape: the key term first, the explanation second, the diagram where useful, and nothing else.','Here is the shape, step by step.') },
+      @{ t = 'h2'; s = 'Read the verb before you write' },
+      @{ t = 'p'; s = @('Define, list, explain, compare and give reasons are different jobs.','Underline the verb and let it decide your structure: define answers open with the definition, compare answers use a table or paired points.','Half the poor answers come from obeying a question the student invented instead of the one printed.') },
+      @{ t = 'h2'; s = 'Open with the key term' },
+      @{ t = 'p'; s = @('Start the explanation with the term that names the idea.','Examiners scan for the markable vocabulary, and a term placed in the first sentence is a term that gets found.','State the definition crisply, then support it with the specific detail the question asks for.') },
+      @{ t = 'h2'; s = 'Answer in the textbooks language' },
+      @{ t = 'p'; s = @('Biological definitions have an accepted shape, and the workbook language is the safest one to reuse.','Your own words are fine for explanations, but the definitions and named laws should keep the textbook phrasing.','Compare your practice answers against the textbook and mark where the wording drifted.') },
+      @{ t = 'h2'; s = 'Add a diagram only where it helps' },
+      @{ t = 'p'; s = @('A labelled figure next to an explanation can carry the marks of a paragraph.','Draw it small, keep the lines straight and the labels spelt correctly, and never add a diagram that does not earn its seconds.','The judgement of when to draw is handled in our <a href="/blog/importance-of-diagrams-in-biology-board-exams/">diagrams in exams guide</a>.') },
+      @{ t = 'h2'; s = 'Structure long answers for the marker' },
+      @{ t = 'ol'; i = @('Open with the defining sentence and the key term.','Follow with numbered points, one idea per point.','Close with the example or the final step.','Leave a line between parts so the answer reads like a model solution.') },
+      @{ t = 'h2'; s = 'Match length to mark value' },
+      @{ t = 'p'; s = @('Write proportionally: a short question wants a tight answer, a longer one wants the full structure.','Overwriting a short question wastes time and buries the marks; underwriting a long one loses them.','Practise this proportion in every mock until the length feels natural.') },
+      @{ t = 'h2'; s = 'The wrap up' },
+      @{ t = 'p'; s = @('High-scoring biology answers are shaped, not just written.','Read the verb, open with the key term, keep the textbook language, use diagrams with discipline and match length to value.','Rehearse the shape in every practice answer and it will reproduce itself in the hall.') }
+    )
+  },
+
+  @{
+    slug     = 'importance-of-diagrams-in-biology-board-exams'
+    title    = 'Importance of Diagrams in Biology Board Exams'
+    cat      = 'biology'
+    author   = 'vyasa'
+    pub      = '2026-08-30'
+    upd      = '2026-08-30'
+    excerpt  = 'Diagrams are scored units in biology: a clear labelled figure frequently earns marks faster than paragraphs. Learn which figures repay the practice.'
+    keywords = @('importance of diagrams biology','labelled diagrams boards','biology diagram marks','diagram drawing in exams')
+    related  = @('how-to-remember-biology-diagrams-easily','how-to-write-high-scoring-biology-answers','how-to-study-biology-for-cbse-boards','how-to-revise-biology-before-board-exams')
+    cta      = 'The biology figures that carry marks are regular practice in the Science coaching at Vyasa Academy in Hulimavu, where students draw the core set until it is automatic.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('In biology, a figure is not an illustration, it is an answer.','Examiners regularly award the core of a question to a clear labelled diagram, because the diagram itself carries the marks.','That makes figures one of the highest-return items a student can practise, and the reason deserves real preparation.') },
+      @{ t = 'h2'; s = 'Why the examiner looks at your figure' },
+      @{ t = 'p'; s = @('Markers scan quickly, and a labelled figure presents the answer at a glance.','A neat drawing with straight label lines and correct spellings shows command instantly.','It also gives the examiner a place to award method and completeness marks that a messy paragraph would lose.','Practise with that reader in mind and the figure earns what it deserves.') },
+      @{ t = 'h2'; s = 'Which figures repay the practice most' },
+      @{ t = 'ul'; i = @('The structures that appear again and again across chapters: the heart and blood flow, the nephron, the neuron, and the digestive route.','The plant figures: the flower parts, the leaf, and the cell structures.','The cycle diagrams: carbon, nitrogen and the like, drawn as labelled cycles.','The process sketches: such as a simple food chain or a cross in genetics.') },
+      @{ t = 'p'; s = @('Make a personal list of ten to fifteen core figures and rotate them weekly.','The list is shorter than students expect, and it covers most of what repeats.') },
+      @{ t = 'h2'; s = 'Draw with exam-room discipline' },
+      @{ t = 'ol'; i = @('Sketch the outline lightly first, then darken the final lines.','Use a straight ruler edge for label lines.','Write each label beside its line and spell it exactly.','Give the figure a title where the question expects one.','Keep it small and tidy, sized to the space and the marks.') },
+      @{ t = 'h2'; s = 'Decide when a diagram truly helps' },
+      @{ t = 'p'; s = @('Add a figure when it carries the explanation, supports a definition, or answers to draw.','Skip it when a short sentence does the job, because a rushed sketch can cost more time than the marks justify.','The judgement comes from practising under time, which is the test described in our <a href="/blog/how-to-manage-time-during-biology-exams/">time management guide</a>.') },
+      @{ t = 'h2'; s = 'Build a labelled figure bank' },
+      @{ t = 'p'; s = @('Keep one page per core figure with your best version and the label lines drawn clean.','Before the exam, redraw each from memory and compare.','The bank becomes your revision tool, and the drawing habit behind it comes from our <a href="/blog/how-to-remember-biology-diagrams-easily/">diagram memory guide</a>.') },
+      @{ t = 'h2'; s = 'The closing note' },
+      @{ t = 'p'; s = @('Diagrams are scored units in biology board exams.','Practise the core set, draw with label discipline, and add figures only where they genuinely earn their time.','Do that and the figures turn from a fear into a dependable source of marks.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-prepare-biology-using-ncert'
+    title    = 'How to Prepare Biology Using NCERT'
+    cat      = 'biology'
+    author   = 'vyasa'
+    pub      = '2026-08-29'
+    upd      = '2026-08-29'
+    excerpt  = 'The NCERT biology textbook is the exam, its vocabulary and its facts. Read it actively, learn its definitions, and turn its questions into practice sets.'
+    keywords = @('NCERT biology preparation','prepare biology with NCERT','how to read NCERT biology','NCERT biology questions')
+    related  = @('how-to-study-biology-effectively-for-cbse-board-exams','how-to-score-better-in-cbse-class-12-biology','how-to-revise-biology-before-board-exams','how-to-write-high-scoring-biology-answers')
+    cta      = 'NCERT-based coaching keeps definitions and figures aligned with the boards. The Science and CBSE programs at Vyasa Academy in Hulimavu are taught directly from the NCERT.'
+    courses  = @(
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' },
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Biology questions are built from the NCERT textbook, so the book is not optional reading, it is the syllabus made physical.','The difference between students is rarely the book they hold; it is whether they work the book or just own it.','Here is how to work it properly.') },
+      @{ t = 'h2'; s = 'Read each section actively' },
+      @{ t = 'p'; s = @('Split the chapter into its headed sections and read one at a time.','After each section, close the book and retell the idea in two written lines.','Then reread the section to collect only what you missed.','Active reading takes longer per page and stores far more per hour than underlining whole paragraphs.') },
+      @{ t = 'h2'; s = 'Keep definitions in the textbook language' },
+      @{ t = 'p'; s = @('Biological definitions are marked against a known shape, and the NCERT phrasing is the safest one to reproduce.','When an answer needs a definition, aim for the textbook language rather than your paraphrase.','For explanations, keep your own words but keep the terms exact.') },
+      @{ t = 'h2'; s = 'Learn the figures from the pages' },
+      @{ t = 'p'; s = @('The figures in the textbook are the figures the questions assume.','For each one, redraw it from memory and check your labels against the book.','The figure discipline is the same one described in our <a href="/blog/how-to-remember-biology-diagrams-easily/">diagram memory guide</a>, applied to every NCERT figure in your syllabus.') },
+      @{ t = 'h2'; s = 'Turn the end-questions into practice sets' },
+      @{ t = 'ol'; i = @('Answer every chapter exercise on paper before looking at solutions.','Compare your wording with the model answers and mark the drift.','Redo the ones you missed after three days from memory.','Use the inline examples the same way, treating them as warm questions.') },
+      @{ t = 'p'; s = @('The chapter exercises are the closest legal shortcut to thinking like the question setter.') },
+      @{ t = 'h2'; s = 'Use the glossary as a term checklist' },
+      @{ t = 'p'; s = @('The glossary at the back is your biology vocabulary for the board.','Test yourself across it on a rotation.','A term you can define in one line from the glossary is a term you can use in any answer.') },
+      @{ t = 'h2'; s = 'When to bring in extra material' },
+      @{ t = 'p'; s = @('Only after the textbook chapters and their questions are genuinely done should previous-year papers and a supplementary book join in.','The supplement should extend the textbook, never replace its versions of definitions and figures.','That sequence keeps every answer consistent with the boards source of truth.') },
+      @{ t = 'h2'; s = 'The takeaway' },
+      @{ t = 'p'; s = @('The NCERT is the biology exam made into a book.','Read it actively, reproduce its definitions and figures, and practise its questions.','Work the book and the boards stop feeling like a mystery.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-revise-biology-before-board-exams'
+    title    = 'How to Revise Biology Before Board Exams'
+    cat      = 'biology'
+    author   = 'vyasa'
+    pub      = '2026-08-28'
+    upd      = '2026-08-28'
+    excerpt  = 'Biology revision needs a plan or it becomes rereading. Use recall pages, term lists, figure sprints and timed rewrites of key answers in the final month.'
+    keywords = @('revise biology','biology revision plan','final month biology','biology final revision','biology last minute revision')
+    related  = @('how-to-study-biology-effectively-for-cbse-board-exams','how-to-prepare-biology-using-ncert','how-to-remember-long-biology-answers','how-to-build-a-study-routine')
+    cta      = 'A planned revision month makes a visible difference in biology. The Science batches at Vyasa Academy in Hulimavu run structured revision with recall tests before every board exam.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Biology is the subject where revision plans fail most often, because rereading feels productive and stores almost nothing.','A working revision month switches to recall: pages written from memory, terms tested by cards, figures drawn cold, and key answers rewritten.','Here is that month, week by week.') },
+      @{ t = 'h2'; s = 'The shape of the month' },
+      @{ t = 'ol'; i = @('Week one: full coverage pass, one recall page per chapter.','Week two: target pass, fix the topics that leaked from every recall page.','Week three: paper rhythm, one previous-year paper every two days under time.','Week four: recall only, term cards, figure sprints, and the leak list.') },
+      @{ t = 'h2'; s = 'Write recall pages instead of notes' },
+      @{ t = 'p'; s = @('Close the book and write everything you remember about a chapter on a blank page: terms, processes, figures, and examples.','Then compare with the text and add the gaps in a different colour.','The gaps are the only content needing your time.','A chapter recalled twice is a chapter known; a chapter read twice is a chapter merely recognised.') },
+      @{ t = 'h2'; s = 'Run the term cards every day' },
+      @{ t = 'p'; s = @('Keep the full glossary and your term notebooks as a card deck.','In the final month, run the deck daily until every card answers instantly.','Drop a card only when you have answered it correctly several times in a row, and keep the missed ones at the top.','The flashcard method lives with the other core techniques in our <a href="/blog/important-study-techniques-for-biology-students/">study techniques guide</a>.') },
+      @{ t = 'h2'; s = 'Do figure sprints' },
+      @{ t = 'p'; s = @('Time box each core figure to two minutes: draw, label, move on.','A sprint a day keeps the whole figure list warm.','This is the drawing discipline from our <a href="/blog/importance-of-diagrams-in-biology-board-exams/">diagram value guide</a>, but at exam speed.') },
+      @{ t = 'h2'; s = 'Rewrite the model answers' },
+      @{ t = 'p'; s = @('Pick the ten highest-value answers from your chapters and rewrite each from memory.','Compare against the textbook shape and fix the drift.','Rewriting trains the actual exam action, which is producing clean written answers, not recognising concepts.') },
+      @{ t = 'h2'; s = 'Protect the final days' },
+      @{ t = 'p'; s = @('In the last few days, stop fresh topics.','Recall, top up the leak list, keep sleep regular, and let the stored material consolidate.','A rested student delivers recall cleanly; a exhausted one forgets under pressure, and that is the most avoidable loss in biology.') },
+      @{ t = 'h2'; s = 'The close' },
+      @{ t = 'p'; s = @('Revision is the difference between having studied biology and being ready for the paper.','Write recall pages, run the term cards, sprint the figures, and rewrite the model answers.','Follow the four-week shape and the boards become a rehearsal you have already performed.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-remember-long-biology-answers'
+    title    = 'How to Remember Long Biology Answers'
+    cat      = 'biology'
+    author   = 'vyasa'
+    pub      = '2026-08-27'
+    upd      = '2026-08-27'
+    excerpt  = 'Long answers die in memory as prose. Break them into numbered ideas, link each to a keyword, and rebuild the answer from the keywords.'
+    keywords = @('remember long biology answers','memorise answers biology','long answers memory','answer skeleton method')
+    related  = @('important-study-techniques-for-biology-students','how-to-remember-biology-diagrams-easily','how-to-learn-scientific-names-and-biological-terms','how-to-remember-mathematical-formulas')
+    cta      = 'Long answers are easier with a teacher who shows how to compress and rebuild them. The Science coaching at Vyasa Academy in Hulimavu teaches the skeleton method chapter by chapter.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Long answers fail in the exam not because the student never knew them, but because prose stored as prose collapses under pressure.','The way around it is compression: reduce each long answer to a short skeleton of keywords, then rebuild the prose from the skeleton.','Here is how the method works.') },
+      @{ t = 'h2'; s = 'Step 1: reduce the answer to five keywords' },
+      @{ t = 'p'; s = @('Read the model answer once and pull out the five nouns or verbs that each carry one big idea.','Write them as a numbered list.','If an answer has more than five ideas, group them so the list stays short.','The five keywords are the skeleton, and the prose is just each keyword expanded into sentences.') },
+      @{ t = 'h2'; s = 'Step 2: attach a memory hook to the order' },
+      @{ t = 'p'; s = @('A bare list of five words is easy to lose, so build a small hook that fixes the order.','Use a sentence whose first letters match the keywords, or a tiny mental scene that contains each item in sequence.','The hook is the glue of the skeleton method, and the silly ones work best.') },
+      @{ t = 'h2'; s = 'Step 3: rebuild from the skeleton aloud' },
+      @{ t = 'p'; s = @('From the five keywords alone, speak the full answer in your own words.','Then compare with the model and adjust only the drift.','Rebuilding aloud trains the exam action, because in the hall you will do exactly this from your remembered skeleton.') },
+      @{ t = 'h2'; s = 'Practise on a spaced schedule' },
+      @{ t = 'ol'; i = @('Today: build the skeleton and rebuild the answer aloud twice.','Day three: rebuild the full answer from the skeleton only.','Day seven: recall the skeleton, then the answer, both from memory.','Third week: one cold rebuild, then check the text.') },
+      @{ t = 'p'; s = @('The spacing is the same rule behind every durable memory, including the formula method in our <a href="/blog/how-to-remember-mathematical-formulas/">formula memory guide</a>.') },
+      @{ t = 'h2'; s = 'Keep the answer exam-honest' },
+      @{ t = 'p'; s = @('Know the difference between remembering an answer and reproducing it.','The goal is to write the idea in your words with the correct terms, in the textbooks shape.','Never treat the skeleton as permission to recite a block you do not understand; the skeleton works because the ideas are already yours.') },
+      @{ t = 'h2'; s = 'Combine with the term and figure habits' },
+      @{ t = 'p'; s = @('Use the terminology system from our <a href="/blog/how-to-learn-scientific-names-and-biological-terms/">terms guide</a> to keep vocabulary exact inside the rebuilds, and the <a href="/blog/how-to-remember-biology-diagrams-easily/">diagram method</a> for any figure the answer needs.','All three habits share the same recall engine.') },
+      @{ t = 'h2'; s = 'The bottom line' },
+      @{ t = 'p'; s = @('Long answers are remembered as skeletons, not as prose.','Reduce to five keywords, fix the order with a hook, and rebuild aloud on a spaced schedule.','Do that for every long answer and the ones that used to vanish under pressure will come out whole.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-manage-time-during-biology-exams'
+    title    = 'How to Manage Time During Biology Exams'
+    cat      = 'biology'
+    author   = 'vyasa'
+    pub      = '2026-08-26'
+    upd      = '2026-08-26'
+    excerpt  = 'Biology papers are lost to slow first answers and rushed endings. A mark-based budget and a two-pass approach keep the whole paper balanced.'
+    keywords = @('time management biology exam','biology paper pacing','exam time budget','biology exam strategy')
+    related  = @('how-to-write-high-scoring-biology-answers','common-mistakes-students-make-in-biology-exams','how-to-study-biology-effectively-for-cbse-board-exams','how-to-manage-time-in-mathematics-board-exam')
+    cta      = 'Pacing is rehearsed in every biology mock at Vyasa Academy in Hulimavu. The Science batches practise the time budget until finishing on time becomes automatic.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Biology papers rarely fail from impossible questions.','They fail when a student spends twenty minutes perfecting one answer and then sprints the rest, losing the easy marks along the way.','The protection is a budget decided before the exam, not during it.') },
+      @{ t = 'h2'; s = 'Budget minutes by marks' },
+      @{ t = 'p'; s = @('Allocate your working time roughly in proportion to marks, with a buffer left for the final review.','Write the budget on the cover page before you begin.','When a question is worth few marks and starts eating several minutes, the budget tells you to move on.','The mark-based approach is the same logic shown in our <a href="/blog/how-to-manage-time-in-mathematics-board-exam/">mathematics time guide</a>; only the paper is different.') },
+      @{ t = 'h2'; s = 'Use a two-pass approach' },
+      @{ t = 'ol'; i = @('First pass: every question you can answer immediately, in order of your confidence.','Second pass: the remaining questions, using your structural answer shape.','Final minutes: the check pass, scanning for spelling, unlabelled parts and missed verbs.') },
+      @{ t = 'p'; s = @('The first pass banks safe marks early, which settles nerves and guarantees a floor.','Most time disasters come from attacking the paper strictly top to bottom.') },
+      @{ t = 'h2'; s = 'Give diagrams a time limit' },
+      @{ t = 'p'; s = @('A labelled figure should take under two minutes for the core set.','Practise drawing them at speed before the exam so a diagram never becomes a time sink in the hall.','If a sketch is still messy after two minutes, move on and return in the second pass.','The practised figures come from our <a href="/blog/importance-of-diagrams-in-biology-board-exams/">diagram value guide</a>.') },
+      @{ t = 'h2'; s = 'Keep long answers proportionate' },
+      @{ t = 'p'; s = @('Write according to the marks.','A two-mark question wants a tight definition and one support; a five-mark question wants the structure, not a five-minute essay.','Answer length that matches mark value keeps the whole paper on schedule and the marker happy.') },
+      @{ t = 'h2'; s = 'Reserve a review buffer' },
+      @{ t = 'p'; s = @('Keep the last minutes for the check list: term spelling, straight label lines, every part of two-part questions answered, and arrows pointing the right way.','A ten-minute check pass routinely rescues marks that a fast finish loses.') },
+      @{ t = 'h2'; s = 'Train the budget in mocks' },
+      @{ t = 'p'; s = @('A budget written only on paper day is hope, not a plan.','Run it in every mock: write the numbers, obey the passes, respect the time limits.','Within a few timed papers the rhythm becomes automatic and the real exam feels like another rehearsal.') },
+      @{ t = 'h2'; s = 'The close' },
+      @{ t = 'p'; s = @('Time in a biology paper is allocated in advance.','Budget by marks, run two passes, cap the diagrams, match length to value, and keep a review buffer.','Do those and the paper finishes balanced instead of rushed.') }
+    )
+  },
+
+  @{
+    slug     = 'important-study-techniques-for-biology-students'
+    title    = 'Important Study Techniques for Biology Students'
+    cat      = 'biology'
+    author   = 'vyasa'
+    pub      = '2026-08-25'
+    upd      = '2026-08-25'
+    excerpt  = 'Active recall, spaced revision, flashcards, concept maps and self-testing are the five techniques that make biology stick. A how-to for each.'
+    keywords = @('biology study techniques','active recall','spaced revision','concept map biology','flashcards biology','self testing')
+    related  = @('how-to-learn-scientific-names-and-biological-terms','how-to-remember-long-biology-answers','how-to-revise-biology-before-board-exams','understanding-concepts-vs-memorising-mathematics')
+    cta      = 'These five techniques are habits students build faster with guidance. The Science coaching at Vyasa Academy in Hulimavu embeds active recall and spaced revision into every batch.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Biology rewards a small set of study techniques more than it rewards hours.','Five techniques do almost all the heavy lifting, and each can be started in a single session.','Here is what each one is, how to run it, and why it works.') },
+      @{ t = 'h2'; s = 'Technique 1: active recall' },
+      @{ t = 'p'; s = @('Active recall is testing yourself before you feel ready: close the book and write or say the answer.','Run it per section: read, close, retell, check.','The struggle to pull the answer out is the work that makes it stay.','Passive rereading feels easier and stores far less.') },
+      @{ t = 'h2'; s = 'Technique 2: spaced revision' },
+      @{ t = 'p'; s = @('Review material after a day, then three days, then a week, then a month.','Each gap forces a small forgetting, and each successful recall strengthens the memory more than another immediate read.','Apply the schedule to chapters and term decks alike.','The rhythm is the same engine behind the long-answer method in our <a href="/blog/how-to-remember-long-biology-answers/">answer memory guide</a>.') },
+      @{ t = 'h2'; s = 'Technique 3: flashcards' },
+      @{ t = 'p'; s = @('Make one card per term or fact: term on the front, one-line definition on the back.','Run the deck forward and backward, and sort into known and review piles.','The pile you review is the only pile that deserves your time next session.','Flashcards are the natural home of the terminology system in our <a href="/blog/how-to-learn-scientific-names-and-biological-terms/">terms guide</a>.') },
+      @{ t = 'h2'; s = 'Technique 4: concept maps' },
+      @{ t = 'p'; s = @('A concept map places a topic at the centre and connects related ideas with labelled lines.','Draw one per chapter after studying it, then redraw from memory.','The map makes relationships visible, and biology is a subject of relationships: structure to function, process to outcome.','Compared side by side, the links you missed are your next revision targets.') },
+      @{ t = 'h2'; s = 'Technique 5: self-testing under time' },
+      @{ t = 'p'; s = @('Set a timer and answer questions without notes, writing full answers with diagrams.','Self-testing exposes which chapters are familiar and which are actually exam-ready.','Run one timed set per chapter during revision, and log where the time went.','The pacing half of this technique is covered in our <a href="/blog/how-to-manage-time-during-biology-exams/">time management guide</a>.') },
+      @{ t = 'h2'; s = 'A weekly recipe that uses all five' },
+      @{ t = 'ol'; i = @('Monday: study one new chapter with active recall per section.','Tuesday: build its concept map from memory.','Wednesday: run the chapter flashcards and the spaced deck.','Thursday: one timed self-test on the chapter and last week together.','Friday: file the results into next weeks spacing, and fix one leak.') },
+      @{ t = 'h2'; s = 'Why technique beats hours' },
+      @{ t = 'p'; s = @('Two students studying the same chapter the same evening differ by technique, not by minutes.','The student using recall and spacing stores more, and the stored material is what shows up on the answer sheet.','Technique is the highest leverage tool a biology student has.') },
+      @{ t = 'h2'; s = 'The final word' },
+      @{ t = 'p'; s = @('Active recall, spaced revision, flashcards, concept maps and timed self-testing are the five tools that make biology stick.','Run them together on a weekly rhythm and the subject stops requiring marathon study sessions.','Start with one technique today and add the rest over a week.') }
+    )
   }
 )
