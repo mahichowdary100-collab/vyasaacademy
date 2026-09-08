@@ -139,13 +139,13 @@ function Get-FooterHtml {
 $navHtml = Get-NavHtml
 $footerHtml = Get-FooterHtml
 
-function Build-Head($title,$desc,$url,$pageType,$ldBlocks) {
+function Build-Head($title,$desc,$url,$pageType,$ldBlocks,[string]$ogImg = $ogImage) {
   $titleHtml = $title -replace '&', '&amp;'
   $descHtml = $desc -replace '&', '&amp;'
   $s = "<!DOCTYPE html>$nl<html lang=""en"">$nl<head>$nl  <meta charset=""UTF-8"" />$nl  <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"" />"
   $s += "$nl<title>$titleHtml</title>$nl  <meta name=""description"" content=""$descHtml"" />$nl  <link rel=""canonical"" href=""$url"" />"
-  $s += "$nl  <meta property=""og:type"" content=""$pageType"" />$nl  <meta property=""og:site_name"" content=""Vyasa Academy"" />$nl  <meta property=""og:title"" content=""$titleHtml"" />$nl  <meta property=""og:description"" content=""$descHtml"" />$nl  <meta property=""og:url"" content=""$url"" />$nl  <meta property=""og:image"" content=""$ogImage"" />$nl  <meta property=""og:locale"" content=""en_IN"" />"
-  $s += "$nl  <meta name=""twitter:card"" content=""summary_large_image"" />$nl  <meta name=""twitter:title"" content=""$titleHtml"" />$nl  <meta name=""twitter:description"" content=""$descHtml"" />$nl  <meta name=""twitter:image"" content=""$ogImage"" />"
+  $s += "$nl  <meta property=""og:type"" content=""$pageType"" />$nl  <meta property=""og:site_name"" content=""Vyasa Academy"" />$nl  <meta property=""og:title"" content=""$titleHtml"" />$nl  <meta property=""og:description"" content=""$descHtml"" />$nl  <meta property=""og:url"" content=""$url"" />$nl  <meta property=""og:image"" content=""$ogImg"" />$nl  <meta property=""og:locale"" content=""en_IN"" />"
+  $s += "$nl  <meta name=""twitter:card"" content=""summary_large_image"" />$nl  <meta name=""twitter:title"" content=""$titleHtml"" />$nl  <meta name=""twitter:description"" content=""$descHtml"" />$nl  <meta name=""twitter:image"" content=""$ogImg"" />"
   $s += "$nl  <link rel=""stylesheet"" href=""/styles.css"" />$nl  <link rel=""preconnect"" href=""https://fonts.googleapis.com"" />$nl  <link href=""https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"" rel=""stylesheet"" />$nl  <link rel=""stylesheet"" href=""https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"" />"
   foreach ($j in $ldBlocks) {
     $s += "$nl  <script type=""application/ld+json"">$nl$j$nl  </script>"
@@ -298,6 +298,13 @@ foreach ($a in $blogArticles) {
   $pubDisp = Get-DispDate $a.pub
   $updDisp = Get-DispDate $a.upd
 
+  $featImg = if ($a.featuredImage) { $a.featuredImage } else { $ogImage }
+  $featuredHtml = ''
+  if ($a.featuredImage) {
+    $alt = if ($a.featuredAlt) { $a.featuredAlt } else { "$($a.title) - Vyasa Academy" }
+    $featuredHtml = "<figure class=""blog-featured"">$nl  <img src=""$($a.featuredImage)"" alt=""$alt"" width=""860"" height=""480"" loading=""eager"" decoding=""async"" />$nl</figure>"
+  }
+
   $crumbItems = @(
     @{ name = 'Home'; url = "$domain/" },
     @{ name = 'Blog'; url = "$domain/blog/" },
@@ -305,7 +312,7 @@ foreach ($a in $blogArticles) {
     @{ name = $a.title; url = $url }
   )
 
-  $head = Build-Head $a.title $a.excerpt $url "article" @((Get-ArticleLd $a), (Get-BreadcrumbLd $crumbItems))
+  $head = Build-Head $a.title $a.excerpt $url "article" @((Get-ArticleLd $a), (Get-BreadcrumbLd $crumbItems)) $featImg
 
   # render body blocks
   $bodyHtml = @()
@@ -320,7 +327,7 @@ foreach ($a in $blogArticles) {
   $metaLine = "By <a href=""/#about"">$($au.name)</a> | $pubDisp | $read min read"
   if ($a.upd -ne $a.pub) { $metaLine += " | Updated $updDisp" }
 
-  $main = "<main class=""blog-page"">$nl  <div class=""container blog-container"">$nl    $(Get-CrumbsBar $crumbItems)$nl    <article class=""blog-article"">$nl      <header class=""blog-article-header"">$nl        <a class=""blog-cat-badge"" href=""/blog/$($a.cat)/"">$catName</a>$nl        <h1>$($a.title)</h1>$nl        <p class=""blog-article-meta"">$metaLine</p>$nl      </header>$nl      $(Get-TocHtml $a.body)$nl      <div class=""blog-content"">$nl$($bodyHtml -join "$nl$nl")$nl      </div>$nl      $(Get-SharingHtml $a)$nl      $(Get-AuthorBox $a)$nl      $(Get-CtaHtml $a)"
+  $main = "<main class=""blog-page"">$nl  <div class=""container blog-container"">$nl    $(Get-CrumbsBar $crumbItems)$nl    <article class=""blog-article"">$nl      <header class=""blog-article-header"">$nl        <a class=""blog-cat-badge"" href=""/blog/$($a.cat)/"">$catName</a>$nl        <h1>$($a.title)</h1>$nl        <p class=""blog-article-meta"">$metaLine</p>$nl      </header>$nl      $featuredHtml$nl      $(Get-TocHtml $a.body)$nl      <div class=""blog-content"">$nl$($bodyHtml -join "$nl$nl")$nl      </div>$nl      $(Get-SharingHtml $a)$nl      $(Get-AuthorBox $a)$nl      $(Get-CtaHtml $a)"
   if ($relatedHtml.Count -gt 0) {
     $main += "$nl      <section class=""blog-related"">$nl        <h2>Related reading</h2>$nl        <div class=""blog-grid"">$nl$($relatedHtml -join "$nl")$nl        </div>$nl      </section>"
   }
@@ -347,12 +354,55 @@ foreach ($c in $blogCategories) {
   $id = New-Ld @{ '@context' = 'https://schema.org'; '@type' = 'CollectionPage'; 'name' = $title; 'url' = $url; 'inLanguage' = 'en-IN' }
   $head = Build-Head $title $desc $url "website" @($id, (Get-BreadcrumbLd $crumbItems))
 
-  $cards = @()
   $arts = @($artiMap[$c.slug] | Sort-Object pub -Descending)
-  foreach ($a in $arts) { $cards += Get-CardHtml $a }
-  $grid = ($cards -join "$nl")
 
-  $main = "<main class=""blog-page"">$nl  <div class=""container blog-container"">$nl    $(Get-CrumbsBar $crumbItems)$nl    <section class=""blog-hero blog-hero-slim"">$nl      <h1>$($c.name)</h1>$nl      <p>$($c.short)</p>$nl      <a class=""blog-back blog-back-inline"" href=""/blog/"">All articles</a>$nl    </section>$nl    <div class=""blog-grid"">$nl$grid$nl    </div>$nl  </div>$nl</main>"
+  if ($c.pillar) {
+    $p = $c.pillar
+    $leadHtml = @()
+    foreach ($para in @($p.lead)) { $leadHtml += "<p>$para</p>" }
+
+    $featuredHtml = @()
+    foreach ($fs in @($p.featured)) {
+      if ($artMap.ContainsKey($fs)) { $featuredHtml += Get-CardHtml $artMap[$fs] }
+    }
+
+    $sectionsHtml = @()
+    foreach ($sec in @($p.sections)) {
+      $secCards = @()
+      foreach ($ss in @($sec.slugs)) {
+        if ($artMap.ContainsKey($ss)) { $secCards += Get-CardHtml $artMap[$ss] }
+      }
+      if ($secCards.Count -gt 0) {
+        $sectionsHtml += "<section class=""blog-pillar-section"">$nl  <h2>$($sec.title)</h2>$nl  <p>$($sec.text)</p>$nl  <div class=""blog-grid"">$nl$($secCards -join "$nl")$nl  </div>$nl</section>"
+      }
+    }
+
+    $courseBtns = @()
+    foreach ($co in @($p.courses)) {
+      $courseBtns += "<a href=""$($co.url)"" class=""btn btn-primary"">$($co.label)</a>"
+    }
+    $courseBtns += '<a href="https://wa.me/919494901006" target="_blank" rel="noopener" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>'
+    $coursesHtml = "<section class=""blog-cta"">$nl  <h2>Guidance for the Class 10 boards</h2>$nl  <p>If your child needs structured coaching with regular assessments, mock tests and doubt clearing, explore the Class 10 programs at Vyasa Academy in Hulimavu, Bangalore. Small batches, concept-first teaching, and honest feedback on every paper.</p>$nl  <div class=""blog-cta-buttons"">$nl    $($courseBtns -join "$nl    ")$nl  </div>$nl</section>"
+
+    $allCards = @()
+    foreach ($a in $arts) { $allCards += Get-CardHtml $a }
+    $allGrid = ($allCards -join "$nl")
+
+    $main = "<main class=""blog-page"">$nl  <div class=""container blog-container"">$nl    $(Get-CrumbsBar $crumbItems)$nl    <section class=""blog-hero blog-hero-slim"">$nl      <p class=""blog-eyebrow"">CBSE Class 10 Board Exam Hub</p>$nl      <h1>$($c.name)</h1>$nl      <p>$($c.desc)</p>$nl      <div class=""blog-pillar-lead"">$nl$(($leadHtml | ForEach-Object { "      $_" }) -join "$nl")$nl      </div>$nl    </section>"
+    if ($featuredHtml.Count -gt 0) {
+      $main += "$nl    <section class=""blog-pillar-section"">$nl      <h2>Start here</h2>$nl      <p>The six guides below cover the whole journey, from the complete study plan down to the final week. Read them in order for the full system.</p>$nl      <div class=""blog-grid"">$nl$($featuredHtml -join "$nl")$nl      </div>$nl    </section>"
+    }
+    $main += "$nl$(($sectionsHtml -join "$nl") -replace "(?m)^", "$nl    ")$nl    $coursesHtml"
+    if ($allGrid) {
+      $main += "$nl    <section class=""blog-pillar-section"">$nl      <h2>All Class 10 articles</h2>$nl      <p>The complete list of Class 10 board exam guides in this hub, newest first.</p>$nl      <div class=""blog-grid"">$nl$allGrid$nl      </div>$nl    </section>"
+    }
+    $main += "$nl  </div>$nl</main>"
+  } else {
+    $cards = @()
+    foreach ($a in $arts) { $cards += Get-CardHtml $a }
+    $grid = ($cards -join "$nl")
+    $main = "<main class=""blog-page"">$nl  <div class=""container blog-container"">$nl    $(Get-CrumbsBar $crumbItems)$nl    <section class=""blog-hero blog-hero-slim"">$nl      <h1>$($c.name)</h1>$nl      <p>$($c.short)</p>$nl      <a class=""blog-back blog-back-inline"" href=""/blog/"">All articles</a>$nl    </section>$nl    <div class=""blog-grid"">$nl$grid$nl    </div>$nl  </div>$nl</main>"
+  }
 
   $page = "$head$nl<body>$nl$navHtml$nl$main$nl$footerHtml$nl<script src=""/blog.js""></script>$nl</body>$nl</html>"
   Set-ContentUtf8 -Path (Join-Path $dir "index.html") -Value $page

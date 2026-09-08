@@ -41,6 +41,42 @@ $script:blogCategories = @(
     name  = 'CBSE Class 10 Board Exam Tips'
     short = 'Subject-wise strategies, revision plans and time management for the Class 10 boards.'
     desc  = 'CBSE Class 10 board exam preparation: subject-wise strategies, revision plans, and time management tips that help students score well.'
+    pillar = @{
+      lead = @('The Class 10 board exams are the first high-stakes examination most students face, and a clear plan removes most of the fear.','This hub gathers the complete set of preparation guides from Vyasa Academy: full study plans, mathematics and science preparation, timetables, revision systems, and last-minute strategy.','Work through the articles in order, or jump straight to the section you need today.')
+      featured = @('complete-study-plan-for-cbse-class-10-board-exams','best-study-timetable-for-class-10-students','how-to-prepare-mathematics-for-cbse-class-10-board-exams','how-to-prepare-science-for-cbse-class-10-board-exams','how-to-revise-effectively-before-class-10-board-exams','final-week-revision-strategy-class-10-boards')
+      sections = @(
+        @{
+          title = 'Mathematics preparation'
+          text  = 'The mathematics paper rewards method, accuracy and presentation. Start with the board-level plan, then drill the problem-solving skills, trigonometry mastery and formula recall.'
+          slugs = @('how-to-prepare-mathematics-for-cbse-class-10-board-exams','how-to-score-90-plus-in-cbse-class-10-maths','how-to-master-trigonometry-class-10','how-to-remember-mathematical-formulas','10-common-mistakes-in-maths-and-how-to-fix-them','how-to-manage-time-in-mathematics-board-exam')
+        },
+        @{
+          title = 'Science preparation'
+          text  = 'Science is three subjects in one paper: physics by method, chemistry by equation and biology by process. Prepare for the question types, keep diagrams sharp and practise answer writing.'
+          slugs = @('how-to-prepare-science-for-cbse-class-10-board-exams','how-to-prepare-physics-chemistry-biology-class-10','how-to-score-higher-marks-in-cbse-science','importance-of-diagrams-in-science-exams','how-to-write-better-answers-in-cbse-science-exams','how-to-revise-science-effectively-before-exams')
+        },
+        @{
+          title = 'Study timetable'
+          text  = 'A timetable that fits your school and tuition hours is worth more than an ideal one that no one can follow. Start from the general timetable guide, then build your revision-specific version.'
+          slugs = @('best-study-timetable-for-class-10-students','how-to-create-an-effective-revision-timetable','how-to-balance-mathematics-and-science-preparation-class-10','how-to-build-a-study-routine')
+        },
+        @{
+          title = 'Revision strategies'
+          text  = 'Revision works when it forces recall instead of recognition. Learn the recall-first cycles, run previous-year papers, and recover fast if a pre-board goes wrong.'
+          slugs = @('how-to-revise-effectively-before-class-10-board-exams','how-to-create-an-effective-revision-timetable','importance-of-previous-year-question-papers-class-10','how-to-prepare-for-pre-board-exams','how-to-improve-marks-after-poor-pre-board-performance')
+        },
+        @{
+          title = 'Last-minute preparation'
+          text  = 'The final month, the final week and the final hours each need a different style of preparation. Shift from learning to rehearsal, then to calm.'
+          slugs = @('how-to-study-last-30-days-before-board-exams','final-week-revision-strategy-class-10-boards','last-minute-tips-for-cbse-class-10-board-exams','how-to-stay-focused-during-board-exam-preparation','how-to-manage-time-during-cbse-class-10-board-exams')
+        }
+      )
+      courses = @(
+        @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' },
+        @{ label = 'Maths Tuition in Hulimavu'; url = '/maths-tuition-hulimavu/' },
+        @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' }
+      )
+    }
   },
   @{
     slug  = 'cbse-class-12-board-exam-tips'
@@ -2504,6 +2540,765 @@ $script:blogArticles = @(
       @{ t = 'p'; s = @('A student who practices 40 minutes daily for a term moves more marks than one who pulls an heroic weekend before every test.','The daily habit also protects against the last-week panic that erases good learning.','Set the daily target tiny enough to always be done, and the habit outlasts any motivation.') },
       @{ t = 'h2'; s = 'The practice rules, restated' },
       @{ t = 'p'; s = @('Practice in short daily doses, let the log pick the topics, redraw the leaks on rotation, and test once a week under time.','Run those rules for a term and the science average moves in a straight line.','The same mechanics drive the mathematics version in our <a href="/blog/how-daily-practice-improves-mathematics-performance/">daily practice article</a>.') }
+    )
+  },
+
+  @{
+    slug     = 'complete-study-plan-for-cbse-class-10-board-exams'
+    title    = 'Complete Study Plan for CBSE Class 10 Board Exams'
+    cat      = 'cbse-class-10-board-exam-tips'
+    author   = 'mahendra'
+    pub      = '2026-09-08'
+    upd      = '2026-09-08'
+    excerpt  = 'A working plan for the full Class 10 board preparation cycle: four phases, a weekly rhythm, one-page tracking, and how to adjust when life interrupts.'
+    keywords = @('Class 10 board exam study plan','Class 10 complete preparation plan','class 10 boards study system','board exam plan 2026')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A student using a written study plan and textbook to prepare for the CBSE Class 10 board exams'
+    related  = @('cbse-class-10-board-exam-preparation-strategy','best-study-timetable-for-class-10-students','how-to-prepare-mathematics-for-cbse-class-10-board-exams','how-to-prepare-science-for-cbse-class-10-board-exams','how-to-create-an-effective-revision-timetable')
+    cta      = 'A complete plan is easier to follow when a teacher watches the progress and reviews the mocks. The Class 10 program at Vyasa Academy in Hulimavu runs students through exactly these four phases with regular tests.'
+    courses  = @(
+      @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('A complete study plan is not a long to-do list; it is an operating system.','It decides what to study, when to study it, how to check that studying worked, and what to do when the plan slips.','This guide walks through the whole system in four phases, with a weekly rhythm and a one-page way to track it.','For the subject-level detail, each phase links to the matching article in this hub.') },
+      @{ t = 'h2'; s = 'What a real study plan contains' },
+      @{ t = 'ul'; i = @('A syllabus map: every chapter ticked off against the official list.','A phase structure: foundation, mastery, revision and rehearsal.','A weekly rhythm: which subjects, which days, how much practice.','A tracking sheet: one page that shows progress at a glance.','An adjustment rule: what to change when a week goes wrong.') },
+      @{ t = 'p'; s = @('A plan without a tracking sheet is a wish.','The four phases below give the structure, and the tracking rule keeps it honest.') },
+      @{ t = 'h2'; s = 'Phase 1: The foundation pass' },
+      @{ t = 'p'; s = @('Go subject by subject, chapter by chapter, and learn every concept for the first time with the textbook as the base.','For each chapter, close with a short self-test: ten questions you wrote yourself from the content.','Tick the chapter off the syllabus map only when the self-test is finished.','A timed rhythm for this phase matters more than speed; slow, thorough and daily beats fast and sporadic.') },
+      @{ t = 'h2'; s = 'Phase 2: The mastery pass with chapter tests' },
+      @{ t = 'p'; s = @('The second time through, work from questions instead of text.','Use the exercises, the exemplar problems for mathematics, and the short-answer questions for science.','For every chapter, set a small test of twenty questions and mark it strictly.','Every lost mark goes into the error log with one line: the question, the wrong step, the fix.','The mastery pass is where the plan starts producing marks, and the error log becomes the heart of revision later.') },
+      @{ t = 'h2'; s = 'Phase 3: The revision pass on notes and formulas' },
+      @{ t = 'p'; s = @('By now every chapter should have a one-page summary you wrote: key points, formulas, diagrams, and its list of common slips.','Revision means working from those pages, not from the full textbook.','Cycle through subjects so nothing sits untouched for more than two weeks.','This is the phase where the timetable pans out in practice, so follow the weekly rhythm below and keep the summaries current.') },
+      @{ t = 'h2'; s = 'Phase 4: The rehearsal pass with full papers' },
+      @{ t = 'p'; s = @('Full papers under exam conditions are the final coach.','One paper per subject every week, in the real timing and with no help, then forty minutes of honest marking.','The marking is the lesson: sort every loss into concept gap, slip, or time problem, and feed it back into the plan.','This phase converts everything learned into exam performance, and it deserves real time, not squeezing.') },
+      @{ t = 'h2'; s = 'The weekly operating rhythm' },
+      @{ t = 'p'; s = @('A rhythm shapes the week around your school and tuition hours; there is no single correct hour count.','A workable shape keeps three things in rotation rather than all five subjects in one day:') },
+      @{ t = 'ul'; i = @('Mathematics on alternate days, because it needs a daily touch to stay warm.','Science in branch blocks: physics one block, chemistry one block, biology one block, across the week.','Social science and languages in shorter blocks between the heavier work.','One weekly timed set, even small, in every subject.') },
+      @{ t = 'p'; s = @('The shape in our <a href="/blog/best-study-timetable-for-class-10-students/">timetable guide</a> shows how to place these blocks around real school hours.') },
+      @{ t = 'h2'; s = 'Tracking: keep the whole plan on one page' },
+      @{ t = 'p'; s = @('A single page with the syllabus map, the phase you are in, and the error log creates the whole picture.','Each Sunday, spend ten minutes checking three numbers: chapters completed, chapters with a chapter test passed, and total errors logged this week.','If all three are moving, the plan is alive.','If one is stuck, that is where next week goes.') },
+      @{ t = 'h2'; s = 'Adjusting the plan when life interrupts' },
+      @{ t = 'ul'; i = @('Missed a week? Drop the plans edges, not the core subject.','Struggling with one chapter? Do not press on; clear it in one focused session with the <a href="/blog/how-to-clear-doubts-faster/">doubt-clearing method</a>.','Overwhelmed? Cut each block by half for a week rather than abandoning the rhythm.','Before a school exam? Reorder the rhythm so that subject leads for a few days, then return.') },
+      @{ t = 'p'; s = @('The plan is a guide, not a prison.','A good plan bends on purpose and snaps back into shape.') },
+      @{ t = 'h2'; s = 'How this hub fits the plan' },
+      @{ t = 'p'; s = @('Every article in the Class 10 hub is a module of this operating system: the <a href="/blog/how-to-prepare-mathematics-for-cbse-class-10-board-exams/">mathematics plan</a>, the <a href="/blog/how-to-prepare-science-for-cbse-class-10-board-exams/">science plan</a>, the <a href="/blog/how-to-revise-effectively-before-class-10-board-exams/">revision system</a>, the <a href="/blog/how-to-study-last-30-days-before-board-exams/">final-month sprint</a> and the <a href="/blog/how-to-create-an-effective-revision-timetable/">revision timetable</a>.','Pull the module you need at the start of each phase and follow it inside the overall rhythm.') },
+      @{ t = 'h2'; s = 'The minimum every student can run today' },
+      @{ t = 'ol'; i = @('Draw the syllabus map and tick today chapters.','Start the error log with ten wrong answers from your last test.','Pick the weekly rhythm shape and write it on one page.','Set the Sunday ten-minute check as a calendar note.') },
+      @{ t = 'h2'; s = 'The honest close' },
+      @{ t = 'p'; s = @('A complete plan earns its name by surviving contact with real life: it structures the phases, rhythm and tracking, and it bends when needed.','Start with the four steps above today, and let each phase upgrade what was there before.','Consistency across the phases, not perfection in any one phase, is what carries a student through the Class 10 boards.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-score-90-percent-in-cbse-class-10-board-exams'
+    title    = 'How to Score 90% or Higher in CBSE Class 10 Board Exams'
+    cat      = 'cbse-class-10-board-exam-tips'
+    author   = 'mahendra'
+    pub      = '2026-09-07'
+    upd      = '2026-09-07'
+    excerpt  = 'Strategies that help students work toward the 90 percent bracket: secure easy marks, structure answers, and rehearse full papers honestly.'
+    keywords = @('score 90 percent in class 10 boards','above 90 in CBSE class 10','high score class 10 board strategy','work toward 90 percent')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'Students revising notes and solving question papers to work toward high scores in the CBSE Class 10 board exams'
+    related  = @('how-to-score-90-plus-in-cbse-class-10-maths','how-to-score-higher-marks-in-cbse-science','complete-study-plan-for-cbse-class-10-board-exams','how-to-write-better-answers-in-cbse-board-exams')
+    cta      = 'Consistent support through the year is what makes the comfortable bracket possible. Explore the Class 10 program at Vyasa Academy in Hulimavu for regular tests and personal feedback.'
+    courses  = @(
+      @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('A 90 percent result is a target many Class 10 students set, and the honest framing is that these strategies help students work toward it.','No method guarantees a percentage, but the habits below reliably remove the soft marks that keep capable students below their target.','The logic is simple: secure everything you already know, then build one layer of skill on top.') },
+      @{ t = 'h2'; s = 'Score the paper, not just the subject' },
+      @{ t = 'p'; s = @('The board shares sample papers and the marking scheme, and a student who reads both learns the shape of marks before writing a line.','Notice how step marks work in mathematics, how definitions are phrased in science, and how formats are checked in languages.','Preparation aimed at how marks are distributed beats equal effort everywhere.') },
+      @{ t = 'h2'; s = 'Layer 1: secure the easy marks first' },
+      @{ t = 'ol'; i = @('Definitions and formulas learned word-for-word from the textbook.','Diagrams practised until they are clean without help.','Numericals solved with working shown, even the easy ones.','Formats for letters and essays rehearsed to standard.','Units, signs and labels checked in the final minutes.') },
+      @{ t = 'p'; s = @('Most marks lost by average students are lost here, in the marks they already knew.','A student who stops losing them is already near the bracket before attempting a single hard topic.') },
+      @{ t = 'h2'; s = 'Layer 2: turn the error log into your syllabus' },
+      @{ t = 'p'; s = @('Keep one running list of every mark you have lost in school tests and practice papers.','Sort the list into three kinds: concept gaps, careless slips, and presentation problems.','Work the list from the top every single study session.','The reason this outperforms a random revision plan is that it spends time exactly where your personal marks leak.') },
+      @{ t = 'h2'; s = 'Layer 3: answer in the markable shape' },
+      @{ t = 'p'; s = @('The full method lives in our <a href="/blog/how-to-write-better-answers-in-cbse-board-exams/">answer-writing guide</a>, but the core is three habits: underline the verb, match length to mark value, and finish with the boxed answer and unit.','A five-mark question answered in two lines loses marks no matter how perfect the two lines are.') },
+      @{ t = 'h2'; s = 'Layer 4: rehearse full papers, honestly' },
+      @{ t = 'p'; s = @('From two months out, sit one full paper per subject every week in exam conditions, then mark it as strictly as an examiner would.','The forty minutes of honest marking afterwards is the most productive time of the week.','Students who rehearse the full paper stop losing marks to pace, to panic, and to the last-fifteen-minutes rush.') },
+      @{ t = 'h2'; s = 'Protect the last fifteen minutes' },
+      @{ t = 'p'; s = @('Keep a personal rule that the paper must be finished fifteen minutes early, and spend that time only on checks: units, signs, labels, and unanswered questions.','In the boards, the last fifteen minutes are where slips get caught and borderline marks are rescued.','Train this rule in every practice paper so it runs automatically in the hall.') },
+      @{ t = 'h2'; s = 'Balance effort across the three demanding subjects' },
+      @{ t = 'p'; s = @('Mathematics and science carry the heaviest preparation load, so they need the planned rhythm described in the <a href="/blog/complete-study-plan-for-cbse-class-10-board-exams/">complete study plan</a>.','A student who reaches the bracket usually reaches it with balanced strength, not with one brilliant subject and two neglected ones.','Keep social science and languages alive in shorter blocks so no subject decays into panic in the final month.') },
+      @{ t = 'h2'; s = 'Work toward higher scores, not perfection' },
+      @{ t = 'p'; s = @('The point of every strategy is progress, not perfection.','Secure easy marks, correct the logged leaks, answer in the markable shape, and rehearse under exam conditions.','Students who run these four layers steadily tend to move their scores toward the bracket they are aiming for, and what matters is giving yourself the best honest chance.') }
+    )
+  },
+
+  @{
+    slug     = 'best-study-timetable-for-class-10-students'
+    title    = 'Best Study Timetable for Class 10 Students'
+    cat      = 'cbse-class-10-board-exam-tips'
+    author   = 'venu'
+    pub      = '2026-09-06'
+    upd      = '2026-09-06'
+    excerpt  = 'A timetable that fits your school, tuition, sleep and energy earns more than an ideal one that no one can follow. Build the shape, then adjust weekly.'
+    keywords = @('best study timetable class 10','class 10 daily timetable','flexible timetable class 10','class 10 study schedule')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A Class 10 student following a weekly study timetable planner at a desk'
+    related  = @('how-to-build-a-study-routine','complete-study-plan-for-cbse-class-10-board-exams','how-to-create-an-effective-revision-timetable','how-to-balance-mathematics-and-science-preparation-class-10')
+    cta      = 'A timetable works best when someone checks it weekly and keeps the rhythm honest. The Class 10 batches at Vyasa Academy in Hulimavu fix the weekly structure around each students school timetable.'
+    courses  = @(
+      @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('The best Class 10 timetable is not the ambitious one printed on the internet; it is the one that still fits your life in week four.','A schedule built from school hours, tuition, sleep and energy beats a schedule built from wishes.','Here is how to build that timetable, with flexible shapes instead of fixed hour claims.') },
+      @{ t = 'h2'; s = 'The right timetable fits your life' },
+      @{ t = 'ul'; i = @('School schedule: the fixed hours you cannot move.','Tuition schedule: coaching classes, including the days you attend Vyasa Academy.','Commute and chores: the blocks that quietly eat an hour.','Strong and weak subjects: energy and honesty both matter here.','Sleep: plan the hours, do not trim them.','Breaks, meals and movement: they are part of the plan, not interruptions.','Weekly revision time and one timed practice set.') },
+      @{ t = 'p'; s = @('Write these fixed blocks down first.','The timetable is the empty space around them, and that space is smaller than you think, which is precisely why it needs a plan.') },
+      @{ t = 'h2'; s = 'Keep to three rolling subjects' },
+      @{ t = 'p'; s = @('Attempting all five subjects every day spreads attention so thin that nothing deepens.','A stronger pattern keeps three subjects in rotation: mathematics on most days for warmth, one science branch per day, and social science or a language in shorter blocks.','This is the rotation principle used across the <a href="/blog/how-to-balance-mathematics-and-science-preparation-class-10/">balance guide</a> for the two subject families that matter most.') },
+      @{ t = 'h2'; s = 'A school-day template' },
+      @{ t = 'ol'; i = @('Morning: revise yesterday formulas or a chapter one-page summary, twenty to thirty minutes.','After school: rest, food, movement, then one self-test of the day subjects.','Evening block 1: mathematics, the day main task.','Evening block 2: one science branch, ending with a diagram or a figure redraw.','Night: lighter subject or error log update, then stop at a fixed time.') },
+      @{ t = 'p'; s = @('The clock hours will vary with your school; the shape is what matters.','Tight school days drop block 2, never block 1.') },
+      @{ t = 'h2'; s = 'A holiday or weekend template' },
+      @{ t = 'ol'; i = @('Morning: two deep blocks of the subjects you find hardest, with a real break between.','Afternoon: one full timed paper in one subject, marked honestly.','Late afternoon: lighter work, social science or language.','Evening: error log review and the Sunday ten-minute check.') },
+      @{ t = 'p'; s = @('Holidays are for depth and papers; the school week is for keeping every subject warm.','Neither shape should smash every waking hour into study.') },
+      @{ t = 'h2'; s = 'Place your weak subjects at your best hours' },
+      @{ t = 'p'; s = @('Most students concentrate best in the two hours after a proper rest or after school settles, and worst late at night.','Put the subject you avoid on the best hours, and put the subject you love near the end of the session.','A student who takes the weakness first finishes motivated instead of exhausted.') },
+      @{ t = 'h2'; s = 'Leave room for sleep, breaks and movement' },
+      @{ t = 'p'; s = @('Sleep is when memory consolidates, so seven to eight hours is study time, not lost time.','A five-minute break after every forty minutes of focus protects the next forty.','Movement clears the fog that re-reading cannot.','A timetable that plans these is more effective, not less strict.') },
+      @{ t = 'h2'; s = 'Review and adjust every Sunday' },
+      @{ t = 'p'; s = @('Spend ten minutes on Sunday asking what worked and what did not, and adjust one thing for the week ahead.','A schedule that did not survive the week needs editing, not guilt.','This small weekly habit keeps the plan alive for months, and it is the review pattern detailed in our <a href="/blog/how-to-build-a-study-routine/">study routine guide</a>.') },
+      @{ t = 'h2'; s = 'The final checklist' },
+      @{ t = 'ol'; i = @('Fixed blocks written first, including sleep.','Three rolling subjects, mathematics kept daily.','Weak subjects on your best hours.','One timed set per subject per week.','Ten-minute Sunday review and adjustment.') },
+      @{ t = 'h2'; s = 'The honest close' },
+      @{ t = 'p'; s = @('A timetable that fits your real week and survives contact with school is the best timetable for Class 10.','Start from the fixed blocks, keep three subjects rolling, protect sleep, and adjust every Sunday.','Consistency over several months beats any single perfect day.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-prepare-mathematics-for-cbse-class-10-board-exams'
+    title    = 'How to Prepare Mathematics for CBSE Class 10 Board Exams'
+    cat      = 'cbse-class-10-board-exam-tips'
+    author   = 'mahendra'
+    pub      = '2026-09-05'
+    upd      = '2026-09-05'
+    excerpt  = 'Prepare mathematics layer by layer: NCERT first, three-pass practice, an error log, clean presentation, and timed full papers.'
+    keywords = @('prepare mathematics class 10 boards','class 10 maths board preparation','CBSE class 10 maths strategy','maths practice plan class 10')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A student solving mathematics problems with a notebook and calculator for Class 10 board exam practice'
+    related  = @('how-to-score-90-plus-in-cbse-class-10-maths','how-to-master-trigonometry-class-10','how-to-remember-mathematical-formulas','how-to-improve-mathematics-problem-solving-skills')
+    cta      = 'Mathematics improves fastest with a teacher watching the method, not just the answers. Explore the Class 10 and Maths programs at Vyasa Academy in Hulimavu for regular timed practice.'
+    courses  = @(
+      @{ label = 'Maths Tuition in Hulimavu'; url = '/maths-tuition-hulimavu/' },
+      @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Class 10 mathematics rewards the prepared student in a direct way: the papers relies on methods, and methods are built by structured practice.','The plan below stacks four layers, from the textbook up to the full timed paper.','Follow the layers in order and the subject stops being a scramble.') },
+      @{ t = 'h2'; s = 'Layer 1: NCERT first, always' },
+      @{ t = 'p'; s = @('The NCERT textbook is the base of the board question set, so read it before anything else.','For every chapter, work the examples and the exercises completely, and mark the ones you could not do.','The exemplar problems and the previous-year questions come after the NCERT, not before it.','A student who owns the NCERT exercises owns the biggest part of the battle.') },
+      @{ t = 'h2'; s = 'Layer 2: practice in three passes' },
+      @{ t = 'ol'; i = @('Pass one, learning: solve each new method immediately after it is taught, in the same session.','Pass two, recall: after two days, redo the method from memory without looking at the example.','Pass three, application: attempt the chapter questions and the previous-year questions for that chapter.') },
+      @{ t = 'p'; s = @('Many students stay on pass one forever, which is why their skill never survives a new week.','The recall pass is what builds the automatic method the paper rewards.') },
+      @{ t = 'h2'; s = 'Layer 3: build the chapter error log' },
+      @{ t = 'p'; s = @('Keep one page per chapter with every wrong answer written as a single line: the question, the wrong step, the correction.','Before each practice session, read that chapters log for one minute.','Students who do this stop repeating slips, and most lost marks in mathematics are repeated slips, not missing ideas.','The full mistake taxonomy is in our <a href="/blog/10-common-mistakes-in-maths-and-how-to-fix-them/">common maths mistakes guide</a>.') },
+      @{ t = 'h2'; s = 'Layer 4: train presentation for the scanned paper' },
+      @{ t = 'p'; s = @('The answer sheet is scanned and read by an examiner, so what is not written cannot earn marks.','Write the rough figure when a question can take one, label graph axes, box the final answer, and write the unit.','Show every substitution step in numericals; step marks reward the journey.','These habits are cheap and visible on every paper.') },
+      @{ t = 'h2'; s = 'Layer 5: run the full paper under time' },
+      @{ t = 'p'; s = @('From two months before the boards, sit one complete paper weekly in a three-hour stretch with no phone and no help, then mark it strictly in forty minutes.','Assign each section a time budget before starting, and rehearse that budget until the paper feels sized.','The rhythm for doing this across mathematics is covered deeply in the <a href="/blog/how-to-score-90-plus-in-cbse-class-10-maths/">90+ maths plan</a>.') },
+      @{ t = 'h2'; s = 'Layer 6: revise formulas by recall, not by reading' },
+      @{ t = 'p'; s = @('Keep a formula sheet per chapter and write it from memory every few days.','The formulas you cannot recall are the formulas you never really held.','Pair each formula with one example of its use so the symbol line has a home, using the method in our <a href="/blog/how-to-remember-mathematical-formulas/">formula recall guide</a>.') },
+      @{ t = 'h2'; s = 'A weekly mathematics rhythm' },
+      @{ t = 'ul'; i = @('Most school days: thirty to forty minutes of mathematics, alternating chapters.','One day: the full timed paper, then honest marking.','One day: error log review plus recall of the weakest chapters.','Keep trigonometry in the rotation; it is a chapter students often let rot before boards.','The trigger-heavy chapter routines are shown in the <a href="/blog/how-to-master-trigonometry-class-10/">trigonometry guide</a>.') },
+      @{ t = 'h2'; s = 'The final note' },
+      @{ t = 'p'; s = @('Mathematics for the Class 10 boards is built from the NCERT upward, practised in three passes, tracked in an error log, and rehearsed under time.','Start today with layer one; each later layer upgrades the previous one.','Consistency in the weekly rhythm delivers more than any last-minute push can.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-prepare-science-for-cbse-class-10-board-exams'
+    title    = 'How to Prepare Science for CBSE Class 10 Board Exams'
+    cat      = 'cbse-class-10-board-exam-tips'
+    author   = 'vyasa'
+    pub      = '2026-09-04'
+    upd      = '2026-09-04'
+    excerpt  = 'Science asks a few kinds of questions: recall, explain, numerical, diagram and activity. Prepare for each kind, then balance the three branches weekly.'
+    keywords = @('prepare science class 10 boards','class 10 science board preparation','CBSE class 10 science strategy','science question types class 10')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A student with science textbook notes and a labelled diagram practising Class 10 Science topics'
+    related  = @('how-to-prepare-physics-chemistry-biology-class-10','importance-of-diagrams-in-science-exams','how-to-write-better-answers-in-cbse-science-exams','how-to-score-higher-marks-in-cbse-science')
+    cta      = 'Science preparation works best branch by branch with regular tests. Explore the Science and Class 10 programs at Vyasa Academy in Hulimavu for concept-based coaching.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('A Class 10 Science paper mixes definitions, explanations, numericals, diagrams and activity-based questions.','Students who prepare the content but not the question types lose marks in every category except the one they know.','This guide tackles the paper by its question types, then balances the three branches into a weekly rhythm.') },
+      @{ t = 'h2'; s = 'Know the kinds of questions the paper asks' },
+      @{ t = 'ul'; i = @('Recall: define, name, state, one-line answers from the textbook.','Explain: why and how questions that test understanding.','Numerical: physics and chemistry calculations with working.','Diagram: labelled figures from any of the three branches.','Activity or practical: knowledge of experiments, observations and conclusions.','Recall of reactions and processes: balanced equations, life-process steps and conditions.') },
+      @{ t = 'p'; s = @('Preparing for each kind is what raises the Science mark, because the paper rewards shape as much as it rewards facts.') },
+      @{ t = 'h2'; s = 'Term bank for the recall questions' },
+      @{ t = 'p'; s = @('Keep a running list of definitions and key terms, written in the NCERT wording.','Review the bank in short recall sessions: cover the definition, say it, check it.','A student who owns the terms owns a big share of the one-mark questions.','The technique for building the bank is the same one used in our <a href="/blog/how-to-learn-scientific-names-and-biological-terms/">terminology guide</a>.') },
+      @{ t = 'h2'; s = 'Why-first notes for the explain questions' },
+      @{ t = 'p'; s = @('Explain questions punish memorised paragraphs.','For every process, learn the one-line why first, then the steps.','Practise explaining each why in your own words out loud, then compare with the textbook.','The concept-first method behind this is expanded in our <a href="/blog/how-to-improve-conceptual-understanding-in-science/">conceptual understanding guide</a>.') },
+      @{ t = 'h2'; s = 'Method cards for the numericals' },
+      @{ t = 'p'; s = @('Physics numericals in Class 10 Science follow standard methods: light, electricity and magnetic effects.','Make one card per problem type with the steps, then solve a fresh set per week with working shown.','The value of showing working is covered in the <a href="/blog/how-to-write-better-answers-in-cbse-science-exams/">science answer-writing guide</a>; the markable shape is the same for science numericals as for mathematics.') },
+      @{ t = 'h2'; s = 'Figure rotation for the diagram questions' },
+      @{ t = 'p'; s = @('Diagrams appear in physics, chemistry and biology, and a clean labelled figure earns marks in all three.','Keep a list of every diagram the syllabus asks for and redraw one a day from memory.','The full figure bank method lives in our <a href="/blog/importance-of-diagrams-in-science-exams/">diagrams guide</a>.') },
+      @{ t = 'h2'; s = 'Activity and practical knowledge' },
+      @{ t = 'p'; s = @('The activity-based questions test whether you know the setup, the observation and the conclusion of the required practicals.','Rehearse each experiment as a short story: aim, setup, what happened, why it happened.','The same reasoning runs across the practical components, as explained in the <a href="/blog/how-to-prepare-practical-chemistry-for-board-exams/">practical preparation guide</a>.') },
+      @{ t = 'h2'; s = 'A balanced branch rhythm' },
+      @{ t = 'ol'; i = @('Physics: one concept plus one method set per week, with a numerical written out fully.','Chemistry: reaction families written from memory, conditions on every arrow.','Biology: one chapter as a flowchart plus one figure redrawn.','Weekly: one timed mixed set of science questions, marked strictly.') },
+      @{ t = 'p'; s = @('The branch-by-branch detail behind this rhythm is the subject of our <a href="/blog/how-to-prepare-physics-chemistry-biology-class-10/">three-branch guide</a>.') },
+      @{ t = 'h2'; s = 'The science ground rules' },
+      @{ t = 'ol'; i = @('NCERT is the base; read it before extra books.','Definitions word-perfect, explanations in your own words afterwards.','Every equation balanced, with conditions.','Every diagram labelled and spelled right.','Every numerical with working and a unit.') },
+      @{ t = 'h2'; s = 'The close' },
+      @{ t = 'p'; s = @('Prepare the Science paper by its question types: terms for recall, whys for explanation, methods for numericals, figures for diagrams, and principles for activities.','Keep the three branches rotating weekly and mark every timed set honestly.','The Science paper then meets a prepared student instead of surprising one.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-revise-effectively-before-class-10-board-exams'
+    title    = 'How to Revise Effectively Before Class 10 Board Exams'
+    cat      = 'cbse-class-10-board-exam-tips'
+    author   = 'vyasa'
+    pub      = '2026-09-03'
+    upd      = '2026-09-03'
+    excerpt  = 'Revision that works is retrieval. Run a recall-first cycle per subject, shrink every chapter to one page, and let previous-year papers steer the plan.'
+    keywords = @('revision for class 10 boards','effective revision class 10','class 10 revision strategy','recall first revision')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A Class 10 student reviewing one-page chapter summaries to revise for the board exams'
+    related  = @('how-to-create-an-effective-revision-timetable','how-to-study-last-30-days-before-board-exams','how-to-revise-science-effectively-before-exams','importance-of-previous-year-question-papers-class-10')
+    cta      = 'Guided revision with weekly mocks is how steady students convert knowledge into marks. Explore the Class 10 program at Vyasa Academy in Hulimavu for structured revision cycles.'
+    courses  = @(
+      @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Most Class 10 students confuse recognition with revision: they re-read a chapter, feel the warmth of familiarity, and call it done.','Real revision is retrieval, pulling the idea out with the book shut.','This guide gives the recall-first system, the one-page shrink, and the paper that steers the whole plan.') },
+      @{ t = 'h2'; s = 'Revision that works is retrieval' },
+      @{ t = 'p'; s = @('Every revision session has the same core loop: close the book, attempt to recall, then check.','The recall attempt strengthens memory even when it fails; the checking after it is just confirmation.','A session built from many short attempts outperforms one long reading of the same material.') },
+      @{ t = 'h2'; s = 'The revision cycle for one chapter' },
+      @{ t = 'ol'; i = @('Recall: write the chapter summary from memory on a blank page.','Check: open your notes and mark every missing point.','Fix: re-study only the missing points, not the whole chapter.','Log: add the missing points to your error log.','Re-verify: recall the summary again the next day.') },
+      @{ t = 'p'; s = @('The cycle takes less time than a full re-read and produces more.','Run it subject by subject through the revision phase.') },
+      @{ t = 'h2'; s = 'What each subject needs during revision' },
+      @{ t = 'ul'; i = @('Mathematics: solve, do not just read. One problem set per chapter, methods from memory.','Physics and chemistry: rewrite the formula sheet and reaction bank from memory.','Biology: redraw the key figures and recount each process as a flowchart.','Social science: timelines, maps and bullet answers rewritten.','Languages: formats, formats, formats, plus one timed composition.') },
+      @{ t = 'p'; s = @('Each subject revises in the shape the paper will mark, not in the shape of the textbook.','The science cycles are laid out in full in our <a href="/blog/how-to-revise-science-effectively-before-exams/">science revision guide</a>.') },
+      @{ t = 'h2'; s = 'Shrink every chapter to one page' },
+      @{ t = 'p'; s = @('As you revise, compress each chapter into one page: key points, formulas or reactions, one diagram or map, and its list of slips.','By the final month, five subjects worth of chapters become a small stack of pages you own.','That stack is the only thing you re-read in the last days, because the full textbook is too slow then.') },
+      @{ t = 'h2'; s = 'Let previous-year papers drive the revision' },
+      @{ t = 'p'; s = @('Attempt one previous-year paper per subject weekly and mark it honestly.','The questions you missed become the top of next weeks revision list.','The paper knows where the syllabus really matters, better than any reading plan, and the method for using them is in our <a href="/blog/importance-of-previous-year-question-papers-class-10/">previous-year paper guide</a>.') },
+      @{ t = 'h2'; s = 'The error log becomes the revision agenda' },
+      @{ t = 'p'; s = @('Across the year you have logged every lost mark; in the revision phase, that log is your syllabus.','Start every day by clearing the top of the log, from the newest losses back.','Students who follow the log instead of the book spend revision exactly where marks leak.') },
+      @{ t = 'h2'; s = 'Space the recall with a simple calendar' },
+      @{ t = 'p'; s = @('Weak chapters deserve recall today, again in three days, again in a week.','Strong chapters survive on the weekly rotation.','A one-line calendar entry per chapter, marked off at each recall, keeps this honest without becoming a project.') },
+      @{ t = 'h2'; s = 'Avoid the revision traps' },
+      @{ t = 'ol'; i = @('Re-reading notes as a substitute for recall.','Rewriting notes to make them prettier.','Starting new books or new topics in the final phase.','Comparing hours with classmates; compare honest recall instead.','Skipping sleep to add one more session.') },
+      @{ t = 'h2'; s = 'The honest close' },
+      @{ t = 'p'; s = @('Effective revision for Class 10 boards is retrieval, subject-shaped, shrunk to one-page summaries, and steered by papers and the error log.','Start the cycle early, run it consistently, and protect sleep in the final weeks.','Those habits convert what you learned into marks you keep.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-study-last-30-days-before-board-exams'
+    title    = 'How to Study in the Last 30 Days Before Board Exams'
+    cat      = 'cbse-class-10-board-exam-tips'
+    author   = 'vyasa'
+    pub      = '2026-09-02'
+    upd      = '2026-09-02'
+    excerpt  = 'The final month is for rehearsal, not new learning. Sweep the weak topics, run papers, recall the one-page summaries, and arrive calm.'
+    keywords = @('last 30 days before board exams','one month before boards','final month class 10 preparation','boards last month plan')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A student timing a practice paper during the final month of Class 10 board preparation'
+    related  = @('last-minute-tips-for-cbse-class-10-board-exams','how-to-revise-effectively-before-class-10-board-exams','how-to-create-an-effective-revision-timetable','how-to-prepare-chemistry-last-30-days-before-board-exams')
+    cta      = 'The final month should be supervised rehearsal, not a quiet scramble. The Class 10 batches at Vyasa Academy in Hulimavu run mock papers and review every one of them.'
+    courses  = @(
+      @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Thirty days is not enough time to learn a new syllabus, and it is exactly enough time to turn what you already know into performance.','The final month has one job: rehearsal.','This guide splits the month into four short phases and gives the rule for every day in it.') },
+      @{ t = 'h2'; s = 'The month has one job: turn knowing into performing' },
+      @{ t = 'p'; s = @('By this point the learning should be done; anything still unlearned is accepted at a lower priority.','The month is about recall, timing, presentation and calm.','Every choice you make this month should pass one test: does it improve how you would perform tomorrow in the hall?') },
+      @{ t = 'h2'; s = 'Days 30 to 21: the weak-topic sweep' },
+      @{ t = 'ul'; i = @('Take your error log and one-page summaries as the work material.','Clear the weakest topics first, one per day, using the recall-check-fix cycle.','Run the recall cycle from the <a href="/blog/how-to-revise-effectively-before-class-10-board-exams/">revision guide</a>; do not re-read whole chapters.','End each day by attempting ten questions from that topic, marked strictly.') },
+      @{ t = 'p'; s = @('The twenty-odd weakest topics clear fast because each one gets a short, intense session instead of an hour of vague reading.') },
+      @{ t = 'h2'; s = 'Days 20 to 11: the branch-and-paper rhythm' },
+      @{ t = 'ol'; i = @('One full paper per subject every three or four days, in exam timing.','On the days between papers, revise exactly the misses from the last paper.','Keep one daily recall block for formulas, reactions and figures.','Keep the rotation moving so no subject rests for more than three days.') },
+      @{ t = 'p'; s = @('The rhythm looks heavy on paper, but each paper is half a morning and each revision day follows it.','This is the highest-value block of the entire month.') },
+      @{ t = 'h2'; s = 'Days 10 to 4: previous years and memory work' },
+      @{ t = 'p'; s = @('Shift to previous-year questions worked chapter-wise, and to memory material: definitions, formulas, diagrams, maps and formats.','Every day produce something from memory, on paper, instead of recognising it on the page.','The last ten days are where the one-page summaries earn their keep, so they must already exist.') },
+      @{ t = 'h2'; s = 'Days 3 to 1: light and calm' },
+      @{ t = 'ul'; i = @('Drop heavy testing two days before the first paper.','Review only summaries, error log, and the memory lists.','Sleep fully; no new material after the fourth day, period.','Prepare the admit card, pens, and the exam station tonight, not tomorrow morning.') },
+      @{ t = 'p'; s = @('The night-before cram is the single most common mistake of the final month and it is fully avoidable by design: leave the last days light.','The general principles for these final hours are in our <a href="/blog/last-minute-tips-for-cbse-class-10-board-exams/">last-minute tips</a>.') },
+      @{ t = 'h2'; s = 'The daily skeleton for the month' },
+      @{ t = 'ol'; i = @('Morning: one recall block, twenty to thirty minutes, memory lists.','Midday: the day main task, a topic or a paper.','Afternoon: marking and logging the misses from the main task.','Evening: light review of the day summaries, then stop at a fixed hour.','Daily: one timed element somewhere, even small.') },
+      @{ t = 'p'; s = @('The skeleton bends around your real schedule; school timings in the first weeks simply move the blocks.','The shape and the honesty matter more than the exact clock.') },
+      @{ t = 'h2'; s = 'What to stop doing in the final month' },
+      @{ t = 'ul'; i = @('Starting new books or new topics.','Re-reading chapters linearly from the start.','Comparing your hours with a classmates.','Skipping sleep for one more paper.','Changing your study station or routine drastically.') },
+      @{ t = 'p'; s = @('The final month rewards students who shrink choices and stay calm far more than those who add work.') },
+      @{ t = 'h2'; s = 'Protect health through the month' },
+      @{ t = 'p'; s = @('Food, water, movement and sleep are exam tools, not extras.','A rested brain recalls faster and thinks more clearly in the hall, and the last month is when that difference shows.','Treat the body plan with the same seriousness as the revision plan.') },
+      @{ t = 'h2'; s = 'The honest close' },
+      @{ t = 'p'; s = @('Thirty days of rehearsal beats thirty days of cramming.','Sweep the weak topics, run the papers, produce memory material daily, and taper into calm.','Follow the skeleton and arrive at the boards having already performed the paper several times at home.') }
+    )
+  },
+
+  @{
+    slug     = 'common-mistakes-during-board-exam-preparation'
+    title    = 'Common Mistakes Students Make During Board Exam Preparation'
+    cat      = 'cbse-class-10-board-exam-tips'
+    author   = 'vyasa'
+    pub      = '2026-09-01'
+    upd      = '2026-09-01'
+    excerpt  = 'Most class 10 preparation failures come from eight fixable habits during the months before the exam, not from the exam itself.'
+    keywords = @('board exam preparation mistakes','class 10 prep mistakes','study mistakes class 10','board preparation problems')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A student reviewing a study planner and error log to improve Class 10 board exam preparation habits'
+    related  = @('complete-study-plan-for-cbse-class-10-board-exams','how-to-stay-focused-during-board-exam-preparation','how-to-improve-marks-after-poor-pre-board-performance','how-to-prepare-for-pre-board-exams')
+    cta      = 'Preparation mistakes are easier to break with a teacher watching the weekly rhythm. Explore the Class 10 program at Vyasa Academy in Hulimavu for structured supervision.'
+    courses  = @(
+      @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('The months before the board exams decide more than the exams themselves.','When a prepared student underperforms, the cause is almost always one of a small set of preparation habits.','Each mistake below has its clean fix, so treat this list as a diagnostic, not a lecture.') },
+      @{ t = 'h2'; s = 'Mistake 1: planning in weeks, living in days' },
+      @{ t = 'p'; s = @('A plan that exists only in the head dies by Tuesday.','Write the week on one page, tick it nightly, and review it on Sunday.','The one-page tracking method in the <a href="/blog/complete-study-plan-for-cbse-class-10-board-exams/">complete study plan</a> exists precisely for this.') },
+      @{ t = 'h2'; s = 'Mistake 2: perfect notes, zero recall' },
+      @{ t = 'p'; s = @('Handsome notes satisfy the eye and do almost nothing for the exam.','Notes are only useful when they are recalled: cover them, reproduce the idea, check.','If you never close the book while studying, you are not studying, you are admiring.') },
+      @{ t = 'h2'; s = 'Mistake 3: avoiding the weak subjects' },
+      @{ t = 'p'; s = @('The chapters you avoid are the chapters where the marks are waiting.','Give the weakest subject your best hour every single day for three weeks and watch the gap close.','Avoidance feels like rest and is actually a leak.') },
+      @{ t = 'h2'; s = 'Mistake 4: collecting resources instead of using them' },
+      @{ t = 'p'; s = @('A stack of extra books becomes a monument to indecision by February.','Choose one base, the NCERT for content and one problem set, and finish them fully.','A finished thin set beats a half-read library.') },
+      @{ t = 'h2'; s = 'Mistake 5: practising without timing' },
+      @{ t = 'p'; s = @('Untimed practice builds knowledge and not exam speed.','From two months out, at least one element of every study day should be timed.','Students who only ever practice untimed discover the real problem, pace, in the first fifteen minutes of the hall.') },
+      @{ t = 'h2'; s = 'Mistake 6: comparing schedules with classmates' },
+      @{ t = 'p'; s = @('The friend who studies sixteen hours may be recognising half of them.','Compare recall and results with yourself last week, not with someone enmeshed in a different schedule.','Energy spent on comparison is time taken from the error log.') },
+      @{ t = 'h2'; s = 'Mistake 7: treating the error log as optional' },
+      @{ t = 'p'; s = @('Students who plateau around the same mark do so by repeating the same mistakes.','The error log is the only instrument that breaks that loop.','One line per lost mark, reviewed before every session, is enough.') },
+      @{ t = 'h2'; s = 'Mistake 8: burning out before the boards' },
+      @{ t = 'p'; s = @('Marathon weekends and nightly cramming build fatigue that shows up exactly in the final month.','Short daily blocks, sleep, breaks and movement are part of the plan.','A student who reaches the exams rested outperforms a burnt-out one with the same knowledge; our <a href="/blog/how-to-stay-focused-during-board-exam-preparation/">focus guide</a> covers the mechanics.') },
+      @{ t = 'h2'; s = 'A monthly self-check' },
+      @{ t = 'ol'; i = @('Did I produce anything from memory today, or only read?','Did the weak subject get its best hour?','Was at least one element timed?','Did the log grow by the actual losses?','Will I sleep seven hours tonight?') },
+      @{ t = 'p'; s = @('Run the five questions every evening.','Four yes answers means the preparation is healthy; a no is the next days target.') },
+      @{ t = 'h2'; s = 'The honest close' },
+      @{ t = 'p'; s = @('The mistakes are all habits, and habits change within weeks when aimed at deliberately.','Track the week on paper, recall instead of re-reading, face the weak subjects, time your practice, and protect sleep.','Fix these and the preparation does the hard work for you.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-manage-time-during-cbse-class-10-board-exams'
+    title    = 'How to Manage Time During CBSE Class 10 Board Exams'
+    cat      = 'cbse-class-10-board-exam-tips'
+    author   = 'mahendra'
+    pub      = '2026-08-31'
+    upd      = '2026-08-31'
+    excerpt  = 'Win the paper on time: budget minutes per mark, fix the section order in advance, skip and return, and finish fifteen minutes early.'
+    keywords = @('time management CBSE class 10 exam','class 10 board exam timing','exam time strategy class 10','finish board paper on time')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A student with a time plan and practice paper managing exam time for the CBSE Class 10 boards'
+    related  = @('how-to-manage-time-in-mathematics-board-exam','how-to-manage-time-during-biology-exams','how-to-write-better-answers-in-cbse-board-exams','last-minute-tips-for-cbse-class-10-board-exams')
+    cta      = 'Timing is a skill trained in supervised mocks. The Class 10 program at Vyasa Academy in Hulimavu runs timed papers and reviews the pacing of every answer.'
+    courses  = @(
+      @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Class 10 board papers are rarely lost to difficulty; they are lost to pace.','A student who runs out of minutes leaves marks behind even in chapters they know.','Time management in the hall is a trainable skill, and these are its rules.') },
+      @{ t = 'h2'; s = 'The per-mark budget' },
+      @{ t = 'p'; s = @('Start with a simple arithmetic: a three-hour paper carries a known total of marks, so minutes per mark is the paper length divided by the total.','Spend a little less than that on short questions and the extra on long ones.','Keep the budget in your head as two numbers: minutes per mark, and the finishing target.','The budget varies per subject, but the habit of setting it before the bell does not.') },
+      @{ t = 'h2'; s = 'Decide the order before the bell' },
+      @{ t = 'ol'; i = @('Underline the verbs during the first read and mark the questions you know instantly.','Write the easy and known questions first to bank time and confidence.','Then the medium questions, and leave the long ones for the middle of the paper.','Keep the mentally heavy long answers away from the end, where fatigue lives.') },
+      @{ t = 'p'; s = @('The order should be decided at home and rehearsed, not invented in the hall under pressure.') },
+      @{ t = 'h2'; s = 'The skip-and-return rule' },
+      @{ t = 'p'; s = @('Two minutes without progress on one question is the signal to skip it and return later.','Mark the skipped question with a light sign so the review catches it.','Missing three easy marks to chase one hard one is a losing trade in every paper; our analysis of the pattern lives in the <a href="/blog/how-to-manage-time-in-mathematics-board-exam/">mathematics time guide</a>.') },
+      @{ t = 'h2'; s = 'Finish fifteen minutes early' },
+      @{ t = 'p'; s = @('Aim to complete the paper fifteen minutes before the end, and spend that window only on checks: units, signs, labels, skipped questions.','The last fifteen minutes are where slips get caught and borderline marks are rescued.','If you finish exactly on time, you have found your budget; if you finish early, you have a checking ritual.') },
+      @{ t = 'h2'; s = 'Per-subject mechanics' },
+      @{ t = 'ul'; i = @('Mathematics: work every section by its budget, box answers, and never let one numerical eat a whole section.','Science: balance across the branches, and keep figure questions to their fair minutes.','Social science: write at speed but keep it legible; maps and timelines are quick marks.','Language: read the passage questions first, then the passage, then answer in order.') },
+      @{ t = 'p'; s = @('The science paper details are covered in our <a href="/blog/how-to-manage-time-during-biology-exams/">biology time guide</a>, and the writing shape that keeps answers fast is in the <a href="/blog/how-to-write-better-answers-in-cbse-board-exams/">answer-writing guide</a>.') },
+      @{ t = 'h2'; s = 'Rehearse the timing at home' },
+      @{ t = 'p'; s = @('Timing is not learned in the hall.','Every mock from two months out runs on the same budget you will use, with the finish-early rule enforced.','After each mock, log where the time actually went and fix the plan.','Three timed mocks per subject usually settle the pacing for good.') },
+      @{ t = 'h2'; s = 'The panic-minute drill' },
+      @{ t = 'p'; s = @('If a section runs over, stop, breathe once, and reset: skip to the next section and come back.','The drill is: stop, reset, move.','Practised at home in mocks, it removes the spiral that expensive minutes.') },
+      @{ t = 'h2'; s = 'The close' },
+      @{ t = 'p'; s = @('Class 10 boards are won on the per-mark budget, a decided order, the skip-and-return rule, and fifteen minutes of review.','Set the budget at home, rehearse it in mocks, and protect the last fifteen minutes in the hall.','Time becomes your ally instead of your opponent.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-write-better-answers-in-cbse-board-exams'
+    title    = 'How to Write Better Answers in CBSE Board Exams'
+    cat      = 'cbse-class-10-board-exam-tips'
+    author   = 'vyasa'
+    pub      = '2026-08-30'
+    upd      = '2026-08-30'
+    excerpt  = 'Answer the verb, match length to marks, keep NCERT wording for definitions, and structure every answer as point, working, conclusion.'
+    keywords = @('write better answers CBSE boards','board exam answer writing','CBSE answer structure','score marks with answer presentation')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A student writing structured answers with headings and a boxed final answer for the CBSE board exams'
+    related  = @('how-to-write-better-answers-in-cbse-science-exams','how-to-write-high-scoring-biology-answers','how-to-score-90-percent-in-cbse-class-10-board-exams','common-mistakes-during-board-exam-preparation')
+    cta      = 'Answer craft is trained on real papers with personal feedback. Explore the Class 10 program at Vyasa Academy in Hulimavu for marked mocks and model answers.'
+    courses  = @(
+      @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Two students with the same knowledge can differ by several marks purely in how they write.','Examiners mark fast, so the shape of an answer quietly decides part of its score.','Answer writing is a skill, and these five habits train it across every Class 10 subject.') },
+      @{ t = 'h2'; s = 'Answer the verb, not the chapter' },
+      @{ t = 'p'; s = @('Define asks for a definition; explain asks for reasoning; compare asks for both sides.','Underline the verb and the question object before writing a word.','A paragraph of everything you know is a gamble; a direct answer to the exact verb is a plan.') },
+      @{ t = 'h2'; s = 'Match the length to the mark value' },
+      @{ t = 'p'; s = @('A low-mark question wants a crisp line; a long question wants the structure: point, working, conclusion.','Students who write long answers for short questions run out of time, and long answers lose the key line.','Let the mark value decide the length, and leave room to return to a question.') },
+      @{ t = 'h2'; s = 'Keep the textbook wording for definitions' },
+      @{ t = 'p'; s = @('The board marks against the textbook phrasing, so a standard definition is the safest answer.','Learn the exact words for definitions, and use them even when you could explain the idea in your own.','Your own explanation is a study tool; the board words are the exam tool.') },
+      @{ t = 'h2'; s = 'Structure every answer in three moves' },
+      @{ t = 'ol'; i = @('Point: open with the direct answer or the term.','Working: show the reasoning, the equation, the steps or the example.','Conclusion: close with the boxed answer, the unit, or the one-line summary.') },
+      @{ t = 'p'; s = @('The three moves fit mathematics numericals, science explanations, and language paragraphs alike.','Examiners can grant step marks only for what is on the page, so show every move.') },
+      @{ t = 'h2'; s = 'Mathematics presentation' },
+      @{ t = 'p'; s = @('Write the given values, the formula, the substitution with units, and the boxed answer.','Label graph axes and draw the rough figure where useful.','Step-by-step visibility is the entire secret; the detailed habits are in our <a href="/blog/how-to-score-90-plus-in-cbse-class-10-maths/">90+ maths plan</a>.') },
+      @{ t = 'h2'; s = 'Science conventions' },
+      @{ t = 'p'; s = @('Balanced equations with conditions on the arrow, labelled diagrams with correct spellings, and definitions in NCERT words.','The science-specific conventions are expanded in our <a href="/blog/how-to-write-better-answers-in-cbse-science-exams/">science answer guide</a>.') },
+      @{ t = 'h2'; s = 'Language and social science shape' },
+      @{ t = 'p'; s = @('Open with the point, keep one idea per paragraph, and underline the key term or date in the answer.','Letter and essay formats must be rehearsed, not improvised.','Keywords earn visible marks, so place them on the line where the examiner glances.') },
+      @{ t = 'h2'; s = 'Handwriting and spacing for the scanned sheet' },
+      @{ t = 'p'; s = @('The answer sheet is scanned and read on screen, so legibility earns and loses marks directly.','Write in clear, evenly sized letters, leave a line between answers, and number questions to match.','Spacing costs nothing and makes the examiner work pleasant, which never hurts.') },
+      @{ t = 'h2'; s = 'Self-mark like an examiner' },
+      @{ t = 'ol'; i = @('After each mock, allocate the marks you believe each answer deserved.','Underline the key point you forgot, in red.','Rewrite the weakest answer in the ideal shape.','Review the best answer next week as your model.') },
+      @{ t = 'p'; s = @('Self-marking is the fastest way to internalise the shape, because you start seeing your own answers through the marking eye.') },
+      @{ t = 'h2'; s = 'The one-line rule' },
+      @{ t = 'p'; s = @('Answer the exact verb, match length to marks, use the textbook words, structure point-working-conclusion, and make the examiner read smoothly.','Train these habits across the year and the same knowledge starts earning its full value in every paper.') }
+    )
+  },
+
+  @{
+    slug     = 'importance-of-previous-year-question-papers-class-10'
+    title    = 'Importance of Previous Year Question Papers for Class 10 Preparation'
+    cat      = 'cbse-class-10-board-exam-tips'
+    author   = 'vyasa'
+    pub      = '2026-08-29'
+    upd      = '2026-08-29'
+    excerpt  = 'Previous year papers train timing, show the shape of questions, and expose your personal gaps. Use them in three stages, honestly.'
+    keywords = @('previous year question papers class 10','class 10 PYQs','board question papers practice','previous year papers importance class 10')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A stack of previous year Class 10 question papers with a marked practice sheet'
+    related  = @('how-to-revise-effectively-before-class-10-board-exams','how-to-write-better-answers-in-cbse-board-exams','last-minute-tips-for-cbse-class-10-board-exams','complete-study-plan-for-cbse-class-10-board-exams')
+    cta      = 'Practice under supervision makes papers twice as useful. The Class 10 batches at Vyasa Academy in Hulimavu run and review previous-year papers every week.'
+    courses  = @(
+      @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Previous-year question papers are the closest honest preview of a Class 10 board paper that exists.','They show the shape of questions, the marking style, and the pace the paper demands.','Used the right way, they also reveal your personal gaps faster than any chapter list.') },
+      @{ t = 'h2'; s = 'What previous-year papers are for' },
+      @{ t = 'ul'; i = @('Format: how questions are worded and how long answers feel.','Timing: what three hours actually demands.','Marking: where the step marks sit in each subject.','Diagnosis: the exact questions you personally miss.') },
+      @{ t = 'p'; s = @('They are practice data, not a crystal ball.','Treat them honestly, because inventing certainty about repeating questions is how students guess wrongly in the hall.') },
+      @{ t = 'h2'; s = 'Stage 1: chapter-wise, sorted' },
+      @{ t = 'p'; s = @('Before full papers, sort a few previous-year papers by chapter.','Work the chapter sets right after you finish each chapter in the syllabus.','This shows which kinds of questions each chapter produces, which builds the one-page summary and the error log.') },
+      @{ t = 'h2'; s = 'Stage 2: the timed full paper' },
+      @{ t = 'p'; s = @('From two months out, take one full previous-year paper per subject weekly, in the official timing, with no help and no phone.','The full paper is the only way to train the section order and the per-mark budget from our <a href="/blog/how-to-manage-time-during-cbse-class-10-board-exams/">time management guide</a>.') },
+      @{ t = 'h2'; s = 'Stage 3: revision from the miss list' },
+      @{ t = 'p'; s = @('Mark every paper strictly and list the misses.','The list becomes next weeks revision plan, in order from the newest losses back.','Papers are for learning from, not for collecting; an unmarked paper is a wasted hour.') },
+      @{ t = 'h2'; s = 'Build a topic map without inventing weightage' },
+      @{ t = 'p'; s = @('Across several papers you can see which topics appear often and from what angle.','Name the pattern honestly as what you observed, and prepare proportionally.','Do not claim official weightage for anything; the published syllabus and sample paper are the only authoritative guides.') },
+      @{ t = 'h2'; s = 'Mistakes students make with previous-year papers' },
+      @{ t = 'ul'; i = @('Reading the paper instead of sitting it under time.','Marking generously, which hides the real gaps.','Chasing one subject and neglecting the others.','Expecting the next paper to copy the last one word for word.','Skipping the review, which is where the learning actually happens.') },
+      @{ t = 'p'; s = @('Each mistake turns a good tool into decoration.','The fix in every case is the same: sit it timed, mark it strict, review the misses.') },
+      @{ t = 'h2'; s = 'Where previous-year papers fit the year' },
+      @{ t = 'ol'; i = @('During the foundation pass: one paper, read-only, to see the target.','During mastery: chapter-wise sets after each chapter.','From two months out: the weekly timed full paper.','Final month: previous-year papers as the rehearsal backbone, as set out in the <a href="/blog/how-to-study-last-30-days-before-board-exams/">30-day plan</a>.') },
+      @{ t = 'h2'; s = 'The honest close' },
+      @{ t = 'p'; s = @('Previous-year papers train the format, the pace and the marking, and they diagnose the gaps that matter to you.','Use them in three honest stages, mark strictly, and learn from every miss.','In the boards, the paper will feel less like a stranger and more like an opponent you have already met.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-create-an-effective-revision-timetable'
+    title    = 'How to Create an Effective Revision Timetable'
+    cat      = 'cbse-class-10-board-exam-tips'
+    author   = 'venu'
+    pub      = '2026-08-28'
+    upd      = '2026-08-28'
+    excerpt  = 'A revision timetable differs from a study timetable: it protects weak topics, spaces recall, and keeps the mock-plus-review slot sacred.'
+    keywords = @('revision timetable class 10','effective revision schedule','class 10 revision planner','board revision timetable')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A weekly revision timetable planner with recall blocks and mock paper slots for Class 10 boards'
+    related  = @('best-study-timetable-for-class-10-students','how-to-revise-effectively-before-class-10-board-exams','how-to-study-last-30-days-before-board-exams','how-to-build-a-study-routine')
+    cta      = 'A revision timetable is easier to keep when a mentor checks it weekly. Explore the Class 10 program at Vyasa Academy in Hulimavu for supervised revision cycles.'
+    courses  = @(
+      @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('A study timetable organises learning; a revision timetable organises recall.','They look similar and serve different jobs, which is why the revision version needs its own design.','This guide builds that revision timetable around three commitments: weak topics protected, recall spaced, and mocks kept sacred.') },
+      @{ t = 'h2'; s = 'How a revision timetable differs from a study one' },
+      @{ t = 'ul'; i = @('It works from the error log and one-page summaries, not from the textbook.','It protects recall slots instead of new-input slots.','It schedules mocks and their reviews as fixed events.','It tapers into the final days instead of adding work.') },
+      @{ t = 'p'; s = @('If your revision timetable looks identical to your study timetable, you have not finished learning yet.','Make the switch explicit: from learning mode to recall mode.') },
+      @{ t = 'h2'; s = 'List what the revision actually contains' },
+      @{ t = 'ol'; i = @('The weak-topic list from the error log, ranked.','The one-page summaries per chapter.','The memory lists: formulas, reactions, definitions, figures, maps.','The mock paper calendar, one per subject per week.','The review slot after each mock.') },
+      @{ t = 'p'; s = @('Write the list before scheduling a single hour; the schedule is just the list placed in time.') },
+      @{ t = 'h2'; s = 'Space the weak chapters across days' },
+      @{ t = 'p'; s = @('A weak chapter revisited today, again in three days, and again in a week becomes a strong chapter.','Spread each weak topic across the week instead of hitting it once for hours.','If a chapter appears only once in the timetable, the timetable has failed it.') },
+      @{ t = 'h2'; s = 'Build the weekly shape' },
+      @{ t = 'ol'; i = @('Morning: the daily recall block, memory lists, twenty to thirty minutes.','Main afternoon block: the weakest topic of the day, recall-cycle style.','Second block: one full past paper or a timed set in the matching subject.','Evening: marking, logging, and one straightforward subject.','Weekly: the Sunday adjustment, ten minutes.') },
+      @{ t = 'p'; s = @('The shape flexes around school and tuition hours, exactly as the general <a href="/blog/best-study-timetable-for-class-10-students/">study timetable guide</a> describes, but the three commitments stay fixed.') },
+      @{ t = 'h2'; s = 'Protect the mock and review slot' },
+      @{ t = 'p'; s = @('The mock-and-review pair is the highest-value block in the entire revision phase.','Treat the mock slot as non-negotiable, and the review as the actual lesson.','If a week is lost, drop lighter blocks first and protect this pair.') },
+      @{ t = 'h2'; s = 'The Sunday adjustment' },
+      @{ t = 'p'; s = @('Every Sunday, spend ten minutes asking three questions: which topics are still leaking, which mocks are still due, and where did the past week break.','Then change one thing for the week ahead.','A timetable that never changes is a timetable that has stopped listening to your errors.') },
+      @{ t = 'h2'; s = 'A sample week shape' },
+      @{ t = 'p'; s = @('Days one and two: mathematics plus one science branch, with a recall block.','Day three: social science and language recall, plus one mock in mathematics.','Days four and five: the other science branches with figure rotation.','Day six: one mock in a different subject, then its review.','Day seven: light recall, error log refresh, and the Sunday adjustment.','The exact subjects and hours belong to your syllabus and schedule; the commitments belong to everyone.') },
+      @{ t = 'h2'; s = 'The taper into the final days' },
+      @{ t = 'p'; s = @('As the exams approach, replace heavy blocks with pure recall: summaries, memory lists, and the error log.','Stop new topics and heavy mocks two days before a paper.','A timetable that ends lighter lets the preparation land.') },
+      @{ t = 'h2'; s = 'The honest close' },
+      @{ t = 'p'; s = @('An effective Class 10 revision timetable protects the weak topics, spaces the recall, and keeps mocks sacred.','Start from the list, spread weakness across the week, and adjust every Sunday.','The timetable is the plan; the review is the steering.') }
+    )
+  },
+
+  @{
+    slug     = 'last-minute-tips-for-cbse-class-10-board-exams'
+    title    = 'Last-Minute Tips for CBSE Class 10 Board Exams'
+    cat      = 'cbse-class-10-board-exam-tips'
+    author   = 'vyasa'
+    pub      = '2026-08-27'
+    upd      = '2026-08-27'
+    excerpt  = 'The final 48 hours are for calm recall, not new work. Know what to revise, what to carry, and how to use the first ten minutes of the paper.'
+    keywords = @('last minute tips CBSE class 10','exam day tips class 10','day before board exam','board exam final hours')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A poised student with revision notes and a pen ready on the morning of a Class 10 board exam'
+    related  = @('final-week-revision-strategy-class-10-boards','how-to-manage-time-during-cbse-class-10-board-exams','how-to-stay-focused-during-board-exam-preparation','importance-of-previous-year-question-papers-class-10')
+    cta      = 'The calmest students are the ones who rehearsed properly. Vyasa Academy in Hulimavu prepares Class 10 students with mocks and exam-day rituals all year long.'
+    courses  = @(
+      @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Everything that can be learned has been learned by the last 48 hours; the final stretch is about arriving sharp and staying calm.','These last-minute tips protect the knowledge you already have instead of replacing it with panic.') },
+      @{ t = 'h2'; s = 'The last 48 hours are for calm recall, not new work' },
+      @{ t = 'p'; s = @('Something new learned in the final two days rarely survives to the paper, and it can crowd out what the paper will actually ask.','Spend the window on recall: summaries, memory lists, the error log.','Anything fragile has already decided its fate; keeping the brain rested is the only real task now.') },
+      @{ t = 'h2'; s = 'The day before a paper' },
+      @{ t = 'ol'; i = @('Revise only the one-page summaries and the memory lists for that subject.','Retell the three hardest ideas in your own words, aloud.','Run the formats or diagrams once more for that subject.','Stop studying at a fixed, early hour.','Pack the admit card, pens and the exam station tonight.') },
+      @{ t = 'p'; s = @('The evening belongs to calm preparation of the bag and the body, never to a fresh chapter.') },
+      @{ t = 'h2'; s = 'The morning of the paper' },
+      @{ t = 'ul'; i = @('Wake with enough margin to eat and travel without rush.','Loose-review one page: formulas or definitions, nothing heavy.','Leave home on time; lateness is the one stress you can fully prevent.','Enter the building breathing normally, not rehearsing notes under your breath.') },
+      @{ t = 'p'; s = @('The morning should feel routine, because boards are routine once you have run mocks for months.') },
+      @{ t = 'h2'; s = 'The first ten minutes in the hall' },
+      @{ t = 'ol'; i = @('Read the whole paper once, calmly.','Underline the verbs of the questions you know instantly.','Mark the order you decided at home on the question paper.','Start with the easy and known questions to bank time and confidence.') },
+      @{ t = 'p'; s = @('The first ten minutes set the tempo of the whole paper; the plan for them comes from our <a href="/blog/how-to-manage-time-during-cbse-class-10-board-exams/">time management guide</a>.') },
+      @{ t = 'h2'; s = 'What to leave at home' },
+      @{ t = 'ul'; i = @('Notes to your classmates; they worry you and they are useless there.','Any extra book; one page of recall is enough for the seat.','A phone.','Anything the exam room rules do not allow; read those rules in advance and follow them.') },
+      @{ t = 'p'; s = @('Every risk you remove at the door is a minute of calm you keep in the hall.') },
+      @{ t = 'h2'; s = 'The sleep decision' },
+      @{ t = 'p'; s = @('There is no revision worth losing the night sleep for.','A rested brain recalls faster and thinks more clearly under time, and the paper rewards exactly that.','If you have to choose between one more hour of reading and one more hour of sleep, sleep is the better study tool.') },
+      @{ t = 'h2'; s = 'The anxious-moment drill' },
+      @{ t = 'p'; s = @('If nerves spike in the hall, stop, breathe slowly for four counts, and return to the first easy question.','The drill is the same one rehearsed in <a href="/blog/how-to-stay-focused-during-board-exam-preparation/">focus training</a>: stop, breathe, restart small.','Students who practised the drill in mocks walk through the spike without losing the paper.') },
+      @{ t = 'h2'; s = 'The honest close' },
+      @{ t = 'p'; s = @('The last 48 hours protect what the year built: calm recall, an early stop, a packed bag, and a known first-ten-minutes plan.','Boards reward the rested and the rehearsed.','Trust the preparation and let it perform.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-prepare-for-pre-board-exams'
+    title    = 'How to Prepare for Pre-Board Exams'
+    cat      = 'cbse-class-10-board-exam-tips'
+    author   = 'vyasa'
+    pub      = '2026-08-26'
+    upd      = '2026-08-26'
+    excerpt  = 'Pre-boards are a full dress rehearsal. Prepare like the real paper, run the exam rituals, and treat the results as the most useful data of the year.'
+    keywords = @('prepare for pre-board exams','pre boards class 10','class 10 pre-board strategy','pre-board exam preparation tips')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A student preparing for Class 10 pre-board exams with a practice paper and marked answer sheet'
+    related  = @('how-to-improve-marks-after-poor-pre-board-performance','how-to-revise-effectively-before-class-10-board-exams','importance-of-previous-year-question-papers-class-10','complete-study-plan-for-cbse-class-10-board-exams')
+    cta      = 'Pre-boards are the perfect rehearsal when marked by experts. The Class 10 batches at Vyasa Academy in Hulimavu treat pre-boards as full dress rehearsals with personal feedback.'
+    courses  = @(
+      @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Pre-board exams are the schools way of giving you a full dress rehearsal before the real performance.','They pick the same subjects, similar formats and the same pressure, and that makes them the most valuable diagnostic tool of the year.','Prepare for pre-boards the way you plan to take the boards, then use the results.') },
+      @{ t = 'h2'; s = 'Pre-boards are a dress rehearsal, not a verdict' },
+      @{ t = 'p'; s = @('A low pre-board mark feels like a report card of doom and is actually a map of where the remaining weeks should go.','The boards are months away and everything in the mark sheet is editable by then.','Treat the marks as information, keep the honest reaction, and move into the fix.') },
+      @{ t = 'h2'; s = 'Prepare like the real paper' },
+      @{ t = 'ol'; i = @('Cover the whole syllabus that will be tested, not just the finished chapters.','Keep the daily rhythm: one main subject, one recall block, one timed element.','Practise the section order and the per-mark budget from the start.','Write definitions in the exact textbook words and train the formats.') },
+      @{ t = 'p'; s = @('The preparation that builds up to the pre-boards is the same one from the <a href="/blog/complete-study-plan-for-cbse-class-10-board-exams/">complete study plan</a>, run honestly; nothing special and nothing skipped.') },
+      @{ t = 'h2'; s = 'Run the same timing in daily practice' },
+      @{ t = 'p'; s = @('Every timed set you do before the pre-boards should use the real budget and the finish-early rule.','The point is to enter the pre-boards having already practised the pressure, not to discover it there.','Untimed practice leads to rushed papers; timed practice leads to calm ones.') },
+      @{ t = 'h2'; s = 'Before the pre-boards: a mini revision cycle' },
+      @{ t = 'p'; s = @('In the week before the pre-boards, run a compressed version of the <a href="/blog/how-to-revise-effectively-before-class-10-board-exams/">revision cycle</a>: recall the summaries, clear the top of the error log, and redraw the key figures.','Do not start new topics in this week; that is a gamble with worse odds than preparing the known material.') },
+      @{ t = 'h2'; s = 'During the pre-boards: follow the exam rituals' },
+      @{ t = 'ul'; i = @('The first-ten-minutes read and order plan.','The skip-and-return rule when a question stalls.','The finish-fifteen-minutes-early check.','A calm morning routine and a packed bag the night before.') },
+      @{ t = 'p'; s = @('If the rituals are already automatic here, they will be automatic in the boards too.','That is exactly why the pre-boards must be taken seriously as the rehearsal.') },
+      @{ t = 'h2'; s = 'After each paper: the three-sort review' },
+      @{ t = 'ol'; i = @('Sort every lost mark into concept gap, careless slip, or presentation problem.','Total each pile: the biggest pile is the weeks target.','Write the top ten losses into the error log with their fixes.','Re-attempt the five most expensive losses the same week.') },
+      @{ t = 'p'; s = @('A pre-board paper that is not reviewed is a wasted dress rehearsal; the review is where the value lives.') },
+      @{ t = 'h2'; s = 'Use the results to build the final plan' },
+      @{ t = 'p'; s = @('The pre-board mark sheet plus the three-sort review gives you the most precise plan of the year: the board plan is simply the largest piles, fixed in order.','If results are weak, the recovery framework in our <a href="/blog/how-to-improve-marks-after-poor-pre-board-performance/">poor-performance recovery guide</a> converts them into a working salvage plan.') },
+      @{ t = 'h2'; s = 'The honest close' },
+      @{ t = 'p'; s = @('Pre-boards earn their name only when treated as rehearsal: prepare like the real paper, practise the rituals, review in three sorts, and let the results steer the final plan.','A student who uses pre-boards this way walks into the real hall already knowing the course.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-improve-marks-after-poor-pre-board-performance'
+    title    = 'How to Improve Marks After Poor Performance in Pre-Boards'
+    cat      = 'cbse-class-10-board-exam-tips'
+    author   = 'vyasa'
+    pub      = '2026-08-25'
+    upd      = '2026-08-25'
+    excerpt  = 'One bad pre-board set is data, not destiny. Sort the losses, find the pattern, and run a salvage plan that fixes the top leaks first.'
+    keywords = @('improve marks after poor pre boards','low pre-board marks','recover after pre-boards','fix pre-board performance class 10')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A student sorting a marked pre-board answer sheet into an error log while planning recovery for the Class 10 boards'
+    related  = @('how-to-prepare-for-pre-board-exams','common-mistakes-during-board-exam-preparation','how-to-score-90-percent-in-cbse-class-10-board-exams','how-to-stay-focused-during-board-exam-preparation')
+    cta      = 'A disappointing pre-board deserves a plan, not a spiral. The Class 10 program at Vyasa Academy in Hulimavu builds recovery plans from the actual mark sheet within a week.'
+    courses  = @(
+      @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('A poor set of pre-board marks can either end the year emotionally or start the final push with extraordinary clarity.','The difference is how the marks are processed in the following days.','This guide moves a disappointing result into a working recovery plan; it promises effort and structure, not a guaranteed number.') },
+      @{ t = 'h2'; s = 'One bad set of pre-boards is data, not destiny' },
+      @{ t = 'p'; s = @('The actual board exams are weeks away, and the pre-board mark sheet is a photograph of a moment, not a prediction.','Students recover and rise sharply every year; the ones who do share one behaviour: they replaced shock with sorting.','Let the results hurt for the night, then process them as data tomorrow.') },
+      @{ t = 'h2'; s = 'Sort the results into three piles' },
+      @{ t = 'ol'; i = @('Concept gaps: questions where you did not know the material.','Careless slips: questions where you knew it but lost marks to signs, units, labels or reading.','Presentation losses: marks lost to length, structure, handwriting or missing working.') },
+      @{ t = 'p'; s = @('Every paper, every subject, sort into the same three piles.','The exercise itself is the diagnosis; the piles tell you where the marks actually went.') },
+      @{ t = 'h2'; s = 'Find the pattern across the papers' },
+      @{ t = 'p'; s = @('A single low mark in biology could be a bad day; losses across three papers in the same pile are a pattern.','Look across all the pre-board papers before choosing the target.','Students usually discover one dominant pile: often careless slips and presentation, which are the fastest marks to recover in weeks.') },
+      @{ t = 'h2'; s = 'Build the salvage plan from the pattern' },
+      @{ t = 'ol'; i = @('Rank the leaks: concept gaps by subject, then slips, then presentation.','Reserve the first weeks mornings for the top two leaks, one at a time.','Keep the daily recall block and the weekly timed set running through the whole salvage.','Re-test the fixed leaks in the next mock before moving on.') },
+      @{ t = 'p'; s = @('The plan is exactly the <a href="/blog/complete-study-plan-for-cbse-class-10-board-exams/">complete study plan</a>, but re-aimed at the biggest piles instead of spread evenly.') },
+      @{ t = 'h2'; s = 'Fix the branches or subjects leaking most' },
+      @{ t = 'p'; s = @('In mathematics, redo the chapter error logs and the timed sets; the fixes are mechanics.','In science, rebuild the term bank, the figure rotation and the numerical methods; the fixes are recall and structure.','In languages and social science, the fixes are formats, keywords and writing speed.','Work each subject by its own mechanics, as laid out in the <a href="/blog/how-to-prepare-mathematics-for-cbse-class-10-board-exams/">mathematics</a> and <a href="/blog/how-to-prepare-science-for-cbse-class-10-board-exams/">science</a> preparation guides.') },
+      @{ t = 'h2'; s = 'Re-enter the mock rhythm quickly' },
+      @{ t = 'p'; s = @('The fastest way to confirm a recovery is to sit another paper, not to keep studying in the dark.','One full paper per subject every week, marked strictly, with the misses fed back into the plan.','Each improving mock is proof the salvage plan is working, and proof is the strongest motivator.') },
+      @{ t = 'h2'; s = 'Reset the mindset honestly' },
+      @{ t = 'ul'; i = @('Name what you are fixing in one sentence; vagueness feeds anxiety.','Compare only against your last practice paper, not the class average.','Track one number: the marks lost to the biggest pile, week by week.','Celebrate the first mock where that pile shrinks; it is real progress.') },
+      @{ t = 'p'; s = @('The recovery is built week by week, and the scoreboard counts the leaks closed, not the hours spent.') },
+      @{ t = 'h2'; s = 'The honest close' },
+      @{ t = 'p'; s = @('Poor pre-boards are a gift of clarity if processed fast: sort the losses, find the pattern, aim the plan at the biggest piles, and mock again quickly.','The boards are still weeks away and the improvements compound.','Start the sorting tonight and let the work outrun the worry.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-stay-focused-during-board-exam-preparation'
+    title    = 'How to Reduce Exam Stress and Stay Focused During Board Preparation'
+    cat      = 'cbse-class-10-board-exam-tips'
+    author   = 'vyasa'
+    pub      = '2026-08-24'
+    upd      = '2026-08-24'
+    excerpt  = 'Focus is a trainable skill. Work in timed blocks, shrink distractions, plan tomorrow tonight, and handle stress spikes with simple breathing.'
+    keywords = @('exam stress class 10','stay focused board preparation','board exam anxiety','reduce exam stress students')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A focused Class 10 student studying in a quiet room with a phone set aside and a study plan on the desk'
+    related  = @('how-to-overcome-fear-of-mathematics','how-to-build-a-study-routine','how-to-clear-doubts-faster','last-minute-tips-for-cbse-class-10-board-exams')
+    cta      = 'Focus is hard to build alone in a busy home. The Class 10 batches at Vyasa Academy in Hulimavu give students a supervised, distraction-free study rhythm with regular tests.'
+    courses  = @(
+      @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Board preparation feels stressful when the work feels vague, and it feels vague when there is no focus system.','Focus is not a personality trait; it is a routine you can build in a week.','This guide pairs a simple focus system with honest ways to handle the stress spikes.') },
+      @{ t = 'h2'; s = 'Focus is a skill, not a mood' },
+      @{ t = 'p'; s = @('Students who seem to concentrate easily usually run a quiet routine: a planned task, a timed block, a set place.','None of those need talent.','The moment you give the brain a specific job, a defined window and a clean desk, concentration follows.') },
+      @{ t = 'h2'; s = 'Work in timed blocks with real breaks' },
+      @{ t = 'ol'; i = @('Pick one task from the day plan and nothing else.','Work in a timed block of thirty to forty minutes.','Take a true five-minute break: stand, water, look out a window.','Repeat, then stop when the planned blocks are done.') },
+      @{ t = 'p'; s = @('The block length is a suggestion, settle on what survives; the structure is what matters.','Five focused blocks beat an afternoon of half-attention.') },
+      @{ t = 'h2'; s = 'Shrink the distraction at the source' },
+      @{ t = 'ul'; i = @('Phone in another room or in a bag, on silent, not on the desk.','Notifications off for study apps before the block starts.','One quiet place reserved for studying, used for nothing else.','Study materials for the single task only; the rest out of sight.') },
+      @{ t = 'p'; s = @('Each removed distraction is a decision the brain no longer has to make, which is where the focus leaks.') },
+      @{ t = 'h2'; s = 'The one-thing rule' },
+      @{ t = 'p'; s = @('A study session with one task is focus; a session with seven open tabs is anxiety.','If a second task appears mid-block, note it on a scrap of paper and return.','The scrap paper is the valve: nothing is forgotten, nothing interrupts.') },
+      @{ t = 'h2'; s = 'Plan tonight, so tomorrow starts itself' },
+      @{ t = 'p'; s = @('Each night, write one line for the next day: three tasks and the first one to start with.','Morning decisions are expensive; the brain spends focus on choosing before it can spend on studying.','A written plan starts the day with momentum instead of negotiation.') },
+      @{ t = 'h2'; s = 'The breathing drill for stress spikes' },
+      @{ t = 'p'; s = @('When nerves spike, the simplest reset is slow breathing: breathe in slowly for four counts, hold gently, breathe out slowly for four counts, repeat for a minute.','One minute of this lowers the body response and returns the focus to the page.','Practise it daily for a few days so it is a trained reflex in the hall, a drill covered for the exam moment in our <a href="/blog/last-minute-tips-for-cbse-class-10-board-exams/">last-minute guide</a>.') },
+      @{ t = 'h2'; s = 'Protect sleep and movement' },
+      @{ t = 'p'; s = @('Seven hours of sleep is part of the plan, never its victim, because a rested brain both retains and recalls better.','Movement, even a short walk, clears the fog that re-reading cannot.','If the schedule cannot fit movement, the schedule needs editing, not the student.') },
+      @{ t = 'h2'; s = 'When pressure gets too heavy, ask' },
+      @{ t = 'p'; s = @('Persistent anxiety or sleep trouble deserves a real conversation with parents, a teacher or a counsellor; no student should carry it silently.','Asking is part of preparation, not a failure of it.','The same goes for doubt: clear it early with a teacher or through structured coaching, exactly how our <a href="/blog/how-to-clear-doubts-faster/">doubt-clearing guide</a> suggests.') },
+      @{ t = 'h2'; s = 'The focused day in outline' },
+      @{ t = 'ol'; i = @('Tonight, write tomorrow three tasks.','Tomorrow, start the hardest one first, in a timed block.','Run blocks with real breaks, phone away.','End at a fixed hour and protect the night sleep.','Log the three tasks done.') },
+      @{ t = 'h2'; s = 'The honest close' },
+      @{ t = 'p'; s = @('Focus falls into place when the task, the window and the environment are arranged for it, and stress follows the focus.','Plan the night before, work in timed blocks, breathe through the spikes, and sleep well.','That routine turns months of preparation into a calm, productive season.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-balance-mathematics-and-science-preparation-class-10'
+    title    = 'How to Balance Mathematics and Science Preparation for Class 10'
+    cat      = 'cbse-class-10-board-exam-tips'
+    author   = 'mahendra'
+    pub      = '2026-08-23'
+    upd      = '2026-08-23'
+    excerpt  = 'Mathematics and Science eat the study plan. Keep mathematics in a daily touch, give Science its branch rotation, and track the balance honestly.'
+    keywords = @('balance maths and science class 10','class 10 maths science planning','split study time maths science','board preparation balance')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A balanced weekly plan showing mathematics and science study blocks for Class 10 board preparation'
+    related  = @('how-to-prepare-mathematics-for-cbse-class-10-board-exams','how-to-prepare-science-for-cbse-class-10-board-exams','best-study-timetable-for-class-10-students','complete-study-plan-for-cbse-class-10-board-exams')
+    cta      = 'Balancing the two heaviest subjects is easier with guided weekly planning. Explore the Maths and Science programs at Vyasa Academy in Hulimavu, designed around the Class 10 syllabus.'
+    courses  = @(
+      @{ label = 'Maths Tuition in Hulimavu'; url = '/maths-tuition-hulimavu/' },
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Mathematics and Science together carry a large share of a Class 10 preparation load, and they compete for the same few hours of the evening.','Students who let one starve the other pay for it in the final month.','The balance is not about equal hours; it is about two rhythms that fit in one week.') },
+      @{ t = 'h2'; s = 'The two subjects that eat the plan' },
+      @{ t = 'p'; s = @('Mathematics and Science both need active practice, worked examples and timed sets, which is why they take more time than recall-heavy subjects.','The danger is that one of them quietly disappears from the week: mathematics because it feels heavy, Science because it feels like reading.','The balance is a schedule decision, made once a week, not a mood sustained day to day.') },
+      @{ t = 'h2'; s = 'Why students tip toward one or the other' },
+      @{ t = 'ul'; i = @('Towards mathematics when numericals feel satisfying and Science is postponed as reading.','Towards Science when it feels like coverage and mathematics is postponed as scary.','Towards both, but thinly, when every day crams both with no depth.') },
+      @{ t = 'p'; s = @('Naming the tendency matters, because the fix differs: the first needs scheduled Science blocks with active recall; the second needs a fixed Mathematics slot early in the day; the third needs depth per subject instead of breadth.') },
+      @{ t = 'h2'; s = 'Two shapes that work' },
+      @{ t = 'p'; s = @('Shape A, alternate heavy days: Mathematics on alternate days in full blocks, Science in branch blocks on the other days.','Shape B, daily touch: a short Mathematics block every day for warmth, and one Science branch daily in rotation.','Both shapes guarantee one thing the paper needs: nothing sits cold for more than a few days.','Choose the shape that fits school and tuition hours, using the planning method from the <a href="/blog/best-study-timetable-for-class-10-students/">timetable guide</a>.') },
+      @{ t = 'h2'; s = 'Keep the daily mathematics touch' },
+      @{ t = 'p'; s = @('Mathematics rots faster than any other subject when untouched, and it returns slowly.','Even a short daily set, fifteen minutes of a method from memory, keeps it warm.','The full board preparation rhythm for mathematics is in our <a href="/blog/how-to-prepare-mathematics-for-cbse-class-10-board-exams/">mathematics plan</a>.') },
+      @{ t = 'h2'; s = 'Give Science its branch rotation' },
+      @{ t = 'p'; s = @('Science stays strong when the three branches rotate cleanly: physics one block, chemistry one block, biology one block across the week.','Each block should end with active output, a numerical, a reaction bank segment, or a figure.','The branch-by-branch rhythm is detailed in the <a href="/blog/how-to-prepare-science-for-cbse-class-10-board-exams/">Science plan</a>.') },
+      @{ t = 'h2'; s = 'Use lighter subjects as a change of pace' },
+      @{ t = 'p'; s = @('Social science and languages in shorter blocks give the mind variety and protect the heavy subjects from fatigue.','A session that moves from mathematics to a lighter subject regains energy better than one that adds a third heavy block.','Light does not mean unimportant; it means lower demand, which balances the week.') },
+      @{ t = 'h2'; s = 'Track the balance honestly' },
+      @{ t = 'ol'; i = @('Keep one page with a line per week for each family: tasks done in mathematics, tasks done in Science.','If a week tips heavily to one side, the other becomes next weeks top priority.','Measure by completed tasks, not by hours, because hours mask loitering.','Review the balance every Sunday with the plan.') },
+      @{ t = 'p'; s = @('A student who measures the balance keeps it honest the same way a student who measures mistakes fixes them, the habit behind the <a href="/blog/complete-study-plan-for-cbse-class-10-board-exams/">complete study plan</a>.') },
+      @{ t = 'h2'; s = 'The close' },
+      @{ t = 'p'; s = @('Balancing mathematics and Science for Class 10 is a weekly rhythm, not an act of willpower: mathematics keeps its daily touch, Science keeps its branch rotation, lighter subjects vary the load, and the balance is measured.','Neither subject can afford to go cold, and the plan is what keeps both warm.') }
+    )
+  },
+
+  @{
+    slug     = 'final-week-revision-strategy-class-10-boards'
+    title    = 'A Complete Revision Strategy for the Final Week Before Class 10 Boards'
+    cat      = 'cbse-class-10-board-exam-tips'
+    author   = 'vyasa'
+    pub      = '2026-08-22'
+    upd      = '2026-08-22'
+    excerpt  = 'The final week settles and recalls: drop new topics, produce memory material daily, run one light mock, and taper into the first paper.'
+    keywords = @('final week class 10 boards','class 10 final revision week','last week before boards','board exam final week plan')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A calm student revising one-page summaries during the final week before the Class 10 board exams'
+    related  = @('last-minute-tips-for-cbse-class-10-board-exams','how-to-create-an-effective-revision-timetable','how-to-manage-time-during-cbse-class-10-board-exams','importance-of-previous-year-question-papers-class-10')
+    cta      = 'The final week should be supervised simplicity. Vyasa Academy in Hulimavu guides Class 10 students through a final-week plan with mocks already behind them.'
+    courses  = @(
+      @{ label = 'Class 10 Tuition in Hulimavu'; url = '/class-10-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Seven days before the boards is too late to learn and exactly right to settle.','The final week converts a year of preparation into a calm, rehearsed body of recall.','This strategy runs the week in one job: produce memory material daily, keep it light, and taper into the first paper.') },
+      @{ t = 'h2'; s = 'The final week has one job: settle and recall' },
+      @{ t = 'p'; s = @('Everything still unknown will stay unknown; the week protects what is known.','Run the whole week in recall mode: summaries, memory lists, the error log, figures and formats.','The anxiety of the final week comes from trying to add, so this week subtracts with purpose.') },
+      @{ t = 'h2'; s = 'The day-by-day shape' },
+      @{ t = 'ol'; i = @('Days 7 to 6: sweep the error log by subject, and redraw the figure and format lists.','Days 5 to 4: one full paper in the exam schedule, marked honestly, then the misses only.','Days 3 to 2: pure memory work, one subject per day, in recall blocks.','Day 1: light summaries, an early stop, bag packed, full sleep.') },
+      @{ t = 'p'; s = @('The shape flexes around the actual exam timetable; the principle is the same: papers early in the week, memory in the middle, calm at the end.') },
+      @{ t = 'h2'; s = 'What to drop completely' },
+      @{ t = 'ul'; i = @('New topics, new books, new techniques.','Heavy full papers on the last two days.','The habit of re-reading whole chapters.','Comparing notes or hours with classmates.','Anything school that is not already committed to memory.') },
+      @{ t = 'p'; s = @('Every dropped load returns as calm, and calm is a scored asset in the hall.') },
+      @{ t = 'h2'; s = 'Memory mode: what to produce daily' },
+      @{ t = 'p'; s = @('Each day, produce on paper, from memory: the formulas sheet, the reaction bank, the key definitions, the figures, the map or the format.','Producing is the exam; recognising is the trap, exactly the distinction from the <a href="/blog/how-to-revise-effectively-before-class-10-board-exams/">revision guide</a>.','The daily production becomes a stack you can see, which is the weeks real progress.') },
+      @{ t = 'h2'; s = 'Mock-light: one timed paper, early in the week' },
+      @{ t = 'p'; s = @('One full paper on day five keeps the timing reflex alive without exhausting the week.','Mark it lightly and review only the misses.','From day four onward, no heavy testing: the calibration is done.','The pacing rhythm it protects comes from the <a href="/blog/how-to-manage-time-during-cbse-class-10-board-exams/">time management guide</a>.') },
+      @{ t = 'h2'; s = 'The day before the first paper' },
+      @{ t = 'ol'; i = @('Review only the first subjects summaries and memory list.','Retell the three hardest ideas aloud, in your own words.','Stop by early evening.','Pack the admit card, pens and station everyone is allowed.','Sleep; the night is part of the strategy.') },
+      @{ t = 'p'; s = @('The last hour of study buys little; the last hour of sleep buys recall.','Boards reward the rested, and rest is planned.') },
+      @{ t = 'h2'; s = 'The care checklist' },
+      @{ t = 'ul'; i = @('Seven hours of sleep each night of the week.','Real meals and water at the same time each day.','A short walk or stretch daily, away from the desk.','One sentence of plan written each night, so tomorrow starts itself.') },
+      @{ t = 'p'; s = @('The checklist is not indulgence; it is the delivery mechanism for everything the year built.') },
+      @{ t = 'h2'; s = 'The honest close' },
+      @{ t = 'p'; s = @('The final week settles the year: early papers, middle memory work, a calm evening before each paper, and full sleep throughout.','Produce daily, drop everything new, and protect the body.','That is the whole strategy, and it is enough.') }
     )
   }
 )

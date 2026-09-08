@@ -1522,6 +1522,18 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
 
 .blog-back-inline { margin-top: 8px; }
 
+.blog-featured { margin: 6px 0 26px; }
+.blog-featured img { width: 100%; height: auto; border-radius: 14px; display: block; object-fit: cover; box-shadow: var(--shadow); }
+
+.blog-pillar-lead { margin: 14px auto 0; max-width: 660px; text-align: left; }
+.blog-pillar-lead p { color: #374151; font-size: 1rem; line-height: 1.8; margin-bottom: 12px; }
+
+.blog-pillar-section { padding: 34px 0 18px; border-top: 1px solid rgba(26,35,126,0.08); }
+.blog-pillar-section:first-of-type { border-top: none; }
+.blog-pillar-section h2 { font-size: 1.5rem; color: var(--primary); margin-bottom: 8px; }
+.blog-pillar-section > p { color: var(--gray); font-size: 0.98rem; line-height: 1.7; margin-bottom: 20px; max-width: 640px; }
+.blog-pillar-section .blog-grid { padding-bottom: 10px; }
+
 @media (max-width: 768px) {
   .blog-hero h1 { font-size: 1.9rem; }
   .blog-grid { grid-template-columns: 1fr; }
