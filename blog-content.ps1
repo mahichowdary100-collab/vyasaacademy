@@ -76,6 +76,12 @@ $script:blogCategories = @(
         @{ label = 'Maths Tuition in Hulimavu'; url = '/maths-tuition-hulimavu/' },
         @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' }
       )
+      startTitle = 'Start here'
+      startText  = 'The six guides below cover the whole journey, from the complete study plan down to the final week. Read them in order for the full system.'
+      ctaTitle   = 'Guidance for the Class 10 boards'
+      ctaText    = 'If your child needs structured coaching with regular assessments, mock tests and doubt clearing, explore the Class 10 programs at Vyasa Academy in Hulimavu, Bangalore. Small batches, concept-first teaching, and honest feedback on every paper.'
+      allTitle   = 'All Class 10 articles'
+      allText    = 'The complete list of Class 10 board exam guides in this hub, newest first.'
     }
   },
   @{
@@ -84,6 +90,7 @@ $script:blogCategories = @(
     short = 'Focus areas, revision plans and exam strategy for maths, physics, chemistry and biology.'
     desc  = 'CBSE Class 12 board exam preparation: focus areas, revision plans, and exam strategy for mathematics, physics, chemistry and biology.'
     pillar = @{
+      eyebrow    = 'CBSE Class 12 Board Exam Hub'
       lead = @('The Class 12 board exams carry double weight: they decide your final score and they shape your entrance exam plans.','This hub gathers the complete set of Class 12 preparation guides from Vyasa Academy: subject-wise plans for mathematics, physics, chemistry and biology, study timetables, revision systems and the final-week strategy.','Work through the four subject guides first, then pick the timetable and revision module that matches where you are in the year.','Students also preparing for entrance examinations will find the boards-and-competitive balancing guide useful from the start of Class 12.')
       featured = @('complete-study-plan-for-cbse-class-12-board-exams','how-to-prepare-mathematics-for-cbse-class-12-board-exams','how-to-prepare-physics-for-cbse-class-12-board-exams','how-to-prepare-chemistry-for-cbse-class-12-board-exams','how-to-prepare-biology-for-cbse-class-12-board-exams','final-week-revision-strategy-cbse-class-12')
       sections = @(
@@ -129,13 +136,88 @@ $script:blogCategories = @(
         @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
         @{ label = 'KCET Coaching in Hulimavu'; url = '/kcet-coaching-hulimavu/' }
       )
+      startTitle = 'Start here'
+      startText  = 'The six guides below lay out the whole Class 12 journey, from the complete study plan down to the final week. Follow them in order for the full system, or start from the subject that worries you most.'
+      ctaTitle   = 'Guidance for the Class 12 boards'
+      ctaText    = 'If your child needs structured coaching with regular assessments, mock tests and doubt clearing, explore the Class 12 programs at Vyasa Academy in Hulimavu, Bangalore. Small batches, concept-first teaching, and honest feedback on every paper.'
+      allTitle   = 'All Class 12 articles'
+      allText    = 'The complete list of Class 12 board exam guides in this hub, newest first.'
     }
   },
   @{
     slug  = 'study-tips'
-    name  = 'Study Tips'
-    short = 'Routines, focus techniques and learning methods that help students study smarter.'
-    desc  = 'Effective study routines, focus techniques, and learning methods that help CBSE and ICSE students study smarter, not longer.'
+    name  = 'Study Tips & Exam Preparation'
+    short = 'Effective study methods, focus, memory, revision and complete exam preparation for school students.'
+    desc  = 'Practical study tips and exam preparation guides for school students and parents: effective studying, concentration, memory techniques, revision, time management and complete exam strategy.'
+    pillar = @{
+      eyebrow    = 'Study Tips & Exam Preparation Hub'
+      lead = @('Every student is capable of learning how to learn. The difference between a stressed term and a strong one is usually a handful of habits: how you focus, how you record what you learn and how you revise before a test.', 'This hub gathers Vyasa Academy study guides for school students from Class 6 to Class 12, whether you are preparing for a weekly test, a school exam or a board exam. The articles cover effective study techniques, concentration, memory, revision, time management, motivation and the parent guidance that holds it all together.', 'Work through the six featured guides first, or jump straight to the section that matches your biggest challenge today: focus, memory, revision or exam week.')
+      featured = @('how-to-study-effectively-and-improve-academic-performance','how-to-improve-concentration-while-studying','how-to-create-effective-daily-study-timetable','how-to-remember-what-you-study','how-to-revise-before-an-exam','complete-exam-preparation-strategy-for-school-students')
+      startTitle = 'Start here'
+      startText  = 'These six guides form the backbone of the hub: how to study, how to focus, how to plan the day, how to remember, how to revise and how to prepare for an exam season. Read them in order for the full system.'
+      sections = @(
+        @{
+          title = 'Study techniques'
+          text  = 'Good study is a set of techniques, not a gift. Start with the evidence-informed methods, then build the everyday routine around them.'
+          slugs = @('how-to-study-effectively-and-improve-academic-performance','best-study-techniques-for-school-students','active-recall-and-spaced-repetition-for-students','how-to-remember-what-you-study','how-to-make-effective-revision-notes','how-to-build-a-study-routine')
+        },
+        @{
+          title = 'Concentration and focus'
+          text  = 'Focus is trainable. Clear the environment, protect the first twenty-five minutes and build a start ritual that makes distraction expensive.'
+          slugs = @('how-to-improve-concentration-while-studying','how-to-stop-procrastinating-and-start-studying','how-to-study-when-you-feel-unmotivated','how-to-clear-doubts-faster','how-to-stay-focused-during-board-exam-preparation')
+        },
+        @{
+          title = 'Time management'
+          text  = 'A timetable works when it fits real school, tuition and homework hours. Plan around the fixed parts of the week, not around an ideal day.'
+          slugs = @('how-to-create-effective-daily-study-timetable','how-many-hours-should-students-study-every-day','how-to-balance-school-tuition-homework-and-self-study','how-to-manage-time-during-exams','how-to-manage-time-in-mathematics-board-exam')
+        },
+        @{
+          title = 'Memory and revision'
+          text  = 'You remember what you pull out of memory, not what you re-read. Build one-page notes, space the reviews and revise by recall in the weeks before a test.'
+          slugs = @('how-to-remember-what-you-study','active-recall-and-spaced-repetition-for-students','how-to-make-effective-revision-notes','how-to-revise-before-an-exam','how-to-revise-effectively-before-class-10-board-exams','how-to-revise-effectively-for-class-12-board-exams')
+        },
+        @{
+          title = 'Exam preparation'
+          text  = 'Exam week is won in the weeks before it. Run the full preparation cycle, use past papers as training, manage time inside the hall and avoid the slips that cost marks.'
+          slugs = @('complete-exam-preparation-strategy-for-school-students','how-to-prepare-for-weekly-tests-and-school-exams','how-to-manage-time-during-exams','how-to-avoid-common-exam-mistakes','importance-of-previous-year-question-papers-class-10','class-12-board-exam-last-30-days-preparation')
+        },
+        @{
+          title = 'Mistakes, tests and improvement'
+          text  = 'A test paper is the best workbook you own. Audit every lost mark, fix the cause and track the same error types across the term until they disappear.'
+          slugs = @('how-to-analyse-test-mistakes-and-improve-marks','how-to-avoid-common-exam-mistakes','common-mistakes-in-mathematics-exams','common-mistakes-students-make-in-science-exams','how-to-improve-marks-after-poor-pre-board-performance')
+        },
+        @{
+          title = 'Student motivation'
+          text  = 'Motivation dips for every student sooner or later. Learn the systems that keep a quiet week moving: small goals, visible progress and an honest off day.'
+          slugs = @('how-to-study-when-you-feel-unmotivated','how-to-stop-procrastinating-and-start-studying','how-to-overcome-fear-of-mathematics','why-students-are-afraid-of-mathematics','how-to-stay-focused-during-board-exam-preparation')
+        },
+        @{
+          title = 'Parent guidance'
+          text  = 'Parents do not need to know every subject to change a study habit. Focus on the environment, the routine, the questions you ask and knowing when to bring in structure.'
+          slugs = @('how-parents-can-help-children-develop-better-study-habits','how-parents-can-help-children-develop-interest-in-science','science-foundations-for-classes-6-to-8','how-many-hours-should-students-study-every-day','how-to-balance-school-tuition-homework-and-self-study')
+        },
+        @{
+          title = 'Related subject guides'
+          text  = 'Study skills land differently in each subject. Pair the general techniques with the Mathematics, Physics, Chemistry and Biology preparation guides that put them into practice.'
+          slugs = @('how-to-improve-mathematics-problem-solving-skills','how-to-improve-science-conceptual-understanding','how-to-study-physics-for-cbse-class-12','how-to-study-chemistry-effectively-for-cbse-board-exams','how-to-study-biology-effectively-for-cbse-board-exams','how-to-prepare-science-class-10-board-exams')
+        },
+        @{
+          title = 'Class 10 and Class 12 board hubs'
+          text  = 'For board-year students the general skills meet a specific exam. The dedicated Class 10 and Class 12 hubs carry subject plans, revision systems and final-week strategy.'
+          slugs = @('complete-study-plan-for-cbse-class-10-board-exams','how-to-score-90-percent-in-cbse-class-10-board-exams','final-week-revision-strategy-class-10-boards','complete-study-plan-for-cbse-class-12-board-exams','how-to-score-90-percent-in-cbse-class-12-board-exams','final-week-revision-strategy-cbse-class-12')
+        }
+      )
+      courses = @(
+        @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' },
+        @{ label = 'ICSE Tuition in Hulimavu'; url = '/icse-tuition-hulimavu/' },
+        @{ label = 'Maths Tuition in Hulimavu'; url = '/maths-tuition-hulimavu/' },
+        @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' }
+      )
+      ctaTitle  = 'Get study habits that stick, built in a classroom'
+      ctaText   = 'Habits grow fastest with structure, a fixed weekly rhythm and a teacher who checks understanding daily. Explore the CBSE and ICSE tuition programs at Vyasa Academy in Hulimavu, Bangalore, where small batches turn good study technique into consistent practice.'
+      allTitle  = 'All Study Tips & Exam Preparation articles'
+      allText   = 'The complete list of study tips and exam preparation guides in this hub, newest first.'
+    }
   }
 )
 
@@ -518,11 +600,18 @@ $script:blogArticles = @(
     upd      = '2026-09-07'
     excerpt  = 'Strong problem solvers are not faster thinkers, they are more organised thinkers. Learn a simple four-step method that works on any maths problem.'
     keywords = @('problem solving in mathematics','how to solve maths problems','mathematical thinking','maths strategy for exams')
-    related  = @('common-mistakes-in-mathematics-exams','how-to-improve-calculation-speed-and-accuracy','understanding-concepts-vs-memorising-mathematics','10-common-mistakes-in-maths-and-how-to-fix-them')
+    related  = @('common-mistakes-in-mathematics-exams','how-to-improve-calculation-speed-and-accuracy','understanding-concepts-vs-memorising-mathematics','best-study-techniques-for-school-students','how-to-analyse-test-mistakes-and-improve-marks')
     cta      = 'Problem-solving grows fastest with consistent guided practice. The Mathematics programs at Vyasa Academy, Hulimavu, are built around learning by doing, not just listening.'
     courses  = @(
       @{ label = 'Maths Tuition in Hulimavu'; url = '/maths-tuition-hulimavu/' },
       @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    faq = @(
+      @{ q = 'Why do I keep solving problems wrong even after lots of practice?'; a = 'Practising without feedback repeats the same mistakes and builds confidence in them. After every problem set, mark it honestly and sort each miss into a concept gap, a method gap or a slip, then fix the exact type before solving more.' },
+      @{ q = 'What is the best way to start a hard problem?'; a = 'Do not wait for the answer to appear. Restate the question in your own words, list the given and the asked, draw what the words say, and name the method you expect to use before calculating. The start of the solve is where most marks are won.' },
+      @{ q = 'Is it okay to memorise methods instead of understanding them?'; a = 'Memorised methods work for familiar questions and fail on the rewording that exams love. Learn the reason behind the steps once, then use repetition to make the method automatic. Understanding plus practice beats either one alone.' },
+      @{ q = 'How much mathematics practice is enough each day?'; a = 'A regular short session beats an occasional long one: twenty to thirty minutes of honest, marked practice most days outperforms a weekend marathon. The exact time depends on your class and load, so let the error trend decide.' },
+      @{ q = 'How do I stop fearing mistakes in mathematics?'; a = 'Mistakes are data, not judgement. Keep a slip list, fix each miss with a re-solve a few days later, and watch the same mistakes stop repeating. Students who stop hiding errors usually stop repeating them.' }
     )
     body = @(
       @{ t = 'p'; s = @('When students say they cannot solve a problem, they usually mean they looked at it and nothing came to mind.','Most adults do the same thing.','The difference between a confident solver and a stuck one is rarely speed or IQ, it is having a sequence to follow.','Here is the sequence we drill with students at every level.') },
@@ -541,7 +630,7 @@ $script:blogArticles = @(
       @{ t = 'h2'; s = 'How to check your answer fast' },
       @{ t = 'ul'; i = @('Round the numbers and recompute roughly to see if your exact answer is in the right ballpark.','Substitute your answer back into the original statement.','Check units: hours times speed should give distance, not anything else.','Ask a friend to trace your working, a fresh set of eyes spots slips in seconds.') },
       @{ t = 'h2'; s = 'The bottom line' },
-      @{ t = 'p'; s = @('You cannot think your way to better problem-solving; you build it with a repeatable method applied daily.','Master the four steps, draw the problem, and keep a route map notebook.','That routine turns most feared questions into familiar ones.') }
+      @{ t = 'p'; s = @('You cannot think your way to better problem-solving; you build it with a repeatable method applied daily.','Master the four steps, draw the problem, and keep a route map notebook.','That routine turns most feared questions into familiar ones.','The same method-driven habits, applied across subjects, are the theme of the <a href="/blog/study-tips/">Study Tips and Exam Preparation hub</a>.') }
     )
   },
 
@@ -4300,6 +4389,897 @@ $script:blogArticles = @(
       @{ t = 'ol'; i = @('The night before: the summary once, the error log, and the desk bag packed, admit card, pens, geometry, water, before the lights go out.','The morning of: a short review of the one-page summary only, a light breakfast, and an arrival that leaves ten quiet minutes before the paper.','Inside the hall: the reading read and the time budget from the <a href="/blog/how-to-manage-time-during-class-12-board-exams/">time budget</a>.') },
       @{ t = 'h2'; s = 'The close' },
       @{ t = 'p'; s = @('The final week of the Class 12 boards is memory, summaries, rest and routine, nothing larger and nothing louder.','Protect the year of work by keeping the last seven days light, dropping every heavy test and sleeping fully.','The boards are a rehearsal you have already run; the final week just lets you walk in rested for it.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-study-effectively-and-improve-academic-performance'
+    title    = 'How to Study Effectively and Improve Your Academic Performance'
+    cat      = 'study-tips'
+    author   = 'vyasa'
+    pub      = '2026-09-09'
+    upd      = '2026-09-09'
+    excerpt  = 'Effective study is active, planned and reviewed. Build a two-hour session that tests recall, then watch performance follow the habits, not the hours.'
+    keywords = @('how to study effectively','improve academic performance','effective study habits','study smart not hard')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A school student following a planned two-hour study session with a recall test at the end'
+    related  = @('how-to-build-a-study-routine','active-recall-and-spaced-repetition-for-students','best-study-techniques-for-school-students','how-to-improve-concentration-while-studying')
+    cta      = 'At Vyasa Academy in Hulimavu, our small-batch tuition turns these study habits into classroom practice for CBSE and ICSE students from Classes VI to XII.'
+    courses  = @(
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' },
+      @{ label = 'ICSE Tuition in Hulimavu'; url = '/icse-tuition-hulimavu/' },
+      @{ label = 'Maths Tuition in Hulimavu'; url = '/maths-tuition-hulimavu/' }
+    )
+    faq = @(
+      @{ q = 'How do I know if I am studying effectively?'; a = 'Test yourself honestly. If you can explain the chapter in your own words and answer questions with the book closed, you are learning. If you can only recognise the material while reading it, the session was mostly re-reading.' },
+      @{ q = 'How long should one study session be?'; a = 'Most students focus well for twenty to forty-five minutes at a stretch with a short break after. A planned two-hour session built from shorter focus blocks beats five unplanned hours of drifting attention.' },
+      @{ q = 'Is reading my textbook and notes enough to do well?'; a = 'Reading alone under-teaches recall. Pair every reading with an output step: answer questions, summarise from memory or solve problems, because that is what the exam will ask you to do.' },
+      @{ q = 'Why do I forget most of what I studied after a few days?'; a = 'Forgetting is normal unless the material is brought back out of memory. Space a few short review passes over the following days so each return strengthens the recall instead of a fresh read that feels familiar.' },
+      @{ q = 'Is it too late to improve if my marks have been low?'; a = 'No. Most low performers improve fast once the habit changes: a planned session, honest self-testing and a weekly review of mistakes move marks quickly, and board-year students are usually the most motivated to change.' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Two students sit down for the same chapter, for the same two hours. One finishes tired and slightly proud; the other finishes and can recall almost nothing.','The difference is not intelligence.','It is whether the session made the brain work or just kept it busy.','Effective study is active, planned and reviewed, and every student can learn to run it.') },
+      @{ t = 'h2'; s = 'What effective study actually looks like' },
+      @{ t = 'p'; s = @('When learning is working, you are producing: answering, explaining, writing, solving, drawing','Reading and highlighting are comfortable, which is why they feel productive, but they are inputs.','Exams reward outputs, so study time must end with you producing the material from memory.','That single shift, from consume to produce, is the core of this article.') },
+      @{ t = 'h2'; s = 'Plan one session before you sit down' },
+      @{ t = 'p'; s = @('Open your notebook, decide the one outcome of the next two hours and write it down.','Examples: I can name and explain the three parts of the cell answer, or I can solve five factorisation sums without help.','A session with a named outcome is difficult to waste, because at the end you can check it.','A session with a vague goal drifts into the first interesting thing on the page.') },
+      @{ t = 'h2'; s = 'The anatomy of a two-hour session' },
+      @{ t = 'ol'; i = @('Minutes 1 to 5: recall the previous session in writing, from memory.','Minutes 5 to 40: learn the new section in a single focus block, phone gone.','Minutes 40 to 45: break; stand, move, water.','Minutes 45 to 80: apply it, solve problems or write answers about the new section.','Minutes 80 to 90: break.','Minutes 90 to 115: cover and test, the book closed, the answers written.','Minutes 115 to 120: check your answers, log the misses and name the one thing for tomorrow.') },
+      @{ t = 'p'; s = @('The last row of the plan is the important one: a ten-minute recall test at the close of every session makes the learning stick and tells you what tomorrow should begin with.') },
+      @{ t = 'h2'; s = 'Learn by making questions, not just answers' },
+      @{ t = 'p'; s = @('Turn every heading in the chapter into a question: what does the formula mean, why does this step come first, how would I explain it to a friend.','The question version of a topic makes you retrieve; the heading version lets you nod.','The technique is explained fully in the <a href="/blog/active-recall-and-spaced-repetition-for-students/">active recall guide</a>.') },
+      @{ t = 'h2'; s = 'After the session: same-day and spaced review' },
+      @{ t = 'ul'; i = @('Same evening: a five-minute recall of the day topics, no notes.','Next morning: a two-minute check of what you wrote yesterday.','Two days later: answer the questions you missed in that session.','One week later: re-test the chapter quickly; the pass is cheap now.') },
+      @{ t = 'p'; s = @('The spaced touches are short, so they fit any routine, and they are what keeps knowledge alive until the exam.','The full memory system appears in the <a href="/blog/how-to-remember-what-you-study/">memory guide</a>.') },
+      @{ t = 'h2'; s = 'How to tell the method is working' },
+      @{ t = 'p'; s = @('Keep a simple weekly score: how many questions you answered from memory, how many you missed, and how many old errors repeated.','A rising answer count and a falling repeat-error count is the only proof you need.','Marks follow that trend, and usually sooner than you expect.') },
+      @{ t = 'h2'; s = 'Common mistakes that waste study time' },
+      @{ t = 'ol'; i = @('Re-reading until it feels familiar and calling that study.','Underlining whole pages so nothing is highlighted.','Solving only the easy first problems of a chapter.','Studying with the phone beside the notebook.','Skipping the end-of-session test because it feels like extra work.') },
+      @{ t = 'h2'; s = 'The action checklist' },
+      @{ t = 'ol'; i = @('Write one outcome for the session before you start.','Split the time into focus blocks with short breaks.','End with a closed-book recall test.','Log every miss and repeat the misses a few days later.','Review the week once and adjust the plan around real life.') },
+      @{ t = 'h2'; s = 'The close' },
+      @{ t = 'p'; s = @('Effective study is not a talent, it is a session design: planned before you start, producing during the blocks and tested at the end.','Run that design most days and the hours you spend turn into recall you can use.','Academic performance then follows the habits, not the clock.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-improve-concentration-while-studying'
+    title    = 'How to Improve Concentration While Studying'
+    cat      = 'study-tips'
+    author   = 'vyasa'
+    pub      = '2026-09-02'
+    upd      = '2026-09-02'
+    excerpt  = 'Concentration is a trainable skill, not a fixed trait. Reset the environment, run focus blocks and protect the start ritual to protect attention.'
+    keywords = @('improve concentration while studying','how to focus on studies','concentration tips for students','stay focused while studying')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A student clearing the study desk of distractions before a timed focus block'
+    related  = @('how-to-stop-procrastinating-and-start-studying','how-to-create-effective-daily-study-timetable','how-to-study-when-you-feel-unmotivated','how-to-build-a-study-routine')
+    cta      = 'Concentration grows faster with a supervised, distraction-light environment. The small-batch sessions at Vyasa Academy in Hulimavu give students exactly that every day.'
+    courses  = @(
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' },
+      @{ label = 'Maths Tuition in Hulimavu'; url = '/maths-tuition-hulimavu/' },
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' }
+    )
+    faq = @(
+      @{ q = 'How do I stop reaching for my phone while studying?'; a = 'Put it in another room or a drawer a student has to stand up to open, not face down beside the book. Distance does what willpower rarely does. The first ten minutes without it are the hardest.' },
+      @{ q = 'How long should I concentrate before a break?'; a = 'Most students hold real attention for roughly twenty-five to forty minutes. Run focus blocks of that length with a five-minute break between, and take a longer break every two blocks.' },
+      @{ q = 'Why does my mind wander even when I want to focus?'; a = 'A wandering mind is normal when the material is hard or the environment is noisy. Restate the sentence, write down the thought that pulled you away and return to the page. The return is the skill.' },
+      @{ q = 'What is the best time of day to study?'; a = 'The best time is your freshest time, and that differs per student. Notice when you solve best and schedule the hardest subject then. Routine matters more than the clock hour.' },
+      @{ q = 'Does music help or hurt concentration while studying?'; a = 'For most students, lyrics and loud background audio hurt recall even when it feels enjoyable. If sound helps you start, try instrumental music at low volume and honestly compare your test scores.' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Most students describe concentration as a gift they never received: the class genius stays focused for an hour, and I lose my place in five minutes.','Concentration is closer to a muscle.','It strengthens with structure, and it collapses under distraction.','This guide shows how to build the structure around a study block.') },
+      @{ t = 'h2'; s = 'Reset the environment before you need willpower' },
+      @{ t = 'ul'; i = @('Phone in another room, or in a drawer that takes effort to open.','Desk holds only the subject you are working now.','Water and notebook within reach so nothing pulls you up mid-block.','Study spot used for study only, so the brain associates the chair with work.','Tell the family the block timing so the interruptions stop arriving.') },
+      @{ t = 'p'; s = @('The environment does the willpower work.','A student who must stand up to reach the phone usually does not.') },
+      @{ t = 'h2'; s = 'Run focus blocks, not open-ended hours' },
+      @{ t = 'p'; s = @('Set a timer for a focus block of twenty-five to forty minutes, work in one direction on one subject, and break for five minutes when the timer ends.','The timer has two jobs: it gives you permission to stop, and it makes the block a game you can win.','Two or three blocks in a row make a solid study session.','The block detail and the start ritual are explained in the <a href="/blog/how-to-build-a-study-routine/">study routine guide</a>.') },
+      @{ t = 'h2'; s = 'One task per block' },
+      @{ t = 'p'; s = @('Decide the single task before the block starts: ten sums, two pages of notes, one diagram.','Switching between tasks mid-block costs more time than it saves, because every switch resets the focus.','A written task for the block removes the mid-block decision about what to do next.') },
+      @{ t = 'h2'; s = 'Use a distraction parking list' },
+      @{ t = 'p'; s = @('When a thought arrives during a block that is not the subject, write it in one line on the parking list and return to the page.','The list empties the worry without leaving the desk: the thought is saved, the focus returns.','Review the list in the break and handle the items then.') },
+      @{ t = 'h2'; s = 'Protect the first ten minutes' },
+      @{ t = 'p'; s = @('The hardest part of any block is the start.','Begin with ninety seconds of the easy end of the task, a warm-up that builds momentum, then the real work.','Students rarely abandon a block once they are three minutes into it.','The same warm-up idea works for the <a href="/blog/how-to-stop-procrastinating-and-start-studying/">procrastination problem</a>.') },
+      @{ t = 'h2'; s = 'Match the hard subject to your fresh time' },
+      @{ t = 'p'; s = @('Attention is highest at a different hour for every student.','Notice the time of day when your solving is clean and schedule the subject you resist there.','The after-school crash is real for most students, so the plan should not put the hardest chapter right after it without a buffer.') },
+      @{ t = 'h2'; s = 'Measure focus like a score' },
+      @{ t = 'p'; s = @('Rate each block out of five: how many minutes of real attention you managed.','A score rising from two to four across two weeks is visible progress, and it keeps the training honest.','The same scoring habit drives the review at the end of each week.') },
+      @{ t = 'h2'; s = 'Common concentration mistakes' },
+      @{ t = 'ol'; i = @('Scheduling a long session right after a heavy school day without a break.','Studying in the family living room with the television on.','Rewarding focus with long phone checking that becomes the new plan.','Forcing four silent hours and running out of willpower by day three.','Treating one bad day as proof that concentration is hopeless.') },
+      @{ t = 'h2'; s = 'The focus checklist' },
+      @{ t = 'ol'; i = @('One task written down for the block.','Phone out of reach, not beside the notebook.','Timer set for twenty-five to forty minutes.','Parking list open for stray thoughts.','Block scored out of five and the trend reviewed weekly.') },
+      @{ t = 'h2'; s = 'The close' },
+      @{ t = 'p'; s = @('Concentration improves the same way any skill improves: with a clean environment, blocks of real attention and honest review.','The first week feels mechanical, and the second week feels normal.','Students who build the ritual stop asking how to concentrate and start asking what to study next.') }
+    )
+  },
+
+  @{
+    slug     = 'best-study-techniques-for-school-students'
+    title    = 'Best Study Techniques for School Students'
+    cat      = 'study-tips'
+    author   = 'vyasa'
+    pub      = '2026-09-08'
+    upd      = '2026-09-08'
+    excerpt  = 'Six techniques do the heavy lifting in a classroom: recall, spacing, mixing, explaining, worked examples and focus blocks. Learn how to pick two per subject.'
+    keywords = @('study techniques for students','best study methods','effective learning techniques','study methods school students')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A comparison table of study techniques a student can apply to mathematics, science and languages'
+    related  = @('active-recall-and-spaced-repetition-for-students','how-to-study-effectively-and-improve-academic-performance','how-to-remember-what-you-study','how-to-make-effective-revision-notes')
+    cta      = 'Techniques become habits fastest under a teacher who checks them daily. The teachers at Vyasa Academy in Hulimavu drill these methods inside the regular class routine.'
+    courses  = @(
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' },
+      @{ label = 'ICSE Tuition in Hulimavu'; url = '/icse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Students collect study techniques the way they collect pens: each starts promising and the pile does nothing.','The truth is simpler.','A small set of techniques does most of the work, and the skill is knowing which two to use per subject.','This guide names six, shows where each belongs and stops before it becomes a fashion show of methods.') },
+      @{ t = 'h2'; s = 'The six techniques that carry a school year' },
+      @{ t = 'h3'; s = '1. Active recall' },
+      @{ t = 'p'; s = @('Answer and explain from memory instead of re-reading.','The act of pulling knowledge out is what makes it stay.','Worth more time than any other single method; fully covered in the <a href="/blog/active-recall-and-spaced-repetition-for-students/">active recall guide</a>.') },
+      @{ t = 'h3'; s = '2. Spaced practice' },
+      @{ t = 'p'; s = @('Revisit the material after a few days, then a week, instead of repeating it all on one day.','Short returns at the right gap protect the knowledge for the exam date.') },
+      @{ t = 'h3'; s = '3. Interleaving' },
+      @{ t = 'p'; s = @('Mix question types from two chapters in one practice set instead of finishing one chapter completely first.','The mix forces the brain to choose the right method, which is exactly what an exam does.') },
+      @{ t = 'h3'; s = '4. Self-explanation' },
+      @{ t = 'p'; s = @('After each solved example, explain in one line why the step came next.','The why-check exposes shallow understanding before the exam does.') },
+      @{ t = 'h3'; s = '5. Worked examples, then attempted variants' },
+      @{ t = 'p'; s = @('Study a solved example carefully, then solve a close variant yourself with the solution covered.','The example trains the method; the variant tests it.') },
+      @{ t = 'h3'; s = '6. Focus blocks' },
+      @{ t = 'p'; s = @('Work in short timed blocks on one task, phone out of reach.','Every other technique fails inside a distraction-filled hour; the block protects the rest.','The block mechanics live in the <a href="/blog/how-to-improve-concentration-while-studying/">concentration guide</a>.') },
+      @{ t = 'h2'; s = 'Where each technique earns its keep' },
+      @{ t = 'table'; head = @('Technique','Use it for','Example subject fit'); rows = @(
+        @('Active recall','Facts, definitions, terminology, formulas','Biology, Chemistry, History'),
+        @('Spaced practice','Anything that must survive to an exam','Maths, Science, Language vocabulary'),
+        @('Interleaving','Mixed-topic tests and chapter transitions','Mathematics practice sets'),
+        @('Self-explanation','Concepts with why behind them','Physics, Chemistry reactions'),
+        @('Worked examples + variants','New methods and problem types','Mathematics, Science numericals'),
+        @('Focus blocks','All deep study sessions','Every subject, especially the hard one')
+      ) },
+      @{ t = 'p'; s = @('The table is a starting point, not a rule.','Techniques ship differently per student, which is why the next section matters.') },
+      @{ t = 'h2'; s = 'Pick two per subject and run them for a month' },
+      @{ t = 'p'; s = @('Choose one recall-type technique and one practice-type technique for each subject.','A common pair is active recall for understanding and interleaved practice for mathematics.','Run the pair for four weeks before judging it, because a method needs legs before it shows results.','Students who change methods weekly get the pleasure of novelty and none of the gains.') },
+      @{ t = 'h2'; s = 'Turn the technique into a routine' },
+      @{ t = 'ol'; i = @('Same time slot every day for the technique start.','Ten-minute session minimum, so the habit is cheap on busy days.','A notebook column logging which technique you used and how the recall went.','Weekly question: is recall improving? If not, change the fit, not the effort.') },
+      @{ t = 'p'; s = @('The routine bones are the same ones the <a href="/blog/how-to-build-a-study-routine/">study routine guide</a> casts for daily study.') },
+      @{ t = 'h2'; s = 'Common mistakes with techniques' },
+      @{ t = 'ol'; i = @('Collecting techniques instead of running two consistently.','Judging a method after a single hard session.','Applying active recall to problems without ever solving them.','Making the technique the project, so planning it replaces doing it.') },
+      @{ t = 'h2'; s = 'The action checklist' },
+      @{ t = 'ol'; i = @('Pick one recall technique and one practice technique for your hardest subject.','Schedule them into a real block this week.','Run them for four weeks without swapping.','Score the recall trend weekly and adjust the fit, not the effort.') },
+      @{ t = 'h2'; s = 'The close' },
+      @{ t = 'p'; s = @('Six techniques, chosen two at a time per subject and run for a month, change a school year.','The technique is not the trophy; the recall at the test is.','Start with active recall and spaced practice, and let the rest earn their place.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-create-effective-daily-study-timetable'
+    title    = 'How to Create a Daily Study Timetable That Actually Works'
+    cat      = 'study-tips'
+    author   = 'venu'
+    pub      = '2026-09-01'
+    upd      = '2026-09-01'
+    excerpt  = 'A timetable works when it fits real school and tuition hours. Plan around the fixed week, keep buffers and review it once a week.'
+    keywords = @('daily study timetable','how to make a study timetable','study schedule for students','effective study plan')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A student writing a weekly timetable that fits around school, tuition, homework and sleep'
+    related  = @('best-study-timetable-for-class-10-students','how-to-balance-school-tuition-homework-and-self-study','how-to-build-a-study-routine','how-many-hours-should-students-study-every-day')
+    cta      = 'A timetable is easier to keep when a centre holds the same rhythm weekly. The fixed batch schedule at Vyasa Academy in Hulimavu gives students a structure to build around.'
+    courses  = @(
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' },
+      @{ label = 'ICSE Tuition in Hulimavu'; url = '/icse-tuition-hulimavu/' }
+    )
+    faq = @(
+      @{ q = 'How many hours of self-study should a timetable plan for?'; a = 'Start small enough to keep: two forty-five minute blocks on school days and a couple of longer weekend blocks. Add time only after the base rhythm survives two full weeks. The honest ranges are in the hours article.' },
+      @{ q = 'What do I do when I miss a planned block?'; a = 'Run the next planned block on time and do not double the following one to compensate. A missed block is data for the Sunday review, not a reason to abandon the week.' },
+      @{ q = 'Should the timetable be the same every day?'; a = 'Weekdays and weekends should differ, because school hours differ. Keep the weekday skeleton stable, then build two weekend blocks over the day the week already used.' },
+      @{ q = 'Do timetables work for every kind of student?'; a = 'No single grid fits everyone. Students with heavy tuition or family responsibilities need shorter blocks and more buffer; the plan must be built around the fixed hours you cannot change.' },
+      @{ q = 'Where should the hardest subject go in the day?'; a = 'In the first block after your freshest time, usually the first study slot of the day. Saving the hard subject for late evening is how it never gets done.' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Most study timetables die within a week because they are written for a student who does not exist: one with empty evenings, no homework and unlimited willpower.','A working timetable is built from the real week first.','This guide takes the day you actually have and shapes the study time inside it.') },
+      @{ t = 'h2'; s = 'Step 1: map the fixed hours' },
+      @{ t = 'p'; s = @('List everything you cannot move: school, tuition, meals, sleep, travel.','Leave ten hours for sleep including time asleep, and be honest about the evening you spend at coaching.','The gaps between these fixed hours are your available windows, and they are the only places the timetable will live.') },
+      @{ t = 'h2'; s = 'Step 2: choose realistic blocks, then shrink them' },
+      @{ t = 'p'; s = @('Pick the two biggest weekday windows and give each a study block of forty to sixty minutes.','If a window is only thirty minutes, a thirty-minute block is still valuable.','Reduce the block until it fits the window without touching the buffer; a plan you keep at forty minutes beats a plan you abandon at two hours.') },
+      @{ t = 'h2'; s = 'A weekday example' },
+      @{ t = 'table'; head = @('Time','Slot'); rows = @(
+        @('6:30 - 7:00','Light recall: yesterday revision from memory'),
+        @('9:00 - 16:00','School'),
+        @('16:30 - 17:15','Tuition or homework block 1'),
+        @('17:15 - 17:30','Break'),
+        @('17:30 - 18:15','Homework block 2'),
+        @('19:30 - 20:10','Self-study block: hard subject first'),
+        @('20:10 - 20:30','Dinner break'),
+        @('20:30 - 21:00','Self-study block: light revision + errors'),
+        @('21:00 - 21:30','Free + next day plan')
+      ) },
+      @{ t = 'p'; s = @('The example bends around a real day; your blocks will sit wherever your windows are.','The two rules that keep it alive are the hard-subject-first slot and the fixed evening stop.') },
+      @{ t = 'h2'; s = 'A weekend example' },
+      @{ t = 'table'; head = @('Slot','Plan'); rows = @(
+        @('Morning block 1','Subject you are weakest in, one hour'),
+        @('Morning block 2','Practice and problems, one hour'),
+        @('Afternoon','Free, sport, family; no guilt'),
+        @('Evening block','Weekly review, error log and next week plan, forty minutes')
+      ) },
+      @{ t = 'p'; s = @('Weekends carry the heavy lifting precisely because they have room, so use the morning freshness and protect one evening block for planning.') },
+      @{ t = 'h2'; s = 'Build buffers into the plan' },
+      @{ t = 'p'; s = @('Leave a ten-minute gap after every block, a blank slot for the days homework overruns, and one free evening a week.','A grid where every hour is assigned breaks the first time anything overruns.','The buffer is not wasted time; it is the reason the timetable survives.') },
+      @{ t = 'h2'; s = 'Review the week every Sunday' },
+      @{ t = 'ol'; i = @('Count the blocks you kept, honestly.','Name the one thing the week kept pushing out.','Adjust one slot before building next week, no guilt about the rest.','Rewrite the calendar fresh for the coming week.') },
+      @{ t = 'p'; s = @('The Sunday review is where the plan improves instead of decaying; it is also the backbone habit of the <a href="/blog/how-to-build-a-study-routine/">study routine guide</a>.') },
+      @{ t = 'h2'; s = 'Common timetable mistakes' },
+      @{ t = 'ol'; i = @('Planning the ideal day instead of the real day.','Scheduling study immediately after the heaviest school day with no buffer.','Making every subject daily and none of them deep.','Filling every evening, leaving no flexible slot.','Abandoning the whole plan after one missed block.') },
+      @{ t = 'h2'; s = 'The close' },
+      @{ t = 'p'; s = @('A timetable works only when it fits the week you actually live.','Map the fixed hours, place small blocks in the real windows, leave buffers and review every Sunday.','That plan survives contact with school, and survival is the whole point.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-stop-procrastinating-and-start-studying'
+    title    = 'How to Stop Procrastinating and Start Studying'
+    cat      = 'study-tips'
+    author   = 'venu'
+    pub      = '2026-09-07'
+    upd      = '2026-09-07'
+    excerpt  = 'Procrastination is usually a size problem, not a laziness problem. The five-minute rule, the smaller task and the if-then plan get the desk started.'
+    keywords = @('how to stop procrastinating','stop procrastinating and study','why do students procrastinate','start studying when you keep delaying')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A student winning the first five minutes of study with a single small task written on a sticky note'
+    related  = @('how-to-improve-concentration-while-studying','how-to-study-when-you-feel-unmotivated','how-to-study-effectively-and-improve-academic-performance','how-to-create-effective-daily-study-timetable')
+    cta      = 'A quiet, supervised start each evening ends the daily choice about starting. The fixed batch schedule at Vyasa Academy in Hulimavu removes the starting decision for students.'
+    courses  = @(
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' },
+      @{ label = 'Maths Tuition in Hulimavu'; url = '/maths-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Procrastination is rarely laziness.','It is usually the brain refusing a task that feels too big, too vague or too likely to go badly.','The fix is not more willpower; it is a smaller, clearer and easier start.','This article is about the first ten minutes, because the first ten minutes decide the session.') },
+      @{ t = 'h2'; s = 'Name the real reason you are stalling' },
+      @{ t = 'ul'; i = @('Task too big: revise the whole chapter feels enormous.','Task too vague: study maths could mean anything.','Fear of messing up: the worry that effort will end in a poor result anyway.','Reward too near: the phone wins because it is here and the marks are later.') },
+      @{ t = 'p'; s = @('Match the stall to its fix.','A big task shrinks, a vague task becomes specific, a feared task starts small and a phone problem becomes a distance problem.') },
+      @{ t = 'h2'; s = 'The five-minute rule' },
+      @{ t = 'p'; s = @('Agree to study for five minutes, and only five.','Set the timer, do the smallest honest piece of work, and then give yourself the door to stop.','Almost every student continues past five minutes on their own, because the hardest part was never the hour, it was the start.','The rule converts the huge session into a tiny commitment.') },
+      @{ t = 'h2'; s = 'Shrink the task to its first action' },
+      @{ t = 'p'; s = @('Do not write study science or do revision.','Write the first visible action instead: open chp 4 to page 61, write the three definitions, solve sums one to five.','A task small enough to start is a task with a yes attached.','Starting is a decision, and a specific one is an easier decision.') },
+      @{ t = 'h2'; s = 'Put the waiting of the task in the open' },
+      @{ t = 'p'; s = @('Keep the book open at the task page, the pen on the notebook and the one subject on the desk before the break ends.','A starting state assembled in advance removes the ten-minute warm-up that becomes the procrastination.','The desk shows you the task before you have decided anything.') },
+      @{ t = 'h2'; s = 'Use if-then plans' },
+      @{ t = 'p'; s = @('Write the trigger: if I finish dinner, then I sit at the desk and open the notebook.','If the doorbell rings, then I pause the timer and return when it stops.','If-then planning works because it moves the decision out of the moment of weakness and into the planning moment.') },
+      @{ t = 'h2'; s = 'Make the phone a distance problem' },
+      @{ t = 'p'; s = @('The phone in the same room is a far harder problem than the same phone in another room.','Charge it outside the study space during study hours and keep the parking list for stray thoughts.','The five-minute rule covers the start; the distance covers the middle.') },
+      @{ t = 'h2'; s = 'Handle the worse day' },
+      @{ t = 'p'; s = @('Every student has a day that nothing seems to start.','On that day run the light plan: ten minutes of recall, one solved sum or one page of notes, then stop.','A kept ten-minute day protects the routine far better than a skipped day with big promises.','The lighter version of the routine is the same one the <a href="/blog/how-to-study-when-you-feel-unmotivated/">unmotivated guide</a> advises.') },
+      @{ t = 'h2'; s = 'Common procrastination mistakes' },
+      @{ t = 'ol'; i = @('Waiting for the mood to arrive before starting.','Planning study in long blocks that require a heroic start.','Using social media as a break before studying has begun.','Blaming laziness instead of fixing the task size.','Restarting the whole routine after one bad evening.') },
+      @{ t = 'h2'; s = 'The close' },
+      @{ t = 'p'; s = @('Stopping procrastination is not about defeating yourself; it is about shrinking the first ten minutes until the start is cheap.','Five minutes, a specific action and a phone in another room.','Repeated daily, the cheap start becomes a study habit, and the habit does the motivating.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-remember-what-you-study'
+    title    = 'How to Remember What You Study for Longer'
+    cat      = 'study-tips'
+    author   = 'vyasa'
+    pub      = '2026-09-06'
+    upd      = '2026-09-06'
+    excerpt  = 'Memory is built by recalling, not by re-reading. Test yourself, space the reviews and attach the new to the old, and the material stays until the exam.'
+    keywords = @('how to remember what you study','memory techniques for students','how to memorize for exams','remember what you study longer')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A student testing recall of the day lesson with the notebook closed before checking it'
+    related  = @('active-recall-and-spaced-repetition-for-students','how-to-make-effective-revision-notes','how-to-remember-mathematical-formulas','how-to-revise-before-an-exam')
+    cta      = 'Memory and study habits grow together under a teacher who tests recall daily. The concept-based classes at Vyasa Academy in Hulimavu are built around regular recall checks.'
+    courses  = @(
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' },
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'Maths Tuition in Hulimavu'; url = '/maths-tuition-hulimavu/' }
+    )
+    faq = @(
+      @{ q = 'Why do I forget what I studied even though I read it twice?'; a = 'Reading builds familiarity, and familiarity feels like memory, but it is not recall. Each time you pull the material out with the book closed, the memory strengthens. Re-reading rarely does the same work.' },
+      @{ q = 'How often should I review to keep something memorised?'; a = 'A simple rhythm of recall one day later, again three days later and once after a week holds most class topics. The gaps can widen as the material becomes solid.' },
+      @{ q = 'Are mnemonics useful or just tricks?'; a = 'Mnemonics work best for lists and sequences: acronyms, rhymes or a small story around the items. They carry the start of the recall while the subject matter carries the understanding.' },
+      @{ q = 'How much should I review in a single memory session?'; a = 'Short sessions win. Ten minutes of real recall review beats an hour of slow re-reading, because memory is built by the retrieval, and retrieval is a quick, effortful act.' },
+      @{ q = 'What if a chapter is so long I cannot recall any of it?'; a = 'Break it into sections and recall section by section. Recall the headings first, then one fact under each. Small pieces of retrieval stack into command of the whole chapter over a few days.' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('The most demoralising moment in a students term is the one where a chapter studied carefully a fortnight ago returns as a blank.','The blank is not a bad memory.','It is a fact of how memory works: what is not brought back out fades.','The good news is that the remembering is a technique you can own.') },
+      @{ t = 'h2'; s = 'Memory is built by recalling, not by re-reading' },
+      @{ t = 'p'; s = @('Every time you recall the material with the book closed, the connection strengthens; every comfortable re-read mainly strengthens the feeling of familiarity.','Exams test recall, so memory work should be recall work.','The simplest version of this is the cover-and-test habit: read a section, close the book, write all you remember, then check.','The broader method belongs to the <a href="/blog/active-recall-and-spaced-repetition-for-students/">active recall guide</a>.') },
+      @{ t = 'h2'; s = 'Space the reviews so the gaps stretch' },
+      @{ t = 'ol'; i = @('Day of learning: end-session recall test, ten minutes.','One day later: recall the section again, shorter.','Three days later: recall it with the notes closed.','Seven days later: answer the questions you missed earlier.','Every three weeks to the exam: a quick recall pass.') },
+      @{ t = 'p'; s = @('Each return is faster than the last, and each faster return is a stronger memory.','The plan is the memory review calendar, and it fits inside any routine.') },
+      @{ t = 'h2'; s = 'Attach the new to something you already know' },
+      @{ t = 'p'; s = @('A new definition sticks better when it plugs into an existing idea: the new formula borrows the logic of an older one, a biology process connects to a familiar sequence, a history date anchors to an event you already remember.','Ask yourself, what does this remind me of, before you study a hard section.','The link is what gives the new idea a shelf to sit on.') },
+      @{ t = 'h2'; s = 'Teach it to explain it' },
+      @{ t = 'p'; s = @('Explain the section aloud in your own words, as if the class is listening.','When you cannot explain a step, that is the exact part needing another look.','The explanation routine turns vague familiarity into command, and it takes minutes.') },
+      @{ t = 'h2'; s = 'Use memory helpers for lists and sequences' },
+      @{ t = 'ul'; i = @('Acronyms: take the first letters of a list and form a word.','Rhymes: a short rhyme carries the order better than a list.','Small stories: string the items into a silly paragraph, silly is memorable.','Mnemonics carry the start of recall; the understanding still has to come from study.') },
+      @{ t = 'h2'; s = 'Memory work by subject' },
+      @{ t = 'ul'; i = @('Mathematics: recall the method card and the formula, then solve.','Chemistry: recall the reaction and the conditions from memory.','Biology: recall the definition and redraw the diagram from memory.','Languages: recall vocabulary in the present sentence, not the list order.') },
+      @{ t = 'p'; s = @('The subject fit for formulas and reactions is covered in the <a href="/blog/how-to-remember-mathematical-formulas/">formula recall guide</a> and the <a href="/blog/how-to-remember-chemical-reactions/">reaction recall guide</a>.') },
+      @{ t = 'h2'; s = 'Common memory mistakes' },
+      @{ t = 'ol'; i = @('Re-reading the same pages in the evenings as revision.','Testing yourself only by recognising answers in the margin.','Cramming one huge night instead of spaced returns.','Reviewing everything, so nothing specific gets hard practice.','Giving up on a chapter because the first recall was blank.') },
+      @{ t = 'h2'; s = 'The close' },
+      @{ t = 'p'; s = @('Remembering is not a gift, it is a schedule of recalls.','Test from memory, space the returns, attach the new to the known and explain aloud.','Run that schedule and the blank pages at exam time start staying blank for the right reason: nothing to fear.') }
+    )
+  },
+
+  @{
+    slug     = 'active-recall-and-spaced-repetition-for-students'
+    title    = 'Active Recall and Spaced Repetition: How Students Can Use Them'
+    cat      = 'study-tips'
+    author   = 'vyasa'
+    pub      = '2026-09-05'
+    upd      = '2026-09-05'
+    excerpt  = 'Two evidence-informed habits do most of the learning: pull the answer out instead of re-reading, and revisit it on a widening schedule. Simple enough for any student.'
+    keywords = @('active recall for students','spaced repetition for students','retrieval practice','evidence based study methods')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A student using a recall sheet to test the class lesson and mark the missed points'
+    related  = @('how-to-remember-what-you-study','best-study-techniques-for-school-students','how-to-revise-before-an-exam','how-to-study-effectively-and-improve-academic-performance')
+    cta      = 'These are the two habits behind regular class tests. The weekly test routine at Vyasa Academy in Hulimavu builds active recall and spaced review into the normal course.'
+    courses  = @(
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' },
+      @{ label = 'ICSE Tuition in Hulimavu'; url = '/icse-tuition-hulimavu/' }
+    )
+    faq = @(
+      @{ q = 'Is active recall difficult at first?'; a = 'Yes, deliberately so. Pulling an answer out of memory is harder and slower than recognising it on the page, and that effort is the point: the difficulty is what builds the memory. It becomes quick with practice.' },
+      @{ q = 'Can active recall replace reading completely?'; a = 'No. The first reading to understand the material matters; active recall replaces the false revision of re-reading. Use both in order: understand first, then recall against the clock.' },
+      @{ q = 'When should spaced repetition start for a test?'; a = 'Begin the returns as soon as the material is taught: one day later, three days later, a week later. Starting the spacing early means the exam week is a light confirmation instead of a first meeting.' },
+      @{ q = 'What do I do with the questions I keep missing?'; a = 'Mark them as your personal list. Re-answer them the next day, again in three days, and again before the test. The missed questions are the true syllabus of your revision.' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Behind most of the study advice a student hears stand two core practices: active recall and spaced repetition.','Each is simple to describe and simple to run with a notebook.','Together they do the heaviest lifting in a school year, which is why they deserve their own article.') },
+      @{ t = 'h2'; s = 'Active recall: pull it out, do not push it in again' },
+      @{ t = 'p'; s = @('Read a section once for understanding, close the book, and answer questions about it in writing.','Then check and note the misses.','That is active recall: producing the answer rather than recognising it.','It is harder than re-reading, and the effort is exactly what fixes the memory.') },
+      @{ t = 'h2'; s = 'How a recall session runs in practice' },
+      @{ t = 'ol'; i = @('Pick one topic and write four or five questions about it from memory.','Answer each in one or two written lines with the book closed.','Mark the answers honestly against the notes.','Rewrite the missed point in your own words as the correct line.','Add the missed question to the spaced list for the next returns.') },
+      @{ t = 'p'; s = @('The whole loop takes ten to fifteen minutes, and it beats an hour of comfortable re-reading at the desk before an exam.') },
+      @{ t = 'h2'; s = 'Spaced repetition: revisit on a widening schedule' },
+      @{ t = 'p'; s = @('A single recall builds a fresh memory that still fades.','Spaced repetition brings it back after a gap, then a longer gap, so each return catches it just before it disappears.','The practical version for a student is a review notebook with three columns: question, date done, next date.') },
+      @{ t = 'table'; head = @('Return','Gap after the lesson','What to do'); rows = @(
+        @('First','Same evening','Recall the lesson from memory for 10 minutes'),
+        @('Second','1 day later','Re-answer the missed questions'),
+        @('Third','3 days later','Quick recall pass, notes closed'),
+        @('Fourth','7 days later','Test yourself on the whole chapter'),
+        @('Top-up','Every 2-3 weeks','Answer the personal miss list')
+      ) },
+      @{ t = 'p'; s = @('The gaps grow as the memory firms up, and the returns shrink in length, which keeps the method cheap enough to keep.') },
+      @{ t = 'h2'; s = 'Combine the two in one session' },
+      @{ t = 'p'; s = @('Open with a ten-minute recall of the last session, then learn the new section, then close with the questions the new section will ask.','The session uses recall at the start, spaced review across the calendar and recall again at the close.','The same session shape is the one the <a href="/blog/how-to-study-effectively-and-improve-academic-performance/">effective study guide</a> lays out hour by hour.') },
+      @{ t = 'h2'; s = 'Adapt them to your subjects' },
+      @{ t = 'p'; s = @('In mathematics, recall the method card first, then solve a variant with it covered.','In science, recall the process and the definition before checking the diagram.','In languages, recall the vocabulary inside a sentence, not the word list.','The subject adaptation follows the <a href="/blog/best-study-techniques-for-school-students/">technique table</a>.') },
+      @{ t = 'h2'; s = 'Keep it simple: no app required' },
+      @{ t = 'p'; s = @('The notebook columns do the job of expensive apps, because the memory works on the recall, not on the software.','Students who enjoy digital tools can use them, but the paper version never needs a password or a charger.') },
+      @{ t = 'h2'; s = 'Common mistakes' },
+      @{ t = 'ol'; i = @('Making the recall too easy by leaving the book half-open.','Skipping the marking step, so the misses are never identified.','Spacing returns too far apart, so each one is a re-learn instead of a review.','Using the technique on content never understood in the first place.') },
+      @{ t = 'h2'; s = 'The close' },
+      @{ t = 'p'; s = @('Active recall decides what stays, and spaced repetition decides how long it stays.','Run the recall loop daily and the widening schedule weekly.','Two habits, one notebook and a steady rhythm are the whole system.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-revise-before-an-exam'
+    title    = 'How to Revise Before an Exam'
+    cat      = 'study-tips'
+    author   = 'vyasa'
+    pub      = '2026-08-31'
+    upd      = '2026-08-31'
+    excerpt  = 'Revision exists to convert learning into recall. Start weeks ahead, run the recall-check-fix cycle and let past papers tell you what the exam actually rewards.'
+    keywords = @('how to revise before an exam','exam revision plan','revision strategy for exams','how to prepare for a test')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A student revising for an exam with one-page chapter summaries and a previous year paper'
+    related  = @('how-to-make-effective-revision-notes','importance-of-previous-year-question-papers-class-10','how-to-manage-time-during-exams','how-to-revise-effectively-for-class-12-board-exams')
+    cta      = 'Revising under a teacher who marks your practice papers is how board students finish strong. Vyasa Academy in Hulimavu runs mock-test review cycles in the final stretch.'
+    courses  = @(
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' },
+      @{ label = 'ICSE Tuition in Hulimavu'; url = '/icse-tuition-hulimavu/' }
+    )
+    faq = @(
+      @{ q = 'How far before an exam should revision start?'; a = 'Weeks before, not days. The first pass should finish early so the last days hold light recall and practice papers. Starting late forces cramming, which is why the revision feels so fragile.' },
+      @{ q = 'What should I revise the night before?'; a = 'Nothing new. Review the one-page summaries and the personal error list, and sleep fully. Recall at the desk in the morning beats new material learned at 11 p.m.' },
+      @{ q = 'Should I revise the easier or harder topics first?'; a = 'Harder topics while you are fresh, in small doses, then the easier material as confident filler. The easy chapters reward steady review more than they reward stress.' },
+      @{ q = 'Is cramming ever useful?'; a = 'Cramming places fresh material in short-term memory for the next morning, which helps in an emergency and nothing else. It melts before the next test, so exam seasons deserve spaced revision instead.' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('By exam week, the learning is finished, and the job that remains is different: converting what you know into recall under time.','That is revision.','Students who learn well but revise badly leave marks on the table, which makes revision a skill worth its own plan.') },
+      @{ t = 'h2'; s = 'Revision is recall, not a second first-read' },
+      @{ t = 'p'; s = @('Re-reading a chapter in the final days feels productive and produces the least.','Revision works when the book is closed and the material comes out.','The turn everything into questions and answer them from memory, using the same loop as the <a href="/blog/active-recall-and-spaced-repetition-for-students/">active recall method</a> at exam scale.') },
+      @{ t = 'h2'; s = 'Start weeks ahead, finish early' },
+      @{ t = 'ol'; i = @('Three to four weeks before: first revision pass, one chapter a day, marking weak topics.','Two weeks before: redo the topics marked weak, one a day.','Final week: one-page summaries, error log and one light practice paper.','Final two days: memory lists only, and full sleep.') },
+      @{ t = 'p'; s = @('The schedule finishes early on purpose: the last days paddle in calm water instead of swimming upstream.') },
+      @{ t = 'h2'; s = 'The recall-check-fix cycle for every chapter' },
+      @{ t = 'ol'; i = @('Recall: write the chapter summary from memory on a blank page.','Check: open the one-page notes and mark every missing point.','Fix: re-learn only the misses, not the whole chapter.','Log: add the misses to the error list.','Re-verify: recall the summary again the next day.') },
+      @{ t = 'p'; s = @('A chapter revised through the cycle in twenty minutes holds better than a chapter re-read in forty.') },
+      @{ t = 'h2'; s = 'Let past papers run the revision' },
+      @{ t = 'p'; s = @('Attempt at least one full paper per main subject in the final weeks, timed, marked honestly.','The parts that bleed marks become the top of the next revision list.','The method for reading a paper as training is in the <a href="/blog/importance-of-previous-year-question-papers-class-10/">previous-year paper guide</a>.') },
+      @{ t = 'h2'; s = 'Revise each subject in its own shape' },
+      @{ t = 'ul'; i = @('Mathematics: solve problems, recall method cards, redo the missed sums.','Science: definitions, processes, reactions and diagrams from memory.','Languages: formats, one timed composition, vocabulary in sentences.') },
+      @{ t = 'p'; s = @('The subject fit follows the <a href="/blog/how-to-make-effective-revision-notes/">revision notes guide</a>, where each chapter becomes a one-page summary built for exactly this week.') },
+      @{ t = 'h2'; s = 'The night before and the morning of' },
+      @{ t = 'p'; s = @('The night before: summaries once, error log once, sleep.','The morning of: a single look at the one-page summary and a calm arrival with ten quiet minutes.','The night-before cram is the most common revision mistake, and it is fully avoidable by the finishing-early plan.') },
+      @{ t = 'h2'; s = 'Common revision mistakes' },
+      @{ t = 'ol'; i = @('Starting fresh material inside the final week.','Revising by reading only.','Practising the chapters you enjoy and skipping the weak ones.','Comparing hours with classmates instead of recall.','Skipping sleep for one more re-read.') },
+      @{ t = 'h2'; s = 'The close' },
+      @{ t = 'p'; s = @('Revising for an exam is the last, most public test of how you learned.','Start early, run the recall-check-fix cycle chapter by chapter and let papers referee the final weeks.','Rested and rehearsed beats exhausted and re-read, every time.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-make-effective-revision-notes'
+    title    = 'How to Make Effective Revision Notes'
+    cat      = 'study-tips'
+    author   = 'vyasa'
+    pub      = '2026-09-04'
+    upd      = '2026-09-04'
+    excerpt  = 'Revise from one page per chapter, not from a full notebook. Capture key terms, methods and mistakes, then rebuild the page from memory.'
+    keywords = @('how to make revision notes','effective revision notes for exams','one page notes','study notes for students')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A student compressing a chapter into a single-page revision note with terms, methods and mistakes'
+    related  = @('how-to-revise-before-an-exam','active-recall-and-spaced-repetition-for-students','how-to-remember-what-you-study','best-study-techniques-for-school-students')
+    cta      = 'Notes improve fastest when a teacher reviews them. The class teachers at Vyasa Academy in Hulimavu check note pages and practice books in the weekly routine.'
+    courses  = @(
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' },
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Most revision notes are the textbook copied smaller, which means the student spends the revision time copying and none of it recalling.','A useful note page is a working tool: small enough to hold, specific enough to recall and built to be torn away from.','This guide shows the one-page-per-chapter method.') },
+      @{ t = 'h2'; s = 'Capture only three things on a note page' },
+      @{ t = 'ul'; i = @('Key terms and their one-line meanings, in the textbook wording where it matters.','Methods: the steps a problem takes, the format an answer uses.','Mistakes: the points you personally keep missing, with the fix.') },
+      @{ t = 'p'; s = @('If it is already in the book and you know it, it stays out of the notes.','The notes shrink the chapter to the material you will actually re-meet in the final week.') },
+      @{ t = 'h2'; s = 'The one-page structure' },
+      @{ t = 'ol'; i = @('Title the chapter at the top, with the date made.','Headings for the three boxes: terms, methods, mistakes.','A final line: the one sentence that summarises the whole chapter.') },
+      @{ t = 'p'; s = @('One compressed page per chapter means the entire syllabus fits in a small file by exam week, and one file is easy to carry and easier to recall.') },
+      @{ t = 'h2'; s = 'Notes per subject' },
+      @{ t = 'ul'; i = @('Mathematics: formula box, method cards by problem type, the error list with fixes.','Physics: idea in one line, formula with units, the derivation skeleton, the figure.','Chemistry: the reaction map and the conditions on every arrow, the exceptions list.','Biology: the definition, the process flowchart, the diagram, the two mistakes you made.','Languages: formats, grammar rules you break, five trouble words.') },
+      @{ t = 'p'; s = @('Each page fits the subject shape, which is why the page is useful in the exam week instead of decorative.') },
+      @{ t = 'h2'; s = 'Build the page from memory, then check' },
+      @{ t = 'p'; s = @('At revision time, cover the page and try to rebuild it from memory on a blank sheet.','Then compare and fix the misses.','A page you rebuilt once is worth ten pages you have only read.','The rebuild is the same recall loop the <a href="/blog/active-recall-and-spaced-repetition-for-students/">active recall guide</a> runs for whole chapters.') },
+      @{ t = 'h2'; s = 'The note page becomes the past-paper audit sheet' },
+      @{ t = 'p'; s = @('After each practice paper, copy the missed question type onto the relevant chapter page.','The page then carries exactly what the past paper proved you forget, which is why the page and the paper belong together in the final weeks.') },
+      @{ t = 'h2'; s = 'Keep the system light' },
+      @{ t = 'ul'; i = @('One notebook per subject, or a folder of pages.','No digital perfection required; handwriting works.','Notes made during class, clarified the same evening.','No colour-coding project that eats study time.') },
+      @{ t = 'h2'; s = 'Common note-making mistakes' },
+      @{ t = 'ol'; i = @('Copying the textbook sentence by sentence.','Making the notes pretty instead of useful.','Keeping class notes and revision notes separate and never merging them.','Never reading the notes until the final week, then meeting them cold.') },
+      @{ t = 'h2'; s = 'The close' },
+      @{ t = 'p'; s = @('Effective revision notes are one-page, three-boxed and rebuilt from memory.','Capture the terms, methods and mistakes, then pull the page back out of your own head a week later.','The final week then contains the whole syllabus in a folder you actually know.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-prepare-for-weekly-tests-and-school-exams'
+    title    = 'How to Prepare for Weekly Tests and School Exams'
+    cat      = 'study-tips'
+    author   = 'venu'
+    pub      = '2026-09-03'
+    upd      = '2026-09-03'
+    excerpt  = 'Weekly tests are small rehearsals that compound into strong final scores. Prepare in daily chunks, use every test as data and keep an error log.'
+    keywords = @('how to prepare for weekly tests','weekly test preparation','school exam preparation','how to do well in class tests')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A student preparing for a weekly class test in small daily review chunks'
+    related  = @('how-to-analyse-test-mistakes-and-improve-marks','how-to-revise-before-an-exam','complete-exam-preparation-strategy-for-school-students','how-to-create-effective-daily-study-timetable')
+    cta      = 'Weekly tests train what final exams reward, and they work best under honest marking. The regular test cycle at Vyasa Academy in Hulimavu reviews every paper with the student.'
+    courses  = @(
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' },
+      @{ label = 'ICSE Tuition in Hulimavu'; url = '/icse-tuition-hulimavu/' }
+    )
+    faq = @(
+      @{ q = 'How early should I start preparing for a weekly test?'; a = 'As soon as the previous test ends. Keep daily chunks on the material being taught, then one focused review session the evening before the test. Cramming the night before turns a small test into a small crisis.' },
+      @{ q = 'What if homework eats all the time before the test?'; a = 'Prepare inside the homework: when you finish the assignment on the chapter, spend five minutes recalling the key points from memory. The recall is the preparation, and it fits inside the work you must do anyway.' },
+      @{ q = 'Do weekly tests matter for the final exam?'; a = 'Yes, doubly. They force the spaced recall that builds long-term memory, and their mistakes, logged and fixed, are exactly the weaknesses the final paper would have found. A strong weekly test record is a strong final score in training.' },
+      @{ q = 'How should I use the test day itself?'; a = 'Arrive with the summary sheet reviewed and the equipment ready. During the test, read the full paper first, use the mark-weighted time budget and spend the last minutes auditing answers for slips.' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Weekly tests get a bad reputation as small marks that do not matter.','They are the best training a school gives you, because they force the recall that holds knowledge until the final.','Students who treat weekly tests as rehearsals usually find the finals feel like a repeat performance.','This guide turns the Thursday test into an engine for the whole term.') },
+      @{ t = 'h2'; s = 'Think in a weekly rhythm, not a test night' },
+      @{ t = 'ol'; i = @('Day one after the test: read the corrected paper and log the mistakes.','All week: cover the chapter as it is taught, with a daily recall pass of the previous day.','The evening before: one focused session on the whole chapter, from memory.','Test day: summary sheet reviewed, paper read fully, answers audited.') },
+      @{ t = 'p'; s = @('The rhythm keeps only a small daily cost and removes the test-night scramble.') },
+      @{ t = 'h2'; s = 'Prepare in daily chunks, not one long night' },
+      @{ t = 'p'; s = @('Twenty minutes a day across five days beats one and a half hours the night before, because the daily chunks space the learning and spacing is what holds it.','Own the chapter as it is taught: ask the question in class, solve the examples at home, recall the section in the evening.','The chunked rhythm is the same one the <a href="/blog/how-to-create-effective-daily-study-timetable/">daily timetable guide</a> builds around.') },
+      @{ t = 'h2'; s = 'Use the test as data' },
+      @{ t = 'p'; s = @('Every test paper returns with the most honest feedback you will get all term: exactly which part you misunderstood, mis-solved or slipped on.','Copy the missed questions into the term error log and fix them within the following week.','The full audit method lives in the <a href="/blog/how-to-analyse-test-mistakes-and-improve-marks/">test analysis guide</a>.') },
+      @{ t = 'h2'; s = 'Test-taking in the small hall' },
+      @{ t = 'ol'; i = @('Read the whole paper before writing.','Spend minutes by marks, not by question order.','Take the easy questions first to bank marks.','Park the hard question with a marker and return.','Audit the last five minutes for slips, never leave early.') },
+      @{ t = 'p'; s = @('The same in-hall habits scale up to the <a href="/blog/how-to-manage-time-during-exams/">final exam plan</a>, so the weekly test is also where exam technique is trained.') },
+      @{ t = 'h2'; s = 'When a test goes badly' },
+      @{ t = 'p'; s = @('A bad small test is cheap feedback.','Read the paper, identify the gap, fix it in the next week and move on without the drama.','Students who treat a bad weekly test as news instead of noise fix it, and fixing it is the entire game.') },
+      @{ t = 'h2'; s = 'Common weekly-test mistakes' },
+      @{ t = 'ol'; i = @('Studying for the test only on the night before.','Skipping the correction review once the marks are in.','Checking the answer key while solving, which trains recognition.','Hiding a bad mark from yourself instead of logging it.') },
+      @{ t = 'h2'; s = 'The close' },
+      @{ t = 'p'; s = @('Weekly tests are the small, honest heartbeat of the term.','Prepare in daily chunks, log the mistakes, fix them within a week and treat the hall like a miniature board exam.','Do that each week and the final paper stops being a mountain.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-improve-science-conceptual-understanding'
+    title    = 'How to Improve Science Concepts and Understanding'
+    cat      = 'study-tips'
+    author   = 'vyasa'
+    pub      = '2026-08-30'
+    upd      = '2026-08-30'
+    excerpt  = 'Concepts stick when you ask why, trace the diagram, connect the topic to real life and answer from memory. Science rewards understanding over word-perfect recall.'
+    keywords = @('improve science concepts','science conceptual understanding','how to understand science better','learn science concepts deeply')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A student explaining a science process from a diagram while tracing what happens at each step'
+    related  = @('how-to-improve-conceptual-understanding-in-science','how-to-study-physics-for-cbse-class-12','how-to-study-biology-effectively-for-cbse-board-exams','importance-of-diagrams-in-science-exams')
+    cta      = 'Concept-first teaching is the core of the Science program at Vyasa Academy in Hulimavu, where every chapter is taught with why before formula.'
+    courses  = @(
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' },
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Science rewards the student who can say why, and punishes the student who memorised the what.','The formula written perfectly and then applied wrongly is a memorised fact failing a conceptual test.','Concepts are the why behind every equation, diagram and process, and they are learnable like any other skill.') },
+      @{ t = 'h2'; s = 'Ask why at every step, even the obvious ones' },
+      @{ t = 'p'; s = @('When a formula is introduced, ask four questions: what physical idea does it capture, what happens when one value rises, what are the limits, and where does it fail.','Example: ohms law is not a rule to memorise but a relationship to feel, more push, more flow.','The why-habit turns every science chapter from a list into a chain, and a chain or a set of chains is easier to carry.') },
+      @{ t = 'h2'; s = 'Trace every diagram like a story' },
+      @{ t = 'p'; s = @('A labelled diagram is a freeze-frame of a process: blood has travelled before the drawing and will travel after it.','Trace the flow arrow by arrow and name what each labelled part does in one line.','When you can narrate the diagram, the labels stop being a spelling test.','The deeper diagram method is in the <a href="/blog/importance-of-diagrams-in-science-exams/">diagrams guide</a>.') },
+      @{ t = 'h2'; s = 'Connect the chapter to life you can see' },
+      @{ t = 'ul'; i = @('Digestion: what happens after a heavy meal.','Photosynthesis: why the plant near the window grows differently.','Pressure: why the ironing board and the drawing pin differ.','Electricity: why the fuse protects the circuit.') },
+      @{ t = 'p'; s = @('A concept linked to a daily image survives; an isolated definition fades.','The same habit powers the <a href="/blog/how-to-make-science-interesting-for-students/">science interest article</a>.') },
+      @{ t = 'h2'; s = 'Explain it back without the jargon shield' },
+      @{ t = 'p'; s = @('Jargon is a shield: the big words sound learned and hide the gaps.','Close the book and explain the topic in plain words, as if to a younger cousin.','Wherever plain words fail, a real gap hides, and that gap is the one to study.','The explanation habit doubles as the <a href="/blog/active-recall-and-spaced-repetition-for-students/">active recall</a> tool.') },
+      @{ t = 'h2'; s = 'Solve small numericals to feel the concept' },
+      @{ t = 'p'; s = @('Science numericals are concept translators: they force the relationship to act.','Start with one simple numbers problem per concept, check the units at every step and ask whether the answer world makes sense.','The unit discipline for physics is in the <a href="/blog/how-to-study-physics-for-cbse-class-12/">physics guide</a> and the <a href="/blog/how-to-prepare-physical-chemistry-numericals/">chemistry numericals guide</a>.') },
+      @{ t = 'h2'; s = 'Keep a science notebook with a question column' },
+      @{ t = 'p'; s = @('The notebook has three columns: what I learned, why, and the question I still wonder about.','The question column gives the next day a target and turns curiosity into structure.','Students who maintain the column usually find themselves clearing the questions on schedule.') },
+      @{ t = 'h2'; s = 'Common conceptual mistakes' },
+      @{ t = 'ol'; i = @('Memorising definitions before understanding the process.','Learning only the formula and never the physical idea.','Skipping the diagrams because they look like drawing practice.','Using jargon in practice to hide a gap.','Moving to the next chapter while a why question stays unanswered.') },
+      @{ t = 'h2'; s = 'The close' },
+      @{ t = 'p'; s = @('Science understanding is built stitch by stitch: a why asked, a diagram narrated, a real-life hook and a plain explanation.','Do that per topic and the syllabus stops being a thousand facts.','It becomes a few connected stories that happen to cover the syllabus.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-manage-time-during-exams'
+    title    = 'How to Manage Time During Exams'
+    cat      = 'study-tips'
+    author   = 'venu'
+    pub      = '2026-08-29'
+    upd      = '2026-08-29'
+    excerpt  = 'Minutes are marks in an exam hall. Read the paper fully first, spend by marks, take the easy wins and audit the final minutes.'
+    keywords = @('time management during exams','how to manage time in exam','exam hall time management','finish exam paper on time')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A student following a written time budget while solving an exam paper in the hall'
+    related  = @('how-to-avoid-common-exam-mistakes','how-to-manage-time-during-cbse-class-10-board-exams','how-to-manage-time-in-mathematics-board-exam','complete-exam-preparation-strategy-for-school-students')
+    cta      = 'Timed practice under supervision is how students learn the hall skill. The weekly test and mock cycle at Vyasa Academy in Hulimavu trains timing as part of the course.'
+    courses  = @(
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' },
+      @{ label = 'ICSE Tuition in Hulimavu'; url = '/icse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Every exam hall has the same clock, and the same number of marks.','The students who finish feel the pressure; the students who finish well work to a plan of minutes.','Time management inside the exam is a rehearsable skill, and this guide is the rehearsal plan.') },
+      @{ t = 'h2'; s = 'Win the first five minutes' },
+      @{ t = 'p'; s = @('Read the full paper once, briskly, before writing.','Mark the sections you can answer cleanly and note the order you will attempt them.','The read removes surprise and gives the paper a shape you have already seen.','Five minutes spent reading saves twenty later.') },
+      @{ t = 'h2'; s = 'Spend minutes by marks, not by instinct' },
+      @{ t = 'p'; s = @('A three-hour paper worth eighty marks gives a rough budget: spend near the marks, a little more on the heavy sections, a little less on the light.','A pre-written budget on the corner of the sheet keeps the plan visible all paper long.','The mark-weighted budget is the same one the <a href="/blog/how-to-manage-time-during-cbse-class-10-board-exams/">Class 10 plan</a> runs at board scale.') },
+      @{ t = 'h2'; s = 'Attack in the order of marks' },
+      @{ t = 'ol'; i = @('Short and objective items first: they bank marks fast.','Two and three mark questions next.','Long answers in the middle, when the mind is still fresh.','The hardest or most uncertain question last, when everything else is banked.') },
+      @{ t = 'p'; s = @('The order is rehearsed in practice papers, so the hall is not the first place you try it.') },
+      @{ t = 'h2'; s = 'Use checkpoints to catch a slow start' },
+      @{ t = 'p'; s = @('Fix two moments: when half the time has gone and when a quarter remains.','At each checkpoint compare where you are against the budget and reallocate the minutes left.','A slow start caught at the half-hour mark is cheap; the same catch at the last ten minutes is not.') },
+      @{ t = 'h2'; s = 'When you are stuck, park the question' },
+      @{ t = 'ol'; i = @('Leave a small marker by the question number.','Take the next question and return later.','Blank on a definition: write the nearby material, refine on return.','Never sink more than the budget minutes into one question.') },
+      @{ t = 'p'; s = @('The partial marks on the rest of the paper outscore the perfect answer to one hard question.') },
+      @{ t = 'h2'; s = 'The final fifteen minutes are an audit' },
+      @{ t = 'ol'; i = @('Stop starting new answers at the fifteen minute mark.','Check every question is attempted and every part labelled.','Scan for slips: signs, units, spellings, skipped steps.','Confirm the name and roll number on every sheet.') },
+      @{ t = 'p'; s = @('The audit habit converts several marks back from the last minutes of the paper, which is where they are usually lost.') },
+      @{ t = 'h2'; s = 'Train the skill before the hall' },
+      @{ t = 'p'; s = @('Timing is built in practice papers with a real timer and a strict stop.','Each timed paper feeds the <a href="/blog/how-to-analyse-test-mistakes-and-improve-marks/">mistake audit</a> with time-loss data.','Students who rehearse the budget at home walk into the hall managing a system they have already run.') },
+      @{ t = 'h2'; s = 'Common time mistakes' },
+      @{ t = 'ol'; i = @('Reading the paper while already writing the first answer.','Spending a third of the time on the very first question.','Leaving long answers to fall in the last ten minutes.','Writing answers in question order regardless of marks.','Handing the paper in early with answers unaudited.') },
+      @{ t = 'h2'; s = 'The close' },
+      @{ t = 'p'; s = @('Exam time is won in minutes: read first, budget by marks, bank the easy wins, checkpoint the pace and audit the close.','Rehearse the whole sequence under a timer at home.','On the day it is not a race against the clock, it is a plan you have already run.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-avoid-common-exam-mistakes'
+    title    = 'How to Avoid Common Mistakes in Exams'
+    cat      = 'study-tips'
+    author   = 'vyasa'
+    pub      = '2026-08-28'
+    upd      = '2026-08-28'
+    excerpt  = 'Most lost marks are repeatable slips, not hard questions. Read twice, write steps, box the units and build a personal slip list over one term.'
+    keywords = @('common exam mistakes','how to avoid mistakes in exams','exam mistakes students make','losing marks in exams')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A student reviewing a marked exam paper to find the repeatable slips behind lost marks'
+    related  = @('common-mistakes-in-mathematics-exams','how-to-manage-time-during-exams','how-to-analyse-test-mistakes-and-improve-marks','common-mistakes-students-make-in-science-exams')
+    cta      = 'Slips disappear fastest when a teacher names them. The practice-book review at Vyasa Academy in Hulimavu flags recurring errors so students stop losing the same marks.'
+    courses  = @(
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' },
+      @{ label = 'Maths Tuition in Hulimavu'; url = '/maths-tuition-hulimavu/' },
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('After every exam, students discover that the marks they lost were not on the hardest questions.','They were on the slips: the misread, the skipped step, the missing unit, the smeared digit.','The good news is that slips are predictable.','You can build a personal list of yours and stop them one term at a time.') },
+      @{ t = 'h2'; s = 'The classic slip family' },
+      @{ t = 'ul'; i = @('Misreading: answer to part b written for part a.','Over-solving: doing a harder version of the question that was asked.','Skip-step: jumping two steps in working and dropping marks.','Unit slips: cm for m, rupees for paise, missing at the end.','Sign slips: a minus lost on line three, felt at line end.','Left blank: the question no one attempted because it looked long.') },
+      @{ t = 'h2'; s = 'Read the question twice the exam way' },
+      @{ t = 'p'; s = @('First read: what is it asking and how many marks does it carry.','Second read: hunt the qualifiers, the every, the only, the except, the one mark detail that changes the answer.','The double read takes seconds and prevents the most expensive family of slips.') },
+      @{ t = 'h2'; s = 'Write the steps, box the answer, keep the unit' },
+      @{ t = 'p'; s = @('Examiners award process marks, so every step written is marks defended.','Write the formula line, substitute with the unit and box the final value with its unit.','A boxed, unit-carrying answer survives marking; a bare number begs a misread.','The fuller answer structure is in the <a href="/blog/how-to-write-better-answers-in-cbse-board-exams/">answer writing guide</a>.') },
+      @{ t = 'h2'; s = 'Park the long look and return' },
+      @{ t = 'p'; s = @('A question that looks long tempts a skip.','Take the first step only, write the givens, and often the rest follows.','If it does not, park it with a marker and return after the banking round.','The banking and parking sequence comes from the <a href="/blog/how-to-manage-time-during-exams/">time management plan</a>.') },
+      @{ t = 'h2'; s = 'Build your personal slip list' },
+      @{ t = 'ol'; i = @('After every marked paper, copy each slip in one line: what I did, what I should have done.','Group them: misread, arithmetic, unit, skipped step, blank.','Watch the groups over three tests; one or two groups usually dominate.','Before each exam, read the slip list once and write its top rule on the corner of the sheet.') },
+      @{ t = 'p'; s = @('The fly in the list does the organising; the audit behind it is the <a href="/blog/how-to-analyse-test-mistakes-and-improve-marks/">test analysis guide</a>.') },
+      @{ t = 'h2'; s = 'Keep the calm routines close' },
+      @{ t = 'p'; s = @('Panic creates slips.','When the clock presses, return to the paper plan: budget, checkpoint and the audit of the last fifteen minutes.','A breathing pause of twenty seconds costs nothing and often restores the sign that was about to flip.') },
+      @{ t = 'h2'; s = 'The close' },
+      @{ t = 'p'; s = @('Avoiding slips is cheaper than fixing gaps: a misread costs marks you already know, while a gap costs marks you never had.','Read twice, write steps, box units and keep the personal slip list.','Over one term, the same mistakes stop being yours.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-study-when-you-feel-unmotivated'
+    title    = 'How to Study When You Feel Unmotivated'
+    cat      = 'study-tips'
+    author   = 'vyasa'
+    pub      = '2026-08-27'
+    upd      = '2026-08-27'
+    excerpt  = 'Motivation is not a fuel that arrives on demand. Shrink the goal, use the routine and start with the easier subject, and the quiet week keeps moving.'
+    keywords = @('how to study when unmotivated','no motivation to study','how to get motivated to study','study motivation for students')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A student running a ten-minute light study session on a low-motivation day'
+    related  = @('how-to-stop-procrastinating-and-start-studying','how-to-improve-concentration-while-studying','how-parents-can-help-children-develop-better-study-habits','how-to-build-a-study-routine')
+    cta      = 'Low-effort days are normal, and the trick is a schedule that survives them. The fixed, small-batch schedule at Vyasa Academy in Hulimavu keeps students moving on the flat days too.'
+    courses  = @(
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' },
+      @{ label = 'ICSE Tuition in Hulimavu'; url = '/icse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Every student has the flat day: the desk is intact, the syllabus is waiting and the mind simply will not take the first step.','The mistake is waiting for motivation to show up, because motivation is an unreliable guest.','The reliable host is a smaller, planned start.','This article is the plan for the days when the fire is out.') },
+      @{ t = 'h2'; s = 'Shrink the goal until starting is easy' },
+      @{ t = 'p'; s = @('On a flat day, the syllabus looks like a mountain and the mountain blocks the start.','Shrink the mountain: ten minutes, one page, three sums, one diagram.','A goal small enough to reach removes the reason the brain invented to decline.','The shrink is the same trick the <a href="/blog/how-to-stop-procrastinating-and-start-studying/">procrastination article</a> uses for starting.') },
+      @{ t = 'h2'; s = 'Run the routine, not the mood' },
+      @{ t = 'p'; s = @('A routine does not wait for permission.','The same hour, the same desk and the same short opener, on the good days and the flat days alike.','The rhythm from the <a href="/blog/how-to-build-a-study-routine/">study routine guide</a> keeps the flat day from becoming a hole in the week.') },
+      @{ t = 'h2'; s = 'Start with the subject that still feels friendly' },
+      @{ t = 'p'; s = @('On low-energy days, open with the subject that always worked, solve two comfortable items, and let the momentum walk the rest of the block.','The hard subject waits for the stronger day; the flat day deserves movement, not mastery.') },
+      @{ t = 'h2'; s = 'Change one thing about the room' },
+      @{ t = 'p'; s = @('A flat day is often a flat room: move to the kitchen table, open a window, sit facing the wall instead of the window.','The single change interrupts the staleness and often the motivation that was stuck in the chair.') },
+      @{ t = 'h2'; s = 'Make the progress visible' },
+      @{ t = 'p'; s = @('Cross out the day title on a visible term chart.','The chain of crossed days is a small, concrete reward that flat days cannot fake.','Visible progress is the honest substitute for motivation, and it is described further in the <a href="/blog/how-to-improve-science-marks-through-regular-practice/">marks through practice article</a>.') },
+      @{ t = 'h2'; s = 'Ask for the smallest support' },
+      @{ t = 'p'; s = @('Tell someone inside the house a one-line plan: I am going to do ten minutes at six, then stop.','The spoken plan adds a gentle accountability a silent plan lacks.','Parents can help hold the shape without pressure; the guidance for them is in the <a href="/blog/how-parents-can-help-children-develop-better-study-habits/">parent support guide</a>.') },
+      @{ t = 'h2'; s = 'Know the difference between flat and burned' },
+      @{ t = 'p'; s = @('A flat day is normal.','Days of total refusal, lost sleep or constant dread are different and deserve honesty: rest more first, and if it persists, talk to a parent or teacher.','Rest is not quitting; it is a maintenance stop the study plan needs sooner or later.') },
+      @{ t = 'h2'; s = 'The close' },
+      @{ t = 'p'; s = @('Motivation arrives when it wants; study happens because of the plan.','Shrink the goal, run the routine, start friendly and make the progress visible.','On the flat days, ten minutes kept is the whole point, and the week stays alive.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-balance-school-tuition-homework-and-self-study'
+    title    = 'How to Balance School, Tuition, Homework and Self-Study'
+    cat      = 'study-tips'
+    author   = 'venu'
+    pub      = '2026-08-26'
+    upd      = '2026-08-26'
+    excerpt  = 'A full day of school plus tuition leaves little alone-time. Decide what each setting is for, merge the workloads and protect the small daily self-study block.'
+    keywords = @('balance school tuition and self study','time management with tuition','manage homework and coaching','self study around school and tuition')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A student planning the evening across school homework, tuition and a protected self-study block'
+    related  = @('how-to-create-effective-daily-study-timetable','how-to-build-a-study-routine','how-to-study-effectively-and-improve-academic-performance','how-to-stop-procrastinating-and-start-studying')
+    cta      = 'The daily hour exists because the day is organised. The timetable-first approach at Vyasa Academy in Hulimavu helps students protect study time around school and homework.'
+    courses  = @(
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' },
+      @{ label = 'ICSE Tuition in Hulimavu'; url = '/icse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('School for seven hours, tuition for two, homework and assignments beyond: the student who adds self-study on top feels like there is no slot left in the day.','The balance problem is not about finding more time.','It is about deciding which setting does which job, so nothing is done twice.','This article is the plan for the full-timetable student.') },
+      @{ t = 'h2'; s = 'Give each setting one job' },
+      @{ t = 'ul'; i = @('School: first contact with the topic, in a large group.','Tuition: the doubts, the method and the guided practice that school time cannot hold.','Homework: the scheduled practice that schools assign on purpose.','Self-study: the one task the other three never do, recall and spacing.') },
+      @{ t = 'p'; s = @('When each slot has a job, nothing is wasted.','The tuition guidance follows the <a href="/blog/how-to-clear-doubts-faster/">doubts clearing guide</a>, and the self-study slot runs the <a href="/blog/active-recall-and-spaced-repetition-for-students/">recall plan</a>.') },
+      @{ t = 'h2'; s = 'Merge the workloads instead of stacking them' },
+      @{ t = 'p'; s = @('Homework on the topic is practice on the topic: count it.','The tuition worksheet and the school assignment on the same chapter are one review session, not two.','Merge by subject each evening: list everything touching mathematics together, then everything touching science, and so on.','The merged list is shorter than the original and the coverage is the same.') },
+      @{ t = 'h2'; s = 'Protect the daily self-study hour' },
+      @{ t = 'p'; s = @('Fix one evening hour before dinner or one morning half hour, whichever the family rhythm holds, and guard it against absorption into homework.','The hour is not extra work.','It is the recall and spacing that the other settings never run, and it is the secret of the weekly rhythm.','The hour fits best in the <a href="/blog/how-to-create-effective-daily-study-timetable/">daily timetable</a> where the blocks are already visible.') },
+      @{ t = 'h2'; s = 'A sample evening for a busy student' },
+      @{ t = 'table'; head = @('Time','Slot','Job'); rows = @(
+        @('4:30-5:45','Homework','School assignments, hardest subject first'),
+        @('5:45-6:30','Travel and tea','Break, no screen'),
+        @('6:30-8:00','Tuition','Doubt clearing and guided practice'),
+        @('8:15-8:45','Self-study','Recall the day and fix the misses'),
+        @('8:45-9:15','Light revision','Tomorrow preview or one diagram')
+      ) },
+      @{ t = 'p'; s = @('The evening is long, but each slot has one job, so tiredness does not decide the quality of the whole night.') },
+      @{ t = 'h2'; s = 'The weekend pays the balance debt' },
+      @{ t = 'p'; s = @('The weekend is the only block large enough for projects, diagrams and past papers.','Keep one long Saturday slot for cumulative revision and one Sunday slot free.','A weekend spent entirely on homework is a weekend with no recall, and recall is the subject of the <a href="/blog/how-to-remember-what-you-study/">memory guide</a>.') },
+      @{ t = 'h2'; s = 'Reduce the overload without guilt' },
+      @{ t = 'p'; s = @('If school, tuition and homework together exceed a sensible evening, negotiate: talk to the tuition teacher about consolidating practice, and speak with parents about the load.','Dropping one optional worksheet beats burning a whole week.','The parent conversation guidance is in the <a href="/blog/how-parents-can-help-children-develop-better-study-habits/">parent support guide</a>.') },
+      @{ t = 'h2'; s = 'Common balance mistakes' },
+      @{ t = 'ol'; i = @('Letting homework eat the self-study hour week after week.','Doing the same chapter twice in one day across two settings.','Saving every assignment for the night before it is due.','Calling the weekend the catch-up slot and never taking rest.') },
+      @{ t = 'h2'; s = 'The close' },
+      @{ t = 'p'; s = @('Balance is decided by jobs, not by hours.','Give each setting its purpose, merge the repeated work and protect the daily half hour of recall.','The full day fits when nothing is done twice.') }
+    )
+  },
+
+  @{
+    slug     = 'how-many-hours-should-students-study-every-day'
+    title    = 'How Many Hours Should Students Study Every Day?'
+    cat      = 'study-tips'
+    author   = 'mahendra'
+    pub      = '2026-08-25'
+    upd      = '2026-08-25'
+    excerpt  = 'Quality decides what hours are worth. A clear daily study goal of one to three focused hours beats a vague marathon of six, and consistency beats weekends.'
+    keywords = @('how many hours should students study','ideal study hours per day','study hours by class','how many hours a day to study')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A student reviewing the daily study hour chart for different class levels'
+    related  = @('how-to-build-a-study-routine','how-to-create-effective-daily-study-timetable','how-to-study-effectively-and-improve-academic-performance','how-parents-can-help-children-develop-better-study-habits')
+    cta      = 'An honest hour chart helps families skip the guilt and run the schedule. The concept-focused classes at Vyasa Academy in Hulimavu keep the study load realistic for each class level.'
+    courses  = @(
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' },
+      @{ label = 'ICSE Tuition in Hulimavu'; url = '/icse-tuition-hulimavu/' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Some families count hours as if the number itself creates marks, and some students feel guilty because a classmate claims six while they manage two.','Both habits miss the point.','Study hours matter only when the hours are worth something, which depends on what happens inside them.','This article gives honest hour ranges by stage and the quality rules that make them work.') },
+      @{ t = 'h2'; s = 'The honest hour ranges by stage' },
+      @{ t = 'table'; head = @('Stage','Suggested focused study','Shape of the session'); rows = @(
+        @('Classes 6-7','45 min to 1.5 hours','Homework plus one recall of the day'),
+        @('Classes 8-9','1 to 2 hours','Homework plus recall plus one weak topic'),
+        @('Class 10 boards','2 to 3 hours','Homework plus past paper practice in season'),
+        @('Class 11-12','2.5 to 4 hours','Deep practice plus revision by timetable'),
+        @('Exam season','Protected, not longer','Same hours, reprioritised to papers')
+      ) },
+      @{ t = 'p'; s = @('These are focused hours: pen moving, book closed for recall, phone away.','They are a guideline, not a law.','A student who studies two quiet, honest hours beats a student who sits six and spends four of them restless.') },
+      @{ t = 'h2'; s = 'Why more hours stop helping' },
+      @{ t = 'p'; s = @('Focused attention runs in stretches of about twenty-five to fifty minutes, and past three or four quality hours a day the returns fade sharply.','Students forced to add a sixth hour usually take it from rest or school, and the learning drops.','The marathon hour count is the reason the <a href="/blog/how-to-study-effectively-and-improve-academic-performance/">effective study guide</a> measures the session, not the clock.') },
+      @{ t = 'h2'; s = 'Quality rules that decide what the hours are worth' },
+      @{ t = 'ol'; i = @('Pen and paper in hand, phone in another room.','Recall from memory before checking the book.','One subject block, not five subjects in ten minute jumps.','A timed break after every block, and a limit on it.','The session ends when it finishes its plan, not when a cousin says enough.') },
+      @{ t = 'h2'; s = 'Hours mean less than consistency' },
+      @{ t = 'p'; s = @('Two honest hours every weekday beat six hours on Saturday and zero from Sunday to Friday.','The daily rhythm is built in the <a href="/blog/how-to-build-a-study-routine/">study routine guide</a>, and the weekly plan in the <a href="/blog/how-to-create-effective-daily-study-timetable/">timetable guide</a>.') },
+      @{ t = 'h2'; s = 'What the extra hour is for' },
+      @{ t = 'p'; s = @('The hour beyond homework and tuition is the only one fully controlled by the student, and its best job is recall and spacing.','Use it for the layers that homework cannot carry: the tests from memory, the error log, the past paper in season.','The layering is covered in the <a href="/blog/active-recall-and-spaced-repetition-for-students/">recall and spacing article</a>.') },
+      @{ t = 'h2'; s = 'Rest is part of the hour maths' },
+      @{ t = 'p'; s = @('Nine hours of sleep makes study degrees sharper; an eleven p.m. session taken from sleep costs more than it earns.','Count rest and play as part of the schedule, not thieves of it.','Students differ; the honest range and the sleep floors are the guidance, and comfort matters.') },
+      @{ t = 'h2'; s = 'The close' },
+      @{ t = 'p'; s = @('The number of hours matters less than what they contain.','Set the honest range for the stage, run the quality rules and keep the rhythm daily.','Two quiet hours, kept and repeated, move more marks than six hours of guilt.') }
+    )
+  },
+
+  @{
+    slug     = 'how-parents-can-help-children-develop-better-study-habits'
+    title    = 'How Parents Can Help Children Develop Better Study Habits'
+    cat      = 'study-tips'
+    author   = 'vyasa'
+    pub      = '2026-08-24'
+    upd      = '2026-08-24'
+    excerpt  = 'Parents shape study habits most by building the environment: fixed time, quiet space, conversations about method and patience with uneven progress.'
+    keywords = @('how parents can help children study better','develop study habits in children','parent role in study habits','how to motivate child to study')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A parent and student reviewing the weekly study plan together at home'
+    related  = @('how-to-build-a-study-routine','how-to-stop-procrastinating-and-start-studying','how-to-create-effective-daily-study-timetable','how-to-study-when-you-feel-unmotivated')
+    cta      = 'Study habits grow faster when home and class agree. The teachers at Vyasa Academy in Hulimavu share simple weekly guidance with families on schedules and practice routines.'
+    courses  = @(
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' },
+      @{ label = 'ICSE Tuition in Hulimavu'; url = '/icse-tuition-hulimavu/' }
+    )
+    faq = @(
+      @{ q = 'Should I sit with my child during study time?'; a = 'Be present, not hovering: settled nearby, available for the planned questions, but not watching every page. Presence calms and anchors; hovering trains dependence. A short review talk at the end of the session helps more than watching it.' },
+      @{ q = 'How can I help when my child does not want to study?'; a = 'Lower the barrier before raising the demand. Ask for one small fixed step instead of a full evening, agree the timing together and keep the tone steady. The smaller the start, the more often it happens.' },
+      @{ q = 'Should study time always be the same each day?'; a = 'A fixed slot is the strongest habit. Keep it close to the same time on school days even when school busyness changes the afternoons. The student should negotiate the slot once and then keep it.' },
+      @{ q = 'How do I check that my child is actually learning?'; a = 'Ask for the recall, not the reading. A one-line what did you learn today, and a weekly show me the error log, gives honest answers. A child who can explain the topic in their own words has learned it.' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('Parents cannot sit the exam, but they build the launchpad.','Everything a child achieves at the desk traces back to habits formed at home: the fixed hour, the quiet corner, the steady tone.','This article is the parent plan: what to set up, what to ask and what to stop doing.') },
+      @{ t = 'h2'; s = 'Build the environment before the persuasion' },
+      @{ t = 'ul'; i = @('A fixed slot and a fixed chair, used most days.','A phone-free corner, with the rule applying to the whole house at study time.','A clock the child can see, for the block timings.','The books and stationery already on the desk before the slot starts.') },
+      @{ t = 'p'; s = @('The environment decides more than the pep talk.','A corner with everything in place makes the start automatic, and the start is the half the battle, as the <a href="/blog/how-to-stop-procrastinating-and-start-studying/">procrastination article</a> shows.') },
+      @{ t = 'h2'; s = 'Talk about method, not marks' },
+      @{ t = 'p'; s = @('The useful weekly question is not what marks did you get but what did you learn and which question trips you.','Concentrating on method turns the child into a planner instead of a score reactor.','The methods to ask about are the plain ones: recall from memory, error log, past paper review, all in the <a href="/blog/active-recall-and-spaced-repetition-for-students/">study techniques guide</a>.') },
+      @{ t = 'h2'; s = 'Use the weekly one-to-one quietly' },
+      @{ t = 'p'; s = @('Choose ten calm minutes weekly, not tied to a test result.','Together: review the error log, pick one weak topic, set the next week one goal.','The child charges the plan; you hold the appointment.','The check-in works alongside the <a href="/blog/how-to-create-effective-daily-study-timetable/">timetable planning</a> the child owns.') },
+      @{ t = 'h2'; s = 'Keep pressure out of the desk hours' },
+      @{ t = 'p'; s = @('Pressure during study produces the exact opposite: the child studies to escape the tension, learns badly and hides mistakes.','Keep corrections short, practical and same-voice, and keep comparisons with other children out of the room.','A calm ten-minute correction is worth a week of nagging, and the calm itself feeds the <a href="/blog/how-to-study-when-you-feel-unmotivated/">motivation article</a> advice.') },
+      @{ t = 'h2'; s = 'Model the same rules you set' },
+      @{ t = 'p'; s = @('A household where the phone rests during study time teaches more than any speech.','Parents who read or do quiet work in the same hours are teaching the most powerful lesson there is: attention is normal.') },
+      @{ t = 'h2'; s = 'Match the support to the stage' },
+      @{ t = 'table'; head = @('Stage','Parent role'); rows = @(
+        @('Classes 6-7','Sit nearby, set the slot, ask what was learned daily'),
+        @('Classes 8-9','Move to checking the plan weekly, not daily'),
+        @('Class 10-12','Hold the environment, review the weekly plan, ask about papers')
+      ) },
+      @{ t = 'h2'; s = 'The close' },
+      @{ t = 'p'; s = @('Parents are the schedule, the space and the steady voice; the learning belongs to the child.','Set the corner and the slot, talk method over marks and keep the pressure out of the desk hours.','The habits built this way outlast every class the child will take.') }
+    )
+  },
+
+  @{
+    slug     = 'how-to-analyse-test-mistakes-and-improve-marks'
+    title    = 'How to Analyse Test Mistakes and Improve Marks'
+    cat      = 'study-tips'
+    author   = 'vyasa'
+    pub      = '2026-08-23'
+    upd      = '2026-08-23'
+    excerpt  = 'Marks improve fastest on what you already attempted. Sort every mistake into gap, skill slip or careless slip, log them and fix each type differently.'
+    keywords = @('how to analyse test mistakes','improve marks after a test','error log for exams','learn from test mistakes')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A student sorting a marked test paper into gaps, skill slips and careless slips'
+    related  = @('how-to-avoid-common-exam-mistakes','importance-of-previous-year-question-papers-class-10','how-to-revise-before-an-exam','complete-exam-preparation-strategy-for-school-students')
+    cta      = 'Marked papers are the best teaching material a student owns. The correction review at Vyasa Academy in Hulimavu works through every test paper mistake with the student.'
+    courses  = @(
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' },
+      @{ label = 'Maths Tuition in Hulimavu'; url = '/maths-tuition-hulimavu/' },
+      @{ label = 'Science Tuition in Hulimavu'; url = '/science-tuition-hulimavu/' }
+    )
+    faq = @(
+      @{ q = 'How long should the mistake analysis take?'; a = 'Thirty to forty minutes per paper, done once within a few days of the result. Any honest paper is worth one careful pass. Beyond that, the same mistakes just need fixing in practice.' },
+      @{ q = 'What if the test went badly and I want to ignore it?'; a = 'A bad paper is the most valuable paper you will get, because the mistakes are fresh and honest. Ignoring it guarantees the same marks next time. Read it, sort it, log it and fix the top three.' },
+      @{ q = 'Is a careless slip worth logging?'; a = 'Yes. Careless slips concentrate on a few repeatable habits, misreading, skipping steps, missing units. Logged and named, they stop. A slip you cannot name will return exactly on the question type that catches it.' },
+      @{ q = 'How do I fix a real gap in a subject?'; a = 'A gap needs re-learning, not re-reading the test. Return to the textbook on that specific idea, solve worked examples, then re-attempt the question from a fresh past paper. Log it as done after you prove it in a later test.' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('After the marks arrive, most students glance at the number and close the book.','The marks on the page are the least useful part of a test.','The useful part lives in the wrong answers, because each one tells you exactly what to fix.','Analysis turns the paper into the plan for the next test.') },
+      @{ t = 'h2'; s = 'Sort every mistake into one of three types' },
+      @{ t = 'ul'; i = @('Gap: I never knew this, or I knew it and forgot it completely.','Skill slip: I knew it but applied the method wrongly, started fine and lost the thread.','Careless slip: I knew it, solved it and dropped marks on a misread, a sign, a unit or a smudge.') },
+      @{ t = 'p'; s = @('The three types need three different fixes, which is why the sorting is the whole game.','Without the sort, the careless slip becomes unsolvable.') },
+      @{ t = 'h2'; s = 'Fix each type differently' },
+      @{ t = 'table'; head = @('Type','Fix','Where to practice'); rows = @(
+        @('Gap','Re-learn the idea from the textbook and solve worked examples','New problems, not the same test'),
+        @('Skill slip','Trace your written method against the model answer line by line','Redo the question type weekly'),
+        @('Careless slip','Name the slip and add its rule to the slip list','Every future paper, read the slip list first')
+      ) },
+      @{ t = 'p'; s = @('The model answer comparison needs the full solution style from the <a href="/blog/how-to-write-better-answers-in-cbse-board-exams/">answer writing guide</a>.') },
+      @{ t = 'h2'; s = 'Keep the error log in the paper shape' },
+      @{ t = 'p'; s = @('One page per subject, three columns: the question type, the mistake in one line, the fix in one line.','Across three tests the log names your real enemies: usually a single gap family and a single slip family.','The log is the core of the <a href="/blog/importance-of-previous-year-question-papers-class-10/">past paper study method</a>, because papers and logs read each other.') },
+      @{ t = 'h2'; s = 'Turn the top three into the next week plan' },
+      @{ t = 'ol'; i = @('Pick the three most repeated misses from the log.','For each: one re-learning pass and one practice slot that week.','Ask at the end of the week whether the miss appears again in the next paper.','Mark the miss as fixed only after it stays absent for two tests.') },
+      @{ t = 'p'; s = @('Three misses fixed across two terms is a very different student, and the arithmetic of small fixes compounds.') },
+      @{ t = 'h2'; s = 'Use correct answers too' },
+      @{ t = 'p'; s = @('Look at one correct answer that surprised you: which part of the method worked?','The working methods deserve the log as much as the misses, so the same good move repeats.') },
+      @{ t = 'h2'; s = 'The analysis rarely needs marks' },
+      @{ t = 'p'; s = @('The analysis works on any marked paper regardless of the score, and it works best on the papers where the score hurt.','A low paper analysed honestly produces more next-term improvement than a high paper celebrated and shelved.') },
+      @{ t = 'h2'; s = 'Common analysis mistakes' },
+      @{ t = 'ol'; i = @('Sorting every miss as careless to avoid studying the chapter.','Fixing the paper by copying the correct answers only.','Making the log and never re-reading it before the next test.','Skipping the analysis on the good papers where one slip hides.') },
+      @{ t = 'h2'; s = 'The close' },
+      @{ t = 'p'; s = @('A test is practice data wearing a score on top.','Sort the mistakes into gap, skill slip and careless slip, log each in one line and fix the top three on schedule.','Marks improve fastest on what you already attempted, and the paper told you exactly what that is.') }
+    )
+  },
+
+  @{
+    slug     = 'complete-exam-preparation-strategy-for-school-students'
+    title    = 'Complete Exam Preparation Strategy for School Students'
+    cat      = 'study-tips'
+    author   = 'mahendra'
+    pub      = '2026-08-22'
+    upd      = '2026-08-22'
+    excerpt  = 'A full exam-prep system: audit the syllabus, own your timetable, run recall revision, drill with papers, rehearse the hall and review the results.'
+    keywords = @('complete exam preparation strategy','exam strategy for school students','full exam preparation plan','how to prepare for exams guide')
+    featuredImage = 'https://www.vyasaacademy.in/images/classroom.png'
+    featuredAlt  = 'A student working through the complete exam preparation cycle from syllabus audit to paper review'
+    related  = @('how-to-revise-before-an-exam','how-to-manage-time-during-exams','how-to-analyse-test-mistakes-and-improve-marks','how-to-create-effective-daily-study-timetable')
+    cta      = 'This whole cycle is what a good coaching rhythm runs all term. The structured routine at Vyasa Academy in Hulimavu teaches the audit, the practice and the paper review inside one course.'
+    courses  = @(
+      @{ label = 'CBSE Tuition in Hulimavu'; url = '/cbse-tuition-hulimavu/' },
+      @{ label = 'ICSE Tuition in Hulimavu'; url = '/icse-tuition-hulimavu/' }
+    )
+    faq = @(
+      @{ q = 'How early should exam preparation start?'; a = 'A normal term starts the system the week the term begins: daily recall, weekly log, planned tests. For a board exam, the full preparation cycle, audit, timetable, revision and papers, should begin at least three months before the first paper.' },
+      @{ q = 'What is the most important step in the whole strategy?'; a = 'Running the audit honestly. Everything else, the timetable, the revision, the paper practice, depends on a truthful list of what is strong and what is weak. An inflated audit produces a timetable that looks busy and fixes nothing.' },
+      @{ q = 'How many practice papers should I attempt?'; a = 'At least one full timed paper per subject in the final three to four weeks, plus targeted repeats of the sections that bleed marks. Attempt a paper only when the recall revision has already covered the chapter, so the paper audits rather than teaches.' },
+      @{ q = 'What should I do the week before the exam?'; a = 'Finish the recall revision early. That week holds light passes over the one-page summaries, the error log and one gentle paper, plus full sleep and the hall rehearsal of timing. Nothing new belongs in the final week.' },
+      @{ q = 'How do I handle preparation for several subjects at once?'; a = 'Rotate the workload by strengths in the timetable: a weak subject in the high-focus evening slot twice a week, a strong subject as the quick morning block. Each subject must meet paper practice in its season, but never two full papers on the same day.' }
+    )
+    body = @(
+      @{ t = 'p'; s = @('A single strategy holds any school exam: audit, timetable, recall, papers, rehearsal and review.','Each step feeds the next, so the whole can be run on repeat for a term, a year or a board season.','This article is the one-page map of the full cycle, with the deeper guides linked at each step.') },
+      @{ t = 'h2'; s = 'Step one: audit the syllabus honestly' },
+      @{ t = 'p'; s = @('List every chapter per subject and mark each as strong, shaky or unseen, from true recall, not from how the class felt.','The shaky and unseen lists become the real timetable.','The audit method belongs to the <a href="/blog/how-to-revise-before-an-exam/">revision planning guide</a>.') },
+      @{ t = 'h2'; s = 'Step two: own the timetable' },
+      @{ t = 'p'; s = @('Schedule weak subjects in your strongest slots and protect one daily recall block.','The timetable is a contract you write with yourself, and the building method is the <a href="/blog/how-to-create-effective-daily-study-timetable/">daily timetable guide</a>.','Even the busiest student, homework and tuition included, can own the one honest hour.') },
+      @{ t = 'h2'; s = 'Step three: run recall revision' },
+      @{ t = 'p'; s = @('Revision means pulling the material out with the book closed: summaries rebuilt from memory, questions answered cold, miss lists re-tested on schedule.','The technique is the <a href="/blog/active-recall-and-spaced-repetition-for-students/">recall and spacing system</a> running at exam scale, with the notes built in the <a href="/blog/how-to-make-effective-revision-notes/">notes guide</a>.') },
+      @{ t = 'h2'; s = 'Step four: drill with papers' },
+      @{ t = 'p'; s = @('In the final weeks, run at least one full timed paper per subject.','The paper audits recall, timing and slip rate at once, and the audit feeds the <a href="/blog/how-to-analyse-test-mistakes-and-improve-marks/">mistake analysis</a>.','The paper calendar logic is in the <a href="/blog/importance-of-previous-year-question-papers-class-10/">past paper guide</a>.') },
+      @{ t = 'h2'; s = 'Step five: rehearse the hall' },
+      @{ t = 'p'; s = @('Practice papers must run under the real rules: timer running, no interruptions, no peeking.','Rehearse the minutes budget, the banking order, the checkpoints and the final audit, all from the <a href="/blog/how-to-manage-time-during-exams/">time management plan</a>.','What is rehearsed at home behaves the same in the hall.') },
+      @{ t = 'h2'; s = 'Step six: review and re-run the cycle' },
+      @{ t = 'p'; s = @('After results, run the mistake analysis, update the audit and start the next cycle.','The strategy is a loop, not a finale: each exam season inherits the log from the last.','The loop is exactly how a student who improved slowly across a whole year becomes a strong board candidate.') },
+      @{ t = 'h2'; s = 'The pace: a term cycle at a glance' },
+      @{ t = 'table'; head = @('Phase','Length','Main work'); rows = @(
+        @('Audit','Day one','Chapter list with strong, shaky, unseen'),
+        @('Timetable','Week one','Weak subjects first, recall block daily'),
+        @('Recall revision','Weeks two to eight','Summaries rebuilt, miss list re-tested'),
+        @('Paper drill','Final three to four weeks','Timed paper per subject, errors logged'),
+        @('Hall rehearsal','Final week','Light passes, sleep, one gentle paper')
+      ) },
+      @{ t = 'h2'; s = 'The close' },
+      @{ t = 'p'; s = @('One loop does the whole year: audit the syllabus, own the timetable, revise by recall, drill with papers, rehearse the hall and review the data.','Start the loop early, rerun it honestly and the exam stops being an event.','It becomes the ordinary end of an ordinary process you already run.') }
     )
   }
 )

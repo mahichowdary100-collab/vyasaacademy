@@ -1427,6 +1427,25 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
 .blog-content ul li { list-style: disc; color: #374151; font-size: 1.02rem; line-height: 1.7; }
 .blog-content ol li { list-style: decimal; color: #374151; font-size: 1.02rem; line-height: 1.7; }
 
+.blog-table-wrap { overflow-x: auto; margin: 0 0 20px; }
+.blog-table-wrap table { width: 100%; border-collapse: collapse; background: #fff; }
+.blog-table-wrap th, .blog-table-wrap td {
+  border: 1px solid rgba(26,35,126,0.15);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+  color: #374151;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+.blog-table-wrap thead th {
+  background: #1a237e;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.blog-table-wrap tbody tr:nth-child(even) { background: #f5f6fb; }
+
 .blog-content a { color: var(--primary); font-weight: 600; border-bottom: 1px solid rgba(26,35,126,0.2); }
 .blog-content a:hover { color: var(--accent-dark); }
 

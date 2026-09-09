@@ -183,6 +183,15 @@ function Get-BlockHtml($b, $idx) {
     'p'  { return "<p>$($b.s -join ' ')</p>" }
     'ul' { $li = ($b.i | ForEach-Object { "<li>$_</li>" }) -join "$nl" ; return "<ul>$nl$li$nl</ul>" }
     'ol' { $li = ($b.i | ForEach-Object { "<li>$_</li>" }) -join "$nl" ; return "<ol>$nl$li$nl</ol>" }
+    'table' {
+      $hd = ($b.head | ForEach-Object { "<th scope=""col"">$_</th>" }) -join "$nl"
+      $rows = @()
+      foreach ($r in @($b.rows)) {
+        $td = ($r | ForEach-Object { "<td>$_</td>" }) -join "$nl"
+        $rows += "<tr>$nl$td$nl</tr>"
+      }
+      return "<div class=""blog-table-wrap"">$nl<table>$nl  <thead>$nl$hd$nl  </thead>$nl  <tbody>$nl$(($rows -join "$nl"))$nl  </tbody>$nl</table>$nl</div>"
+    }
   }
   return ''
 }
@@ -409,24 +418,32 @@ foreach ($c in $blogCategories) {
       }
     }
 
+    $eyebrow  = if ($p.eyebrow)   { $p.eyebrow }   else { 'CBSE Class 10 Board Exam Hub' }
+    $startTtl = if ($p.startTitle) { $p.startTitle } else { 'Start here' }
+    $startTxt = if ($p.startText)  { $p.startText }  else { 'The six guides below cover the whole journey, from the complete study plan down to the final week. Read them in order for the full system.' }
+    $allTtl   = if ($p.allTitle)   { $p.allTitle }   else { 'All Class 10 articles' }
+    $allTxt   = if ($p.allText)    { $p.allText }    else { 'The complete list of Class 10 board exam guides in this hub, newest first.' }
+    $ctaTtl   = if ($p.ctaTitle)   { $p.ctaTitle }   else { 'Guidance for the Class 10 boards' }
+    $ctaTxt   = if ($p.ctaText)    { $p.ctaText }    else { 'If your child needs structured coaching with regular assessments, mock tests and doubt clearing, explore the Class 10 programs at Vyasa Academy in Hulimavu, Bangalore. Small batches, concept-first teaching, and honest feedback on every paper.' }
+
     $courseBtns = @()
     foreach ($co in @($p.courses)) {
       $courseBtns += "<a href=""$($co.url)"" class=""btn btn-primary"">$($co.label)</a>"
     }
     $courseBtns += '<a href="https://wa.me/919494901006" target="_blank" rel="noopener" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>'
-    $coursesHtml = "<section class=""blog-cta"">$nl  <h2>Guidance for the Class 10 boards</h2>$nl  <p>If your child needs structured coaching with regular assessments, mock tests and doubt clearing, explore the Class 10 programs at Vyasa Academy in Hulimavu, Bangalore. Small batches, concept-first teaching, and honest feedback on every paper.</p>$nl  <div class=""blog-cta-buttons"">$nl    $($courseBtns -join "$nl    ")$nl  </div>$nl</section>"
+    $coursesHtml = "<section class=""blog-cta"">$nl  <h2>$ctaTtl</h2>$nl  <p>$ctaTxt</p>$nl  <div class=""blog-cta-buttons"">$nl    $($courseBtns -join "$nl    ")$nl  </div>$nl</section>"
 
     $allCards = @()
     foreach ($a in $arts) { $allCards += Get-CardHtml $a }
     $allGrid = ($allCards -join "$nl")
 
-    $main = "<main class=""blog-page"">$nl  <div class=""container blog-container"">$nl    $(Get-CrumbsBar $crumbItems)$nl    <section class=""blog-hero blog-hero-slim"">$nl      <p class=""blog-eyebrow"">CBSE Class 10 Board Exam Hub</p>$nl      <h1>$($c.name)</h1>$nl      <p>$($c.desc)</p>$nl      <div class=""blog-pillar-lead"">$nl$(($leadHtml | ForEach-Object { "      $_" }) -join "$nl")$nl      </div>$nl    </section>"
+    $main = "<main class=""blog-page"">$nl  <div class=""container blog-container"">$nl    $(Get-CrumbsBar $crumbItems)$nl    <section class=""blog-hero blog-hero-slim"">$nl      <p class=""blog-eyebrow"">$eyebrow</p>$nl      <h1>$($c.name)</h1>$nl      <p>$($c.desc)</p>$nl      <div class=""blog-pillar-lead"">$nl$(($leadHtml | ForEach-Object { "      $_" }) -join "$nl")$nl      </div>$nl    </section>"
     if ($featuredHtml.Count -gt 0) {
-      $main += "$nl    <section class=""blog-pillar-section"">$nl      <h2>Start here</h2>$nl      <p>The six guides below cover the whole journey, from the complete study plan down to the final week. Read them in order for the full system.</p>$nl      <div class=""blog-grid"">$nl$($featuredHtml -join "$nl")$nl      </div>$nl    </section>"
+      $main += "$nl    <section class=""blog-pillar-section"">$nl      <h2>$startTtl</h2>$nl      <p>$startTxt</p>$nl      <div class=""blog-grid"">$nl$($featuredHtml -join "$nl")$nl      </div>$nl    </section>"
     }
     $main += "$nl$(($sectionsHtml -join "$nl") -replace "(?m)^", "$nl    ")$nl    $coursesHtml"
     if ($allGrid) {
-      $main += "$nl    <section class=""blog-pillar-section"">$nl      <h2>All Class 10 articles</h2>$nl      <p>The complete list of Class 10 board exam guides in this hub, newest first.</p>$nl      <div class=""blog-grid"">$nl$allGrid$nl      </div>$nl    </section>"
+      $main += "$nl    <section class=""blog-pillar-section"">$nl      <h2>$allTtl</h2>$nl      <p>$allTxt</p>$nl      <div class=""blog-grid"">$nl$allGrid$nl      </div>$nl    </section>"
     }
     $main += "$nl  </div>$nl</main>"
   } else {
