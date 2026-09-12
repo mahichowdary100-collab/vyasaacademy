@@ -17,6 +17,6 @@
 //     frontend file.
 // ============================================================
 window.AUTH_CONFIG = {
-  url: 'https://YOUR-PROJECT.supabase.co',
-  anonKey: 'PASTE_YOUR_SUPABASE_ANON_KEY_HERE'
+  url: 'https://wlbovlmnznypbiqnpzmz.supabase.co',
+  anonKey: 'sb_publishable_vRpf5mTCut-3r6gp7WcSCQ_bEZMOP7J'
 };
