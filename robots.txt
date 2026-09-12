@@ -1,4 +1,12 @@
 User-agent: *
 Allow: /
 
+# Authentication and private portal pages must not be indexed.
+Disallow: /login/
+Disallow: /forgot-password/
+Disallow: /reset-password/
+Disallow: /student-dashboard/
+Disallow: /parent-dashboard/
+Disallow: /admin-dashboard/
+
 Sitemap: https://www.vyasaacademy.in/sitemap.xml
