@@ -1887,3 +1887,163 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
   .auth-password-row { flex-direction: column; align-items: stretch; gap: 8px; }
   .dash-topbar { flex-direction: column; align-items: flex-start; }
 }
+
+/* ============================================================
+   ADMIN PORTAL
+   ============================================================ */
+.adm-section { margin-bottom: 40px; }
+
+.adm-section > h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 18px;
+}
+
+.adm-forms {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+.adm-card {
+  background: var(--white);
+  border: 1px solid rgba(26,35,126,0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 26px 24px;
+}
+
+.adm-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 18px;
+}
+
+.adm-card h3 i { color: var(--accent-dark); }
+
+.adm-field { margin-bottom: 14px; }
+
+.adm-field label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 7px;
+}
+
+.adm-field .auth-input { min-height: 48px; }
+
+.adm-field select.auth-input {
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'><polyline points='6 9 12 15 18 9'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 40px;
+}
+
+.adm-checks {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 8px;
+  margin: 6px 0 16px;
+  max-height: 220px;
+  overflow-y: auto;
+  border: 1px solid rgba(26,35,126,0.1);
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.adm-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--dark);
+  cursor: pointer;
+}
+
+.adm-check input { width: 16px; height: 16px; accent-color: var(--primary); cursor: pointer; }
+
+.adm-table-wrap { overflow-x: auto; border: 1px solid rgba(26,35,126,0.1); border-radius: 12px; background: var(--white); }
+
+.adm-table { width: 100%; border-collapse: collapse; min-width: 700px; }
+
+.adm-table th {
+  background: var(--primary);
+  color: var(--white);
+  text-align: left;
+  padding: 12px 14px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.adm-table td {
+  padding: 12px 14px;
+  border-top: 1px solid rgba(26,35,126,0.06);
+  font-size: 0.92rem;
+  color: var(--dark);
+  vertical-align: middle;
+}
+
+.adm-table tbody tr:nth-child(even) { background: #f8f9fd; }
+
+.adm-table .adm-name { font-weight: 700; color: var(--primary); }
+
+.adm-role {
+  display: inline-flex;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  padding: 3px 10px;
+  border-radius: 50px;
+}
+
+.adm-role-student { background: #e8eaf6; color: var(--primary); }
+.adm-role-parent { background: #fff3e0; color: #b45309; }
+.adm-role-admin { background: #fce7f3; color: #9d174d; }
+
+.adm-btn-sm {
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(26,35,126,0.2);
+  background: var(--white);
+  color: var(--primary);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.adm-btn-sm:hover { background: var(--primary); color: var(--white); border-color: var(--primary); }
+
+.adm-btn-sm:disabled { opacity: 0.55; cursor: not-allowed; }
+
+.adm-empty {
+  text-align: center;
+  color: var(--gray);
+  font-size: 0.95rem;
+  padding: 26px 0;
+}
+
+.adm-link-group { margin-bottom: 18px; }
+
+.adm-link-group > label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 7px;
+}
+
+@media (max-width: 768px) {
+  .adm-forms { grid-template-columns: 1fr; }
+}

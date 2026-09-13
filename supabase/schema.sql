@@ -228,3 +228,182 @@ $$;
 
 revoke all on function public.admin_create_user(text, text, text, text)
   from anon, authenticated;
+
+-- ------------------------------------------------------------
+-- 10. ADMIN PORTAL - create / link / list accounts
+--     Every function is SECURITY DEFINER and starts by verifying
+--     the CALLER is an admin (is_admin). Only authenticated may
+--     execute them (revoked from PUBLIC / anon first).
+-- ------------------------------------------------------------
+
+-- Admins may also read the child tables directly (portal UI lists).
+drop policy if exists "student_select_own_or_parent" on public.student_profiles;
+create policy "student_select_own_or_parent"
+  on public.student_profiles for select
+  using (user_id = auth.uid() or public.is_linked_parent(user_id) or public.is_admin());
+
+drop policy if exists "parent_select_own" on public.parent_profiles;
+create policy "parent_select_own"
+  on public.parent_profiles for select
+  using (user_id = auth.uid() or public.is_admin());
+
+drop policy if exists "rel_select_participant" on public.student_parent_relationship;
+create policy "rel_select_participant"
+  on public.student_parent_relationship for select
+  using (student_user_id = auth.uid() or parent_user_id = auth.uid() or public.is_admin());
+
+-- Create a STUDENT account in one step (auth user + profiles + student_profiles).
+create or replace function public.admin_create_student(
+  p_email text,
+  p_full_name text,
+  p_student_id text,
+  p_class_level text default null,
+  p_section text default null,
+  p_academic_year text default null
+)
+returns jsonb
+language plpgsql
+security definer set search_path = public
+as $$
+declare
+  v_uid  uuid;
+  v_temp text;
+begin
+  if not public.is_admin() then
+    raise exception 'Only an academy administrator can create users.';
+  end if;
+  if p_email is null or p_full_name is null or p_student_id is null then
+    raise exception 'Email, full name and student ID are required.';
+  end if;
+  if exists (select 1 from auth.users u where lower(u.email) = lower(p_email)) then
+    raise exception 'An account already exists for this email.';
+  end if;
+  if exists (select 1 from public.student_profiles s where s.student_id = p_student_id) then
+    raise exception 'This student ID is already in use.';
+  end if;
+
+  v_temp := substr(replace(gen_random_uuid()::text, '-', ''), 1, 12) || 'Aa1!';
+
+  v_uid := auth.admin_create_user(
+    email         => p_email,
+    password      => v_temp,
+    email_confirm => true,
+    user_metadata => jsonb_build_object('full_name', p_full_name, 'role', 'student')
+  );
+
+  insert into public.student_profiles (user_id, student_id, class_level, section, academic_year)
+  values (v_uid, p_student_id, p_class_level, p_section, p_academic_year);
+
+  return jsonb_build_object('user_id', v_uid, 'temp_password', v_temp);
+end;
+$$;
+
+-- Create a PARENT account in one step (auth user + profiles + parent_profiles).
+create or replace function public.admin_create_parent(
+  p_email text,
+  p_full_name text
+)
+returns jsonb
+language plpgsql
+security definer set search_path = public
+as $$
+declare
+  v_uid  uuid;
+  v_temp text;
+begin
+  if not public.is_admin() then
+    raise exception 'Only an academy administrator can create users.';
+  end if;
+  if p_email is null or p_full_name is null then
+    raise exception 'Email and full name are required.';
+  end if;
+  if exists (select 1 from auth.users u where lower(u.email) = lower(p_email)) then
+    raise exception 'An account already exists for this email.';
+  end if;
+
+  v_temp := substr(replace(gen_random_uuid()::text, '-', ''), 1, 12) || 'Aa1!';
+
+  v_uid := auth.admin_create_user(
+    email         => p_email,
+    password      => v_temp,
+    email_confirm => true,
+    user_metadata => jsonb_build_object('full_name', p_full_name, 'role', 'parent')
+  );
+
+  insert into public.parent_profiles (user_id)
+  values (v_uid);
+
+  return jsonb_build_object('user_id', v_uid, 'temp_password', v_temp);
+end;
+$$;
+
+-- Link one or more students to a parent (the parent then sees them).
+create or replace function public.admin_link_students(
+  p_parent_user_id uuid,
+  p_student_user_ids uuid[]
+)
+returns integer
+language plpgsql
+security definer set search_path = public
+as $$
+begin
+  if not public.is_admin() then
+    raise exception 'Only an academy administrator can link accounts.';
+  end if;
+  if p_parent_user_id is null or p_student_user_ids is null
+     or cardinality(p_student_user_ids) = 0 then
+    raise exception 'Select a parent and at least one student.';
+  end if;
+
+  insert into public.student_parent_relationship (student_user_id, parent_user_id)
+  select s, p_parent_user_id
+  from unnest(p_student_user_ids) as s
+  where not exists (
+    select 1 from public.student_parent_relationship r
+    where r.student_user_id = s and r.parent_user_id = p_parent_user_id
+  );
+
+  return 1;
+end;
+$$;
+
+-- List all accounts for the portal (students with class info, parents
+-- with linked-children count). Caller must be an admin.
+create or replace function public.admin_list_accounts()
+returns jsonb
+language sql
+security definer set search_path = public
+stable
+as $$
+  select coalesce(jsonb_agg(row_to_json(t) order by t.role, t.full_name), '[]'::jsonb)
+  from (
+    select
+      p.id                 as user_id,
+      u.email              as email,
+      p.full_name          as full_name,
+      p.role               as role,
+      p.created_at         as created_at,
+      sp.student_id        as student_id,
+      sp.class_level       as class_level,
+      sp.section           as section,
+      sp.academic_year     as academic_year,
+      (
+        select count(*)::int
+        from public.student_parent_relationship r
+        where r.parent_user_id = p.id
+      )                    as linked_students
+    from public.profiles p
+    join auth.users u on u.id = p.id
+    left join public.student_profiles sp on sp.user_id = p.id
+  ) t;
+$$;
+
+revoke execute on function public.admin_create_student(text, text, text, text, text, text) from public, anon;
+revoke execute on function public.admin_create_parent(text, text) from public, anon;
+revoke execute on function public.admin_link_students(uuid, uuid[]) from public, anon;
+revoke execute on function public.admin_list_accounts() from public, anon;
+
+grant execute on function public.admin_create_student(text, text, text, text, text, text) to authenticated;
+grant execute on function public.admin_create_parent(text, text) to authenticated;
+grant execute on function public.admin_link_students(uuid, uuid[]) to authenticated;
+grant execute on function public.admin_list_accounts() to authenticated;
