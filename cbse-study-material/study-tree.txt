@@ -543,77 +543,72 @@ CBSE Study Material
         Chapter Test
   Class 10
     Mathematics
-      Chapter 01
+      Real Numbers
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 02
+      Polynomials
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 03
+      Pair of Linear Equations in Two Variables
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 04
+      Quadratic Equations
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 05
+      Arithmetic Progressions
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 06
+      Triangles
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 07
+      Coordinate Geometry
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 08
+      Introduction to Trigonometry
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 09
+      Some Applications of Trigonometry
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 10
+      Circles
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 11
+      Areas Related to Circles
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 12
+      Surface Areas and Volumes
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 13
+      Statistics
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 14
-        Chapter Notes
-        Practice Paper
-        Quiz
-        Chapter Test
-      Chapter 15
+      Probability
         Chapter Notes
         Practice Paper
         Quiz

@@ -163,6 +163,12 @@ function Get-RelatedHtml($related) {
   return "<section class=""sm-related"">$nl  <h2>Related guides</h2>$nl  <ul>$nl    $($lis -join "$nl    ")$nl  </ul>$nl</section>"
 }
 
+function Get-ContentOverride([int]$classNum, [string]$subSlug, [string]$chSlug, [string]$resSlug) {
+  $p = Join-Path $smDir "content\class-$classNum\$subSlug\$chSlug\$resSlug\index.html"
+  if (Test-Path -LiteralPath $p) { return $p }
+  return $null
+}
+
 $resourceList = $data.resources
 $indexableUrls = @()
 $treeLines = @()
@@ -278,9 +284,15 @@ foreach ($c in $data.classes) {
 
       $resCards = @()
       foreach ($r in $resourceList) {
+        $overridePath = Get-ContentOverride $c.number $s.slug $ch.slug $r.slug
+        $pendingChip = if ($overridePath) {
+          "<span class=""sm-card-go"">View <i class=""fas fa-arrow-right""></i></span>"
+        } else {
+          "<span class=""sm-coming-chip""><i class=""fas fa-hourglass-half""></i> Coming soon</span>"
+        }
         $resCards += "<a class=""sm-card sm-resource-card sm-res-$($r.slug)"" href=""$($r.slug)/"">$nl" +
           "  <span class=""sm-card-icon""><i class=""fas $($r.icon)""></i></span>$nl" +
-          "  <div class=""sm-card-body"">$nl    <h3>$($r.label)</h3>$nl    <p>$($r.blurb)</p>$nl    <span class=""sm-coming-chip""><i class=""fas fa-hourglass-half""></i> Coming soon</span>$nl  </div>$nl</a>"
+          "  <div class=""sm-card-body"">$nl    <h3>$($r.label)</h3>$nl    <p>$($r.blurb)</p>$nl    $pendingChip$nl  </div>$nl</a>"
       }
 
       $chBody = "<main class=""sm-page"">$nl  <div class=""container sm-container"">$nl    $(Get-SmCrumbs $crumbCh)$nl    <section class=""sm-hero sm-hero-slim"">$nl      <p class=""sm-eyebrow"">CBSE Class $($c.number) &middot; $($s.label)</p>$nl      <h1>$($ch.label)</h1>$nl      <p>Choose a resource for this chapter. Notes, practice paper, quiz and chapter test will be published here shortly.</p>$nl    </section>$nl    <div class=""sm-grid sm-grid-2 sm-grid-4"" id=""smGrid"">$nl$($resCards -join "$nl$nl")$nl    </div>$nl    <a class=""sm-back"" href=""/cbse-study-material/class-$($c.number)/$($s.slug)/""><i class=""fas fa-arrow-left""></i> All $($s.label) chapters</a>$nl  </div>$nl</main>"
@@ -313,8 +325,15 @@ foreach ($c in $data.classes) {
 
         $resBody = "<main class=""sm-page"">$nl  <div class=""container sm-container"">$nl    $(Get-SmCrumbs $crumbRes)$nl    <section class=""sm-placeholder"">$nl      <span class=""sm-ph-icon""><i class=""fas $($r.icon)""></i></span>$nl      <h1>$($r.label)</h1>$nl      <p class=""sm-ph-sub"">CBSE Class $($c.number) $($s.label) &middot; $($ch.label)</p>$nl      <p class=""sm-ph-note""><i class=""fas fa-hourglass-half""></i> Content coming soon.</p>$nl      <div class=""sm-ph-actions"">$nl        <a class=""btn btn-secondary"" href=""../""><i class=""fas fa-arrow-left""></i> Back to $($ch.label)</a>$nl      </div>$nl    </section>$nl    <nav class=""sm-chips"" aria-label=""Chapter resources"">$nl$($chipLinks -join "$nl")$nl    </nav>$nl  </div>$nl</main>"
         $resPage = "$headRes$nl<body>$nl$navHtml$nl$resBody$nl$footerHtml$nl<script src=""/cbse-study-material/sm.js""></script>$nl</body>$nl</html>"
+        $overridePath = Get-ContentOverride $c.number $s.slug $ch.slug $r.slug
+        if ($overridePath) {
+          $resPage = Get-Content -LiteralPath $overridePath -Raw -Encoding UTF8
+          $indexableUrls += $resUrl
+          Write-Host "Generated .../$($ch.slug)/$($r.slug)/index.html (content override)"
+        } else {
+          Write-Host "Generated /cbse-study-material/class-$($c.number)/$($s.slug)/$($ch.slug)/$($r.slug)/index.html"
+        }
         Set-ContentUtf8 -Path (Join-Path $resDir 'index.html') -Value $resPage
-        Write-Host "Generated /cbse-study-material/class-$($c.number)/$($s.slug)/$($ch.slug)/$($r.slug)/index.html"
       }
     }
   }

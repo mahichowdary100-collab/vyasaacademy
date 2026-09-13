@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CBSE Class 10 Maths Real Numbers Notes | Vyasa Academy</title>
+  <meta name="description" content="Learn CBSE Class 10 Maths Real Numbers with clear explanations of prime factorisation, HCF, LCM, irrational numbers and important exam concepts." />
+  <link rel="canonical" href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/real-numbers/notes/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vyasa Academy" />
+  <meta property="og:title" content="CBSE Class 10 Maths Real Numbers Notes | Vyasa Academy" />
+  <meta property="og:description" content="Learn CBSE Class 10 Maths Real Numbers with clear explanations of prime factorisation, HCF, LCM, irrational numbers and important exam concepts." />
+  <meta property="og:url" content="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/real-numbers/notes/" />
+  <meta property="og:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CBSE Class 10 Maths Real Numbers Notes | Vyasa Academy" />
+  <meta name="twitter:description" content="Learn CBSE Class 10 Maths Real Numbers with clear explanations of prime factorisation, HCF, LCM, irrational numbers and important exam concepts." />
+  <meta name="twitter:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","itemListElement":[{"position":1,"name":"Home","item":"https://www.vyasaacademy.in/","@type":"ListItem"},{"position":2,"name":"CBSE Study Material","item":"https://www.vyasaacademy.in/cbse-study-material/","@type":"ListItem"},{"position":3,"name":"Class 10","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/","@type":"ListItem"},{"position":4,"name":"Mathematics","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/","@type":"ListItem"},{"position":5,"name":"Real Numbers","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/real-numbers/","@type":"ListItem"},{"position":6,"name":"Notes","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/real-numbers/notes/","@type":"ListItem"}],"@type":"BreadcrumbList"}
+  </script>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+      processEscapes: true
+    }
+  };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <style>
+  .sm-notes { font-size: 1rem; line-height: 1.8; }
+  .sm-notes h2 { font-size: 1.45rem; color: var(--primary); margin: 44px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--accent); }
+  .sm-notes h3 { font-size: 1.15rem; color: var(--dark); margin: 28px 0 12px; }
+  .sm-notes h4 { font-size: 1.05rem; color: var(--dark); margin: 20px 0 8px; }
+  .sm-notes p { margin-bottom: 14px; }
+  .sm-notes ul, .sm-notes ol { margin: 10px 0 16px 24px; }
+  .sm-notes li { margin-bottom: 6px; }
+  .sm-notes ul { list-style: disc; }
+
+  .def-box { background: #eef2ff; border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .def-box .box-label { font-weight: 700; color: var(--primary); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .result-box { background: #fff8e1; border-left: 4px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .result-box .box-label { font-weight: 700; color: var(--accent-dark); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .example-box { background: #f0fdf4; border-left: 4px solid #16a34a; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .example-box .box-label { font-weight: 700; color: #16a34a; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .tip-box { background: #eff6ff; border-left: 4px solid #2563eb; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .tip-box .box-label { font-weight: 700; color: #2563eb; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .warn-box { background: #fef2f2; border-left: 4px solid #dc2626; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .warn-box .box-label { font-weight: 700; color: #dc2626; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .proof-box { background: #faf5ff; border-left: 4px solid #9333ea; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .proof-box .box-label { font-weight: 700; color: #9333ea; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .steps { margin: 12px 0 16px; }
+  .steps .step { display: flex; gap: 12px; margin-bottom: 10px; }
+  .steps .step-num { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: var(--primary); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; margin-top: 3px; }
+  .steps .step-text { flex: 1; }
+
+  .table-wrap { overflow-x: auto; margin: 16px 0; -webkit-overflow-scrolling: touch; }
+  .sm-notes table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .sm-notes th { background: var(--primary); color: var(--white); text-align: left; padding: 12px 14px; font-weight: 600; white-space: nowrap; }
+  .sm-notes td { padding: 10px 14px; border-bottom: 1px solid #e5e7eb; }
+  .sm-notes tr:nth-child(even) td { background: #f9fafb; }
+  .sm-notes tr:hover td { background: #eef2ff; }
+
+  .numtree { list-style: none !important; margin-left: 0 !important; padding-left: 18px; }
+  .numtree ul { list-style: none !important; margin-left: 18px !important; margin-top: 6px; padding-left: 8px; border-left: 2px dashed #c7d2fe; }
+  .numtree li { position: relative; margin-bottom: 6px; padding-left: 4px; }
+  .numtree li::before { content: ""; position: absolute; left: -18px; top: 12px; width: 12px; height: 2px; background: #c7d2fe; }
+  .numtree > li { font-weight: 800; color: var(--primary); font-size: 1.05rem; }
+  .numtree ul > li { font-weight: 600; color: var(--primary-light); }
+  .numtree ul ul > li { font-weight: 500; color: var(--dark); }
+  .numtree ul ul ul > li { font-weight: 500; color: var(--dark); }
+  .numtree ul ul ul ul > li { font-weight: 400; color: var(--gray); }
+  @media (max-width: 640px) { .numtree { padding-left: 12px; } .numtree ul { margin-left: 12px !important; } .numtree li::before { left: -12px; width: 8px; } }
+
+  .highlight { background: #fef9c3; padding: 2px 5px; border-radius: 4px; font-weight: 600; }
+  .qbox { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: var(--radius); padding: 16px 20px; margin: 12px 0; }
+  .qbox .q-label { font-weight: 700; color: var(--primary); margin-bottom: 4px; }
+
+  .ans-toggle { cursor: pointer; display: inline-block; font-weight: 600; color: var(--primary); margin-top: 6px; }
+  .ans-content { display: none; margin-top: 10px; padding: 12px 16px; background: #f0fdf4; border-radius: var(--radius); }
+  .ans-content.show { display: block; }
+
+  .resource-nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
+  .resource-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: var(--radius); border: 2px solid #e5e7eb; font-weight: 600; font-size: 0.92rem; color: var(--dark); background: var(--white); transition: var(--transition); }
+  .resource-nav a:hover, .resource-nav a.is-active { border-color: var(--primary); background: var(--primary); color: var(--white); }
+
+  .sm-back { display: inline-flex; align-items: center; gap: 8px; margin-top: 30px; padding: 10px 0; color: var(--primary); font-weight: 600; }
+  .sm-back:hover { color: var(--accent-dark); }
+
+  @media (max-width: 640px) {
+    .sm-notes h2 { font-size: 1.25rem; }
+    .sm-notes { font-size: 0.95rem; }
+    .steps .step { gap: 8px; }
+    .steps .step-num { width: 22px; height: 22px; font-size: 0.75rem; }
+    .resource-nav { gap: 6px; }
+    .resource-nav a { padding: 8px 12px; font-size: 0.85rem; }
+  }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="/" class="logo"><i class="fas fa-graduation-cap"></i> Vyasa Academy</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="/">Home</a>
+      <a href="/#courses">Courses</a>
+      <a href="/#admissions">Admissions</a>
+      <a href="/cbse-study-material/" class="active">Study Material</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main class="sm-page">
+  <div class="container sm-container">
+    <nav class="sm-crumbs" aria-label="Breadcrumb">
+      <a href="https://www.vyasaacademy.in/">Home</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/">CBSE Study Material</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/">Class 10</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/">Mathematics</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/real-numbers/">Real Numbers</a> /
+      Notes
+    </nav>
+
+    <section class="sm-hero sm-hero-slim">
+      <p class="sm-eyebrow">CBSE Class 10 · Mathematics</p>
+      <h1>Class 10 Mathematics – Chapter 1: Real Numbers</h1>
+      <p>This chapter introduces the real number system, prime factorisation, HCF and LCM, and irrational numbers. You will learn to classify numbers, find HCF and LCM using prime factorisation, and prove that certain numbers are irrational.</p>
+    </section>
+
+    <nav class="resource-nav" aria-label="Chapter resources">
+      <a class="is-active" href="/cbse-study-material/class-10/mathematics/real-numbers/notes/"><i class="fas fa-book-open"></i> Notes</a>
+      <a href="/cbse-study-material/class-10/mathematics/real-numbers/practice-paper/"><i class="fas fa-file-lines"></i> Practice Paper</a>
+      <a href="/cbse-study-material/class-10/mathematics/real-numbers/quiz/"><i class="fas fa-bullseye"></i> Quiz</a>
+      <a href="/cbse-study-material/class-10/mathematics/real-numbers/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+    </nav>
+
+    <article class="sm-notes">
+
+      <section id="number-systems">
+        <h2>1. Real Numbers – The Number System</h2>
+        <p>In our daily life, we use different types of numbers. Classifying them properly helps us understand their properties. Here are the main types of numbers you must know.</p>
+
+        <div class="def-box">
+          <div class="box-label">Natural Numbers</div>
+          <p>The counting numbers <strong>1, 2, 3, 4, 5, 6, …</strong> are called Natural Numbers. They are used for counting objects. The set of Natural Numbers is denoted by \(\mathbb{N}\).</p>
+        </div>
+
+        <div class="def-box">
+          <div class="box-label">Whole Numbers</div>
+          <p>Natural Numbers together with <strong>0</strong> form the set of Whole Numbers: <strong>0, 1, 2, 3, 4, …</strong>. The set is denoted by \(\mathbb{W}\).</p>
+        </div>
+
+        <div class="def-box">
+          <div class="box-label">Integers</div>
+          <p>Whole Numbers and their negatives form the set of Integers: <strong>…, −3, −2, −1, 0, 1, 2, 3, …</strong>. The set is denoted by \(\mathbb{Z}\).</p>
+        </div>
+
+        <div class="def-box">
+          <div class="box-label">Rational Numbers</div>
+          <p>A number that can be expressed in the form \(\dfrac{p}{q}\), where \(p\) and \(q\) are integers and \(q \neq 0\), is called a Rational Number.</p>
+          <p><strong>Examples:</strong> \(\dfrac{2}{3},\; \dfrac{-5}{7},\; 0.5 = \dfrac{1}{2},\; 7 = \dfrac{7}{1}\)</p>
+          <p>Every integer is a rational number (take \(q = 1\)).</p>
+        </div>
+
+        <div class="def-box">
+          <div class="box-label">Irrational Numbers</div>
+          <p>A number that <strong>cannot</strong> be expressed in the form \(\dfrac{p}{q}\) (where \(p, q\) are integers and \(q \neq 0\)) is called an Irrational Number.</p>
+          <p><strong>Examples:</strong> \(\sqrt{2},\; \sqrt{3},\; \sqrt{5},\; \pi\)</p>
+        </div>
+
+        <div class="def-box">
+          <div class="box-label">Real Numbers</div>
+          <p>All Rational Numbers and Irrational Numbers together form the set of Real Numbers, denoted by \(\mathbb{R}\). Every number on the number line is a Real Number.</p>
+        </div>
+
+        <h3>Number System Hierarchy</h3>
+        <p>The following diagram shows how the number systems are related:</p>
+        <div class="table-wrap">
+          <ul class="numtree">
+            <li>Real Numbers
+              <ul>
+                <li>Rational Numbers
+                  <ul>
+                    <li>Integers
+                      <ul>
+                        <li>Whole Numbers
+                          <ul>
+                            <li>Natural Numbers (1, 2, 3, 4, …)</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>Non-integer Rational Numbers (e.g. \(\frac{2}{3}, -\frac{5}{7}\))</li>
+                  </ul>
+                </li>
+                <li>Irrational Numbers (e.g. \(\sqrt{2}, \sqrt{3}, \pi\))</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tip-box">
+          <div class="box-label">Remember</div>
+          <p>Every Natural Number is a Whole Number. Every Whole Number is an Integer. Every Integer is a Rational Number. Every Rational Number is a Real Number. But the reverse is not always true.</p>
+        </div>
+      </section>
+
+      <section id="fta">
+        <h2>2. Fundamental Theorem of Arithmetic</h2>
+
+        <div class="def-box">
+          <div class="box-label">Definition</div>
+          <p><strong>Fundamental Theorem of Arithmetic:</strong> Every composite number can be expressed (factorised) as a product of primes, and this factorisation is unique, apart from the order in which the prime factors occur.</p>
+        </div>
+
+        <p>Before we use this theorem, let us recall what prime and composite numbers are.</p>
+
+        <div class="def-box">
+          <div class="box-label">Prime Number</div>
+          <p>A number greater than 1 that has <strong>exactly two factors</strong> — 1 and itself — is called a Prime Number.</p>
+          <p><strong>Examples:</strong> 2, 3, 5, 7, 11, 13, 17, 19, 23, …</p>
+        </div>
+
+        <div class="def-box">
+          <div class="box-label">Composite Number</div>
+          <p>A number greater than 1 that has <strong>more than two factors</strong> is called a Composite Number.</p>
+          <p><strong>Examples:</strong> 4, 6, 8, 9, 10, 12, 14, 15, …</p>
+        </div>
+
+        <p>The number 1 is <strong>neither prime nor composite</strong>.</p>
+
+        <h3>Prime Factorisation</h3>
+        <p>Prime Factorisation means writing a composite number as a product of its prime factors. We find the prime factorisation by repeatedly dividing by the smallest prime that divides the number.</p>
+
+        <div class="example-box">
+          <div class="box-label">Example – Prime Factorisation of 60</div>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><span class="step-text">60 is divisible by 2: \(60 \div 2 = 30\)</span></div>
+            <div class="step"><span class="step-num">2</span><span class="step-text">30 is divisible by 2: \(30 \div 2 = 15\)</span></div>
+            <div class="step"><span class="step-num">3</span><span class="step-text">15 is divisible by 3: \(15 \div 3 = 5\)</span></div>
+            <div class="step"><span class="step-num">4</span><span class="step-text">5 is a prime number.</span></div>
+          </div>
+          <p>\(60 = 2 \times 2 \times 3 \times 5 = 2^2 \times 3 \times 5\)</p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Example – Prime Factorisation of 84</div>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><span class="step-text">\(84 \div 2 = 42\)</span></div>
+            <div class="step"><span class="step-num">2</span><span class="step-text">\(42 \div 2 = 21\)</span></div>
+            <div class="step"><span class="step-num">3</span><span class="step-text">\(21 \div 3 = 7\)</span></div>
+            <div class="step"><span class="step-num">4</span><span class="step-text">7 is a prime number.</span></div>
+          </div>
+          <p>\(84 = 2^2 \times 3 \times 7\)</p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Example – Prime Factorisation of 72</div>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><span class="step-text">\(72 \div 2 = 36\)</span></div>
+            <div class="step"><span class="step-num">2</span><span class="step-text">\(36 \div 2 = 18\)</span></div>
+            <div class="step"><span class="step-num">3</span><span class="step-text">\(18 \div 2 = 9\)</span></div>
+            <div class="step"><span class="step-num">4</span><span class="step-text">\(9 \div 3 = 3\)</span></div>
+            <div class="step"><span class="step-num">5</span><span class="step-text">3 is a prime number.</span></div>
+          </div>
+          <p>\(72 = 2^3 \times 3^2\)</p>
+        </div>
+
+        <div class="tip-box">
+          <div class="box-label">Why is this important?</div>
+          <p>Prime factorisation is the foundation for finding HCF and LCM. The Fundamental Theorem of Arithmetic guarantees that every number has a <strong>unique</strong> prime factorisation, so the HCF and LCM we calculate are definite and reliable.</p>
+        </div>
+      </section>
+
+      <section id="hcf-pf">
+        <h2>3. HCF Using Prime Factorisation</h2>
+
+        <div class="def-box">
+          <div class="box-label">Definition</div>
+          <p>The <strong>Highest Common Factor (HCF)</strong> of two or more numbers is the largest number that divides all of them exactly.</p>
+        </div>
+
+        <div class="result-box">
+          <div class="box-label">Key Rule</div>
+          <p><strong>HCF = Product of common prime factors with the <u>smallest</u> powers.</strong></p>
+        </div>
+
+        <h3>Method</h3>
+        <ol>
+          <li>Find the prime factorisation of each number.</li>
+          <li>Identify the prime factors that are <strong>common</strong> to all the numbers.</li>
+          <li>For each common prime factor, take the <strong>smallest power</strong> appearing in the factorisations.</li>
+          <li>Multiply these to get the HCF.</li>
+        </ol>
+
+        <div class="example-box">
+          <div class="box-label">Example 1 – HCF of 12 and 18</div>
+          <p>Prime factorisations:</p>
+          <p>\(12 = 2^2 \times 3\)</p>
+          <p>\(18 = 2 \times 3^2\)</p>
+          <p>Common prime factors: 2 and 3</p>
+          <p>Smallest power of 2: \(2^1\); Smallest power of 3: \(3^1\)</p>
+          <p><strong>HCF = \(2 \times 3 = 6\)</strong></p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Example 2 – HCF of 60, 84, and 72</div>
+          <p>Prime factorisations:</p>
+          <p>\(60 = 2^2 \times 3 \times 5\)</p>
+          <p>\(84 = 2^2 \times 3 \times 7\)</p>
+          <p>\(72 = 2^3 \times 3^2\)</p>
+          <p>Common prime factors: 2 and 3</p>
+          <p>Smallest power of 2: \(2^2\); Smallest power of 3: \(3^1\)</p>
+          <p><strong>HCF = \(2^2 \times 3 = 4 \times 3 = 12\)</strong></p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Example 3 – HCF of 90 and 126</div>
+          <p>Prime factorisations:</p>
+          <p>\(90 = 2 \times 3^2 \times 5\)</p>
+          <p>\(126 = 2 \times 3^2 \times 7\)</p>
+          <p>Common prime factors: 2 and 3</p>
+          <p>Smallest power of 2: \(2^1\); Smallest power of 3: \(3^2\)</p>
+          <p><strong>HCF = \(2 \times 9 = 18\)</strong></p>
+        </div>
+
+        <div class="warn-box">
+          <div class="box-label">Common Error</div>
+          <p>Students often take the <strong>largest</strong> power instead of the <strong>smallest</strong> power for HCF. Remember: for HCF, always choose the <strong>smallest</strong> power of each common factor.</p>
+        </div>
+      </section>
+
+      <section id="lcm-pf">
+        <h2>4. LCM Using Prime Factorisation</h2>
+
+        <div class="def-box">
+          <div class="box-label">Definition</div>
+          <p>The <strong>Least Common Multiple (LCM)</strong> of two or more numbers is the smallest number that is exactly divisible by all of them.</p>
+        </div>
+
+        <div class="result-box">
+          <div class="box-label">Key Rule</div>
+          <p><strong>LCM = Product of <u>all</u> prime factors with the <u>greatest</u> powers.</strong></p>
+        </div>
+
+        <h3>Method</h3>
+        <ol>
+          <li>Find the prime factorisation of each number.</li>
+          <li>List <strong>all</strong> prime factors that appear in any of the factorisations.</li>
+          <li>For each prime factor, take the <strong>greatest power</strong> appearing in the factorisations.</li>
+          <li>Multiply these to get the LCM.</li>
+        </ol>
+
+        <div class="example-box">
+          <div class="box-label">Example 1 – LCM of 12 and 18</div>
+          <p>\(12 = 2^2 \times 3\)</p>
+          <p>\(18 = 2 \times 3^2\)</p>
+          <p>All prime factors: 2 and 3</p>
+          <p>Greatest power of 2: \(2^2\); Greatest power of 3: \(3^2\)</p>
+          <p><strong>LCM = \(2^2 \times 3^2 = 4 \times 9 = 36\)</strong></p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Example 2 – LCM of 60, 84, and 72</div>
+          <p>\(60 = 2^2 \times 3 \times 5\)</p>
+          <p>\(84 = 2^2 \times 3 \times 7\)</p>
+          <p>\(72 = 2^3 \times 3^2\)</p>
+          <p>All prime factors: 2, 3, 5, 7</p>
+          <p>Greatest powers: \(2^3\), \(3^2\), \(5^1\), \(7^1\)</p>
+          <p><strong>LCM = \(8 \times 9 \times 5 \times 7 = 2520\)</strong></p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Example 3 – LCM of 90 and 126</div>
+          <p>\(90 = 2 \times 3^2 \times 5\)</p>
+          <p>\(126 = 2 \times 3^2 \times 7\)</p>
+          <p>All prime factors: 2, 3, 5, 7</p>
+          <p>Greatest powers: \(2^1\), \(3^2\), \(5^1\), \(7^1\)</p>
+          <p><strong>LCM = \(2 \times 9 \times 5 \times 7 = 630\)</strong></p>
+        </div>
+
+        <div class="warn-box">
+          <div class="box-label">Common Error</div>
+          <p>For LCM, students sometimes omit prime factors that appear in only one of the numbers. Remember: for LCM, take <strong>all</strong> prime factors from all numbers.</p>
+        </div>
+      </section>
+
+      <section id="hcf-lcm-relation">
+        <h2>5. HCF and LCM Relationship</h2>
+
+        <div class="result-box">
+          <div class="box-label">Important Formula</div>
+          <p>For any two positive integers \(a\) and \(b\):</p>
+          <p>\[\text{HCF}(a, b) \times \text{LCM}(a, b) = a \times b\]</p>
+        </div>
+
+        <p>This is one of the most useful relationships in Real Numbers. If you know the HCF and can find one of the numbers, you can find the other.</p>
+
+        <div class="example-box">
+          <div class="box-label">Verification with 12 and 18</div>
+          <p>HCF(12, 18) = 6, LCM(12, 18) = 36</p>
+          <p>HCF × LCM = \(6 \times 36 = 216\)</p>
+          <p>12 × 18 = 216</p>
+          <p>Both are equal. ✓</p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Example – Find the other number</div>
+          <p>The HCF of two numbers is 12 and their LCM is 360. If one number is 72, find the other.</p>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><span class="step-text">Let the other number be \(x\).</span></div>
+            <div class="step"><span class="step-num">2</span><span class="step-text">HCF × LCM = 72 × \(x\)</span></div>
+            <div class="step"><span class="step-num">3</span><span class="step-text">\(12 \times 360 = 72 \times x\)</span></div>
+            <div class="step"><span class="step-num">4</span><span class="step-text">\(4320 = 72x\)</span></div>
+            <div class="step"><span class="step-num">5</span><span class="step-text">\(x = 4320 \div 72 = 60\)</span></div>
+          </div>
+          <p><strong>The other number is 60.</strong></p>
+        </div>
+
+        <div class="tip-box">
+          <div class="box-label">When to Use This Relationship</div>
+          <p>This formula works only for <strong>two</strong> positive integers. It does <strong>not</strong> extend directly to three or more numbers. For three numbers, you must find HCF and LCM using prime factorisation.</p>
+        </div>
+      </section>
+
+      <section id="applications">
+        <h2>6. Applications of HCF and LCM</h2>
+        <p>Many real-life problems can be solved by identifying whether we need HCF or LCM. Knowing <strong>which concept to apply</strong> is often the key step.</p>
+
+        <div class="result-box">
+          <div class="box-label">How to Decide: HCF or LCM?</div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Type of Problem</th>
+                  <th>Concept</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Largest possible equal groups</td>
+                  <td>HCF</td>
+                </tr>
+                <tr>
+                  <td>Greatest possible size that divides evenly</td>
+                  <td>HCF</td>
+                </tr>
+                <tr>
+                  <td>Smallest number divisible by given numbers</td>
+                  <td>LCM</td>
+                </tr>
+                <tr>
+                  <td>Events occurring together again</td>
+                  <td>LCM</td>
+                </tr>
+                <tr>
+                  <td>Finding the biggest piece / container / group</td>
+                  <td>HCF</td>
+                </tr>
+                <tr>
+                  <td>Finding when things line up / repeat / ring together</td>
+                  <td>LCM</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Example 1 – Equal Grouping (HCF)</div>
+          <p>There are 60 chocolates and 84 biscuits. They are to be packed in boxes such that each box has the same number of chocolates and the same number of biscuits. What is the greatest number of boxes possible?</p>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><span class="step-text">Each box must divide both 60 and 84 exactly. We need the <strong>greatest</strong> number of boxes = HCF.</span></div>
+            <div class="step"><span class="step-num">2</span><span class="step-text">\(60 = 2^2 \times 3 \times 5\), \(84 = 2^2 \times 3 \times 7\)</span></div>
+            <div class="step"><span class="step-num">3</span><span class="step-text">HCF = \(2^2 \times 3 = 12\)</span></div>
+          </div>
+          <p><strong>Greatest number of boxes = 12</strong> (5 chocolates and 7 biscuits per box).</p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Example 2 – Smallest Divisible Number (LCM)</div>
+          <p>Find the smallest number that is exactly divisible by 8, 12, and 15.</p>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><span class="step-text">We need the smallest number = LCM.</span></div>
+            <div class="step"><span class="step-num">2</span><span class="step-text">\(8 = 2^3\), \(12 = 2^2 \times 3\), \(15 = 3 \times 5\)</span></div>
+            <div class="step"><span class="step-num">3</span><span class="step-text">LCM = \(2^3 \times 3 \times 5 = 120\)</span></div>
+          </div>
+          <p><strong>The smallest number = 120.</strong></p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Example 3 – Repeated Events (LCM)</div>
+          <p>Three bells ring at intervals of 12 minutes, 18 minutes, and 24 minutes. If they ring together at 8:00 AM, when will they ring together again?</p>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><span class="step-text">They ring together again after the LCM of their intervals.</span></div>
+            <div class="step"><span class="step-num">2</span><span class="step-text">\(12 = 2^2 \times 3\), \(18 = 2 \times 3^2\), \(24 = 2^3 \times 3\)</span></div>
+            <div class="step"><span class="step-num">3</span><span class="step-text">LCM = \(2^3 \times 3^2 = 8 \times 9 = 72\) minutes</span></div>
+            <div class="step"><span class="step-num">4</span><span class="step-text">72 minutes = 1 hour 12 minutes after 8:00 AM</span></div>
+          </div>
+          <p><strong>They will ring together again at 9:12 AM.</strong></p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Example 4 – Greatest Possible Size (HCF)</div>
+          <p>A rectangular garden is 96 m long and 72 m wide. It is to be divided into square plots of equal size. What is the greatest possible side length of each square plot?</p>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><span class="step-text">The side of each square must divide both 96 and 72 exactly. We need the <strong>greatest</strong> size = HCF.</span></div>
+            <div class="step"><span class="step-num">2</span><span class="step-text">\(96 = 2^5 \times 3\), \(72 = 2^3 \times 3^2\)</span></div>
+            <div class="step"><span class="step-num">3</span><span class="step-text">HCF = \(2^3 \times 3 = 24\)</span></div>
+          </div>
+          <p><strong>Greatest possible side length = 24 m.</strong></p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Example 5 – Lights Flashing Together (LCM)</div>
+          <p>Two traffic lights change colours every 48 seconds and 72 seconds. If they change together now, after how many seconds will they change together again?</p>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><span class="step-text">Find the LCM of 48 and 72.</span></div>
+            <div class="step"><span class="step-num">2</span><span class="step-text">\(48 = 2^4 \times 3\), \(72 = 2^3 \times 3^2\)</span></div>
+            <div class="step"><span class="step-num">3</span><span class="step-text">LCM = \(2^4 \times 3^2 = 16 \times 9 = 144\) seconds</span></div>
+          </div>
+          <p><strong>They will change together again after 144 seconds (2 minutes 24 seconds).</strong></p>
+        </div>
+      </section>
+
+      <section id="irrational-numbers">
+        <h2>7. Irrational Numbers</h2>
+
+        <div class="def-box">
+          <div class="box-label">Definition</div>
+          <p>A number is called an <strong>Irrational Number</strong> if it <strong>cannot</strong> be expressed in the form \(\dfrac{p}{q}\), where \(p\) and \(q\) are integers and \(q \neq 0\).</p>
+        </div>
+
+        <p>Irrational numbers cannot be written as fractions and have no exact fractional representation. Some important irrational numbers:</p>
+        <ul>
+          <li>\(\sqrt{2} \approx 1.41421356...\)</li>
+          <li>\(\sqrt{3} \approx 1.73205080...\)</li>
+          <li>\(\sqrt{5} \approx 2.23606797...\)</li>
+          <li>\(\pi \approx 3.14159265...\)</li>
+        </ul>
+
+        <h3>Rational vs Irrational Numbers</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Rational Numbers</th>
+                <th>Irrational Numbers</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Form</td>
+                <td>\(\dfrac{p}{q},\; q \neq 0\)</td>
+                <td>Cannot be written as \(\dfrac{p}{q}\)</td>
+              </tr>
+              <tr>
+                <td>Examples</td>
+                <td>\(\frac{1}{3},\; 0.5,\; -7\)</td>
+                <td>\(\sqrt{2},\; \sqrt{3},\; \pi\)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="tip-box">
+          <div class="box-label">Key Point</div>
+          <p>The sum, difference, product, or quotient of a rational number and an irrational number is always irrational (provided \(q \neq 0\)). For example, \(2 + \sqrt{3}\) is irrational.</p>
+        </div>
+      </section>
+
+      <section id="proofs">
+        <h2>8. Proofs of Irrationality</h2>
+        <p>Proving that a number is irrational is an important exam skill. The method used is called <strong>proof by contradiction</strong>.</p>
+
+        <div class="result-box">
+          <div class="box-label">General Strategy</div>
+          <ol>
+            <li><strong>Assume</strong> the number is rational. So write it as \(\dfrac{p}{q}\) where \(p, q\) have no common factor (lowest terms) and \(q \neq 0\).</li>
+            <li>Simplify to get an equation.</li>
+            <li><strong>Derive a contradiction</strong> — show that a prime divides both \(p\) and \(q\), contradicting the assumption that \(\dfrac{p}{q}\) is in lowest terms.</li>
+            <li>Conclude: the assumption was wrong. Therefore the number is <strong>irrational</strong>.</li>
+          </ol>
+        </div>
+
+        <h3>Proof 1: \(\sqrt{2}\) is irrational</h3>
+        <div class="proof-box">
+          <div class="box-label">Proof</div>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><span class="step-text"><strong>Assume</strong> \(\sqrt{2}\) is rational. Then \(\sqrt{2} = \dfrac{p}{q}\) where \(p\) and \(q\) are coprime (no common factor other than 1) and \(q \neq 0\).</span></div>
+            <div class="step"><span class="step-num">2</span><span class="step-text">Squaring both sides: \(2 = \dfrac{p^2}{q^2}\), so \(p^2 = 2q^2\).</span></div>
+            <div class="step"><span class="step-num">3</span><span class="step-text">Since \(p^2 = 2q^2\), \(p^2\) is even. Therefore \(p\) must be even (the square of an odd number is always odd).</span></div>
+            <div class="step"><span class="step-num">4</span><span class="step-text">Let \(p = 2k\) for some integer \(k\). Then \(p^2 = 4k^2\). Substituting: \(4k^2 = 2q^2\), so \(q^2 = 2k^2\).</span></div>
+            <div class="step"><span class="step-num">5</span><span class="step-text">Since \(q^2 = 2k^2\), \(q^2\) is even. Therefore \(q\) is also even.</span></div>
+            <div class="step"><span class="step-num">6</span><span class="step-text">But if both \(p\) and \(q\) are even, they have a common factor of 2. This <strong>contradicts</strong> our assumption that \(p\) and \(q\) are coprime.</span></div>
+            <div class="step"><span class="step-num">7</span><span class="step-text">Therefore our assumption is wrong. \(\sqrt{2}\) is <strong>irrational</strong>.</span></div>
+          </div>
+        </div>
+
+        <h3>Proof 2: \(\sqrt{3}\) is irrational</h3>
+        <div class="proof-box">
+          <div class="box-label">Proof</div>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><span class="step-text"><strong>Assume</strong> \(\sqrt{3} = \dfrac{p}{q}\) where \(p\) and \(q\) are coprime and \(q \neq 0\).</span></div>
+            <div class="step"><span class="step-num">2</span><span class="step-text">Squaring: \(3 = \dfrac{p^2}{q^2}\), so \(p^2 = 3q^2\).</span></div>
+            <div class="step"><span class="step-num">3</span><span class="step-text">So \(3 \mid p^2\), which means \(3 \mid p\). Let \(p = 3k\).</span></div>
+            <div class="step"><span class="step-num">4</span><span class="step-text">Then \(9k^2 = 3q^2\), so \(q^2 = 3k^2\). This means \(3 \mid q^2\), so \(3 \mid q\).</span></div>
+            <div class="step"><span class="step-num">5</span><span class="step-text">Both \(p\) and \(q\) are divisible by 3. This <strong>contradicts</strong> the assumption that \(p\) and \(q\) are coprime.</span></div>
+            <div class="step"><span class="step-num">6</span><span class="step-text">Therefore \(\sqrt{3}\) is <strong>irrational</strong>.</span></div>
+          </div>
+        </div>
+
+        <h3>Proof 3: \(\sqrt{5}\) is irrational</h3>
+        <div class="proof-box">
+          <div class="box-label">Proof</div>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><span class="step-text"><strong>Assume</strong> \(\sqrt{5} = \dfrac{p}{q}\) where \(p\) and \(q\) are coprime and \(q \neq 0\).</span></div>
+            <div class="step"><span class="step-num">2</span><span class="step-text">Squaring: \(5 = \dfrac{p^2}{q^2}\), so \(p^2 = 5q^2\).</span></div>
+            <div class="step"><span class="step-num">3</span><span class="step-text">So \(5 \mid p^2\), which means \(5 \mid p\). Let \(p = 5k\).</span></div>
+            <div class="step"><span class="step-num">4</span><span class="step-text">Then \(25k^2 = 5q^2\), so \(q^2 = 5k^2\). This means \(5 \mid q^2\), so \(5 \mid q\).</span></div>
+            <div class="step"><span class="step-num">5</span><span class="step-text">Both \(p\) and \(q\) are divisible by 5. This <strong>contradicts</strong> the assumption that \(p\) and \(q\) are coprime.</span></div>
+            <div class="step"><span class="step-num">6</span><span class="step-text">Therefore \(\sqrt{5}\) is <strong>irrational</strong>.</span></div>
+          </div>
+        </div>
+
+        <div class="tip-box">
+          <div class="box-label">Writing the Proof in Exams</div>
+          <p>Always state the assumption clearly, show each step, and explicitly point out the contradiction. End with a concluding statement: "Therefore, our assumption is wrong, and the number is irrational."</p>
+        </div>
+      </section>
+
+      <section id="important-concepts">
+        <h2>9. Important Concepts to Remember</h2>
+
+        <div class="def-box">
+          <div class="box-label">Rational vs Irrational Numbers</div>
+          <p>A rational number can be written as \(\dfrac{p}{q}\). An irrational number cannot. Together they form the Real Numbers.</p>
+        </div>
+
+        <div class="def-box">
+          <div class="box-label">Prime vs Composite Numbers</div>
+          <p>A prime number has exactly two factors (1 and itself). A composite number has more than two factors. 1 is neither prime nor composite.</p>
+        </div>
+
+        <div class="def-box">
+          <div class="box-label">Prime Factorisation</div>
+          <p>Writing a composite number as a product of prime numbers. By the Fundamental Theorem of Arithmetic, this factorisation is unique (apart from the order).</p>
+        </div>
+
+        <div class="def-box">
+          <div class="box-label">HCF</div>
+          <p>The product of common prime factors taken with the <strong>smallest</strong> powers. It gives the greatest number that divides all the given numbers.</p>
+        </div>
+
+        <div class="def-box">
+          <div class="box-label">LCM</div>
+          <p>The product of all prime factors taken with the <strong>greatest</strong> powers. It gives the smallest number that is divisible by all the given numbers.</p>
+        </div>
+
+        <div class="def-box">
+          <div class="box-label">HCF–LCM Relationship</div>
+          <p>For two positive integers \(a\) and \(b\): HCF(\(a, b\)) × LCM(\(a, b\)) = \(a \times b\). This does <strong>not</strong> work for three or more numbers.</p>
+        </div>
+
+        <div class="def-box">
+          <div class="box-label">Proving Irrationality</div>
+          <p>Use proof by contradiction: assume the number is rational, express as \(\dfrac{p}{q}\) in lowest terms, derive that a prime divides both \(p\) and \(q\), and conclude the assumption is false.</p>
+        </div>
+      </section>
+
+      <section id="important-results">
+        <h2>10. Important Results</h2>
+
+        <div class="result-box">
+          <div class="box-label">Fundamental Theorem of Arithmetic</div>
+          <p>Every composite number can be expressed as a product of primes, and this factorisation is unique apart from the order of the prime factors.</p>
+        </div>
+
+        <div class="result-box">
+          <div class="box-label">HCF</div>
+          <p>Product of common prime factors using the <strong>smallest</strong> powers.</p>
+        </div>
+
+        <div class="result-box">
+          <div class="box-label">LCM</div>
+          <p>Product of all prime factors using the <strong>greatest</strong> powers.</p>
+        </div>
+
+        <div class="result-box">
+          <div class="box-label">HCF–LCM Relationship</div>
+          <p>For two positive integers \(a\) and \(b\):</p>
+          <p>\[\text{HCF}(a, b) \times \text{LCM}(a, b) = a \times b\]</p>
+        </div>
+
+        <div class="result-box">
+          <div class="box-label">Irrational Numbers</div>
+          <p>A number that cannot be expressed as \(\dfrac{p}{q}\) (where \(p, q \in \mathbb{Z},\; q \neq 0\)) is irrational. Examples: \(\sqrt{2}, \sqrt{3}, \sqrt{5}\).</p>
+        </div>
+      </section>
+
+      <section id="solved-examples">
+        <h2>11. Solved Examples</h2>
+
+        <div class="example-box">
+          <div class="box-label">Example 1 – Identifying Rational and Irrational Numbers</div>
+          <div class="def-box" style="margin-top:0"><p><strong>Question:</strong> Which of the following are irrational? (a) \(\sqrt{9}\) &nbsp; (b) \(\sqrt{10}\) &nbsp; (c) \(\dfrac{22}{7}\) &nbsp; (d) \(1 + \sqrt{3}\)</p></div>
+          <p><strong>Concept Used:</strong> Definition of irrational numbers.</p>
+          <p><strong>Solution:</strong></p>
+          <ul>
+            <li>(a) \(\sqrt{9} = 3\) — this is a rational number.</li>
+            <li>(b) \(\sqrt{10}\) — 10 is not a perfect square, so \(\sqrt{10}\) is <strong>irrational</strong>.</li>
+            <li>(c) \(\dfrac{22}{7}\) — this is in the form \(\dfrac{p}{q}\), so it is rational.</li>
+            <li>(d) \(1 + \sqrt{3}\) — the sum of a rational number and an irrational number is irrational. So this is <strong>irrational</strong>.</li>
+          </ul>
+          <p><strong>Final Answer:</strong> \(\sqrt{10}\) and \(1 + \sqrt{3}\) are irrational.</p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Example 2 – Prime Factorisation</div>
+          <div class="def-box" style="margin-top:0"><p><strong>Question:</strong> Find the prime factorisation of 240.</p></div>
+          <p><strong>Concept Used:</strong> Prime factorisation.</p>
+          <p><strong>Solution:</strong></p>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><span class="step-text">\(240 \div 2 = 120\)</span></div>
+            <div class="step"><span class="step-num">2</span><span class="step-text">\(120 \div 2 = 60\)</span></div>
+            <div class="step"><span class="step-num">3</span><span class="step-text">\(60 \div 2 = 30\)</span></div>
+            <div class="step"><span class="step-num">4</span><span class="step-text">\(30 \div 2 = 15\)</span></div>
+            <div class="step"><span class="step-num">5</span><span class="step-text">\(15 \div 3 = 5\)</span></div>
+            <div class="step"><span class="step-num">6</span><span class="step-text">5 is prime.</span></div>
+          </div>
+          <p><strong>Final Answer:</strong> \(240 = 2^4 \times 3 \times 5\)</p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Example 3 – Finding HCF</div>
+          <div class="def-box" style="margin-top:0"><p><strong>Question:</strong> Find the HCF of 180 and 252.</p></div>
+          <p><strong>Concept Used:</strong> HCF using prime factorisation.</p>
+          <p><strong>Solution:</strong></p>
+          <p>\(180 = 2^2 \times 3^2 \times 5\)</p>
+          <p>\(252 = 2^2 \times 3^2 \times 7\)</p>
+          <p>Common factors with smallest powers: \(2^2 \times 3^2\)</p>
+          <p><strong>Final Answer:</strong> HCF = \(4 \times 9 = 36\)</p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Example 4 – Finding LCM</div>
+          <div class="def-box" style="margin-top:0"><p><strong>Question:</strong> Find the LCM of 24 and 36.</p></div>
+          <p><strong>Concept Used:</strong> LCM using prime factorisation.</p>
+          <p><strong>Solution:</strong></p>
+          <p>\(24 = 2^3 \times 3\)</p>
+          <p>\(36 = 2^2 \times 3^2\)</p>
+          <p>All factors with greatest powers: \(2^3 \times 3^2\)</p>
+          <p><strong>Final Answer:</strong> LCM = \(8 \times 9 = 72\)</p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Example 5 – Using HCF × LCM Relationship</div>
+          <div class="def-box" style="margin-top:0"><p><strong>Question:</strong> The HCF of two numbers is 14 and their LCM is 1512. If one number is 56, find the other.</p></div>
+          <p><strong>Concept Used:</strong> HCF × LCM = product of the two numbers.</p>
+          <p><strong>Solution:</strong></p>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><span class="step-text">HCF × LCM = \(56 \times x\), where \(x\) is the unknown number.</span></div>
+            <div class="step"><span class="step-num">2</span><span class="step-text">\(14 \times 1512 = 56x\)</span></div>
+            <div class="step"><span class="step-num">3</span><span class="step-text">\(21168 = 56x\)</span></div>
+            <div class="step"><span class="step-num">4</span><span class="step-text">\(x = 378\)</span></div>
+          </div>
+          <p><strong>Final Answer:</strong> The other number is 378.</p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Example 6 – HCF Application</div>
+          <div class="def-box" style="margin-top:0"><p><strong>Question:</strong> Three tankers contain 403 litres, 465 litres, and 496 litres of water respectively. These are to be filled into identical containers. What is the capacity of the largest container that can measure the water an exact number of times?</p></div>
+          <p><strong>Concept Used:</strong> HCF gives the largest capacity that divides all quantities exactly.</p>
+          <p><strong>Solution:</strong></p>
+          <p>\(403 = 13 \times 31\)</p>
+          <p>\(465 = 3 \times 5 \times 31\)</p>
+          <p>\(496 = 2^4 \times 31\)</p>
+          <p>Common factor: 31</p>
+          <p><strong>Final Answer:</strong> The largest container capacity is <strong>31 litres</strong>.</p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Example 7 – LCM Application</div>
+          <div class="def-box" style="margin-top:0"><p><strong>Question:</strong> The length, breadth, and height of a room are 825 cm, 675 cm, and 450 cm respectively. Find the longest tape that can measure the dimensions of the room exactly.</p></div>
+          <p><strong>Concept Used:</strong> HCF of three numbers.</p>
+          <p><strong>Solution:</strong></p>
+          <p>\(825 = 3 \times 5^2 \times 11\)</p>
+          <p>\(675 = 3^3 \times 5^2\)</p>
+          <p>\(450 = 2 \times 3^2 \times 5^2\)</p>
+          <p>HCF = \(3 \times 5^2 = 75\)</p>
+          <p><strong>Final Answer:</strong> The longest tape = <strong>75 cm</strong>.</p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Example 8 – Proving Irrationality</div>
+          <div class="def-box" style="margin-top:0"><p><strong>Question:</strong> Prove that \(3 + 2\sqrt{5}\) is irrational.</p></div>
+          <p><strong>Concept Used:</strong> Proof by contradiction + the fact that the sum of a rational and irrational number is irrational.</p>
+          <p><strong>Solution:</strong></p>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><span class="step-text"><strong>Assume</strong> \(3 + 2\sqrt{5}\) is rational. Then \(3 + 2\sqrt{5} = \dfrac{p}{q}\) for coprime integers \(p, q\) with \(q \neq 0\).</span></div>
+            <div class="step"><span class="step-num">2</span><span class="step-text">\(2\sqrt{5} = \dfrac{p}{q} - 3 = \dfrac{p - 3q}{q}\)</span></div>
+            <div class="step"><span class="step-num">3</span><span class="step-text">\(\sqrt{5} = \dfrac{p - 3q}{2q}\)</span></div>
+            <div class="step"><span class="step-num">4</span><span class="step-text">Since \(p, q\) are integers, \(\dfrac{p - 3q}{2q}\) is rational. But \(\sqrt{5}\) is irrational.</span></div>
+            <div class="step"><span class="step-num">5</span><span class="step-text">This is a <strong>contradiction</strong>. Therefore, our assumption is wrong.</span></div>
+          </div>
+          <p><strong>Final Answer:</strong> \(3 + 2\sqrt{5}\) is irrational.</p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Example 9 – Mixed Conceptual Problem</div>
+          <div class="def-box" style="margin-top:0"><p><strong>Question:</strong> Can two numbers have 18 as their HCF and 380 as their LCM? Give a reason.</p></div>
+          <p><strong>Concept Used:</strong> The relationship HCF × LCM = product of two numbers.</p>
+          <p><strong>Solution:</strong></p>
+          <p>If two numbers have HCF 18 and LCM 380, then:</p>
+          <p>HCF × LCM = \(18 \times 380 = 6840\)</p>
+          <p>So the product of the two numbers must be 6840.</p>
+          <p>But the LCM must be a <strong>multiple of the HCF</strong>. Here, \(380 \div 18 = 21.11...\), which is not a whole number. So 18 does not divide 380.</p>
+          <p><strong>Final Answer:</strong> <strong>No.</strong> The LCM must always be a multiple of the HCF. Since 18 does not divide 380, no such pair of numbers exists.</p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Example 10 – Proving \(\frac{1}{\sqrt{2}}\) is Irrational</div>
+          <div class="def-box" style="margin-top:0"><p><strong>Question:</strong> Prove that \(\dfrac{1}{\sqrt{2}}\) is irrational.</p></div>
+          <p><strong>Concept Used:</strong> Proof by contradiction.</p>
+          <p><strong>Solution:</strong></p>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><span class="step-text"><strong>Assume</strong> \(\dfrac{1}{\sqrt{2}} = \dfrac{p}{q}\) where \(p, q\) are coprime integers and \(q \neq 0\).</span></div>
+            <div class="step"><span class="step-num">2</span><span class="step-text">Cross-multiplying: \(q = p\sqrt{2}\), so \(\sqrt{2} = \dfrac{q}{p}\).</span></div>
+            <div class="step"><span class="step-num">3</span><span class="step-text">But \(\sqrt{2}\) is irrational (already proved), so it cannot equal \(\dfrac{q}{p}\) (which is rational since \(p, q\) are integers).</span></div>
+            <div class="step"><span class="step-num">4</span><span class="step-text">This is a <strong>contradiction</strong>. Therefore, our assumption is wrong.</span></div>
+          </div>
+          <p><strong>Final Answer:</strong> \(\dfrac{1}{\sqrt{2}}\) is irrational.</p>
+        </div>
+      </section>
+
+      <section id="common-mistakes">
+        <h2>12. Common Mistakes to Avoid</h2>
+
+        <div class="warn-box">
+          <div class="box-label">Mistake 1 – Confusing HCF and LCM</div>
+          <p>HCF finds the <strong>largest number that divides</strong> all given numbers. LCM finds the <strong>smallest number divisible by</strong> all given numbers. Using the wrong one gives incorrect answers. Ask yourself: "Am I dividing or being divisible?"</p>
+        </div>
+
+        <div class="warn-box">
+          <div class="box-label">Mistake 2 – Wrong Powers in HCF</div>
+          <p>For HCF, you must take the <strong>smallest</strong> power of each common factor, not the greatest. For example, HCF of \(2^3 \times 3^2\) and \(2^2 \times 3^3\) is \(2^2 \times 3^2\), not \(2^3 \times 3^3\).</p>
+        </div>
+
+        <div class="warn-box">
+          <div class="box-label">Mistake 3 – Omitting Factors in LCM</div>
+          <p>For LCM, include <strong>all</strong> prime factors from all numbers. Students sometimes forget factors that appear in only one number.</p>
+        </div>
+
+        <div class="warn-box">
+          <div class="box-label">Mistake 4 – Incorrect Prime Factorisation</div>
+          <p>Double-check your factorisation. A common error is stopping before reaching prime factors, e.g. writing \(60 = 4 \times 15\) instead of \(60 = 2^2 \times 3 \times 5\).</p>
+        </div>
+
+        <div class="warn-box">
+          <div class="box-label">Mistake 5 – Misusing HCF × LCM for Three Numbers</div>
+          <p>The relationship \(\text{HCF} \times \text{LCM} = a \times b\) works <strong>only for two numbers</strong>. It does not work for three or more numbers.</p>
+        </div>
+
+        <div class="warn-box">
+          <div class="box-label">Mistake 6 – Incomplete Irrationality Proofs</div>
+          <p>Always: (1) State the assumption clearly, (2) show the steps, (3) identify the contradiction explicitly, (4) conclude with a clear statement. Missing any step loses marks.</p>
+        </div>
+
+        <div class="warn-box">
+          <div class="box-label">Mistake 7 – Not Mentioning Coprimality</div>
+          <p>In irrationality proofs, you must state that \(p\) and \(q\) are <strong>coprime</strong> (have no common factor). This is what the contradiction refutes.</p>
+        </div>
+
+        <div class="warn-box">
+          <div class="box-label">Mistake 8 – Confusing Rational and Irrational</div>
+          <p>\(\dfrac{22}{7}\) is rational (it is in the form \(\dfrac{p}{q}\)), even though it is used as an approximation of \(\pi\). Don't assume a fraction-looking number involving 7 is irrational.</p>
+        </div>
+      </section>
+
+      <section id="exam-tips">
+        <h2>13. CBSE Exam Tips – Real Numbers</h2>
+
+        <div class="tip-box">
+          <div class="box-label">Exam Tips</div>
+          <ol>
+            <li><strong>Write prime factorisation clearly.</strong> Show the division steps; do not just write the answer.</li>
+            <li><strong>Show all important steps.</strong> CBSE awards marks for steps, not just the final answer.</li>
+            <li><strong>State whether you are using HCF or LCM.</strong> Write it explicitly: "We use HCF because…"</li>
+            <li><strong>In application problems, identify the concept first.</strong> Write one line explaining why you are finding HCF or LCM before starting calculations.</li>
+            <li><strong>For irrationality proofs:</strong> State the assumption, show the steps, point out the contradiction, and conclude clearly.</li>
+            <li><strong>Do not skip reasoning.</strong> Even if the answer is obvious to you, write the reasoning. CBSE marks depend on the steps shown.</li>
+            <li><strong>Check your final answer.</strong> Verify that HCF divides all given numbers. Verify that LCM is divisible by all given numbers. Verify that HCF × LCM = product (for two numbers).</li>
+            <li><strong>Use proper notation.</strong> Write \(2^2 \times 3 \times 5\), not \(2 \times 2 \times 3 \times 5\). Examiners appreciate concise mathematical notation.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="quick-revision">
+        <h2>14. Quick Revision Table</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Topic</th>
+                <th>Key Point</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Real Numbers</td>
+                <td>Rational + Irrational numbers</td>
+              </tr>
+              <tr>
+                <td>Rational Number</td>
+                <td>Can be written as \(\dfrac{p}{q}\), \(q \neq 0\)</td>
+              </tr>
+              <tr>
+                <td>Irrational Number</td>
+                <td>Cannot be written as \(\dfrac{p}{q}\)</td>
+              </tr>
+              <tr>
+                <td>Prime Number</td>
+                <td>Exactly two positive factors (1 and itself)</td>
+              </tr>
+              <tr>
+                <td>Composite Number</td>
+                <td>More than two positive factors</td>
+              </tr>
+              <tr>
+                <td>Prime Factorisation</td>
+                <td>Product of prime numbers</td>
+              </tr>
+              <tr>
+                <td>HCF</td>
+                <td>Common prime factors with <strong>smallest</strong> powers</td>
+              </tr>
+              <tr>
+                <td>LCM</td>
+                <td>All prime factors with <strong>greatest</strong> powers</td>
+              </tr>
+              <tr>
+                <td>HCF × LCM</td>
+                <td>= Product of two positive integers</td>
+              </tr>
+              <tr>
+                <td>Proof of Irrationality</td>
+                <td>Assume rational → show contradiction</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="practice">
+        <h2>15. Practice Your Understanding</h2>
+
+        <h3>Level 1 – Basic</h3>
+
+        <div class="qbox">
+          <p class="q-label">Q1.</p>
+          <p>Classify the following as rational or irrational: (a) \(\sqrt{49}\) &nbsp; (b) \(\sqrt{50}\) &nbsp; (c) \(\dfrac{3}{8}\) &nbsp; (d) \(\sqrt{11}\)</p>
+        </div>
+
+        <div class="qbox">
+          <p class="q-label">Q2.</p>
+          <p>Find the prime factorisation of 210.</p>
+        </div>
+
+        <div class="qbox">
+          <p class="q-label">Q3.</p>
+          <p>State the Fundamental Theorem of Arithmetic in your own words.</p>
+        </div>
+
+        <div class="qbox">
+          <p class="q-label">Q4.</p>
+          <p>What is the HCF of 48 and 36?</p>
+        </div>
+
+        <div class="qbox">
+          <p class="q-label">Q5.</p>
+          <p>What is the LCM of 8 and 14?</p>
+        </div>
+
+        <div class="qbox">
+          <p class="q-label">Q6.</p>
+          <p>Is 1 a prime number? Is it a composite number? Give a reason.</p>
+        </div>
+
+        <div class="qbox">
+          <p class="q-label">Q7.</p>
+          <p>Write the number system hierarchy from Natural Numbers to Real Numbers.</p>
+        </div>
+
+        <h3>Level 2 – Application</h3>
+
+        <div class="qbox">
+          <p class="q-label">Q8.</p>
+          <p>The HCF of two numbers is 16 and their LCM is 1440. If one number is 192, find the other.</p>
+        </div>
+
+        <div class="qbox">
+          <p class="q-label">Q9.</p>
+          <p>Find the HCF and LCM of 84, 140, and 168 using prime factorisation.</p>
+        </div>
+
+        <div class="qbox">
+          <p class="q-label">Q10.</p>
+          <p>Two numbers are 24 and 36. Find their HCF × LCM and verify that it equals 24 × 36.</p>
+        </div>
+
+        <div class="qbox">
+          <p class="q-label">Q11.</p>
+          <p>A class has 72 students and another class has 108 students. The teacher wants to form groups of equal size from both classes, with no student left out. What is the greatest number of students that can be in each group?</p>
+        </div>
+
+        <h3>Level 3 – Advanced</h3>
+
+        <div class="qbox">
+          <p class="q-label">Q12.</p>
+          <p>Prove that \(\sqrt{7}\) is irrational.</p>
+        </div>
+
+        <div class="qbox">
+          <p class="q-label">Q13.</p>
+          <p>Prove that \(5 - 3\sqrt{2}\) is irrational.</p>
+        </div>
+
+        <div class="qbox">
+          <p class="q-label">Q14.</p>
+          <p>Prove that \(\dfrac{2}{\sqrt{3}}\) is irrational.</p>
+        </div>
+
+        <h3>Competency-Based</h3>
+
+        <div class="qbox">
+          <p class="q-label">Q15.</p>
+          <p>Three lights at a traffic intersection change at intervals of 30 seconds, 45 seconds, and 60 seconds. If they all change together now, after how many seconds will they all change together again?</p>
+        </div>
+
+        <div class="qbox">
+          <p class="q-label">Q16.</p>
+          <p>A rectangular floor is 540 cm long and 360 cm wide. It is to be covered with square tiles of equal size. What is the largest possible side length of each tile, and how many tiles will be needed?</p>
+        </div>
+
+        <div class="qbox">
+          <p class="q-label">Q17.</p>
+          <p>Can the HCF of two numbers be greater than their LCM? Justify your answer.</p>
+        </div>
+
+        <div class="qbox">
+          <p class="q-label">Q18.</p>
+          <p>A farmer has 120 apples and 180 oranges. He wants to pack them in boxes such that each box has only one type of fruit and all boxes in a set have the same number of fruits. What is the greatest number of fruits per box? How many boxes will he need in total?</p>
+        </div>
+      </section>
+
+      <section id="answers">
+        <h2>16. Answers</h2>
+
+        <h3>Level 1</h3>
+
+        <div class="qbox">
+          <p class="q-label">A1.</p>
+          <p>(a) Rational (\(\sqrt{49} = 7\)). (b) Irrational (50 is not a perfect square). (c) Rational. (d) Irrational.</p>
+        </div>
+
+        <div class="qbox">
+          <p class="q-label">A2.</p>
+          <p>\(210 = 2 \times 3 \times 5 \times 7\)</p>
+        </div>
+
+        <div class="qbox">
+          <p class="q-label">A3.</p>
+          <p>Every composite number can be written uniquely as a product of prime numbers (apart from order).</p>
+        </div>
+
+        <div class="qbox">
+          <p class="q-label">A4.</p>
+          <p>\(48 = 2^4 \times 3\), \(36 = 2^2 \times 3^2\). HCF = \(2^2 \times 3 = 12\).</p>
+        </div>
+
+        <div class="qbox">
+          <p class="q-label">A5.</p>
+          <p>\(8 = 2^3\), \(14 = 2 \times 7\). LCM = \(2^3 \times 7 = 56\).</p>
+        </div>
+
+        <div class="qbox">
+          <p class="q-label">A6.</p>
+          <p>1 is neither prime nor composite. It has exactly one factor (itself), so it does not satisfy the definition of prime (exactly two factors) or composite (more than two factors).</p>
+        </div>
+
+        <div class="qbox">
+          <p class="q-label">A7.</p>
+          <p>Natural Numbers ⊂ Whole Numbers ⊂ Integers ⊂ Rational Numbers ⊂ Real Numbers, with Irrational Numbers also being a subset of Real Numbers.</p>
+        </div>
+
+        <h3>Level 2</h3>
+
+        <div class="qbox">
+          <p class="q-label">A8.</p>
+          <p>HCF × LCM = 16 × 1440 = 23040. So \(192 \times x = 23040\), \(x = 120\). The other number is 120.</p>
+        </div>
+
+        <div class="qbox">
+          <p class="q-label">A9.</p>
+          <p>\(84 = 2^2 \times 3 \times 7\), \(140 = 2^2 \times 5 \times 7\), \(168 = 2^3 \times 3 \times 7\).<br/>
+          HCF = \(2^2 \times 7 = 28\).<br/>
+          LCM = \(2^3 \times 3 \times 5 \times 7 = 840\).</p>
+        </div>
+
+        <div class="qbox">
+          <p class="q-label">A10.</p>
+          <p>\(24 = 2^3 \times 3\), \(36 = 2^2 \times 3^2\). HCF = \(2^2 \times 3 = 12\). LCM = \(2^3 \times 3^2 = 72\).<br/>
+          HCF × LCM = 12 × 72 = 864. Product = 24 × 36 = 864. ✓</p>
+        </div>
+
+        <div class="qbox">
+          <p class="q-label">A11.</p>
+          <p>HCF of 72 and 108: \(72 = 2^3 \times 3^2\), \(108 = 2^2 \times 3^3\). HCF = \(2^2 \times 3^2 = 36\).<br/>
+          The greatest number of students per group is <strong>36</strong>.</p>
+        </div>
+
+        <h3>Level 3</h3>
+
+        <div class="qbox">
+          <p class="q-label">A12.</p>
+          <p>Assume \(\sqrt{7} = \dfrac{p}{q}\) (coprime). Then \(p^2 = 7q^2\). So \(7 \mid p\). Let \(p = 7k\). Then \(49k^2 = 7q^2\), so \(7 \mid q\). Both divisible by 7 — contradiction. Therefore \(\sqrt{7}\) is irrational.</p>
+        </div>
+
+        <div class="qbox">
+          <p class="q-label">A13.</p>
+          <p>Assume \(5 - 3\sqrt{2} = \dfrac{p}{q}\) (coprime). Then \(3\sqrt{2} = 5 - \dfrac{p}{q} = \dfrac{5q - p}{q}\), so \(\sqrt{2} = \dfrac{5q - p}{3q}\) (rational). But \(\sqrt{2}\) is irrational — contradiction. Therefore \(5 - 3\sqrt{2}\) is irrational.</p>
+        </div>
+
+        <div class="qbox">
+          <p class="q-label">A14.</p>
+          <p>Assume \(\dfrac{2}{\sqrt{3}} = \dfrac{p}{q}\) (coprime). Then \(2q = p\sqrt{3}\), so \(\sqrt{3} = \dfrac{2q}{p}\) (rational). But \(\sqrt{3}\) is irrational — contradiction. Therefore \(\dfrac{2}{\sqrt{3}}\) is irrational.</p>
+        </div>
+
+        <h3>Competency-Based</h3>
+
+        <div class="qbox">
+          <p class="q-label">A15.</p>
+          <p>LCM of 30, 45, 60: \(30 = 2 \times 3 \times 5\), \(45 = 3^2 \times 5\), \(60 = 2^2 \times 3 \times 5\). LCM = \(2^2 \times 3^2 \times 5 = 180\) seconds = 3 minutes.</p>
+        </div>
+
+        <div class="qbox">
+          <p class="q-label">A16.</p>
+          <p>Largest tile = HCF of 540 and 360. \(540 = 2^2 \times 3^3 \times 5\), \(360 = 2^3 \times 3^2 \times 5\). HCF = \(2^2 \times 3^2 \times 5 = 180\) cm. Number of tiles = \(\dfrac{540}{180} \times \dfrac{360}{180} = 3 \times 2 = 6\) tiles.</p>
+        </div>
+
+        <div class="qbox">
+          <p class="q-label">A17.</p>
+          <p>No. Since HCF divides both numbers and LCM is a multiple of both, HCF ≤ each number ≤ LCM. So HCF ≤ LCM always. They are equal only when both numbers are the same.</p>
+        </div>
+
+        <div class="qbox">
+          <p class="q-label">A18.</p>
+          <p>Greatest number of fruits per box = HCF of 120 and 180 = 60. Apples: 120 ÷ 60 = 2 boxes. Oranges: 180 ÷ 60 = 3 boxes. Total = <strong>5 boxes</strong>.</p>
+        </div>
+      </section>
+
+    </article>
+
+    <nav class="resource-nav" aria-label="Chapter resources">
+      <a href="/cbse-study-material/class-10/mathematics/real-numbers/notes/" class="is-active"><i class="fas fa-book-open"></i> Notes</a>
+      <a href="/cbse-study-material/class-10/mathematics/real-numbers/practice-paper/"><i class="fas fa-file-lines"></i> Practice Paper</a>
+      <a href="/cbse-study-material/class-10/mathematics/real-numbers/quiz/"><i class="fas fa-bullseye"></i> Quiz</a>
+      <a href="/cbse-study-material/class-10/mathematics/real-numbers/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+    </nav>
+
+    <a class="sm-back" href="/cbse-study-material/class-10/mathematics/real-numbers/"><i class="fas fa-arrow-left"></i> Back to Real Numbers</a>
+    <a class="sm-back" href="/cbse-study-material/class-10/mathematics/" style="margin-left: 12px;"><i class="fas fa-arrow-left"></i> All Mathematics chapters</a>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-about">
+      <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+      <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#courses">Courses</a></li>
+        <li><a href="/cbse-study-material/">Study Material</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Popular Searches</h4>
+      <ul>
+        <li><a href="/cbse-study-material/">CBSE Study Material</a></li>
+        <li><a href="/best-tuition-centre-hulimavu/">Best Tuition Centre in Hulimavu</a></li>
+        <li><a href="/cbse-tuition-hulimavu/">CBSE Tuition in Hulimavu</a></li>
+        <li><a href="/maths-tuition-hulimavu/">Maths Tuition in Hulimavu</a></li>
+        <li><a href="/science-tuition-hulimavu/">Science Tuition in Hulimavu</a></li>
+        <li><a href="/class-10-tuition-hulimavu/">Class 10 Tuition Hulimavu</a></li>
+        <li><a href="/class-12-tuition-hulimavu/">Class 12 Tuition Hulimavu</a></li>
+        <li><a href="/tuition-centre-bangalore/">Best Tuition Centre in Bangalore</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="/cbse-study-material/sm.js"></script>
+</body>
+</html>

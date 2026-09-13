@@ -147,7 +147,22 @@
           "title": "CBSE Class 10 Mathematics Study Material | Vyasa Academy",
           "description": "CBSE Class 10 Mathematics study material for board exam preparation - chapter-wise notes, practice papers, quizzes and chapter tests at Vyasa Academy.",
           "heroSub": "Explore CBSE Class 10 Mathematics chapter by chapter.",
-          "chapterCount": 15,
+          "chapters": [
+            { "slug": "real-numbers", "label": "Real Numbers" },
+            { "slug": "polynomials", "label": "Polynomials" },
+            { "slug": "pair-of-linear-equations-in-two-variables", "label": "Pair of Linear Equations in Two Variables" },
+            { "slug": "quadratic-equations", "label": "Quadratic Equations" },
+            { "slug": "arithmetic-progressions", "label": "Arithmetic Progressions" },
+            { "slug": "triangles", "label": "Triangles" },
+            { "slug": "coordinate-geometry", "label": "Coordinate Geometry" },
+            { "slug": "introduction-to-trigonometry", "label": "Introduction to Trigonometry" },
+            { "slug": "some-applications-of-trigonometry", "label": "Some Applications of Trigonometry" },
+            { "slug": "circles", "label": "Circles" },
+            { "slug": "areas-related-to-circles", "label": "Areas Related to Circles" },
+            { "slug": "surface-areas-and-volumes", "label": "Surface Areas and Volumes" },
+            { "slug": "statistics", "label": "Statistics" },
+            { "slug": "probability", "label": "Probability" }
+          ],
           "related": [
             { "href": "/blog/how-to-prepare-mathematics-for-cbse-class-10-board-exams/", "label": "How to prepare Mathematics for CBSE Class 10 boards" },
             { "href": "/blog/how-to-score-higher-marks-in-cbse-class-10-mathematics/", "label": "How to score higher marks in Class 10 Mathematics" }
