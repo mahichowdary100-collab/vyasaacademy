@@ -1,0 +1,235 @@
+{
+  "main": {
+    "title": "CBSE Study Material for Classes 6-12 | Vyasa Academy",
+    "description": "Structured CBSE study material for Classes 6 to 12 - Mathematics and Science chapters with notes, practice papers, quizzes and chapter tests, built for CBSE (NCERT) students by Vyasa Academy, Bangalore.",
+    "heroSub": "Chapter-wise Mathematics and Science study material for every CBSE class from 6 to 12 - notes, practice papers, quizzes and chapter tests. Content is being added chapter by chapter.",
+    "related": [
+      { "href": "/blog/cbse-class-10-board-exam-tips/", "label": "CBSE Class 10 Board Exam Tips" },
+      { "href": "/blog/cbse-class-12-board-exam-tips/", "label": "CBSE Class 12 Board Exam Tips" },
+      { "href": "/blog/study-tips/", "label": "Study Tips & Exam Preparation" },
+      { "href": "/blog/mathematics/", "label": "Mathematics Study Guides" },
+      { "href": "/blog/science/", "label": "Science Study Guides" },
+      { "href": "/maths-tuition-hulimavu/", "label": "Maths Tuition in Hulimavu" },
+      { "href": "/science-tuition-hulimavu/", "label": "Science Tuition in Hulimavu" },
+      { "href": "/class-10-tuition-hulimavu/", "label": "Class 10 Tuition in Hulimavu" }
+    ]
+  },
+  "resources": [
+    { "slug": "notes", "label": "Chapter Notes", "icon": "fa-book-open", "blurb": "Concise, exam-focused notes for this chapter." },
+    { "slug": "practice-paper", "label": "Practice Paper", "icon": "fa-file-lines", "blurb": "A chapter-wise practice paper to build confidence." },
+    { "slug": "quiz", "label": "Quiz", "icon": "fa-bullseye", "blurb": "A short interactive quiz with instant scoring." },
+    { "slug": "test", "label": "Chapter Test", "icon": "fa-clipboard-check", "blurb": "A timed chapter test with results and answers." }
+  ],
+  "classes": [
+    {
+      "number": 6,
+      "label": "Class 6",
+      "title": "CBSE Class 6 Study Material | Maths & Science | Vyasa Academy",
+      "description": "CBSE Class 6 study material at Vyasa Academy - Mathematics and Science chapters with notes, practice papers, quizzes and chapter tests aligned to the CBSE NCERT syllabus.",
+      "heroSub": "Pick a subject to explore chapter-wise CBSE Class 6 study material, aligned to the latest NCERT syllabus.",
+      "subjects": [
+        {
+          "slug": "mathematics",
+          "label": "Mathematics",
+          "icon": "fa-square-root-variable",
+          "title": "CBSE Class 6 Mathematics Study Material | Vyasa Academy",
+          "description": "CBSE Class 6 Mathematics study material - chapter-wise notes, practice papers, quizzes and chapter tests at Vyasa Academy, aligned to the NCERT syllabus.",
+          "heroSub": "Explore CBSE Class 6 Mathematics chapter by chapter.",
+          "chapterCount": 14
+        },
+        {
+          "slug": "science",
+          "label": "Science",
+          "icon": "fa-flask",
+          "title": "CBSE Class 6 Science Study Material | Vyasa Academy",
+          "description": "CBSE Class 6 Science study material - chapter-wise notes, practice papers, quizzes and chapter tests at Vyasa Academy, aligned to the NCERT syllabus.",
+          "heroSub": "Explore CBSE Class 6 Science chapter by chapter.",
+          "chapterCount": 12
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "label": "Class 7",
+      "title": "CBSE Class 7 Study Material | Maths & Science | Vyasa Academy",
+      "description": "CBSE Class 7 study material at Vyasa Academy - Mathematics and Science chapters with notes, practice papers, quizzes and chapter tests aligned to the CBSE NCERT syllabus.",
+      "heroSub": "Pick a subject to explore chapter-wise CBSE Class 7 study material, aligned to the latest NCERT syllabus.",
+      "subjects": [
+        {
+          "slug": "mathematics",
+          "label": "Mathematics",
+          "icon": "fa-square-root-variable",
+          "title": "CBSE Class 7 Mathematics Study Material | Vyasa Academy",
+          "description": "CBSE Class 7 Mathematics study material - chapter-wise notes, practice papers, quizzes and chapter tests at Vyasa Academy, aligned to the NCERT syllabus.",
+          "heroSub": "Explore CBSE Class 7 Mathematics chapter by chapter.",
+          "chapterCount": 15
+        },
+        {
+          "slug": "science",
+          "label": "Science",
+          "icon": "fa-flask",
+          "title": "CBSE Class 7 Science Study Material | Vyasa Academy",
+          "description": "CBSE Class 7 Science study material - chapter-wise notes, practice papers, quizzes and chapter tests at Vyasa Academy, aligned to the NCERT syllabus.",
+          "heroSub": "Explore CBSE Class 7 Science chapter by chapter.",
+          "chapterCount": 13
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "label": "Class 8",
+      "title": "CBSE Class 8 Study Material | Maths & Science | Vyasa Academy",
+      "description": "CBSE Class 8 study material at Vyasa Academy - Mathematics and Science chapters with notes, practice papers, quizzes and chapter tests aligned to the CBSE NCERT syllabus.",
+      "heroSub": "Pick a subject to explore chapter-wise CBSE Class 8 study material, aligned to the latest NCERT syllabus.",
+      "subjects": [
+        {
+          "slug": "mathematics",
+          "label": "Mathematics",
+          "icon": "fa-square-root-variable",
+          "title": "CBSE Class 8 Mathematics Study Material | Vyasa Academy",
+          "description": "CBSE Class 8 Mathematics study material - chapter-wise notes, practice papers, quizzes and chapter tests at Vyasa Academy, aligned to the NCERT syllabus.",
+          "heroSub": "Explore CBSE Class 8 Mathematics chapter by chapter.",
+          "chapterCount": 16
+        },
+        {
+          "slug": "science",
+          "label": "Science",
+          "icon": "fa-flask",
+          "title": "CBSE Class 8 Science Study Material | Vyasa Academy",
+          "description": "CBSE Class 8 Science study material - chapter-wise notes, practice papers, quizzes and chapter tests at Vyasa Academy, aligned to the NCERT syllabus.",
+          "heroSub": "Explore CBSE Class 8 Science chapter by chapter.",
+          "chapterCount": 12
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "label": "Class 9",
+      "title": "CBSE Class 9 Study Material | Maths & Science | Vyasa Academy",
+      "description": "CBSE Class 9 study material at Vyasa Academy - Mathematics and Science chapters with notes, practice papers, quizzes and chapter tests aligned to the CBSE NCERT syllabus.",
+      "heroSub": "Pick a subject to explore chapter-wise CBSE Class 9 study material, aligned to the latest NCERT syllabus.",
+      "subjects": [
+        {
+          "slug": "mathematics",
+          "label": "Mathematics",
+          "icon": "fa-square-root-variable",
+          "title": "CBSE Class 9 Mathematics Study Material | Vyasa Academy",
+          "description": "CBSE Class 9 Mathematics study material - chapter-wise notes, practice papers, quizzes and chapter tests at Vyasa Academy, aligned to the NCERT syllabus.",
+          "heroSub": "Explore CBSE Class 9 Mathematics chapter by chapter.",
+          "chapterCount": 12,
+          "related": [
+            { "href": "/blog/how-to-prepare-for-cbse-mathematics-exams/", "label": "How to prepare for CBSE Mathematics exams" },
+            { "href": "/blog/common-mistakes-in-mathematics-exams/", "label": "Common mistakes in Mathematics exams" }
+          ]
+        },
+        {
+          "slug": "science",
+          "label": "Science",
+          "icon": "fa-flask",
+          "title": "CBSE Class 9 Science Study Material | Vyasa Academy",
+          "description": "CBSE Class 9 Science study material - chapter-wise notes, practice papers, quizzes and chapter tests at Vyasa Academy, aligned to the NCERT syllabus.",
+          "heroSub": "Explore CBSE Class 9 Science chapter by chapter.",
+          "chapterCount": 12
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "label": "Class 10",
+      "title": "CBSE Class 10 Study Material | Maths & Science | Vyasa Academy",
+      "description": "CBSE Class 10 study material at Vyasa Academy - Mathematics and Science chapters with notes, practice papers, quizzes and chapter tests aligned to the CBSE NCERT syllabus.",
+      "heroSub": "Pick a subject to explore chapter-wise CBSE Class 10 study material, aligned to the latest NCERT syllabus.",
+      "subjects": [
+        {
+          "slug": "mathematics",
+          "label": "Mathematics",
+          "icon": "fa-square-root-variable",
+          "title": "CBSE Class 10 Mathematics Study Material | Vyasa Academy",
+          "description": "CBSE Class 10 Mathematics study material for board exam preparation - chapter-wise notes, practice papers, quizzes and chapter tests at Vyasa Academy.",
+          "heroSub": "Explore CBSE Class 10 Mathematics chapter by chapter.",
+          "chapterCount": 15,
+          "related": [
+            { "href": "/blog/how-to-prepare-mathematics-for-cbse-class-10-board-exams/", "label": "How to prepare Mathematics for CBSE Class 10 boards" },
+            { "href": "/blog/how-to-score-higher-marks-in-cbse-class-10-mathematics/", "label": "How to score higher marks in Class 10 Mathematics" }
+          ]
+        },
+        {
+          "slug": "science",
+          "label": "Science",
+          "icon": "fa-flask",
+          "title": "CBSE Class 10 Science Study Material | Vyasa Academy",
+          "description": "CBSE Class 10 Science study material for board exam preparation - chapter-wise notes, practice papers, quizzes and chapter tests at Vyasa Academy.",
+          "heroSub": "Explore CBSE Class 10 Science chapter by chapter.",
+          "chapterCount": 13,
+          "related": [
+            { "href": "/blog/how-to-prepare-science-for-cbse-class-10-board-exams/", "label": "How to prepare Science for CBSE Class 10 boards" },
+            { "href": "/blog/how-to-prepare-physics-chemistry-biology-class-10/", "label": "Physics, Chemistry and Biology for Class 10" }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "label": "Class 11",
+      "title": "CBSE Class 11 Study Material | Maths & Science | Vyasa Academy",
+      "description": "CBSE Class 11 study material at Vyasa Academy - Mathematics and Science chapters with notes, practice papers, quizzes and chapter tests aligned to the CBSE NCERT syllabus.",
+      "heroSub": "Pick a subject to explore chapter-wise CBSE Class 11 study material, aligned to the latest NCERT syllabus.",
+      "subjects": [
+        {
+          "slug": "mathematics",
+          "label": "Mathematics",
+          "icon": "fa-square-root-variable",
+          "title": "CBSE Class 11 Mathematics Study Material | Vyasa Academy",
+          "description": "CBSE Class 11 Mathematics study material - chapter-wise notes, practice papers, quizzes and chapter tests at Vyasa Academy, aligned to the NCERT syllabus.",
+          "heroSub": "Explore CBSE Class 11 Mathematics chapter by chapter.",
+          "chapterCount": 16
+        },
+        {
+          "slug": "science",
+          "label": "Science",
+          "icon": "fa-flask",
+          "title": "CBSE Class 11 Science Study Material | Vyasa Academy",
+          "description": "CBSE Class 11 Science study material - Physics, Chemistry and Biology chapters with notes, practice papers, quizzes and chapter tests at Vyasa Academy.",
+          "heroSub": "Explore CBSE Class 11 Science (Physics, Chemistry, Biology) chapter by chapter.",
+          "chapterCount": 13
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "label": "Class 12",
+      "title": "CBSE Class 12 Study Material | Maths & Science | Vyasa Academy",
+      "description": "CBSE Class 12 study material for board exam preparation - Mathematics and Science chapters with notes, practice papers, quizzes and chapter tests at Vyasa Academy.",
+      "heroSub": "Pick a subject to explore chapter-wise CBSE Class 12 study material for board exam preparation.",
+      "subjects": [
+        {
+          "slug": "mathematics",
+          "label": "Mathematics",
+          "icon": "fa-square-root-variable",
+          "title": "CBSE Class 12 Mathematics Study Material | Vyasa Academy",
+          "description": "CBSE Class 12 Mathematics study material for board exam preparation - chapter-wise notes, practice papers, quizzes and chapter tests at Vyasa Academy.",
+          "heroSub": "Explore CBSE Class 12 Mathematics chapter by chapter.",
+          "chapterCount": 13,
+          "related": [
+            { "href": "/blog/how-to-prepare-mathematics-for-cbse-class-12-board-exams/", "label": "How to prepare Mathematics for CBSE Class 12 boards" },
+            { "href": "/blog/how-to-prepare-class-12-mathematics-numericals/", "label": "Class 12 Mathematics - numericals practice" }
+          ]
+        },
+        {
+          "slug": "science",
+          "label": "Science",
+          "icon": "fa-flask",
+          "title": "CBSE Class 12 Science Study Material | Vyasa Academy",
+          "description": "CBSE Class 12 Science study material for board exam preparation - Physics, Chemistry and Biology chapters with notes, practice papers, quizzes and chapter tests at Vyasa Academy.",
+          "heroSub": "Explore CBSE Class 12 Science (Physics, Chemistry, Biology) chapter by chapter.",
+          "chapterCount": 13,
+          "related": [
+            { "href": "/blog/how-to-prepare-physics-for-cbse-class-12-board-exams/", "label": "How to prepare Physics for CBSE Class 12 boards" },
+            { "href": "/blog/how-to-prepare-chemistry-for-cbse-class-12-board-exams/", "label": "How to prepare Chemistry for CBSE Class 12 boards" },
+            { "href": "/blog/how-to-prepare-biology-for-cbse-class-12-board-exams/", "label": "How to prepare Biology for CBSE Class 12 boards" }
+          ]
+        }
+      ]
+    }
+  ]
+}
