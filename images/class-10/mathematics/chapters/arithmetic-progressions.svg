@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 230" role="img" aria-label="Arithmetic Progressions - rising step pattern of blocks showing an increasing sequence with common difference d">
+  <rect width="400" height="230" fill="#ffffff"/>
+  <circle cx="360" cy="206" r="48" fill="#f4f6ff"/>
+  <circle cx="34" cy="24" r="42" fill="#fff7e6"/>
+  <circle cx="18" cy="206" r="12" fill="#f9a825" opacity="0.85"/>
+  <circle cx="384" cy="18" r="7" fill="#1a237e" opacity="0.85"/>
+
+  <g stroke="#e0e7ff" stroke-width="2">
+    <path d="M52 196 L372 196"/>
+  </g>
+
+  <g>
+    <rect x="64"  y="158" width="52" height="38" rx="6" fill="#1a237e"/>
+    <rect x="128" y="132" width="52" height="64" rx="6" fill="#283593"/>
+    <rect x="192" y="106" width="52" height="90" rx="6" fill="#3949ab"/>
+    <rect x="256" y="80"  width="52" height="116" rx="6" fill="#5c6bc0"/>
+  </g>
+
+  <circle cx="90"  cy="124" r="5" fill="#f9a825"/>
+  <circle cx="154" cy="98"  r="5" fill="#f9a825"/>
+  <circle cx="218" cy="72"  r="5" fill="#f9a825"/>
+  <circle cx="282" cy="46"  r="5" fill="#f9a825"/>
+
+  <g stroke="#f9a825" stroke-width="2.5" stroke-dasharray="4 4" fill="none">
+    <path d="M90 124 L90 158"/>
+    <path d="M154 98 L154 132"/>
+    <path d="M218 72 L218 106"/>
+    <path d="M282 46 L282 80"/>
+  </g>
+
+  <g font-family="Inter,Arial,sans-serif" font-weight="700" text-anchor="middle" fill="#ffffff">
+    <text x="90"  y="176" font-size="14">a</text>
+    <text x="154" y="176" font-size="14">a+d</text>
+    <text x="218" y="176" font-size="14">a+2d</text>
+    <text x="282" y="176" font-size="14">.</text>
+    <text x="296" y="176" font-size="18">.</text>
+    <text x="310" y="176" font-size="22">.</text>
+  </g>
+
+  <g font-family="Inter,Arial,sans-serif" font-weight="600" fill="#607d8b">
+    <text x="64" y="222" font-size="12">0</text>
+    <text x="128" y="222" font-size="12">n</text>
+    <text x="136" y="222" font-size="12">1</text>
+    <text x="192" y="222" font-size="12">n</text>
+    <text x="200" y="222" font-size="12">2</text>
+    <text x="256" y="222" font-size="12">n</text>
+    <text x="264" y="222" font-size="12">3</text>
+  </g>
+
+  <g font-family="Georgia,serif" font-style="italic" font-weight="700" fill="#b45309">
+    <text x="300" y="132" font-size="15">T</text>
+    <text x="311" y="132" font-size="15">n</text>
+    <text x="321" y="132" font-size="15">=</text>
+    <text x="333" y="132" font-size="15">a</text>
+    <text x="341" y="132" font-size="15">+</text>
+    <text x="349" y="132" font-size="15">(</text>
+    <text x="355" y="132" font-size="15">n</text>
+    <text x="362" y="132" font-size="15">&#8722;</text>
+    <text x="368" y="132" font-size="15">1</text>
+    <text x="374" y="132" font-size="15">)</text>
+    <text x="380" y="132" font-size="15">d</text>
+  </g>
+</svg>

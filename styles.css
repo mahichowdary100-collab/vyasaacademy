@@ -2230,6 +2230,32 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
   color: var(--primary);
 }
 
+.sm-chapter-card-has-img {
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0;
+  overflow: hidden;
+  gap: 0;
+}
+
+.sm-chapter-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  background: linear-gradient(135deg, #eef1fb 0%, #fdf4e3 100%);
+  border-bottom: 1px solid rgba(26,35,126,0.1);
+  transition: transform 0.3s ease;
+}
+
+.sm-chapter-card-has-img .sm-card-body {
+  padding: 16px 20px 20px;
+}
+
+.sm-chapter-card-has-img:hover .sm-chapter-img {
+  transform: scale(1.04);
+}
+
 .sm-coming-chip {
   display: inline-flex;
   align-items: center;

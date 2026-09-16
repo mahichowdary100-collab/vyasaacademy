@@ -254,8 +254,15 @@ foreach ($c in $data.classes) {
     $chCards = @()
     foreach ($ch in $chapters) {
       $chSearchKey = "cbse class $($c.number) $($s.label) $($ch.label) "
-    $chCards += "<a class=""sm-card sm-chapter-card"" href=""/cbse-study-material/class-$($c.number)/$($s.slug)/$($ch.slug)/"" data-search=""$chSearchKey"">$nl" +
-        "  <span class=""sm-card-icon""><i class=""fas fa-book""></i></span>$nl" +
+      $chCardClass = "sm-card sm-chapter-card"
+      $chMedia = "<span class=""sm-card-icon""><i class=""fas fa-book""></i></span>"
+      if ($ch.PSObject.Properties['image'] -and $ch.image) {
+        $chCardClass += " sm-chapter-card-has-img"
+        $chImage = "/images/$($ch.image).svg"
+        $chMedia = "<img class=""sm-chapter-img"" src=""$chImage"" alt=""$($ch.label) - CBSE Class $($c.number) $($s.label)"" loading=""lazy"" />"
+      }
+      $chCards += "<a class=""$chCardClass"" href=""/cbse-study-material/class-$($c.number)/$($s.slug)/$($ch.slug)/"" data-search=""$chSearchKey"">$nl" +
+        "  $chMedia$nl" +
         "  <div class=""sm-card-body"">$nl    <h3>$($ch.label)</h3>$nl    <p>CBSE Class $($c.number) &middot; $($s.label)</p>$nl    <div class=""sm-chip-row"">$nl      <span class=""sm-chip"">Notes</span><span class=""sm-chip"">Paper</span><span class=""sm-chip"">Quiz</span><span class=""sm-chip"">Test</span>$nl    </div>$nl  </div>$nl</a>"
     }
 
