@@ -280,6 +280,12 @@ foreach ($c in $data.classes) {
         @{ name = $s.label; url = $subUrl },
         @{ name = $ch.label; url = $chUrl }
       )
+      $chOverridePath = Join-Path $smDir "content\class-$($c.number)\$($s.slug)\$($ch.slug)\index.html"
+      if (Test-Path -LiteralPath $chOverridePath) {
+        $chPage = Get-Content -LiteralPath $chOverridePath -Raw -Encoding UTF8
+        $indexableUrls += $chUrl
+        Write-Host "Generated /cbse-study-material/class-$($c.number)/$($s.slug)/$($ch.slug)/index.html (chapter landing override)"
+      } else {
       $headCh = Build-Head $chTitle $chDesc $chUrl $false @((Get-BreadcrumbLd $crumbCh))
 
       $resCards = @()
@@ -297,8 +303,9 @@ foreach ($c in $data.classes) {
 
       $chBody = "<main class=""sm-page"">$nl  <div class=""container sm-container"">$nl    $(Get-SmCrumbs $crumbCh)$nl    <section class=""sm-hero sm-hero-slim"">$nl      <p class=""sm-eyebrow"">CBSE Class $($c.number) &middot; $($s.label)</p>$nl      <h1>$($ch.label)</h1>$nl      <p>Choose a resource for this chapter. Notes, practice paper, quiz and chapter test will be published here shortly.</p>$nl    </section>$nl    <div class=""sm-grid sm-grid-2 sm-grid-4"" id=""smGrid"">$nl$($resCards -join "$nl$nl")$nl    </div>$nl    <a class=""sm-back"" href=""/cbse-study-material/class-$($c.number)/$($s.slug)/""><i class=""fas fa-arrow-left""></i> All $($s.label) chapters</a>$nl  </div>$nl</main>"
       $chPage = "$headCh$nl<body>$nl$navHtml$nl$chBody$nl$footerHtml$nl<script src=""/cbse-study-material/sm.js""></script>$nl</body>$nl</html>"
-      Set-ContentUtf8 -Path (Join-Path $chDir 'index.html') -Value $chPage
       Write-Host "Generated /cbse-study-material/class-$($c.number)/$($s.slug)/$($ch.slug)/index.html"
+      }
+      Set-ContentUtf8 -Path (Join-Path $chDir 'index.html') -Value $chPage
 
       foreach ($r in $resourceList) {
         Add-TreeLine 4 $r.label
