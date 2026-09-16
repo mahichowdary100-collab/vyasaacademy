@@ -1,49 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 230" role="img" aria-label="Introduction to Trigonometry - right angled triangle with sides labelled opposite, adjacent and hypotenuse and angle theta marked">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 230" role="img" aria-label="Introduction to Trigonometry - simple right triangle with angle theta">
   <rect width="400" height="230" fill="#ffffff"/>
-  <circle cx="18" cy="214" r="48" fill="#f4f6ff"/>
-  <circle cx="386" cy="20" r="46" fill="#fff7e6"/>
-  <circle cx="380" cy="212" r="9" fill="#f9a825" opacity="0.85"/>
-  <circle cx="20" cy="20" r="7" fill="#1a237e" opacity="0.85"/>
-
-  <g stroke="#1a237e" stroke-width="4" fill="none" stroke-linecap="round">
-    <path d="M96 176 L316 58"/>
-    <path d="M316 58 L316 176"/>
-    <path d="M96 176 L316 176"/>
-  </g>
-  <path d="M288 176 L288 148 L316 148" fill="none" stroke="#1a237e" stroke-width="2.5"/>
-
-  <path d="M108 176 A 14 14 0 0 1 122 166" stroke="#b45309" stroke-width="3" fill="none"/>
-  <g font-family="Georgia,serif" font-style="italic" font-weight="700" text-anchor="middle" fill="#b45309">
-    <text x="112" y="196" font-size="18">&#952;</text>
-  </g>
-
-  <g font-family="Georgia,serif" font-style="italic" font-weight="700" fill="#1a237e">
-    <text x="180" y="132" font-size="16">Hypotenuse</text>
-    <text x="176" y="168" font-size="16">h</text>
-  </g>
-  <g font-family="Georgia,serif" font-style="italic" font-weight="700" fill="#283593">
-    <text x="240" y="196" font-size="16">Opposite</text>
-    <text x="244" y="214" font-size="16">p</text>
-  </g>
-  <g font-family="Georgia,serif" font-style="italic" font-weight="700" fill="#4e342e">
-    <text x="120" y="164" font-size="16">Adjacent</text>
-    <text x="126" y="184" font-size="16">b</text>
-  </g>
-
-  <g font-family="Georgia,serif" font-style="italic" font-weight="700" fill="#1a237e">
-    <text x="206" y="72" font-size="15">sin &#952;</text>
-    <text x="206" y="104" font-size="15">= p / h</text>
-    <text x="206" y="34" font-size="15">cos &#952;</text>
-    <text x="206" y="86" font-size="15">= b / h</text>
-    <text x="170" y="58" font-size="15">tan &#952;</text>
-    <text x="170" y="120" font-size="15">= p / b</text>
-    <text x="170" y="92" font-size="15">c</text>
-    <text x="178" y="86" font-size="10">2</text>
-    <text x="184" y="92" font-size="15">=</text>
-    <text x="192" y="92" font-size="15">a</text>
-    <text x="200" y="86" font-size="10">2</text>
-    <text x="204" y="92" font-size="15">+</text>
-    <text x="212" y="92" font-size="15">b</text>
-    <text x="220" y="86" font-size="10">2</text>
-  </g>
+  <polygon points="180,40 320,180 180,180" fill="none" stroke="#1a237e" stroke-width="8" stroke-linejoin="round"/>
+  <rect x="260" y="140" width="40" height="40" fill="none" stroke="#1a237e" stroke-width="6"/>
+  <path d="M180 95 A20 20 0 0 1 215 95" fill="none" stroke="#f9a825" stroke-width="6" stroke-linecap="round"/>
+  <text x="196" y="132" font-family="Georgia,serif" font-style="italic" font-weight="700" font-size="34" fill="#f9a825" text-anchor="middle">&#952;</text>
 </svg>

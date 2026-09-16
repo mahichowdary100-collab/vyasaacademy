@@ -1,58 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 230" role="img" aria-label="Real Numbers - prime factorisation tree with number line showing rational and irrational numbers">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 230" role="img" aria-label="Real Numbers - simple number line with points">
   <rect width="400" height="230" fill="#ffffff"/>
-  <circle cx="362" cy="24" r="46" fill="#f4f6ff"/>
-  <circle cx="26" cy="212" r="38" fill="#fff7e6"/>
-  <circle cx="382" cy="200" r="10" fill="#f9a825" opacity="0.85"/>
-  <circle cx="14" cy="18" r="7" fill="#1a237e" opacity="0.85"/>
-
-  <g stroke="#1a237e" stroke-width="3" fill="none" stroke-linecap="round">
-    <path d="M200 30 L200 78"/>
-    <path d="M200 78 L158 118"/>
-    <path d="M200 78 L242 118"/>
-    <path d="M158 118 L136 152"/>
-    <path d="M158 118 L180 152"/>
-    <path d="M242 118 L224 152"/>
-    <path d="M242 118 L260 152"/>
-  </g>
-  <g font-family="Inter,Arial,sans-serif" font-weight="700" text-anchor="middle" fill="#1a237e">
-    <circle cx="200" cy="30" r="20" fill="#1a237e"/>
-    <text x="200" y="35" font-size="16" fill="#ffffff">48</text>
-    <circle cx="158" cy="118" r="17" fill="#283593"/>
-    <text x="158" y="123" font-size="14" fill="#ffffff">2</text>
-    <circle cx="242" cy="118" r="17" fill="#283593"/>
-    <text x="242" y="123" font-size="14" fill="#ffffff">24</text>
-    <circle cx="136" cy="152" r="16" fill="#f9a825"/>
-    <text x="136" y="157" font-size="14" fill="#ffffff">2</text>
-    <circle cx="180" cy="152" r="16" fill="#f9a825"/>
-    <text x="180" y="157" font-size="14" fill="#ffffff">2</text>
-    <circle cx="224" cy="152" r="16" fill="#f9a825"/>
-    <text x="224" y="157" font-size="14" fill="#ffffff">2</text>
-    <circle cx="260" cy="152" r="16" fill="#f9a825"/>
-    <text x="260" y="157" font-size="14" fill="#ffffff">3</text>
-  </g>
-
-  <g stroke="#607d8b" stroke-width="2.5" stroke-linecap="round">
-    <path d="M20 192 L380 192"/>
-    <path d="M52 188 L52 196"/><path d="M92 185 L92 199"/>
-    <path d="M132 188 L132 196"/><path d="M172 188 L172 196"/>
-    <path d="M212 188 L212 196"/><path d="M252 188 L252 196"/>
-    <path d="M292 185 L292 199"/><path d="M332 188 L332 196"/>
-  </g>
-  <g font-family="Inter,Arial,sans-serif" font-weight="600" text-anchor="middle" fill="#1a237e">
-    <text x="52" y="180" font-size="12">0</text>
-    <text x="172" y="180" font-size="12">1</text>
-    <text x="212" y="180" font-size="12">1.41</text>
-    <text x="292" y="180" font-size="12">2</text>
-  </g>
-  <circle cx="212" cy="192" r="5" fill="#f9a825"/>
-  <circle cx="92" cy="192" r="5" fill="#1a237e"/>
-  <circle cx="332" cy="192" r="5" fill="#1a237e"/>
-  <path d="M212 178 L206 168 M212 178 L218 168" stroke="#f9a825" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-  <g font-family="Georgia,serif" font-style="italic" font-weight="700" text-anchor="middle" fill="#b45309">
-    <text x="212" y="162" font-size="15">&#8730;2</text>
-  </g>
-  <circle cx="317" cy="170" r="14" fill="#fff7e6" stroke="#f9a825" stroke-width="2"/>
-  <g font-family="Georgia,serif" font-style="italic" font-weight="700" text-anchor="middle" fill="#b45309">
-    <text x="317" y="174" font-size="14">&#960;</text>
+  <line x1="50" y1="118" x2="350" y2="118" stroke="#1a237e" stroke-width="8" stroke-linecap="round"/>
+  <polygon points="350,118 330,104 330,132" fill="#1a237e"/>
+  <circle cx="130" cy="118" r="16" fill="#1a237e"/>
+  <circle cx="220" cy="118" r="16" fill="#f9a825"/>
+  <circle cx="300" cy="118" r="16" fill="#1a237e"/>
+  <g font-family="Arial,sans-serif" font-weight="700" fill="#1a237e" text-anchor="middle">
+    <text x="130" y="165" font-size="24">2</text>
+    <text x="220" y="165" font-size="24">&#8730;2</text>
+    <text x="300" y="165" font-size="24">&#960;</text>
   </g>
 </svg>
