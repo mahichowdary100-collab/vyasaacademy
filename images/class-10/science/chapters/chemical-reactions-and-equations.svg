@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 230" role="img" aria-label="Chemical Reactions and Equations - laboratory flask with bubbles">
+  <rect width="400" height="230" fill="#ffffff"/>
+  <rect x="180" y="42" width="40" height="70" fill="none" stroke="#1a237e" stroke-width="8"/>
+  <path d="M144 160 A56 60 0 0 0 256 160 L256 218 L144 218 Z" fill="#f9a825"/>
+  <circle cx="200" cy="158" r="60" fill="none" stroke="#1a237e" stroke-width="8"/>
+  <circle cx="172" cy="112" r="7" fill="#1a237e"/>
+  <circle cx="201" cy="92" r="9" fill="#1a237e"/>
+  <circle cx="226" cy="116" r="6" fill="#1a237e"/>
+</svg>

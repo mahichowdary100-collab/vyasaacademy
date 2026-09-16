@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 230" role="img" aria-label="Light Reflection and Refraction - convex lens focusing light rays">
+  <rect width="400" height="230" fill="#ffffff"/>
+  <path d="M165 50 Q205 115 165 180" fill="none" stroke="#1a237e" stroke-width="9" stroke-linecap="round"/>
+  <path d="M235 50 Q195 115 235 180" fill="none" stroke="#1a237e" stroke-width="9" stroke-linecap="round"/>
+  <line x1="60" y1="75" x2="175" y2="75" stroke="#f9a825" stroke-width="7" stroke-linecap="round"/>
+  <line x1="60" y1="115" x2="185" y2="115" stroke="#f9a825" stroke-width="7" stroke-linecap="round"/>
+  <line x1="60" y1="155" x2="175" y2="155" stroke="#f9a825" stroke-width="7" stroke-linecap="round"/>
+  <line x1="225" y1="75" x2="280" y2="115" stroke="#1a237e" stroke-width="6" stroke-linecap="round"/>
+  <line x1="225" y1="155" x2="280" y2="115" stroke="#1a237e" stroke-width="6" stroke-linecap="round"/>
+  <line x1="185" y1="115" x2="280" y2="115" stroke="#1a237e" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="285" cy="115" r="11" fill="#f9a825"/>
+</svg>

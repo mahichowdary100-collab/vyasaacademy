@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 230" role="img" aria-label="How do Organisms Reproduce - parent cell splitting into two cells">
+  <rect width="400" height="230" fill="#ffffff"/>
+  <line x1="212" y1="115" x2="248" y2="115" stroke="#1a237e" stroke-width="8" stroke-linecap="round"/>
+  <polygon points="248,115 226,101 226,129" fill="#1a237e"/>
+  <circle cx="150" cy="115" r="60" fill="none" stroke="#1a237e" stroke-width="8"/>
+  <circle cx="164" cy="112" r="9" fill="#f9a825"/>
+  <circle cx="290" cy="82" r="42" fill="none" stroke="#f9a825" stroke-width="8"/>
+  <circle cx="290" cy="148" r="42" fill="none" stroke="#f9a825" stroke-width="8"/>
+  <circle cx="300" cy="80" r="7" fill="#1a237e"/>
+  <circle cx="300" cy="146" r="7" fill="#1a237e"/>
+</svg>

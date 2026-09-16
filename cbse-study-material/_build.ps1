@@ -261,9 +261,26 @@ foreach ($c in $data.classes) {
         $chImage = "/images/$($ch.image).svg"
         $chMedia = "<img class=""sm-chapter-img"" src=""$chImage"" alt=""$($ch.label) - CBSE Class $($c.number) $($s.label)"" loading=""lazy"" />"
       }
+      $chNumHtml = ''
+      if ($ch.PSObject.Properties['number'] -and $ch.number) { $chNumHtml = '<p class="sm-chapter-num">Chapter ' + "$($ch.number)</p>" }
+      $chDescHtml = ''
+      if ($ch.PSObject.Properties['desc'] -and $ch.desc) { $chDescHtml = '<p class="sm-chapter-desc">' + (Esc-Html $ch.desc) + '</p>' }
+      $chStatusHtml = ''
+      if ($ch.PSObject.Properties['assessmentStatus'] -and $ch.assessmentStatus) {
+        $statusClass = if ($ch.assessmentStatus -match 'Not Assessed') { ' is-formative' } else { '' }
+        $chStatusHtml = '<span class="sm-status-chip' + $statusClass + '">' + (Esc-Html $ch.assessmentStatus) + '</span>'
+      }
+      $chBodyLine = "  <div class=""sm-card-body"">$nl"
+      if ($chNumHtml)    { $chBodyLine += "    $chNumHtml$nl" }
+      $chBodyLine += "    <h3>$($ch.label)</h3>$nl"
+      if ($chDescHtml)   { $chBodyLine += "    $chDescHtml$nl" }
+      $chBodyLine += "    <p>CBSE Class $($c.number) &middot; $($s.label)</p>$nl"
+      if ($chStatusHtml) { $chBodyLine += "    $chStatusHtml$nl" }
+      $chBodyLine += "    <div class=""sm-chip-row"">$nl      <span class=""sm-chip"">Notes</span><span class=""sm-chip"">Paper</span><span class=""sm-chip"">Quiz</span><span class=""sm-chip"">Test</span>$nl    </div>$nl  </div>"
       $chCards += "<a class=""$chCardClass"" href=""/cbse-study-material/class-$($c.number)/$($s.slug)/$($ch.slug)/"" data-search=""$chSearchKey"">$nl" +
         "  $chMedia$nl" +
-        "  <div class=""sm-card-body"">$nl    <h3>$($ch.label)</h3>$nl    <p>CBSE Class $($c.number) &middot; $($s.label)</p>$nl    <div class=""sm-chip-row"">$nl      <span class=""sm-chip"">Notes</span><span class=""sm-chip"">Paper</span><span class=""sm-chip"">Quiz</span><span class=""sm-chip"">Test</span>$nl    </div>$nl  </div>$nl</a>"
+        $chBodyLine +
+        "$nl</a>"
     }
 
     $relatedSub = Get-RelatedHtml $s.related
@@ -278,8 +295,8 @@ foreach ($c in $data.classes) {
       $chDir = Join-Path $subDir $ch.slug
       New-Item -ItemType Directory -Path $chDir -Force | Out-Null
       $chUrl = "$subUrl$($ch.slug)/"
-      $chTitle = "$($ch.label) | CBSE Class $($c.number) $($s.label) | Vyasa Academy"
-      $chDesc = "$($ch.label) resources - notes, practice paper, quiz and chapter test for CBSE Class $($c.number) $($s.label) at Vyasa Academy."
+      $chTitle = if ($ch.PSObject.Properties['seoTitle'] -and $ch.seoTitle) { $ch.seoTitle } else { "$($ch.label) | CBSE Class $($c.number) $($s.label) | Vyasa Academy" }
+      $chDesc = if ($ch.PSObject.Properties['desc'] -and $ch.desc) { "$(Esc-Html $ch.desc) Notes, practice paper, quiz and chapter test for CBSE Class $($c.number) $($s.label) at Vyasa Academy." } else { "$($ch.label) resources - notes, practice paper, quiz and chapter test for CBSE Class $($c.number) $($s.label) at Vyasa Academy." }
       $crumbCh = @(
         @{ name = 'Home'; url = "$domain/" },
         @{ name = 'CBSE Study Material'; url = $mainUrl },

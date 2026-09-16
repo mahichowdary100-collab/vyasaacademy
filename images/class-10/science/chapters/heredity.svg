@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 230" role="img" aria-label="Heredity - DNA double helix with base pairs">
+  <rect width="400" height="230" fill="#ffffff"/>
+  <path d="M130 25 C215 85 215 155 130 205" fill="none" stroke="#1a237e" stroke-width="9" stroke-linecap="round"/>
+  <path d="M130 25 C45 85 45 155 130 205" fill="none" stroke="#1a237e" stroke-width="9" stroke-linecap="round"/>
+  <line x1="161" y1="55" x2="71" y2="65" stroke="#f9a825" stroke-width="7" stroke-linecap="round"/>
+  <line x1="177" y1="105" x2="83" y2="105" stroke="#f9a825" stroke-width="7" stroke-linecap="round"/>
+  <line x1="177" y1="130" x2="86" y2="130" stroke="#f9a825" stroke-width="7" stroke-linecap="round"/>
+  <line x1="169" y1="168" x2="100" y2="162" stroke="#f9a825" stroke-width="7" stroke-linecap="round"/>
+</svg>
