@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reset Password | Vyasa Academy</title>
+  <meta name="description" content="Create a new password for your Vyasa Academy portal account using your secure reset link.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://www.vyasaacademy.in/reset-password/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="authNavbar">
+    <div class="container nav-container">
+      <a href="/" class="logo"><i class="fas fa-graduation-cap"></i><span>Vyasa Academy</span></a>
+      <ul class="nav-links" id="authNavLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a href="/login/" class="nav-cta">Sign in</a></li>
+      </ul>
+      <button class="hamburger" id="authHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- RESET PASSWORD -->
+  <main class="auth-page">
+    <div class="container auth-shell">
+      <div class="auth-card">
+
+        <div id="checkingBox" class="auth-alert auth-alert-info" role="status">
+          <i class="fas fa-spinner fa-spin"></i> Checking your reset link...
+        </div>
+
+        <div id="invalidBox" class="hidden">
+          <div class="auth-logo"><i class="fas fa-exclamation-triangle"></i></div>
+          <h1 class="auth-heading">Link Invalid or Expired</h1>
+          <p class="auth-subtext">This password reset link is invalid or has expired. Reset links are single-use and expire after a short time.</p>
+          <div id="invalidErr" class="auth-alert auth-alert-warn hidden" role="alert"></div>
+          <a href="/forgot-password/" class="btn btn-primary btn-block">Request a new link</a>
+          <a href="/login/" class="auth-backlink"><i class="fas fa-arrow-left"></i> Back to sign in</a>
+        </div>
+
+        <div id="formBox" class="hidden">
+          <div class="auth-logo"><i class="fas fa-lock"></i></div>
+          <h1 class="auth-heading">Set a New Password</h1>
+          <p class="auth-subtext">Choose a new password for your Vyasa Academy portal account.</p>
+
+          <div id="authBanner" class="auth-alert auth-alert-warn hidden" role="status"></div>
+          <div id="errBox" class="auth-alert auth-alert-error hidden" role="alert"></div>
+
+          <form id="resetForm" novalidate>
+            <div class="auth-field">
+              <label for="newPassword">New password</label>
+              <div class="password-wrap">
+                <input class="auth-input" id="newPassword" name="newPassword" type="password" autocomplete="new-password" placeholder="At least 8 characters" required>
+                <button type="button" class="password-toggle" id="togglePw1" aria-label="Show password"><i class="fas fa-eye"></i></button>
+              </div>
+              <p class="auth-hint" id="strengthHint">Use at least 8 characters with letters and numbers.</p>
+              <p class="auth-hint hidden" id="pwError"></p>
+            </div>
+
+            <div class="auth-field">
+              <label for="confirmPassword">Confirm new password</label>
+              <div class="password-wrap">
+                <input class="auth-input" id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" placeholder="Re-enter your password" required>
+                <button type="button" class="password-toggle" id="togglePw2" aria-label="Show password"><i class="fas fa-eye"></i></button>
+              </div>
+              <p class="auth-hint hidden" id="confirmError">Passwords do not match.</p>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="resetBtn"><span>Save new password</span></button>
+          </form>
+        </div>
+
+        <div id="successBox" class="auth-alert auth-alert-success hidden" role="status"></div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-about">
+        <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+        <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/#hero">Home</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#papers">Practice Papers</a></li>
+          <li><a href="/#contact">Contact</a></li>
+          <li><a href="/login/">Sign in</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Popular Searches</h4>
+        <ul>
+          <li><a href="/best-tuition-centre-hulimavu/">Best Tuition Centre in Hulimavu</a></li>
+          <li><a href="/cbse-tuition-hulimavu/">CBSE Tuition in Hulimavu</a></li>
+          <li><a href="/icse-tuition-hulimavu/">ICSE Tuition Hulimavu</a></li>
+          <li><a href="/class-10-tuition-hulimavu/">Class 10 Tuition Hulimavu</a></li>
+          <li><a href="/tuition-centre-bangalore/">Best Tuition Centre in Bangalore</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/supabase-config.js"></script>
+  <script src="/supabase-auth.js"></script>
+  <script>
+    (function () {
+      'use strict';
+      var navbar = document.getElementById('authNavbar');
+      var hamburger = document.getElementById('authHamburger');
+      var navLinks = document.getElementById('authNavLinks');
+
+      hamburger.addEventListener('click', function () {
+        navbar.classList.toggle('open');
+        navLinks.classList.toggle('show');
+      });
+      navLinks.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+          hamburger.classList.remove('open');
+          navLinks.classList.remove('show');
+        }
+      });
+      window.addEventListener('scroll', function () {
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+      });
+
+      var checkingBox = document.getElementById('checkingBox');
+      var invalidBox = document.getElementById('invalidBox');
+      var formBox = document.getElementById('formBox');
+      var successBox = document.getElementById('successBox');
+      var errBox = document.getElementById('errBox');
+      var alertBox = document.getElementById('authBanner');
+      var invalidErr = document.getElementById('invalidErr');
+
+      var form = document.getElementById('resetForm');
+      var newPassword = document.getElementById('newPassword');
+      var confirmPassword = document.getElementById('confirmPassword');
+      var strengthHint = document.getElementById('strengthHint');
+      var pwError = document.getElementById('pwError');
+      var confirmError = document.getElementById('confirmError');
+      var btn = document.getElementById('resetBtn');
+      var btnSpan = btn.querySelector('span');
+
+      function showError(box, msg) {
+        box.textContent = msg;
+        box.classList.remove('hidden');
+      }
+      function hideBox(box) {
+        box.textContent = '';
+        box.classList.add('hidden');
+      }
+      function setFieldError(input, hint, msg) {
+        input.classList.add('has-error');
+        hint.textContent = msg;
+        hint.classList.remove('hidden');
+      }
+      function clearFieldError(input, hint) {
+        input.classList.remove('has-error');
+        hint.textContent = '';
+        hint.classList.add('hidden');
+      }
+
+      function updateStrength() {
+        var p = newPassword.value;
+        var hasLetter = /[A-Za-z]/.test(p);
+        var hasNumber = /\d/.test(p);
+        if (!p) {
+          strengthHint.style.color = '';
+          strengthHint.textContent = 'Use at least 8 characters with letters and numbers.';
+        } else if (p.length < 8 || !hasLetter || !hasNumber) {
+          strengthHint.style.color = '#dc2626';
+          strengthHint.textContent = p.length < 8
+            ? 'Use at least 8 characters.'
+            : 'Add at least one letter and one number.';
+        } else {
+          strengthHint.style.color = '#15803d';
+          strengthHint.textContent = 'Good password strength.';
+        }
+      }
+
+      newPassword.addEventListener('input', function () {
+        updateStrength();
+        clearFieldError(newPassword, pwError);
+      });
+      confirmPassword.addEventListener('input', function () {
+        clearFieldError(confirmPassword, confirmError);
+      });
+
+      document.getElementById('togglePw1').addEventListener('click', function () {
+        var icon = this.querySelector('i');
+        var show = newPassword.type === 'password';
+        newPassword.type = show ? 'text' : 'password';
+        icon.className = show ? 'fas fa-eye-slash' : 'fas fa-eye';
+        this.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
+      });
+      document.getElementById('togglePw2').addEventListener('click', function () {
+        var icon = this.querySelector('i');
+        var show = confirmPassword.type === 'password';
+        confirmPassword.type = show ? 'text' : 'password';
+        icon.className = show ? 'fas fa-eye-slash' : 'fas fa-eye';
+        this.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
+      });
+
+      function validate() {
+        var ok = true;
+        var p = newPassword.value;
+        if (!p) {
+          setFieldError(newPassword, pwError, 'Please enter a new password.');
+          ok = false;
+        } else if (p.length < 8) {
+          setFieldError(newPassword, pwError, 'Password must be at least 8 characters.');
+          ok = false;
+        } else if (!/[A-Za-z]/.test(p) || !/\d/.test(p)) {
+          setFieldError(newPassword, pwError, 'Password must include at least one letter and one number.');
+          ok = false;
+        } else {
+          clearFieldError(newPassword, pwError);
+        }
+
+        var c = confirmPassword.value;
+        if (!c) {
+          setFieldError(confirmPassword, confirmError, 'Please confirm your new password.');
+          ok = false;
+        } else if (c !== p) {
+          setFieldError(confirmPassword, confirmError, 'Passwords do not match.');
+          ok = false;
+        } else {
+          clearFieldError(confirmPassword, confirmError);
+        }
+        return ok;
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!validate()) return;
+        if (!window.VyasaAuth.isConfigured()) {
+          showError(errBox, 'Password reset is not configured yet. Please contact the academy administration.');
+          return;
+        }
+        btn.disabled = true;
+        btnSpan.textContent = 'Saving...';
+        var client = window.VyasaAuth.getClient();
+        client.auth.updateUser({ password: newPassword.value })
+          .then(function (r) {
+            if (r.error) throw r.error;
+            return client.auth.signOut();
+          })
+          .then(function () {
+            formBox.classList.add('hidden');
+            successBox.textContent = 'Your password has been updated. You can now sign in with your new password.';
+            successBox.classList.remove('hidden');
+          })
+          .catch(function (err) {
+            btn.disabled = false;
+            btnSpan.textContent = 'Save new password';
+            if (!navigator.onLine || (err && err.status === 0)) {
+              showError(errBox, 'Unable to connect. Please check your internet connection.');
+            } else {
+              showError(errBox, 'Your new password could not be saved. Make sure it is at least 8 characters and try again.');
+            }
+          });
+      });
+
+      function showInvalidLink() {
+        checkingBox.classList.add('hidden');
+        invalidBox.classList.remove('hidden');
+      }
+
+      // The reset link arrives as a URL fragment containing a recovery
+      // token. createClient (with detectSessionInUrl) picks it up, so
+      // getSession() tells us whether the link is still valid.
+      if (!window.VyasaAuth.isConfigured()) {
+        checkingBox.classList.remove('auth-alert-info');
+        checkingBox.classList.add('auth-alert-warn');
+        checkingBox.textContent =
+          'Password reset is not configured yet. Please contact the academy administration.';
+        return;
+      }
+
+      var client = window.VyasaAuth.getClient();
+      var settled = false;
+
+      function onSession(session) {
+        if (settled) return;
+        settled = true;
+        if (session) {
+          checkingBox.classList.add('hidden');
+          formBox.classList.remove('hidden');
+        } else {
+          showInvalidLink();
+        }
+      }
+
+      client.auth.getSession().then(function (r) {
+        onSession(r.data && r.data.session);
+      }).catch(function () {
+        onSession(null);
+      });
+
+      client.auth.onAuthStateChange(function (event, session) {
+        if (event === 'SIGNED_IN' || event === 'INITIAL_SESSION' || event === 'TOKEN_REFRESHED') {
+          onSession(session);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

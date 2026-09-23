@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In | Vyasa Academy</title>
+  <meta name="description" content="Sign in to access your Vyasa Academy learning portal. Secure access for students and parents.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://www.vyasaacademy.in/login/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="authNavbar">
+    <div class="container nav-container">
+      <a href="/" class="logo"><i class="fas fa-graduation-cap"></i><span>Vyasa Academy</span></a>
+      <ul class="nav-links" id="authNavLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a href="/login/" class="nav-cta">Sign in</a></li>
+      </ul>
+      <button class="hamburger" id="authHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- LOGIN FORM -->
+  <main class="auth-page">
+    <div class="container auth-shell">
+      <div class="auth-card">
+        <div class="auth-logo"><i class="fas fa-graduation-cap"></i></div>
+        <h1 class="auth-heading">Welcome Back</h1>
+        <p class="auth-subtext">Sign in to access your Vyasa Academy learning portal.</p>
+
+        <div id="authBanner" class="auth-alert auth-alert-warn hidden" role="status"></div>
+        <div id="errBox" class="auth-alert auth-alert-error hidden" role="alert"></div>
+
+        <form id="loginForm" novalidate>
+          <div class="auth-field">
+            <label for="email">Email address</label>
+            <input class="auth-input" id="email" name="email" type="email" autocomplete="username" inputmode="email" autocapitalize="none" autocorrect="off" spellcheck="false" placeholder="you@example.com" required>
+            <p class="auth-hint hidden" id="emailError">Please enter your email address.</p>
+          </div>
+
+          <div class="auth-field">
+            <label for="password">Password</label>
+            <div class="password-wrap">
+              <input class="auth-input" id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required>
+              <button type="button" class="password-toggle" id="togglePw" aria-label="Show password"><i class="fas fa-eye"></i></button>
+            </div>
+            <p class="auth-hint hidden" id="pwError">Please enter your password.</p>
+          </div>
+
+          <div class="auth-check-row">
+            <label class="auth-check">
+              <input type="checkbox" id="remember" checked>
+              <span>Remember me</span>
+            </label>
+            <a href="/forgot-password/" class="auth-link">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" id="loginBtn"><span>Sign in</span></button>
+        </form>
+
+        <p class="auth-help">New to Vyasa Academy? Your login is created by the academy administration after admission. There is no public sign-up.</p>
+        <a href="/" class="auth-backlink"><i class="fas fa-arrow-left"></i> Back to home</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-about">
+        <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+        <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/#hero">Home</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#papers">Practice Papers</a></li>
+          <li><a href="/#contact">Contact</a></li>
+          <li><a href="/login/">Sign in</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Popular Searches</h4>
+        <ul>
+          <li><a href="/best-tuition-centre-hulimavu/">Best Tuition Centre in Hulimavu</a></li>
+          <li><a href="/cbse-tuition-hulimavu/">CBSE Tuition in Hulimavu</a></li>
+          <li><a href="/icse-tuition-hulimavu/">ICSE Tuition Hulimavu</a></li>
+          <li><a href="/class-10-tuition-hulimavu/">Class 10 Tuition Hulimavu</a></li>
+          <li><a href="/tuition-centre-bangalore/">Best Tuition Centre in Bangalore</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/supabase-config.js"></script>
+  <script src="/supabase-auth.js"></script>
+  <script>
+    (function () {
+      'use strict';
+      var navbar = document.getElementById('authNavbar');
+      var hamburger = document.getElementById('authHamburger');
+      var navLinks = document.getElementById('authNavLinks');
+
+      hamburger.addEventListener('click', function () {
+        navbar.classList.toggle('open');
+        navLinks.classList.toggle('show');
+      });
+      navLinks.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+          hamburger.classList.remove('open');
+          navLinks.classList.remove('show');
+        }
+      });
+      window.addEventListener('scroll', function () {
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+      });
+
+      var form = document.getElementById('loginForm');
+      var email = document.getElementById('email');
+      var password = document.getElementById('password');
+      var remember = document.getElementById('remember');
+      var togglePw = document.getElementById('togglePw');
+      var errBox = document.getElementById('errBox');
+      var alertBox = document.getElementById('authBanner');
+      var btn = document.getElementById('loginBtn');
+      var btnSpan = btn.querySelector('span');
+      var emailError = document.getElementById('emailError');
+      var pwError = document.getElementById('pwError');
+      var icon = togglePw.querySelector('i');
+
+      function showError(msg) {
+        errBox.textContent = msg;
+        errBox.classList.remove('hidden');
+      }
+      function clearError() {
+        errBox.textContent = '';
+        errBox.classList.add('hidden');
+      }
+      function setFieldError(input, hint, msg) {
+        input.classList.add('has-error');
+        hint.textContent = msg;
+        hint.classList.remove('hidden');
+      }
+      function clearFieldError(input, hint) {
+        input.classList.remove('has-error');
+        hint.textContent = '';
+        hint.classList.add('hidden');
+      }
+      function setLoading(on) {
+        btn.disabled = on;
+        btnSpan.textContent = on ? 'Signing in...' : 'Sign in';
+        if (on) btn.classList.add('loading');
+        else btn.classList.remove('loading');
+      }
+
+      function validate() {
+        var ok = true;
+        var v = email.value.trim();
+        if (!v) {
+          setFieldError(email, emailError, 'Please enter your email address.');
+          ok = false;
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) {
+          setFieldError(email, emailError, 'Please enter a valid email address.');
+          ok = false;
+        } else {
+          clearFieldError(email, emailError);
+        }
+        if (!password.value) {
+          setFieldError(password, pwError, 'Please enter your password.');
+          ok = false;
+        } else {
+          clearFieldError(password, pwError);
+        }
+        return ok;
+      }
+
+      email.addEventListener('input', function () { clearError(); clearFieldError(email, emailError); });
+      password.addEventListener('input', function () { clearError(); clearFieldError(password, pwError); });
+
+      togglePw.addEventListener('click', function () {
+        var show = password.type === 'password';
+        password.type = show ? 'text' : 'password';
+        icon.className = show ? 'fas fa-eye-slash' : 'fas fa-eye';
+        togglePw.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
+      });
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        clearError();
+        if (!validate()) return;
+        if (!window.VyasaAuth.isConfigured()) {
+          showError('Login is not configured yet. Please contact the academy administration.');
+          return;
+        }
+        setLoading(true);
+        var storage = remember.checked ? window.localStorage : window.sessionStorage;
+        var emailLower = email.value.trim().toLowerCase();
+        window.VyasaAuth.getClient(storage).auth
+          .signInWithPassword({ email: emailLower, password: password.value })
+          .then(function (r) {
+            if (r.error) throw r.error;
+            return window.VyasaAuth.fetchProfile();
+          })
+          .then(function (profile) {
+            if (!profile || !window.VyasaAuth.dashFor(profile.role)) {
+              return window.VyasaAuth.getClient(storage).auth.signOut().then(function () {
+                setLoading(false);
+                showError('Your account is not fully set up. Please contact the academy administration.');
+              });
+            }
+            var next = new URLSearchParams(window.location.search).get('next') || '';
+            var target = (next && next.charAt(0) === '/') ? next : window.VyasaAuth.dashFor(profile.role);
+            window.location.replace(target);
+          })
+          .catch(function (err) {
+            setLoading(false);
+            if (!navigator.onLine || (err && err.status === 0)) {
+              showError('Unable to connect. Please check your internet connection.');
+            } else {
+              showError('Incorrect email or password. Please try again.');
+            }
+          });
+      });
+
+      function autoRedirectSignedIn() {
+        window.VyasaAuth.currentUser().then(function (user) {
+          if (!user) return;
+          return window.VyasaAuth.fetchProfile().then(function (profile) {
+            if (!profile || !window.VyasaAuth.dashFor(profile.role)) return;
+            var next = new URLSearchParams(window.location.search).get('next') || '';
+            var target = (next && next.charAt(0) === '/') ? next : window.VyasaAuth.dashFor(profile.role);
+            window.location.replace(target);
+          });
+        }).catch(function () { /* fall through */ });
+      }
+
+      if (!window.VyasaAuth.isConfigured()) {
+        window.VyasaAuth.showNotConfigured(alertBox);
+      } else {
+        autoRedirectSignedIn();
+      }
+    })();
+  </script>
+</body>
+</html>

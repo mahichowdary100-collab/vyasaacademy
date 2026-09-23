@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Vyasa Academy</title>
+  <meta name="description" content="Vyasa Academy administration portal.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://www.vyasaacademy.in/admin-dashboard/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="authNavbar">
+    <div class="container nav-container">
+      <a href="/" class="logo"><i class="fas fa-graduation-cap"></i><span>Vyasa Academy</span></a>
+      <ul class="nav-links" id="authNavLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a href="/admin-dashboard/" id="navAuthLink" class="nav-cta">Dashboard</a></li>
+      </ul>
+      <button class="hamburger" id="authHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- ADMIN PORTAL -->
+  <main class="dash-root">
+    <div class="container">
+      <div id="authBanner" class="auth-alert auth-alert-warn hidden" role="status"></div>
+
+      <div id="dashContent" class="hidden">
+        <div class="dash-topbar">
+          <div class="dash-greet">
+            <h1>Welcome, <span id="userName">Admin</span></h1>
+            <span class="dash-role"><i class="fas fa-user-shield"></i> Admin</span>
+            <p>Create student and parent accounts, link them, and send password emails.</p>
+          </div>
+          <button type="button" class="btn-logout" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Sign out</button>
+        </div>
+
+        <div id="portalAlert" class="auth-alert hidden" role="alert"></div>
+
+        <section class="adm-section">
+          <h2>Create Accounts</h2>
+          <div class="adm-forms">
+
+            <form id="studentForm" class="adm-card" novalidate>
+              <h3><i class="fas fa-user-graduate"></i> Add Student</h3>
+              <div class="adm-field">
+                <label for="sName">Full name</label>
+                <input class="auth-input" id="sName" type="text" autocomplete="off" placeholder="e.g. Aarav Sharma" required>
+              </div>
+              <div class="adm-field">
+                <label for="sEmail">Email address</label>
+                <input class="auth-input" id="sEmail" type="email" inputmode="email" autocapitalize="none" autocomplete="off" placeholder="student@example.com" required>
+              </div>
+              <div class="adm-field">
+                <label for="sId">Student ID (admission no.)</label>
+                <input class="auth-input" id="sId" type="text" autocomplete="off" placeholder="e.g. VA-2026-001" required>
+              </div>
+              <div class="adm-field">
+                <label for="sClass">Class</label>
+                <select class="auth-input" id="sClass"></select>
+              </div>
+              <div class="adm-field">
+                <label for="sSection">Section</label>
+                <input class="auth-input" id="sSection" type="text" autocomplete="off" placeholder="e.g. B">
+              </div>
+              <div class="adm-field">
+                <label for="sYear">Academic year</label>
+                <input class="auth-input" id="sYear" type="text" autocomplete="off" value="2026-27">
+              </div>
+              <button type="submit" class="btn btn-primary btn-block" id="sBtn"><span>Create student</span></button>
+            </form>
+
+            <form id="parentForm" class="adm-card" novalidate>
+              <h3><i class="fas fa-user-tie"></i> Add Parent</h3>
+              <div class="adm-field">
+                <label for="pName">Full name</label>
+                <input class="auth-input" id="pName" type="text" autocomplete="off" placeholder="e.g. Suresh Sharma" required>
+              </div>
+              <div class="adm-field">
+                <label for="pEmail">Email address</label>
+                <input class="auth-input" id="pEmail" type="email" inputmode="email" autocapitalize="none" autocomplete="off" placeholder="parent@example.com" required>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block" id="pBtn"><span>Create parent</span></button>
+            </form>
+
+          </div>
+        </section>
+
+        <section class="adm-section">
+          <h2>Link Parents to Students</h2>
+          <div class="adm-card">
+            <div class="adm-link-group">
+              <label for="linkParent">Parent</label>
+              <select class="auth-input" id="linkParent"></select>
+            </div>
+            <div class="adm-link-group">
+              <label>Students to link</label>
+              <div class="adm-checks" id="linkStudentList"></div>
+            </div>
+            <button type="button" class="btn btn-primary" id="linkBtn">Link selected students</button>
+          </div>
+        </section>
+
+        <section class="adm-section">
+          <h2>All Accounts</h2>
+          <div class="adm-table-wrap">
+            <table class="adm-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Class / ID</th>
+                  <th>Linked</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="accountsTableBody"></tbody>
+            </table>
+          </div>
+          <p class="adm-empty" id="accountsEmpty">Loading accounts...</p>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-about">
+        <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+        <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/#hero">Home</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#papers">Practice Papers</a></li>
+          <li><a href="/#contact">Contact</a></li>
+          <li><a href="/admin-dashboard/" id="footerAuthLink">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Popular Searches</h4>
+        <ul>
+          <li><a href="/best-tuition-centre-hulimavu/">Best Tuition Centre in Hulimavu</a></li>
+          <li><a href="/cbse-tuition-hulimavu/">CBSE Tuition in Hulimavu</a></li>
+          <li><a href="/icse-tuition-hulimavu/">ICSE Tuition Hulimavu</a></li>
+          <li><a href="/class-10-tuition-hulimavu/">Class 10 Tuition Hulimavu</a></li>
+          <li><a href="/tuition-centre-bangalore/">Best Tuition Centre in Bangalore</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/supabase-config.js"></script>
+  <script src="/supabase-auth.js"></script>
+  <script>
+    (function () {
+      'use strict';
+      var navbar = document.getElementById('authNavbar');
+      var hamburger = document.getElementById('authHamburger');
+      var navLinks = document.getElementById('authNavLinks');
+
+      hamburger.addEventListener('click', function () {
+        navbar.classList.toggle('open');
+        navLinks.classList.toggle('show');
+      });
+      navLinks.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+          hamburger.classList.remove('open');
+          navLinks.classList.remove('show');
+        }
+      });
+      window.addEventListener('scroll', function () {
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+      });
+
+      var client = null;
+      var accounts = [];
+      var portalAlert = document.getElementById('portalAlert');
+      var accountsBody = document.getElementById('accountsTableBody');
+      var accountsEmpty = document.getElementById('accountsEmpty');
+      var linkParent = document.getElementById('linkParent');
+      var linkStudentList = document.getElementById('linkStudentList');
+
+      function showAlert(kind, msg) {
+        portalAlert.className = 'auth-alert auth-alert-' + kind;
+        portalAlert.textContent = msg;
+        portalAlert.classList.remove('hidden');
+      }
+      function hideAlert() {
+        portalAlert.classList.add('hidden');
+        portalAlert.textContent = '';
+      }
+      function setBusy(btn, on, busyText) {
+        var span = btn.querySelector('span');
+        if (on) {
+          btn._label = span.textContent;
+          span.textContent = busyText;
+          btn.disabled = true;
+        } else {
+          span.textContent = btn._label || 'Submit';
+          btn.disabled = false;
+        }
+      }
+      function guessEmailLabel(email) {
+        return email || '';
+      }
+      function classOptions() {
+        var list = ['VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII'];
+        var sel = document.getElementById('sClass');
+        for (var i = 0; i < list.length; i++) {
+          var opt = document.createElement('option');
+          opt.value = list[i];
+          opt.textContent = 'Class ' + list[i];
+          sel.appendChild(opt);
+        }
+      }
+      function normalizeList(data) {
+        if (!data) return [];
+        if (Object.prototype.toString.call(data) === '[object Array]') return data;
+        if (data.admin_list_accounts) return data.admin_list_accounts;
+        if (Object.prototype.toString.call(data.data) === '[object Array]') return data.data;
+        return [];
+      }
+      function clearChildren(el) {
+        while (el.firstChild) { el.removeChild(el.firstChild); }
+      }
+      function roleBubble(role) {
+        var span = document.createElement('span');
+        var map = { student: 'adm-role-student', parent: 'adm-role-parent', admin: 'adm-role-admin' };
+        span.className = 'adm-role ' + (map[role] || 'adm-role-student');
+        span.textContent = role.charAt(0).toUpperCase() + role.slice(1);
+        return span;
+      }
+      function loadAccounts() {
+        return client.rpc('admin_list_accounts').then(function (resp) {
+          if (resp.error) throw resp.error;
+          accounts = normalizeList(resp.data);
+          renderAccounts();
+        });
+      }
+      function renderAccounts() {
+        clearChildren(accountsBody);
+        clearChildren(linkParent);
+        clearChildren(linkStudentList);
+        linkParent.appendChild(placeholderOption('-- Select a parent --', ''));
+        if (!accounts.length) {
+          accountsEmpty.textContent = 'No accounts yet. Create the first student or parent above.';
+          accountsEmpty.classList.remove('hidden');
+          return;
+        }
+        accountsEmpty.classList.add('hidden');
+
+        for (var i = 0; i < accounts.length; i++) {
+          var a = accounts[i];
+          if (a.role === 'parent') {
+            var opt = document.createElement('option');
+            opt.value = a.user_id;
+            opt.textContent = a.full_name + ' (' + a.email + ')';
+            linkParent.appendChild(opt);
+          }
+          if (a.role === 'student') {
+            var chk = document.createElement('label');
+            chk.className = 'adm-check';
+            var cb = document.createElement('input');
+            cb.type = 'checkbox';
+            cb.value = a.user_id;
+            cb.id = 'chkstud-' + a.user_id;
+            chk.appendChild(cb);
+            var lbl = document.createElement('span');
+            lbl.textContent = a.full_name + ' - ' + (a.class_level || '') + (a.section ? ' ' + a.section : '');
+            chk.appendChild(lbl);
+            linkStudentList.appendChild(chk);
+          }
+
+          var tr = document.createElement('tr');
+
+          var tdName = document.createElement('td');
+          var spName = document.createElement('span');
+          spName.className = 'adm-name';
+          spName.textContent = a.full_name;
+          tdName.appendChild(spName);
+          tr.appendChild(tdName);
+
+          var tdEmail = document.createElement('td');
+          tdEmail.textContent = a.email;
+          tr.appendChild(tdEmail);
+
+          var tdRole = document.createElement('td');
+          tdRole.appendChild(roleBubble(a.role));
+          tr.appendChild(tdRole);
+
+          var tdClass = document.createElement('td');
+          if (a.role === 'student') {
+            tdClass.textContent = (a.class_level || '-') + (a.section ? ' / ' + a.section : '/-') + '  (' + (a.student_id || '-') + ')';
+          } else {
+            tdClass.textContent = '-';
+          }
+          tr.appendChild(tdClass);
+
+          var tdLinked = document.createElement('td');
+          tdLinked.textContent = a.role === 'parent' ? String(a.linked_students || 0) : '-';
+          tr.appendChild(tdLinked);
+
+          var tdAct = document.createElement('td');
+          var actBtn = document.createElement('button');
+          actBtn.type = 'button';
+          actBtn.className = 'adm-btn-sm';
+          actBtn.textContent = 'Send password email';
+          actBtn.setAttribute('data-email', a.email);
+          tdAct.appendChild(actBtn);
+          tr.appendChild(tdAct);
+
+          accountsBody.appendChild(tr);
+        }
+      }
+      function placeholderOption(text, value) {
+        var opt = document.createElement('option');
+        opt.value = value;
+        opt.textContent = text;
+        return opt;
+      }
+      function isEmail(v) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+      }
+      function sendPasswordEmail(email) {
+        return client.auth.resetPasswordForEmail(email, {
+          redirectTo: window.location.origin + '/reset-password/'
+        });
+      }
+      function handleCreateStudent() {
+        var name = document.getElementById('sName').value.trim();
+        var email = document.getElementById('sEmail').value.trim().toLowerCase();
+        var sid = document.getElementById('sId').value.trim();
+        var cls = document.getElementById('sClass').value;
+        var sec = document.getElementById('sSection').value.trim();
+        var yr = document.getElementById('sYear').value.trim();
+        if (!name) { showAlert('error', 'Please enter the student full name.'); return; }
+        if (!isEmail(email)) { showAlert('error', 'Please enter a valid email address.'); return; }
+        if (!sid) { showAlert('error', 'Please enter the student ID.'); return; }
+        if (!cls) { showAlert('error', 'Please select a class.'); return; }
+
+        var btn = document.getElementById('sBtn');
+        setBusy(btn, true, 'Creating...');
+        client.rpc('admin_create_student', {
+          p_email: email,
+          p_full_name: name,
+          p_student_id: sid,
+          p_class_level: cls,
+          p_section: sec,
+          p_academic_year: yr
+        }).then(function (resp) {
+          if (resp.error) throw resp.error;
+          var tempPw = resp.data && resp.data.temp_password ? resp.data.temp_password : '(see UI)';
+          showAlert('success', 'Student created. Temporary password for ' + email + ': ' + tempPw);
+          document.getElementById('studentForm').reset();
+          return sendPasswordEmail(email).then(function (r2) {
+            if (r2.error) throw r2.error;
+            showAlert('success', 'Student ' + name + ' created. A "set your password" email was sent to ' + email + '. Temporary password (backup): ' + tempPw);
+          }).catch(function () {
+            showAlert('success', 'Student ' + name + ' created. Email could not be sent automatically - please use the "Send password email" button in the table. Temporary password: ' + tempPw);
+          });
+        }).catch(function (err) {
+          var m = (err && err.message) ? err.message : 'Could not create the student. Did you run the Admin Portal SQL in Supabase?';
+          showAlert('error', m);
+        }).then(function () {
+          setBusy(btn, false);
+          return loadAccounts();
+        });
+      }
+      function handleCreateParent() {
+        var name = document.getElementById('pName').value.trim();
+        var email = document.getElementById('pEmail').value.trim().toLowerCase();
+        if (!name) { showAlert('error', 'Please enter the parent full name.'); return; }
+        if (!isEmail(email)) { showAlert('error', 'Please enter a valid email address.'); return; }
+
+        var btn = document.getElementById('pBtn');
+        setBusy(btn, true, 'Creating...');
+        client.rpc('admin_create_parent', {
+          p_email: email,
+          p_full_name: name
+        }).then(function (resp) {
+          if (resp.error) throw resp.error;
+          var tempPw = resp.data && resp.data.temp_password ? resp.data.temp_password : '(see UI)';
+          document.getElementById('parentForm').reset();
+          return sendPasswordEmail(email).then(function (r2) {
+            if (r2.error) throw r2.error;
+            showAlert('success', 'Parent ' + name + ' created. A "set your password" email was sent to ' + email + '. Temporary password (backup): ' + tempPw);
+          }).catch(function () {
+            showAlert('success', 'Parent ' + name + ' created. Email could not be sent automatically - use the table button. Temporary password: ' + tempPw);
+          });
+        }).catch(function (err) {
+          var m = (err && err.message) ? err.message : 'Could not create the parent. Did you run the Admin Portal SQL in Supabase?';
+          showAlert('error', m);
+        }).then(function () {
+          setBusy(btn, false);
+          return loadAccounts();
+        });
+      }
+      function handleLink() {
+        var pid = linkParent.value;
+        if (!pid) { showAlert('error', 'Please select a parent.'); return; }
+        var boxes = linkStudentList.querySelectorAll('input[type="checkbox"]:checked');
+        var ids = [];
+        for (var i = 0; i < boxes.length; i++) { ids.push(boxes[i].value); }
+        if (!ids.length) { showAlert('error', 'Please select at least one student.'); return; }
+
+        var btn = document.getElementById('linkBtn');
+        btn.disabled = true;
+        client.rpc('admin_link_students', {
+          p_parent_user_id: pid,
+          p_student_user_ids: ids
+        }).then(function (resp) {
+          if (resp.error) throw resp.error;
+          showAlert('success', 'Students linked to the parent.');
+        }).catch(function (err) {
+          var m = (err && err.message) ? err.message : 'Could not link students.';
+          showAlert('error', m);
+        }).then(function () {
+          btn.disabled = false;
+          return loadAccounts();
+        });
+      }
+      accountsBody.addEventListener('click', function (e) {
+        var btn = e.target;
+        if (btn && btn.getAttribute && btn.getAttribute('data-email')) {
+          var email = btn.getAttribute('data-email');
+          btn.disabled = true;
+          btn.textContent = 'Sending...';
+          sendPasswordEmail(email).then(function (r) {
+            if (r.error) throw r.error;
+            showAlert('success', 'Password-set email sent to ' + email);
+          }).catch(function (err) {
+            showAlert('error', 'Could not send the email. ' + ((err && err.message) || ''));
+          }).then(function () {
+            btn.disabled = false;
+            btn.textContent = 'Send password email';
+          });
+        }
+      });
+
+      document.getElementById('studentForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        handleCreateStudent();
+      });
+      document.getElementById('parentForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        handleCreateParent();
+      });
+      document.getElementById('linkBtn').addEventListener('click', handleLink);
+
+      function boot() {
+        window.VyasaAuth.guard({ requiredRole: 'admin' }).then(function (info) {
+          if (!info) return;
+          document.getElementById('userName').textContent = info.profile.full_name || 'Admin';
+          document.getElementById('dashContent').classList.remove('hidden');
+          client = window.VyasaAuth.getClient();
+          document.getElementById('logoutBtn').addEventListener('click', function () {
+            window.VyasaAuth.logout().catch(function () {
+              window.location.replace('/login/');
+            });
+          });
+          classOptions();
+          loadAccounts().catch(function (err) {
+            var known = (err && err.message) || '';
+            if (/did not run|not found|function/i.test(known)) {
+              showAlert('error', 'Database function missing. In Supabase, open SQL Editor and run the Admin Portal section of supabase/schema.sql, then refresh.');
+            } else {
+              showAlert('error', 'Could not load accounts: ' + known);
+            }
+          });
+        }).catch(function (err) {
+          if (err && err.message === 'NOT_CONFIGURED') {
+            window.VyasaAuth.showNotConfigured(document.getElementById('authBanner'));
+          }
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', boot);
+      } else {
+        boot();
+      }
+    })();
+  </script>
+</body>
+</html>
