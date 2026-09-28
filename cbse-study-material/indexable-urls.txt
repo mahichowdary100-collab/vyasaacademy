@@ -1,6 +1,7 @@
 https://www.vyasaacademy.in/cbse-study-material/
 https://www.vyasaacademy.in/cbse-study-material/class-10/
 https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/
+https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/arithmetic-progressions/notes/
 https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/
 https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/notes/
 https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/practice-paper/
@@ -21,6 +22,9 @@ https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/real-number
 https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/real-numbers/practice-paper/
 https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/real-numbers/quiz/
 https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/real-numbers/test/
+https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/triangles/notes/
+https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/triangles/quiz/
+https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/triangles/test/
 https://www.vyasaacademy.in/cbse-study-material/class-10/science/
 https://www.vyasaacademy.in/cbse-study-material/class-10/science/acids-bases-and-salts/notes/
 https://www.vyasaacademy.in/cbse-study-material/class-10/science/carbon-and-its-compounds/notes/
