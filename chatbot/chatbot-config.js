@@ -1,5 +1,5 @@
-/* ============================================================
-   Vyasa Academy Assistant - Frontend configuration
+﻿/* ============================================================
+   Vyasa Guru - Frontend configuration
    ------------------------------------------------------------
    No API keys, no provider credentials. The browser only ever
    talks to OUR chat endpoint; provider keys stay server-side.
@@ -16,11 +16,11 @@
 window.VYASA_CHATBOT_CONFIG = {
   backendUrl: "",
 
-  headerTitle: "Vyasa Academy Assistant",
+  headerTitle: "Vyasa Guru",
   subtitle: "Ask me about courses, admissions, classes and study material.",
 
-  buttonAriaLabel: "Open Vyasa Academy Assistant chat",
-  closeAriaLabel: "Close Vyasa Academy Assistant chat",
+  buttonAriaLabel: "Open Vyasa Guru chat",
+  closeAriaLabel: "Close Vyasa Guru chat",
   sendAriaLabel: "Send message",
   clearAriaLabel: "Clear conversation",
   inputPlaceholder: "Type your question...",

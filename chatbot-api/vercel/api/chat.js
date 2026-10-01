@@ -1,4 +1,4 @@
-/* Vyasa Academy Assistant - Vercel serverless function
+﻿/* Vyasa Guru - Vercel serverless function
    Deploy this repo as a Vercel Function at /api/chat.
    Set the AI_* environment variables in the Vercel dashboard. */
 "use strict";

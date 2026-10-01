@@ -1,4 +1,4 @@
-/* Vyasa Academy Assistant - backend test suite
+﻿/* Vyasa Guru - backend test suite
    Run: npm test   (node --test)
    Each scenario is also validated against the shared knowledge
    base plus a local mock OpenAI-compatible endpoint so nothing

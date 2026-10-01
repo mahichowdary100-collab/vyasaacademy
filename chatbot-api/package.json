@@ -1,8 +1,8 @@
-{
+﻿{
   "name": "vyasa-academy-chatbot-api",
   "version": "1.0.0",
   "private": true,
-  "description": "Backend / serverless endpoint for the Vyasa Academy Assistant chatbot (provider-agnostic, no runtime dependencies).",
+  "description": "Backend / serverless endpoint for the Vyasa Guru chatbot (provider-agnostic, no runtime dependencies).",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

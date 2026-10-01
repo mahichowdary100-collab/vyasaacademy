@@ -1,5 +1,5 @@
-/* ============================================================
-   Vyasa Academy Assistant - standalone Node server
+﻿/* ============================================================
+   Vyasa Guru - standalone Node server
    ------------------------------------------------------------
    Serves:
      POST /api/chat   -> chat with history

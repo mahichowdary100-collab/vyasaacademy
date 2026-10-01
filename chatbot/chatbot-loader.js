@@ -1,5 +1,5 @@
-/* ============================================================
-   Vyasa Academy Assistant - loader
+﻿/* ============================================================
+   Vyasa Guru - loader
    ------------------------------------------------------------
    Lazy-loads the widget assets (CSS + scripts) only after the
    page has finished loading, keeping the rest of the site fast

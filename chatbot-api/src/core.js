@@ -1,5 +1,5 @@
-/* ============================================================
-   Vyasa Academy Assistant - backend core
+﻿/* ============================================================
+   Vyasa Guru - backend core
    ------------------------------------------------------------
    Provider-agnostic chat engine. Reads configuration from
    environment variables; requires no runtime npm dependencies
@@ -28,8 +28,8 @@ const MAX_HISTORY = 20;
 const MAX_REQUESTS_PER_WINDOW = 30;
 const RATE_WINDOW_MS = 10 * 60 * 1000;
 
-const FALLBACK_BUSY = "The assistant is temporarily busy. Please try again in a few minutes.";
-const FALLBACK_RATE = "The assistant is receiving a lot of questions right now. Please try again in a few minutes.";
+const FALLBACK_BUSY = "Vyasa Guru is temporarily busy. Please try again in a few minutes.";
+const FALLBACK_RATE = "Vyasa Guru is receiving a lot of questions right now. Please try again in a few minutes.";
 const FALLBACK_NOAPI = "I don't have that information yet. Please contact Vyasa Academy directly.";
 
 function getConfig() {
@@ -45,7 +45,7 @@ function getConfig() {
 function buildSystemPrompt() {
   const facts = KB.FACTS;
   return [
-    "You are the Vyasa Academy Assistant, the official AI assistant for Vyasa Academy, an educational institution in Hulimavu, Bangalore.",
+    "You are Vyasa Guru, the official AI assistant for Vyasa Academy, an educational institution in Hulimavu, Bangalore.",
     "Only answer from the verified facts provided below. Never invent fees, results, ratings, rankings, awards, placements, timings, schedules, faculty or content details that are not listed here.",
     "If you are asked for information that is not in the verified facts, answer honestly with: \"I don't have enough verified information to answer that accurately. Please contact Vyasa Academy directly at +91 94949 01006.\"",
     "VERIFIED ACADEMY FACTS:",

@@ -1,4 +1,4 @@
-/* Vyasa Academy Assistant - Cloudflare Worker
+﻿/* Vyasa Guru - Cloudflare Worker
    Deploy with `wrangler publish` and bind the AI_* secrets:
      wrangler secret put AI_API_KEY  (pipe the value)
    Worker route for /api/chat and /api/health. */

@@ -1,6 +1,6 @@
-# Vyasa Academy Assistant — backend / serverless endpoint
+﻿# Vyasa Guru â€” backend / serverless endpoint
 
-Provider-agnostic, dependency-free chat endpoint for the **Vyasa Academy Assistant**.
+Provider-agnostic, dependency-free chat endpoint for the **Vyasa Guru**.
 
 The website itself is a static GitHub Pages site, so it cannot run server code.
 This folder is the *clearly separated* backend you deploy on any of the options
@@ -9,12 +9,12 @@ endpoint; it never loads an AI provider key.
 
 ## How it works
 
-- `POST /api/chat` — body: `{ "sessionId": "...", "messages": [{role, content}, ...] }`
-  → `{ "reply": "...", "source": "ai" | "knowledge" }`
-- `GET /api/health` — deployment probe.
-- No AI key configured → the API answers from the bundled, verified knowledge
+- `POST /api/chat` â€” body: `{ "sessionId": "...", "messages": [{role, content}, ...] }`
+  â†’ `{ "reply": "...", "source": "ai" | "knowledge" }`
+- `GET /api/health` â€” deployment probe.
+- No AI key configured â†’ the API answers from the bundled, verified knowledge
   base (`/chatbot/chatbot-kb.js`) instead of calling any provider.
-- Provider failure/rate-limit after retries → graceful fallback reply.
+- Provider failure/rate-limit after retries â†’ graceful fallback reply.
 
 ## Configuration (environment variables)
 
@@ -31,7 +31,7 @@ See `.env.example`. The important ones:
 
 ## Deploy options
 
-### Option A — standalone Node server
+### Option A â€” standalone Node server
 
 ```bash
 AI_API_KEY=... AI_MODEL=gpt-4o-mini node server.js
@@ -40,13 +40,13 @@ AI_API_KEY=... AI_MODEL=gpt-4o-mini node server.js
 Then point the widget to it: in `chatbot/chatbot-config.js` set
 `backendUrl: "https://your-host.example.com"`.
 
-### Option B — Vercel
+### Option B â€” Vercel
 
 Deploy this repo as a Vercel project (it has a `vercel/` directory with a
 `/api/chat` function). Set the `AI_*` variables in the Vercel dashboard.
-Same origin → `backendUrl: ""` works automatically.
+Same origin â†’ `backendUrl: ""` works automatically.
 
-### Option C — Cloudflare Workers
+### Option C â€” Cloudflare Workers
 
 ```bash
 npm i -D wrangler        # or install wrangler globally
@@ -63,7 +63,7 @@ main = "worker.js"
 compatibility_date = "2024-01-01"
 ```
 
-### Option D — Netlify / Render / Railway / any Node host
+### Option D â€” Netlify / Render / Railway / any Node host
 
 Use `server.js` as the entrypoint (Node 18+). Render/Railway/Netlify can run
 it unchanged; only `PORT` env is used for the listen port.
@@ -71,7 +71,7 @@ it unchanged; only `PORT` env is used for the listen port.
 > Note: `worker.js` and `server.js` reference sibling paths. Whatever host you
 > use, make sure `src/core.js` and `../chatbot/chatbot-kb.js` deploy with the
 > bundle (that is why this repo is the deployment unit, not a single file).
-> The knowledge base is a plain UMD file — copy it as-is.
+> The knowledge base is a plain UMD file â€” copy it as-is.
 
 ## Tests
 

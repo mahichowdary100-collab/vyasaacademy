@@ -1,5 +1,5 @@
-/* ============================================================
-   Vyasa Academy Assistant - widget
+﻿/* ============================================================
+   Vyasa Guru - widget
    ------------------------------------------------------------
    Renders the floating launcher + chat dialog. Talks ONLY to
    our backend endpoint (/api/chat or configured backendUrl).
@@ -179,8 +179,8 @@
           }
         }
         replaceTyping(typing, local && local.text
-          ? toBotReply("The assistant is temporarily busy. Please try again in a few minutes.\n\nIn the meantime: " + local.text)
-          : toBotReply("The assistant is temporarily busy. Please try again in a few minutes."));
+          ? toBotReply("Vyasa Guru is temporarily busy. Please try again in a few minutes.\n\nIn the meantime: " + local.text)
+          : toBotReply("Vyasa Guru is temporarily busy. Please try again in a few minutes."));
         finish();
       }
     );
@@ -249,9 +249,9 @@
   }
 
   function showGreeting() {
-    var greeting = "Hi! I am the Vyasa Academy Assistant. You can ask about our classes (VI - XII), subjects, admissions, contact details or the free CBSE study material. Pick a question below or type your own.";
+    var greeting = "Hi! I am Vyasa Guru. You can ask about our classes (VI - XII), subjects, admissions, contact details or the free CBSE study material. Pick a question below or type your own.";
     if (!KB || !KB.FACTS) {
-      greeting = "Hi! I am the Vyasa Academy Assistant. Ask me about courses, admissions or study material.";
+      greeting = "Hi! I am Vyasa Guru. Ask me about courses, admissions or study material.";
     }
     var bot = toBotReply(greeting);
     appendMsg(bot);
@@ -268,7 +268,7 @@
     widget.open = true;
     widget.window.hidden = false;
     widget.launcher.setAttribute("aria-expanded", "true");
-    widget.launcher.setAttribute("aria-label", CONFIG.closeAriaLabel || "Close Vyasa Academy Assistant chat");
+    widget.launcher.setAttribute("aria-label", CONFIG.closeAriaLabel || "Close Vyasa Guru chat");
     try {
       var stored = localStorage.getItem(localStorageKey);
       if (stored && !kbState.topic) kbState.topic = stored;
@@ -283,7 +283,7 @@
     widget.open = false;
     widget.window.hidden = true;
     widget.launcher.setAttribute("aria-expanded", "false");
-    widget.launcher.setAttribute("aria-label", CONFIG.buttonAriaLabel || "Open Vyasa Academy Assistant chat");
+    widget.launcher.setAttribute("aria-label", CONFIG.buttonAriaLabel || "Open Vyasa Guru chat");
     widget.launcher.focus();
   }
 
@@ -330,21 +330,21 @@
     launcher.className = "vy-chat-launcher vy-chat-focus-btn";
     launcher.setAttribute("aria-haspopup", "dialog");
     launcher.setAttribute("aria-expanded", "false");
-    launcher.setAttribute("aria-label", CONFIG.buttonAriaLabel || "Open Vyasa Academy Assistant chat");
+    launcher.setAttribute("aria-label", CONFIG.buttonAriaLabel || "Open Vyasa Guru chat");
     launcher.innerHTML = svgIcon("launcher");
 
     var win = document.createElement("div");
     win.className = "vy-chat-window";
     win.setAttribute("role", "dialog");
     win.setAttribute("aria-modal", "true");
-    win.setAttribute("aria-label", CONFIG.headerTitle || "Vyasa Academy Assistant");
+    win.setAttribute("aria-label", CONFIG.headerTitle || "Vyasa Guru");
     win.hidden = true;
 
     var header = el("div", "vy-chat-header");
     var avatar = el("div", "vy-chat-avatar");
     avatar.innerHTML = svgIcon("bot");
     var headtext = el("div", "vy-chat-headtext");
-    headtext.appendChild(el("p", "vy-chat-title", CONFIG.headerTitle || "Vyasa Academy Assistant"));
+    headtext.appendChild(el("p", "vy-chat-title", CONFIG.headerTitle || "Vyasa Guru"));
     headtext.appendChild(el("p", "vy-chat-subtitle", CONFIG.subtitle || ""));
     var clearBtn = el("button", "vy-chat-clear vy-chat-focus-btn");
     clearBtn.type = "button";
@@ -380,7 +380,7 @@
     footer.appendChild(sendBtn);
 
     var note = el("p", "vy-chat-note", "");
-    note.innerHTML = 'This assistant answers from verified Vyasa Academy information. For fee details, call <a href="tel:+919494901006">+91 94949 01006</a>.';
+    note.innerHTML = 'Vyasa Guru answers from verified Vyasa Academy information. For fee details, call <a href="tel:+919494901006">+91 94949 01006</a>.';
 
     win.appendChild(header);
     win.appendChild(body);

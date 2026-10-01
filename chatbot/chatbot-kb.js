@@ -1,5 +1,5 @@
-/* ============================================================
-   Vyasa Academy Assistant - Knowledge Base
+﻿/* ============================================================
+   Vyasa Guru - Knowledge Base
    ------------------------------------------------------------
    Single source of truth for the chatbot's deterministic
    answers. UMD module: works in the browser (window.VyasaChatbotKB)
@@ -220,7 +220,7 @@
       keywords: [/^hi\b/, /^hello\b/, /^hey\b/, /greetings/, /^namaste/, /good morning/, /good afternoon/, /good evening/],
       make: function () {
         return {
-          text: "Hello! I am the Vyasa Academy Assistant. Ask me about our classes (VI - XII), subjects (Mathematics, Physics, Chemistry, Biology and Science), admissions, contact details, or the free CBSE study material on our website. How can I help?",
+          text: "Hello! I am Vyasa Guru. Ask me about our classes (VI - XII), subjects (Mathematics, Physics, Chemistry, Biology and Science), admissions, contact details, or the free CBSE study material on our website. How can I help?",
           topic: null
         };
       }
@@ -463,7 +463,7 @@
       keywords: [/help/, /what can you do/, /who are you/, /what are you/, /about you/, /how do you work/, /assistant/],
       make: function () {
         return {
-          text: "I am the Vyasa Academy Assistant. I can answer questions about our classes, subjects, admissions, contact details, and point you to the right CBSE study material - notes, practice papers, quizzes and chapter tests. You can also ask me to explain a Class 10 topic like arithmetic progressions, quadratic equations, the distance formula, or angle of elevation.",
+          text: "I am Vyasa Guru. I can answer questions about our classes, subjects, admissions, contact details, and point you to the right CBSE study material - notes, practice papers, quizzes and chapter tests. You can also ask me to explain a Class 10 topic like arithmetic progressions, quadratic equations, the distance formula, or angle of elevation.",
           topic: null
         };
       }
