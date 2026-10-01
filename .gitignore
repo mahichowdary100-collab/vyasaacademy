@@ -1,0 +1,10 @@
+# Environment / secrets - never commit these
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+
+# Logs
+*.log
