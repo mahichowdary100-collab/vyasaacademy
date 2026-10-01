@@ -8,10 +8,20 @@
 
 .vy-chat *,
 .vy-chat *::before,
-.vy-chat *::after {
+.vy-chat *::after,
+.vy-chat-launcher,
+.vy-chat-launcher *,
+.vy-chat-launcher *::before,
+.vy-chat-launcher *::after,
+.vy-chat-window,
+.vy-chat-window *,
+.vy-chat-window *::before,
+.vy-chat-window *::after {
   box-sizing: border-box;
 }
-.vy-chat {
+.vy-chat,
+.vy-chat-launcher,
+.vy-chat-window {
   --vyc-primary: #1a237e;
   --vyc-primary-dark: #0f1559;
   --vyc-primary-light: #3949ab;
