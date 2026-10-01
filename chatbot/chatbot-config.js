@@ -18,6 +18,8 @@ window.VYASA_CHATBOT_CONFIG = {
 
   avatarUrl: "/chatbot/vyasa-guru-avatar.png",
 
+  tipText: "Chat with Vyasa Guru",
+
   headerTitle: "Vyasa Guru",
   subtitle: "Ask me about courses, admissions, classes and study material.",
 

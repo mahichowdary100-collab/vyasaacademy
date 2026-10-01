@@ -14,11 +14,12 @@
   window.VYASA_CHATBOT_LOADED = true;
 
   var BASE = "/chatbot/";
+  var VERSION = "3";
   var ASSETS = [
-    { type: "css", href: BASE + "chatbot-widget.css" },
-    { type: "js", src: BASE + "chatbot-config.js" },
-    { type: "js", src: BASE + "chatbot-kb.js" },
-    { type: "js", src: BASE + "chatbot-widget.js" }
+    { type: "css", href: BASE + "chatbot-widget.css?v=" + VERSION },
+    { type: "js", src: BASE + "chatbot-config.js?v=" + VERSION },
+    { type: "js", src: BASE + "chatbot-kb.js?v=" + VERSION },
+    { type: "js", src: BASE + "chatbot-widget.js?v=" + VERSION }
   ];
 
   function inject(asset) {

@@ -23,6 +23,7 @@
   var sessionKey = "vy-chat-session";
   var kbState = { topic: null };
   var lastScrollY = 0;
+  var tipDismissed = false;
 
   function getSessionId() {
     try {
@@ -268,7 +269,9 @@
     }
     widget.open = true;
     widget.window.hidden = false;
+    widget.window.style.display = "";
     setLauncherVisible(true);
+    hideTip();
     syncLauncherState();
     widget.launcher.setAttribute("aria-expanded", "true");
     widget.launcher.setAttribute("aria-label", CONFIG.closeAriaLabel || "Close Vyasa Guru chat");
@@ -285,11 +288,13 @@
   function closeChat() {
     widget.open = false;
     widget.window.hidden = true;
+    widget.window.style.display = "none";
     syncLauncherState();
     widget.launcher.setAttribute("aria-expanded", "false");
     widget.launcher.setAttribute("aria-label", CONFIG.buttonAriaLabel || "Open Vyasa Guru chat");
     widget.launcher.focus();
     updateLauncherVisibility();
+    showTip();
   }
 
   function toggleChat() {
@@ -322,17 +327,33 @@
   function updateLauncherVisibility() {
     if (widget.open) { setLauncherVisible(true); return; }
     var s = getScroll();
-    if (s.maxScroll <= 0) { setLauncherVisible(true); return; }
+    if (s.maxScroll <= 0) { setLauncherVisible(true); showTip(); return; }
     var scrollingDown = (s.y - lastScrollY) > 2;
     var nearFooter = (s.y >= s.maxScroll - 220);
     lastScrollY = s.y;
-    setLauncherVisible(!scrollingDown && !nearFooter);
+    var visible = !scrollingDown && !nearFooter;
+    setLauncherVisible(visible);
+    if (visible) showTip(); else hideTip();
   }
 
   function syncLauncherState() {
     var open = widget.open;
     if (widget.launcher) widget.launcher.classList.toggle("vy-chat-launcher--open", open);
     if (widget.window) widget.window.classList.toggle("vy-chat-window--raised", open);
+  }
+
+  /* ---------- Tip bubble above the launcher ---------- */
+  function hideTip() {
+    if (widget.tip) widget.tip.classList.add("vy-chat-tip--hidden");
+  }
+
+  function showTip() {
+    if (widget.tip && !tipDismissed && !widget.open) widget.tip.classList.remove("vy-chat-tip--hidden");
+  }
+
+  function dismissTip() {
+    tipDismissed = true;
+    hideTip();
   }
 
   function onLauncherScroll(e) { updateLauncherVisibility(); }
@@ -386,12 +407,25 @@
     launcher.setAttribute("aria-label", CONFIG.buttonAriaLabel || "Open Vyasa Guru chat");
     launcher.innerHTML = launcherMedia();
 
+    var tip = document.createElement("div");
+    tip.className = "vy-chat-tip";
+    tip.setAttribute("role", "note");
+    var tipLabel = el("span", "vy-chat-tip-label", CONFIG.tipText || "Chat with Vyasa Guru");
+    var tipClose = el("button", "vy-chat-tip-close vy-chat-focus-btn");
+    tipClose.type = "button";
+    tipClose.setAttribute("aria-label", "Dismiss");
+    tipClose.innerHTML = svgIcon("close");
+    tipClose.addEventListener("click", function (e) { e.stopPropagation(); dismissTip(); });
+    tip.appendChild(tipLabel);
+    tip.appendChild(tipClose);
+
     var win = document.createElement("div");
     win.className = "vy-chat-window";
     win.setAttribute("role", "dialog");
     win.setAttribute("aria-modal", "true");
     win.setAttribute("aria-label", CONFIG.headerTitle || "Vyasa Guru");
     win.hidden = true;
+    win.style.display = "none";
 
     var header = el("div", "vy-chat-header");
     var avatar = el("div", "vy-chat-avatar");
@@ -445,6 +479,7 @@
     widget.body = body;
     widget.input = input;
     widget.sendBtn = sendBtn;
+    widget.tip = tip;
 
     launcher.addEventListener("click", toggleChat);
     closeBtn.addEventListener("click", closeChat);
@@ -458,6 +493,7 @@
     window.addEventListener("resize", onLauncherResize, { passive: true });
 
     (document.body || document.documentElement).appendChild(launcher);
+    (document.body || document.documentElement).appendChild(tip);
     (document.body || document.documentElement).appendChild(win);
     lastScrollY = getScroll().y;
     updateLauncherVisibility();
@@ -477,11 +513,14 @@
     window.removeEventListener("resize", onLauncherResize);
     if (widget.window && widget.window.parentNode) widget.window.parentNode.removeChild(widget.window);
     if (widget.launcher && widget.launcher.parentNode) widget.launcher.parentNode.removeChild(widget.launcher);
+    if (widget.tip && widget.tip.parentNode) widget.tip.parentNode.removeChild(widget.tip);
     widget.launcher = null;
     widget.window = null;
     widget.body = null;
     widget.input = null;
     widget.sendBtn = null;
+    widget.tip = null;
+    tipDismissed = false;
     widget.open = false;
     widget.busy = false;
     widget.started = false;
