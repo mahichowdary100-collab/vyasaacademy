@@ -22,6 +22,7 @@
   var localStorageKey = "vy-chat-kb-topic";
   var sessionKey = "vy-chat-session";
   var kbState = { topic: null };
+  var lastScrollY = 0;
 
   function getSessionId() {
     try {
@@ -267,6 +268,7 @@
     }
     widget.open = true;
     widget.window.hidden = false;
+    setLauncherVisible(true);
     widget.launcher.setAttribute("aria-expanded", "true");
     widget.launcher.setAttribute("aria-label", CONFIG.closeAriaLabel || "Close Vyasa Guru chat");
     try {
@@ -285,6 +287,7 @@
     widget.launcher.setAttribute("aria-expanded", "false");
     widget.launcher.setAttribute("aria-label", CONFIG.buttonAriaLabel || "Open Vyasa Guru chat");
     widget.launcher.focus();
+    updateLauncherVisibility();
   }
 
   function toggleChat() {
@@ -298,6 +301,34 @@
     widget.body.innerHTML = "";
     showGreeting();
   }
+
+  /* ---------- Scroll-aware launcher ---------- */
+  function setLauncherVisible(show) {
+    if (!widget.launcher) return;
+    var cls = "vy-chat-launcher--hidden";
+    if (show || widget.open) widget.launcher.classList.remove(cls);
+    else widget.launcher.classList.add(cls);
+  }
+
+  function getScroll() {
+    var doc = document.documentElement;
+    var y = window.pageYOffset || doc.scrollTop || 0;
+    var maxScroll = Math.max(0, (doc.scrollHeight - window.innerHeight));
+    return { y: y, maxScroll: maxScroll };
+  }
+
+  function updateLauncherVisibility() {
+    if (widget.open) { setLauncherVisible(true); return; }
+    var s = getScroll();
+    if (s.maxScroll <= 0) { setLauncherVisible(true); return; }
+    var scrollingDown = (s.y - lastScrollY) > 2;
+    var nearFooter = (s.y >= s.maxScroll - 220);
+    lastScrollY = s.y;
+    setLauncherVisible(!scrollingDown && !nearFooter);
+  }
+
+  function onLauncherScroll(e) { updateLauncherVisibility(); }
+  function onLauncherResize(e) { updateLauncherVisibility(); }
 
   /* ---------- Keyboard ---------- */
   function onKeydown(e) {
@@ -401,9 +432,13 @@
     input.addEventListener("input", resizeInput);
     window.addEventListener("keydown", onWindowKeydown);
     document.addEventListener("click", onDocClick);
+    window.addEventListener("scroll", onLauncherScroll, { passive: true });
+    window.addEventListener("resize", onLauncherResize, { passive: true });
 
     (document.body || document.documentElement).appendChild(launcher);
     (document.body || document.documentElement).appendChild(win);
+    lastScrollY = getScroll().y;
+    updateLauncherVisibility();
   }
 
   function init() {
@@ -416,6 +451,8 @@
   }
 
   function destroy() {
+    window.removeEventListener("scroll", onLauncherScroll);
+    window.removeEventListener("resize", onLauncherResize);
     if (widget.window && widget.window.parentNode) widget.window.parentNode.removeChild(widget.window);
     if (widget.launcher && widget.launcher.parentNode) widget.launcher.parentNode.removeChild(widget.launcher);
     widget.launcher = null;
@@ -427,6 +464,7 @@
     widget.busy = false;
     widget.started = false;
     widget.history = [];
+    lastScrollY = 0;
   }
 
   window.VyasaAssistant = { init: init, destroy: destroy, open: openChat, close: closeChat };

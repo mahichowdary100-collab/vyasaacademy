@@ -43,7 +43,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.16s ease, box-shadow 0.16s ease;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, opacity 0.22s ease, visibility 0.22s ease;
+}
+.vy-chat-launcher.vy-chat-launcher--hidden {
+  transform: translateY(220px) scale(0.9);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 .vy-chat-launcher:hover,
 .vy-chat-launcher:focus-visible {
