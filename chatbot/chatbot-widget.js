@@ -269,6 +269,7 @@
     widget.open = true;
     widget.window.hidden = false;
     setLauncherVisible(true);
+    syncLauncherState();
     widget.launcher.setAttribute("aria-expanded", "true");
     widget.launcher.setAttribute("aria-label", CONFIG.closeAriaLabel || "Close Vyasa Guru chat");
     try {
@@ -284,6 +285,7 @@
   function closeChat() {
     widget.open = false;
     widget.window.hidden = true;
+    syncLauncherState();
     widget.launcher.setAttribute("aria-expanded", "false");
     widget.launcher.setAttribute("aria-label", CONFIG.buttonAriaLabel || "Open Vyasa Guru chat");
     widget.launcher.focus();
@@ -325,6 +327,15 @@
     var nearFooter = (s.y >= s.maxScroll - 220);
     lastScrollY = s.y;
     setLauncherVisible(!scrollingDown && !nearFooter);
+  }
+
+  function syncLauncherState() {
+    var open = widget.open;
+    if (widget.launcher) {
+      widget.launcher.classList.toggle("vy-chat-launcher--open", open);
+      widget.launcher.innerHTML = open ? svgIcon("close") : svgIcon("launcher");
+    }
+    if (widget.window) widget.window.classList.toggle("vy-chat-window--raised", open);
   }
 
   function onLauncherScroll(e) { updateLauncherVisibility(); }

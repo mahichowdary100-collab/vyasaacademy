@@ -61,6 +61,9 @@
   visibility: hidden;
   pointer-events: none;
 }
+.vy-chat-launcher.vy-chat-launcher--open {
+  z-index: 2147483002;
+}
 .vy-chat-launcher:hover,
 .vy-chat-launcher:focus-visible {
   transform: scale(1.06);
@@ -96,6 +99,10 @@
   line-height: 1.5;
   transform-origin: right bottom;
   animation: vy-chat-in 0.18s ease;
+}
+.vy-chat-window.vy-chat-window--raised {
+  bottom: 94px;
+  max-height: min(600px, calc(100vh - 120px));
 }
 @keyframes vy-chat-in {
   from { opacity: 0; transform: translateY(8px) scale(0.97); }
@@ -410,6 +417,10 @@
     bottom: 10px;
     width: calc(100vw - 20px);
     max-height: calc(100vh - 20px);
+  }
+  .vy-chat-window.vy-chat-window--raised {
+    bottom: 88px;
+    max-height: min(600px, calc(100vh - 108px));
   }
   .vy-chat-launcher {
     right: 16px;
