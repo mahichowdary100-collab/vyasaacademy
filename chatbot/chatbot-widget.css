@@ -26,14 +26,15 @@
   --vyc-primary-dark: #0f1559;
   --vyc-primary-light: #3949ab;
   --vyc-accent: #f9a825;
+  --vyc-accent-soft: #fff8e1;
   --vyc-surface: #ffffff;
   --vyc-bg: #f7f8fc;
   --vyc-text: #212121;
   --vyc-text-muted: #5f6368;
   --vyc-border: #e0e3ec;
   --vyc-error: #c62828;
-  --vyc-radius: 16px;
-  --vyc-shadow: 0 10px 32px rgba(15, 21, 89, 0.32);
+  --vyc-radius: 20px;
+  --vyc-shadow: 0 10px 32px rgba(15, 21, 89, 0.28);
 }
 
 /* ---------- Floating launch button ---------- */
@@ -42,18 +43,26 @@
   right: 20px;
   bottom: 20px;
   z-index: 2147483000;
-  width: 60px;
-  height: 60px;
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
-  border: 0;
+  border: 3px solid #ffffff;
   background: linear-gradient(135deg, var(--vyc-primary), var(--vyc-primary-light));
   color: #ffffff;
-  box-shadow: var(--vyc-shadow);
+  box-shadow: 0 6px 22px rgba(15, 21, 89, 0.35);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  padding: 0;
   transition: transform 0.22s ease, box-shadow 0.22s ease, opacity 0.22s ease, visibility 0.22s ease;
+}
+.vy-chat-launcher img.vy-chat-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .vy-chat-launcher.vy-chat-launcher--hidden {
   transform: translateY(220px) scale(0.9);
@@ -83,8 +92,8 @@
   right: 16px;
   bottom: 16px;
   z-index: 2147483001;
-  width: min(380px, calc(100vw - 32px));
-  max-height: min(640px, calc(100vh - 32px));
+  width: min(340px, calc(100vw - 32px));
+  max-height: min(560px, calc(100vh - 32px));
   height: auto;
   display: flex;
   flex-direction: column;
@@ -95,14 +104,14 @@
   overflow: hidden;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   color: var(--vyc-text);
-  font-size: 14px;
+  font-size: 13.5px;
   line-height: 1.5;
   transform-origin: right bottom;
   animation: vy-chat-in 0.18s ease;
 }
 .vy-chat-window.vy-chat-window--raised {
-  bottom: 94px;
-  max-height: min(600px, calc(100vh - 120px));
+  bottom: 90px;
+  max-height: min(520px, calc(100vh - 116px));
 }
 @keyframes vy-chat-in {
   from { opacity: 0; transform: translateY(8px) scale(0.97); }
@@ -114,13 +123,13 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 12px 14px;
+  padding: 10px 12px;
   background: linear-gradient(135deg, var(--vyc-primary), var(--vyc-primary-light));
   color: #ffffff;
 }
 .vy-chat-avatar {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   background: var(--vyc-accent);
   color: var(--vyc-primary-dark);
@@ -128,6 +137,14 @@
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+}
+.vy-chat-avatar img.vy-chat-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .vy-chat-avatar svg {
   width: 20px;
@@ -140,7 +157,7 @@
 }
 .vy-chat-title {
   font-weight: 700;
-  font-size: 14px;
+  font-size: 13.5px;
   margin: 0;
   color: #ffffff;
   font-family: inherit;
@@ -215,8 +232,8 @@
 .vy-chat-msg {
   max-width: 85%;
   padding: 9px 12px;
-  border-radius: 14px;
-  font-size: 13.5px;
+  border-radius: 16px;
+  font-size: 13px;
   word-break: break-word;
   overflow-wrap: anywhere;
   white-space: pre-wrap;
@@ -270,14 +287,15 @@
   align-self: flex-start;
   max-width: 95%;
   text-align: left;
-  background: #ffffff;
-  border: 1px solid var(--vyc-primary-light);
-  color: var(--vyc-primary);
-  border-radius: 14px;
-  padding: 7px 11px;
-  font-size: 13px;
+  background: var(--vyc-accent-soft);
+  border: 1px solid var(--vyc-accent);
+  color: var(--vyc-primary-dark);
+  border-radius: 999px;
+  padding: 7px 13px;
+  font-size: 12.5px;
   cursor: pointer;
   font-family: inherit;
+  font-weight: 600;
   transition: background 0.12s ease, color 0.12s ease;
 }
 .vy-chat-ask:hover,
@@ -324,11 +342,12 @@
   resize: none;
   max-height: 96px;
   border: 1px solid var(--vyc-border);
-  border-radius: 12px;
+  border-radius: 18px;
   padding: 9px 12px;
   font: inherit;
+  font-size: 13px;
   color: var(--vyc-text);
-  background: #ffffff;
+  background: var(--vyc-bg);
   line-height: 1.4;
 }
 .vy-chat-input::-webkit-input-placeholder { color: var(--vyc-text-muted); }
@@ -372,7 +391,7 @@
   padding: 6px 12px 8px;
   background: var(--vyc-surface);
   color: var(--vyc-text-muted);
-  font-size: 10.5px;
+  font-size: 10px;
   line-height: 1.4;
   border-top: 1px solid var(--vyc-border);
 }
@@ -419,17 +438,17 @@
     max-height: calc(100vh - 20px);
   }
   .vy-chat-window.vy-chat-window--raised {
-    bottom: 88px;
-    max-height: min(600px, calc(100vh - 108px));
+    bottom: 84px;
+    max-height: min(520px, calc(100vh - 104px));
   }
   .vy-chat-launcher {
-    right: 16px;
-    bottom: 16px;
+    right: 14px;
+    bottom: 14px;
   }
 }
 
 @media (min-width: 431px) and (max-width: 900px) {
   .vy-chat-window {
-    width: min(420px, calc(100vw - 32px));
+    width: min(380px, calc(100vw - 32px));
   }
 }

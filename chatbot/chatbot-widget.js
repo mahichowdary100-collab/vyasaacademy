@@ -333,7 +333,7 @@
     var open = widget.open;
     if (widget.launcher) {
       widget.launcher.classList.toggle("vy-chat-launcher--open", open);
-      widget.launcher.innerHTML = open ? svgIcon("close") : svgIcon("launcher");
+      widget.launcher.innerHTML = open ? svgIcon("close") : launcherMedia();
     }
     if (widget.window) widget.window.classList.toggle("vy-chat-window--raised", open);
   }
@@ -365,6 +365,20 @@
     closeChat();
   }
 
+  function escapeAttr(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+
+  function avatarMedia() {
+    if (CONFIG.avatarUrl) return '<img class="vy-chat-avatar-img" src="' + escapeAttr(CONFIG.avatarUrl) + '" alt="" aria-hidden="true">';
+    return svgIcon("bot");
+  }
+
+  function launcherMedia() {
+    if (CONFIG.avatarUrl) return '<img class="vy-chat-avatar-img" src="' + escapeAttr(CONFIG.avatarUrl) + '" alt="" aria-hidden="true">';
+    return svgIcon("launcher");
+  }
+
   /* ---------- Build ---------- */
   function buildDOM() {
     var launcher = document.createElement("button");
@@ -373,7 +387,7 @@
     launcher.setAttribute("aria-haspopup", "dialog");
     launcher.setAttribute("aria-expanded", "false");
     launcher.setAttribute("aria-label", CONFIG.buttonAriaLabel || "Open Vyasa Guru chat");
-    launcher.innerHTML = svgIcon("launcher");
+    launcher.innerHTML = launcherMedia();
 
     var win = document.createElement("div");
     win.className = "vy-chat-window";
@@ -384,7 +398,7 @@
 
     var header = el("div", "vy-chat-header");
     var avatar = el("div", "vy-chat-avatar");
-    avatar.innerHTML = svgIcon("bot");
+    avatar.innerHTML = avatarMedia();
     var headtext = el("div", "vy-chat-headtext");
     headtext.appendChild(el("p", "vy-chat-title", CONFIG.headerTitle || "Vyasa Guru"));
     headtext.appendChild(el("p", "vy-chat-subtitle", CONFIG.subtitle || ""));

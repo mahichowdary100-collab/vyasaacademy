@@ -16,6 +16,8 @@
 window.VYASA_CHATBOT_CONFIG = {
   backendUrl: "",
 
+  avatarUrl: "/chatbot/vyasa-guru-avatar.png",
+
   headerTitle: "Vyasa Guru",
   subtitle: "Ask me about courses, admissions, classes and study material.",
 
