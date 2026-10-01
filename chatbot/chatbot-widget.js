@@ -293,7 +293,7 @@
   }
 
   function toggleChat() {
-    if (widget.open) closeChat(); else openChat();
+    if (!widget.open) openChat();
   }
 
   function clearChat() {
@@ -331,10 +331,7 @@
 
   function syncLauncherState() {
     var open = widget.open;
-    if (widget.launcher) {
-      widget.launcher.classList.toggle("vy-chat-launcher--open", open);
-      widget.launcher.innerHTML = open ? svgIcon("close") : launcherMedia();
-    }
+    if (widget.launcher) widget.launcher.classList.toggle("vy-chat-launcher--open", open);
     if (widget.window) widget.window.classList.toggle("vy-chat-window--raised", open);
   }
 
