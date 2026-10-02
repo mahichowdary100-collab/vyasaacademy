@@ -171,18 +171,24 @@
     });
   }
 
+  var NAV_RENDER_ID = 0;
+
   function render() {
     var c = host();
     if (!c) return;
+    var id = ++NAV_RENDER_ID;
     clearEl(c);
     if (!window.VyasaAuth || !window.VyasaAuth.isConfigured()) {
       // Auth not configured yet: still point students at the login page,
       // which will explain what is needed.
+      if (id !== NAV_RENDER_ID) return;
       c.appendChild(buildSignedOut());
       return;
     }
     window.VyasaAuth.ensureProfile()
       .then(function (profile) {
+        if (id !== NAV_RENDER_ID) return; // a newer render owns the slot
+        clearEl(c);
         if (!profile) {
           c.appendChild(buildSignedOut());
           return;
@@ -190,6 +196,8 @@
         c.appendChild(buildSignedIn(profile));
       })
       .catch(function () {
+        if (id !== NAV_RENDER_ID) return;
+        clearEl(c);
         c.appendChild(buildSignedOut());
       });
   }
