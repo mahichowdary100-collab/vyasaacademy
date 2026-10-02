@@ -2419,3 +2419,306 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
   .sm-card { padding: 18px 16px; }
   .sm-related ul { grid-template-columns: 1fr; }
 }
+
+
+/* ============================================================
+   STUDENT AUTH - Google sign-in, header account, onboarding
+   ============================================================ */
+
+/* ---- Header account widget (injected by supabase-nav.js) ---- */
+.vy-nav-auth { position: relative; display: inline-flex; align-items: center; }
+.vy-nav-auth-signedout { display: inline-flex; align-items: center; }
+.nav-links .vy-nav-auth, .nav-links .vy-nav-auth-signedout { margin-left: 2px; }
+
+.vy-nav-signin {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: var(--primary-dark) !important;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 9px 20px;
+  border-radius: 50px;
+  transition: var(--transition);
+}
+.vy-nav-signin:hover { background: var(--accent-dark); transform: translateY(-1px); }
+.vy-nav-signin::after { display: none !important; }
+
+.vy-nav-account {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px 6px;
+  font-family: inherit;
+  color: var(--dark);
+  border-radius: 50px;
+  transition: var(--transition);
+}
+.vy-nav-account:hover { background: rgba(26,35,126,0.06); }
+.vy-nav-account:focus-visible { outline: 3px solid rgba(249,168,37,0.6); outline-offset: 2px; }
+
+.vy-nav-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--primary);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(26,35,126,0.25);
+  flex-shrink: 0;
+}
+
+.vy-nav-name {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--dark);
+  max-width: 110px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.vy-nav-account .fa-chevron-down {
+  font-size: 0.7rem;
+  color: var(--gray);
+  transition: transform 0.2s ease;
+}
+.vy-nav-account[aria-expanded="true"] .fa-chevron-down { transform: rotate(180deg); }
+
+.vy-nav-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  min-width: 230px;
+  background: #ffffff;
+  border: 1px solid rgba(26,35,126,0.1);
+  border-radius: 14px;
+  box-shadow: 0 14px 40px rgba(15,21,89,0.18);
+  padding: 8px;
+  display: none;
+  z-index: 2147483004;
+}
+.vy-nav-menu--open { display: block; animation: vy-nav-in 0.18s ease-out; }
+@keyframes vy-nav-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: none; }
+}
+
+.vy-nav-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 14px;
+  border-radius: 10px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--dark);
+  transition: var(--transition);
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+}
+.vy-nav-menu-item:hover,
+.vy-nav-menu-item:focus-visible { background: rgba(26,35,126,0.07); color: var(--primary); }
+.vy-nav-menu-item i { width: 18px; text-align: center; color: var(--primary); font-size: 0.95rem; }
+.vy-nav-menu-item:last-child { color: #b91c1c; }
+.vy-nav-menu-item:last-child i { color: #b91c1c; }
+.vy-nav-menu-item:last-child:hover { background: #fef2f2; color: #b91c1c; }
+
+@media (max-width: 768px) {
+  .vy-nav-auth,
+  .vy-nav-auth-signedout { width: 100%; }
+  .vy-nav-account { width: 100%; justify-content: flex-start; padding: 10px 6px; }
+  .vy-nav-menu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    padding: 4px 0 4px 10px;
+    min-width: 0;
+  }
+  .vy-nav-menu-item { font-size: 0.95rem; }
+  .vy-nav-signin { width: 100%; justify-content: center; margin-top: 4px; }
+}
+
+/* ---- Google / provider buttons on login ---- */
+.btn-google {
+  width: 100%;
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #ffffff;
+  color: #1f1f1f;
+  border: 1px solid #d9dce1;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Inter', system-ui, sans-serif;
+  transition: background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+}
+.btn-google:hover { background: #f8fafd; border-color: #c3c9d1; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
+.btn-google:focus-visible { outline: 3px solid rgba(26,35,126,0.25); outline-offset: 2px; }
+.btn-google:disabled { opacity: 0.6; cursor: progress; }
+.btn-google svg { width: 20px; height: 20px; flex-shrink: 0; }
+.btn-google span { color: rgba(31,31,31,0.87); }
+
+.auth-alt-btn {
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #ffffff;
+  color: var(--primary);
+  border: 1px solid rgba(26,35,126,0.22);
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: var(--transition);
+}
+.auth-alt-btn:hover { background: rgba(26,35,126,0.06); border-color: var(--primary); }
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 22px 0;
+  color: var(--gray);
+  font-size: 0.85rem;
+}
+.auth-divider::before,
+.auth-divider::after { content: ""; flex: 1; height: 1px; background: rgba(26,35,126,0.12); }
+
+.auth-stack { display: flex; flex-direction: column; gap: 12px; }
+.auth-panel { margin-top: 22px; }
+
+.auth-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'><polyline points='6 9 12 15 18 9'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.auth-required-mark { color: #b91c1c; margin-left: 2px; }
+.auth-optional-mark {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gray);
+  border: 1px solid rgba(26,35,126,0.15);
+  border-radius: 50px;
+  padding: 2px 8px;
+  margin-left: 8px;
+  vertical-align: 1px;
+}
+
+/* ---- Student onboarding (first-time Google sign-in) ---- */
+.onboard-heading { font-size: 1.7rem; }
+.onboard-welcome { font-size: 1.02rem; }
+.onboard-google-id {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--light);
+  border: 1px solid rgba(26,35,126,0.08);
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin: 18px 0 22px;
+}
+.onboard-google-id img,
+.onboard-google-id .dash-avatar-thumb {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.onboard-google-id div { min-width: 0; }
+.onboard-google-id .ob-name { font-weight: 700; color: var(--dark); font-size: 0.95rem; }
+.onboard-google-id .ob-email { font-size: 0.82rem; color: var(--gray); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.onboard-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
+.onboard-grid .auth-field--full { grid-column: 1 / -1; }
+@media (max-width: 560px) { .onboard-grid { grid-template-columns: 1fr; } }
+
+/* ---- Dashboard cards / links ---- */
+.dash-link-card { text-decoration: none; display: flex; flex-direction: column; gap: 12px; }
+.dash-link-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: rgba(26,35,126,0.2); }
+.dash-link-card .dash-card-go {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--primary);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+.dash-card-go i { transition: transform 0.2s ease; }
+.dash-link-card:hover .dash-card-go i { transform: translateX(4px); }
+
+.dash-avatar-lg {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--primary);
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 16px rgba(26,35,126,0.25);
+  margin-bottom: 4px;
+}
+.dash-avatar-thumb {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--primary);
+  color: #ffffff;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-view-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 14px 18px;
+  margin: 8px 0 22px;
+}
+.profile-view-item { border-bottom: 1px dashed rgba(26,35,126,0.15); padding-bottom: 10px; }
+.profile-view-item span { display: block; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; color: var(--gray); margin-bottom: 4px; }
+.profile-view-item strong { font-size: 0.98rem; color: var(--dark); }
+
+.dash-actions-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+
+@media (max-width: 480px) {
+  .vy-nav-name { display: none; }
+  .btn-google { font-size: 0.95rem; }
+}

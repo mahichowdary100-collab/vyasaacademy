@@ -179,6 +179,12 @@ function Add-TreeLine([int]$depth, [string]$text) {
 }
 
 # ================= MAIN PAGE =================
+# Auth header-widget scripts injected on every generated page.
+$authScripts = '<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>' +
+  '<script src="/supabase-config.js"></script>' +
+  '<script src="/supabase-auth.js"></script>' +
+  '<script src="/supabase-nav.js" defer></script>'
+
 $main = $data.main
 $mainUrl = "$domain/cbse-study-material/"; $smRoot = "$domain/cbse-study-material"
 push-location
@@ -202,7 +208,7 @@ $relatedMain = Get-RelatedHtml $main.related
 
 $mainBody = "<main class=""sm-page"">$nl  <div class=""container sm-container"">$nl    $(Get-SmCrumbs $crumbMain)$nl    <section class=""sm-hero"">$nl      <p class=""sm-eyebrow"">Vyasa Academy Study Material</p>$nl      <h1>CBSE Study Material - Classes 6 to 12</h1>$nl      <p>$($main.heroSub)</p>$nl      <div class=""sm-search"">$nl        <i class=""fas fa-search""></i>$nl        <input type=""text"" id=""smSearch"" placeholder=""Search by class, e.g. class 10..."" aria-label=""Search study material"" />$nl      </div>$nl    </section>$nl    <p class=""sm-empty"" id=""smEmpty"" hidden>No matching class found.</p>$nl    <div class=""sm-grid"" id=""smGrid"">$nl$($classCards -join "$nl$nl")$nl    </div>$nl    $relatedMain$nl  </div>$nl</main>"
 
-$mainPage = "$headMain$nl<body>$nl$navHtml$nl$mainBody$nl$footerHtml$nl<script src=""/cbse-study-material/sm.js""></script>$nl<script src=""/chatbot/chatbot-loader.js"" defer></script>$nl</body>$nl</html>"
+$mainPage = "$headMain$nl<body>$nl$navHtml$nl$mainBody$nl$footerHtml$nl<script src=""/cbse-study-material/sm.js""></script>$nl$authScripts$nl<script src=""/chatbot/chatbot-loader.js"" defer></script>$nl</body>$nl</html>"
 New-Item -ItemType Directory -Path (Join-Path $smDir '.') -Force | Out-Null
 Set-ContentUtf8 -Path (Join-Path $smDir 'index.html') -Value $mainPage
 Write-Host "Generated /cbse-study-material/index.html"
@@ -232,7 +238,7 @@ foreach ($c in $data.classes) {
   }
 
   $classBody = "<main class=""sm-page"">$nl  <div class=""container sm-container"">$nl    $(Get-SmCrumbs $crumbClass)$nl    <section class=""sm-hero sm-hero-slim"">$nl      <p class=""sm-eyebrow"">CBSE Study Material</p>$nl      <h1>CBSE Class $($c.number)</h1>$nl      <p>$($c.heroSub)</p>$nl    </section>$nl    <div class=""sm-grid sm-grid-2"" id=""smGrid"">$nl$($subCards -join "$nl$nl")$nl    </div>$nl    <a class=""sm-back"" href=""/cbse-study-material/""><i class=""fas fa-arrow-left""></i> All classes</a>$nl  </div>$nl</main>"
-  $classPage = "$headClass$nl<body>$nl$navHtml$nl$classBody$nl$footerHtml$nl<script src=""/cbse-study-material/sm.js""></script>$nl<script src=""/chatbot/chatbot-loader.js"" defer></script>$nl</body>$nl</html>"
+  $classPage = "$headClass$nl<body>$nl$navHtml$nl$classBody$nl$footerHtml$nl<script src=""/cbse-study-material/sm.js""></script>$nl$authScripts$nl<script src=""/chatbot/chatbot-loader.js"" defer></script>$nl</body>$nl</html>"
   Set-ContentUtf8 -Path (Join-Path $classDir 'index.html') -Value $classPage
   Write-Host "Generated /cbse-study-material/class-$($c.number)/index.html"
   $indexableUrls += $classUrl
@@ -285,7 +291,7 @@ foreach ($c in $data.classes) {
 
     $relatedSub = Get-RelatedHtml $s.related
     $subBody = "<main class=""sm-page"">$nl  <div class=""container sm-container"">$nl    $(Get-SmCrumbs $crumbSub)$nl    <section class=""sm-hero sm-hero-slim"">$nl      <p class=""sm-eyebrow"">CBSE Class $($c.number)</p>$nl      <h1>$($s.label)</h1>$nl      <p>$($s.heroSub)</p>$nl      <div class=""sm-search"">$nl        <i class=""fas fa-search""></i>$nl        <input type=""text"" id=""smSearch"" placeholder=""Search chapters..."" aria-label=""Search chapters"" />$nl      </div>$nl    </section>$nl    <p class=""sm-empty"" id=""smEmpty"" hidden>No matching chapter found.</p>$nl    <div class=""sm-grid"" id=""smGrid"">$nl$($chCards -join "$nl$nl")$nl    </div>$nl    $relatedSub$nl    <a class=""sm-back"" href=""/cbse-study-material/class-$($c.number)/""><i class=""fas fa-arrow-left""></i> Back to Class $($c.number)</a>$nl  </div>$nl</main>"
-    $subPage = "$headSub$nl<body>$nl$navHtml$nl$subBody$nl$footerHtml$nl<script src=""/cbse-study-material/sm.js""></script>$nl<script src=""/chatbot/chatbot-loader.js"" defer></script>$nl</body>$nl</html>"
+    $subPage = "$headSub$nl<body>$nl$navHtml$nl$subBody$nl$footerHtml$nl<script src=""/cbse-study-material/sm.js""></script>$nl$authScripts$nl<script src=""/chatbot/chatbot-loader.js"" defer></script>$nl</body>$nl</html>"
     Set-ContentUtf8 -Path (Join-Path $subDir 'index.html') -Value $subPage
     Write-Host "Generated /cbse-study-material/class-$($c.number)/$($s.slug)/index.html"
     $indexableUrls += $subUrl
@@ -326,7 +332,7 @@ foreach ($c in $data.classes) {
       }
 
       $chBody = "<main class=""sm-page"">$nl  <div class=""container sm-container"">$nl    $(Get-SmCrumbs $crumbCh)$nl    <section class=""sm-hero sm-hero-slim"">$nl      <p class=""sm-eyebrow"">CBSE Class $($c.number) &middot; $($s.label)</p>$nl      <h1>$($ch.label)</h1>$nl      <p>Choose a resource for this chapter. Notes, practice paper, quiz and chapter test will be published here shortly.</p>$nl    </section>$nl    <div class=""sm-grid sm-grid-2 sm-grid-4"" id=""smGrid"">$nl$($resCards -join "$nl$nl")$nl    </div>$nl    <a class=""sm-back"" href=""/cbse-study-material/class-$($c.number)/$($s.slug)/""><i class=""fas fa-arrow-left""></i> All $($s.label) chapters</a>$nl  </div>$nl</main>"
-      $chPage = "$headCh$nl<body>$nl$navHtml$nl$chBody$nl$footerHtml$nl<script src=""/cbse-study-material/sm.js""></script>$nl<script src=""/chatbot/chatbot-loader.js"" defer></script>$nl</body>$nl</html>"
+      $chPage = "$headCh$nl<body>$nl$navHtml$nl$chBody$nl$footerHtml$nl<script src=""/cbse-study-material/sm.js""></script>$nl$authScripts$nl<script src=""/chatbot/chatbot-loader.js"" defer></script>$nl</body>$nl</html>"
       Write-Host "Generated /cbse-study-material/class-$($c.number)/$($s.slug)/$($ch.slug)/index.html"
       }
       Set-ContentUtf8 -Path (Join-Path $chDir 'index.html') -Value $chPage
@@ -355,7 +361,7 @@ foreach ($c in $data.classes) {
         }
 
         $resBody = "<main class=""sm-page"">$nl  <div class=""container sm-container"">$nl    $(Get-SmCrumbs $crumbRes)$nl    <section class=""sm-placeholder"">$nl      <span class=""sm-ph-icon""><i class=""fas $($r.icon)""></i></span>$nl      <h1>$($r.label)</h1>$nl      <p class=""sm-ph-sub"">CBSE Class $($c.number) $($s.label) &middot; $($ch.label)</p>$nl      <p class=""sm-ph-note""><i class=""fas fa-hourglass-half""></i> Content coming soon.</p>$nl      <div class=""sm-ph-actions"">$nl        <a class=""btn btn-secondary"" href=""../""><i class=""fas fa-arrow-left""></i> Back to $($ch.label)</a>$nl      </div>$nl    </section>$nl    <nav class=""sm-chips"" aria-label=""Chapter resources"">$nl$($chipLinks -join "$nl")$nl    </nav>$nl  </div>$nl</main>"
-        $resPage = "$headRes$nl<body>$nl$navHtml$nl$resBody$nl$footerHtml$nl<script src=""/cbse-study-material/sm.js""></script>$nl<script src=""/chatbot/chatbot-loader.js"" defer></script>$nl</body>$nl</html>"
+        $resPage = "$headRes$nl<body>$nl$navHtml$nl$resBody$nl$footerHtml$nl<script src=""/cbse-study-material/sm.js""></script>$nl$authScripts$nl<script src=""/chatbot/chatbot-loader.js"" defer></script>$nl</body>$nl</html>"
         $overridePath = Get-ContentOverride $c.number $s.slug $ch.slug $r.slug
         if ($overridePath) {
           $resPage = Get-Content -LiteralPath $overridePath -Raw -Encoding UTF8

@@ -22,7 +22,7 @@
       <ul class="nav-links" id="authNavLinks">
         <li><a href="/">Home</a></li>
         <li><a href="/blog/">Blog</a></li>
-        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/cbse-study-material/">Study Material</a></li>
         <li><a href="/#contact">Contact</a></li>
         <li><a href="/student-dashboard/" id="navAuthLink" class="nav-cta">Dashboard</a></li>
       </ul>
@@ -34,52 +34,114 @@
   <main class="dash-root">
     <div class="container">
       <div id="authBanner" class="auth-alert auth-alert-warn hidden" role="status"></div>
+      <div id="dashErr" class="auth-alert auth-alert-error hidden" role="alert"></div>
+      <div id="dashOk" class="auth-alert auth-alert-success hidden" role="status"></div>
 
       <div id="dashContent" class="hidden">
+
+        <!-- Top bar -->
         <div class="dash-topbar">
           <div class="dash-greet">
-            <h1>Welcome back, <span id="userName">Student</span></h1>
+            <div class="dash-avatar-lg" id="dashAvatar">S</div>
+            <h1>Welcome back, <span id="userName">Student</span> 👋</h1>
             <span class="dash-role"><i class="fas fa-user-graduate"></i> Student</span>
-            <p>This section of your portal is being prepared and will go live soon.</p>
           </div>
-          <button type="button" class="btn-logout" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Sign out</button>
+          <div class="dash-actions-row">
+            <button type="button" class="btn-logout" id="editProfileBtn"><i class="fas fa-user-edit"></i> Edit profile</button>
+            <button type="button" class="btn-logout" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Sign out</button>
+          </div>
         </div>
 
+        <!-- Profile info -->
+        <div id="profileSummary" class="auth-card" style="max-width:none;padding:24px 28px;margin-bottom:28px;">
+          <h2 style="font-size:1.1rem;font-weight:700;color:var(--dark);margin-bottom:6px;">My Profile</h2>
+          <div class="profile-view-grid" id="profileViewGrid"></div>
+        </div>
+
+        <!-- Edit profile form -->
+        <div id="profileFormCard" class="auth-card hidden" style="max-width:720px;margin:0 auto 34px;">
+          <h2 class="auth-heading onboard-heading" style="font-size:1.4rem;">My Profile</h2>
+          <p class="auth-subtext">You can update these details any time from this dashboard.</p>
+          <form id="profileForm" novalidate>
+            <div class="onboard-grid">
+              <div class="auth-field auth-field--full">
+                <label for="pfName">Student Name <span class="auth-required-mark">*</span></label>
+                <input class="auth-input" id="pfName" name="pfName" type="text" autocomplete="name" placeholder="Enter your full name">
+              </div>
+              <div class="auth-field">
+                <label for="pfClass">Class <span class="auth-required-mark">*</span></label>
+                <select class="auth-input auth-select" id="pfClass" name="pfClass">
+                  <option value="">Select class</option>
+                  <option value="VI">VI</option>
+                  <option value="VII">VII</option>
+                  <option value="VIII">VIII</option>
+                  <option value="IX">IX</option>
+                  <option value="X">X</option>
+                  <option value="XI">XI</option>
+                  <option value="XII">XII</option>
+                </select>
+              </div>
+              <div class="auth-field">
+                <label for="pfBoard">Board <span class="auth-required-mark">*</span></label>
+                <select class="auth-input auth-select" id="pfBoard" name="pfBoard">
+                  <option value="">Select board</option>
+                  <option value="CBSE">CBSE</option>
+                  <option value="ICSE">ICSE</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="auth-field">
+                <label for="pfSchool">School Name <span class="auth-optional-mark">Optional</span></label>
+                <input class="auth-input" id="pfSchool" name="pfSchool" type="text" autocomplete="organization" placeholder="Your school">
+              </div>
+              <div class="auth-field">
+                <label for="pfMobile">Mobile Number <span class="auth-optional-mark">Optional</span></label>
+                <input class="auth-input" id="pfMobile" name="pfMobile" type="tel" inputmode="tel" autocomplete="tel" placeholder="10-digit mobile number">
+              </div>
+              <div class="auth-field">
+                <label for="pfParent">Parent / Guardian Name <span class="auth-optional-mark">Optional</span></label>
+                <input class="auth-input" id="pfParent" name="pfParent" type="text" autocomplete="name" placeholder="Parent or guardian">
+              </div>
+              <div class="auth-field">
+                <label for="pfParentMobile">Parent Mobile Number <span class="auth-optional-mark">Optional</span></label>
+                <input class="auth-input" id="pfParentMobile" name="pfParentMobile" type="tel" inputmode="tel" autocomplete="tel" placeholder="Parent mobile number">
+              </div>
+            </div>
+            <p class="auth-hint hidden" id="pfError"></p>
+            <button type="submit" class="btn btn-primary btn-block" id="pfBtn"><span>Save profile</span></button>
+          </form>
+        </div>
+
+        <!-- Dashboard cards -->
         <div class="dash-grid">
-          <div class="dash-card">
+
+          <a class="dash-card dash-link-card" href="/cbse-study-material/">
             <div class="dash-card-header">
               <span class="dash-icon"><i class="fas fa-book-open"></i></span>
-              <span class="dash-tag-coming">Coming soon</span>
+              <span class="dash-tag-coming">Live</span>
             </div>
-            <h2>My Courses</h2>
-            <p>Your class timetable and enrolled subjects will appear here.</p>
-          </div>
+            <h2>📚 Study Materials</h2>
+            <p>Free CBSE study material: notes, practice papers, quizzes and chapter tests.</p>
+            <span class="dash-card-go">Open study material <i class="fas fa-arrow-right"></i></span>
+          </a>
 
-          <div class="dash-card">
+          <a class="dash-card dash-link-card" href="/cbse-study-material/">
             <div class="dash-card-header">
               <span class="dash-icon"><i class="fas fa-clipboard-list"></i></span>
-              <span class="dash-tag-coming">Coming soon</span>
+              <span class="dash-tag-coming">Live</span>
             </div>
-            <h2>Assignments</h2>
-            <p>Homework and assignment submissions will appear here.</p>
-          </div>
-
-          <div class="dash-card">
-            <div class="dash-card-header">
-              <span class="dash-icon"><i class="fas fa-file-alt"></i></span>
-              <span class="dash-tag-coming">Coming soon</span>
-            </div>
-            <h2>Practice Tests</h2>
-            <p>Chapter-wise tests and mock exam schedules will appear here.</p>
-          </div>
+            <h2>📝 Tests &amp; Quizzes</h2>
+            <p>Chapter tests and quizzes for CBSE classes 6 to 12, ready to attempt.</p>
+            <span class="dash-card-go">Open tests &amp; quizzes <i class="fas fa-arrow-right"></i></span>
+          </a>
 
           <div class="dash-card">
             <div class="dash-card-header">
               <span class="dash-icon"><i class="fas fa-chart-line"></i></span>
               <span class="dash-tag-coming">Coming soon</span>
             </div>
-            <h2>Results &amp; Report Cards</h2>
-            <p>Your marks and progress reports will appear here.</p>
+            <h2>📊 My Results</h2>
+            <p>Your results and progress reports will appear here once available.</p>
           </div>
 
           <div class="dash-card">
@@ -87,34 +149,101 @@
               <span class="dash-icon"><i class="fas fa-calendar-check"></i></span>
               <span class="dash-tag-coming">Coming soon</span>
             </div>
-            <h2>Attendance</h2>
-            <p>Your attendance summary will appear here.</p>
+            <h2>📅 Attendance</h2>
+            <p>Your attendance summary will appear here once available.</p>
           </div>
 
-          <div class="dash-card">
+          <a class="dash-card dash-link-card" href="#" id="aiCardLink">
             <div class="dash-card-header">
-              <span class="dash-icon"><i class="fas fa-folder-open"></i></span>
-              <span class="dash-tag-coming">Coming soon</span>
+              <span class="dash-icon"><i class="fas fa-robot"></i></span>
+              <span class="dash-tag-coming">Live</span>
             </div>
-            <h2>Study Materials</h2>
-            <p>Notes, worksheets and reference material will appear here.</p>
-          </div>
+            <h2>🤖 Vyasa AI</h2>
+            <p>Chat with Vyasa Guru for class, subject or admission questions.</p>
+            <span class="dash-card-go">Open Vyasa AI <i class="fas fa-arrow-right"></i></span>
+          </a>
 
-          <div class="dash-card">
+          <a class="dash-card dash-link-card" href="?view=profile" id="profileCardLink">
             <div class="dash-card-header">
-              <span class="dash-icon"><i class="fas fa-bullhorn"></i></span>
-              <span class="dash-tag-coming">Coming soon</span>
+              <span class="dash-icon"><i class="fas fa-user"></i></span>
+              <span class="dash-tag-coming">Live</span>
             </div>
-            <h2>Announcements</h2>
-            <p>Updates and notices from the academy will appear here.</p>
-          </div>
+            <h2>👤 My Profile</h2>
+            <p>View and update your class, board, school and guardian details.</p>
+            <span class="dash-card-go">Open profile <i class="fas fa-arrow-right"></i></span>
+          </a>
+
         </div>
 
         <div class="dash-empty">
-          <i class="fas fa-tools"></i>
-          This portal is being prepared. For urgent help, or to securely contact the academy about your account, call or WhatsApp the academy office during working hours.
+          <i class="fas fa-info-circle"></i>
+          For urgent help, or to securely contact the academy about your account, call or WhatsApp the academy office during working hours.
         </div>
       </div>
+
+      <!-- Onboarding -->
+      <div class="hidden" id="onboardWrap">
+        <div style="max-width:720px;margin:0 auto;">
+        <div class="auth-card">
+          <div class="auth-logo"><i class="fas fa-graduation-cap"></i></div>
+          <h1 class="auth-heading onboard-heading">Welcome to Vyasa Academy! 🎓</h1>
+          <p class="auth-subtext onboard-welcome">Great to have you here. Let's complete your student profile so you can explore your study materials.</p>
+
+          <div class="onboard-google-id" id="onboardGoogleId"></div>
+
+          <form id="onboardForm" novalidate>
+            <div class="onboard-grid">
+              <div class="auth-field auth-field--full">
+                <label for="obName">Student Name <span class="auth-required-mark">*</span></label>
+                <input class="auth-input" id="obName" name="obName" type="text" autocomplete="name" placeholder="Enter your full name" required>
+              </div>
+              <div class="auth-field">
+                <label for="obClass">Class <span class="auth-required-mark">*</span></label>
+                <select class="auth-input auth-select" id="obClass" name="obClass" required>
+                  <option value="">Select class</option>
+                  <option value="VI">VI</option>
+                  <option value="VII">VII</option>
+                  <option value="VIII">VIII</option>
+                  <option value="IX">IX</option>
+                  <option value="X">X</option>
+                  <option value="XI">XI</option>
+                  <option value="XII">XII</option>
+                </select>
+              </div>
+              <div class="auth-field">
+                <label for="obBoard">Board <span class="auth-required-mark">*</span></label>
+                <select class="auth-input auth-select" id="obBoard" name="obBoard" required>
+                  <option value="">Select board</option>
+                  <option value="CBSE">CBSE</option>
+                  <option value="ICSE">ICSE</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="auth-field">
+                <label for="obSchool">School Name <span class="auth-optional-mark">Optional</span></label>
+                <input class="auth-input" id="obSchool" name="obSchool" type="text" autocomplete="organization" placeholder="Your school">
+              </div>
+              <div class="auth-field">
+                <label for="obMobile">Mobile Number <span class="auth-optional-mark">Optional</span></label>
+                <input class="auth-input" id="obMobile" name="obMobile" type="tel" inputmode="tel" autocomplete="tel" placeholder="10-digit mobile number">
+              </div>
+              <div class="auth-field">
+                <label for="obParent">Parent / Guardian Name <span class="auth-optional-mark">Optional</span></label>
+                <input class="auth-input" id="obParent" name="obParent" type="text" autocomplete="name" placeholder="Parent or guardian">
+              </div>
+              <div class="auth-field">
+                <label for="obParentMobile">Parent Mobile Number <span class="auth-optional-mark">Optional</span></label>
+                <input class="auth-input" id="obParentMobile" name="obParentMobile" type="tel" inputmode="tel" autocomplete="tel" placeholder="Parent mobile number">
+              </div>
+            </div>
+            <p class="auth-hint hidden" id="obError"></p>
+            <button type="submit" class="btn btn-primary btn-block" id="obBtn"><span>Save &amp; continue</span></button>
+            <a href="/" class="auth-backlink"><i class="fas fa-home"></i> Explore the website first</a>
+          </form>
+        </div>
+        </div>
+      </div>
+
     </div>
   </main>
 
@@ -131,7 +260,7 @@
           <li><a href="/#hero">Home</a></li>
           <li><a href="/#about">About</a></li>
           <li><a href="/blog/">Blog</a></li>
-          <li><a href="/#papers">Practice Papers</a></li>
+          <li><a href="/cbse-study-material/">Study Material</a></li>
           <li><a href="/#contact">Contact</a></li>
           <li><a href="/student-dashboard/" id="footerAuthLink">Dashboard</a></li>
         </ul>
@@ -185,15 +314,194 @@
         navbar.classList.toggle('scrolled', window.scrollY > 50);
       });
 
+      var dashContent = document.getElementById('dashContent');
+      var onboardWrap = document.getElementById('onboardWrap');
+      var dashErr = document.getElementById('dashErr');
+      var dashOk = document.getElementById('dashOk');
+      var profile = null;
+      var authUser = null;
+
+      function fault(msg) {
+        dashErr.textContent = msg;
+        dashErr.classList.remove('hidden');
+      }
+      function flashOk(msg) {
+        dashOk.textContent = msg;
+        dashOk.classList.remove('hidden');
+        setTimeout(function () { dashOk.classList.add('hidden'); }, 4000);
+      }
+
+      function esc(s) {
+        return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+      }
+
+      function setAvatar(el, avatarUrl, name) {
+        var initial = ((name || 'S').trim().charAt(0) || 'S').toUpperCase();
+        el.textContent = '';
+        if (avatarUrl) {
+          el.style.backgroundImage = 'url("' + String(avatarUrl).replace(/"/g, '%22') + '")';
+        } else {
+          el.style.backgroundImage = 'none';
+          el.textContent = initial;
+        }
+      }
+
+      function renderProfileView(dest, p) {
+        var rows = [
+          ['Class', p.class_level || 'Not set'],
+          ['Board', p.board || 'Not set'],
+          ['School', p.school_name || '—'],
+          ['Mobile', p.mobile_number || '—'],
+          ['Parent / Guardian', p.parent_name || '—'],
+          ['Parent Mobile', p.parent_mobile || '—'],
+          ['Email', p.email || '—']
+        ];
+        dest.innerHTML = rows.map(function (r) {
+          return '<div class="profile-view-item"><span>' + esc(r[0]) + '</span><strong>' + esc(r[1]) + '</strong></div>';
+        }).join('');
+      }
+
+      function fillProfileForm() {
+        document.getElementById('pfName').value = profile.full_name || '';
+        document.getElementById('pfClass').value = profile.class_level || '';
+        document.getElementById('pfBoard').value = profile.board || '';
+        document.getElementById('pfSchool').value = profile.school_name || '';
+        document.getElementById('pfMobile').value = profile.mobile_number || '';
+        document.getElementById('pfParent').value = profile.parent_name || '';
+        document.getElementById('pfParentMobile').value = profile.parent_mobile || '';
+      }
+
+      function openProfileEditor() {
+        fillProfileForm();
+        var card = document.getElementById('profileFormCard');
+        card.classList.remove('hidden');
+        card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        var nested = window.location;
+        try { history.replaceState(null, '', '/student-dashboard/?view=profile'); } catch (e) { /* ignore */ }
+      }
+
+      function showDashboard() {
+        document.getElementById('userName').textContent = profile.full_name || 'Student';
+        setAvatar(document.getElementById('dashAvatar'), profile.avatar_url, profile.full_name);
+        renderProfileView(document.getElementById('profileViewGrid'), profile);
+        fillProfileForm();
+        dashContent.classList.remove('hidden');
+        var view = new URLSearchParams(window.location.search).get('view');
+        if (view === 'profile') openProfileEditor();
+      }
+
+      function showOnboarding() {
+        onboardWrap.classList.remove('hidden');
+        var name = (authUser && ((authUser.user_metadata && (authUser.user_metadata.full_name || authUser.user_metadata.name)) || null)) || (profile && profile.full_name) || '';
+        var avatar = (profile && profile.avatar_url) || (authUser && authUser.user_metadata && (authUser.user_metadata.avatar_url || authUser.user_metadata.picture)) || '';
+        var email = (authUser && authUser.email) || (profile && profile.email) || '';
+
+        var holder = document.getElementById('onboardGoogleId');
+        var thumb = document.createElement(avatar ? 'img' : 'span');
+        thumb.className = avatar ? '' : 'dash-avatar-thumb';
+        if (avatar) thumb.src = avatar; else thumb.textContent = (name.charAt(0) || 'S').toUpperCase();
+        if (avatar) thumb.alt = '';
+        var meta = document.createElement('div');
+        var n = document.createElement('p');
+        n.className = 'ob-name';
+        n.textContent = name || 'Student';
+        var em = document.createElement('p');
+        em.className = 'ob-email';
+        em.textContent = email;
+        meta.appendChild(n);
+        meta.appendChild(em);
+        holder.appendChild(thumb);
+        holder.appendChild(meta);
+
+        if (name) document.getElementById('obName').value = name;
+      }
+
+      function saveProfile(formId, btnId, errId, thenRender) {
+        var f = document.getElementById(formId);
+        var btn = document.getElementById(btnId);
+        var span = btn.querySelector('span');
+        var errEl = document.getElementById(errId);
+
+        errEl.classList.add('hidden');
+        var name = document.getElementById(formId === 'onboardForm' ? 'obName' : 'pfName').value.trim();
+        var clazz = document.getElementById(formId === 'onboardForm' ? 'obClass' : 'pfClass').value;
+        var board = document.getElementById(formId === 'onboardForm' ? 'obBoard' : 'pfBoard').value;
+        if (!name || !clazz || !board) {
+          errEl.textContent = 'Please enter your name, class and board.';
+          errEl.classList.remove('hidden');
+          return;
+        }
+        var patch = {
+          full_name: name,
+          class_level: clazz,
+          board: board,
+          school_name: document.getElementById(formId === 'onboardForm' ? 'obSchool' : 'pfSchool').value.trim() || null,
+          mobile_number: document.getElementById(formId === 'onboardForm' ? 'obMobile' : 'pfMobile').value.trim() || null,
+          parent_name: document.getElementById(formId === 'onboardForm' ? 'obParent' : 'pfParent').value.trim() || null,
+          parent_mobile: document.getElementById(formId === 'onboardForm' ? 'obParentMobile' : 'pfParentMobile').value.trim() || null
+        };
+        btn.disabled = true;
+        span.textContent = 'Saving...';
+        window.VyasaAuth.updateProfile(patch)
+          .then(function (saved) {
+            if (!saved) { btn.disabled = false; span.textContent = 'Save'; errEl.textContent = 'Could not save your profile. Please try again.'; errEl.classList.remove('hidden'); return; }
+            profile = saved;
+            if (thenRender === 'onboard') {
+              onboardWrap.classList.add('hidden');
+              dashContent.classList.remove('hidden');
+              dashErr.classList.add('hidden');
+              showDashboard(true);
+              flashOk('Your profile is complete. Welcome to the Vyasa Academy portal! 🎓');
+            } else {
+              document.getElementById('profileFormCard').classList.add('hidden');
+              showDashboard();
+              flashOk('Profile updated successfully.');
+            }
+          })
+          .catch(function () {
+            btn.disabled = false;
+            span.textContent = 'Save';
+            errEl.textContent = 'Could not save your profile. Please try again.';
+            errEl.classList.remove('hidden');
+          });
+      }
+
+      document.getElementById('onboardForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        saveProfile('onboardForm', 'obBtn', 'obError', 'onboard');
+      });
+      document.getElementById('profileForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        saveProfile('profileForm', 'pfBtn', 'pfError', 'dash');
+      });
+
+      document.getElementById('logoutBtn').addEventListener('click', function () {
+        window.VyasaAuth.logout().catch(function () { window.location.replace('/login/'); });
+      });
+      document.getElementById('editProfileBtn').addEventListener('click', openProfileEditor);
+
+      var profileCardLink = document.getElementById('profileCardLink');
+      profileCardLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        openProfileEditor();
+      });
+
+      var aiCardLink = document.getElementById('aiCardLink');
+      aiCardLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (window.VyasaAssistant && window.VyasaAssistant.open) window.VyasaAssistant.open();
+        else window.location.replace('/');
+      });
+
       window.VyasaAuth.guard({ requiredRole: 'student' }).then(function (info) {
         if (!info) return;
-        document.getElementById('userName').textContent = info.profile.full_name || 'Student';
-        document.getElementById('dashContent').classList.remove('hidden');
-        document.getElementById('logoutBtn').addEventListener('click', function () {
-          window.VyasaAuth.logout().catch(function () {
-            window.location.replace('/login/');
-          });
-        });
+        profile = info.profile;
+        authUser = info.user;
+        if (!profile.class_level || !profile.board) {
+          showOnboarding();
+        } else {
+          showDashboard();
+        }
       }).catch(function (err) {
         if (err && err.message === 'NOT_CONFIGURED') {
           window.VyasaAuth.showNotConfigured(document.getElementById('authBanner'));
