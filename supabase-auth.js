@@ -212,8 +212,12 @@
     };
   }
 
+  function signInUrl() {
+    return window.VYASA_SIGN_IN || '/student-sign-in/';
+  }
+
   function dashFor(role) {
-    return ROLE_DASH[role] || '/login/';
+    return ROLE_DASH[role] || signInUrl();
   }
 
   function redirect(url) {
@@ -229,14 +233,15 @@
       return Promise.reject(new Error('NOT_CONFIGURED'));
     }
     var here = window.location.pathname;
-    var isAuthPage = /\/login\/?$/.test(here) ||
+    var isAuthPage = /\/student-sign-in\/?$/.test(here) ||
+      /\/login\/?$/.test(here) ||
       /\/forgot-password\/?$/.test(here) ||
       /\/reset-password\/?$/.test(here);
     var next = new URLSearchParams(window.location.search).get('next') || '';
     return currentUser().then(function (user) {
       if (!user) {
         // Avoid churning redirects when already on an auth page.
-        var target = '/login/';
+        var target = signInUrl();
         if (!isAuthPage) {
           target += '?next=' + encodeURIComponent(next || here);
         }
@@ -247,7 +252,7 @@
         if (!profile || !ROLE_DASH[profile.role]) {
           // Signed in but no valid local role = not part of the portal.
           return getClient().auth.signOut().then(function () {
-            redirect('/login/?next=' + encodeURIComponent(here));
+            redirect(signInUrl() + '?next=' + encodeURIComponent(here));
             return null;
           });
         }
@@ -266,7 +271,7 @@
     return c.auth.signOut().then(function () {
       try { window.sessionStorage.removeItem(STORAGE_KEY); } catch (e) { /* ignore */ }
       try { window.localStorage.removeItem(STORAGE_KEY); } catch (e) { /* ignore */ }
-      redirect('/login/');
+      redirect(signInUrl());
     });
   }
 

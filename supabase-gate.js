@@ -52,7 +52,8 @@
   }
 
   function sendToLogin(path) {
-    var next = '/login/?next=' + encodeURIComponent(path);
+    var base = (window.VYASA_SIGN_IN || '/student-sign-in/').replace(/\/?$/, '/');
+    var next = base + '?next=' + encodeURIComponent(path);
     if (window.VyasaGate) window.VyasaGate.redirectedTo = next;
     go(next);
   }

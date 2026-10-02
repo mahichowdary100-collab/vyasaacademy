@@ -2,6 +2,7 @@ User-agent: *
 Allow: /
 
 # Authentication and private portal pages must not be indexed.
+Disallow: /student-sign-in/
 Disallow: /login/
 Disallow: /forgot-password/
 Disallow: /reset-password/

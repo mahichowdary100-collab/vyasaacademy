@@ -134,20 +134,24 @@
     return wrap;
   }
 
+  function signInUrl() {
+    return window.VYASA_SIGN_IN || '/student-sign-in/';
+  }
+
   function buildSignedOut() {
     var wrap = document.createElement(isListContainer(host()) ? 'li' : 'div');
     wrap.setAttribute(MARK, '1');
     wrap.className = 'vy-nav-auth-signedout';
     var a = document.createElement('a');
     a.className = 'vy-nav-signin';
-    a.href = '/login/';
-    a.setAttribute('aria-label', 'Sign in to your student account');
+    a.href = signInUrl();
+    a.setAttribute('aria-label', 'Student Sign In');
     var i = document.createElement('i');
     i.className = 'fas fa-graduation-cap';
     i.setAttribute('aria-hidden', 'true');
     a.appendChild(i);
     var s = document.createElement('span');
-    s.textContent = 'Sign In';
+    s.textContent = 'Student Sign In';
     a.appendChild(s);
     wrap.appendChild(a);
     return wrap;
@@ -161,9 +165,9 @@
   }
 
   function signOut() {
-    if (!window.VyasaAuth) { window.location.href = '/login/'; return; }
+    if (!window.VyasaAuth) { window.location.href = signInUrl(); return; }
     window.VyasaAuth.logout().catch(function () {
-      window.location.replace('/login/');
+      window.location.replace(signInUrl());
     });
   }
 

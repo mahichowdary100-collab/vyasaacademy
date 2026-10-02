@@ -20,3 +20,11 @@ window.AUTH_CONFIG = {
   url: 'https://wlbovlmnznypbiqnpzmz.supabase.co',
   anonKey: 'sb_publishable_vRpf5mTCut-3r6gp7WcSCQ_bEZMOP7J'
 };
+
+// Single global student sign-in route. All Sign In entry points and
+// post-auth redirects (guard, logout, download gate) point here.
+// OPTIONAL: add https://www.vyasaacademy.in/student-sign-in/* to the
+// Supabase "Redirect URLs" list so Google OAuth can return to this
+// page and preserve a ?next= deep link (otherwise OAuth returns to
+// /student-dashboard/ and ?next= is dropped for Google sign-ins).
+window.VYASA_SIGN_IN = '/student-sign-in/';

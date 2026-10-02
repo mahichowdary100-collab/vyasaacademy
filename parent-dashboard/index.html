@@ -182,7 +182,7 @@
         document.getElementById('dashContent').classList.remove('hidden');
         document.getElementById('logoutBtn').addEventListener('click', function () {
           window.VyasaAuth.logout().catch(function () {
-            window.location.replace('/login/');
+            window.location.replace('/student-sign-in/');
           });
         });
       }).catch(function (err) {
