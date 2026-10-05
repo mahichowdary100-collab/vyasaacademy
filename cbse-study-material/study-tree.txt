@@ -420,123 +420,108 @@ CBSE Study Material
         Chapter Test
   Class 9
     Mathematics
-      Chapter 01
+      Orienting Yourself: The Use of Coordinates
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 02
+      Introduction to Linear Polynomials
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 03
+      The World of Numbers
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 04
+      Exploring Algebraic Identities
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 05
+      I'm Up and Down, and Round and Round
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 06
+      Measuring Space: Perimeter and Area
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 07
+      The Mathematics of Maybe: Introduction to Probability
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 08
-        Chapter Notes
-        Practice Paper
-        Quiz
-        Chapter Test
-      Chapter 09
-        Chapter Notes
-        Practice Paper
-        Quiz
-        Chapter Test
-      Chapter 10
-        Chapter Notes
-        Practice Paper
-        Quiz
-        Chapter Test
-      Chapter 11
-        Chapter Notes
-        Practice Paper
-        Quiz
-        Chapter Test
-      Chapter 12
+      Predicting What Comes Next: Exploring Sequences and Progressions
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
     Science
-      Chapter 01
+      Exploration: Entering the World of Secondary Science
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 02
+      Cell: The Building Block of Life
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 03
+      Tissues in Action
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 04
+      Describing Motion Around Us
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 05
+      Exploring Mixtures and their Separation
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 06
+      How Forces Affect Motion
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 07
+      Work, Energy, and Simple Machines
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 08
+      Journey Inside the Atom
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 09
+      Atomic Foundations of Matter
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 10
+      Sound Waves: Characteristics and Applications
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 11
+      Reproduction: How Life Continues
         Chapter Notes
         Practice Paper
         Quiz
         Chapter Test
-      Chapter 12
+      Patterns in Life: Diversity and Classification
+        Chapter Notes
+        Practice Paper
+        Quiz
+        Chapter Test
+      Earth as a System: Energy, Matter, and Life
         Chapter Notes
         Practice Paper
         Quiz
