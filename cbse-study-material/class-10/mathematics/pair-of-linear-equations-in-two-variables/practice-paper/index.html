@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CBSE Class 10 Maths Pair of Linear Equations Practice Paper | PYQs</title>
+  <meta name="description" content="Practice CBSE Class 10 Maths Pair of Linear Equations in Two Variables with a 40-mark paper featuring verified CBSE PYQs, application-based questions, competency questions and detailed solutions." />
+  <link rel="canonical" href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/practice-paper/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vyasa Academy" />
+  <meta property="og:title" content="CBSE Class 10 Maths Pair of Linear Equations Practice Paper | PYQs" />
+  <meta property="og:description" content="Practice CBSE Class 10 Maths Pair of Linear Equations in Two Variables with a 40-mark paper featuring verified CBSE PYQs, application-based questions, competency questions and detailed solutions." />
+  <meta property="og:url" content="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/practice-paper/" />
+  <meta property="og:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CBSE Class 10 Maths Pair of Linear Equations Practice Paper | PYQs" />
+  <meta name="twitter:description" content="Practice CBSE Class 10 Maths Pair of Linear Equations in Two Variables with a 40-mark paper featuring verified CBSE PYQs, application-based questions, competency questions and detailed solutions." />
+  <meta name="twitter:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","itemListElement":[{"position":1,"name":"Home","item":"https://www.vyasaacademy.in/","@type":"ListItem"},{"position":2,"name":"CBSE Study Material","item":"https://www.vyasaacademy.in/cbse-study-material/","@type":"ListItem"},{"position":3,"name":"Class 10","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/","@type":"ListItem"},{"position":4,"name":"Mathematics","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/","@type":"ListItem"},{"position":5,"name":"Pair of Linear Equations in Two Variables","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/","@type":"ListItem"},{"position":6,"name":"Practice Paper","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/practice-paper/","@type":"ListItem"}],"@type":"BreadcrumbList"}
+  </script>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+      processEscapes: true
+    }
+  };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <style>
+  .sm-paper { font-size: 1rem; line-height: 1.8; }
+  .sm-paper h2 { font-size: 1.4rem; color: var(--primary); margin: 46px 0 6px; padding-bottom: 8px; border-bottom: 2px solid var(--accent); }
+  .sm-paper h3 { font-size: 1.1rem; color: var(--dark); margin: 22px 0 10px; }
+  .sm-paper .marks-line { font-size: 0.9rem; font-weight: 700; color: var(--accent-dark); margin: 0 0 14px; }
+
+  .paper-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 20px 0; }
+  .pi-box { background: var(--white); border: 1px solid #e5e7eb; border-radius: var(--radius); padding: 14px 16px; }
+  .pi-box .pi-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; color: var(--gray); }
+  .pi-box .pi-value { font-weight: 800; color: var(--dark); font-size: 1.02rem; }
+
+  .notice-box { background: #fff8e1; border-left: 4px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 18px 0; }
+  .notice-box .box-label { font-weight: 700; color: var(--accent-dark); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 4px; }
+
+  .qcard { background: #fff; border: 1px solid #e5e7eb; border-radius: var(--radius); padding: 16px 18px; margin: 12px 0; break-inside: avoid; page-break-inside: avoid; }
+  .qcard .qeur { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+  .qcard .qnum { font-weight: 800; color: var(--primary); margin-bottom: 4px; }
+  .qcard .marks { flex-shrink: 0; background: var(--primary); color: var(--white); font-size: 0.8rem; font-weight: 700; padding: 4px 10px; border-radius: 999px; white-space: nowrap; }
+  .qcard .qtext { margin: 0 0 10px; }
+  .qcard .subpart { margin-top: 8px; }
+
+  .src-tag { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase; padding: 3px 10px; border-radius: 999px; margin-left: 8px; vertical-align: middle; }
+  .tag-pyq { background: #dcfce7; color: #15803d; border: 1px solid #86efac; }
+  .tag-exam { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
+
+  .options { list-style: none; margin: 10px 0 4px; padding: 0; }
+  .options li { margin: 6px 0; padding: 8px 12px; border: 1px solid #e5e7eb; border-radius: 8px; background: #fafafa; }
+  .options li .opt-key { font-weight: 800; color: var(--primary); margin-right: 8px; }
+
+  .ar-choices { background: #eef2ff; border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 10px 0 18px; }
+  .ar-choices ol { margin: 8px 0 0 0; padding-left: 22px; }
+  .ar-choices li { margin-bottom: 4px; }
+
+  .case-box { background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: var(--radius); padding: 16px 18px; margin: 10px 0 12px; }
+  .case-box .case-label { font-weight: 800; color: var(--primary); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .reveal-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 26px 0; }
+  .reveal-actions button { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: var(--radius); border: 2px solid var(--primary); background: var(--primary); color: var(--white); font-weight: 700; font-size: 0.95rem; font-family: inherit; cursor: pointer; transition: var(--transition); }
+  .reveal-actions button.secondary { background: var(--white); color: var(--primary); }
+  .reveal-actions button:hover { opacity: 0.9; }
+
+  details.reveal { margin: 14px 0; border: 1px solid #e5e7eb; border-radius: var(--radius); background: #fff; }
+  details.reveal summary { cursor: pointer; padding: 14px 18px; font-weight: 800; color: var(--primary); font-size: 1.05rem; list-style: none; }
+  details.reveal summary::-webkit-details-marker { display: none; }
+  details.reveal summary::before { content: "\f0fe"; font-family: "Font Awesome 6 Free"; font-weight: 900; margin-right: 10px; }
+  details.reveal[open] summary::before { content: "\f146"; }
+  details.reveal .reveal-body { padding: 4px 18px 18px; border-top: 1px solid #eef2ff; }
+
+  .ak-table-wrap { overflow-x: auto; }
+  .ak-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .ak-table th { background: var(--primary); color: #fff; padding: 10px 14px; text-align: left; }
+  .ak-table td { padding: 9px 14px; border-bottom: 1px solid #e5e7eb; }
+  .ak-table tr:nth-child(even) td { background: #f9fafb; }
+
+  .sol-card { margin: 16px 0; border: 1px solid #e5e7eb; border-radius: var(--radius); background: #fff; padding: 16px 20px; break-inside: avoid; page-break-inside: avoid; }
+  .sol-card .sol-title { font-weight: 800; color: var(--primary); margin-bottom: 10px; }
+  .sol-card .gblock { margin: 8px 0; }
+  .sol-card .glabel { font-weight: 800; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.4px; color: var(--gray); margin-bottom: 2px; }
+  .sol-card .src-line { font-size: 0.85rem; font-weight: 700; color: var(--accent-dark); margin: 6px 0 10px; }
+  .sol-card .ans-final { background: #f0fdf4; border-left: 4px solid #16a34a; border-radius: 0 var(--radius) var(--radius) 0; padding: 10px 14px; margin-top: 10px; font-weight: 700; }
+
+  .resource-nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
+  .resource-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: var(--radius); border: 2px solid #e5e7eb; font-weight: 600; font-size: 0.92rem; color: var(--dark); background: var(--white); transition: var(--transition); }
+  .resource-nav a:hover, .resource-nav a.is-active { border-color: var(--primary); background: var(--primary); color: var(--white); }
+
+  .sm-back { display: inline-flex; align-items: center; gap: 8px; margin-top: 30px; padding: 10px 0; color: var(--primary); font-weight: 600; }
+  .sm-back:hover { color: var(--accent-dark); }
+
+  @media (max-width: 640px) {
+    .sm-paper { font-size: 0.95rem; }
+    .sm-paper h2 { font-size: 1.2rem; }
+    .qcard { padding: 14px 12px; }
+    .options li { padding: 7px 10px; }
+    .paper-meta { gap: 8px; }
+    .reveal-actions button { width: 100%; justify-content: center; }
+  }
+
+  @media print {
+    .navbar, .footer, .resource-nav, .sm-back, .sm-crumbs, .reveal-actions, .paper-actions-note { display: none !important; }
+    .sm-page { padding: 0; }
+    .qcard, .sol-card { break-inside: avoid; border: 1px solid #ddd; }
+    body { background: #fff; }
+  }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="/" class="logo"><i class="fas fa-graduation-cap"></i> Vyasa Academy</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="/">Home</a>
+      <a href="/#courses">Courses</a>
+      <a href="/cbse-study-material/" class="active">Study Material</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main class="sm-page">
+  <div class="container sm-container">
+    <nav class="sm-crumbs" aria-label="Breadcrumb">
+      <a href="https://www.vyasaacademy.in/">Home</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/">CBSE Study Material</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/">Class 10</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/">Mathematics</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/">Pair of Linear Equations in Two Variables</a> /
+      Practice Paper
+    </nav>
+
+    <section class="sm-hero sm-hero-slim">
+      <p class="sm-eyebrow">CBSE Class 10 Â· Mathematics</p>
+      <h1>Class 10 Maths â€“ Pair of Linear Equations Practice Paper</h1>
+      <p>This is a chapter-wise practice assessment for Class 10 Mathematics, covering Chapter 3 â€“ Pair of Linear Equations in Two Variables (graphical and algebraic methods of solution, consistency of a pair, and their real-life applications). It includes MCQs, Assertionâ€“Reason questions, short and long answers, application problems, graph-based questions and a case-based question, together with nine verified CBSE board PYQs from the 2024 and 2025 board papers, so you can re-check every concept from the chapter notes.</p>
+    </section>
+
+    <nav class="resource-nav" aria-label="Chapter resources">
+      <a href="/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/notes/"><i class="fas fa-book-open"></i> Notes</a>
+      <a class="is-active" href="/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/practice-paper/"><i class="fas fa-file-lines"></i> Practice Paper</a>
+      <a href="/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/quiz/"><i class="fas fa-bullseye"></i> Quiz</a>
+      <a href="/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+    </nav>
+
+    <article class="sm-paper">
+
+      <div class="paper-meta" aria-label="Paper information">
+        <div class="pi-box"><div class="pi-label">Class</div><div class="pi-value">10</div></div>
+        <div class="pi-box"><div class="pi-label">Subject</div><div class="pi-value">Mathematics</div></div>
+        <div class="pi-box"><div class="pi-label">Chapter</div><div class="pi-value">Pair of Linear Equations in Two Variables</div></div>
+        <div class="pi-box"><div class="pi-label">Suggested Time</div><div class="pi-value">60 minutes</div></div>
+        <div class="pi-box"><div class="pi-label">Maximum Marks</div><div class="pi-value">40</div></div>
+        <div class="pi-box"><div class="pi-label">Difficulty</div><div class="pi-value">Easy + Moderate + Challenging</div></div>
+      </div>
+
+      <div class="notice-box">
+        <div class="box-label">Note</div>
+        This is a chapter-wise practice paper created by Vyasa Academy. It is not an official CBSE question paper. Questions marked <span class="tag-pyq">CBSE PYQ</span> are from actual CBSE board papers of the stated year; all other questions are original or exam-style items written for this paper.
+      </div>
+
+      <h2>General Instructions</h2>
+      <ol>
+        <li>The question paper has <strong>21 questions</strong> divided into six sections, carrying a total of <strong>40 marks</strong>.</li>
+        <li><strong>Section A</strong>: Questions 1â€“8, one mark each (8 marks). <strong>Section B</strong>: Questions 9â€“10, one mark each (2 marks).</li>
+        <li><strong>Section C</strong>: Questions 11â€“14, two marks each (8 marks). <strong>Section D</strong>: Questions 15â€“18, three marks each (12 marks).</li>
+        <li><strong>Section E</strong>: Questions 19â€“20, four marks each (8 marks). <strong>Section F</strong>: Question 21, two marks (2 marks).</li>
+        <li>In <strong>Questions 19 and 20</strong>, attempt <strong>either</strong> part (a) <strong>or</strong> part (b). All other questions are compulsory.</li>
+        <li>Write the full solution, not just the final answer, wherever marks are awarded for working.</li>
+      </ol>
+
+      <h2>Section A â€“ Multiple Choice Questions</h2>
+      <p class="marks-line">8 questions Ã— 1 mark = 8 marks</p>
+      <p>Each question below has four options (A, B, C, D). Choose the one correct answer.</p>
+
+      <div class="qcard">
+        <div class="qeur">
+          <div>
+            <div class="qnum">1.</div>
+            <p class="qtext">If \(x = 1\) and \(y = 2\) is a solution of the equations \(2x - 3y + a = 0\) and \(2x + 3y - b = 0\), then \(a\) and \(b\) satisfy <span class="src-tag tag-pyq">CBSE PYQ Â· 2025</span></p>
+          </div>
+          <span class="marks" aria-label="1 mark">1 Mark</span>
+        </div>
+        <ul class="options">
+          <li><span class="opt-key">A.</span> \(a = b\)</li>
+          <li><span class="opt-key">B.</span> \(2a = b\)</li>
+          <li><span class="opt-key">C.</span> \(a = 2b\)</li>
+          <li><span class="opt-key">D.</span> \(3a = 2b\)</li>
+        </ul>
+      </div>
+
+      <div class="qcard">
+        <div class="qeur">
+          <div>
+            <div class="qnum">2.</div>
+            <p class="qtext">For which value of \(p\) does the pair of equations \(px + 3y = p - 3\) and \(12x + py = p\) have infinitely many solutions? <span class="src-tag tag-pyq">CBSE PYQ Â· 2025</span></p>
+          </div>
+          <span class="marks" aria-label="1 mark">1 Mark</span>
+        </div>
+        <ul class="options">
+          <li><span class="opt-key">A.</span> \(6\) or \(-6\)</li>
+          <li><span class="opt-key">B.</span> \(6\) only</li>
+          <li><span class="opt-key">C.</span> \(-6\) only</li>
+          <li><span class="opt-key">D.</span> \(6\) or \(0\)</li>
+        </ul>
+      </div>
+
+      <div class="qcard">
+        <div class="qeur">
+          <div>
+            <div class="qnum">3.</div>
+            <p class="qtext">The value of \(k\) for which the system of equations \(3x - y + 8 = 0\) and \(6x - ky + 16 = 0\) has infinitely many solutions is <span class="src-tag tag-pyq">CBSE PYQ Â· 2024</span></p>
+          </div>
+          <span class="marks" aria-label="1 mark">1 Mark</span>
+        </div>
+        <ul class="options">
+          <li><span class="opt-key">A.</span> \(-2\)</li>
+          <li><span class="opt-key">B.</span> \(2\)</li>
+          <li><span class="opt-key">C.</span> \(\frac{1}{2}\)</li>
+          <li><span class="opt-key">D.</span> \(-\frac{1}{2}\)</li>
+        </ul>
+      </div>
+
+      <div class="qcard">
+        <div class="qeur">
+          <div>
+            <div class="qnum">4.</div>
+            <p class="qtext">Which of the following types of straight lines will be represented by the system of equations \(3x + 4y = 5\) and \(6x + 8y = 7\)? <span class="src-tag tag-pyq">CBSE PYQ Â· 2024</span></p>
+          </div>
+          <span class="marks" aria-label="1 mark">1 Mark</span>
+        </div>
+        <ul class="options">
+          <li><span class="opt-key">A.</span> Parallel</li>
+          <li><span class="opt-key">B.</span> Intersecting</li>
+          <li><span class="opt-key">C.</span> Coincident</li>
+          <li><span class="opt-key">D.</span> Perpendicular to each other</li>
+        </ul>
+      </div>
+
+      <div class="qcard">
+        <div class="qeur">
+          <div>
+            <div class="qnum">5.</div>
+            <p class="qtext">The pair of linear equations whose graphs are two distinct parallel straight lines has</p>
+          </div>
+          <span class="marks" aria-label="1 mark">1 Mark</span>
+        </div>
+        <ul class="options">
+          <li><span class="opt-key">A.</span> A unique solution</li>
+          <li><span class="opt-key">B.</span> Infinitely many solutions</li>
+          <li><span class="opt-key">C.</span> No solution</li>
+          <li><span class="opt-key">D.</span> Exactly two solutions</li>
+        </ul>
+      </div>
+
+      <div class="qcard">
+        <div class="qeur">
+          <div>
+            <div class="qnum">6.</div>
+            <p class="qtext">The graphs of a pair of linear equations intersect at the single point \((3, -2)\). How many solutions does this pair of equations have?</p>
+          </div>
+          <span class="marks" aria-label="1 mark">1 Mark</span>
+        </div>
+        <ul class="options">
+          <li><span class="opt-key">A.</span> No solution</li>
+          <li><span class="opt-key">B.</span> Exactly one solution</li>
+          <li><span class="opt-key">C.</span> Infinitely many solutions</li>
+          <li><span class="opt-key">D.</span> Two solutions</li>
+        </ul>
+      </div>
+
+      <div class="qcard">
+        <div class="qeur">
+          <div>
+            <div class="qnum">7.</div>
+            <p class="qtext">If \(x + y = 7\) and \(x - y = 1\), then the point \((x, y)\) is</p>
+          </div>
+          <span class="marks" aria-label="1 mark">1 Mark</span>
+        </div>
+        <ul class="options">
+          <li><span class="opt-key">A.</span> \((3, 4)\)</li>
+          <li><span class="opt-key">B.</span> \((4, 3)\)</li>
+          <li><span class="opt-key">C.</span> \((7, 1)\)</li>
+          <li><span class="opt-key">D.</span> \((1, 7)\)</li>
+        </ul>
+      </div>
+
+      <div class="qcard">
+        <div class="qeur">
+          <div>
+            <div class="qnum">8.</div>
+            <p class="qtext">The pair of linear equations \(kx + 2y = 5\) and \(3x + 6y = 10\) will have a unique solution when</p>
+          </div>
+          <span class="marks" aria-label="1 mark">1 Mark</span>
+        </div>
+        <ul class="options">
+          <li><span class="opt-key">A.</span> \(k = 1\)</li>
+          <li><span class="opt-key">B.</span> \(k = 3\)</li>
+          <li><span class="opt-key">C.</span> \(k \neq 1\)</li>
+          <li><span class="opt-key">D.</span> \(k \neq 3\)</li>
+        </ul>
+      </div>
+
+      <h2>Section B â€“ Assertion and Reason</h2>
+      <p class="marks-line">2 questions Ã— 1 mark = 2 marks</p>
+      <p>In each of the following questions, an Assertion (A) and a Reason (R) are given. Choose the correct option from (a) to (d).</p>
+      <div class="ar-choices">
+        <ol>
+          <li><strong>(a)</strong> Both A and R are true, and R is the correct explanation of A.</li>
+          <li><strong>(b)</strong> Both A and R are true, but R is not the correct explanation of A.</li>
+          <li><strong>(c)</strong> A is true, but R is false.</li>
+          <li><strong>(d)</strong> A is false, but R is true.</li>
+        </ol>
+      </div>
+
+      <div class="qcard">
+        <div class="qeur">
+          <div>
+            <div class="qnum">9.</div>
+            <p class="qtext"><strong>Assertion (A):</strong> The pair of linear equations \(px + 3y + 59 = 0\) and \(2x + 6y + 118 = 0\) has infinitely many solutions when \(p = 1\).<br />
+            <strong>Reason (R):</strong> The pair of equations has a unique solution when \(p \neq 1\). <span class="src-tag tag-pyq">CBSE PYQ Â· 2025</span></p>
+          </div>
+          <span class="marks" aria-label="1 mark">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="qcard">
+        <div class="qeur">
+          <div>
+            <div class="qnum">10.</div>
+            <p class="qtext"><strong>Assertion (A):</strong> The pair of linear equations \(2x + 5y = 11\) and \(4x + 10y = 22\) has infinitely many solutions.<br />
+            <strong>Reason (R):</strong> The graphs of these two equations are coincident straight lines.</p>
+          </div>
+          <span class="marks" aria-label="1 mark">1 Mark</span>
+        </div>
+      </div>
+
+      <h2>Section C â€“ Short Answer Questions</h2>
+      <p class="marks-line">4 questions Ã— 2 marks = 8 marks</p>
+
+      <div class="qcard">
+        <div class="qeur">
+          <div>
+            <div class="qnum">11.</div>
+            <p class="qtext">Solve the following system of linear equations and verify your answer: <span class="src-tag tag-pyq">CBSE PYQ Â· 2024</span></p>
+            <p>\[7x - 2y = 5 \text{ and } 8x + 7y = 15\]</p>
+          </div>
+          <span class="marks" aria-label="2 marks">2 Marks</span>
+        </div>
+      </div>
+
+      <div class="qcard">
+        <div class="qeur">
+          <div>
+            <div class="qnum">12.</div>
+            <p class="qtext">Solve the following pair of linear equations by the substitution method:</p>
+            <p>\[3x - 2y = 5 \text{ and } 2x + 3y = 12\]</p>
+          </div>
+          <span class="marks" aria-label="2 marks">2 Marks</span>
+        </div>
+      </div>
+
+      <div class="qcard">
+        <div class="qeur">
+          <div>
+            <div class="qnum">13.</div>
+            <p class="qtext">For what value of \(k\) will the pair of equations \(kx + 2y = 3\) and \(6x + 4y = 11\) have <strong>no solution</strong>?</p>
+          </div>
+          <span class="marks" aria-label="2 marks">2 Marks</span>
+        </div>
+      </div>
+
+      <div class="qcard">
+        <div class="qeur">
+          <div>
+            <div class="qnum">14.</div>
+            <p class="qtext">Two pens and three erasers cost â‚¹46, while three pens and two erasers cost â‚¹54. Form a pair of linear equations and find the cost of one pen and one eraser.</p>
+          </div>
+          <span class="marks" aria-label="2 marks">2 Marks</span>
+        </div>
+      </div>
+
+      <h2>Section D â€“ Application-Based Questions</h2>
+      <p class="marks-line">4 questions Ã— 3 marks = 12 marks</p>
+      <p>These questions test application of concepts. Show your working clearly.</p>
+
+      <div class="qcard">
+        <div class="qeur">
+          <div>
+            <div class="qnum">15.</div>
+            <p class="qtext">Three years ago, Rashmi was thrice as old as Nazma. Ten years later, Rashmi will be twice as old as Nazma. How old are Rashmi and Nazma now? <span class="src-tag tag-pyq">CBSE PYQ Â· 2024</span></p>
+          </div>
+          <span class="marks" aria-label="3 marks">3 Marks</span>
+        </div>
+      </div>
+
+      <div class="qcard">
+        <div class="qeur">
+          <div>
+            <div class="qnum">16.</div>
+            <p class="qtext">Solve the following pair of linear equations graphically:
+            \[x - y = 1 \text{ and } x + y = 5\]</p>
+            <p class="subpart">(a) Draw the two lines and write the solution of the pair. <span aria-label="2 marks">[2]</span></p>
+            <p class="subpart">(b) Find the points where the two lines cut the y-axis and the area of the triangle formed by the two lines and the y-axis. <span aria-label="1 mark">[1]</span></p>
+          </div>
+          <span class="marks" aria-label="3 marks">3 Marks</span>
+        </div>
+      </div>
+
+      <div class="qcard">
+        <div class="qeur">
+          <div>
+            <div class="qnum">17.</div>
+            <p class="qtext">A two-digit number is such that the product of its digits is 12. When 36 is added to the number, its digits interchange their places.</p>
+            <p class="subpart">(a) Taking the digits as \(x\) and \(y\), form the pair of linear equations. <span aria-label="1 mark">[1]</span></p>
+            <p class="subpart">(b) Solve the equations to find the number. <span aria-label="2 marks">[2]</span></p>
+          </div>
+          <span class="marks" aria-label="3 marks">3 Marks</span>
+        </div>
+      </div>
+
+      <div class="qcard">
+        <div class="qeur">
+          <div>
+            <div class="qnum">18.</div>
+            <p class="qtext">The perimeter of a rectangle is 36 cm and its length is 3 cm more than twice its breadth. Taking the breadth as \(x\) cm and the length as \(y\) cm:</p>
+            <p class="subpart">(a) Form the pair of linear equations in \(x\) and \(y\). <span aria-label="1 mark">[1]</span></p>
+            <p class="subpart">(b) Find the length and the breadth of the rectangle. <span aria-label="1 mark">[1]</span></p>
+            <p class="subpart">(c) Find the area of the rectangle. <span aria-label="1 mark">[1]</span></p>
+          </div>
+          <span class="marks" aria-label="3 marks">3 Marks</span>
+        </div>
+      </div>
+
+      <h2>Section E â€“ Long Answer Questions</h2>
+      <p class="marks-line">2 questions Ã— 4 marks = 8 marks</p>
+
+      <div class="qcard">
+        <div class="qeur">
+          <div>
+            <div class="qnum">19.</div>
+            <p class="qtext"><strong>Attempt either part (a) or part (b).</strong></p>
+            <p class="subpart">(a) Solve the following system of equations graphically and verify the solution algebraically:
+            \[x + y = 5 \text{ and } 3x - y = 3\] <span aria-label="4 marks">[4]</span></p>
+            <p class="subpart">(b) A fraction becomes \(\frac{4}{5}\) when 1 is added to its numerator, and becomes \(\frac{1}{2}\) when 1 is added to its denominator. Find the fraction. <span aria-label="4 marks">[4]</span></p>
+          </div>
+          <span class="marks" aria-label="4 marks">4 Marks</span>
+        </div>
+      </div>
+
+      <div class="qcard">
+        <div class="qeur">
+          <div>
+            <div class="qnum">20.</div>
+            <p class="qtext"><strong>Attempt either part (a) or part (b).</strong> <span class="src-tag tag-pyq">CBSE PYQ Â· 2024</span></p>
+            <p class="subpart">(a) Using the graphical method, solve the following system of equations:
+            \[3x + y + 4 = 0 \text{ and } 3x - y + 2 = 0\] <span aria-label="4 marks">[4]</span></p>
+            <p class="subpart">(b) Tara scored 40 marks in a test, getting 3 marks for each right answer and losing 1 mark for each wrong answer. Had 4 marks been awarded for each correct answer and 2 marks deducted for each wrong answer, then Tara would have scored 50 marks. Assuming that Tara attempted all questions, find the total number of questions in the test. <span aria-label="4 marks">[4]</span></p>
+          </div>
+          <span class="marks" aria-label="4 marks">4 Marks</span>
+        </div>
+      </div>
+
+      <h2>Section F â€“ Case-Based Question</h2>
+      <p class="marks-line">1 question Ã— 2 marks = 2 marks</p>
+
+      <div class="qcard">
+        <div class="qeur">
+          <div>
+            <div class="qnum">21.</div>
+            <div>
+              <div class="case-box">
+                <div class="case-label">Case Study</div>
+                <p>Essel World is one of India's largest amusement parks, offering a diverse range of thrilling rides, water attractions and entertainment options for visitors of all ages. The park is known for its iconic "Water Kingdom" section, making it a popular destination for family outings and fun-filled adventure. The ticket charges for the park are â‚¹150 per child and â‚¹250 per adult.</p>
+                <p>On a day, the cashier of the park found that 300 tickets were sold and an amount of â‚¹55,000 was collected.</p>
+              </div>
+              <p class="subpart">(a) If the number of children who visited is \(x\) and the number of adults is \(y\), write the given situation as a pair of linear equations. <span aria-label="1 mark">[1]</span></p>
+              <p class="subpart">(b) How many children visited the amusement park that day? <span class="src-tag tag-pyq">CBSE PYQ Â· 2024</span> <span aria-label="1 mark">[1]</span></p>
+            </div>
+          </div>
+          <span class="marks" aria-label="2 marks">2 Marks</span>
+        </div>
+      </div>
+
+      <div class="paper-actions-note">
+        <p>Check your work: Section A (8) + Section B (2) + Section C (8) + Section D (12) + Section E (8) + Section F (2) = <strong>40 marks</strong>. Attempt the paper fully before revealing the answers below.</p>
+      </div>
+
+      <div class="reveal-actions" aria-label="Answer and print controls">
+        <button type="button" id="btnKey" onclick="toggleReveal('answerKey', this)"><i class="fas fa-key"></i> Reveal Answer Key</button>
+        <button type="button" id="btnSol" class="secondary" onclick="toggleReveal('solutions', this)"><i class="fas fa-lightbulb"></i> Reveal Detailed Solutions</button>
+        <button type="button" class="secondary" onclick="printPaper()"><i class="fas fa-print"></i> Print / Download Practice Paper</button>
+      </div>
+
+      <details class="reveal" id="answerKey">
+        <summary>Answer Key</summary>
+        <div class="reveal-body">
+          <h3>Section A â€“ Multiple Choice Questions</h3>
+          <div class="ak-table-wrap">
+            <table class="ak-table">
+              <thead><tr><th>Question</th><th>Answer</th><th>Marks</th><th>Source</th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td>B</td><td>1</td><td>CBSE PYQ (2025)</td></tr>
+                <tr><td>2</td><td>B</td><td>1</td><td>CBSE PYQ (2025)</td></tr>
+                <tr><td>3</td><td>B</td><td>1</td><td>CBSE PYQ (2024)</td></tr>
+                <tr><td>4</td><td>A</td><td>1</td><td>CBSE PYQ (2024)</td></tr>
+                <tr><td>5</td><td>C</td><td>1</td><td>Original</td></tr>
+                <tr><td>6</td><td>B</td><td>1</td><td>Original</td></tr>
+                <tr><td>7</td><td>B</td><td>1</td><td>Original</td></tr>
+                <tr><td>8</td><td>C</td><td>1</td><td>Original</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>Section B â€“ Assertion and Reason</h3>
+          <div class="ak-table-wrap">
+            <table class="ak-table">
+              <thead><tr><th>Question</th><th>Answer</th><th>Marks</th><th>Source</th></tr></thead>
+              <tbody>
+                <tr><td>9</td><td>(b)</td><td>1</td><td>CBSE PYQ (2025)</td></tr>
+                <tr><td>10</td><td>(a)</td><td>1</td><td>Original</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>Section C â€“ Short Answer Questions</h3>
+          <div class="ak-table-wrap">
+            <table class="ak-table">
+              <thead><tr><th>Question</th><th>Answer</th><th>Marks</th><th>Source</th></tr></thead>
+              <tbody>
+                <tr><td>11</td><td>\(x = 1,\ y = 1\)</td><td>2</td><td>CBSE PYQ (2024)</td></tr>
+                <tr><td>12</td><td>\(x = 3,\ y = 2\)</td><td>2</td><td>Original</td></tr>
+                <tr><td>13</td><td>\(k = 3\)</td><td>2</td><td>Original</td></tr>
+                <tr><td>14</td><td>Pen â‚¹14, eraser â‚¹6</td><td>2</td><td>Original</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>Section D â€“ Application-Based Questions</h3>
+          <div class="ak-table-wrap">
+            <table class="ak-table">
+              <thead><tr><th>Question</th><th>Answer</th><th>Marks</th><th>Source</th></tr></thead>
+              <tbody>
+                <tr><td>15</td><td>Rashmi is 42, Nazma is 16</td><td>3</td><td>CBSE PYQ (2024)</td></tr>
+                <tr><td>16</td><td>(a) \((3, 2)\) &nbsp;&nbsp; (b) \((0, -1)\), \((0, 5)\); area \(9\) sq units</td><td>3</td><td>Original</td></tr>
+                <tr><td>17</td><td>(a) \(xy = 12\), \(x - y = -4\) &nbsp;&nbsp; (b) number is 26</td><td>3</td><td>Original</td></tr>
+                <tr><td>18</td><td>(a) \(y = 2x + 3\), \(x + y = 18\) &nbsp;&nbsp; (b) length 13, breadth 5 &nbsp;&nbsp; (c) 65 cmÂ²</td><td>3</td><td>Original</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>Section E â€“ Long Answer Questions</h3>
+          <div class="ak-table-wrap">
+            <table class="ak-table">
+              <thead><tr><th>Question</th><th>Answer</th><th>Marks</th><th>Source</th></tr></thead>
+              <tbody>
+                <tr><td>19</td><td>(a) \((2, 3)\) &nbsp;&nbsp; OR &nbsp;&nbsp; (b) \(\frac{3}{5}\)</td><td>4</td><td>Original</td></tr>
+                <tr><td>20</td><td>(a) \((-1, -1)\) &nbsp;&nbsp; OR &nbsp;&nbsp; (b) 20 questions (15 right, 5 wrong)</td><td>4</td><td>CBSE PYQ (2024)</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>Section F â€“ Case-Based Question</h3>
+          <div class="ak-table-wrap">
+            <table class="ak-table">
+              <thead><tr><th>Question</th><th>Answer</th><th>Marks</th><th>Source</th></tr></thead>
+              <tbody>
+                <tr><td>21</td><td>(a) \(x + y = 300\), \(150x + 250y = 55000\) &nbsp;&nbsp; (b) 200 children</td><td>2</td><td>CBSE PYQ (2024)</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </details>
+
+      <details class="reveal" id="solutions">
+        <summary>Detailed Solutions</summary>
+        <div class="reveal-body">
+
+          <div class="sol-card">
+            <div class="sol-title">Solution 1</div>
+            <p class="src-line">Source: CBSE Board Paper 2025 (Mathematics Standard, 30/1/1)</p>
+            <p><strong>Concept Used:</strong> Substituting a given solution into a linear equation to find unknown constants.</p>
+            <p>Put \(x = 1\), \(y = 2\) into both equations:<br />
+            \(2(1) - 3(2) + a = 0 \Rightarrow 2 - 6 + a = 0 \Rightarrow a = 4\).<br />
+            \(2(1) + 3(2) - b = 0 \Rightarrow 2 + 6 - b = 0 \Rightarrow b = 8\).</p>
+            <p>Now \(2a = 2 \times 4 = 8 = b\), so \(2a = b\).</p>
+            <div class="ans-final">Final Answer: (B) \(2a = b\)</div>
+          </div>
+
+          <div class="sol-card">
+            <div class="sol-title">Solution 2</div>
+            <p class="src-line">Source: CBSE Board Paper 2025 (Mathematics Standard, 30/4/1)</p>
+            <p><strong>Concept Used:</strong> Comparing coefficients of \(a_1x + b_1y = c_1\) and \(a_2x + b_2y = c_2\) for infinitely many solutions \(\left(\frac{a_1}{a_2} = \frac{b_1}{b_2} = \frac{c_1}{c_2}\right)\).</p>
+            <p>Here \(a_1 = p,\ b_1 = 3,\ c_1 = p - 3\) and \(a_2 = 12,\ b_2 = p,\ c_2 = p\).<br />
+            \(\frac{p}{12} = \frac{3}{p} \Rightarrow p^2 = 36 \Rightarrow p = \pm 6\).</p>
+            <p>Now check which value also satisfies the ratio of the constant terms. The two equations in standard form are \(px + 3y - (p - 3) = 0\) and \(12x + py - p = 0\), so \(\frac{c_1}{c_2} = \frac{p - 3}{p}\).</p>
+            <p>For \(p = 6\): \(\frac{p - 3}{p} = \frac{3}{6} = \frac{1}{2} = \frac{6}{12}\) &#10003; â€” infinitely many solutions.<br />
+            For \(p = -6\): \(\frac{p - 3}{p} = \frac{-9}{-6} = \frac{3}{2} \neq \frac{-6}{12} = -\frac{1}{2}\) &#10007; â€” the pair has no solution.<br />
+            Hence only \(p = 6\) works.</p>
+            <div class="ans-final">Final Answer: (B) \(p = 6\) only</div>
+          </div>
+
+          <div class="sol-card">
+            <div class="sol-title">Solution 3</div>
+            <p class="src-line">Source: CBSE Board Paper 2024 (Mathematics Standard, 30/3/1)</p>
+            <p><strong>Concept Used:</strong> Condition for infinitely many solutions: \(\frac{a_1}{a_2} = \frac{b_1}{b_2} = \frac{c_1}{c_2}\).</p>
+            <p>Comparison: \(\frac{3}{6} = \frac{1}{2}\), \(\frac{-1}{-k} = \frac{1}{k}\), and \(\frac{8}{16} = \frac{1}{2}\).<br />
+            For infinitely many solutions all three ratios are equal:<br />
+            \(\frac{1}{2} = \frac{1}{k} = \frac{1}{2} \Rightarrow k = 2\).</p>
+            <div class="ans-final">Final Answer: (B) \(k = 2\)</div>
+          </div>
+
+          <div class="sol-card">
+            <div class="sol-title">Solution 4</div>
+            <p class="src-line">Source: CBSE Board Paper 2024 (Mathematics Standard, 30/5/1)</p>
+            <p><strong>Concept Used:</strong> Condition for parallel (inconsistent) lines: \(\frac{a_1}{a_2} = \frac{b_1}{b_2} \neq \frac{c_1}{c_2}\).</p>
+            <p>\(\frac{3}{6} = \frac{1}{2}\), \(\frac{4}{8} = \frac{1}{2}\) but \(\frac{5}{7} \neq \frac{1}{2}\).<br />
+            The ratio of the \(x\)-coefficients equals the ratio of the \(y\)-coefficients, but the ratio of the constant terms is different. Hence the lines are parallel and the system has no solution.</p>
+            <div class="ans-final">Final Answer: (A) Parallel</div>
+          </div>
+
+          <div class="sol-card">
+            <div class="sol-title">Solution 5</div>
+            <p class="src-line">Source: Original question</p>
+            <p><strong>Concept Used:</strong> Geometry of a pair of linear equations â€” parallel distinct lines never meet.</p>
+            <p>A solution of a pair of linear equations is the point where the two lines meet. Two distinct parallel lines never meet, so the pair has no common point â€” that is, no solution. Such a system is called inconsistent.</p>
+            <div class="ans-final">Final Answer: (C) No solution</div>
+          </div>
+
+          <div class="sol-card">
+            <div class="sol-title">Solution 6</div>
+            <p class="src-line">Source: Original question</p>
+            <p><strong>Concept Used:</strong> The solution of a pair of linear equations is the intersection point of its graphs.</p>
+            <p>Two lines that meet at exactly one point represent a consistent pair with a unique solution â€” the coordinates of that single intersection point, \((3, -2)\).</p>
+            <div class="ans-final">Final Answer: (B) Exactly one solution</div>
+          </div>
+
+          <div class="sol-card">
+            <div class="sol-title">Solution 7</div>
+            <p class="src-line">Source: Original question</p>
+            <p><strong>Concept Used:</strong> Solving a pair by elimination (adding the equations).</p>
+            <p>Add the two equations: \((x + y) + (x - y) = 7 + 1 \Rightarrow 2x = 8 \Rightarrow x = 4\).<br />
+            Then \(4 + y = 7 \Rightarrow y = 3\). The point is \((4, 3)\).</p>
+            <div class="ans-final">Final Answer: (B) \((4, 3)\)</div>
+          </div>
+
+          <div class="sol-card">
+            <div class="sol-title">Solution 8</div>
+            <p class="src-line">Source: Original question</p>
+            <p><strong>Concept Used:</strong> Condition for a unique solution: \(\frac{a_1}{a_2} \neq \frac{b_1}{b_2}\).</p>
+            <p>\(\frac{a_1}{a_2} = \frac{k}{3}\) and \(\frac{b_1}{b_2} = \frac{2}{6} = \frac{1}{3}\).<br />
+            A unique solution requires \(\frac{k}{3} \neq \frac{1}{3} \Rightarrow k \neq 1\).</p>
+            <div class="ans-final">Final Answer: (C) \(k \neq 1\)</div>
+          </div>
+
+          <div class="sol-card">
+            <div class="sol-title">Solution 9</div>
+            <p class="src-line">Source: CBSE Board Paper 2025 (Mathematics Standard, 30/2/1)</p>
+            <p><strong>Concept Used:</strong> Consistency of a pair by comparing ratios of coefficients.</p>
+            <p>For \(px + 3y + 59 = 0\) and \(2x + 6y + 118 = 0\):<br />
+            \(\frac{a_1}{a_2} = \frac{p}{2}\), \(\frac{b_1}{b_2} = \frac{3}{6} = \frac{1}{2}\), \(\frac{c_1}{c_2} = \frac{59}{118} = \frac{1}{2}\).</p>
+            <p><strong>Assertion:</strong> Infinitely many solutions when all three ratios are equal, i.e. \(\frac{p}{2} = \frac{1}{2} \Rightarrow p = 1\). The Assertion is true.</p>
+            <p><strong>Reason:</strong> When \(p \neq 1\), \(\frac{p}{2} \neq \frac{1}{2}\) so the pair has a unique solution. The Reason is also true.</p>
+            <p>However, the Reason only states when the pair is <em>not</em> consistent with infinitely many solutions; it does not explain why \(p = 1\) produces infinitely many solutions (which requires comparing all three ratios). Hence R is not the correct explanation of A.</p>
+            <div class="ans-final">Final Answer: (b) Both A and R are true, but R is not the correct explanation of A.</div>
+          </div>
+
+          <div class="sol-card">
+            <div class="sol-title">Solution 10</div>
+            <p class="src-line">Source: Original question</p>
+            <p><strong>Concept Used:</strong> Coincident lines represent a dependent pair with infinitely many solutions.</p>
+            <p>Dividing \(4x + 10y = 22\) by 2 gives \(2x + 5y = 11\), which is exactly the first equation. So both equations represent the very same straight line (coincident lines). Every point of this line is a common solution, so the pair has infinitely many solutions. The Reason correctly explains the Assertion.</p>
+            <div class="ans-final">Final Answer: (a) Both A and R are true, and R is the correct explanation of A.</div>
+          </div>
+
+          <div class="sol-card">
+            <div class="sol-title">Solution 11</div>
+            <p class="src-line">Source: CBSE Board Paper 2024 (Mathematics Standard, 30/1/1)</p>
+            <p><strong>Concept Used:</strong> Elimination method for a pair of linear equations, followed by verification.</p>
+            <p>Make the coefficients of \(y\) equal in magnitude:<br />
+            Multiply the first equation by 7: \(49x - 14y = 35\).<br />
+            Multiply the second equation by 2: \(16x + 14y = 30\).<br />
+            Adding: \(65x = 65 \Rightarrow x = 1\).</p>
+            <p>Substitute \(x = 1\) in \(7x - 2y = 5\):<br />
+            \(7(1) - 2y = 5 \Rightarrow 2y = 2 \Rightarrow y = 1\).</p>
+            <p><strong>Verification:</strong> In \(8x + 7y = 15\): \(8(1) + 7(1) = 15\). &#10003;</p>
+            <div class="ans-final">Final Answer: \(x = 1,\ y = 1\)</div>
+          </div>
+
+          <div class="sol-card">
+            <div class="sol-title">Solution 12</div>
+            <p class="src-line">Source: Original question</p>
+            <p><strong>Concept Used:</strong> Substitution method â€” expressing one variable in terms of the other.</p>
+            <p>From \(3x - 2y = 5\): \(x = \frac{5 + 2y}{3}\).</p>
+            <p>Substitute into \(2x + 3y = 12\):<br />
+            \(2\left(\frac{5 + 2y}{3}\right) + 3y = 12\)<br />
+            Multiplying by 3: \(10 + 4y + 9y = 36 \Rightarrow 13y = 26 \Rightarrow y = 2\).</p>
+            <p>Then \(x = \frac{5 + 2(2)}{3} = \frac{9}{3} = 3\).</p>
+            <p><strong>Check:</strong> \(3(3) - 2(2) = 5\). &#10003;</p>
+            <div class="ans-final">Final Answer: \(x = 3,\ y = 2\)</div>
+          </div>
+
+          <div class="sol-card">
+            <div class="sol-title">Solution 13</div>
+            <p class="src-line">Source: Original question</p>
+            <p><strong>Concept Used:</strong> Condition for no solution: \(\frac{a_1}{a_2} = \frac{b_1}{b_2} \neq \frac{c_1}{c_2}\).</p>
+            <p>For \(kx + 2y = 3\) and \(6x + 4y = 11\):<br />
+            \(\frac{a_1}{a_2} = \frac{k}{6}\), \(\frac{b_1}{b_2} = \frac{2}{4} = \frac{1}{2}\), \(\frac{c_1}{c_2} = \frac{3}{11}\).</p>
+            <p>No solution requires \(\frac{k}{6} = \frac{1}{2} \Rightarrow k = 3\).<br />
+            Then \(\frac{c_1}{c_2} = \frac{3}{11} \neq \frac{1}{2}\), so the pair is inconsistent (parallel lines, no solution).</p>
+            <div class="ans-final">Final Answer: \(k = 3\)</div>
+          </div>
+
+          <div class="sol-card">
+            <div class="sol-title">Solution 14</div>
+            <p class="src-line">Source: Original question</p>
+            <p><strong>Concept Used:</strong> Forming equations from a real-life (cost) situation and solving them.</p>
+            <p>Let the cost of one pen be â‚¹\(p\) and one eraser be â‚¹\(e\).<br />
+            \(2p + 3e = 46\) &nbsp;â€¦(1)<br />
+            \(3p + 2e = 54\) &nbsp;â€¦(2)</p>
+            <p>Adding (1) and (2): \(5p + 5e = 100 \Rightarrow p + e = 20\). &nbsp;â€¦(3)<br />
+            From (3), \(p = 20 - e\). Putting this in (1):<br />
+            \(2(20 - e) + 3e = 46 \Rightarrow 40 + e = 46 \Rightarrow e = 6\).<br />
+            Hence \(p = 20 - 6 = 14\).</p>
+            <p><strong>Check:</strong> \(2(14) + 3(6) = 46\) and \(3(14) + 2(6) = 54\). &#10003;</p>
+            <div class="ans-final">Final Answer: One pen costs â‚¹14 and one eraser costs â‚¹6.</div>
+          </div>
+
+          <div class="sol-card">
+            <div class="sol-title">Solution 15</div>
+            <p class="src-line">Source: CBSE Board Paper 2024 (Mathematics Standard, 30/1/1)</p>
+            <p><strong>Concept Used:</strong> Age problems â€” expressing age conditions as linear equations.</p>
+            <p>Let Rashmi's present age be \(R\) years and Nazma's be \(N\) years.</p>
+            <p><strong>Three years ago:</strong> \(R - 3 = 3(N - 3) \Rightarrow R = 3N - 6\). &nbsp;â€¦(1)<br />
+            <strong>Ten years later:</strong> \(R + 10 = 2(N + 10) \Rightarrow R = 2N + 10\). &nbsp;â€¦(2)</p>
+            <p>From (1) and (2): \(3N - 6 = 2N + 10 \Rightarrow N = 16\).<br />
+            Then \(R = 2(16) + 10 = 42\).</p>
+            <p><strong>Check:</strong> 3 years ago: 39 and 13 (thrice) &#10003; &nbsp; 10 years later: 52 and 26 (twice) &#10003;</p>
+            <div class="ans-final">Final Answer: Rashmi is 42 years old and Nazma is 16 years old.</div>
+          </div>
+
+          <div class="sol-card">
+            <div class="sol-title">Solution 16</div>
+            <p class="src-line">Source: Original question</p>
+            <p><strong>Concept Used:</strong> Solving a pair graphically and computing an area bounded by the lines.</p>
+            <p>(a) Plotting points for each line:<br />
+            \(x - y = 1\): \((1, 0)\), \((0, -1)\), \((3, 2)\).<br />
+            \(x + y = 5\): \((5, 0)\), \((0, 5)\), \((3, 2)\).</p>
+            <p>Both lines pass through \((3, 2)\), and they are not parallel, so the unique solution is \((3, 2)\).<br />
+            <strong>Check:</strong> \(3 - 2 = 1\) and \(3 + 2 = 5\). &#10003;</p>
+            <p>(b) On the y-axis, \(x = 0\). The cuts are \((0, -1)\) for \(x - y = 1\) and \((0, 5)\) for \(x + y = 5\).<br />
+            The vertical base of the triangle, along the y-axis, has length \(5 - (-1) = 6\) units.<br />
+            The third vertex is \((3, 2)\), whose perpendicular distance from the y-axis is 3 units.<br />
+            Area \(= \frac{1}{2} \times 6 \times 3 = 9\) square units.</p>
+            <div class="ans-final">Final Answer: (a) Solution \((3, 2)\) &nbsp;&nbsp; (b) y-axis cuts \((0, -1)\) and \((0, 5)\); area \(= 9\) sq units</div>
+          </div>
+
+          <div class="sol-card">
+            <div class="sol-title">Solution 17</div>
+            <p class="src-line">Source: Original question</p>
+            <p><strong>Concept Used:</strong> Two-digit-number problems â€” expressing digits as variables.</p>
+            <p>(a) Let the tens digit be \(x\) and the units digit be \(y\). The number is \(10x + y\).<br />
+            <strong>Product condition:</strong> \(xy = 12\). &nbsp;â€¦(1)<br />
+            <strong>Interchange condition:</strong> \(10x + y + 36 = 10y + x \Rightarrow 9x + 36 = 9y \Rightarrow x - y = -4\). &nbsp;â€¦(2)</p>
+            <p>(b) From (2), \(y = x + 4\). Putting this in (1):<br />
+            \(x(x + 4) = 12 \Rightarrow x^2 + 4x - 12 = 0 \Rightarrow (x + 6)(x - 2) = 0 \Rightarrow x = 2\) (rejecting \(x = -6\) as a digit).<br />
+            So \(y = 6\), and the number is \(10(2) + 6 = 26\).</p>
+            <p><strong>Check:</strong> Product \(2 \times 6 = 12\) and \(26 + 36 = 62\) (digits interchanged). &#10003;</p>
+            <div class="ans-final">Final Answer: (a) \(xy = 12\) and \(x - y = -4\) &nbsp;&nbsp; (b) The number is 26.</div>
+          </div>
+
+          <div class="sol-card">
+            <div class="sol-title">Solution 18</div>
+            <p class="src-line">Source: Original question</p>
+            <p><strong>Concept Used:</strong> Perimeter and area of a rectangle from a linear-equations setup.</p>
+            <p>(a) Length \(y = 2\)(breadth) \(+ 3 \Rightarrow y = 2x + 3\). &nbsp;â€¦(1)<br />
+            Perimeter \(2(x + y) = 36 \Rightarrow x + y = 18\). &nbsp;â€¦(2)</p>
+            <p>(b) Substitute (1) in (2): \(x + (2x + 3) = 18 \Rightarrow 3x = 15 \Rightarrow x = 5\).<br />
+            Then \(y = 2(5) + 3 = 13\). Breadth is 5 cm and length is 13 cm.</p>
+            <p>(c) Area \(= 13 \times 5 = 65\) cmÂ².</p>
+            <p><strong>Check:</strong> Perimeter \(= 2(13 + 5) = 36\) cm. &#10003;</p>
+            <div class="ans-final">Final Answer: (a) \(y = 2x + 3,\ x + y = 18\) &nbsp;&nbsp; (b) length 13 cm, breadth 5 cm &nbsp;&nbsp; (c) area 65 cmÂ²</div>
+          </div>
+
+          <div class="sol-card">
+            <div class="sol-title">Solution 19(a)</div>
+            <p class="src-line">Source: Original question</p>
+            <p><strong>Concept Used:</strong> Graphical solution followed by algebraic verification.</p>
+            <p>Plotting points:<br />
+            \(x + y = 5\): \((5, 0)\), \((0, 5)\), \((2, 3)\).<br />
+            \(3x - y = 3\): \((1, 0)\), \((0, -3)\), \((2, 3)\).</p>
+            <p>The two lines meet at \((2, 3)\), so the solution is \((2, 3)\).</p>
+            <p><strong>Algebraic verification:</strong> Add the equations \(x + y = 5\) and \(3x - y = 3\):<br />
+            \(4x = 8 \Rightarrow x = 2\), then \(y = 5 - 2 = 3\).<br />
+            Check: \(3(2) - 3 = 3\). &#10003;</p>
+            <div class="ans-final">Final Answer: (a) \((2, 3)\)</div>
+          </div>
+
+          <div class="sol-card">
+            <div class="sol-title">Solution 19(b)</div>
+            <p class="src-line">Source: Original question</p>
+            <p><strong>Concept Used:</strong> Fraction problems â€” setting up equations from given conditions.</p>
+            <p>Let the fraction be \(\frac{n}{d}\).</p>
+            <p>Adding 1 to the numerator gives \(\frac{4}{5}\): \(\frac{n + 1}{d} = \frac{4}{5} \Rightarrow 5n + 5 = 4d\). &nbsp;â€¦(1)<br />
+            Adding 1 to the denominator gives \(\frac{1}{2}\): \(\frac{n}{d + 1} = \frac{1}{2} \Rightarrow 2n = d + 1\). &nbsp;â€¦(2)</p>
+            <p>From (2), \(d = 2n - 1\). Substitute in (1):<br />
+            \(5n + 5 = 4(2n - 1) \Rightarrow 5n + 5 = 8n - 4 \Rightarrow 9 = 3n \Rightarrow n = 3\).<br />
+            Then \(d = 2(3) - 1 = 5\).</p>
+            <p><strong>Check:</strong> \(\frac{3 + 1}{5} = \frac{4}{5}\) and \(\frac{3}{5 + 1} = \frac{1}{2}\). &#10003;</p>
+            <div class="ans-final">Final Answer: (b) The fraction is \(\frac{3}{5}\).</div>
+          </div>
+
+          <div class="sol-card">
+            <div class="sol-title">Solution 20(a)</div>
+            <p class="src-line">Source: CBSE Board Paper 2024 (Mathematics Standard, 30/2/1)</p>
+            <p><strong>Concept Used:</strong> Graphical solution of a pair of linear equations.</p>
+            <p>Plotting points:<br />
+            \(3x + y + 4 = 0\) i.e. \(y = -3x - 4\): \((-2, 2)\), \((-1, -1)\), \((0, -4)\).<br />
+            \(3x - y + 2 = 0\) i.e. \(y = 3x + 2\): \((-2, -4)\), \((-1, -1)\), \((0, 2)\).</p>
+            <p>The two lines intersect at \((-1, -1)\), so the solution is \((-1, -1)\).</p>
+            <p><strong>Check:</strong> \(3(-1) + (-1) + 4 = 0\) and \(3(-1) - (-1) + 2 = 0\). &#10003;</p>
+            <div class="ans-final">Final Answer: (a) \((-1, -1)\)</div>
+          </div>
+
+          <div class="sol-card">
+            <div class="sol-title">Solution 20(b)</div>
+            <p class="src-line">Source: CBSE Board Paper 2024 (Mathematics Standard, 30/2/1)</p>
+            <p><strong>Concept Used:</strong> Test-marks problem â€” forming equations with right and wrong answers.</p>
+            <p>Let the number of right answers be \(x\), wrong answers be \(y\), so total questions \(= x + y\).</p>
+            <p>First scheme: \(3x - y = 40\). &nbsp;â€¦(1)<br />
+            Second scheme: \(4x - 2y = 50\). &nbsp;â€¦(2)</p>
+            <p>From (1), \(y = 3x - 40\). Substitute in (2):<br />
+            \(4x - 2(3x - 40) = 50 \Rightarrow 4x - 6x + 80 = 50 \Rightarrow 2x = 30 \Rightarrow x = 15\).<br />
+            Then \(y = 3(15) - 40 = 5\).</p>
+            <p>Total questions \(= x + y = 15 + 5 = 20\).</p>
+            <p><strong>Check:</strong> \(3(15) - 5 = 40\) and \(4(15) - 2(5) = 50\). &#10003;</p>
+            <div class="ans-final">Final Answer: (b) 20 questions (15 right and 5 wrong)</div>
+          </div>
+
+          <div class="sol-card">
+            <div class="sol-title">Solution 21</div>
+            <p class="src-line">Source: CBSE Board Paper 2024 (Mathematics Standard, 30/5/1) â€” Case Study (scene text lightly abridged)</p>
+            <p><strong>Concept Used:</strong> Interpreting a real-life situation as a pair of linear equations.</p>
+            <p>(a) With \(x\) children and \(y\) adults:<br />
+            <strong>Total tickets:</strong> \(x + y = 300\). &nbsp;â€¦(1)<br />
+            <strong>Total collection:</strong> \(150x + 250y = 55000\). &nbsp;â€¦(2)</p>
+            <p>(b) From (1), \(x = 300 - y\). Substitute in (2):<br />
+            \(150(300 - y) + 250y = 55000 \Rightarrow 45000 + 100y = 55000 \Rightarrow y = 100\).<br />
+            Then \(x = 300 - 100 = 200\).</p>
+            <p><strong>Check:</strong> \(200 + 100 = 300\) tickets and \(150(200) + 250(100) = 30000 + 25000 = 55000\). &#10003;</p>
+            <div class="ans-final">Final Answer: (a) \(x + y = 300\) and \(150x + 250y = 55000\) &nbsp;&nbsp; (b) 200 children visited the park.</div>
+          </div>
+
+        </div>
+      </details>
+
+    </article>
+
+    <nav class="resource-nav" aria-label="Chapter resources">
+      <a href="/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/notes/"><i class="fas fa-book-open"></i> Notes</a>
+      <a href="/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/practice-paper/" class="is-active"><i class="fas fa-file-lines"></i> Practice Paper</a>
+      <a href="/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/quiz/"><i class="fas fa-bullseye"></i> Quiz</a>
+      <a href="/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+    </nav>
+
+    <nav class="resource-nav" aria-label="Related chapters">
+      <a href="/cbse-study-material/class-10/mathematics/polynomials/practice-paper/"><i class="fas fa-arrow-right"></i> Chapter 2: Polynomials Practice Paper</a>
+      <a href="/cbse-study-material/class-10/mathematics/quadratic-equations/"><i class="fas fa-arrow-right"></i> Chapter 4: Quadratic Equations</a>
+      <a href="/cbse-study-material/class-10/mathematics/arithmetic-progressions/"><i class="fas fa-arrow-right"></i> Chapter 5: Arithmetic Progressions</a>
+      <a href="/cbse-study-material/class-10/mathematics/"><i class="fas fa-arrow-right"></i> Class 10 Mathematics</a>
+    </nav>
+
+    <a class="sm-back" href="/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/"><i class="fas fa-arrow-left"></i> Back to Pair of Linear Equations in Two Variables</a>
+    <a class="sm-back" href="/cbse-study-material/class-10/mathematics/" style="margin-left: 12px;"><i class="fas fa-arrow-left"></i> All Mathematics chapters</a>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-about">
+      <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+      <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#courses">Courses</a></li>
+        <li><a href="/cbse-study-material/">Study Material</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Popular Searches</h4>
+      <ul>
+        <li><a href="/cbse-study-material/">CBSE Study Material</a></li>
+        <li><a href="/best-tuition-centre-hulimavu/">Best Tuition Centre in Hulimavu</a></li>
+        <li><a href="/cbse-tuition-hulimavu/">CBSE Tuition in Hulimavu</a></li>
+        <li><a href="/maths-tuition-hulimavu/">Maths Tuition in Hulimavu</a></li>
+        <li><a href="/science-tuition-hulimavu/">Science Tuition in Hulimavu</a></li>
+        <li><a href="/class-10-tuition-hulimavu/">Class 10 Tuition Hulimavu</a></li>
+        <li><a href="/class-12-tuition-hulimavu/">Class 12 Tuition Hulimavu</a></li>
+        <li><a href="/tuition-centre-bangalore/">Best Tuition Centre in Bangalore</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="/cbse-study-material/sm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/supabase-config.js"></script>
+<script src="/supabase-auth.js"></script>
+<script src="/supabase-nav.js" defer></script>
+<script src="/chatbot/chatbot-loader.js" defer></script><script>
+/* Question metadata â€” the paper's structured question bank.
+Fields: id, section, type (mcq|ar|sa|la|case), question (plain text), options (mcq only),
+correctAnswer (index or short text), marks, difficulty, competency (competency|application|reasoning|conceptual|case), topic,
+sourceType (PYQ|Original|Mixed), sourceYear, sourceExam, sourceNote. */
+var QUESTIONS = [
+  {id:"q1", section:"A", type:"mcq", question:"If x = 1 and y = 2 is a solution of 2x - 3y + a = 0 and 2x + 3y - b = 0, which relation holds between a and b?", options:["a = b","2a = b","a = 2b","3a = 2b"], correctAnswer:1, marks:1, difficulty:"Moderate", competency:"competency", topic:"solution-substitution", sourceType:"PYQ", sourceYear:"2025", sourceExam:"CBSE 2025 (30/1/1)", sourceNote:"CBSE Board Paper 2025 (Mathematics Standard, 30/1/1)"},
+  {id:"q2", section:"A", type:"mcq", question:"For which value of p does px + 3y = p - 3 and 12x + py = p have infinitely many solutions?", options:["6 or -6","6 only","-6 only","6 or 0"], correctAnswer:1, marks:1, difficulty:"Moderate", competency:"competency", topic:"consistency-ratios", sourceType:"PYQ", sourceYear:"2025", sourceExam:"CBSE 2025 (30/4/1)", sourceNote:"CBSE Board Paper 2025 (Mathematics Standard, 30/4/1)"},
+  {id:"q3", section:"A", type:"mcq", question:"The value of k for which 3x - y + 8 = 0 and 6x - ky + 16 = 0 have infinitely many solutions is", options:["-2","2","1/2","-1/2"], correctAnswer:1, marks:1, difficulty:"Moderate", competency:"conceptual", topic:"consistency-ratios", sourceType:"PYQ", sourceYear:"2024", sourceExam:"CBSE 2024 (30/3/1)", sourceNote:"CBSE Board Paper 2024 (Mathematics Standard, 30/3/1)"},
+  {id:"q4", section:"A", type:"mcq", question:"What type of lines are represented by 3x + 4y = 5 and 6x + 8y = 7?", options:["Parallel","Intersecting","Coincident","Perpendicular"], correctAnswer:0, marks:1, difficulty:"Moderate", competency:"conceptual", topic:"consistency-ratios", sourceType:"PYQ", sourceYear:"2024", sourceExam:"CBSE 2024 (30/5/1)", sourceNote:"CBSE Board Paper 2024 (Mathematics Standard, 30/5/1)"},
+  {id:"q5", section:"A", type:"mcq", question:"A pair of linear equations whose graphs are two distinct parallel lines has", options:["A unique solution","Infinitely many solutions","No solution","Exactly two solutions"], correctAnswer:2, marks:1, difficulty:"Easy", competency:"reasoning", topic:"graph-interpretation", sourceType:"Original", sourceYear:null, sourceExam:null, sourceNote:null},
+  {id:"q6", section:"A", type:"mcq", question:"The graphs of a pair of linear equations intersect at the single point (3, -2). How many solutions does the pair have?", options:["No solution","Exactly one solution","Infinitely many solutions","Two solutions"], correctAnswer:1, marks:1, difficulty:"Easy", competency:"conceptual", topic:"graph-interpretation", sourceType:"Original", sourceYear:null, sourceExam:null, sourceNote:null},
+  {id:"q7", section:"A", type:"mcq", question:"If x + y = 7 and x - y = 1, then the point (x, y) is", options:["(3, 4)","(4, 3)","(7, 1)","(1, 7)"], correctAnswer:1, marks:1, difficulty:"Moderate", competency:"competency", topic:"elimination-method", sourceType:"Original", sourceYear:null, sourceExam:null, sourceNote:null},
+  {id:"q8", section:"A", type:"mcq", question:"The pair kx + 2y = 5 and 3x + 6y = 10 has a unique solution when", options:["k = 1","k = 3","k != 1","k != 3"], correctAnswer:2, marks:1, difficulty:"Moderate", competency:"reasoning", topic:"consistency-ratios", sourceType:"Original", sourceYear:null, sourceExam:null, sourceNote:null},
+  {id:"q9", section:"B", type:"ar", question:"Assertion: px + 3y + 59 = 0 and 2x + 6y + 118 = 0 have infinitely many solutions when p = 1. Reason: The pair has a unique solution when p != 1.", correctAnswer:"b", marks:1, difficulty:"Challenging", competency:"reasoning", topic:"consistency-ratios", sourceType:"PYQ", sourceYear:"2025", sourceExam:"CBSE 2025 (30/2/1)", sourceNote:"CBSE Board Paper 2025 (Mathematics Standard, 30/2/1)"},
+  {id:"q10", section:"B", type:"ar", question:"Assertion: 2x + 5y = 11 and 4x + 10y = 22 have infinitely many solutions. Reason: The graphs of these equations are coincident lines.", correctAnswer:"a", marks:1, difficulty:"Moderate", competency:"reasoning", topic:"consistency-ratios", sourceType:"Original", sourceYear:null, sourceExam:null, sourceNote:null},
+  {id:"q11", section:"C", type:"sa", question:"Solve 7x - 2y = 5 and 8x + 7y = 15 and verify the answer.", correctAnswer:"x = 1, y = 1", marks:2, difficulty:"Moderate", competency:"conceptual", topic:"elimination-method", sourceType:"PYQ", sourceYear:"2024", sourceExam:"CBSE 2024 (30/1/1)", sourceNote:"CBSE Board Paper 2024 (Mathematics Standard, 30/1/1)"},
+  {id:"q12", section:"C", type:"sa", question:"Solve 3x - 2y = 5 and 2x + 3y = 12 by the substitution method.", correctAnswer:"x = 3, y = 2", marks:2, difficulty:"Easy", competency:"conceptual", topic:"substitution-method", sourceType:"Original", sourceYear:null, sourceExam:null, sourceNote:null},
+  {id:"q13", section:"C", type:"sa", question:"For what value of k will kx + 2y = 3 and 6x + 4y = 11 have no solution?", correctAnswer:"k = 3", marks:2, difficulty:"Easy", competency:"reasoning", topic:"consistency-ratios", sourceType:"Original", sourceYear:null, sourceExam:null, sourceNote:null},
+  {id:"q14", section:"C", type:"sa", question:"Two pens and three erasers cost Rs 46; three pens and two erasers cost Rs 54. Find the cost of one pen and one eraser.", correctAnswer:"Pen Rs 14, eraser Rs 6", marks:2, difficulty:"Moderate", competency:"application", topic:"word-problems-cost", sourceType:"Original", sourceYear:null, sourceExam:null, sourceNote:null},
+  {id:"q15", section:"D", type:"sa", question:"Three years ago, Rashmi was thrice as old as Nazma. Ten years later, Rashmi will be twice as old as Nazma. Find their present ages.", correctAnswer:"Rashmi 42, Nazma 16", marks:3, difficulty:"Challenging", competency:"application", topic:"word-problems-age", sourceType:"PYQ", sourceYear:"2024", sourceExam:"CBSE 2024 (30/1/1)", sourceNote:"CBSE Board Paper 2024 (Mathematics Standard, 30/1/1)"},
+  {id:"q16", section:"D", type:"sa", question:"Solve x - y = 1 and x + y = 5 graphically; find the y-axis cuts and the area of the triangle formed by the two lines and the y-axis.", correctAnswer:"Solution (3, 2); cuts (0, -1) and (0, 5); area 9 sq units", marks:3, difficulty:"Moderate", competency:"application", topic:"graphical-method", sourceType:"Original", sourceYear:null, sourceExam:null, sourceNote:null},
+  {id:"q17", section:"D", type:"sa", question:"A two-digit number: the product of its digits is 12, and adding 36 to it interchanges the digits. Find the number.", correctAnswer:"xy = 12, x - y = -4; number is 26", marks:3, difficulty:"Challenging", competency:"application", topic:"word-problems-digits", sourceType:"Original", sourceYear:null, sourceExam:null, sourceNote:null},
+  {id:"q18", section:"D", type:"sa", question:"Perimeter of a rectangle is 36 cm and length is 3 cm more than twice the breadth. Form equations, find length and breadth, and the area.", correctAnswer:"y = 2x + 3, x + y = 18; length 13 cm, breadth 5 cm; area 65 cm^2", marks:3, difficulty:"Challenging", competency:"application", topic:"word-problems-geometry", sourceType:"Original", sourceYear:null, sourceExam:null, sourceNote:null},
+  {id:"q19", section:"E", type:"la", question:"(a) Solve x + y = 5 and 3x - y = 3 graphically and verify algebraically. OR (b) A fraction becomes 4/5 when 1 is added to its numerator and 1/2 when 1 is added to its denominator. Find the fraction.", correctAnswer:"(a) (2, 3)  OR  (b) 3/5", marks:4, difficulty:"Challenging", competency:"application", topic:"graphical-method", sourceType:"Original", sourceYear:null, sourceExam:null, sourceNote:null},
+  {id:"q20", section:"E", type:"la", question:"(a) Solve 3x + y + 4 = 0 and 3x - y + 2 = 0 graphically. OR (b) Tara scored 40 marks with 3 marks per right answer and -1 per wrong; under another scheme she would score 50. Find the total number of questions attempted.", correctAnswer:"(a) (-1, -1)  OR  (b) 20 questions (15 right, 5 wrong)", marks:4, difficulty:"Challenging", competency:"application", topic:"word-problems-marks", sourceType:"PYQ", sourceYear:"2024", sourceExam:"CBSE 2024 (30/2/1)", sourceNote:"CBSE Board Paper 2024 (Mathematics Standard, 30/2/1)"},
+  {id:"q21", section:"F", type:"case", question:"Case: Essel World tickets are Rs 150 per child and Rs 250 per adult. On a day 300 tickets were sold and Rs 55,000 collected. (a) Form the pair of linear equations. (b) Find the number of children.", correctAnswer:"(a) x + y = 300, 150x + 250y = 55000  (b) 200 children", marks:2, difficulty:"Challenging", competency:"competency", topic:"case-interpretation", sourceType:"PYQ", sourceYear:"2024", sourceExam:"CBSE 2024 (30/5/1)", sourceNote:"CBSE Board Paper 2024 (Mathematics Standard, 30/5/1) â€” Case Study, scene text lightly abridged"}
+];
+</script>
+<script>
+function toggleReveal(id, btn) {
+  var el = document.getElementById(id);
+  if (!el) return;
+  var willOpen = !el.open;
+  el.open = willOpen;
+  if (btn) {
+    var label = id === 'answerKey' ? (willOpen ? 'Hide Answer Key' : 'Reveal Answer Key') : (willOpen ? 'Hide Detailed Solutions' : 'Reveal Detailed Solutions');
+    btn.innerHTML = '<i class="fas ' + (willOpen ? 'fa-eye-slash' : id === 'answerKey' ? 'fa-key' : 'fa-lightbulb') + '"></i> ' + label;
+  }
+}
+function printPaper() {
+  var key = document.getElementById('answerKey');
+  var sol = document.getElementById('solutions');
+  if (key && !key.open) key.open = true;
+  if (sol && !sol.open) sol.open = true;
+  window.print();
+}
+</script>
+</body>
+</html>

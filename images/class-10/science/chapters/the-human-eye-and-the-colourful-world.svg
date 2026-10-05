@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 230" role="img" aria-label="The Human Eye and the Colourful World - eye with prism spectrum">
+  <rect width="400" height="230" fill="#ffffff"/>
+  <polygon points="310,45 355,70 310,95" fill="none" stroke="#1a237e" stroke-width="7" stroke-linejoin="round"/>
+  <line x1="282" y1="48" x2="310" y2="62" stroke="#f9a825" stroke-width="6"/>
+  <line x1="343" y1="82" x2="352" y2="110" stroke="#f9a825" stroke-width="6"/>
+  <line x1="351" y1="80" x2="367" y2="102" stroke="#1a237e" stroke-width="6"/>
+  <line x1="332" y1="92" x2="340" y2="116" stroke="#1a237e" stroke-width="6"/>
+  <path d="M150 80 L90 40 Q55 20 40 30 Z" fill="#1a237e"/>
+  <path d="M150 80 L250 80 Q240 60 210 118 Z" fill="#1a237e"/>
+  <ellipse cx="195" cy="105" rx="105" ry="70" fill="none" stroke="#1a237e" stroke-width="8"/>
+  <circle cx="195" cy="105" r="34" fill="none" stroke="#1a237e" stroke-width="7"/>
+  <circle cx="195" cy="105" r="14" fill="#f9a825"/>
+</svg>

@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CBSE Class 10 Maths Arithmetic Progressions Quiz | Chapter 5 | Vyasa Academy</title>
+  <meta name="description" content="Practice CBSE Class 10 Maths Arithmetic Progressions with 20 MCQs in 15 minutes: verified CBSE board PYQs plus original exam-style questions on the nth term, common difference and sum of the first n terms of an A.P., with hints and solutions." />
+  <link rel="canonical" href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/arithmetic-progressions/quiz/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vyasa Academy" />
+  <meta property="og:title" content="CBSE Class 10 Maths Arithmetic Progressions Quiz | Chapter 5 | Vyasa Academy" />
+  <meta property="og:description" content="Practice CBSE Class 10 Maths Arithmetic Progressions with 20 MCQs in 15 minutes: verified CBSE board PYQs plus original exam-style questions on the nth term, common difference and sum of the first n terms of an A.P., with hints and solutions." />
+  <meta property="og:url" content="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/arithmetic-progressions/quiz/" />
+  <meta property="og:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CBSE Class 10 Maths Arithmetic Progressions Quiz | Chapter 5 | Vyasa Academy" />
+  <meta name="twitter:description" content="Practice CBSE Class 10 Maths Arithmetic Progressions with 20 MCQs in 15 minutes: verified CBSE board PYQs plus original exam-style questions on the nth term, common difference and sum of the first n terms of an A.P., with hints and solutions." />
+  <meta name="twitter:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","itemListElement":[{"position":1,"name":"Home","item":"https://www.vyasaacademy.in/","@type":"ListItem"},{"position":2,"name":"CBSE Study Material","item":"https://www.vyasaacademy.in/cbse-study-material/","@type":"ListItem"},{"position":3,"name":"Class 10","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/","@type":"ListItem"},{"position":4,"name":"Mathematics","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/","@type":"ListItem"},{"position":5,"name":"Arithmetic Progressions","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/arithmetic-progressions/","@type":"ListItem"},{"position":6,"name":"Quiz","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/arithmetic-progressions/quiz/","@type":"ListItem"}],"@type":"BreadcrumbList"}
+  </script>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+      processEscapes: true
+    }
+  };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <style>
+  .quiz-app { }
+  .quiz-facts { display: flex; flex-wrap: wrap; gap: 10px; margin: 4px 0 16px; }
+  .qf-chip { flex: 1 1 auto; min-width: 120px; border: 1px solid #e5e7eb; border-radius: 10px; padding: 10px 12px; background: #fff; }
+  .qf-chip .qf-n { font-size: 1.35rem; font-weight: 800; color: var(--primary); }
+  .qf-chip .qf-l { font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; color: var(--gray); }
+
+  .quiz-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin: 6px 0 14px; }
+  .quiz-progress-wrap { flex: 1 1 100%; }
+  .quiz-counter { font-weight: 800; color: var(--primary); }
+  .quiz-timer { display: inline-flex; align-items: center; gap: 8px; background: #eff6ff; border: 1px solid #bfdbfe; color: #1d4ed8; border-radius: 999px; padding: 6px 14px; font-weight: 700; }
+  .quiz-timer.warn { background: #fefce8; border-color: #fde68a; color: #a16207; }
+  .quiz-timer.danger { background: #fef2f2; border-color: #fecaca; color: #b91c1c; }
+  .progress-track { height: 12px; background: #e5e7eb; border-radius: 999px; overflow: hidden; }
+  .progress-fill { height: 100%; width: 5%; background: var(--primary); border-radius: 999px; transition: width 0.25s ease; }
+
+  .quiz-q { display: none; border: 1px solid #e5e7eb; border-radius: var(--radius); padding: 20px 22px; margin: 0 0 18px; }
+  .quiz-q.is-active { display: block; }
+  .quiz-q legend, .q-num { font-weight: 800; color: var(--primary); }
+  .quiz-q .q-diff { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; color: var(--gray); margin-left: 8px; }
+  .quiz-q .q-text { font-size: 1.06rem; font-weight: 600; margin: 8px 0 8px; color: var(--dark); }
+
+  .q-meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 12px; }
+  .q-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 0.74rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.4px; padding: 4px 12px; border-radius: 999px; }
+  .q-badge.pyq { background: #dcfce7; color: #15803d; border: 1px solid #86efac; }
+  .q-badge.original { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
+  .q-topic { font-size: 0.74rem; font-weight: 700; padding: 4px 12px; border-radius: 999px; background: #f3f4f6; color: #374151; border: 1px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.4px; }
+
+  .q-fig { margin: 6px 0 12px; }
+  .q-fig svg { max-width: 280px; width: 100%; height: auto; border: 1px solid #e5e7eb; border-radius: 10px; background: #fff; }
+  .q-fig figcaption { font-size: 0.85rem; color: var(--gray); margin-top: 4px; }
+
+  .opt { display: flex; align-items: flex-start; gap: 10px; border: 1px solid #e5e7eb; border-radius: 10px; padding: 12px 14px; margin: 8px 0; cursor: pointer; transition: var(--transition); background: #fff; }
+  .opt:hover { border-color: var(--primary); background: #eef2ff; }
+  .opt input { position: absolute; opacity: 0; pointer-events: none; }
+  .opt .opt-radio { flex-shrink: 0; width: 20px; height: 20px; margin-top: 2px; border: 2px solid #9ca3af; border-radius: 50%; position: relative; }
+  .opt input:focus-visible + .opt-radio { outline: 3px solid #fbbf24; outline-offset: 2px; }
+  .opt input:checked + .opt-radio { border-color: var(--primary); }
+  .opt input:checked + .opt-radio::after { content: ""; position: absolute; inset: 3px; background: var(--primary); border-radius: 50%; }
+  .opt .opt-key { flex-shrink: 0; font-weight: 800; color: var(--primary); width: 22px; }
+  .opt .opt-val { flex: 1; }
+
+  .opt.answered-correct { border-color: #16a34a; background: #f0fdf4; }
+  .opt.answered-wrong { border-color: #dc2626; background: #fef2f2; }
+
+  .quiz-controls { display: flex; flex-wrap: wrap; gap: 10px; margin: 8px 0 4px; }
+  .quiz-controls button, .quiz-actions button { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 22px; border-radius: var(--radius); border: 2px solid var(--primary); background: var(--primary); color: #fff; font-family: inherit; font-weight: 700; font-size: 0.97rem; cursor: pointer; transition: var(--transition); }
+  .quiz-controls button.secondary, .quiz-actions button.secondary { background: #fff; color: var(--primary); }
+  .quiz-controls button:disabled { opacity: 0.45; cursor: not-allowed; }
+  .quiz-controls button:focus-visible, .quiz-actions button:focus-visible { outline: 3px solid #fbbf24; outline-offset: 2px; }
+  .quiz-controls button.marked, .quiz-actions button.marked { background: #fff7ed; color: #c2410c; border-color: #fb923c; }
+
+  .quiz-nav-wrap { border: 1px solid #e5e7eb; border-radius: var(--radius); padding: 14px 16px; margin: 0 0 18px; background: #fafafa; }
+  .quiz-nav-wrap h3 { margin: 0 0 6px; font-size: 0.95rem; }
+  .quiz-nav { display: grid; grid-template-columns: repeat(10, 1fr); gap: 8px; }
+  .quiz-nav button { min-height: 38px; border: 2px solid #e5e7eb; border-radius: 8px; background: #fff; font-family: inherit; font-weight: 700; color: var(--dark); cursor: pointer; font-size: 0.9rem; transition: var(--transition); }
+  .quiz-nav button:hover { border-color: var(--primary); }
+  .quiz-nav button.nav-current { border-color: var(--primary); background: var(--primary); color: #fff; }
+  .quiz-nav button.nav-answered { background: #ecfdf5; border-color: #6ee7b7; color: #047857; }
+  .quiz-nav button.nav-answered.nav-current { background: var(--primary); border-color: var(--primary); color: #fff; }
+  .quiz-nav button.nav-reviewed { box-shadow: inset 0 0 0 2px #fb923c; }
+  .quiz-nav-legend { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 10px; font-size: 0.82rem; color: var(--gray); }
+  .quiz-nav-legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .legend-dot { width: 12px; height: 12px; border-radius: 3px; border: 1px solid #d1d5db; display: inline-block; background: #fff; }
+  .legend-dot.answered { background: #6ee7b7; border-color: #6ee7b7; }
+  .legend-dot.reviewed { box-shadow: inset 0 0 0 2px #fb923c; }
+
+  .quiz-panel { display: none; }
+  .quiz-panel.is-active { display: block; }
+
+  .result-card { text-align: center; background: #fff; border: 1px solid #e5e7eb; border-radius: var(--radius); padding: 30px 24px; margin: 10px 0 20px; }
+  .result-card .score-big { font-size: 2.8rem; font-weight: 800; color: var(--primary); }
+  .result-card .pct-big { font-size: 1.4rem; font-weight: 800; color: var(--accent-dark); margin: 6px 0 8px; }
+  .result-card .level-line { display: inline-block; font-weight: 800; color: #1d4ed8; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 999px; padding: 6px 16px; margin: 4px 0 12px; }
+  .result-card .msg { font-size: 1.02rem; color: var(--dark); max-width: 480px; margin: 0 auto; }
+
+  .result-summary { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 20px 0; }
+  .rs-chip { min-width: 120px; border: 1px solid #e5e7eb; border-radius: 10px; padding: 12px; background: #fff; }
+  .rs-chip .rs-n { font-size: 1.6rem; font-weight: 800; color: var(--dark); }
+  .rs-chip .rs-l { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; color: var(--gray); }
+  .rs-chip.good .rs-n { color: #16a34a; }
+  .rs-chip.warn .rs-n { color: #b91c1c; }
+
+  .explanations { margin: 24px 0 10px; }
+  .exp-card { border: 1px solid #e5e7eb; border-radius: var(--radius); margin: 12px 0; padding: 16px 18px; background: #fff; }
+  .exp-card .exp-head { font-weight: 800; color: var(--dark); margin-bottom: 8px; }
+  .exp-card .exp-head .exp-state { margin-left: 8px; font-size: 0.82rem; padding: 2px 10px; border-radius: 999px; font-weight: 700; }
+  .exp-state.ok { background: #dcfce7; color: #15803d; }
+  .exp-state.no { background: #fee2e2; color: #b91c1c; }
+  .exp-card .exp-row { margin: 4px 0; }
+  .exp-card .exp-row .exp-label { font-weight: 700; color: var(--gray); }
+  .exp-card .exp-note { margin-top: 8px; padding-top: 8px; border-top: 1px dashed #e5e7eb; color: var(--dark); }
+  .exp-meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0 10px; }
+  .exp-opts { margin: 8px 0; }
+  .exp-opts .opt { margin: 6px 0; cursor: default; }
+  .exp-opts .opt:hover { border-color: #e5e7eb; background: #fff; }
+  .exp-opts .opt.answered-correct:hover { border-color: #16a34a; background: #f0fdf4; }
+  .exp-opts .opt.answered-wrong:hover { border-color: #dc2626; background: #fef2f2; }
+
+  .quiz-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0; }
+
+  dialog { border: none; border-radius: var(--radius); padding: 0; box-shadow: 0 20px 60px rgba(0,0,0,0.25); max-width: 460px; width: 92%; }
+  dialog::backdrop { background: rgba(0,0,0,0.45); }
+  .modal-body { padding: 22px 24px; }
+  .modal-body h3 { margin: 0 0 10px; font-size: 1.15rem; }
+  .modal-actions { display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
+  .modal-actions button { min-height: 44px; padding: 10px 18px; border-radius: var(--radius); border: 2px solid var(--primary); background: var(--primary); color: #fff; font-family: inherit; font-weight: 700; cursor: pointer; }
+  .modal-actions button.secondary { background: #fff; color: var(--primary); }
+
+  .timed-note { background: #eef2ff; border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 12px 16px; margin: 4px 0 16px; font-size: 0.95rem; }
+  .notice-box { background: #fffbeb; border: 1px solid #fde68a; border-radius: var(--radius); padding: 14px 18px; margin: 4px 0 18px; font-size: 0.95rem; }
+  .notice-box .box-label { font-weight: 800; color: #b45309; margin-bottom: 4px; }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+  .resource-nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
+  .resource-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: var(--radius); border: 2px solid #e5e7eb; font-weight: 600; font-size: 0.92rem; color: var(--dark); background: var(--white); transition: var(--transition); }
+  .resource-nav a:hover, .resource-nav a.is-active { border-color: var(--primary); background: var(--primary); color: var(--white); }
+
+  .sm-back { display: inline-flex; align-items: center; gap: 8px; margin-top: 30px; padding: 10px 0; color: var(--primary); font-weight: 600; }
+  .sm-back:hover { color: var(--accent-dark); }
+
+  @media (max-width: 640px) {
+    .quiz-q { padding: 16px 14px; }
+    .quiz-q .q-text { font-size: 1rem; }
+    .opt { padding: 10px 12px; }
+    .result-card .score-big { font-size: 2.2rem; }
+    .quiz-controls button, .quiz-actions button { flex: 1 1 100%; }
+    .quiz-nav { grid-template-columns: repeat(5, 1fr); }
+  }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="/" class="logo"><i class="fas fa-graduation-cap"></i> Vyasa Academy</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="/">Home</a>
+      <a href="/#courses">Courses</a>
+      <a href="/cbse-study-material/" class="active">Study Material</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main class="sm-page">
+  <div class="container sm-container">
+    <nav class="sm-crumbs" aria-label="Breadcrumb">
+      <a href="https://www.vyasaacademy.in/">Home</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/">CBSE Study Material</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/">Class 10</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/">Mathematics</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/arithmetic-progressions/">Arithmetic Progressions</a> /
+      Quiz
+    </nav>
+
+    <section class="sm-hero sm-hero-slim">
+      <p class="sm-eyebrow">CBSE Class 10 &middot; Mathematics &middot; Chapter 5</p>
+      <h1>Class 10 Maths &#8211; Arithmetic Progressions Quiz</h1>
+      <p>Answer 20 multiple-choice questions on recognising arithmetic progressions, the common difference, the nth term, the number of terms and the sum of the first n terms, including real-life applications. Each question is worth 1 mark and you get 15 minutes.</p>
+    </section>
+
+    <nav class="resource-nav" aria-label="Chapter resources">
+      <a href="/cbse-study-material/class-10/mathematics/arithmetic-progressions/notes/"><i class="fas fa-book-open"></i> Notes</a>
+      <a href="/cbse-study-material/class-10/mathematics/arithmetic-progressions/practice-paper/"><i class="fas fa-file-lines"></i> Practice Paper</a>
+      <a class="is-active" href="/cbse-study-material/class-10/mathematics/arithmetic-progressions/quiz/"><i class="fas fa-bullseye"></i> Quiz</a>
+      <a href="/cbse-study-material/class-10/mathematics/arithmetic-progressions/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+    </nav>
+
+    <section class="quiz-app" id="quizApp" aria-label="Arithmetic Progressions interactive quiz">
+
+      <div id="startView">
+        <div class="quiz-facts" aria-label="Quiz information">
+          <div class="qf-chip"><div class="qf-n">20</div><div class="qf-l">Questions</div></div>
+          <div class="qf-chip"><div class="qf-n">20</div><div class="qf-l">Marks</div></div>
+          <div class="qf-chip"><div class="qf-n">1</div><div class="qf-l">Mark / Question</div></div>
+          <div class="qf-chip"><div class="qf-n">15</div><div class="qf-l">Minutes</div></div>
+        </div>
+
+        <p class="timed-note"><i class="fas fa-stopwatch"></i> This quiz is <strong>timed</strong>. You have <strong>15 minutes</strong> to answer all 20 questions. Warnings appear at the 5, 2 and 1 minute marks, and the quiz submits automatically when time runs out.</p>
+
+        <div class="notice-box">
+          <div class="box-label">About the questions</div>
+          16 of the 20 questions are genuine CBSE board previous year questions and carry the label <span class="q-badge pyq">CBSE PYQ &middot; [year]</span>. The remaining 4 questions are original items written by Vyasa Academy in the CBSE board pattern and carry the label <span class="q-badge original">ORIGINAL &middot; CBSE EXAM-STYLE</span>. All questions stay within the Arithmetic Progressions scope of this chapter: recognising A.P.s, the common difference, the nth term, the number of terms, and the sum of the first n terms.
+        </div>
+
+        <noscript>
+          <div class="notice-box" role="alert">This interactive quiz requires JavaScript. You can use the chapter <a href="/cbse-study-material/class-10/mathematics/arithmetic-progressions/practice-paper/">practice paper</a> instead.</div>
+        </noscript>
+
+        <div class="quiz-actions">
+          <button type="button" id="btnStart"><i class="fas fa-play" aria-hidden="true"></i> Start Quiz</button>
+        </div>
+      </div>
+
+      <div id="quizView" style="display:none;">
+        <div class="quiz-top">
+          <span class="quiz-counter" id="quizCounter" aria-live="polite">Question 1 of 20</span>
+          <span class="quiz-timer" id="quizTimer" aria-live="off"><i class="fas fa-stopwatch" aria-hidden="true"></i><span id="quizTimerText">Time Remaining: 15:00</span><span class="visually-hidden" id="timerLive" aria-live="assertive"></span></span>
+        </div>
+        <div class="quiz-progress-wrap">
+          <div class="progress-track" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="20" aria-valuenow="1" id="progressBar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <span class="visually-hidden" id="progressText">At question 1 of 20</span>
+        </div>
+
+        <div class="quiz-nav-wrap">
+          <h3>Question Navigator</h3>
+          <div class="quiz-nav" id="quizNav" aria-label="Question navigation"></div>
+          <div class="quiz-nav-legend" aria-hidden="true">
+            <span><span class="legend-dot"></span> Not attempted</span>
+            <span><span class="legend-dot answered"></span> Answered</span>
+            <span><span class="legend-dot reviewed"></span> Marked for review</span>
+          </div>
+        </div>
+
+        <form id="quizForm" novalidate>
+          <fieldset class="quiz-q" id="q1" aria-labelledby="q1label">
+            <legend id="q1label"><span class="q-num">Question 1</span><span class="q-diff">Easy</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge pyq">CBSE PYQ &middot; 2026</span><span class="q-topic">Common difference</span></div>
+            <p class="q-text">The common difference of the A.P. \( \sqrt{2},\ 2\sqrt{2},\ 3\sqrt{2},\ 4\sqrt{2},\ \ldots \) is:</p>
+            <label class="opt"><input type="radio" name="q1" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(\sqrt{2}\)</span></label>
+            <label class="opt"><input type="radio" name="q1" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(1\)</span></label>
+            <label class="opt"><input type="radio" name="q1" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(2\sqrt{2}\)</span></label>
+            <label class="opt"><input type="radio" name="q1" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(-\sqrt{2}\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q2" aria-labelledby="q2label">
+            <legend id="q2label"><span class="q-num">Question 2</span><span class="q-diff">Easy</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge pyq">CBSE PYQ &middot; 2026</span><span class="q-topic">Recognising an A.P.</span></div>
+            <p class="q-text">Which of the following sequences is <strong>not</strong> an A.P.?</p>
+            <label class="opt"><input type="radio" name="q2" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(2,\ \frac{5}{2},\ 3,\ \frac{7}{2},\ \ldots\)</span></label>
+            <label class="opt"><input type="radio" name="q2" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(-1.2,\ -3.2,\ -5.2,\ -7.2,\ \ldots\)</span></label>
+            <label class="opt"><input type="radio" name="q2" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(\sqrt{2},\ \sqrt{8},\ \sqrt{18},\ \ldots\)</span></label>
+            <label class="opt"><input type="radio" name="q2" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(1^{2},\ 3^{2},\ 5^{2},\ 7^{2},\ \ldots\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q3" aria-labelledby="q3label">
+            <legend id="q3label"><span class="q-num">Question 3</span><span class="q-diff">Moderate</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge pyq">CBSE PYQ &middot; 2024</span><span class="q-topic">Sum of the first n terms</span></div>
+            <p class="q-text">In an A.P., if the first term \(a = -16\) and the common difference \(d = -2\), then the sum of its first 10 terms is:</p>
+            <label class="opt"><input type="radio" name="q3" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(-200\)</span></label>
+            <label class="opt"><input type="radio" name="q3" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(-70\)</span></label>
+            <label class="opt"><input type="radio" name="q3" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(-250\)</span></label>
+            <label class="opt"><input type="radio" name="q3" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(250\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q4" aria-labelledby="q4label">
+            <legend id="q4label"><span class="q-num">Question 4</span><span class="q-diff">Challenging</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge pyq">CBSE PYQ &middot; 2024</span><span class="q-topic">First term and common difference</span></div>
+            <p class="q-text">The ratio of the 10th term to the 30th term of an A.P. is \(1 : 3\) and the sum of its first six terms is 42. The first term and the common difference of the A.P. are:</p>
+            <label class="opt"><input type="radio" name="q4" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(a = 2,\ d = 2\)</span></label>
+            <label class="opt"><input type="radio" name="q4" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(a = 3,\ d = 3\)</span></label>
+            <label class="opt"><input type="radio" name="q4" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(a = 1,\ d = 3\)</span></label>
+            <label class="opt"><input type="radio" name="q4" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(a = 4,\ d = 2\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q5" aria-labelledby="q5label">
+            <legend id="q5label"><span class="q-num">Question 5</span><span class="q-diff">Easy</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge pyq">CBSE PYQ &middot; 2023</span><span class="q-topic">Consecutive terms of an A.P.</span></div>
+            <p class="q-text">If \(k + 2,\ 4k - 6\) and \(3k - 2\) are the three consecutive terms of an A.P., then the value of \(k\) is:</p>
+            <label class="opt"><input type="radio" name="q5" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(3\)</span></label>
+            <label class="opt"><input type="radio" name="q5" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(-3\)</span></label>
+            <label class="opt"><input type="radio" name="q5" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(4\)</span></label>
+            <label class="opt"><input type="radio" name="q5" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(-4\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q6" aria-labelledby="q6label">
+            <legend id="q6label"><span class="q-num">Question 6</span><span class="q-diff">Moderate</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge pyq">CBSE PYQ &middot; 2023</span><span class="q-topic">Which term of an A.P.</span></div>
+            <p class="q-text">Which term of the A.P. \(65,\ 61,\ 57,\ 53,\ \ldots\) is the first negative term?</p>
+            <label class="opt"><input type="radio" name="q6" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">16th term</span></label>
+            <label class="opt"><input type="radio" name="q6" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">17th term</span></label>
+            <label class="opt"><input type="radio" name="q6" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">18th term</span></label>
+            <label class="opt"><input type="radio" name="q6" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">19th term</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q7" aria-labelledby="q7label">
+            <legend id="q7label"><span class="q-num">Question 7</span><span class="q-diff">Moderate</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge pyq">CBSE PYQ &middot; 2023</span><span class="q-topic">Number of terms of an A.P.</span></div>
+            <p class="q-text">How many terms are there in an A.P. whose first term is \(-14\), fifth term is \(2\) and last term is \(62\)?</p>
+            <label class="opt"><input type="radio" name="q7" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">19</span></label>
+            <label class="opt"><input type="radio" name="q7" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">20</span></label>
+            <label class="opt"><input type="radio" name="q7" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">21</span></label>
+            <label class="opt"><input type="radio" name="q7" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">22</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q8" aria-labelledby="q8label">
+            <legend id="q8label"><span class="q-num">Question 8</span><span class="q-diff">Moderate</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge pyq">CBSE PYQ &middot; 2023</span><span class="q-topic">The next term of an A.P.</span></div>
+            <p class="q-text">The next term of the A.P. \( \sqrt{7},\ \sqrt{28},\ \sqrt{63} \) is:</p>
+            <label class="opt"><input type="radio" name="q8" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(\sqrt{70}\)</span></label>
+            <label class="opt"><input type="radio" name="q8" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(\sqrt{80}\)</span></label>
+            <label class="opt"><input type="radio" name="q8" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(\sqrt{97}\)</span></label>
+            <label class="opt"><input type="radio" name="q8" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(\sqrt{112}\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q9" aria-labelledby="q9label">
+            <legend id="q9label"><span class="q-num">Question 9</span><span class="q-diff">Challenging</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge pyq">CBSE PYQ &middot; 2023</span><span class="q-topic">Sum of the first n terms</span></div>
+            <p class="q-text">How many terms of the A.P. \(45,\ 39,\ 33,\ \ldots\) must be taken so that their sum is \(180\)?</p>
+            <label class="opt"><input type="radio" name="q9" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">6 only</span></label>
+            <label class="opt"><input type="radio" name="q9" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">10 only</span></label>
+            <label class="opt"><input type="radio" name="q9" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">6 or 10</span></label>
+            <label class="opt"><input type="radio" name="q9" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">8 only</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q10" aria-labelledby="q10label">
+            <legend id="q10label"><span class="q-num">Question 10</span><span class="q-diff">Moderate</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge pyq">CBSE PYQ &middot; 2023</span><span class="q-topic">A.P. in a real-life situation</span></div>
+            <p class="q-text">Rohan repays a loan by paying monthly installments that form an A.P. He pays &#8377;1000 in the first month and increases each installment by &#8377;100. The amount he pays in the 30th installment is:</p>
+            <label class="opt"><input type="radio" name="q10" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">&#8377;3900</span></label>
+            <label class="opt"><input type="radio" name="q10" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">&#8377;4000</span></label>
+            <label class="opt"><input type="radio" name="q10" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">&#8377;4900</span></label>
+            <label class="opt"><input type="radio" name="q10" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">&#8377;2900</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q11" aria-labelledby="q11label">
+            <legend id="q11label"><span class="q-num">Question 11</span><span class="q-diff">Easy</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge pyq">CBSE PYQ &middot; 2022</span><span class="q-topic">Which term of an A.P.</span></div>
+            <p class="q-text">Which term of the A.P. \(3,\ 8,\ 13,\ 18,\ \ldots\) is \(78\)?</p>
+            <label class="opt"><input type="radio" name="q11" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">15th term</span></label>
+            <label class="opt"><input type="radio" name="q11" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">16th term</span></label>
+            <label class="opt"><input type="radio" name="q11" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">17th term</span></label>
+            <label class="opt"><input type="radio" name="q11" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">18th term</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q12" aria-labelledby="q12label">
+            <legend id="q12label"><span class="q-num">Question 12</span><span class="q-diff">Moderate</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge pyq">CBSE PYQ &middot; 2025</span><span class="q-topic">A.P. in a real-life situation</span></div>
+            <p class="q-text">An eight-lane running track has lane lengths that form an A.P. The innermost lane is \(400 \text{ m}\) long and each subsequent lane is \(7.6 \text{ m}\) longer than the preceding lane. The length of the 6th lane is:</p>
+            <label class="opt"><input type="radio" name="q12" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(430 \text{ m}\)</span></label>
+            <label class="opt"><input type="radio" name="q12" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(445.6 \text{ m}\)</span></label>
+            <label class="opt"><input type="radio" name="q12" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(476 \text{ m}\)</span></label>
+            <label class="opt"><input type="radio" name="q12" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(438 \text{ m}\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q13" aria-labelledby="q13label">
+            <legend id="q13label"><span class="q-num">Question 13</span><span class="q-diff">Easy</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge pyq">CBSE PYQ &middot; 2020</span><span class="q-topic">The nth term of an A.P.</span></div>
+            <p class="q-text">The first term of an A.P. is \(p\) and its common difference is \(q\). Its 10th term is:</p>
+            <label class="opt"><input type="radio" name="q13" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(q + 9p\)</span></label>
+            <label class="opt"><input type="radio" name="q13" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(p - 9q\)</span></label>
+            <label class="opt"><input type="radio" name="q13" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(p + 9q\)</span></label>
+            <label class="opt"><input type="radio" name="q13" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(2p + 9q\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q14" aria-labelledby="q14label">
+            <legend id="q14label"><span class="q-num">Question 14</span><span class="q-diff">Moderate</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge pyq">CBSE PYQ &middot; 2025</span><span class="q-topic">Difference between two terms</span></div>
+            <p class="q-text">For a cable-car ride, the first support pole is \(200 \text{ m}\) from the base and the poles are installed at equal intervals of \(150 \text{ m}\). The distance between the 15th pole and the 25th pole is:</p>
+            <label class="opt"><input type="radio" name="q14" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(1500 \text{ m}\)</span></label>
+            <label class="opt"><input type="radio" name="q14" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(3000 \text{ m}\)</span></label>
+            <label class="opt"><input type="radio" name="q14" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(1550 \text{ m}\)</span></label>
+            <label class="opt"><input type="radio" name="q14" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(1450 \text{ m}\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q15" aria-labelledby="q15label">
+            <legend id="q15label"><span class="q-num">Question 15</span><span class="q-diff">Easy</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge pyq">CBSE PYQ &middot; 2019</span><span class="q-topic">Number of terms of an A.P.</span></div>
+            <p class="q-text">How many two-digit numbers are divisible by \(3\)?</p>
+            <label class="opt"><input type="radio" name="q15" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(29\)</span></label>
+            <label class="opt"><input type="radio" name="q15" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(31\)</span></label>
+            <label class="opt"><input type="radio" name="q15" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(32\)</span></label>
+            <label class="opt"><input type="radio" name="q15" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(30\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q16" aria-labelledby="q16label">
+            <legend id="q16label"><span class="q-num">Question 16</span><span class="q-diff">Moderate</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge pyq">CBSE PYQ &middot; 2017</span><span class="q-topic">Common difference of an A.P.</span></div>
+            <p class="q-text">What is the common difference of an A.P. in which \(a_{21} - a_{7} = 84\)?</p>
+            <label class="opt"><input type="radio" name="q16" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(6\)</span></label>
+            <label class="opt"><input type="radio" name="q16" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(4\)</span></label>
+            <label class="opt"><input type="radio" name="q16" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(7\)</span></label>
+            <label class="opt"><input type="radio" name="q16" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(14\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q17" aria-labelledby="q17label">
+            <legend id="q17label"><span class="q-num">Question 17</span><span class="q-diff">Moderate</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge original">ORIGINAL &middot; CBSE EXAM-STYLE</span><span class="q-topic">Common difference of an A.P.</span></div>
+            <p class="q-text">The 9th term of an A.P. is \(37\) and its 15th term is \(55\). The common difference of the A.P. is:</p>
+            <label class="opt"><input type="radio" name="q17" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(2\)</span></label>
+            <label class="opt"><input type="radio" name="q17" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(3\)</span></label>
+            <label class="opt"><input type="radio" name="q17" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(6\)</span></label>
+            <label class="opt"><input type="radio" name="q17" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(18\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q18" aria-labelledby="q18label">
+            <legend id="q18label"><span class="q-num">Question 18</span><span class="q-diff">Easy</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge original">ORIGINAL &middot; CBSE EXAM-STYLE</span><span class="q-topic">The nth term in a real-life situation</span></div>
+            <p class="q-text">A part-time tutor is paid &#8377;200 in the first month and receives &#8377;25 more in each succeeding month. The payment in the 12th month is:</p>
+            <label class="opt"><input type="radio" name="q18" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">&#8377;425</span></label>
+            <label class="opt"><input type="radio" name="q18" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">&#8377;450</span></label>
+            <label class="opt"><input type="radio" name="q18" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">&#8377;475</span></label>
+            <label class="opt"><input type="radio" name="q18" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">&#8377;500</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q19" aria-labelledby="q19label">
+            <legend id="q19label"><span class="q-num">Question 19</span><span class="q-diff">Moderate</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge original">ORIGINAL &middot; CBSE EXAM-STYLE</span><span class="q-topic">Sum of n terms in a real-life situation</span></div>
+            <p class="q-text">A student saves &#8377;500 in the first month and increases the monthly saving by &#8377;50 each month. The total amount saved in the first 8 months is:</p>
+            <label class="opt"><input type="radio" name="q19" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">&#8377;4900</span></label>
+            <label class="opt"><input type="radio" name="q19" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">&#8377;5400</span></label>
+            <label class="opt"><input type="radio" name="q19" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">&#8377;5600</span></label>
+            <label class="opt"><input type="radio" name="q19" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">&#8377;6000</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q20" aria-labelledby="q20label">
+            <legend id="q20label"><span class="q-num">Question 20</span><span class="q-diff">Challenging</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge original">ORIGINAL &middot; CBSE EXAM-STYLE</span><span class="q-topic">A.P. reasoning (competency based)</span></div>
+            <p class="q-text">In an auditorium, the first row has 12 seats and each succeeding row has 3 more seats than the row in front of it. Beginning with which row does the number of seats first exceed 40?</p>
+            <label class="opt"><input type="radio" name="q20" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">9th row</span></label>
+            <label class="opt"><input type="radio" name="q20" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">10th row</span></label>
+            <label class="opt"><input type="radio" name="q20" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">11th row</span></label>
+            <label class="opt"><input type="radio" name="q20" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">12th row</span></label>
+          </fieldset>
+        </form>
+
+        <div class="quiz-controls">
+          <button type="button" class="secondary" id="btnPrev" aria-label="Previous question"><i class="fas fa-arrow-left" aria-hidden="true"></i> Previous</button>
+          <button type="button" id="btnMark" aria-label="Mark the current question for review"><i class="fas fa-flag" aria-hidden="true"></i> <span id="btnMarkText">Mark for Review</span></button>
+          <button type="button" class="secondary" id="btnClear" aria-label="Clear your response to the current question"><i class="fas fa-eraser" aria-hidden="true"></i> Clear Response</button>
+          <button type="button" id="btnNext">Next <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+          <button type="button" class="secondary" id="btnSubmit"><i class="fas fa-check" aria-hidden="true"></i> Submit Quiz</button>
+        </div>
+      </div>
+
+      <div class="quiz-panel" id="resultView">
+        <div class="result-card">
+          <h2 style="margin-top:0;"><i class="fas fa-trophy" aria-hidden="true"></i> Quiz Result</h2>
+          <div class="score-big" id="resScore">0 / 20</div>
+          <div class="pct-big" id="resPct">0%</div>
+          <div class="level-line" id="resLevel"></div>
+          <p class="msg" id="resMsg"></p>
+        </div>
+        <div class="result-summary">
+          <div class="rs-chip good"><div class="rs-n" id="resCorrect">0</div><div class="rs-l">Correct</div></div>
+          <div class="rs-chip warn"><div class="rs-n" id="resIncorrect">0</div><div class="rs-l">Incorrect</div></div>
+          <div class="rs-chip warn"><div class="rs-n" id="resUnanswered">0</div><div class="rs-l">Unanswered</div></div>
+          <div class="rs-chip"><div class="rs-n" id="resAccuracy">0%</div><div class="rs-l">Accuracy</div></div>
+          <div class="rs-chip"><div class="rs-n" id="resTime">00:00</div><div class="rs-l">Time Taken</div></div>
+        </div>
+        <div class="quiz-actions">
+          <button type="button" id="btnRetry"><i class="fas fa-redo" aria-hidden="true"></i> Retry Quiz</button>
+          <button type="button" class="secondary" id="btnReview"><i class="fas fa-list-check" aria-hidden="true"></i> Review Answers</button>
+        </div>
+      </div>
+
+      <div class="quiz-panel" id="reviewView">
+        <h2><i class="fas fa-list-check" aria-hidden="true"></i> Review Answers</h2>
+        <p>For each question, your answer and the correct answer are shown, together with the topic, difficulty, the source of the question, a hint and a short explanation.</p>
+        <div class="explanations" id="explanations"></div>
+        <div class="quiz-actions">
+          <button type="button" id="btnBackResult"><i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Result</button>
+          <button type="button" class="secondary" id="btnRetry2"><i class="fas fa-redo" aria-hidden="true"></i> Retry Quiz</button>
+        </div>
+      </div>
+
+      <nav class="resource-nav" aria-label="Chapter resources">
+        <a href="/cbse-study-material/class-10/mathematics/arithmetic-progressions/notes/"><i class="fas fa-book-open"></i> Notes</a>
+        <a href="/cbse-study-material/class-10/mathematics/arithmetic-progressions/practice-paper/"><i class="fas fa-file-lines"></i> Practice Paper</a>
+        <a class="is-active" href="/cbse-study-material/class-10/mathematics/arithmetic-progressions/quiz/"><i class="fas fa-bullseye"></i> Quiz</a>
+        <a href="/cbse-study-material/class-10/mathematics/arithmetic-progressions/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+      </nav>
+
+      <nav class="resource-nav" aria-label="Related chapters">
+        <a href="/cbse-study-material/class-10/mathematics/quadratic-equations/quiz/"><i class="fas fa-arrow-right"></i> Chapter 4: Quadratic Equations Quiz</a>
+        <a href="/cbse-study-material/class-10/mathematics/triangles/quiz/"><i class="fas fa-arrow-right"></i> Chapter 6: Triangles Quiz</a>
+        <a href="/cbse-study-material/class-10/mathematics/coordinate-geometry/quiz/"><i class="fas fa-arrow-right"></i> Chapter 7: Coordinate Geometry Quiz</a>
+        <a href="/cbse-study-material/class-10/mathematics/"><i class="fas fa-arrow-right"></i> Class 10 Mathematics</a>
+      </nav>
+    </section>
+
+    <a class="sm-back" href="/cbse-study-material/class-10/mathematics/arithmetic-progressions/"><i class="fas fa-arrow-left"></i> Back to Arithmetic Progressions</a>
+    <a class="sm-back" href="/cbse-study-material/class-10/mathematics/" style="margin-left: 12px;"><i class="fas fa-arrow-left"></i> All Mathematics chapters</a>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-about">
+      <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+      <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#courses">Courses</a></li>
+        <li><a href="/cbse-study-material/">Study Material</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Popular Searches</h4>
+      <ul>
+        <li><a href="/cbse-study-material/">CBSE Study Material</a></li>
+        <li><a href="/best-tuition-centre-hulimavu/">Best Tuition Centre in Hulimavu</a></li>
+        <li><a href="/cbse-tuition-hulimavu/">CBSE Tuition in Hulimavu</a></li>
+        <li><a href="/maths-tuition-hulimavu/">Maths Tuition in Hulimavu</a></li>
+        <li><a href="/science-tuition-hulimavu/">Science Tuition in Hulimavu</a></li>
+        <li><a href="/class-10-tuition-hulimavu/">Class 10 Tuition Hulimavu</a></li>
+        <li><a href="/class-12-tuition-hulimavu/">Class 12 Tuition Hulimavu</a></li>
+        <li><a href="/tuition-centre-bangalore/">Best Tuition Centre in Bangalore</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="/cbse-study-material/sm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/supabase-config.js"></script>
+<script src="/supabase-auth.js"></script>
+<script src="/supabase-nav.js" defer></script>
+<script src="/chatbot/chatbot-loader.js" defer></script><script>
+(function () {
+  "use strict";
+
+  var TOTAL = 20;
+  var TIME_LIMIT = 900;
+
+  var startView = document.getElementById("startView");
+  var quizView = document.getElementById("quizView");
+
+  var QUESTIONS = [
+    { id: "q1",  topic: "Common difference", difficulty: "Easy", correct: "a", sourceType: "PYQ", sourceYear: "2026", sourcePaper: "30/2/1", sourceExam: "CBSE Board Paper 2026 (Mathematics Standard, 30/2/1)", verified: true },
+    { id: "q2",  topic: "Recognising an A.P.", difficulty: "Easy", correct: "d", sourceType: "PYQ", sourceYear: "2026", sourcePaper: "30/2/1", sourceExam: "CBSE Board Paper 2026 (Mathematics Standard, 30/2/1)", verified: true },
+    { id: "q3",  topic: "Sum of the first n terms", difficulty: "Moderate", correct: "c", sourceType: "PYQ", sourceYear: "2024", sourcePaper: "30/1/3", sourceExam: "CBSE Board Paper 2024 (Mathematics Standard, 30/1/3)", verified: true },
+    { id: "q4",  topic: "First term and common difference", difficulty: "Challenging", correct: "a", sourceType: "PYQ", sourceYear: "2024", sourcePaper: "", sourceExam: "CBSE Board Paper 2024 (Mathematics)", verified: true },
+    { id: "q5",  topic: "Consecutive terms of an A.P.", difficulty: "Easy", correct: "a", sourceType: "PYQ", sourceYear: "2023", sourcePaper: "", sourceExam: "CBSE Board Paper 2023 (Mathematics)", verified: true },
+    { id: "q6",  topic: "Which term of an A.P.", difficulty: "Moderate", correct: "c", sourceType: "PYQ", sourceYear: "2023", sourcePaper: "", sourceExam: "CBSE Board Paper 2023 (Mathematics)", verified: true },
+    { id: "q7",  topic: "Number of terms of an A.P.", difficulty: "Moderate", correct: "b", sourceType: "PYQ", sourceYear: "2023", sourcePaper: "", sourceExam: "CBSE Board Paper 2023 (Mathematics)", verified: true },
+    { id: "q8",  topic: "The next term of an A.P.", difficulty: "Moderate", correct: "d", sourceType: "PYQ", sourceYear: "2023", sourcePaper: "", sourceExam: "CBSE Board Paper 2023 (Mathematics)", verified: true },
+    { id: "q9",  topic: "Sum of the first n terms", difficulty: "Challenging", correct: "c", sourceType: "PYQ", sourceYear: "2023", sourcePaper: "", sourceExam: "CBSE Board Paper 2023 (Mathematics)", verified: true },
+    { id: "q10", topic: "A.P. in a real-life situation", difficulty: "Moderate", correct: "a", sourceType: "PYQ", sourceYear: "2023", sourcePaper: "", sourceExam: "CBSE Board Paper 2023 (Mathematics)", verified: true },
+    { id: "q11", topic: "Which term of an A.P.", difficulty: "Easy", correct: "b", sourceType: "PYQ", sourceYear: "2022", sourcePaper: "", sourceExam: "CBSE Board Paper 2022 (Mathematics)", verified: true },
+    { id: "q12", topic: "A.P. in a real-life situation", difficulty: "Moderate", correct: "d", sourceType: "PYQ", sourceYear: "2025", sourcePaper: "30/6/1", sourceExam: "CBSE Board Paper 2025 (Mathematics Standard, 30/6/1)", verified: true },
+    { id: "q13", topic: "The nth term of an A.P.", difficulty: "Easy", correct: "c", sourceType: "PYQ", sourceYear: "2020", sourcePaper: "", sourceExam: "CBSE Board Paper 2020 (Mathematics Standard)", verified: true },
+    { id: "q14", topic: "Difference between two terms", difficulty: "Moderate", correct: "a", sourceType: "PYQ", sourceYear: "2025", sourcePaper: "30/4/1", sourceExam: "CBSE Board Paper 2025 (Mathematics Standard, 30/4/1)", verified: true },
+    { id: "q15", topic: "Number of terms of an A.P.", difficulty: "Easy", correct: "d", sourceType: "PYQ", sourceYear: "2019", sourcePaper: "", sourceExam: "CBSE Board Paper 2019 (Mathematics)", verified: true },
+    { id: "q16", topic: "Common difference of an A.P.", difficulty: "Moderate", correct: "a", sourceType: "PYQ", sourceYear: "2017", sourcePaper: "", sourceExam: "CBSE Board Paper 2017 (Mathematics)", verified: true },
+    { id: "q17", topic: "Common difference of an A.P.", difficulty: "Moderate", correct: "b", sourceType: "original", sourceYear: "", sourcePaper: "", sourceExam: "Original - CBSE Exam-Style", verified: false },
+    { id: "q18", topic: "The nth term in a real-life situation", difficulty: "Easy", correct: "c", sourceType: "original", sourceYear: "", sourcePaper: "", sourceExam: "Original - CBSE Exam-Style", verified: false },
+    { id: "q19", topic: "Sum of n terms in a real-life situation", difficulty: "Moderate", correct: "b", sourceType: "original", sourceYear: "", sourcePaper: "", sourceExam: "Original - CBSE Exam-Style", verified: false },
+    { id: "q20", topic: "A.P. reasoning (competency based)", difficulty: "Challenging", correct: "c", sourceType: "original", sourceYear: "", sourcePaper: "", sourceExam: "Original - CBSE Exam-Style", verified: false }
+  ];
+
+  var EXPLANATIONS = {
+    q1:  "d = a2 - a1 = 2 sqrt(2) - sqrt(2) = sqrt(2). Option (c) 2 sqrt(2) is the value of the second term, not the difference, and option (d) confuses the sign.",
+    q2:  "Option (d) expands to 1, 9, 25, 49 with differences 8 and then 16, so the difference is not constant and it is not an A.P. The other sequences have constant differences: (a) 1/2, (b) -2 and (c) sqrt(2), since sqrt(8) = 2 sqrt(2) and sqrt(18) = 3 sqrt(2).",
+    q3:  "S10 = (10/2)[2(-16) + 9(-2)] = 5(-32 - 18) = 5(-50) = -250. Option (a) is 10a and option (b) is the value obtained when the first term is not doubled inside the bracket.",
+    q4:  "T10/T30 = (a + 9d)/(a + 29d) = 1/3 gives 3a + 27d = a + 29d, so a = d. Also S6 = 3[2a + 5d] = 42 gives 2a + 5d = 14. Substituting a = d gives 7a = 14, so a = 2 and d = 2. The A.P. is 2, 4, 6, 8, ...",
+    q5:  "In an A.P. twice the middle term equals the sum of the neighbours: 2(4k - 6) = (k + 2) + (3k - 2). This gives 8k - 12 = 4k, so 4k = 12 and k = 3.",
+    q6:  "Here a = 65 and d = -4, so the nth term is 65 - 4(n - 1) = 69 - 4n. We need 69 - 4n < 0, giving n > 17.25, so n = 18. The 17th term is still positive (1) while the 18th term is -3.",
+    q7:  "a = -14 and a5 = -14 + 4d = 2 give 4d = 16, so d = 4. The last term satisfies -14 + 4(n - 1) = 62, so 4(n - 1) = 76 and n = 20. There are 20 terms.",
+    q8:  "sqrt(7), sqrt(28) = 2 sqrt(7) and sqrt(63) = 3 sqrt(7) form an A.P. with common difference sqrt(7). The next term is 4 sqrt(7) = sqrt(16 x 7) = sqrt(112).",
+    q9:  "a = 45 and d = -6. S(n) = (n/2)[90 - 6(n - 1)] = n(48 - 3n). Setting this equal to 180 gives n^2 - 16n + 60 = 0, so n = 6 or n = 10. Both values give a sum of 180, which is why the board question asks for the double answer.",
+    q10: "The installments are 1000, 1100, 1200, ... with a = 1000 and d = 100. The 30th installment is a + 29d = 1000 + 2900 = Rs 3900.",
+    q11: "a = 3 and d = 5. Set 3 + 5(n - 1) = 78, so 5(n - 1) = 75 and n = 16. The 16th term is 78.",
+    q12: "The lane lengths are 400, 407.6, 415.2, ... so a = 400 and d = 7.6. The 6th lane is a + 5d = 400 + 38 = 438 m. Option (b) 445.6 m uses 6 gaps instead of 5.",
+    q13: "a10 = a + 9d = p + 9q. Option (a) swaps the roles of p and q, and option (d) doubles the first term.",
+    q14: "The pole distances form an A.P. with a = 200 and d = 150. The gap between the 15th and 25th poles is a25 - a15 = (a + 24d) - (a + 14d) = 10d = 1500 m, i.e. 10 full intervals of 150 m.",
+    q15: "The two-digit multiples of 3 run from 12 to 99 with common difference 3. Number of terms = (99 - 12)/3 + 1 = 30.",
+    q16: "a21 - a7 = (a + 20d) - (a + 6d) = 14d. Given 14d = 84, we get d = 6. Option (d) forgets to divide by 14.",
+    q17: "a15 - a9 = (a + 14d) - (a + 8d) = 6d = 55 - 37 = 18, so d = 3. The first term is 13 and the A.P. is 13, 16, 19, 22, ... Option (c) treats 6d as 3d and option (d) is just 55 - 37.",
+    q18: "The payments are 200, 225, 250, ... with a = 200 and d = 25. The 12th month pays a + 11d = 200 + 275 = Rs 475. Option (d) Rs 500 uses 12 gaps instead of 11.",
+    q19: "The savings are 500, 550, 600, ... with a = 500 and d = 50. S8 = (8/2)[2(500) + 7(50)] = 4(1000 + 350) = Rs 5400. Option (c) uses 8 gaps inside the bracket and option (d) is 500 x 12.",
+    q20: "The rows have 12, 15, 18, ... seats, so row n has 12 + 3(n - 1) = 9 + 3n seats. We need 9 + 3n > 40, so n > 31/3, i.e. n = 11. The 10th row has 39 seats and the 11th row has 42."
+  };
+
+  var HINTS = {
+    q1:  "Subtract the first term from the second term of the A.P.",
+    q2:  "Simplify each sequence where possible and check whether the common difference stays constant.",
+    q3:  "Apply the sum formula S(n) = (n/2)[2a + (n - 1)d].",
+    q4:  "Convert the ratio into an equation using the nth-term formula, then use the sum formula.",
+    q5:  "Twice the middle term equals the sum of the first and third terms.",
+    q6:  "Write the nth term and find the smallest value of n for which it becomes negative.",
+    q7:  "First find the common difference from the fifth term, then find n from the last term.",
+    q8:  "Write each radical as a multiple of sqrt(7) to reveal the common difference.",
+    q9:  "Set the sum formula equal to 180 and solve the quadratic; check the two values of n.",
+    q10: "Model the installments as an A.P. with a = 1000 and d = 100, then find the 30th term.",
+    q11: "The nth term is 3 + 5(n - 1); equate it to 78 and solve for n.",
+    q12: "Use the nth-term formula with a = 400 and d = 7.6 for n = 6.",
+    q13: "Apply a(n) = a + (n - 1)d with n = 10.",
+    q14: "The gap between the 15th and 25th poles equals 10 full intervals of 150 m.",
+    q15: "Find the first and last two-digit multiples of 3 and count the terms of the A.P.",
+    q16: "Express a21 and a7 using a(n) = a + (n - 1)d and simplify the difference.",
+    q17: "The difference between the 15th and 9th terms spans 6 common differences.",
+    q18: "The 12th month is the first term plus 11 common differences.",
+    q19: "Apply the sum formula S(n) = (n/2)[2a + (n - 1)d] with n = 8.",
+    q20: "Compare the number of seats in the 10th, 11th and 12th rows using the nth-term formula."
+  };
+
+  var form = document.getElementById("quizForm");
+  var resultView = document.getElementById("resultView");
+  var reviewView = document.getElementById("reviewView");
+  var counterEl = document.getElementById("quizCounter");
+  var timerEl = document.getElementById("quizTimer");
+  var timerText = document.getElementById("quizTimerText");
+  var timerLive = document.getElementById("timerLive");
+  var progressFill = document.getElementById("progressFill");
+  var progressBar = document.getElementById("progressBar");
+  var progressText = document.getElementById("progressText");
+  var explanations = document.getElementById("explanations");
+  var quizNav = document.getElementById("quizNav");
+  var btnMark = document.getElementById("btnMark");
+  var btnMarkText = document.getElementById("btnMarkText");
+
+  var confirmDialog = document.createElement("dialog");
+  confirmDialog.id = "confirmDialog";
+  confirmDialog.innerHTML =
+    '<div class="modal-body">' +
+      '<h3>Submit quiz?</h3>' +
+      '<p id="confirmMsg">Do you want to submit the quiz?</p>' +
+      '<div class="modal-actions">' +
+        '<button type="button" class="secondary" id="confirmContinue">Continue Quiz</button>' +
+        '<button type="button" id="confirmSubmit">Submit Quiz</button>' +
+      '</div>' +
+    '</div>';
+  document.body.appendChild(confirmDialog);
+
+  var cards = [];
+  var navBtns = [];
+  var reviewed = [];
+  var warnedAt = {};
+  for (var i = 0; i < TOTAL; i++) {
+    cards.push(document.getElementById(QUESTIONS[i].id));
+    reviewed.push(false);
+  }
+
+  var timeLeft = TIME_LIMIT;
+  var timerId = null;
+  var submitted = false;
+  var autoSubmitted = false;
+  var currentIndex = 0;
+
+  function letter(idx) { return "ABCD".charAt(idx); }
+
+  function buildNav() {
+    quizNav.innerHTML = "";
+    navBtns = [];
+    for (var i = 0; i < TOTAL; i++) {
+      (function (idx) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.className = "nav-btn";
+        b.textContent = String(idx + 1);
+        b.setAttribute("aria-label", "Go to question " + (idx + 1));
+        b.addEventListener("click", function () { showCard(idx); });
+        quizNav.appendChild(b);
+        navBtns.push(b);
+      })(i);
+    }
+  }
+
+  function isAnswered(idx) {
+    return !!form.querySelector('input[name="' + QUESTIONS[idx].id + '"]:checked');
+  }
+
+  function refreshNav() {
+    for (var i = 0; i < TOTAL; i++) {
+      var cs = "nav-btn";
+      if (isAnswered(i)) cs += " nav-answered";
+      if (reviewed[i]) cs += " nav-reviewed";
+      if (i === currentIndex) cs += " nav-current";
+      navBtns[i].className = cs;
+      navBtns[i].setAttribute("aria-current", i === currentIndex ? "true" : "false");
+    }
+    if (reviewed[currentIndex]) {
+      btnMark.classList.add("marked");
+      btnMarkText.textContent = "Marked for Review";
+    } else {
+      btnMark.classList.remove("marked");
+      btnMarkText.textContent = "Mark for Review";
+    }
+  }
+
+  function showCard(idx) {
+    cards.forEach(function (c, i) { c.classList.toggle("is-active", i === idx); });
+    currentIndex = idx;
+    counterEl.textContent = "Question " + (idx + 1) + " of " + TOTAL;
+    progressFill.style.width = ((idx + 1) / TOTAL * 100) + "%";
+    progressBar.setAttribute("aria-valuenow", String(idx + 1));
+    progressText.textContent = "At question " + (idx + 1) + " of " + TOTAL;
+    refreshNav();
+  }
+
+  function updateTimerDisplay() {
+    var m = Math.floor(timeLeft / 60);
+    var s = timeLeft % 60;
+    timerText.textContent = "Time Remaining: " + String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0");
+    timerEl.classList.toggle("warn", timeLeft <= 300);
+    timerEl.classList.toggle("danger", timeLeft <= 60);
+    if (timeLeft === 300 && !warnedAt["300"]) { warnedAt["300"] = true; timerLive.textContent = "Warning: 5 minutes remaining."; }
+    if (timeLeft === 120 && !warnedAt["120"]) { warnedAt["120"] = true; timerLive.textContent = "Warning: 2 minutes remaining."; }
+    if (timeLeft === 60 && !warnedAt["60"]) { warnedAt["60"] = true; timerLive.textContent = "Warning: less than one minute remaining."; }
+  }
+
+  function startTimer() {
+    if (timerId) clearInterval(timerId);
+    timeLeft = TIME_LIMIT;
+    warnedAt = {};
+    autoSubmitted = false;
+    updateTimerDisplay();
+    timerId = setInterval(function () {
+      timeLeft--;
+      updateTimerDisplay();
+      if (timeLeft <= 0) {
+        clearInterval(timerId);
+        autoSubmitted = true;
+        submitQuiz();
+      }
+    }, 1000);
+  }
+
+  function gatherResults() {
+    var correct = 0, incorrect = 0, unanswered = 0;
+    QUESTIONS.forEach(function (q) {
+      var checked = form.querySelector('input[name="' + q.id + '"]:checked');
+      if (!checked) unanswered++;
+      else if (checked.value === q.correct) correct++;
+      else incorrect++;
+    });
+    return { correct: correct, incorrect: incorrect, unanswered: unanswered };
+  }
+
+  function levelFor(score) {
+    if (score >= 16) return { level: "Strong", msg: "Excellent! You have a strong command of arithmetic progressions. Revise the questions you missed and you are ready for the board exam." };
+    if (score >= 11) return { level: "Good", msg: "Good attempt. Read the hints and explanations below, then try the quiz again to sharpen your speed." };
+    if (score >= 6) return { level: "Needs More Practice", msg: "A fair attempt. Revise the nth-term and sum formulas from the chapter notes, then practise again." };
+    return { level: "Revise Fundamentals", msg: "Arithmetic progressions build on one core idea, a constant common difference. Read the chapter notes carefully and attempt the quiz again." };
+  }
+
+  function fmtTime(sec) {
+    var m = Math.floor(sec / 60);
+    var s = sec % 60;
+    return String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0");
+  }
+
+  function showResult() {
+    var r = gatherResults();
+    var score = r.correct;
+    var pct = Math.round((score / TOTAL) * 100);
+    var attempted = r.correct + r.incorrect;
+    var acc = attempted > 0 ? Math.round((r.correct / attempted) * 100) : 0;
+    var elapsed = autoSubmitted ? TIME_LIMIT : (TIME_LIMIT - timeLeft);
+    var lv = levelFor(score);
+    document.getElementById("resScore").textContent = score + " / " + TOTAL;
+    document.getElementById("resPct").textContent = pct + "%";
+    document.getElementById("resLevel").textContent = "Performance Level: " + lv.level;
+    document.getElementById("resMsg").textContent = lv.msg;
+    document.getElementById("resCorrect").textContent = r.correct;
+    document.getElementById("resIncorrect").textContent = r.incorrect;
+    document.getElementById("resUnanswered").textContent = r.unanswered;
+    document.getElementById("resAccuracy").textContent = acc + "%";
+    document.getElementById("resTime").textContent = fmtTime(elapsed);
+    quizView.style.display = "none";
+    resultView.style.display = "block";
+    reviewView.style.display = "none";
+    resultView.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function questionById(id) {
+    for (var i = 0; i < QUESTIONS.length; i++) {
+      if (QUESTIONS[i].id === id) return QUESTIONS[i];
+    }
+    return null;
+  }
+
+  function optionLetter(card, value) {
+    var opts = Array.prototype.slice.call(card.querySelectorAll(".opt"));
+    for (var i = 0; i < opts.length; i++) {
+      if (opts[i].querySelector("input").value === value) return letter(i);
+    }
+    return "";
+  }
+
+  function badgeHTML(q) {
+    if (q.sourceType === "PYQ") {
+      return '<span class="q-badge pyq">CBSE PYQ &middot; ' + q.sourceYear + "</span>";
+    }
+    return '<span class="q-badge original">ORIGINAL &middot; CBSE EXAM-STYLE</span>';
+  }
+
+  function buildReview() {
+    explanations.innerHTML = "";
+    cards.forEach(function (card) {
+      var q = questionById(card.id);
+      var checked = card.querySelector('input[type="radio"]:checked');
+      var yourVal = checked ? checked.value : null;
+      var isCorrect = yourVal === q.correct;
+
+      var wrap = document.createElement("div");
+      wrap.className = "exp-card";
+
+      var head = document.createElement("div");
+      head.className = "exp-head";
+      head.appendChild(document.createTextNode("Question " + card.dataset.number + " "));
+
+      var state = document.createElement("span");
+      state.className = "exp-state " + (isCorrect ? "ok" : "no");
+      state.textContent = isCorrect ? "\u2713 Correct" : (yourVal === null ? "\u2013 Not answered" : "\u2717 Incorrect");
+      state.setAttribute("aria-label", isCorrect ? "Correct" : (yourVal === null ? "Not answered" : "Incorrect"));
+      head.appendChild(state);
+      wrap.appendChild(head);
+
+      var meta = document.createElement("div");
+      meta.className = "exp-meta";
+      meta.innerHTML = badgeHTML(q) +
+        '<span class="q-topic">' + q.topic + "</span>" +
+        '<span class="q-diff">' + q.difficulty + "</span>";
+      wrap.appendChild(meta);
+
+      var qrow = document.createElement("div");
+      qrow.className = "exp-row";
+      var qlabel = document.createElement("span");
+      qlabel.className = "exp-label";
+      qlabel.textContent = "Question: ";
+      qrow.appendChild(qlabel);
+      qrow.appendChild(card.querySelector(".q-text").cloneNode(true));
+      wrap.appendChild(qrow);
+
+      var optsBox = document.createElement("div");
+      optsBox.className = "exp-opts";
+      var optList = Array.prototype.slice.call(card.querySelectorAll(".opt"));
+      optList.forEach(function (opt) {
+        var o = opt.cloneNode(true);
+        o.querySelector("input").checked = (opt.querySelector("input").checked);
+        o.querySelector("input").disabled = true;
+        if (opt.querySelector("input").value === q.correct) o.classList.add("answered-correct");
+        if (checked && opt.querySelector("input").value === yourVal && yourVal !== q.correct) o.classList.add("answered-wrong");
+        optsBox.appendChild(o);
+      });
+      wrap.appendChild(optsBox);
+
+      var yrow = document.createElement("div");
+      yrow.className = "exp-row";
+      var ylabel = document.createElement("span");
+      ylabel.className = "exp-label";
+      ylabel.textContent = "Your Answer: ";
+      yrow.appendChild(ylabel);
+      yrow.appendChild(document.createTextNode(yourVal ? "Option " + optionLetter(card, yourVal) + " - " + optionText(card, yourVal) : "Not answered"));
+      wrap.appendChild(yrow);
+
+      var crow = document.createElement("div");
+      crow.className = "exp-row";
+      var clabel = document.createElement("span");
+      clabel.className = "exp-label";
+      clabel.textContent = "Correct Answer: ";
+      crow.appendChild(clabel);
+      crow.appendChild(document.createTextNode("Option " + optionLetter(card, q.correct) + " - " + optionText(card, q.correct)));
+      wrap.appendChild(crow);
+
+      var srow = document.createElement("div");
+      srow.className = "exp-row";
+      var slabel = document.createElement("span");
+      slabel.className = "exp-label";
+      slabel.textContent = "Source: ";
+      srow.appendChild(slabel);
+      srow.appendChild(document.createTextNode(q.sourceExam));
+      wrap.appendChild(srow);
+
+      var krow = document.createElement("div");
+      krow.className = "exp-row";
+      var klabel = document.createElement("span");
+      klabel.className = "exp-label";
+      klabel.textContent = "Key concept: ";
+      krow.appendChild(klabel);
+      krow.appendChild(document.createTextNode(q.topic));
+      wrap.appendChild(krow);
+
+      var hrow = document.createElement("div");
+      hrow.className = "exp-row";
+      var hlabel = document.createElement("span");
+      hlabel.className = "exp-label";
+      hlabel.textContent = "Hint: ";
+      hrow.appendChild(hlabel);
+      hrow.appendChild(document.createTextNode(HINTS[q.id] || ""));
+      wrap.appendChild(hrow);
+
+      var note = document.createElement("div");
+      note.className = "exp-note";
+      var nlabel = document.createElement("span");
+      nlabel.className = "exp-label";
+      nlabel.textContent = "Explanation: ";
+      note.appendChild(nlabel);
+      note.appendChild(document.createTextNode(EXPLANATIONS[q.id] || ""));
+      wrap.appendChild(note);
+
+      explanations.appendChild(wrap);
+
+      var correctEl = card.querySelector('.opt input[value="' + q.correct + '"]');
+      if (correctEl && correctEl.parentNode) correctEl.parentNode.classList.add("answered-correct");
+      if (checked && checked.value !== q.correct) {
+        checked.parentNode.classList.add("answered-wrong");
+      }
+    });
+    quizView.style.display = "none";
+    resultView.style.display = "none";
+    reviewView.style.display = "block";
+    reviewView.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (window.MathJax && MathJax.typesetPromise) {
+      MathJax.typesetPromise([explanations]);
+    }
+  }
+
+  function optionText(card, value) {
+    var opts = Array.prototype.slice.call(card.querySelectorAll(".opt"));
+    for (var i = 0; i < opts.length; i++) {
+      var input = opts[i].querySelector("input");
+      if (input.value === value) {
+        var val = opts[i].querySelector(".opt-val");
+        var txt = "";
+        if (val) {
+          txt = val.textContent;
+        }
+        return txt.replace(/\s+/g, " ").trim();
+      }
+    }
+    return "";
+  }
+
+  function submitQuiz() {
+    if (submitted) return;
+    submitted = true;
+    if (timerId) clearInterval(timerId);
+    showResult();
+  }
+
+  function requestSubmit() {
+    if (submitted) return;
+    var r = gatherResults();
+    var parts = [];
+    if (r.unanswered > 0) parts.push(r.unanswered + " question(s) are unanswered");
+    var revCount = 0;
+    for (var i = 0; i < reviewed.length; i++) if (reviewed[i]) revCount++;
+    if (revCount > 0) parts.push(revCount + " question(s) are marked for review");
+    if (parts.length > 0) {
+      document.getElementById("confirmMsg").textContent =
+        parts.join("; ") + ". Do you want to submit the quiz?";
+      confirmDialog.showModal();
+    } else {
+      submitQuiz();
+    }
+  }
+
+  function retry() {
+    submitted = false;
+    if (timerId) clearInterval(timerId);
+    for (var i = 0; i < TOTAL; i++) reviewed[i] = false;
+    var radios = form.querySelectorAll('input[type="radio"]');
+    for (var j = 0; j < radios.length; j++) radios[j].checked = false;
+    cards.forEach(function (card) {
+      card.querySelectorAll(".opt").forEach(function (o) {
+        o.classList.remove("answered-correct", "answered-wrong");
+      });
+    });
+    quizView.style.display = "block";
+    resultView.style.display = "none";
+    reviewView.style.display = "none";
+    showCard(0);
+    startTimer();
+    quizView.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  form.addEventListener("change", function () {
+    refreshNav();
+  });
+
+  document.getElementById("btnPrev").addEventListener("click", function () {
+    if (currentIndex > 0) showCard(currentIndex - 1);
+  });
+
+  document.getElementById("btnNext").addEventListener("click", function () {
+    if (currentIndex < TOTAL - 1) showCard(currentIndex + 1);
+  });
+
+  btnMark.addEventListener("click", function () {
+    if (submitted) return;
+    reviewed[currentIndex] = !reviewed[currentIndex];
+    refreshNav();
+    var qnum = currentIndex + 1;
+    timerLive.textContent = reviewed[currentIndex]
+      ? "Question " + qnum + " marked for review."
+      : "Question " + qnum + " no longer marked for review.";
+  });
+
+  document.getElementById("btnClear").addEventListener("click", function () {
+    if (submitted) return;
+    var q = QUESTIONS[currentIndex];
+    var checked = form.querySelector('input[name="' + q.id + '"]:checked');
+    if (checked) checked.checked = false;
+    refreshNav();
+    var qnum = currentIndex + 1;
+    timerLive.textContent = "Response cleared for question " + qnum + ".";
+  });
+
+  document.getElementById("btnStart").addEventListener("click", function () {
+    startView.style.display = "none";
+    quizView.style.display = "block";
+    quizView.scrollIntoView({ behavior: "smooth", block: "start" });
+    startTimer();
+  });
+
+  document.getElementById("btnSubmit").addEventListener("click", requestSubmit);
+  document.getElementById("confirmContinue").addEventListener("click", function () { confirmDialog.close(); });
+  document.getElementById("confirmSubmit").addEventListener("click", function () { confirmDialog.close(); submitQuiz(); });
+  document.getElementById("btnRetry").addEventListener("click", retry);
+  document.getElementById("btnRetry2").addEventListener("click", retry);
+  document.getElementById("btnReview").addEventListener("click", buildReview);
+  document.getElementById("btnBackResult").addEventListener("click", function () {
+    reviewView.style.display = "none";
+    resultView.style.display = "block";
+  });
+
+  cards.forEach(function (card, idx) {
+    card.setAttribute("data-number", String(idx + 1));
+  });
+
+  buildNav();
+  showCard(0);
+})();
+</script>
+</body>
+</html>

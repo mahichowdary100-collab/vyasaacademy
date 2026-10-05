@@ -1,0 +1,18 @@
+{
+  "name": "vyasa-academy-chatbot-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Serverless Gemini API for Vyasa Guru chatbot",
+  "main": "api/chat.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@google/genai": "^1.22.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test test/run-tests.js"
+  },
+  "license": "UNLICENSED"
+}

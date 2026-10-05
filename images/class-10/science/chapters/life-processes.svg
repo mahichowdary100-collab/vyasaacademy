@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 230" role="img" aria-label="Life Processes - cell with nucleus and energy dots">
+  <rect width="400" height="230" fill="#ffffff"/>
+  <path d="M60 60 A45 45 0 0 1 95 30" fill="none" stroke="#c5cae9" stroke-width="6" stroke-linecap="round"/>
+  <path d="M345 160 A45 45 0 0 1 320 195" fill="none" stroke="#c5cae9" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="60,60 88,42 70,74" fill="#f9a825"/>
+  <polygon points="345,160 317,178 335,146" fill="#f9a825"/>
+  <circle cx="210" cy="130" r="75" fill="none" stroke="#1a237e" stroke-width="8"/>
+  <circle cx="210" cy="130" r="30" fill="#f9a825"/>
+  <circle cx="170" cy="88" r="9" fill="#1a237e"/>
+  <circle cx="258" cy="170" r="9" fill="#1a237e"/>
+  <circle cx="252" cy="92" r="9" fill="#1a237e"/>
+</svg>

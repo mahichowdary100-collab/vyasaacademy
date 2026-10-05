@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CBSE Class 10 Maths Pair of Linear Equations Notes | Solutions &amp; Applications</title>
+  <meta name="description" content="CBSE Class 10 Maths Pair of Linear Equations in Two Variables notes covering graphical solutions, consistency, substitution, elimination, applications, competency questions and exam tips." />
+  <link rel="canonical" href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/notes/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vyasa Academy" />
+  <meta property="og:title" content="CBSE Class 10 Maths Pair of Linear Equations Notes | Solutions &amp; Applications" />
+  <meta property="og:description" content="CBSE Class 10 Maths Pair of Linear Equations in Two Variables notes covering graphical solutions, consistency, substitution, elimination, applications, competency questions and exam tips." />
+  <meta property="og:url" content="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/notes/" />
+  <meta property="og:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CBSE Class 10 Maths Pair of Linear Equations Notes | Solutions &amp; Applications" />
+  <meta name="twitter:description" content="CBSE Class 10 Maths Pair of Linear Equations in Two Variables notes covering graphical solutions, consistency, substitution, elimination, applications, competency questions and exam tips." />
+  <meta name="twitter:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","itemListElement":[{"position":1,"name":"Home","item":"https://www.vyasaacademy.in/","@type":"ListItem"},{"position":2,"name":"CBSE Study Material","item":"https://www.vyasaacademy.in/cbse-study-material/","@type":"ListItem"},{"position":3,"name":"Class 10","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/","@type":"ListItem"},{"position":4,"name":"Mathematics","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/","@type":"ListItem"},{"position":5,"name":"Pair of Linear Equations in Two Variables","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/","@type":"ListItem"},{"position":6,"name":"Notes","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/notes/","@type":"ListItem"}],"@type":"BreadcrumbList"}
+  </script>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+      processEscapes: true
+    }
+  };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <style>
+  .sm-notes { font-size: 1rem; line-height: 1.8; }
+  .sm-notes h2 { font-size: 1.45rem; color: var(--primary); margin: 44px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--accent); }
+  .sm-notes h3 { font-size: 1.15rem; color: var(--dark); margin: 28px 0 12px; }
+  .sm-notes h4 { font-size: 1.05rem; color: var(--dark); margin: 20px 0 8px; }
+  .sm-notes p { margin-bottom: 14px; }
+  .sm-notes ul, .sm-notes ol { margin: 10px 0 16px 24px; }
+  .sm-notes li { margin-bottom: 6px; }
+  .sm-notes ul { list-style: disc; }
+
+  .def-box { background: #eef2ff; border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .def-box .box-label { font-weight: 700; color: var(--primary); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .result-box { background: #fff8e1; border-left: 4px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .result-box .box-label { font-weight: 700; color: var(--accent-dark); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .example-box { background: #f0fdf4; border-left: 4px solid #16a34a; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .example-box .box-label { font-weight: 700; color: #16a34a; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .tip-box { background: #eff6ff; border-left: 4px solid #2563eb; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .tip-box .box-label { font-weight: 700; color: #2563eb; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .warn-box { background: #fef2f2; border-left: 4px solid #dc2626; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .warn-box .box-label { font-weight: 700; color: #dc2626; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .steps { margin: 12px 0 16px; }
+  .steps .step { display: flex; gap: 12px; margin-bottom: 10px; }
+  .steps .step-num { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: var(--primary); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; margin-top: 3px; }
+  .steps .step-text { flex: 1; }
+
+  .table-wrap { overflow-x: auto; margin: 16px 0; -webkit-overflow-scrolling: touch; }
+  .sm-notes table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .sm-notes th { background: var(--primary); color: var(--white); text-align: left; padding: 12px 14px; font-weight: 600; white-space: nowrap; }
+  .sm-notes td { padding: 10px 14px; border-bottom: 1px solid #e5e7eb; }
+  .sm-notes tr:nth-child(even) td { background: #f9fafb; }
+  .sm-notes tr:hover td { background: #eef2ff; }
+
+  .highlight { background: #fef9c3; padding: 2px 5px; border-radius: 4px; font-weight: 600; }
+  .qbox { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: var(--radius); padding: 16px 20px; margin: 12px 0; }
+  .qbox .q-label { font-weight: 700; color: var(--primary); margin-bottom: 4px; }
+
+  .app-box { background: #ecfeff; border-left: 4px solid #0891b2; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .app-box .box-label { font-weight: 700; color: #0e7490; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .comp-box { background: #f5f3ff; border-left: 4px solid #7c3aed; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .comp-box .box-label { font-weight: 700; color: #6d28d9; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .solved-box { background: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #16a34a; border-radius: var(--radius); padding: 18px 22px; margin: 18px 0; box-shadow: 0 2px 8px rgba(15,23,42,.05); }
+  .solved-box .s-label { font-weight: 700; color: #16a34a; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  .solved-box .s-part { margin: 10px 0 0; }
+  .solved-box .s-part b { color: var(--primary); }
+
+  .case-card { background: #fff; border: 1px solid #e2e8f0; border-radius: var(--radius); margin: 22px 0; box-shadow: 0 2px 8px rgba(15,23,42,.05); overflow: hidden; }
+  .case-card-header { background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: #fff; padding: 14px 20px; }
+  .case-card-header h3 { margin: 0; font-size: 1.05rem; }
+  .case-card-body { padding: 18px 20px; }
+
+  .concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 18px 0; }
+  .concept-card { background: #fff; border: 1px solid #e2e8f0; border-left: 4px solid var(--primary); border-radius: var(--radius); padding: 16px 18px; transition: var(--transition); }
+  .concept-card:hover { box-shadow: 0 6px 18px rgba(79,70,229,.12); transform: translateY(-2px); }
+  .concept-card h4 { color: var(--primary); margin: 0 0 6px; font-size: 1rem; }
+  .concept-card p { margin: 0; font-size: 0.92rem; }
+
+  .tag-pill { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: .4px; text-transform: uppercase; padding: 3px 10px; border-radius: 999px; vertical-align: middle; }
+  .tag-concept { background: #fef3c7; color: #92400e; }
+  .tag-graph { background: #dcfce7; color: #166534; }
+  .tag-alg { background: #e0e7ff; color: #3730a3; }
+  .tag-app { background: #cffafe; color: #155e75; }
+  .tag-comp { background: #ede9fe; color: #5b21b6; }
+  .tag-case { background: #ffe4e6; color: #9f1239; }
+
+  .figure-wrap { text-align: center; margin: 20px 0; }
+  .figure-wrap svg { max-width: 340px; width: 100%; height: auto; }
+  .figure-wrap figcaption { font-size: 0.85rem; color: var(--gray); margin-top: 6px; font-style: italic; }
+
+  .g-axis { stroke: #94a3b8; stroke-width: 1.5; }
+  .g-line-a { fill: none; stroke: var(--primary); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  .g-line-b { fill: none; stroke: #e11d48; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  .g-line-bc { fill: none; stroke: #e11d48; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 6 4; }
+  .g-pt { fill: #16a34a; stroke: #fff; stroke-width: 1.5; }
+  .g-lab { font-size: 13px; fill: var(--gray); font-weight: 600; }
+  .g-lab-a { fill: var(--primary); }
+  .g-lab-b { fill: #e11d48; }
+
+  .sm-notes mjx-container { max-width: 100%; }
+  .sm-notes mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; }
+
+  .resource-nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
+  .resource-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: var(--radius); border: 2px solid #e5e7eb; font-weight: 600; font-size: 0.92rem; color: var(--dark); background: var(--white); transition: var(--transition); }
+  .resource-nav a:hover, .resource-nav a.is-active { border-color: var(--primary); background: var(--primary); color: var(--white); }
+
+  .sm-back { display: inline-flex; align-items: center; gap: 8px; margin-top: 30px; padding: 10px 0; color: var(--primary); font-weight: 600; }
+  .sm-back:hover { color: var(--accent-dark); }
+
+  .next-chapter { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; justify-content: space-between; margin-top: 26px; padding: 18px 22px; background: linear-gradient(135deg, #eef2ff, #ffffff); border: 1px solid #e0e7ff; border-radius: var(--radius); }
+  .next-chapter h3 { margin: 0; font-size: 1.02rem; }
+  .next-chapter p { margin: 4px 0 0; font-size: 0.9rem; }
+
+  .related-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+  .related-links a { display: inline-flex; align-items: center; gap: 8px; padding: 11px 16px; border: 2px solid #e2e8f0; border-radius: var(--radius); font-weight: 600; font-size: 0.9rem; color: var(--dark); background: #fff; transition: var(--transition); }
+  .related-links a:hover { border-color: var(--primary); background: #eef2ff; color: var(--primary); }
+
+  @media (max-width: 640px) {
+    .sm-notes h2 { font-size: 1.25rem; }
+    .sm-notes { font-size: 0.95rem; }
+    .steps .step { gap: 8px; }
+    .steps .step-num { width: 22px; height: 22px; font-size: 0.75rem; }
+    .resource-nav { gap: 6px; }
+    .resource-nav a { padding: 8px 12px; font-size: 0.85rem; }
+    .concept-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 420px) {
+    .concept-grid { grid-template-columns: 1fr; }
+  }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="/" class="logo"><i class="fas fa-graduation-cap"></i> Vyasa Academy</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="/">Home</a>
+      <a href="/#courses">Courses</a>
+      <a href="/cbse-study-material/" class="active">Study Material</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main class="sm-page">
+  <div class="container sm-container">
+    <nav class="sm-crumbs" aria-label="Breadcrumb">
+      <a href="https://www.vyasaacademy.in/">Home</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/">CBSE Study Material</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/">Class 10</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/">Mathematics</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/">Pair of Linear Equations in Two Variables</a> /
+      Notes
+    </nav>
+
+    <section class="sm-hero sm-hero-slim">
+      <p class="sm-eyebrow">CBSE Class 10 Â· Mathematics</p>
+      <h1>Class 10 Mathematics â€“ Chapter 3: Pair of Linear Equations in Two Variables</h1>
+      <p>In <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/polynomials/notes/">Chapter 2 â€“ Polynomials</a> you solved equations in one variable. Real-life problems often involve two unknowns, and Chapter 3 shows how two unknowns can be handled together as a <strong>pair of linear equations</strong>. You will learn what a solution of such a pair looks like, how the two equations appear as two straight lines on a graph, how to decide how many solutions a pair has just by comparing ratios of coefficients, and how to solve pairs reliably using the <strong>substitution</strong> and <strong>elimination</strong> methods. You will also apply these methods to age problems, cost problems, tickets, stationery, perimeter and many other everyday situations.</p>
+    </section>
+
+    <nav class="resource-nav" aria-label="Chapter resources">
+      <a class="is-active" href="/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/notes/"><i class="fas fa-book-open"></i> Notes</a>
+      <a href="/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/practice-paper/"><i class="fas fa-file-lines"></i> Practice Paper</a>
+      <a href="/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/quiz/"><i class="fas fa-bullseye"></i> Quiz</a>
+      <a href="/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+    </nav>
+
+    <article class="sm-notes">
+
+      <section id="introduction">
+        <h2>1. Introduction</h2>
+        <p>A <strong>linear equation in two variables</strong> is an equation of the form \(ax + by + c = 0\), where \(x\) and \(y\) are the variables and \(a, b, c\) are real numbers with \(a\) and \(b\) <strong>not both zero</strong>.</p>
+        <p>For example, \(3x - 2y + 5 = 0\), \(x + y = 8\) and \(2x = 5y + 1\) are all linear equations in two variables. The word <em>linear</em> means that each variable appears only to the first power, so the graph of such an equation is always a straight line.</p>
+
+        <div class="def-box">
+          <p class="box-label">Definition</p>
+          <p>A <strong>pair of linear equations in two variables</strong> is a set of two linear equations considered together:</p>
+          <p>\[a_1x + b_1y + c_1 = 0\]</p>
+          <p>\[a_2x + b_2y + c_2 = 0\]</p>
+          <p>where \(a_1, b_1, c_1, a_2, b_2, c_2\) are real numbers and in each equation the two coefficients of the variables are not both zero. Throughout the chapter, \(a_1/a_2\), \(b_1/b_2\) and \(c_1/c_2\) (when \(a_2, b_2, c_2 \neq 0\)) are compared to decide the nature of the pair.</p>
+        </div>
+
+        <p><strong>Why a pair?</strong> A single linear equation in two variables, such as \(x + y = 8\), has infinitely many solutions (\((1,7), (2,6), (3,5), \ldots\)) because we are free to choose one variable and then the other is forced. It is only when two such conditions are given together that the two unknowns can usually be pinned down to one specific value each â€” that is exactly the situation in most word problems.</p>
+
+        <div class="concept-grid">
+          <div class="concept-card">
+            <h4>Variable</h4>
+            <p>The unknown quantities, usually written \(x\) and \(y\).</p>
+          </div>
+          <div class="concept-card">
+            <h4>Coefficient</h4>
+            <p>The numbers multiplying \(x\) and \(y\), named \(a_1, a_2\) and \(b_1, b_2\).</p>
+          </div>
+          <div class="concept-card">
+            <h4>Constant</h4>
+            <p>The number without a variable, named \(c_1\) or \(c_2\). It may be zero.</p>
+          </div>
+          <div class="concept-card">
+            <h4>Line</h4>
+            <p>Each equation represents a straight line on the \(xy\)-plane.</p>
+          </div>
+        </div>
+
+        <div class="warn-box">
+          <p class="box-label">Common Mistake</p>
+          <p>Forgetting the condition that \(a\) and \(b\) are <strong>not both zero</strong>. For example, \(0 \cdot x + 2y - 6 = 0\) is still a linear equation (in fact \(y = 3\)); but an equation like \(0 \cdot x + 0 \cdot y + 5 = 0\) is neither linear nor valid, because no variable is present at all.</p>
+        </div>
+
+        <div class="tip-box">
+          <p class="box-label">Exam Tip</p>
+          <p>Before solving any pair, rewrite every equation in the clean form \(ax + by + c = 0\) (or \(ax + by = k\)). This makes comparing coefficients and applying the ratio conditions far less error-prone.</p>
+        </div>
+      </section>
+
+      <section id="solution">
+        <h2>2. Solution of a Pair of Linear Equations</h2>
+
+        <div class="def-box">
+          <p class="box-label">Definition</p>
+          <p>An ordered pair \((x_0, y_0)\) is a <strong>solution of the pair</strong> of linear equations</p>
+          <p>\[a_1x + b_1y + c_1 = 0 \quad\text{and}\quad a_2x + b_2y + c_2 = 0\]</p>
+          <p>if substitution of \(x = x_0\), \(y = y_0\) makes <strong>both</strong> equations true simultaneously.</p>
+        </div>
+
+        <h3>Verification of a solution</h3>
+        <p>To verify, substitute the proposed values into each equation separately. Both left-hand sides must equal the respective right-hand sides.</p>
+
+        <div class="example-box">
+          <p class="box-label">Worked Example â€” Verification</p>
+          <p><strong>Check whether \((2, -1)\) is a solution of \(2x + 3y = 1\) and \(x - y = 3\).</strong></p>
+          <p>Equation 1: \(2(2) + 3(-1) = 4 - 3 = 1\) âœ”</p>
+          <p>Equation 2: \(2 - (-1) = 2 + 1 = 3\) âœ”</p>
+          <p>Because both equations are satisfied, \((2, -1)\) is a solution of the pair. A common check is that even one wrong substitution invalidates the whole answer.</p>
+        </div>
+
+        <div class="warn-box">
+          <p class="box-label">Common Mistake</p>
+          <p>Checking the pair only in one equation. A pair is satisfied only when the values work in <strong>both</strong> equations.</p>
+        </div>
+
+        <div class="tip-box">
+          <p class="box-label">Exam Tip</p>
+          <p>Always finish algebraic solutions with a quick verification in every equation. Examiners give marks for a verified answer and it catches 90% of sign errors.</p>
+        </div>
+      </section>
+
+      <section id="graphical-representation">
+        <h2>3. Graphical Representation of a Pair of Linear Equations</h2>
+        <p>Each linear equation \(ax + by + c = 0\) can be rearranged to \(y = -\dfrac{a}{b}x - \dfrac{c}{b}\) (when \(b \neq 0\)), which is the slopeâ€“intercept form \(y = mx + k\). Its graph is therefore a <strong>straight line</strong>. Plotting a line needs only two points: pick two convenient values of \(x\), compute the matching \(y\), and join the two points.</p>
+
+        <div class="example-box">
+          <p class="box-label">Worked Example â€” Plotting one line</p>
+          <p><strong>Plot \(x + y = 6\).</strong></p>
+          <p>Choose \(x = 0 \Rightarrow y = 6\), \(x = 6 \Rightarrow y = 0\), and \(x = 3 \Rightarrow y = 3\). The points \((0,6)\), \((6,0)\) and \((3,3)\) all lie on the same straight line. Join \((0,6)\) and \((6,0)\).</p>
+          <p><strong>Interpretation:</strong> every point on this line is a solution of \(x + y = 6\) alone (for instance \((4,2)\) too, since \(4 + 2 = 6\)).</p>
+        </div>
+
+        <p>When two equations are drawn on the same axes, their two lines interact in exactly <strong>three possible ways</strong>. This gives us the whole theory of this chapter in one picture.</p>
+      </section>
+
+      <section id="graphical-method">
+        <h2>4. Graphical Method: The Three Cases</h2>
+
+        <h3>Case 1 â€” Intersecting lines: unique solution</h3>
+        <p>Two lines that cross at <strong>one point</strong> represent a pair with exactly <strong>one solution</strong> â€” the coordinates of the meeting point. Such a pair is called <strong>consistent</strong>.</p>
+        <figure class="figure-wrap">
+          <svg viewBox="0 0 320 250" role="img" aria-label="Graph of the lines y equals x plus 1 and y equals 5 minus x, intersecting at the point (2,3)">
+            <line class="g-axis" x1="30" y1="210" x2="290" y2="210"/>
+            <line class="g-axis" x1="80" y1="20" x2="80" y2="245"/>
+            <polyline class="g-line-a" points="80,170 120,130 160,90 200,50 240,10"/>
+            <polyline class="g-line-b" points="80,10 120,50 160,90 200,130 240,170 280,210"/>
+            <circle class="g-pt" cx="160" cy="90" r="5"/>
+            <text class="g-lab g-lab-a" x="228" y="24">y = x + 1</text>
+            <text class="g-lab g-lab-b" x="240" y="198">y = 5 - x</text>
+            <text class="g-lab" x="146" y="84" font-weight="700">(2, 3)</text>
+          </svg>
+          <figcaption>Intersecting lines â€” unique solution \((2,3)\). The pair is consistent.</figcaption>
+        </figure>
+        <p><strong>Interpretation:</strong> the point \((2,3)\) lies on both lines, so it satisfies both equations. Because two straight lines can cross only once, there is exactly one solution.</p>
+
+        <h3>Case 2 â€” Parallel lines: no solution</h3>
+        <p>Two lines with the same slope but different intercepts never meet. There is <strong>no point</strong> common to both lines, hence <strong>no solution</strong>. Such a pair is called <strong>inconsistent</strong>.</p>
+        <figure class="figure-wrap">
+          <svg viewBox="0 0 320 250" role="img" aria-label="Graph of the parallel lines x plus 2y equals 6 and x plus 2y equals 12, which never intersect">
+            <line class="g-axis" x1="30" y1="230" x2="292" y2="230"/>
+            <line class="g-axis" x1="80" y1="20" x2="80" y2="245"/>
+            <polyline class="g-line-a" points="80,134 112,150 144,166 176,182 208,198 240,214 272,230"/>
+            <polyline class="g-line-b" points="80,38 112,54 144,70 176,86 208,102 240,118 272,134"/>
+            <text class="g-lab" x="204" y="224">x + 2y = 6</text>
+            <text class="g-lab" x="204" y="30">x + 2y = 12</text>
+          </svg>
+          <figcaption>Parallel lines â€” no solution. The pair is inconsistent.</figcaption>
+        </figure>
+        <p><strong>Interpretation:</strong> the lines \(x + 2y = 6\) and \(x + 2y = 12\) have the same slope, so they never meet. No pair of numbers can satisfy both equations.</p>
+
+        <h3>Case 3 â€” Coincident lines: infinitely many solutions</h3>
+        <p>Two lines that overlap completely are called <strong>coincident</strong>. Every point of the single line is common to both equations, giving <strong>infinitely many solutions</strong>. Such a pair is <strong>consistent</strong> and <strong>dependent</strong>.</p>
+        <figure class="figure-wrap">
+          <svg viewBox="0 0 320 250" role="img" aria-label="Graph showing the coincident lines x plus 2y equals 6 and 2x plus 4y equals 12 lying on top of each other">
+            <line class="g-axis" x1="30" y1="230" x2="292" y2="230"/>
+            <line class="g-axis" x1="80" y1="20" x2="80" y2="245"/>
+            <polyline class="g-line-bc" points="80,132 112,148 144,164 176,180 208,196 240,212 272,228"/>
+            <polyline class="g-line-a" points="80,134 112,150 144,166 176,182 208,198 240,214 272,230"/>
+          </svg>
+          <figcaption>Coincident lines â€” infinitely many solutions. The pair is consistent and dependent.</figcaption>
+        </figure>
+        <p><strong>Interpretation:</strong> \(x + 2y = 6\) and \(2x + 4y = 12\) are really the same condition (the second is just the first multiplied by 2). Both equations describe the same line, so every point of it is a solution.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Situation</th><th>Lines</th><th>Number of solutions</th><th>Nature of the pair</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Intersecting lines</td><td>Cross at one point</td><td>Exactly one (unique)</td><td>Consistent</td></tr>
+              <tr><td>Parallel lines</td><td>Never meet</td><td>None</td><td>Inconsistent</td></tr>
+              <tr><td>Coincident lines</td><td>Overlap completely</td><td>Infinitely many</td><td>Consistent (dependent)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="warn-box">
+          <p class="box-label">Common Mistake</p>
+          <p>Misreading a graph's intersection point. Always read the point by dropping <strong>perpendiculars to the two axes</strong>, and check that the coordinates satisfy both equations. Also, do not confuse <em>parallel</em> (no solution) with <em>coincident</em> (infinitely many) â€” parallel lines never touch, coincident lines are the same line.</p>
+        </div>
+
+        <div class="tip-box">
+          <p class="box-label">Exam Tip</p>
+          <p>In graph questions, label both axes, mark the scales and write the point of intersection clearly. Labelling the two lines near them (for example near their ends) removes any ambiguity for the examiner.</p>
+        </div>
+      </section>
+
+      <section id="consistency">
+        <h2>5. Consistent and Inconsistent Pairs</h2>
+
+        <div class="def-box">
+          <p class="box-label">Definitions</p>
+          <p><strong>Consistent pair:</strong> a pair that has <strong>at least one solution</strong> â€” either a unique solution (intersecting lines) or infinitely many solutions (coincident lines).</p>
+          <p><strong>Inconsistent pair:</strong> a pair that has <strong>no solution</strong> (parallel lines).</p>
+        </div>
+
+        <div class="result-box">
+          <p class="box-label">Key Result</p>
+          <p>A pair of linear equations is consistent if and only if the two lines intersect or coincide; it is inconsistent if and only if the two lines are parallel.</p>
+        </div>
+
+        <div class="concept-grid">
+          <div class="concept-card">
+            <h4>Unique solution</h4>
+            <p>Intersecting lines. Consistent.</p>
+          </div>
+          <div class="concept-card">
+            <h4>No solution</h4>
+            <p>Parallel lines. Inconsistent.</p>
+          </div>
+          <div class="concept-card">
+            <h4>Infinitely many</h4>
+            <p>Coincident lines. Consistent and dependent.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="conditions">
+        <h2>6. Conditions for the Number of Solutions</h2>
+        <p>Without drawing a graph, we can tell how many solutions a pair has by comparing the ratios of the coefficients of the two equations</p>
+        <p>\[a_1x + b_1y + c_1 = 0, \qquad a_2x + b_2y + c_2 = 0\]</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Ratio condition</th><th>Graphical meaning</th><th>Number of solutions</th><th>Nature of pair</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>\(\dfrac{a_1}{a_2} \neq \dfrac{b_1}{b_2}\)</td><td>Intersecting lines</td><td>Exactly one</td><td>Consistent</td></tr>
+              <tr><td>\(\dfrac{a_1}{a_2} = \dfrac{b_1}{b_2} \neq \dfrac{c_1}{c_2}\)</td><td>Parallel lines</td><td>None</td><td>Inconsistent</td></tr>
+              <tr><td>\(\dfrac{a_1}{a_2} = \dfrac{b_1}{b_2} = \dfrac{c_1}{c_2}\)</td><td>Coincident lines</td><td>Infinitely many</td><td>Consistent (dependent)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="tip-box">
+          <p class="box-label">Exam Tip</p>
+          <p>Write the ratios in the fixed order \(a_1/a_2\), \(b_1/b_2\), \(c_1/c_2\) and compare them one at a time. First check whether \(a_1/a_2 = b_1/b_2\). If they differ, it is a unique solution. If they match, then also compare \(c_1/c_2\): equal means infinitely many, unequal means none.</p>
+        </div>
+
+        <h3>Examples â€” Identifying the type without solving</h3>
+
+        <div class="example-box">
+          <p class="box-label">Worked Example â€” Ratio test 1</p>
+          <p><strong>Identify the type: \(3x + 2y = 8\) and \(6x + 4y = 16\).</strong></p>
+          <p>\(\dfrac{a_1}{a_2} = \dfrac{3}{6} = \dfrac{1}{2}\), \(\dfrac{b_1}{b_2} = \dfrac{2}{4} = \dfrac{1}{2}\), \(\dfrac{c_1}{c_2} = \dfrac{8}{16} = \dfrac{1}{2}\).</p>
+          <p>All three ratios are equal, so the lines coincide and the pair has <strong>infinitely many solutions</strong> (consistent, dependent).</p>
+        </div>
+
+        <div class="example-box">
+          <p class="box-label">Worked Example â€” Ratio test 2</p>
+          <p><strong>Identify the type: \(2x - 3y = 8\) and \(4x - 6y = 9\).</strong></p>
+          <p>\(\dfrac{a_1}{a_2} = \dfrac{2}{4} = \dfrac{1}{2}\), \(\dfrac{b_1}{b_2} = \dfrac{-3}{-6} = \dfrac{1}{2}\), \(\dfrac{c_1}{c_2} = \dfrac{8}{9}\).</p>
+          <p>The first two ratios are equal but the third is not, so the lines are <strong>parallel</strong> and the pair is <strong>inconsistent</strong> (no solution).</p>
+        </div>
+
+        <div class="example-box">
+          <p class="box-label">Worked Example â€” Ratio test 3</p>
+          <p><strong>Identify the type: \(x + y = 6\) and \(x - y = 2\).</strong></p>
+          <p>\(\dfrac{a_1}{a_2} = \dfrac{1}{1} = 1\), \(\dfrac{b_1}{b_2} = \dfrac{1}{-1} = -1\).</p>
+          <p>Since \(1 \neq -1\), the lines <strong>intersect</strong>, giving a unique solution â€” noticed instantly, before any solving.</p>
+        </div>
+
+        <div class="warn-box">
+          <p class="box-label">Common Mistake</p>
+          <p>Comparing ratios carelessly: e.g. comparing \(a_1/a_2\) with \(b_2/b_1\), or forgetting that \(c_1/c_2\) must be compared only when the first two ratios already match. Also, always reduce ratios to simplest form before judging equality.</p>
+        </div>
+      </section>
+
+      <section id="algebraic-methods">
+        <h2>7. Solving Algebraically</h2>
+        <p>The two algebraic methods you must master are <strong>substitution</strong> and <strong>elimination</strong>. Both produce the same unique solution; which one you choose will depend on how the equations look.</p>
+
+        <h3>7.1 Substitution Method</h3>
+        <p>The idea: use one equation to express one variable in terms of the other, then substitute that expression into the second equation so that only one variable remains.</p>
+
+        <div class="steps">
+          <div class="step"><span class="step-num">1</span><span class="step-text">Take one equation and <strong>express one variable in terms of the other</strong>. For example, from \(x + y = 12\), write \(y = 12 - x\).</span></div>
+          <div class="step"><span class="step-num">2</span><span class="step-text"><strong>Substitute</strong> this expression into the <strong>other</strong> equation.</span></div>
+          <div class="step"><span class="step-num">3</span><span class="step-text"><strong>Solve</strong> the resulting single equation in one variable.</span></div>
+          <div class="step"><span class="step-num">4</span><span class="step-text"><strong>Substitute back</strong> this value into the expression from step 1 to get the second variable.</span></div>
+          <div class="step"><span class="step-num">5</span><span class="step-text"><strong>Verify</strong> both values in both original equations.</span></div>
+        </div>
+
+        <div class="example-box">
+          <p class="box-label">Worked Example â€” Substitution 1 (easy)</p>
+          <p><strong>Solve: \(y = 2x\) and \(3x + y = 10\).</strong></p>
+          <p>Step 1: \(y = 2x\) is already solved.</p>
+          <p>Step 2: substitute into \(3x + y = 10\): \(3x + 2x = 10\).</p>
+          <p>Step 3: \(5x = 10 \Rightarrow x = 2\).</p>
+          <p>Step 4: \(y = 2(2) = 4\).</p>
+          <p>Step 5: \(3(2) + 4 = 10\) âœ” and \(4 = 2(2)\) âœ”. Solution: <strong>\((2, 4)\)</strong>.</p>
+        </div>
+
+        <div class="example-box">
+          <p class="box-label">Worked Example â€” Substitution 2 (easyâ€“moderate)</p>
+          <p><strong>Solve: \(x = 2y + 1\) and \(3x - y = 8\).</strong></p>
+          <p>Substitute \(x = 2y + 1\): \(3(2y + 1) - y = 8 \Rightarrow 6y + 3 - y = 8 \Rightarrow 5y = 5 \Rightarrow y = 1\).</p>
+          <p>Then \(x = 2(1) + 1 = 3\). Check: \(3(3) - 1 = 8\) âœ”. Solution: <strong>\((3, 1)\)</strong>.</p>
+        </div>
+
+        <div class="example-box">
+          <p class="box-label">Worked Example â€” Substitution 3 (moderate)</p>
+          <p><strong>Solve: \(x + 2y = 8\) and \(2x - y = 1\).</strong></p>
+          <p>From \(x + 2y = 8\), \(x = 8 - 2y\). Substitute: \(2(8 - 2y) - y = 1 \Rightarrow 16 - 4y - y = 1 \Rightarrow 5y = 15 \Rightarrow y = 3\).</p>
+          <p>Then \(x = 8 - 6 = 2\). Check: \(4 - 3 = 1\) âœ”, \(2 + 6 = 8\) âœ”. Solution: <strong>\((2, 3)\)</strong>.</p>
+        </div>
+
+        <div class="example-box">
+          <p class="box-label">Worked Example â€” Substitution 4 (moderate)</p>
+          <p><strong>Solve: \(4x + 3y = 18\) and \(x = 2y - 1\).</strong></p>
+          <p>Substitute: \(4(2y - 1) + 3y = 18 \Rightarrow 8y - 4 + 3y = 18 \Rightarrow 11y = 22 \Rightarrow y = 2\).</p>
+          <p>Then \(x = 2(2) - 1 = 3\). Check: \(4(3) + 3(2) = 12 + 6 = 18\) âœ”. Solution: <strong>\((3, 2)\)</strong>.</p>
+        </div>
+
+        <div class="example-box">
+          <p class="box-label">Worked Example â€” Substitution 5 (fractions)</p>
+          <p><strong>Solve: \(3x - 2y = 5\) and \(2x + 3y = 12\).</strong></p>
+          <p>From \(3x - 2y = 5\), \(x = \dfrac{5 + 2y}{3}\). Substitute:</p>
+          <p>\[2\left(\frac{5 + 2y}{3}\right) + 3y = 12 \Rightarrow \frac{10 + 4y}{3} + 3y = 12\]</p>
+          <p>\[10 + 4y + 9y = 36 \Rightarrow 13y = 26 \Rightarrow y = 2\]</p>
+          <p>Then \(x = \dfrac{5 + 4}{3} = 3\). Check: \(2(3) + 3(2) = 6 + 6 = 12\) âœ”. Solution: <strong>\((3, 2)\)</strong>.</p>
+        </div>
+
+        <div class="warn-box">
+          <p class="box-label">Common Mistake â€” Substitution</p>
+          <p>Substituting the expression back into the <strong>same equation</strong> it came from (which only repeats it), forgetting brackets when substituting (e.g. writing \(2x = y - 1\) as \(2x = y - 1\) correctly, but \(x = (y-1)/2\) wrongly as \(x = y - 1/2\)), and making sign errors when a variable had a negative coefficient.</p>
+        </div>
+
+        <h3>7.2 Elimination Method</h3>
+        <p>The idea: make the coefficients of one variable the same (or opposite) in both equations, then add or subtract to eliminate that variable.</p>
+
+        <div class="steps">
+          <div class="step"><span class="step-num">1</span><span class="step-text"><strong>Write both equations neatly</strong> with the variable terms aligned.</span></div>
+          <div class="step"><span class="step-num">2</span><span class="step-text">Multiply one (or both) equations by suitable numbers so that the coefficients of one variable become <strong>same or opposite</strong>.</span></div>
+          <div class="step"><span class="step-num">3</span><span class="step-text"><strong>Add or subtract</strong> the two equations to eliminate that variable.</span></div>
+          <div class="step"><span class="step-num">4</span><span class="step-text"><strong>Solve</strong> the remaining single equation to find one variable.</span></div>
+          <div class="step"><span class="step-num">5</span><span class="step-text"><strong>Substitute back</strong> into one original equation to get the second variable.</span></div>
+          <div class="step"><span class="step-num">6</span><span class="step-text"><strong>Verify</strong> in both original equations.</span></div>
+        </div>
+
+        <div class="example-box">
+          <p class="box-label">Worked Example â€” Elimination 1 (easy)</p>
+          <p><strong>Solve: \(x + y = 9\) and \(x - y = 5\).</strong></p>
+          <p>The coefficients of \(y\) are \(+1\) and \(-1\), so add: \(2x = 14 \Rightarrow x = 7\).</p>
+          <p>Then \(7 + y = 9 \Rightarrow y = 2\). Check: \(7 - 2 = 5\) âœ”. Solution: <strong>\((7, 2)\)</strong>.</p>
+        </div>
+
+        <div class="example-box">
+          <p class="box-label">Worked Example â€” Elimination 2 (easy)</p>
+          <p><strong>Solve: \(3x + 2y = 8\) and \(5x - 2y = 8\).</strong></p>
+          <p>Coefficients of \(y\) are opposite, so add: \(8x = 16 \Rightarrow x = 2\).</p>
+          <p>Then \(3(2) + 2y = 8 \Rightarrow 2y = 2 \Rightarrow y = 1\). Check: \(5(2) - 2(1) = 8\) âœ”. Solution: <strong>\((2, 1)\)</strong>.</p>
+        </div>
+
+        <div class="example-box">
+          <p class="box-label">Worked Example â€” Elimination 3 (same coefficient)</p>
+          <p><strong>Solve: \(2x + 3y = 13\) and \(2x + 7y = 25\).</strong></p>
+          <p>The coefficients of \(x\) are the same, so subtract the first from the second: \(4y = 12 \Rightarrow y = 3\).</p>
+          <p>Then \(2x + 9 = 13 \Rightarrow x = 2\). Check: \(4 + 21 = 25\) âœ”. Solution: <strong>\((2, 3)\)</strong>.</p>
+        </div>
+
+        <div class="example-box">
+          <p class="box-label">Worked Example â€” Elimination 4 (scaling needed)</p>
+          <p><strong>Solve: \(3x + 4y = 18\) and \(2x - 5y = -11\).</strong></p>
+          <p>Multiply the first by \(5\) and the second by \(4\) to match the \(y\)-coefficients:</p>
+          <p>\[15x + 20y = 90, \qquad 8x - 20y = -44\]</p>
+          <p>Add: \(23x = 46 \Rightarrow x = 2\). Then \(3(2) + 4y = 18 \Rightarrow y = 3\).</p>
+          <p>Check: \(2(2) - 5(3) = 4 - 15 = -11\) âœ”. Solution: <strong>\((2, 3)\)</strong>.</p>
+        </div>
+
+        <div class="example-box">
+          <p class="box-label">Worked Example â€” Elimination 5 (fractions avoided by scaling)</p>
+          <p><strong>Solve: \(5x + 2y = 19\) and \(3x - 4y = 1\).</strong></p>
+          <p>Multiply the first by \(2\): \(10x + 4y = 38\). Now the \(y\)-coefficients are \(+4\) and \(-4\); add:</p>
+          <p>\[13x = 39 \Rightarrow x = 3\]</p>
+          <p>Then \(5(3) + 2y = 19 \Rightarrow y = 2\). Check: \(3(3) - 4(2) = 9 - 8 = 1\) âœ”. Solution: <strong>\((3, 2)\)</strong>.</p>
+        </div>
+
+        <div class="warn-box">
+          <p class="box-label">Common Mistake â€” Elimination</p>
+          <p>Multiplying only one side of an equation, subtracting the wrong way round (sign errors), and forgetting to multiply the constant term when scaling an equation.</p>
+        </div>
+
+        <div class="tip-box">
+          <p class="box-label">Choosing a method</p>
+          <p>Use <strong>substitution</strong> when one variable already has coefficient \(1\) or is already expressed in terms of the other (e.g. \(x = 2y + 1\)). Use <strong>elimination</strong> when coefficients are already matching or easy to match (e.g. \(2x + 3y = 13\), \(2x + 7y = 25\)), or when substitution would produce fractions immediately.</p>
+        </div>
+      </section>
+
+      <section id="situational">
+        <h2>8. Simple Situational (Word) Problems</h2>
+        <p>All word problems follow the same four-step discipline:</p>
+        <ol>
+          <li><strong>Read</strong> the problem carefully and identify the two unknown quantities.</li>
+          <li><strong>Define</strong> the variables clearly (e.g. "Let the cost of one pen be â‚¹\(x\) and one pencil be â‚¹\(y\)").</li>
+          <li><strong>Translate</strong> each sentence into an equation â€” one sentence gives one equation.</li>
+          <li>Solve the pair, then <strong>re-read</strong> the question to present the answer in context.</li>
+        </ol>
+
+        <div class="app-box">
+          <p class="box-label">Application 1 â€” Two numbers</p>
+          <p>The difference of two numbers is 26, and one number is three times the other. Find the numbers.</p>
+          <p><strong>Forming the equations:</strong> let the bigger number be \(x\) and the smaller be \(y\). "Difference is 26" gives \(x - y = 26\). "One is three times the other" gives \(x = 3y\).</p>
+          <p><strong>Solving:</strong> substitute \(x = 3y\) into \(x - y = 26\): \(3y - y = 26 \Rightarrow 2y = 26 \Rightarrow y = 13\), and \(x = 39\).</p>
+          <p><strong>Verify:</strong> \(39 - 13 = 26\) âœ” and \(39 = 3 \times 13\) âœ”.</p>
+          <p><strong>Answer:</strong> the numbers are <strong>39 and 13</strong>.</p>
+        </div>
+
+        <div class="app-box">
+          <p class="box-label">Application 2 â€” Age problem</p>
+          <p>Five years ago, Nuri was thrice as old as Sonu. Ten years later, Nuri will be twice as old as Sonu. Find their present ages.</p>
+          <p><strong>Forming the equations:</strong> let Nuri's present age be \(x\) years and Sonu's be \(y\) years. Five years ago their ages were \(x - 5\) and \(y - 5\), and "Nuri was thrice as old" gives \(x - 5 = 3(y - 5)\). Ten years later their ages are \(x + 10\) and \(y + 10\), so \(x + 10 = 2(y + 10)\).</p>
+          <p><strong>Solving:</strong> the first equation simplifies to \(x = 3y - 10\). The second simplifies to \(x = 2y + 10\). Equating: \(3y - 10 = 2y + 10 \Rightarrow y = 20\), then \(x = 50\).</p>
+          <p><strong>Verify:</strong> 5 years ago: \(45 = 3 \times 15\) âœ”. In 10 years: \(60 = 2 \times 30\) âœ”.</p>
+          <p><strong>Answer:</strong> Nuri is <strong>50</strong> and Sonu is <strong>20</strong> years old.</p>
+        </div>
+
+        <div class="app-box">
+          <p class="box-label">Application 3 â€” Cost of articles</p>
+          <p>Two pencils and three pens cost â‚¹54. Four pencils and two pens cost â‚¹68. Find the price of one pencil and one pen.</p>
+          <p><strong>Forming the equations:</strong> let a pencil cost â‚¹\(x\) and a pen cost â‚¹\(y\). Then \(2x + 3y = 54\) and \(4x + 2y = 68\).</p>
+          <p><strong>Solving (elimination):</strong> double the first equation: \(4x + 6y = 108\). Subtract the second: \(4y = 40 \Rightarrow y = 10\). Then \(2x + 30 = 54 \Rightarrow x = 12\).</p>
+          <p><strong>Verify:</strong> \(4(12) + 2(10) = 68\) âœ”.</p>
+          <p><strong>Answer:</strong> a pencil costs <strong>â‚¹12</strong> and a pen costs <strong>â‚¹10</strong>.</p>
+        </div>
+
+        <div class="app-box">
+          <p class="box-label">Application 4 â€” Event tickets</p>
+          <p>200 tickets were sold for a school event. Adult tickets cost â‚¹30 and child tickets cost â‚¹20, and the total collection was â‚¹4,800. How many of each were sold?</p>
+          <p><strong>Forming the equations:</strong> let adults be \(x\) and children be \(y\). Then \(x + y = 200\) and \(30x + 20y = 4800\).</p>
+          <p><strong>Solving (elimination):</strong> from \(x + y = 200\), \(y = 200 - x\). Then \(30x + 20(200 - x) = 4800 \Rightarrow 10x + 4000 = 4800 \Rightarrow x = 80\), and \(y = 120\).</p>
+          <p><strong>Verify:</strong> \(30(80) + 20(120) = 2400 + 2400 = 4800\) âœ”.</p>
+          <p><strong>Answer:</strong> <strong>80 adult</strong> and <strong>120 child</strong> tickets.</p>
+        </div>
+
+        <div class="app-box">
+          <p class="box-label">Application 5 â€” Stationery</p>
+          <p>Five notebooks and three pens cost â‚¹190. Three notebooks and five pens cost â‚¹130. Find the cost of one notebook and one pen.</p>
+          <p><strong>Forming the equations:</strong> \(5n + 3p = 190\) and \(3n + 5p = 130\) where \(n\) is a notebook and \(p\) is a pen (both in â‚¹).</p>
+          <p><strong>Solving (elimination):</strong> multiply the first by 3 and the second by 5: \(15n + 9p = 570\), \(15n + 25p = 650\). Subtract: \(16p = 80 \Rightarrow p = 5\). Then \(5n + 15 = 190 \Rightarrow n = 35\).</p>
+          <p><strong>Verify:</strong> \(3(35) + 5(5) = 105 + 25 = 130\) âœ”.</p>
+          <p><strong>Answer:</strong> a notebook costs <strong>â‚¹35</strong> and a pen costs <strong>â‚¹5</strong>.</p>
+        </div>
+
+        <div class="app-box">
+          <p class="box-label">Application 6 â€” Perimeter and dimensions</p>
+          <p>The length of a rectangle exceeds its breadth by 4 m, and its perimeter is 40 m. Find the length and breadth.</p>
+          <p><strong>Forming the equations:</strong> let length be \(l\) m and breadth be \(b\) m. Then \(l - b = 4\) and \(2(l + b) = 40\), i.e. \(l + b = 20\).</p>
+          <p><strong>Solving (elimination):</strong> add the two equations: \(2l = 24 \Rightarrow l = 12\), then \(b = 8\).</p>
+          <p><strong>Verify:</strong> \(2(12 + 8) = 40\) âœ”, \(12 - 8 = 4\) âœ”.</p>
+          <p><strong>Answer:</strong> length <strong>12 m</strong>, breadth <strong>8 m</strong>.</p>
+        </div>
+
+        <div class="app-box">
+          <p class="box-label">Application 7 â€” Shopping bill</p>
+          <p>Three kg of apples and two kg of oranges cost â‚¹360. Two kg of apples and three kg of oranges cost â‚¹290. Find the price per kg of each fruit.</p>
+          <p><strong>Forming the equations:</strong> let apples be \(x\) â‚¹/kg and oranges be \(y\) â‚¹/kg. Then \(3x + 2y = 360\) and \(2x + 3y = 290\).</p>
+          <p><strong>Solving (elimination):</strong> multiplying the first by 2 and the second by 3 gives \(6x + 4y = 720\) and \(6x + 9y = 870\). Subtract: \(5y = 150 \Rightarrow y = 30\). Then \(3x + 60 = 360 \Rightarrow x = 100\).</p>
+          <p><strong>Verify:</strong> \(2(100) + 3(30) = 290\) âœ”.</p>
+          <p><strong>Answer:</strong> apples <strong>â‚¹100/kg</strong> and oranges <strong>â‚¹30/kg</strong>.</p>
+        </div>
+
+        <div class="app-box">
+          <p class="box-label">Application 8 â€” Two-digit number</p>
+          <p>The sum of the digits of a two-digit number is 9. When the digits are interchanged, the new number is 27 more than the original number. Find the number.</p>
+          <p><strong>Forming the equations:</strong> let the tens digit be \(x\) and the units digit be \(y\). The number is \(10x + y\), and after interchange it is \(10y + x\). Then \(x + y = 9\) and \((10y + x) - (10x + y) = 27 \Rightarrow 9y - 9x = 27 \Rightarrow y - x = 3\).</p>
+          <p><strong>Solving (elimination):</strong> \(x + y = 9\) and \(-x + y = 3\). Add: \(2y = 12 \Rightarrow y = 6\), then \(x = 3\).</p>
+          <p><strong>Verify:</strong> the number is 36; digits sum \(3 + 6 = 9\) âœ”, and \(63 - 36 = 27\) âœ”.</p>
+          <p><strong>Answer:</strong> the number is <strong>36</strong>.</p>
+        </div>
+
+        <div class="tip-box">
+          <p class="box-label">Exam Tip</p>
+          <p>Every application problem must end with an interpreted sentence (for example "the shopkeeper sold 80 adult tickets"), never just with \(x = 80\). Always check that the answer makes real-world sense (positive, whole numbers where expected).</p>
+        </div>
+      </section>
+
+      <section id="competency">
+        <h2>9. Competency-Based Examples</h2>
+        <p>Competency questions ask you to <em>reason</em>, <em>choose</em>, <em>interpret</em> or <em>judge</em> rather than simply compute. The next examples cover each type.</p>
+
+        <div class="comp-box">
+          <p class="box-label">Competency 1 â€” Choosing the correct equations</p>
+          <p>A shop sells pencils and erasers. Two pencils and three erasers cost â‚¹24; four pencils and two erasers cost â‚¹32. Which pair of equations correctly models this if a pencil costs â‚¹\(x\) and an eraser costs â‚¹\(y\)?</p>
+          <p>(a) \(2x + 3y = 24\), \(4x + 2y = 32\) &nbsp;&nbsp; (b) \(2x + 4y = 24\), \(3x + 2y = 32\) &nbsp;&nbsp; (c) \(3x + 2y = 24\), \(2x + 4y = 32\)</p>
+          <p><strong>Answer:</strong> (a). Each sentence translates in order: "two pencils and three erasers cost 24" means \(2x + 3y = 24\) in the <strong>same order</strong> as the articles are named.</p>
+        </div>
+
+        <div class="comp-box">
+          <p class="box-label">Competency 2 â€” Interpreting a graph</p>
+          <figure class="figure-wrap">
+            <svg viewBox="0 0 320 250" role="img" aria-label="Graph of the two intersecting lines from earlier, meeting at the point (2,3)">
+              <line class="g-axis" x1="30" y1="210" x2="290" y2="210"/>
+              <line class="g-axis" x1="80" y1="20" x2="80" y2="245"/>
+              <polyline class="g-line-a" points="80,170 120,130 160,90 200,50 240,10"/>
+              <polyline class="g-line-b" points="80,10 120,50 160,90 200,130 240,170 280,210"/>
+              <circle class="g-pt" cx="160" cy="90" r="5"/>
+            </svg>
+          </figure>
+          <p>The graph shows the lines of two equations. Without solving, state the solution of the pair and the number of solutions it has.</p>
+          <p><strong>Answer:</strong> the lines meet at \((2, 3)\), so the unique solution is \(x = 2\), \(y = 3\).</p>
+        </div>
+
+        <div class="comp-box">
+          <p class="box-label">Competency 3 â€” Identifying consistency</p>
+          <p>For the pair \(2x + 3y = 7\) and \(4x + 6y = 14\), does the system have a unique solution, no solution, or infinitely many solutions? Justify without solving.</p>
+          <p><strong>Answer:</strong> \(\dfrac{2}{4} = \dfrac{3}{6} = \dfrac{7}{14} = \dfrac{1}{2}\); all ratios equal, so the lines coincide and there are <strong>infinitely many solutions</strong>.</p>
+        </div>
+
+        <div class="comp-box">
+          <p class="box-label">Competency 4 â€” Unknown coefficient</p>
+          <p>If \(x = 2\), \(y = -1\) is a solution of \(3x + ky = 7\), find \(k\).</p>
+          <p><strong>Answer:</strong> substitute: \(3(2) + k(-1) = 7 \Rightarrow 6 - k = 7 \Rightarrow k = -1\). Verify: \(6 - (-1) = 7\) âœ”.</p>
+        </div>
+
+        <div class="comp-box">
+          <p class="box-label">Competency 5 â€” Selecting the appropriate method</p>
+          <p>The pair \(2x + 5y = 1\) and \(2x - 5y = 19\) can be solved quickly. Which method is most efficient and what suggests it?</p>
+          <p><strong>Answer:</strong> elimination, because the \(y\)-coefficients (\(5\) and \(-5\)) are already opposite. Adding gives \(4x = 20 \Rightarrow x = 5\); then \(2(5) + 5y = 1 \Rightarrow y = -\dfrac{9}{5}\).</p>
+        </div>
+
+        <div class="comp-box">
+          <p class="box-label">Competency 6 â€” Detecting an incorrect solution</p>
+          <p>A student writes: "The pair \(x + y = 3\) and \(2x + 2y = 6\) has no solution because the equations are the same kind of line and parallel." Is the conclusion correct? If not, correct it.</p>
+          <p><strong>Answer:</strong> the reasoning is wrong. The second equation is exactly 2 times the first, so the lines coincide, not parallel; the pair has <strong>infinitely many solutions</strong>.</p>
+        </div>
+
+        <div class="comp-box">
+          <p class="box-label">Competency 7 â€” Interpreting a solution in context</p>
+          <p>For a profit-and-loss stall selling adult (â‚¹30) and child (â‚¹20) tickets, the solution of the equations was \(x = 80\) adult and \(y = 120\) child tickets. Why is this solution sensible for the context, and what check confirms the total collected was â‚¹4,800?</p>
+          <p><strong>Answer:</strong> both values are positive whole numbers that satisfy \(x + y = 200\). The money check is \(30(80) + 20(120) = 4800\), matching the given collection, so the model and its answer are consistent with the real situation.</p>
+        </div>
+      </section>
+
+      <section id="case-studies">
+        <h2>10. Case-Based Examples</h2>
+        <p>Case-based questions give a small situation followed by two or three questions. Read the passage, extract the data, form the equations, then answer each part.</p>
+
+        <div class="case-card">
+          <div class="case-card-header"><h3>Case 1 â€” School canteen</h3></div>
+          <div class="case-card-body">
+            <p>In the school canteen, on Monday a student bought 4 samosas and 5 cold drinks for â‚¹155. On Tuesday the same student bought 2 samosas and 3 cold drinks for â‚¹85. The price of a samosa is â‚¹\(s\) and of a cold drink is â‚¹\(d\).</p>
+            <p><strong>(i)</strong> Form the pair of linear equations. &nbsp; <strong>(ii)</strong> Find the price of one samosa and one cold drink. &nbsp; <strong>(iii)</strong> Verify your answer in both transactions.</p>
+            <div class="example-box">
+              <p class="box-label">Answers</p>
+              <p>(i) \(4s + 5d = 155\), \(2s + 3d = 85\).</p>
+              <p>(ii) Doubling the second equation: \(4s + 6d = 170\); subtracting the first gives \(d = 15\), then \(2s + 45 = 85 \Rightarrow s = 20\).</p>
+              <p>(iii) Monday: \(4(20) + 5(15) = 80 + 75 = 155\) âœ”; Tuesday: \(2(20) + 3(15) = 40 + 45 = 85\) âœ”.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card">
+          <div class="case-card-header"><h3>Case 2 â€” Stationery shop</h3></div>
+          <div class="case-card-body">
+            <p>Riya buys 3 pens and 2 pencils for â‚¹64. Om buys 4 pens and 1 pencil for â‚¹72. The price of a pen is â‚¹\(p\) and of a pencil is â‚¹\(c\).</p>
+            <p><strong>(i)</strong> Frame the equations. &nbsp; <strong>(ii)</strong> Find the cost of a pen and a pencil. &nbsp; <strong>(iii)</strong> How much do 5 pens and 3 pencils cost?</p>
+            <div class="example-box">
+              <p class="box-label">Answers</p>
+              <p>(i) \(3p + 2c = 64\), \(4p + c = 72\).</p>
+              <p>(ii) From the second, \(c = 72 - 4p\). Substitute: \(3p + 2(72 - 4p) = 64 \Rightarrow 3p + 144 - 8p = 64 \Rightarrow -5p = -80 \Rightarrow p = 16\), then \(c = 72 - 64 = 8\).</p>
+              <p>(iii) \(5(16) + 3(8) = 80 + 24 = â‚¹104\).</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card">
+          <div class="case-card-header"><h3>Case 3 â€” Annual day tickets</h3></div>
+          <div class="case-card-body">
+            <p>For the school annual day, 500 tickets were sold. Adult tickets cost â‚¹50 and student tickets cost â‚¹30, and the total collection was â‚¹21,000. Let adult tickets be \(x\) and student tickets be \(y\).</p>
+            <p><strong>(i)</strong> Form the two equations. &nbsp; <strong>(ii)</strong> How many of each ticket type were sold? &nbsp; <strong>(iii)</strong> Give one check that proves your numbers match the total collection.</p>
+            <div class="example-box">
+              <p class="box-label">Answers</p>
+              <p>(i) \(x + y = 500\), \(50x + 30y = 21000\).</p>
+              <p>(ii) \(30(x + y) + 20x = 21000 \Rightarrow 15000 + 20x = 21000 \Rightarrow x = 300\), \(y = 200\).</p>
+              <p>(iii) \(50(300) + 30(200) = 15000 + 6000 = 21000\) âœ”.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card">
+          <div class="case-card-header"><h3>Case 4 â€” Classroom arrangement</h3></div>
+          <div class="case-card-body">
+            <p>If 3 students sit on each bench in a room, 2 students are left standing. If 4 students sit on each bench, exactly one bench is left empty (no one sits on it). Let \(S\) be the number of students and \(B\) the number of benches.</p>
+            <p><strong>(i)</strong> Frame the two equations. &nbsp; <strong>(ii)</strong> Find the number of students and benches. &nbsp; <strong>(iii)</strong> Justify that each equation is satisfied by your values.</p>
+            <div class="example-box">
+              <p class="box-label">Answers</p>
+              <p>(i) With 3 per bench and 2 left: \(S = 3B + 2\). With 4 per bench and one empty bench, only \(B - 1\) benches are used: \(S = 4(B - 1)\).</p>
+              <p>(ii) Equate: \(3B + 2 = 4B - 4 \Rightarrow B = 6\), then \(S = 3(6) + 2 = 20\).</p>
+              <p>(iii) 20 students on 6 benches: \(3 \times 6 + 2 = 20\) âœ” and \(4 \times 5 = 20\) âœ” (6 benches, one empty).</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card">
+          <div class="case-card-header"><h3>Case 5 â€” Metro fare</h3></div>
+          <div class="case-card-body">
+            <p>A city metro charges a fixed base amount plus a fixed rate per kilometre. A 5 km journey costs â‚¹25 and an 8 km journey costs â‚¹37. If the base fare is \(a\) and the rate per km is \(b\):</p>
+            <p><strong>(i)</strong> Form the two equations. &nbsp; <strong>(ii)</strong> Find the base fare and the rate per km. &nbsp; <strong>(iii)</strong> What would a 12 km journey cost?</p>
+            <div class="example-box">
+              <p class="box-label">Answers</p>
+              <p>(i) \(a + 5b = 25\), \(a + 8b = 37\).</p>
+              <p>(ii) Subtract: \(3b = 12 \Rightarrow b = 4\), then \(a = 25 - 20 = 5\).</p>
+              <p>(iii) \(a + 12b = 5 + 48 = â‚¹53\).</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="solved-examples">
+        <h2>11. More Solved Examples</h2>
+
+        <h3>Basic solved examples</h3>
+
+        <div class="solved-box">
+          <div class="s-label"><span>Basic Solved Example 1</span></div>
+          <p><strong>Verify that \((2, -1)\) satisfies both \(2x + 3y = 1\) and \(x - y = 3\).</strong></p>
+          <p>\(2(2) + 3(-1) = 4 - 3 = 1\) âœ”; \(2 - (-1) = 3\) âœ”. Hence this ordered pair is a solution.</p>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label"><span>Basic Solved Example 2</span></div>
+          <p><strong>Without solving, state what the lines \(x + y = 6\) and \(x - y = 2\) do, and find the solution graphically.</strong></p>
+          <p>Ratios: \(\dfrac{1}{1} \neq \dfrac{1}{-1}\), so the lines intersect â€” unique solution. Solving gives \(x = 4\), \(y = 2\) (both equations hold).</p>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label"><span>Basic Solved Example 3</span></div>
+          <p><strong>Solve by substitution: \(x + y = 14\), \(x - y = 4\).</strong></p>
+          <p>From the second, \(x = y + 4\). Then \((y + 4) + y = 14 \Rightarrow 2y = 10 \Rightarrow y = 5\), \(x = 9\). Check: \(9 - 5 = 4\) âœ”.</p>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label"><span>Basic Solved Example 4</span></div>
+          <p><strong>Solve by elimination: \(2x + 3y = 11\), \(2x - 4y = -24\).</strong></p>
+          <p>Subtract the second from the first: \(7y = 35 \Rightarrow y = 5\). Then \(2x + 15 = 11 \Rightarrow x = -2\). Check: \(2(-2) - 4(5) = -4 - 20 = -24\) âœ”.</p>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label"><span>Basic Solved Example 5</span></div>
+          <p><strong>Classify: \(3x + 2y = 8\), \(6x + 4y = 16\).</strong></p>
+          <p>Ratios \(1/2\), \(1/2\), \(1/2\) â€” coincident lines, infinitely many solutions (consistent, dependent).</p>
+        </div>
+
+        <h3>Moderate solved examples</h3>
+
+        <div class="solved-box">
+          <div class="s-label"><span>Moderate Solved Example 1</span></div>
+          <p><strong>Solve: \(3x - 5y = 4\), \(9x - 2y = 7\).</strong></p>
+          <p>From the first, \(x = \dfrac{4 + 5y}{3}\). Substitute: \(9\cdot\dfrac{4 + 5y}{3} - 2y = 7 \Rightarrow 3(4 + 5y) - 2y = 7 \Rightarrow 12 + 13y = 7 \Rightarrow y = -\dfrac{5}{13}\), then \(x = \dfrac{4 - 25/13}{3} = \dfrac{9}{13}\). Check both equations. Solution: \(\left(\dfrac{9}{13}, -\dfrac{5}{13}\right)\).</p>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label"><span>Moderate Solved Example 2</span></div>
+          <p><strong>Find \(k\) so that \(2x + 3y = 6\) and \(kx + 9y = 18\) have infinitely many solutions.</strong></p>
+          <p>We need \(\dfrac{2}{k} = \dfrac{3}{9} = \dfrac{6}{18}\). The last two give \(\dfrac{1}{3}\), so \(\dfrac{2}{k} = \dfrac{1}{3} \Rightarrow k = 6\). Verify: \(2/(6) = 3/(9) = 6/18 = 1/3\) âœ”.</p>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label"><span>Moderate Solved Example 3</span></div>
+          <p><strong>Solve: \(7x + 15y = 9\), \(2x + 3y = 4\).</strong></p>
+          <p>Multiply the second by 5: \(10x + 15y = 20\). Subtract from the first: \(-3x = -11 \Rightarrow x = \dfrac{11}{3}\). Then \(2\cdot\dfrac{11}{3} + 3y = 4 \Rightarrow 3y = -\dfrac{10}{3} \Rightarrow y = -\dfrac{10}{9}\). Check: \(7\cdot\dfrac{11}{3} + 15\cdot\left(-\dfrac{10}{9}\right) = \dfrac{77}{3} - \dfrac{50}{3} = 9\) âœ”.</p>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label"><span>Moderate Solved Example 4</span></div>
+          <p><strong>Solve: \(x + 6y = 27\), \(2x + 3y = 33\).</strong></p>
+          <p>From the first, \(x = 27 - 6y\). Substitute: \(2(27 - 6y) + 3y = 33 \Rightarrow 54 - 9y = 33 \Rightarrow y = \dfrac{21}{9} = \dfrac{7}{3}\), then \(x = 27 - 14 = 13\). Check: \(13 + 14 = 27\) âœ”; \(26 + 7 = 33\) âœ”.</p>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label"><span>Moderate Solved Example 5</span></div>
+          <p><strong>Do \(2x - 3y = 8\) and \(4x - 6y = 9\) have a solution? Justify.</strong></p>
+          <p>\(\dfrac{2}{4} = \dfrac{-3}{-6} = \dfrac{1}{2}\) but \(\dfrac{8}{9} \neq \dfrac{1}{2}\). The lines are parallel, so the pair has <strong>no solution</strong>.</p>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label"><span>Moderate Solved Example 6</span></div>
+          <p><strong>The sum of two numbers is 15 and their difference is 3. Find them.</strong></p>
+          <p>Let the numbers be \(x\) and \(y\). Then \(x + y = 15\), \(x - y = 3\). Add: \(2x = 18 \Rightarrow x = 9\), \(y = 6\). Verify: \(9 + 6 = 15\) âœ”, \(9 - 6 = 3\) âœ”.</p>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label"><span>Moderate Solved Example 7</span></div>
+          <p><strong>Solve: \(3x + 2y = 12\), \(5x - 2y = 4\).</strong></p>
+          <p>Add: \(8x = 16 \Rightarrow x = 2\). Then \(6 + 2y = 12 \Rightarrow y = 3\). Check: \(5(2) - 2(3) = 10 - 6 = 4\) âœ”.</p>
+        </div>
+      </section>
+
+      <section id="formulas">
+        <h2>12. Important Formulas and Results</h2>
+        <div class="result-box">
+          <p class="box-label">Quick Formula Sheet</p>
+          <ul>
+            <li>General form: \(a_1x + b_1y + c_1 = 0\), \(a_2x + b_2y + c_2 = 0\).</li>
+            <li>Unique solution: \(\dfrac{a_1}{a_2} \neq \dfrac{b_1}{b_2}\).</li>
+            <li>No solution: \(\dfrac{a_1}{a_2} = \dfrac{b_1}{b_2} \neq \dfrac{c_1}{c_2}\).</li>
+            <li>Infinitely many: \(\dfrac{a_1}{a_2} = \dfrac{b_1}{b_2} = \dfrac{c_1}{c_2}\).</li>
+            <li>Substitution: express one variable, substitute into the other equation.</li>
+            <li>Elimination: equalise a coefficient, then add or subtract.</li>
+            <li>Every solution must satisfy <em>both</em> equations; always verify.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="common-mistakes">
+        <h2>13. Common Examination Mistakes</h2>
+        <ul>
+          <li><strong>Sign errors</strong> when moving terms across the equals sign, e.g. writing \(x - y = 6\) as \(y = x + 6\).</li>
+          <li><strong>Incorrect substitution</strong> â€” substituting back into the same equation instead of the other one, or losing brackets (writing \(2x = y - 1\) leads to \(x = \dfrac{y - 1}{2}\), not \(x = y - \dfrac{1}{2}\)).</li>
+          <li><strong>Incorrect elimination</strong> â€” multiplying a two-term equation and forgetting the constant, or subtracting in the wrong order.</li>
+          <li><strong>Forgetting to verify</strong> â€” an unverified answer can hide a sign slip.</li>
+          <li><strong>Misreading graph intersections</strong> â€” reading the wrong coordinate or not dropping perpendiculars to both axes.</li>
+          <li><strong>Confusing no solution with infinitely many</strong> â€” parallel lines give zero solutions; coincident lines give infinitely many.</li>
+          <li><strong>Incorrect ratio conditions</strong> â€” comparing ratios in the wrong order, or failing to reduce them to simplest form.</li>
+          <li><strong>Forming incorrect equations from word problems</strong> â€” for example adding the collections instead of equating them, or mixing up which quantity is bigger in "exceeds by".</li>
+        </ul>
+      </section>
+
+      <section id="exam-tips">
+        <h2>14. Exam Tips</h2>
+        <ul>
+          <li><strong>Define variables clearly</strong> in word problems, stating units ("Let the cost of a pencil be â‚¹\(x\)").</li>
+          <li><strong>Write equations carefully</strong> before rushing to solve; one sentence of the problem gives one equation.</li>
+          <li><strong>Show algebraic steps</strong> â€” examiners award stepwise marks.</li>
+          <li><strong>Verify answers</strong> in both equations before writing the final answer.</li>
+          <li><strong>Interpret the answer in context</strong> with a concluding sentence.</li>
+          <li><strong>Label graph axes and scales</strong> and mark the intersection point when asked to solve graphically.</li>
+          <li><strong>Check consistency conditions carefully</strong> (ratio test) even when solving algebraically â€” it confirms the number of solutions you should get.</li>
+        </ul>
+      </section>
+
+      <section id="quick-revision">
+        <h2>15. Quick Revision Sheet</h2>
+        <div class="result-box">
+          <p class="box-label">Scan this before the exam</p>
+          <ul>
+            <li><strong>Standard form:</strong> \(a_1x + b_1y + c_1 = 0\), \(a_2x + b_2y + c_2 = 0\).</li>
+            <li><strong>Each equation is a straight line.</strong></li>
+            <li><strong>Intersecting</strong> \(\Rightarrow\) unique solution \(\Rightarrow\) consistent.</li>
+            <li><strong>Parallel</strong> \(\Rightarrow\) no solution \(\Rightarrow\) inconsistent.</li>
+            <li><strong>Coincident</strong> \(\Rightarrow\) infinitely many \(\Rightarrow\) consistent, dependent.</li>
+            <li><strong>Unique:</strong> \(\dfrac{a_1}{a_2} \neq \dfrac{b_1}{b_2}\).</li>
+            <li><strong>None:</strong> \(\dfrac{a_1}{a_2} = \dfrac{b_1}{b_2} \neq \dfrac{c_1}{c_2}\).</li>
+            <li><strong>Infinite:</strong> \(\dfrac{a_1}{a_2} = \dfrac{b_1}{b_2} = \dfrac{c_1}{c_2}\).</li>
+            <li><strong>Substitution:</strong> express one variable \(\to\) substitute \(\to\) solve \(\to\) back-substitute \(\to\) verify.</li>
+            <li><strong>Elimination:</strong> equalise a coefficient \(\to\) add/subtract \(\to\) solve \(\to\) back-substitute \(\to\) verify.</li>
+            <li><strong>Word problems:</strong> define \(\to\) translate \(\to\) solve \(\to\) interpret \(\to\) verify.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="self-practice">
+        <h2>16. Self-Practice Questions</h2>
+        <p>25 original questions to test your understanding. Do <em>not</em> treat these as board PYQs â€” they are designed as self-assessment, with answers at the end.</p>
+
+        <h3>Conceptual (Q1 â€“ Q5)</h3>
+        <div class="qbox"><p class="q-label">Q1.</p><p>Write the general form of a pair of linear equations in two variables, and state when it represents a valid pair.</p></div>
+        <div class="qbox"><p class="q-label">Q2.</p><p>What does the solution of a pair of linear equations represent graphically?</p></div>
+        <div class="qbox"><p class="q-label">Q3.</p><p>A pair of linear equations is consistent and dependent. What does this tell you about the lines?</p></div>
+        <div class="qbox"><p class="q-label">Q4.</p><p>If \(\dfrac{a_1}{a_2} = \dfrac{b_1}{b_2} \neq \dfrac{c_1}{c_2}\), how many solutions does the pair have?</p></div>
+        <div class="qbox"><p class="q-label">Q5.</p><p>Define an inconsistent pair of linear equations.</p></div>
+
+        <h3>Graphical (Q6 â€“ Q10)</h3>
+        <div class="qbox"><p class="q-label">Q6.</p><p>For \(x + y = 4\) and \(x - y = 2\), identify the type of graph and find the solution.</p></div>
+        <div class="qbox"><p class="q-label">Q7.</p><p>Classify \(2x + 3y = 6\) and \(4x + 6y = 9\) without drawing.</p></div>
+        <div class="qbox"><p class="q-label">Q8.</p><p>Classify \(3x - y = 6\) and \(6x - 2y = 12\) without drawing.</p></div>
+        <div class="qbox"><p class="q-label">Q9.</p><p>If two lines intersect at the point \((2,1)\), what is the solution of the pair? Give one example of a pair of equations whose lines intersect there.</p></div>
+        <div class="qbox"><p class="q-label">Q10.</p><p>State the ratio condition under which a pair of linear equations has no solution.</p></div>
+
+        <h3>Algebraic (Q11 â€“ Q15)</h3>
+        <div class="qbox"><p class="q-label">Q11.</p><p>Solve by substitution: \(x + y = 5\), \(2x - 3y = 4\).</p></div>
+        <div class="qbox"><p class="q-label">Q12.</p><p>Solve: \(3x + 4y = 10\), \(2x - 2y = 2\).</p></div>
+        <div class="qbox"><p class="q-label">Q13.</p><p>Solve: \(2u + v = 7\), \(u - 2v = 1\).</p></div>
+        <div class="qbox"><p class="q-label">Q14.</p><p>Solve: \(2x + 3y = 8\), \(x - y = -1\).</p></div>
+        <div class="qbox"><p class="q-label">Q15.</p><p>Solve by elimination: \(3x - y = 3\), \(2x + y = 7\).</p></div>
+
+        <h3>Application (Q16 â€“ Q20)</h3>
+        <div class="qbox"><p class="q-label">Q16.</p><p>The sum of two numbers is 40 and one number is 8 more than the other. Find the numbers.</p></div>
+        <div class="qbox"><p class="q-label">Q17.</p><p>A father is 30 years older than his son. In 12 years, the father will be twice as old as the son. Find their present ages.</p></div>
+        <div class="qbox"><p class="q-label">Q18.</p><p>4 kg of rice and 3 kg of dal cost â‚¹300; 2 kg of rice and 5 kg of dal cost â‚¹290. Find the price per kg of each.</p></div>
+        <div class="qbox"><p class="q-label">Q19.</p><p>The perimeter of a rectangle is 44 m and its length is 6 m more than its breadth. Find the dimensions.</p></div>
+        <div class="qbox"><p class="q-label">Q20.</p><p>In a test of 50 questions, a student scores 4 marks for each correct answer and loses 1 mark for each wrong answer. She scores 190. How many did she get correct?</p></div>
+
+        <h3>Competency / Reasoning (Q21 â€“ Q23)</h3>
+        <div class="qbox"><p class="q-label">Q21.</p><p>Ravi says the pair \(2x + 3y = 6\) and \(4x + 6y = 12\) has infinitely many solutions because the two equations describe the same line. Is Ravi correct?</p></div>
+        <div class="qbox"><p class="q-label">Q22.</p><p>For what value of \(k\) does the pair \(3x - y = 1\) and \(kx + 2y = 5\) have a <em>unique</em> solution? State the condition on \(k\).</p></div>
+        <div class="qbox"><p class="q-label">Q23.</p><p>A graph shows two lines meeting at \((1, 2)\). Write the solution of the corresponding pair and one example of two equations with that intersection.</p></div>
+
+        <h3>Case-based (Q24 â€“ Q25)</h3>
+        <div class="qbox"><p class="q-label">Q24.</p><p>An auto-rickshaw charges a fixed amount plus a rate per kilometre. A 2 km trip costs â‚¹40 and a 5 km trip costs â‚¹85. If the base fare is \(a\) and the per-km rate is \(b\): (i) form the equations; (ii) find \(a\) and \(b\); (iii) predict the fare for an 8 km trip.</p></div>
+        <div class="qbox"><p class="q-label">Q25.</p><p>At a school fair, 4 samosas and 5 drinks cost â‚¹155, while 2 samosas and 3 drinks cost â‚¹85. (i) Frame the equations. (ii) Find the price of a samosa and a drink. (iii) What would 3 samosas and 2 drinks cost?</p></div>
+
+        <h3>Answers</h3>
+        <div class="qbox"><p class="q-label">A1.</p><p>\(a_1x + b_1y + c_1 = 0\), \(a_2x + b_2y + c_2 = 0\), with \(a_1, b_1\) not both zero and \(a_2, b_2\) not both zero.</p></div>
+        <div class="qbox"><p class="q-label">A2.</p><p>The coordinates of the point (or points) common to the two lines â€” i.e., their intersection when the lines meet.</p></div>
+        <div class="qbox"><p class="q-label">A3.</p><p>The lines coincide, so the pair has infinitely many solutions.</p></div>
+        <div class="qbox"><p class="q-label">A4.</p><p>No solution â€” the system is inconsistent (parallel lines).</p></div>
+        <div class="qbox"><p class="q-label">A5.</p><p>A pair of linear equations that has no common solution â€” its lines are parallel.</p></div>
+        <div class="qbox"><p class="q-label">A6.</p><p>Intersecting lines (unique solution). Solving: \(2x = 6 \Rightarrow x = 3\), \(y = 1\). Solution \((3, 1)\).</p></div>
+        <div class="qbox"><p class="q-label">A7.</p><p>\(\dfrac{2}{4} = \dfrac{3}{6} = \dfrac{1}{2}\) but \(\dfrac{6}{9} = \dfrac{2}{3}\), so parallel lines â€” no solution.</p></div>
+        <div class="qbox"><p class="q-label">A8.</p><p>\(\dfrac{3}{6} = \dfrac{-1}{-2} = \dfrac{1}{2}\) and \(\dfrac{6}{12} = \dfrac{1}{2}\), all equal â€” coincident lines, infinitely many solutions.</p></div>
+        <div class="qbox"><p class="q-label">A9.</p><p>Solution is \(x = 2\), \(y = 1\). One example: \(x + y = 3\) and \(x - y = 1\) (both hold at \((2,1)\)).</p></div>
+        <div class="qbox"><p class="q-label">A10.</p><p>\(\dfrac{a_1}{a_2} = \dfrac{b_1}{b_2} \neq \dfrac{c_1}{c_2}\).</p></div>
+        <div class="qbox"><p class="q-label">A11.</p><p>\(x = \dfrac{19}{5}\), \(y = \dfrac{6}{5}\). Check: \(2(19/5) - 3(6/5) = (38 - 18)/5 = 4\) âœ”.</p></div>
+        <div class="qbox"><p class="q-label">A12.</p><p>\(x = 2\), \(y = 1\). Check: \(6 + 4 = 10\) âœ”, \(4 - 2 = 2\) âœ”.</p></div>
+        <div class="qbox"><p class="q-label">A13.</p><p>\(u = 3\), \(v = 1\). Check: \(6 + 1 = 7\) âœ”, \(3 - 2 = 1\) âœ”.</p></div>
+        <div class="qbox"><p class="q-label">A14.</p><p>\(x = 1\), \(y = 2\). Check: \(2 + 6 = 8\) âœ”, \(1 - 2 = -1\) âœ”.</p></div>
+        <div class="qbox"><p class="q-label">A15.</p><p>Add: \(5x = 10 \Rightarrow x = 2\), \(y = 3\). Check: \(4 + 3 = 7\) âœ”.</p></div>
+        <div class="qbox"><p class="q-label">A16.</p><p>24 and 16. Check: \(24 + 16 = 40\), \(24 - 16 = 8\).</p></div>
+        <div class="qbox"><p class="q-label">A17.</p><p>Father 48, son 18. Check: \(48 + 12 = 2 \times 30\) âœ”.</p></div>
+        <div class="qbox"><p class="q-label">A18.</p><p>Rice â‚¹45/kg, dal â‚¹40/kg. Check: \(4(45) + 3(40) = 300\) âœ”, \(2(45) + 5(40) = 290\) âœ”.</p></div>
+        <div class="qbox"><p class="q-label">A19.</p><p>Length 14 m, breadth 8 m. Check: \(2(14 + 8) = 44\) âœ”, \(14 - 8 = 6\) âœ”.</p></div>
+        <div class="qbox"><p class="q-label">A20.</p><p>48 correct, 2 wrong. Check: \(4(48) - 2 = 190\) âœ”.</p></div>
+        <div class="qbox"><p class="q-label">A21.</p><p>Yes. The second equation is the first multiplied by 2, so the lines coincide and there are infinitely many solutions.</p></div>
+        <div class="qbox"><p class="q-label">A22.</p><p>Unique solution needs \(\dfrac{3}{k} \neq -\dfrac{1}{2}\), i.e. \(k \neq -6\).</p></div>
+        <div class="qbox"><p class="q-label">A23.</p><p>Solution \(x = 1\), \(y = 2\). Example: \(x + y = 3\), \(x - y = -1\) (both true at \((1,2)\)).</p></div>
+        <div class="qbox"><p class="q-label">A24.</p><p>(i) \(a + 2b = 40\), \(a + 5b = 85\). (ii) \(b = 15\), \(a = 10\). (iii) \(10 + 8 \times 15 = â‚¹130\).</p></div>
+        <div class="qbox"><p class="q-label">A25.</p><p>(i) \(4s + 5d = 155\), \(2s + 3d = 85\). (ii) Samosa â‚¹20, drink â‚¹15. (iii) \(3(20) + 2(15) = â‚¹90\).</p></div>
+      </section>
+
+    </article>
+
+    <nav class="resource-nav" aria-label="More from this chapter">
+      <a href="/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/notes/" class="is-active"><i class="fas fa-book-open"></i> Notes</a>
+      <a href="/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/practice-paper/"><i class="fas fa-file-lines"></i> Practice Paper</a>
+      <a href="/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/quiz/"><i class="fas fa-bullseye"></i> Quiz</a>
+      <a href="/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+    </nav>
+
+    <div class="next-chapter">
+      <div>
+        <h3><i class="fas fa-arrow-right"></i> Next: Chapter 4 â€” Quadratic Equations</h3>
+        <p>Move from equations whose highest power is one to equations whose highest power is two.</p>
+      </div>
+      <a class="btn btn-primary" href="/cbse-study-material/class-10/mathematics/quadratic-equations/">Open Chapter</a>
+    </div>
+
+    <div class="related-links" aria-label="Related chapters">
+      <a href="/cbse-study-material/class-10/mathematics/"><i class="fas fa-arrow-left"></i> All Class 10 Mathematics</a>
+      <a href="/cbse-study-material/class-10/mathematics/polynomials/"><i class="fas fa-arrow-left"></i> Chapter 2: Polynomials</a>
+      <a href="/cbse-study-material/class-10/mathematics/quadratic-equations/"><i class="fas fa-arrow-right"></i> Chapter 4: Quadratic Equations</a>
+      <a href="/cbse-study-material/class-10/mathematics/arithmetic-progressions/"><i class="fas fa-arrow-right"></i> Chapter 5: Arithmetic Progressions</a>
+    </div>
+
+    <a class="sm-back" href="/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/"><i class="fas fa-arrow-left"></i> Back to Pair of Linear Equations in Two Variables</a>
+    <a class="sm-back" href="/cbse-study-material/class-10/mathematics/" style="margin-left: 12px;"><i class="fas fa-arrow-left"></i> All Mathematics chapters</a>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-about">
+      <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+      <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#courses">Courses</a></li>
+        <li><a href="/cbse-study-material/">Study Material</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Popular Searches</h4>
+      <ul>
+        <li><a href="/cbse-study-material/">CBSE Study Material</a></li>
+        <li><a href="/best-tuition-centre-hulimavu/">Best Tuition Centre in Hulimavu</a></li>
+        <li><a href="/cbse-tuition-hulimavu/">CBSE Tuition in Hulimavu</a></li>
+        <li><a href="/maths-tuition-hulimavu/">Maths Tuition in Hulimavu</a></li>
+        <li><a href="/science-tuition-hulimavu/">Science Tuition in Hulimavu</a></li>
+        <li><a href="/class-10-tuition-hulimavu/">Class 10 Tuition Hulimavu</a></li>
+        <li><a href="/class-12-tuition-hulimavu/">Class 12 Tuition Hulimavu</a></li>
+        <li><a href="/tuition-centre-bangalore/">Best Tuition Centre in Bangalore</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="/cbse-study-material/sm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/supabase-config.js"></script>
+<script src="/supabase-auth.js"></script>
+<script src="/supabase-nav.js" defer></script>
+<script src="/chatbot/chatbot-loader.js" defer></script></body>
+</html>

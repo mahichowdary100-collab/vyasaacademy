@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Sign In | Vyasa Academy</title>
+  <meta name="description" content="Sign in to the Vyasa Academy student portal with your Google account, mobile number, or academy email.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="refresh" content="0;url=/student-sign-in/">
+  <link rel="canonical" href="https://www.vyasaacademy.in/student-sign-in/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    html, body { height: 100%; margin: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1a237e 0%, #283593 60%, #0d1452 100%);
+      color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; padding: 24px; min-height: 100vh; box-sizing: border-box;
+    }
+    .card {
+      max-width: 420px; width: 100%;
+      background: #fff; color: #1a237e;
+      border-radius: 20px; padding: 32px 28px;
+      box-shadow: 0 24px 60px rgba(13, 20, 82, 0.35);
+    }
+    .card h1 { font-size: 1.4rem; margin: 0 0 10px; font-family: 'Playfair Display', serif; }
+    .card p { font-size: 0.95rem; line-height: 1.55; color: #455a64; margin: 0 0 18px; }
+    .card .cap { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+    a.btn {
+      display: inline-block; text-decoration: none;
+      background: #1a237e; color: #fff; border-radius: 999px;
+      padding: 12px 26px; font-weight: 600; transition: background 0.2s;
+    }
+    a.btn:hover { background: #283593; }
+    a.btn:focus-visible { outline: 3px solid #f9a825; outline-offset: 3px; }
+    .redirect-note { margin-top: 14px; font-size: 0.8rem; color: #90a4ae; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <span class="cap" aria-hidden="true"><svg viewBox="0 0 24 24" width="36" height="36" fill="#f9a825"><path d="M12 3L1 8l11 5 9-4.09V17h2V8L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg></span>
+    <h1>Student Sign In</h1>
+    <p>Redirecting you to the Vyasa Academy student sign-in page.</p>
+    <a class="btn" href="/student-sign-in/">Continue to Sign In</a>
+    <p class="redirect-note">If you are not redirected automatically, tap the button above.</p>
+  </div>
+  <script>
+    // Preserve any ?next= deep link and #hash on the new route.
+    (function () {
+      var url = '/student-sign-in/' +
+        (window.location.search || '') +
+        (window.location.hash || '');
+      window.location.replace(url);
+    })();
+  </script>
+</body>
+</html>

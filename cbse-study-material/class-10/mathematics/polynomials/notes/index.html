@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CBSE Class 10 Maths Polynomials Notes | Zeroes &amp; Coefficients</title>
+  <meta name="description" content="CBSE Class 10 Maths Polynomials notes covering zeroes, geometrical interpretation, quadratic polynomials, relationships between zeroes and coefficients, solved examples, case-based questions and exam tips." />
+  <link rel="canonical" href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/polynomials/notes/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vyasa Academy" />
+  <meta property="og:title" content="CBSE Class 10 Maths Polynomials Notes | Zeroes &amp; Coefficients" />
+  <meta property="og:description" content="CBSE Class 10 Maths Polynomials notes covering zeroes, geometrical interpretation, quadratic polynomials, relationships between zeroes and coefficients, solved examples, case-based questions and exam tips." />
+  <meta property="og:url" content="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/polynomials/notes/" />
+  <meta property="og:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CBSE Class 10 Maths Polynomials Notes | Zeroes &amp; Coefficients" />
+  <meta name="twitter:description" content="CBSE Class 10 Maths Polynomials notes covering zeroes, geometrical interpretation, quadratic polynomials, relationships between zeroes and coefficients, solved examples, case-based questions and exam tips." />
+  <meta name="twitter:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","itemListElement":[{"position":1,"name":"Home","item":"https://www.vyasaacademy.in/","@type":"ListItem"},{"position":2,"name":"CBSE Study Material","item":"https://www.vyasaacademy.in/cbse-study-material/","@type":"ListItem"},{"position":3,"name":"Class 10","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/","@type":"ListItem"},{"position":4,"name":"Mathematics","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/","@type":"ListItem"},{"position":5,"name":"Polynomials","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/polynomials/","@type":"ListItem"},{"position":6,"name":"Notes","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/polynomials/notes/","@type":"ListItem"}],"@type":"BreadcrumbList"}
+  </script>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+      processEscapes: true
+    }
+  };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <style>
+  .sm-notes { font-size: 1rem; line-height: 1.8; }
+  .sm-notes h2 { font-size: 1.45rem; color: var(--primary); margin: 44px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--accent); }
+  .sm-notes h3 { font-size: 1.15rem; color: var(--dark); margin: 28px 0 12px; }
+  .sm-notes h4 { font-size: 1.05rem; color: var(--dark); margin: 20px 0 8px; }
+  .sm-notes p { margin-bottom: 14px; }
+  .sm-notes ul, .sm-notes ol { margin: 10px 0 16px 24px; }
+  .sm-notes li { margin-bottom: 6px; }
+  .sm-notes ul { list-style: disc; }
+
+  .def-box { background: #eef2ff; border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .def-box .box-label { font-weight: 700; color: var(--primary); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .result-box { background: #fff8e1; border-left: 4px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .result-box .box-label { font-weight: 700; color: var(--accent-dark); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .example-box { background: #f0fdf4; border-left: 4px solid #16a34a; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .example-box .box-label { font-weight: 700; color: #16a34a; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .tip-box { background: #eff6ff; border-left: 4px solid #2563eb; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .tip-box .box-label { font-weight: 700; color: #2563eb; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .warn-box { background: #fef2f2; border-left: 4px solid #dc2626; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .warn-box .box-label { font-weight: 700; color: #dc2626; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .steps { margin: 12px 0 16px; }
+  .steps .step { display: flex; gap: 12px; margin-bottom: 10px; }
+  .steps .step-num { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: var(--primary); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; margin-top: 3px; }
+  .steps .step-text { flex: 1; }
+
+  .table-wrap { overflow-x: auto; margin: 16px 0; -webkit-overflow-scrolling: touch; }
+  .sm-notes table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .sm-notes th { background: var(--primary); color: var(--white); text-align: left; padding: 12px 14px; font-weight: 600; white-space: nowrap; }
+  .sm-notes td { padding: 10px 14px; border-bottom: 1px solid #e5e7eb; }
+  .sm-notes tr:nth-child(even) td { background: #f9fafb; }
+  .sm-notes tr:hover td { background: #eef2ff; }
+
+  .highlight { background: #fef9c3; padding: 2px 5px; border-radius: 4px; font-weight: 600; }
+  .qbox { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: var(--radius); padding: 16px 20px; margin: 12px 0; }
+  .qbox .q-label { font-weight: 700; color: var(--primary); margin-bottom: 4px; }
+
+  .app-box { background: #ecfeff; border-left: 4px solid #0891b2; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .app-box .box-label { font-weight: 700; color: #0e7490; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .comp-box { background: #f5f3ff; border-left: 4px solid #7c3aed; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .comp-box .box-label { font-weight: 700; color: #6d28d9; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .solved-box { background: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #16a34a; border-radius: var(--radius); padding: 18px 22px; margin: 18px 0; box-shadow: 0 2px 8px rgba(15,23,42,.05); }
+  .solved-box .s-label { font-weight: 700; color: #16a34a; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  .solved-box .s-part { margin: 10px 0 0; }
+  .solved-box .s-part b { color: var(--primary); }
+
+  .case-card { background: #fff; border: 1px solid #e2e8f0; border-radius: var(--radius); margin: 22px 0; box-shadow: 0 2px 8px rgba(15,23,42,.05); overflow: hidden; }
+  .case-card-header { background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: #fff; padding: 14px 20px; }
+  .case-card-header h3 { margin: 0; font-size: 1.05rem; }
+  .case-card-body { padding: 18px 20px; }
+
+  .concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 18px 0; }
+  .concept-card { background: #fff; border: 1px solid #e2e8f0; border-left: 4px solid var(--primary); border-radius: var(--radius); padding: 16px 18px; transition: var(--transition); }
+  .concept-card:hover { box-shadow: 0 6px 18px rgba(79,70,229,.12); transform: translateY(-2px); }
+  .concept-card h4 { color: var(--primary); margin: 0 0 6px; font-size: 1rem; }
+  .concept-card p { margin: 0; font-size: 0.92rem; }
+
+  .tag-pill { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: .4px; text-transform: uppercase; padding: 3px 10px; border-radius: 999px; vertical-align: middle; }
+  .tag-style { background: #e0e7ff; color: #3730a3; }
+
+  .figure-wrap { text-align: center; margin: 20px 0; }
+  .figure-wrap svg { max-width: 340px; width: 100%; height: auto; }
+  .figure-wrap figcaption { font-size: 0.85rem; color: var(--gray); margin-top: 6px; font-style: italic; }
+
+  .sm-notes mjx-container { max-width: 100%; }
+  .sm-notes mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; }
+
+  .resource-nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
+  .resource-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: var(--radius); border: 2px solid #e5e7eb; font-weight: 600; font-size: 0.92rem; color: var(--dark); background: var(--white); transition: var(--transition); }
+  .resource-nav a:hover, .resource-nav a.is-active { border-color: var(--primary); background: var(--primary); color: var(--white); }
+
+  .sm-back { display: inline-flex; align-items: center; gap: 8px; margin-top: 30px; padding: 10px 0; color: var(--primary); font-weight: 600; }
+  .sm-back:hover { color: var(--accent-dark); }
+
+  .next-chapter { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; justify-content: space-between; margin-top: 26px; padding: 18px 22px; background: linear-gradient(135deg, #eef2ff, #ffffff); border: 1px solid #e0e7ff; border-radius: var(--radius); }
+  .next-chapter h3 { margin: 0; font-size: 1.02rem; }
+  .next-chapter p { margin: 4px 0 0; font-size: 0.9rem; }
+
+  @media (max-width: 640px) {
+    .sm-notes h2 { font-size: 1.25rem; }
+    .sm-notes { font-size: 0.95rem; }
+    .steps .step { gap: 8px; }
+    .steps .step-num { width: 22px; height: 22px; font-size: 0.75rem; }
+    .resource-nav { gap: 6px; }
+    .resource-nav a { padding: 8px 12px; font-size: 0.85rem; }
+    .concept-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 420px) {
+    .concept-grid { grid-template-columns: 1fr; }
+  }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="/" class="logo"><i class="fas fa-graduation-cap"></i> Vyasa Academy</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="/">Home</a>
+      <a href="/#courses">Courses</a>
+      <a href="/cbse-study-material/" class="active">Study Material</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main class="sm-page">
+  <div class="container sm-container">
+    <nav class="sm-crumbs" aria-label="Breadcrumb">
+      <a href="https://www.vyasaacademy.in/">Home</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/">CBSE Study Material</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/">Class 10</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/">Mathematics</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/polynomials/">Polynomials</a> /
+      Notes
+    </nav>
+
+    <section class="sm-hero sm-hero-slim">
+      <p class="sm-eyebrow">CBSE Class 10 Â· Mathematics</p>
+      <h1>Class 10 Mathematics â€“ Chapter 2: Polynomials</h1>
+      <p>This chapter introduces the idea of a polynomial, its zeroes and the geometry of its graph. You will learn what the zeroes of a quadratic polynomial mean, how the zeroes are connected to the coefficients through simple formulae, how to find zeroes by factorisation, and how to build a quadratic polynomial from given zeroes. In <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/real-numbers/notes/">Chapter 1 â€“ Real Numbers</a>, factors and multiples helped us split numbers; now the same idea of factors will help us break polynomials.</p>
+    </section>
+
+    <nav class="resource-nav" aria-label="Chapter resources">
+      <a class="is-active" href="/cbse-study-material/class-10/mathematics/polynomials/notes/"><i class="fas fa-book-open"></i> Notes</a>
+      <a href="/cbse-study-material/class-10/mathematics/polynomials/practice-paper/"><i class="fas fa-file-lines"></i> Practice Paper</a>
+      <a href="/cbse-study-material/class-10/mathematics/polynomials/quiz/"><i class="fas fa-bullseye"></i> Quiz</a>
+      <a href="/cbse-study-material/class-10/mathematics/polynomials/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+    </nav>
+
+    <article class="sm-notes">
+
+      <section id="introduction">
+        <h2>1. Introduction to Polynomials</h2>
+        <p>A <strong>polynomial</strong> is an algebraic expression built from a variable, non-negative whole-number powers of that variable, and numbers. The general form of a polynomial in one variable \(x\) is:</p>
+        <p>\[p(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0, \qquad a_n \neq 0\]</p>
+        <p>Every part of this expression has a name, and using the names precisely is the first step to accuracy in the exam.</p>
+
+        <div class="concept-grid">
+          <div class="concept-card">
+            <h4>Variable</h4>
+            <p>The letter (usually \(x\)) on which the expression depends.</p>
+          </div>
+          <div class="concept-card">
+            <h4>Term</h4>
+            <p>Each separate part of the expression, e.g. in \(2x^2 + 5x - 3\) the terms are \(2x^2\), \(5x\), \(-3\).</p>
+          </div>
+          <div class="concept-card">
+            <h4>Coefficient</h4>
+            <p>The number multiplying a power of the variable, e.g. the coefficient of \(x^2\) in \(2x^2 + 5x - 3\) is \(2\), and the coefficient of \(x\) is \(5\).</p>
+          </div>
+          <div class="concept-card">
+            <h4>Constant term</h4>
+            <p>The term with no variable. In \(2x^2 + 5x - 3\), the constant term is \(-3\).</p>
+          </div>
+          <div class="concept-card">
+            <h4>Degree</h4>
+            <p>The highest power of the variable that appears. It is always a whole number. In \(2x^2 + 5x - 3\) the degree is \(2\).</p>
+          </div>
+          <div class="concept-card">
+            <h4>Standard form</h4>
+            <p>Terms written from the highest power down to the constant, e.g. \(3x^2 + 2x - 5\), not \(2x - 5 + 3x^2\).</p>
+          </div>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Examples of polynomials</div>
+          <p>\[p(x) = 2x^2 + 5x - 3 \qquad \text{(degree 2)}\]</p>
+          <p>\[p(x) = 3x - 7 \qquad \text{(degree 1)}\]</p>
+          <p>\[p(x) = 8 \qquad \text{(degree 0)}\]</p>
+          <p>The exponents of the variable are whole numbers (2, 1, and 0) in every case, so all three expressions are polynomials.</p>
+        </div>
+
+        <div class="warn-box">
+          <div class="box-label">What is not a polynomial?</div>
+          <p>Expressions such as \(2x + \dfrac{3}{x}\), \(\sqrt{x}\), \(x^2 + \dfrac{1}{x+1}\) are <strong>not</strong> polynomials, because the exponent of the variable is negative (\(x^{-1}\)), a fraction \(\left(x^{\frac{1}{2}}\right)\), or the variable sits in a denominator. Powers of a variable in a polynomial must be non-negative whole numbers.</p>
+        </div>
+      </section>
+
+      <section id="types">
+        <h2>2. Types of Polynomials</h2>
+        <p>Polynomials are classified by their degree. For Class 10 you need three types, all of which already appeared above.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Name</th><th>Degree</th><th>General form</th><th>Example</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Constant polynomial</td><td>0</td><td>\(a_0\)</td><td>\(8,\; -5,\; 0\)</td></tr>
+              <tr><td>Linear polynomial</td><td>1</td><td>\(ax + b,\; a \neq 0\)</td><td>\(3x - 7\)</td></tr>
+              <tr><td>Quadratic polynomial</td><td>2</td><td>\(ax^2 + bx + c,\; a \neq 0\)</td><td>\(2x^2 + 5x - 3\)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="def-box">
+          <div class="box-label">When a degree is zero</div>
+          <p>In the constant polynomial \(p(x) = 8\), the power of \(x\) hidden inside the constant is \(x^0 = 1\), so the degree is \(0\). A non-zero constant has degree \(0\); the zero polynomial \(p(x) = 0\) is given no degree.</p>
+        </div>
+
+        <div class="tip-box">
+          <div class="box-label">Exam tip</div>
+          <p>In a quadratic polynomial \(ax^2 + bx + c\), remember \(a \neq 0\). If \(a = 0\), the expression would become linear, not quadratic.</p>
+        </div>
+      </section>
+
+      <section id="zeroes">
+        <h2>3. Zeroes of a Polynomial</h2>
+        <div class="def-box">
+          <div class="box-label">Definition â€” zero of a polynomial</div>
+          <p>A real number \(k\) is called a <strong>zero</strong> of a polynomial \(p(x)\) if</p>
+          <p>\[p(k) = 0\]</p>
+          <p>In words: substituting \(k\) in place of \(x\) makes the whole expression equal to zero.</p>
+        </div>
+
+        <h3>What the definition really means</h3>
+        <ul>
+          <li>The zero is a <strong>number</strong>, not a point on the graph and not a factor. A zero \(k\) satisfies \(p(k) = 0\).</li>
+          <li>\(\dfrac{(x-2)(x-3)}{x-2} = x - 3\) is a good example of why context matters: after cancelling the factor \((x-2)\) the expression is only a polynomial when we remember it is not defined at \(x = 2\). In this chapter we work with expressions that are genuinely polynomials, so no such exceptions appear.</li>
+          <li>Verifying a proposed zero is always possible: just substitute and check whether the value becomes \(0\).</li>
+        </ul>
+
+        <h3>How to verify a zero</h3>
+        <div class="steps">
+          <div class="step"><span class="step-num">1</span><span class="step-text">Replace the variable with the given number.</span></div>
+          <div class="step"><span class="step-num">2</span><span class="step-text">Simplify the arithmetic carefully (mind the signs).</span></div>
+          <div class="step"><span class="step-num">3</span><span class="step-text">If the result is \(0\), the number is a zero; otherwise it is not.</span></div>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Illustration</div>
+          <p>For \(p(x) = x^2 - 5x + 6\), check \(x = 2\) and \(x = 4\).</p>
+          <p>\(p(2) = (2)^2 - 5(2) + 6 = 4 - 10 + 6 = 0\), so \(2\) is a zero.</p>
+          <p>\(p(4) = (4)^2 - 5(4) + 6 = 16 - 20 + 6 = 2 \neq 0\), so \(4\) is not a zero.</p>
+        </div>
+
+        <div class="warn-box">
+          <div class="box-label">Common mistake</div>
+          <p><strong>Zero of a polynomial â‰  the value of the polynomial.</strong> Writing "the zero of \(p(x)\) is \(p(0)\)" is wrong. The zero is the input \(k\) that makes the output zero. So the zero of \(p(x) = 2x + 3\) is \(x = -\dfrac{3}{2}\), not the number \(p(0) = 3\).</p>
+        </div>
+      </section>
+
+      <section id="geometrical">
+        <h2>4. Geometrical Interpretation of Zeroes</h2>
+        <p>Every polynomial \(p(x)\) has a graph: the set of points \((x, y)\) where \(y = p(x)\). A real zero \(k\) means the point \((k, 0)\) lies on the graph â€” that is, the graph <strong>intersects or touches the x-axis</strong> at \(x = k\). Counting the intersections of the graph with the x-axis is the same as counting the real zeroes.</p>
+
+        <h3>The linear polynomial</h3>
+        <p>The graph of a linear polynomial \(ax + b\) is a straight line. A non-horizontal straight line crosses the x-axis at exactly one point, so a linear polynomial has exactly <strong>one</strong> real zero.</p>
+
+        <figure class="figure-wrap">
+          <svg viewBox="0 0 320 200" role="img" aria-label="Graph of a linear polynomial crossing the x-axis at one point">
+            <line x1="30" y1="150" x2="300" y2="150" stroke="#94a3b8" stroke-width="1.5" />
+            <line x1="150" y1="15" x2="150" y2="190" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4" />
+            <polyline points="60,182 280,40" fill="none" stroke="#4f46e5" stroke-width="2.5" />
+            <circle cx="110" cy="150" r="5" fill="#16a34a" />
+          </svg>
+          <figcaption>A linear polynomial crosses the x-axis at exactly one point â€” it has exactly one zero.</figcaption>
+        </figure>
+
+        <h3>The quadratic polynomial</h3>
+        <p>The graph of a quadratic polynomial \(ax^2 + bx + c\) is a smooth curve called a <strong>parabola</strong>. Because a parabola bends, three cases are possible.</p>
+
+        <div class="concept-grid">
+          <div class="concept-card">
+            <h4>Two distinct real zeroes</h4>
+            <p>The graph crosses the x-axis at two different points.</p>
+          </div>
+          <div class="concept-card">
+            <h4>Two equal real zeroes</h4>
+            <p>The graph just touches the x-axis at one point; the two zeroes coincide.</p>
+          </div>
+          <div class="concept-card">
+            <h4>No real zeroes</h4>
+            <p>The graph never touches the x-axis at all.</p>
+          </div>
+        </div>
+
+        <figure class="figure-wrap">
+          <svg viewBox="0 0 320 200" role="img" aria-label="Parabola crossing the x-axis at two points">
+            <line x1="30" y1="150" x2="300" y2="150" stroke="#94a3b8" stroke-width="1.5" />
+            <line x1="150" y1="15" x2="150" y2="190" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4" />
+            <polyline points="40,35 100,150 150,180 200,150 260,35" fill="none" stroke="#4f46e5" stroke-width="2.5" />
+            <circle cx="100" cy="150" r="5" fill="#16a34a" />
+            <circle cx="200" cy="150" r="5" fill="#16a34a" />
+          </svg>
+          <figcaption>Two distinct real zeroes â€” the parabola crosses the x-axis at two points.</figcaption>
+        </figure>
+
+        <figure class="figure-wrap">
+          <svg viewBox="0 0 320 200" role="img" aria-label="Parabola touching the x-axis at one point">
+            <line x1="30" y1="150" x2="300" y2="150" stroke="#94a3b8" stroke-width="1.5" />
+            <line x1="150" y1="15" x2="150" y2="190" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4" />
+            <polyline points="60,191 150,150 240,191" fill="none" stroke="#4f46e5" stroke-width="2.5" />
+            <circle cx="150" cy="150" r="5" fill="#16a34a" />
+          </svg>
+          <figcaption>Two equal real zeroes â€” the parabola just touches the x-axis at one point.</figcaption>
+        </figure>
+
+        <figure class="figure-wrap">
+          <svg viewBox="0 0 320 200" role="img" aria-label="Parabola that does not touch the x-axis">
+            <line x1="30" y1="150" x2="300" y2="150" stroke="#94a3b8" stroke-width="1.5" />
+            <line x1="150" y1="15" x2="150" y2="190" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4" />
+            <polyline points="60,141 150,100 240,141" fill="none" stroke="#4f46e5" stroke-width="2.5" />
+          </svg>
+          <figcaption>No real zeroes â€” the parabola lies entirely on one side of the x-axis.</figcaption>
+        </figure>
+
+        <div class="result-box">
+          <div class="box-label">Key takeaway</div>
+          <p><strong>Number of real zeroes = number of times the graph meets the x-axis.</strong> A quadratic polynomial has <strong>at most two</strong> real zeroes. It can have two distinct, two equal, or no real zeroes â€” never more than two.</p>
+        </div>
+
+        <div class="tip-box">
+          <div class="box-label">Exam tip</div>
+          <p>Do not assume every quadratic has two different real zeroes. Some parabolas merely touch the axis (equal zeroes) and some never reach it (no real zeroes). Always check the actual zeroes by factorising or substituting.</p>
+        </div>
+      </section>
+
+      <section id="relationship">
+        <h2>5. Relationship Between Zeroes and Coefficients</h2>
+        <p>For a quadratic polynomial</p>
+        <p>\[p(x) = ax^2 + bx + c, \qquad a \neq 0\]</p>
+        <p>whose zeroes are \(\alpha\) and \(\beta\), the two most important results of this chapter are:</p>
+
+        <div class="result-box">
+          <div class="box-label">Sum and product of zeroes</div>
+          <p>\[\alpha + \beta = -\frac{b}{a}\qquad \text{and}\qquad \alpha\beta = \frac{c}{a}\]</p>
+        </div>
+
+        <div class="warn-box">
+          <div class="box-label">Warning â€” identify a, b, c correctly before applying the formula</div>
+          <p>Write the polynomial in standard form \(ax^2 + bx + c\) first. Take \(a\) as the coefficient of \(x^2\) (never forget it in the denominator of \(-\dfrac{b}{a}\)), \(b\) as the coefficient of \(x\) <strong>including its sign</strong>, and \(c\) as the constant term including its sign. For \(2x^2 - 5x + 3\): \(a = 2\), \(b = -5\), \(c = 3\).</p>
+        </div>
+
+        <h4>Verifying the relationship when zeroes are known</h4>
+        <div class="example-box">
+          <div class="box-label">Example</div>
+          <p>Verify the relationship for \(p(x) = x^2 - 5x + 6\).</p>
+          <p><strong>Find the zeroes.</strong> \(x^2 - 5x + 6 = (x - 2)(x - 3)\), so \(\alpha = 2\), \(\beta = 3\).</p>
+          <p><strong>Check the sum.</strong> \(\alpha + \beta = 2 + 3 = 5\). Formula: \(-\dfrac{b}{a} = -\dfrac{(-5)}{1} = 5\). âœ”</p>
+          <p><strong>Check the product.</strong> \(\alpha\beta = 2 \times 3 = 6\). Formula: \(\dfrac{c}{a} = \dfrac{6}{1} = 6\). âœ”</p>
+        </div>
+
+        <h4>Finding the sum and product without finding the zeroes</h4>
+        <div class="example-box">
+          <div class="box-label">Example</div>
+          <p>For \(p(x) = 2x^2 - 4x + 1\), \(a = 2\), \(b = -4\), \(c = 1\).</p>
+          <p>Sum of zeroes \(= -\dfrac{b}{a} = -\dfrac{(-4)}{2} = 2\).</p>
+          <p>Product of zeroes \(= \dfrac{c}{a} = \dfrac{1}{2}\).</p>
+        </div>
+
+        <h4>Determining an unknown coefficient</h4>
+        <div class="example-box">
+          <div class="box-label">Example</div>
+          <p>If one zero of \(x^2 - 5x + k\) is \(2\), find \(k\).</p>
+          <p>Since \(2\) is a zero, \(p(2) = 0\): \(4 - 10 + k = 0\), so \(k = 6\). Check: \(x^2 - 5x + 6 = (x - 2)(x - 3)\), and the other zero is \(3\).</p>
+        </div>
+
+        <h4>Checking whether given numbers can be zeroes</h4>
+        <div class="example-box">
+          <div class="box-label">Example</div>
+          <p>Can \(-2\) and \(-3\) be the zeroes of \(x^2 - 5x + 6\)?</p>
+          <p>If they were, the sum would be \(-5\), but \(-\dfrac{b}{a} = 5\). The product would be \(6\), which agrees with \(\dfrac{c}{a} = 6\) â€” but the product alone is not enough. The sum fails, so \(-2\) and \(-3\) cannot be the zeroes. The actual zeroes are \(2\) and \(3\).</p>
+        </div>
+      </section>
+
+      <section id="finding-zeroes">
+        <h2>6. Finding the Zeroes of a Quadratic Polynomial</h2>
+        <p>The standard Class 10 method is <strong>factorisation</strong>: express the quadratic as a product of two linear factors using the split-the-middle-term technique, then set each factor to zero.</p>
+
+        <div class="result-box">
+          <div class="box-label">The split-the-middle-term rule</div>
+          <p>For \(ax^2 + bx + c\), find two numbers whose <strong>product is \(ac\)</strong> and whose <strong>sum is \(b\)</strong>. Split \(b\) into the sum of those two numbers, group the four terms, and factor each group.</p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Worked example â€” \(x^2 - 5x + 6\)</div>
+          <p><strong>Step 1.</strong> \(a = 1\), \(b = -5\), \(c = 6\). Product \(ac = 6\); we need two numbers with product \(6\) and sum \(-5\). Those numbers are \(-2\) and \(-3\).</p>
+          <p><strong>Step 2.</strong> Split the middle term: \(x^2 - 2x - 3x + 6\).</p>
+          <p><strong>Step 3.</strong> Factor by grouping: \(x(x - 2) - 3(x - 2) = (x - 2)(x - 3)\).</p>
+          <p><strong>Step 4.</strong> Set each factor to zero: \(x - 2 = 0\) gives \(x = 2\); \(x - 3 = 0\) gives \(x = 3\).</p>
+          <p>\[x = 2, \ 3\]</p>
+          <p><strong>Verify.</strong> Sum \(= 5 = -\dfrac{b}{a}\), product \(= 6 = \dfrac{c}{a}\). âœ”</p>
+        </div>
+
+        <h3>More patterns to practise</h3>
+        <ul>
+          <li><strong>Negative zeroes:</strong> \(x^2 + 5x + 6 = (x + 2)(x + 3)\) gives zeroes \(-2\) and \(-3\).</li>
+          <li><strong>A leading constant:</strong> \(2x^2 - 6x = 2x(x - 3)\) gives zeroes \(0\) and \(3\).</li>
+          <li><strong>Different coefficients:</strong> \(3x^2 - x - 4 = (3x - 4)(x + 1)\) gives zeroes \(\dfrac{4}{3}\) and \(-1\).</li>
+          <li><strong>A square:</strong> \(4x^2 - 4x + 1 = (2x - 1)^2\) gives the two equal real zeroes \(\dfrac{1}{2}, \dfrac{1}{2}\).</li>
+        </ul>
+
+        <div class="warn-box">
+          <div class="box-label">Common mistake</div>
+          <p>When splitting the middle term, the two numbers must multiply to give <strong>\(a \times c\)</strong>, not just \(c\). For \(6x^2 - x - 2\), \(a = 6\) so the product needed is \(6 \times (-2) = -12\); the numbers whose product is \(-12\) and sum is \(-1\) are \(-4\) and \(3\): \(6x^2 - 4x + 3x - 2 = (3x - 2)(2x + 1)\).</p>
+        </div>
+
+        <div class="tip-box">
+          <div class="box-label">Exam tip</div>
+          <p>Always verify your zeroes using the relationships \(\alpha + \beta = -\dfrac{b}{a}\) and \(\alpha\beta = \dfrac{c}{a}\). It catches most sign and arithmetic slips.</p>
+        </div>
+      </section>
+
+      <section id="forming">
+        <h2>7. Forming a Quadratic Polynomial from its Zeroes</h2>
+        <p>If \(\alpha\) and \(\beta\) are the zeroes, then the factors are \((x - \alpha)\) and \((x - \beta)\), so the polynomial is:</p>
+        <div class="result-box">
+          <div class="box-label">Polynomial from known zeroes</div>
+          <p>\[p(x) = x^2 - (\alpha + \beta)x + \alpha\beta\]</p>
+          <p>This is a quadratic with leading coefficient \(1\). Multiply the whole expression by any non-zero constant to get another quadratic with the same zeroes. When the question fixes a certain leading coefficient, include that multiplier.</p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Example â€” zeroes 2 and 3</div>
+          <p>\(\alpha + \beta = 5\), \(\alpha\beta = 6\). So \(p(x) = x^2 - 5x + 6\).</p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Example â€” zeroes \(-2\) and 5</div>
+          <p>\(\alpha + \beta = -2 + 5 = 3\), \(\alpha\beta = (-2)(5) = -10\). So \(p(x) = x^2 - 3x - 10\). Check: \((x + 2)(x - 5) = x^2 - 3x - 10\). âœ”</p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Example â€” zeroes with fractions</div>
+          <p>Zeroes \(1\) and \(\dfrac{2}{3}\): sum \(= \dfrac{5}{3}\), product \(= \dfrac{2}{3}\).</p>
+          <p>\(p(x) = x^2 - \dfrac{5}{3}x + \dfrac{2}{3}\). Multiply by 3: \(3x^2 - 5x + 2\). Check: \((x - 1)(3x - 2) = 3x^2 - 5x + 2\). âœ”</p>
+        </div>
+
+        <h3>When only the sum and product are given</h3>
+        <div class="example-box">
+          <div class="box-label">Example â€” sum 5, product 6</div>
+          <p>Direct substitution gives \(p(x) = x^2 - 5x + 6\). No extra calculation is needed â€” the formula is exactly built for this.</p>
+        </div>
+
+        <div class="tip-box">
+          <div class="box-label">Exam tip</div>
+          <p>Double-check the sign of the \(x\)-coefficient: the formula uses \(x^2 - (\text{sum})x + \text{product}\). If the sum is negative, then \(-(\text{sum})\) becomes positive.</p>
+        </div>
+      </section>
+
+      <section id="applications">
+        <h2>8. Application-Based Learning</h2>
+        <p>In exam questions, a quadratic polynomial is often hiding inside a real situation. The skill is to <strong>translate the situation into a polynomial first</strong>, and only then use factorisation or the zeroesâ€“coefficients relationships.</p>
+
+        <div class="app-box">
+          <div class="box-label">Application â€” area and dimensions</div>
+          <p><strong>Problem.</strong> A rectangular hall has area \(x^2 + 8x + 15\) square metres. If its length is \((x + 5)\) metres, find its breadth.</p>
+          <p><strong>Method.</strong> Area = length Ã— breadth, so breadth = area Ã· length.</p>
+          <p><strong>Working.</strong> \((x + 5)(x + 3) = x^2 + 5x + 3x + 15 = x^2 + 8x + 15\). So breadth \(= x + 3\) metres.</p>
+          <p><strong>Answer.</strong> The breadth is \((x + 3)\) metres.</p>
+          <p><strong>Interpretation.</strong> For the measurements to be positive we need \(x > 0\); the area itself only makes sense then.</p>
+        </div>
+
+        <div class="app-box">
+          <div class="box-label">Application â€” consecutive numbers</div>
+          <p><strong>Problem.</strong> The product of two consecutive positive integers is 306. Form a quadratic polynomial to represent the situation.</p>
+          <p><strong>Working.</strong> Let the integers be \(x\) and \(x + 1\). Then \(x(x + 1) = 306\), i.e. \(x^2 + x - 306 = 0\). Factorising: \((x - 17)(x + 18) = 0\).</p>
+          <p><strong>Answer.</strong> The integers are 17 and 18. (Check: \(17 \times 18 = 306\). âœ”)</p>
+        </div>
+
+        <div class="app-box">
+          <div class="box-label">Application â€” rectangular plot</div>
+          <p><strong>Problem.</strong> A rectangular plot has length \((x + 6)\) m and breadth \((x + 1)\) m. For what value of \(x\) is the area 36 mÂ²?</p>
+          <p><strong>Working.</strong> Area \(= (x + 6)(x + 1) = x^2 + 7x + 6\). Set it equal to 36: \(x^2 + 7x + 6 = 36\), so \(x^2 + 7x - 30 = 0\). Factorising: \((x + 10)(x - 3) = 0\).</p>
+          <p><strong>Answer.</strong> \(x = -10\) is not possible for a length; \(x = 3\). Then length \(= 9\) m and breadth \(= 4\) m, area \(= 36\) mÂ². âœ”</p>
+        </div>
+
+        <div class="app-box">
+          <div class="box-label">Application â€” interpreting a model</div>
+          <p><strong>Problem.</strong> The weekly profit (in hundreds of rupees) of a stall is modelled by \(P(x) = 30x - x^2\), where \(x\) is the number of items sold in dozens.</p>
+          <p><strong>Working.</strong> Factorise \(P(x) = x(30 - x)\). The profit is zero when \(x = 0\) or \(x = 30\).</p>
+          <p><strong>Interpretation.</strong> No items sold gives zero profit; selling exactly 30 dozens also gives zero profit (the market is saturated). The model gives a positive profit only for \(0 < x < 30\), which is the sensible operating range.</p>
+        </div>
+
+        <div class="app-box">
+          <div class="box-label">Application â€” geometric measurement</div>
+          <p><strong>Problem.</strong> The side of a square is \((2x + 1)\) m. Express its area and find it when \(x = 2\).</p>
+          <p><strong>Working.</strong> Area \(= (2x + 1)^2 = 4x^2 + 4x + 1\). At \(x = 2\): side \(= 5\) m, area \(= 25\) mÂ².</p>
+          <p><strong>Verify.</strong> \(4(4) + 4(2) + 1 = 16 + 8 + 1 = 25\). âœ”</p>
+        </div>
+      </section>
+
+      <section id="case-based">
+        <h2>9. Case-Based Questions â€” Polynomials</h2>
+        <p>Case-based questions describe a small real-world situation and then ask 2â€“3 questions about it. Read the situation fully, write down the polynomial it suggests, and use factorisation or the zeroesâ€“coefficients rules to answer.</p>
+
+        <div class="case-card">
+          <div class="case-card-header"><h3>Case Study 1 â€” School Garden</h3></div>
+          <div class="case-card-body">
+            <p>A school plans a rectangular garden whose length is \((x + 6)\) metres and whose breadth is \((x + 2)\) metres. The area of the garden is modelled by the quadratic polynomial \(A(x) = x^2 + 8x + 12\).</p>
+            <div class="qbox">
+              <p class="q-label">Question 1</p>
+              <p>Confirm that the given area polynomial matches \((x + 6)(x + 2)\).</p>
+            </div>
+            <div class="qbox">
+              <p class="q-label">Question 2</p>
+              <p>Find the zeroes of \(A(x)\) and verify the relationship between the zeroes and the coefficients.</p>
+            </div>
+            <div class="qbox">
+              <p class="q-label">Question 3</p>
+              <p>Interpret the zeroes in the context of the garden. If the actual area of the garden is 45 mÂ², find \(x\) and the two dimensions.</p>
+            </div>
+            <div class="solution-box">
+              <p><strong>Solution.</strong>&nbsp; (1)&nbsp; \((x + 6)(x + 2) = x^2 + 2x + 6x + 12 = x^2 + 8x + 12\). âœ”</p>
+              <p>(2)&nbsp; \(A(x) = (x + 6)(x + 2)\), so the zeroes are \(x = -6\) and \(x = -2\). Here \(a = 1\), \(b = 8\), \(c = 12\). Sum \(= -8 = -\dfrac{b}{a}\) âœ”; product \(= 12 = \dfrac{c}{a}\) âœ”.</p>
+              <p>(3)&nbsp; Both zeroes are negative, so no positive value of \(x\) makes the area zero â€” the model is meaningful only for \(x > 0\). Geometrically, \(x = -2\) corresponds to breadth \(x + 2 = 0\), and \(x = -6\) to length \(x + 6 = 0\). For area 45 mÂ²: \(x^2 + 8x + 12 = 45 \Rightarrow x^2 + 8x - 33 = 0 \Rightarrow (x + 11)(x - 3) = 0\). So \(x = 3\): length 9 m, breadth 5 m, area \(9 \times 5 = 45\) mÂ². âœ”</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card">
+          <div class="case-card-header"><h3>Case Study 2 â€” Classroom Arrangement</h3></div>
+          <div class="case-card-body">
+            <p>Benches in a hall are arranged in \(x\) rows with \((x + 5)\) benches in each row. The total number of benches is given by the quadratic polynomial \(B(x) = x^2 + 5x\).</p>
+            <div class="qbox">
+              <p class="q-label">Question 1</p>
+              <p>Explain why \(B(x) = x(x + 5)\) represents the total number of benches.</p>
+            </div>
+            <div class="qbox">
+              <p class="q-label">Question 2</p>
+              <p>Find the zeroes of \(B(x)\). Which zero is meaningful for the classroom? Give a reason.</p>
+            </div>
+            <div class="qbox">
+              <p class="q-label">Question 3</p>
+              <p>The hall has 36 benches. Find the number of rows and the number of benches in each row.</p>
+            </div>
+            <div class="solution-box">
+              <p><strong>Solution.</strong>&nbsp; (1)&nbsp; Total benches = rows Ã— benches per row \(= x \times (x + 5) = x^2 + 5x\). âœ”</p>
+              <p>(2)&nbsp; \(x(x + 5) = 0\) gives zeroes \(0\) and \(-5\). \(x = 0\) (no rows, no benches) is trivially meaningful; \(x = -5\) is not, because the number of rows cannot be negative.</p>
+              <p>(3)&nbsp; \(x^2 + 5x = 36 \Rightarrow x^2 + 5x - 36 = 0 \Rightarrow (x + 9)(x - 4) = 0\). So \(x = 4\) rows and \(x + 5 = 9\) benches per row; total \(= 4 \times 9 = 36\). âœ”</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card">
+          <div class="case-card-header"><h3>Case Study 3 â€” Sports Ground</h3></div>
+          <div class="case-card-body">
+            <p>A rectangular sports ground has length \((2x + 1)\) metres and breadth \((x + 4)\) metres. Its area is \(2x^2 + 9x + 4\) square metres.</p>
+            <div class="qbox">
+              <p class="q-label">Question 1</p>
+              <p>Show that the product of the two dimensions gives the given area polynomial.</p>
+            </div>
+            <div class="qbox">
+              <p class="q-label">Question 2</p>
+              <p>Find the zeroes of \(2x^2 + 9x + 4\) and verify the sum and product relationships.</p>
+            </div>
+            <div class="qbox">
+              <p class="q-label">Question 3</p>
+              <p>When \(x = 5\), find the length, breadth and area of the ground.</p>
+            </div>
+            <div class="solution-box">
+              <p><strong>Solution.</strong>&nbsp; (1)&nbsp; \((2x + 1)(x + 4) = 2x^2 + 8x + x + 4 = 2x^2 + 9x + 4\). âœ”</p>
+              <p>(2)&nbsp; \((2x + 1)(x + 4) = 0\) gives zeroes \(-\dfrac{1}{2}\) and \(-4\). Here \(a = 2\), \(b = 9\), \(c = 4\). Sum \(= -\dfrac{1}{2} - 4 = -\dfrac{9}{2} = -\dfrac{b}{a}\) âœ”; product \(= \left(-\dfrac{1}{2}\right)(-4) = 2 = \dfrac{4}{2} = \dfrac{c}{a}\) âœ”.</p>
+              <p>(3)&nbsp; At \(x = 5\): length \(= 2(5) + 1 = 11\) m, breadth \(= 5 + 4 = 9\) m, area \(= 11 \times 9 = 99\) mÂ². Check: \(2(25) + 9(5) + 4 = 99\). âœ”</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card">
+          <div class="case-card-header"><h3>Case Study 4 â€” Product / Revenue Model</h3></div>
+          <div class="case-card-body">
+            <p>A fruit seller finds that his daily revenue (in rupees) is modelled by \(R(x) = x(200 - 2x)\), where \(x\) is the price (in rupees) of a basket.</p>
+            <div class="qbox">
+              <p class="q-label">Question 1</p>
+              <p>Write \(R(x)\) in the standard form \(ax^2 + bx + c\), stating \(a\), \(b\) and \(c\).</p>
+            </div>
+            <div class="qbox">
+              <p class="q-label">Question 2</p>
+              <p>Find the values of \(x\) for which the revenue becomes zero, and verify the sum and product of these values.</p>
+            </div>
+            <div class="qbox">
+              <p class="q-label">Question 3</p>
+              <p>Interpret the zeroes in the context of the seller. Over what range of prices is the revenue positive?</p>
+            </div>
+            <div class="solution-box">
+              <p><strong>Solution.</strong>&nbsp; (1)&nbsp; \(R(x) = -2x^2 + 200x\), so \(a = -2\), \(b = 200\), \(c = 0\).</p>
+              <p>(2)&nbsp; \(x(200 - 2x) = 0\) gives \(x = 0\) and \(x = 100\). Sum \(= 100 = -\dfrac{200}{-2}\) âœ”; product \(= 0 = \dfrac{0}{-2}\) âœ”.</p>
+              <p>(3)&nbsp; Revenue is zero when nothing is sold (\(x = 0\)) and again at a price of â‚¹100 per basket (at which no baskets are bought). The polynomial is positive for \(0 < x < 100\), so the seller's sensible price range is between â‚¹0 and â‚¹100 per basket.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card">
+          <div class="case-card-header"><h3>Case Study 5 â€” Number Pattern</h3></div>
+          <div class="case-card-body">
+            <p>A pattern of floor tiles gives the number of tiles in the \(n\)-th figure as \(T(n) = 2n^2 - 3n - 2\).</p>
+            <div class="qbox">
+              <p class="q-label">Question 1</p>
+              <p>Verify that the pattern gives \(T(1) = -3\), \(T(2) = 0\) and \(T(3) = 7\).</p>
+            </div>
+            <div class="qbox">
+              <p class="q-label">Question 2</p>
+              <p>Find the zeroes of \(T(n)\). Which one is meaningful for a pattern of tiles?</p>
+            </div>
+            <div class="qbox">
+              <p class="q-label">Question 3</p>
+              <p>Calculate the sum and product of the zeroes and verify the coefficient relationship.</p>
+            </div>
+            <div class="solution-box">
+              <p><strong>Solution.</strong>&nbsp; (1)&nbsp; \(T(1) = 2 - 3 - 2 = -3\) âœ”; \(T(2) = 8 - 6 - 2 = 0\) âœ”; \(T(3) = 18 - 9 - 2 = 7\) âœ”.</p>
+              <p>(2)&nbsp; \(2n^2 - 3n - 2 = (2n + 1)(n - 2)\), so the zeroes are \(n = -\dfrac{1}{2}\) and \(n = 2\). Since \(n\) counts the figure number, only \(n = 2\) is meaningful.</p>
+              <p>(3)&nbsp; Sum \(= -\dfrac{1}{2} + 2 = \dfrac{3}{2} = -\dfrac{b}{a} = \dfrac{3}{2}\) âœ”; product \(= \left(-\dfrac{1}{2}\right)(2) = -1 = \dfrac{c}{a} = \dfrac{-2}{2}\) âœ”.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="competency">
+        <h2>10. Competency-Based Examples</h2>
+        <p>Competency questions test your ability to choose the right method, spot an error, interpret information, or compare two situations â€” not just to repeat a routine calculation.</p>
+
+        <div class="comp-box">
+          <div class="box-label">Identify the error</div>
+          <p>A student says the zeroes of \(x^2 - 6x + 8\) are 2 and 3. Check and correct the claim.</p>
+          <p><strong>Reasoning.</strong> If the zeroes were 2 and 3, the product would be \(6\), but \(\dfrac{c}{a} = 8\). The correct zeroes satisfy the product rule, so factorise: \(x^2 - 6x + 8 = (x - 2)(x - 4)\), giving zeroes \(2\) and \(4\). The student chose the wrong factors.</p>
+        </div>
+
+        <div class="comp-box">
+          <div class="box-label">Infer zeroes from information</div>
+          <p>Without factorising \(x^2 - 7x + 12\), state the sum and product of its zeroes, and then write down the zeroes.</p>
+          <p><strong>Reasoning.</strong> Sum \(= 7\), product \(= 12\). Two numbers with sum 7 and product 12 are 3 and 4, so the zeroes are 3 and 4.</p>
+        </div>
+
+        <div class="comp-box">
+          <div class="box-label">Interpret a graph</div>
+          <p>A parabola opens upwards, lies completely above the x-axis, and never touches it. How many real zeroes does the corresponding polynomial have? Explain.</p>
+          <p><strong>Reasoning.</strong> A real zero is a point where the graph meets the x-axis. The graph never touches it, so the polynomial has <strong>no real zeroes</strong>.</p>
+        </div>
+
+        <div class="comp-box">
+          <div class="box-label">Determine a missing coefficient</div>
+          <p>For a quadratic polynomial in which the sum of the zeroes is 3 and the product is 2, what is the polynomial of the form \(x^2 + bx + c\)? Also give one polynomial with these zeroes but leading coefficient 3.</p>
+          <p><strong>Reasoning.</strong> \(x^2 - 3x + 2\) has sum 3 and product 2. Multiplying by 3 does not change the zeroes: \(3x^2 - 9x + 6\) has the same zeroes (1 and 2).</p>
+        </div>
+
+        <div class="comp-box">
+          <div class="box-label">Compare two polynomials</div>
+          <p>Which of \(x^2 - 10x + 25\) and \(x^2 - 6x + 8\) has two equal real zeroes? Justify.</p>
+          <p><strong>Reasoning.</strong> \(x^2 - 10x + 25 = (x - 5)^2\) has the equal real zeroes \(5, 5\). The other factorises as \((x - 2)(x - 4)\), giving distinct zeroes \(2, 4\). So the first polynomial has two equal real zeroes.</p>
+        </div>
+      </section>
+
+      <section id="solved-examples">
+        <h2>11. Solved Examples</h2>
+        <p>Twenty fully worked examples: five basic, six moderate, five application/competency-based and four case-based. Each solution follows <strong>Given â†’ Method â†’ Working â†’ Answer â†’ Interpretation</strong> wherever appropriate.</p>
+
+        <h3>Basic</h3>
+
+        <div class="solved-box">
+          <div class="s-label">Solved Example 1 <span class="tag-style">CBSE Exam-Style Question</span></div>
+          <p><strong>Given.</strong> \(p(x) = 2x^2 + 5x - 3\).</p>
+          <p><strong>Working.</strong> \(p(1) = 2 + 5 - 3 = 4\);&nbsp; \(p(0) = -3\);&nbsp; \(p(-2) = 2(4) + 5(-2) - 3 = 8 - 10 - 3 = -5\).</p>
+          <p><strong>Check for a zero.</strong> \(p\left(\dfrac{1}{2}\right) = 2\left(\dfrac{1}{4}\right) + 5\left(\dfrac{1}{2}\right) - 3 = \dfrac{1}{2} + \dfrac{5}{2} - 3 = 0\). So \(\dfrac{1}{2}\) is a zero.</p>
+          <p><strong>Answer.</strong> \(p(1) = 4\), \(p(0) = -3\), \(p(-2) = -5\), and the zero \(\dfrac{1}{2}\) verifies via \(p\left(\dfrac{1}{2}\right) = 0\).</p>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label">Solved Example 2</div>
+          <p><strong>Given.</strong> Polynomials \(4x^2 + 3x\), \(7x - 1\), \(9\); also \(2x + \dfrac{3}{x}\) and \(\sqrt{x} + 5\).</p>
+          <p><strong>Method.</strong> Identify by degree; check that every exponent is a whole number.</p>
+          <p><strong>Working/Answer.</strong> Degrees \(2\), \(1\), \(0\). \(2x + \dfrac{3}{x}\) has exponent \(-1\) and \(\sqrt{x} + 5\) has exponent \(\frac{1}{2}\), so neither is a polynomial.</p>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label">Solved Example 3</div>
+          <p><strong>Given.</strong> \(3x^2 - 5 + 2x\).</p>
+          <p><strong>Working.</strong> Rearrange in descending powers: \(3x^2 + 2x - 5\).</p>
+          <p><strong>Answer.</strong> Standard form \(3x^2 + 2x - 5\), with \(a = 3\), \(b = 2\), \(c = -5\).</p>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label">Solved Example 4</div>
+          <p><strong>Given.</strong> \(p(x) = x^2 + x - 6\).</p>
+          <p><strong>Working.</strong> \(p(2) = 4 + 2 - 6 = 0\), so 2 is a zero. \(p(-3) = 9 - 3 - 6 = 0\), so \(-3\) is a zero.</p>
+          <p><strong>Answer.</strong> Yes â€” both 2 and \(-3\) are zeroes of \(p(x)\). Factorised form \((x - 2)(x + 3)\) confirms it.</p>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label">Solved Example 5</div>
+          <p><strong>Given.</strong> \(p(x) = 2x + 3\).</p>
+          <p><strong>Working.</strong> \(p(1) = 5 \neq 0\), so 1 is not a zero. Solving \(2x + 3 = 0\): \(x = -\dfrac{3}{2}\).</p>
+          <p><strong>Answer.</strong> The zero is \(-\dfrac{3}{2}\) (a linear polynomial has exactly one zero).</p>
+        </div>
+
+        <h3>Moderate</h3>
+
+        <div class="solved-box">
+          <div class="s-label">Solved Example 6 <span class="tag-style">CBSE Exam-Style Question</span></div>
+          <p><strong>Given.</strong> \(x^2 - 5x + 6\).</p>
+          <p><strong>Method.</strong> Split the middle term; verify with the relationships.</p>
+          <p><strong>Working.</strong> \(x^2 - 2x - 3x + 6 = (x - 2)(x - 3)\). Zeroes 2, 3.</p>
+          <p><strong>Answer + Interpretation.</strong> Sum 5 and product 6 match \(-\dfrac{b}{a} = 5\) and \(\dfrac{c}{a} = 6\), so the relationship is verified.</p>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label">Solved Example 7</div>
+          <p><strong>Given.</strong> \(2x^2 - 6x\).</p>
+          <p><strong>Working.</strong> Factor 2x: \(2x(x - 3) = 0\), so the zeroes are 0 and 3.</p>
+          <p><strong>Answer + Interpretation.</strong> Sum 3 = \(-\dfrac{-6}{2}\) âœ”; product 0 = \(\dfrac{0}{2}\) âœ”. A zero can be 0 â€” never confuse "zero of a polynomial" with "the number zero".</p>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label">Solved Example 8 <span class="tag-style">CBSE Exam-Style Question</span></div>
+          <p><strong>Given.</strong> \(x^2 + 5x + 6\).</p>
+          <p><strong>Working.</strong> \((x + 2)(x + 3) = 0\), so the zeroes are \(-2\) and \(-3\).</p>
+          <p><strong>Answer + Interpretation.</strong> Both zeroes are negative. Sum \(= -5 = -\dfrac{b}{a}\) âœ”; product \(= 6 = \dfrac{c}{a}\) âœ”.</p>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label">Solved Example 9</div>
+          <p><strong>Given.</strong> \(3x^2 - x - 4\).</p>
+          <p><strong>Method.</strong> Product \(ac = -12\), sum \(-1\) â†’ numbers \(-4\) and \(3\).</p>
+          <p><strong>Working.</strong> \(3x^2 - 4x + 3x - 4 = x(3x - 4) + 1(3x - 4) = (3x - 4)(x + 1)\). Zeroes \(\dfrac{4}{3}\) and \(-1\).</p>
+          <p><strong>Answer + Interpretation.</strong> Sum \(= \dfrac{1}{3}\) matches \(-\dfrac{b}{a} = \dfrac{1}{3}\) âœ”; product \(= -\dfrac{4}{3} = \dfrac{c}{a}\) âœ”.</p>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label">Solved Example 10 <span class="tag-style">CBSE Exam-Style Question</span></div>
+          <p><strong>Given.</strong> \(p(x) = x^2 + 7x + 12\).</p>
+          <p><strong>Method.</strong> Use the relationships directly, then confirm by factorising.</p>
+          <p><strong>Working.</strong> Sum \(= -7\), product \(= 12\). Factorising \(x^2 + 7x + 12 = (x + 3)(x + 4)\) gives zeroes \(-3, -4\), whose sum is \(-7\) and product is 12 â€” consistent. âœ”</p>
+          <p><strong>Answer.</strong> Sum \(= -7\), product \(= 12\).</p>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label">Solved Example 11</div>
+          <p><strong>Given.</strong> \(\alpha\), \(\beta\) are the zeroes of \(x^2 - 4x + 1\).</p>
+          <p><strong>Working.</strong> Sum \(= 4\), product \(= 1\). Then \(\alpha^2 + \beta^2 = (\alpha + \beta)^2 - 2\alpha\beta = 16 - 2 = 14\).</p>
+          <p><strong>Answer.</strong> \(\alpha + \beta = 4\), \(\alpha\beta = 1\), \(\alpha^2 + \beta^2 = 14\).</p>
+        </div>
+
+        <h3>Application / Competency</h3>
+
+        <div class="solved-box">
+          <div class="s-label">Solved Example 12 <span class="tag-style">CBSE Exam-Style Question</span></div>
+          <p><strong>Given.</strong> Zeroes 3 and \(-5\).</p>
+          <p><strong>Method.</strong> Form the polynomial from the zeroes.</p>
+          <p><strong>Working.</strong> Sum \(= 3 + (-5) = -2\); product \(= 3(-5) = -15\). Polynomial \(= x^2 - (-2)x + (-15) = x^2 + 2x - 15\).</p>
+          <p><strong>Answer + Interpretation.</strong> \(x^2 + 2x - 15 = (x - 3)(x + 5)\), whose zeroes are indeed 3 and \(-5\). âœ”</p>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label">Solved Example 13 â€” area and dimensions</div>
+          <p><strong>Given.</strong> Area \(x^2 + 7x + 12\) with one side \((x + 3)\).</p>
+          <p><strong>Method.</strong> Other side = area Ã· given side.</p>
+          <p><strong>Working.</strong> \((x + 3)(x + 4) = x^2 + 7x + 12\).</p>
+          <p><strong>Answer + Interpretation.</strong> The other side is \((x + 4)\); both sides are positive for \(x > 0\).</p>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label">Solved Example 14 â€” fractions</div>
+          <p><strong>Given.</strong> Sum of zeroes \(\dfrac{5}{3}\), product \(\dfrac{2}{3}\).</p>
+          <p><strong>Working.</strong> \(x^2 - \dfrac{5}{3}x + \dfrac{2}{3}\), then multiply by 3: \(3x^2 - 5x + 2\).</p>
+          <p><strong>Answer + Interpretation.</strong> \((x - 1)(3x - 2)\) gives zeroes \(1\) and \(\dfrac{2}{3}\), whose sum and product match. âœ”</p>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label">Solved Example 15 â€” identify the error</div>
+          <p><strong>Given.</strong> A student claims the zeroes of \(x^2 - 6x + 8\) are 2 and 3.</p>
+          <p><strong>Working.</strong> Product of the claimed zeroes \(= 6\), but the product rule gives \(8\). Correct factorisation: \((x - 2)(x - 4)\), zeroes 2 and 4.</p>
+          <p><strong>Answer.</strong> The claim is wrong â€” the zeroes are 2 and 4. The sum (6) matched, but the product rule caught the error.</p>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label">Solved Example 16 â€” consecutive numbers</div>
+          <p><strong>Given.</strong> Product of two consecutive odd positive integers is 195.</p>
+          <p><strong>Working.</strong> Let them be \(x\) and \(x + 2\). Then \(x(x + 2) = 195 \Rightarrow x^2 + 2x - 195 = 0 \Rightarrow (x + 15)(x - 13) = 0\). Positive integer solution: \(x = 13\).</p>
+          <p><strong>Answer + Interpretation.</strong> The integers are 13 and 15. (Check \(13 \times 15 = 195\). âœ”)</p>
+        </div>
+
+        <h3>Case-based</h3>
+
+        <div class="solved-box">
+          <div class="s-label">Solved Example 17 â€” garden area</div>
+          <p><strong>Given.</strong> Rectangular garden, area \(x^2 + 5x + 6\), breadth \((x + 2)\).</p>
+          <p><strong>Working.</strong> Length \(= x + 3\). At \(x = 5\): area \(= 25 + 25 + 6 = 56\) mÂ² (length 8, breadth 7). Zeroes of the area polynomial: \((x + 2)(x + 3) = 0\) gives \(-2, -3\).</p>
+          <p><strong>Answer + Interpretation.</strong> Both zeroes are negative, so the area cannot be zero for a real garden with \(x > 0\). Sum \(= -5 = -\dfrac{b}{a}\) âœ”; product \(= 6 = \dfrac{c}{a}\) âœ”.</p>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label">Solved Example 18 â€” seating</div>
+          <p><strong>Given.</strong> Rows \(= x\), benches per row \(= x + 4\), total \(x^2 + 4x\).</p>
+          <p><strong>Working.</strong> Zeroes: \(x = 0, -4\). For 60 benches: \(x^2 + 4x = 60 \Rightarrow (x + 10)(x - 6) = 0 \Rightarrow x = 6\).</p>
+          <p><strong>Answer + Interpretation.</strong> 6 rows with 10 benches per row gives 60 benches. The zero \(-4\) is not meaningful (negative rows).</p>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label">Solved Example 19 â€” sports ground</div>
+          <p><strong>Given.</strong> Length \((x + 5)\), breadth \((x + 2)\), area \(x^2 + 7x + 10\).</p>
+          <p><strong>Working.</strong> Zeroes \(-5, -2\). At \(x = 8\): length 13, breadth 10, area \(= 64 + 56 + 10 = 130\) mÂ².</p>
+          <p><strong>Answer + Interpretation.</strong> Sum \(= -7 = -\dfrac{b}{a}\) âœ”; product \(= 10 = \dfrac{c}{a}\) âœ”. The negative zeroes signal that the model is only meaningful for positive \(x\).</p>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label">Solved Example 20 â€” revenue model</div>
+          <p><strong>Given.</strong> \(R(x) = 600x - 100x^2\).</p>
+          <p><strong>Working.</strong> \(100x(6 - x) = 0\) gives zeroes 0 and 6. Here \(a = -100\), \(b = 600\), \(c = 0\). Sum \(= 6 = -\dfrac{600}{-100}\) âœ”; product \(= 0\) âœ”.</p>
+          <p><strong>Answer + Interpretation.</strong> Revenue is zero at 0 and at 6 units; it is positive between them, which is the feasible business range.</p>
+        </div>
+      </section>
+
+      <section id="formulae">
+        <h2>12. Important Formulae</h2>
+        <p>For a quadratic polynomial \(ax^2 + bx + c\) with zeroes \(\alpha\) and \(\beta\):</p>
+        <div class="result-box">
+          <div class="box-label">Zeroes â€“ coefficients relationships</div>
+          <p>\[\alpha + \beta = -\frac{b}{a}\]</p>
+          <p>\[\alpha \beta = \frac{c}{a}\]</p>
+        </div>
+        <div class="result-box">
+          <div class="box-label">Polynomial from given zeroes</div>
+          <p>\[p(x) = x^2 - (\alpha + \beta)x + \alpha\beta\]</p>
+        </div>
+        <div class="warn-box">
+          <div class="box-label">Warning</div>
+          <p><strong>Always identify \(a\), \(b\), and \(c\) correctly before applying the formula.</strong> Put every polynomial in standard form \(ax^2 + bx + c\) first, keep the signs of \(b\) and \(c\), and never drop the \(a\) in the denominator.</p>
+        </div>
+      </section>
+
+      <section id="mistakes">
+        <h2>13. Common Exam Mistakes</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Common mistake</th><th>Correct method</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Writing the sum of zeroes as \(+\dfrac{b}{a}\) (sign error)</td><td>Sum of zeroes is always \(-\dfrac{b}{a}\)</td></tr>
+              <tr><td>Writing the sum without dividing by \(a\), e.g. sum \(= -7\) for \(2x^2 + 7x - 4\)</td><td>\(-\dfrac{b}{a} = -\dfrac{7}{2}\)</td></tr>
+              <tr><td>Writing product as \(c\) instead of \(\dfrac{c}{a}\), e.g. product \(= -4\) for \(2x^2 + 7x - 4\)</td><td>Product \(= \dfrac{c}{a} = \dfrac{-4}{2} = -2\)</td></tr>
+              <tr><td>Confusing sum and product when forming the polynomial</td><td>Use \(x^2 - (\text{sum})x + \text{product}\); double-check by expanding</td></tr>
+              <tr><td>Incorrect factorisation when splitting the middle term</td><td>Find two numbers with product \(ac\) and sum \(b\), never with product \(c\) alone</td></tr>
+              <tr><td>Incorrect expansion, e.g. \((x - 3)(x + 5) = x^2 - 15\)</td><td>Expand fully: \(x^2 + 5x - 3x - 15 = x^2 + 2x - 15\)</td></tr>
+              <tr><td>Calling a computed value like \(p(0)\) "the zero"</td><td>The zero is the input \(k\) for which \(p(k) = 0\)</td></tr>
+              <tr><td>Reading "graph touches the x-axis at one point" as "one zero"</td><td>It means two equal real zeroes, not one zero</td></tr>
+              <tr><td>Arithmetic slips with negatives, e.g. \(\alpha + \beta\) for zeroes \(-2, -5\)</td><td>Compute carefully: \(-2 + (-5) = -7\)</td></tr>
+              <tr><td>Forgetting to verify zeroes</td><td>Always check \(p(k) = 0\) and the sum/product rules</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="warn-box">
+          <div class="box-label">Common mistake â†’ correct method</div>
+          <p>For \(2x^2 + 7x - 4\), the sum of zeroes is <strong>\(-\dfrac{7}{2}\)</strong> and the product is <strong>\(-2\)</strong> (not \(7/2\) and not \(-4\)). Take \(a = 2\), \(b = 7\), \(c = -4\) and apply both formulae with the signs intact.</p>
+        </div>
+      </section>
+
+      <section id="exam-tips">
+        <h2>14. CBSE Exam Tips</h2>
+        <ul>
+          <li>Write the polynomial in standard form \(ax^2 + bx + c\) before identifying coefficients.</li>
+          <li>Identify \(a\), \(b\), \(c\) carefully â€” especially the signs of \(b\) and \(c\), and the fact that \(a\) sits in the denominator.</li>
+          <li>Show the factorisation steps. Marker-wise, the splitting of the middle term earns marks.</li>
+          <li>Verify answers where possible: substitute the zeroes and check the sum and product.</li>
+          <li>Use correct notation â€” \(p(x)\), "zeroes of \(p(x)\)", and the set of zeroes like \(\{2, 3\}\).</li>
+          <li>For case-based questions, read the situation carefully before calculating.</li>
+          <li>Do not assume every quadratic has two distinct real zeroes.</li>
+          <li>In application questions, interpret the mathematical answer in the context â€” discard negative or impossible values (rows, lengths, prices).</li>
+        </ul>
+      </section>
+
+      <section id="quick-revision">
+        <h2>15. Quick Revision</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Concept</th><th>Key point</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Zero of a polynomial</td><td>\(p(k) = 0\)</td></tr>
+              <tr><td>Linear polynomial</td><td>One zero</td></tr>
+              <tr><td>Quadratic polynomial</td><td>At most two real zeroes</td></tr>
+              <tr><td>Sum of zeroes</td><td>\(-\dfrac{b}{a}\)</td></tr>
+              <tr><td>Product of zeroes</td><td>\(\dfrac{c}{a}\)</td></tr>
+              <tr><td>Polynomial from zeroes</td><td>\(x^2 - (\alpha + \beta)x + \alpha\beta\)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="self-practice">
+        <h2>16. Self-Practice Questions</h2>
+        <p>Twenty-five original questions. Answers are at the end of the page.</p>
+
+        <h3>Conceptual</h3>
+
+        <div class="qbox"><p class="q-label">Q1.</p><p>Write \(x^2 + 5 - 3x\) in standard form and state its degree.</p></div>
+        <div class="qbox"><p class="q-label">Q2.</p><p>Which of the following are <strong>not</strong> polynomials? \(2x + \dfrac{1}{2}\); \(\dfrac{3}{\sqrt{x}}\); \(x^2 - \sqrt{5}x + 2\); \(x^{1/2} + 3\). Give one-line reasons.</p></div>
+        <div class="qbox"><p class="q-label">Q3.</p><p>If \(p(x) = 3x^2 + 2x - 5\), find \(p(0)\) and \(p(-1)\).</p></div>
+        <div class="qbox"><p class="q-label">Q4.</p><p>In the polynomial \(4x^2 - 7x + 9\), write the coefficient of \(x^2\) and the constant term.</p></div>
+        <div class="qbox"><p class="q-label">Q5.</p><p>How many real zeroes does a linear polynomial have?</p></div>
+
+        <h3>Moderate</h3>
+
+        <div class="qbox"><p class="q-label">Q6.</p><p>Find the zeroes of \(x^2 - 9\).</p></div>
+        <div class="qbox"><p class="q-label">Q7.</p><p>Find the zeroes of \(x^2 + 7x + 10\).</p></div>
+        <div class="qbox"><p class="q-label">Q8.</p><p>Find the zeroes of \(6x^2 - x - 2\).</p></div>
+        <div class="qbox"><p class="q-label">Q9.</p><p>For \(2x^2 - 8x + 6\), state the sum and product of the zeroes, then find the zeroes.</p></div>
+        <div class="qbox"><p class="q-label">Q10.</p><p>Find the zeroes of \(4x^2 - 4x + 1\) and verify the relationship with the coefficients.</p></div>
+        <div class="qbox"><p class="q-label">Q11.</p><p>If one zero of \(x^2 - 5x + k\) is 2, find \(k\) and the other zero.</p></div>
+        <div class="qbox"><p class="q-label">Q12.</p><p>Find a quadratic polynomial whose zeroes are 4 and \(-1\).</p></div>
+
+        <h3>Application-Based</h3>
+
+        <div class="qbox"><p class="q-label">Q13.</p><p>A rectangular plot has area \(x^2 + 9x + 14\) sq m and breadth \((x + 2)\) m. Find the polynomial for its length.</p></div>
+        <div class="qbox"><p class="q-label">Q14.</p><p>Rows of chairs number \(x\), with \((x + 5)\) chairs in each row; the total is 36. Form a quadratic and find \(x\).</p></div>
+        <div class="qbox"><p class="q-label">Q15.</p><p>The revenue model \(R(x) = 400x - 2x^2\) becomes zero at what values of \(x\)?</p></div>
+        <div class="qbox"><p class="q-label">Q16.</p><p>The product of two consecutive even positive integers is 168. Form a quadratic polynomial and find the integers.</p></div>
+        <div class="qbox"><p class="q-label">Q17.</p><p>The side of a square is \((2x + 3)\) m. Express its area as a polynomial and find the area when \(x = 2\).</p></div>
+        <div class="qbox"><p class="q-label">Q18.</p><p>A number exceeds another by 4 and their product is 12. Form a quadratic and find the numbers.</p></div>
+
+        <h3>Competency / Reasoning</h3>
+
+        <div class="qbox"><p class="q-label">Q19.</p><p>A student says the zeroes of \(x^2 - 5x + 6\) are \(-2\) and \(-3\). Is the claim correct? Explain using the sum of zeroes.</p></div>
+        <div class="qbox"><p class="q-label">Q20.</p><p>The graph of a quadratic polynomial touches the x-axis at exactly one point. How many real zeroes does it have?</p></div>
+        <div class="qbox"><p class="q-label">Q21.</p><p>A student wrote the sum of the zeroes of \(2x^2 + 7x - 4\) as \(7/2\) and the product as \(4\). Identify both errors.</p></div>
+        <div class="qbox"><p class="q-label">Q22.</p><p>Which polynomial has <strong>equal</strong> real zeroes: \(x^2 - 8x + 16\) or \(x^2 - 5x + 6\)? Justify.</p></div>
+
+        <h3>Case-Based</h3>
+
+        <div class="qbox"><p class="q-label">Q23 â€” Rectangular garden.</p><p>A garden has length \((x + 5)\) m and breadth \((x + 1)\) m, so its area is \(x^2 + 6x + 5\). (i) Find the zeroes of the area polynomial and verify the coefficient relationship. (ii) If the area is 21 mÂ², find \(x\) and the dimensions.</p></div>
+        <div class="qbox"><p class="q-label">Q24 â€” Parking lot.</p><p>A parking area has area \(x^2 + 10x + 24\) sq m and length \((x + 6)\) m. (i) Find the breadth. (ii) Find the zeroes of the area polynomial and explain why neither has a physical meaning here.</p></div>
+        <div class="qbox"><p class="q-label">Q25 â€” Tile pattern.</p><p>The number of tiles in the \(n\)-th figure is \(f(n) = 2n^2 - 5n - 3\). (i) Find the zeroes of \(f(n)\). (ii) Which zero is meaningful for a pattern? (iii) Verify the sum and product of the zeroes.</p></div>
+      </section>
+
+      <section id="answers">
+        <h2>17. Answers</h2>
+
+        <div class="qbox"><p class="q-label">A1.</p><p>Standard form: \(x^2 - 3x + 5\). Degree 2.</p></div>
+        <div class="qbox"><p class="q-label">A2.</p><p>\(\dfrac{3}{\sqrt{x}}\) (exponent \(-\frac{1}{2}\)) and \(x^{1/2} + 3\) (exponent \(\frac{1}{2}\)) are not polynomials. \(2x + \dfrac{1}{2}\) is linear and \(x^2 - \sqrt{5}x + 2\) is quadratic.</p></div>
+        <div class="qbox"><p class="q-label">A3.</p><p>\(p(0) = -5\); \(p(-1) = 3 - 2 - 5 = -4\).</p></div>
+        <div class="qbox"><p class="q-label">A4.</p><p>Coefficient of \(x^2\) is 4; constant term is 9.</p></div>
+        <div class="qbox"><p class="q-label">A5.</p><p>Exactly one real zero.</p></div>
+        <div class="qbox"><p class="q-label">A6.</p><p>\(x^2 - 9 = (x - 3)(x + 3)\), so zeroes are 3 and \(-3\).</p></div>
+        <div class="qbox"><p class="q-label">A7.</p><p>\((x + 5)(x + 2) = 0\), so zeroes are \(-5\) and \(-2\).</p></div>
+        <div class="qbox"><p class="q-label">A8.</p><p>\(6x^2 - x - 2 = (3x - 2)(2x + 1)\), so zeroes are \(\dfrac{2}{3}\) and \(-\dfrac{1}{2}\).</p></div>
+        <div class="qbox"><p class="q-label">A9.</p><p>Sum 4, product 3. \(2x^2 - 8x + 6 = 2(x - 1)(x - 3)\), zeroes 1 and 3.</p></div>
+        <div class="qbox"><p class="q-label">A10.</p><p>\((2x - 1)^2 = 0\), so the two equal real zeroes are \(\dfrac{1}{2}, \dfrac{1}{2}\). Sum 1 = \(-\dfrac{b}{a}\) âœ”; product \(\dfrac{1}{4} = \dfrac{c}{a}\) âœ”.</p></div>
+        <div class="qbox"><p class="q-label">A11.</p><p>\(p(2) = 0 \Rightarrow 4 - 10 + k = 0 \Rightarrow k = 6\). The polynomial is \(x^2 - 5x + 6\), other zero 3.</p></div>
+        <div class="qbox"><p class="q-label">A12.</p><p>Sum 3, product \(-4\), so \(x^2 - 3x - 4\). Check: \((x - 4)(x + 1)\). âœ”</p></div>
+        <div class="qbox"><p class="q-label">A13.</p><p>Length polynomial \(= x + 7\) (since \((x + 2)(x + 7) = x^2 + 9x + 14\)).</p></div>
+        <div class="qbox"><p class="q-label">A14.</p><p>\(x(x + 5) = 36 \Rightarrow x^2 + 5x - 36 = 0 \Rightarrow (x + 9)(x - 4) = 0\). So \(x = 4\) rows (with 9 chairs per row).</p></div>
+        <div class="qbox"><p class="q-label">A15.</p><p>\(400x - 2x^2 = 2x(200 - x) = 0\), so \(x = 0\) or \(x = 200\).</p></div>
+        <div class="qbox"><p class="q-label">A16.</p><p>\(x(x + 2) = 168 \Rightarrow x^2 + 2x - 168 = 0 \Rightarrow (x + 14)(x - 12) = 0\). Positive \(x = 12\); the integers are 12 and 14.</p></div>
+        <div class="qbox"><p class="q-label">A17.</p><p>Area \(= (2x + 3)^2 = 4x^2 + 12x + 9\). At \(x = 2\): \(4(4) + 24 + 9 = 49\) mÂ² (side 7 m).</p></div>
+        <div class="qbox"><p class="q-label">A18.</p><p>\(x(x + 4) = 12 \Rightarrow x^2 + 4x - 12 = 0 \Rightarrow (x + 6)(x - 2) = 0\). Numbers are 2 and 6.</p></div>
+        <div class="qbox"><p class="q-label">A19.</p><p>No. If the zeroes were \(-2\) and \(-3\), their sum would be \(-5\), but \(-\dfrac{b}{a} = 5\). The correct zeroes are 2 and 3.</p></div>
+        <div class="qbox"><p class="q-label">A20.</p><p>Two equal real zeroes â€” the graph meets the x-axis at one point, so the two zeroes coincide.</p></div>
+        <div class="qbox"><p class="q-label">A21.</p><p>Sum should be \(-\dfrac{7}{2}\) (the student missed the negative sign). Product should be \(\dfrac{c}{a} = \dfrac{-4}{2} = -2\) (the student used \(c = 4\) instead of \(\dfrac{c}{a} = -2\)).</p></div>
+        <div class="qbox"><p class="q-label">A22.</p><p>\(x^2 - 8x + 16 = (x - 4)^2\) has the equal real zeroes \(4, 4\). The other factorises as \((x - 2)(x - 3)\) with distinct zeroes 2 and 3.</p></div>
+        <div class="qbox"><p class="q-label">A23.</p><p>(i) \(x^2 + 6x + 5 = (x + 5)(x + 1)\), zeroes \(-5\) and \(-1\). Sum \(-6 = -\dfrac{b}{a}\) âœ”; product 5 = \(\dfrac{c}{a}\) âœ”. (ii) \(x^2 + 6x + 5 = 21 \Rightarrow (x + 8)(x - 2) = 0\), so \(x = 2\); length 7 m, breadth 3 m, area 21 mÂ².</p></div>
+        <div class="qbox"><p class="q-label">A24.</p><p>(i) Breadth \(= x + 4\), since \((x + 6)(x + 4) = x^2 + 10x + 24\). (ii) Zeroes of the area polynomial are \(-6\) and \(-4\); both are negative, while a length or breadth must be positive, so neither zero has physical meaning. The model is valid only for \(x > 0\), where the area is always positive.</p></div>
+        <div class="qbox"><p class="q-label">A25.</p><p>(i) \(2n^2 - 5n - 3 = (2n + 1)(n - 3)\), zeroes \(n = -\dfrac{1}{2}\) and \(n = 3\). (ii) \(n = 3\) is meaningful (a figure number must be a positive integer). (iii) Sum \(= -\dfrac{1}{2} + 3 = \dfrac{5}{2} = -\dfrac{b}{a}\) âœ”; product \(= -\dfrac{3}{2} = \dfrac{c}{a}\) âœ”.</p></div>
+      </section>
+
+    </article>
+
+    <nav class="resource-nav" aria-label="More from this chapter">
+      <a href="/cbse-study-material/class-10/mathematics/polynomials/notes/" class="is-active"><i class="fas fa-book-open"></i> Notes</a>
+      <a href="/cbse-study-material/class-10/mathematics/polynomials/practice-paper/"><i class="fas fa-file-lines"></i> Practice Paper</a>
+      <a href="/cbse-study-material/class-10/mathematics/polynomials/quiz/"><i class="fas fa-bullseye"></i> Quiz</a>
+      <a href="/cbse-study-material/class-10/mathematics/polynomials/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+    </nav>
+
+    <div class="next-chapter">
+      <div>
+        <h3><i class="fas fa-arrow-right"></i> Next: Chapter 3 â€” Pair of Linear Equations in Two Variables</h3>
+        <p>Build on the idea of one-variable expressions to handle equations with two variables.</p>
+      </div>
+      <a class="btn btn-primary" href="/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/">Open Chapter</a>
+    </div>
+
+    <a class="sm-back" href="/cbse-study-material/class-10/mathematics/polynomials/"><i class="fas fa-arrow-left"></i> Back to Polynomials</a>
+    <a class="sm-back" href="/cbse-study-material/class-10/mathematics/" style="margin-left: 12px;"><i class="fas fa-arrow-left"></i> All Mathematics chapters</a>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-about">
+      <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+      <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#courses">Courses</a></li>
+        <li><a href="/cbse-study-material/">Study Material</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Popular Searches</h4>
+      <ul>
+        <li><a href="/cbse-study-material/">CBSE Study Material</a></li>
+        <li><a href="/best-tuition-centre-hulimavu/">Best Tuition Centre in Hulimavu</a></li>
+        <li><a href="/cbse-tuition-hulimavu/">CBSE Tuition in Hulimavu</a></li>
+        <li><a href="/maths-tuition-hulimavu/">Maths Tuition in Hulimavu</a></li>
+        <li><a href="/science-tuition-hulimavu/">Science Tuition in Hulimavu</a></li>
+        <li><a href="/class-10-tuition-hulimavu/">Class 10 Tuition Hulimavu</a></li>
+        <li><a href="/class-12-tuition-hulimavu/">Class 12 Tuition Hulimavu</a></li>
+        <li><a href="/tuition-centre-bangalore/">Best Tuition Centre in Bangalore</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="/cbse-study-material/sm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/supabase-config.js"></script>
+<script src="/supabase-auth.js"></script>
+<script src="/supabase-nav.js" defer></script>
+<script src="/chatbot/chatbot-loader.js" defer></script></body>
+</html>

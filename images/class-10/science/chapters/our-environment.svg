@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 230" role="img" aria-label="Our Environment - food chain sun leaf and consumer">
+  <rect width="400" height="230" fill="#ffffff"/>
+  <line x1="138" y1="100" x2="138" y2="76" stroke="#f9a825" stroke-width="6" stroke-linecap="round"/>
+  <line x1="138" y1="160" x2="138" y2="184" stroke="#f9a825" stroke-width="6" stroke-linecap="round"/>
+  <line x1="112" y1="126" x2="92" y2="108" stroke="#f9a825" stroke-width="6" stroke-linecap="round"/>
+  <line x1="112" y1="134" x2="92" y2="154" stroke="#f9a825" stroke-width="6" stroke-linecap="round"/>
+  <line x1="164" y1="126" x2="184" y2="108" stroke="#f9a825" stroke-width="6" stroke-linecap="round"/>
+  <line x1="164" y1="134" x2="184" y2="154" stroke="#f9a825" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="138" cy="130" r="34" fill="#f9a825"/>
+  <line x1="184" y1="130" x2="216" y2="130" stroke="#1a237e" stroke-width="7" stroke-linecap="round"/>
+  <polygon points="216,130 198,118 198,142" fill="#1a237e"/>
+  <path d="M228 72 C260 92 280 120 282 150 C250 154 230 140 228 72 Z" fill="none" stroke="#1a237e" stroke-width="8" stroke-linejoin="round"/>
+  <line x1="224" y1="124" x2="282" y2="124" stroke="#1a237e" stroke-width="7"/>
+  <line x1="250" y1="104" x2="250" y2="132" stroke="#1a237e" stroke-width="7" stroke-linejoin="round"/>
+  <line x1="290" y1="130" x2="322" y2="130" stroke="#1a237e" stroke-width="7" stroke-linecap="round"/>
+  <polygon points="322,130 304,118 304,142" fill="#1a237e"/>
+  <circle cx="348" cy="130" r="26" fill="none" stroke="#1a237e" stroke-width="8"/>
+  <circle cx="342" cy="124" r="6" fill="#1a237e"/>
+  <circle cx="354" cy="124" r="6" fill="#1a237e"/>
+</svg>

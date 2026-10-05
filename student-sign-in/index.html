@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Sign In | Vyasa Academy</title>
+  <meta name="description" content="Sign in to the Vyasa Academy student portal with your Google account, mobile number, or academy email. Free student account with any Google / Gmail profile.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://www.vyasaacademy.in/student-sign-in/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    /* ============ Premium student sign-in page ============ */
+    .vy-signin-page { background: #f7f5f0; }
+    .vy-signin-page .vy-chat-launcher { display: none !important; }
+
+    .vsi { --navy: #1a237e; --navy-l: #283593; --navy-d: #0d1452; --gold: #f9a825; --gold-l: #ffd54f; --ink: #263238; --mut: #5d6b77; }
+    .vsi * { box-sizing: border-box; }
+
+    .vsi-main { min-height: calc(100vh - 140px); display: flex; }
+    .vsi-col-a, .vsi-col-b { flex: 1 1 50%; }
+    .vsi-col-a {
+      background:
+        radial-gradient(120% 120% at 15% 0%, rgba(255, 213, 79, 0.18) 0%, rgba(255, 213, 79, 0) 42%),
+        radial-gradient(160% 140% at 100% 100%, rgba(40, 53, 147, 0.9) 0%, rgba(13, 20, 82, 0) 55%),
+        linear-gradient(150deg, #1a237e 0%, #283593 55%, #10195f 100%);
+      color: #fff; padding: 72px 56px 56px; position: relative; overflow: hidden;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .vsi-art-wrap { max-width: 520px; margin: 0 auto; width: 100%; }
+
+    .vsi-brand { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: 0.04em; font-size: 0.85rem; }
+    .vsi-brand .dot { width: 30px; height: 30px; border-radius: 10px; background: var(--gold); color: var(--navy-d); display: inline-flex; align-items: center; justify-content: center; font-size: 15px; }
+    .vsi-brandline { margin: 6px 0 2px; font-size: 0.8rem; letter-spacing: 0.32em; color: var(--gold-l); font-weight: 600; }
+
+    .vsi-art-svg { margin-top: 22px; width: 100%; height: auto; display: block; }
+
+    .floats { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+    .floats > span {
+      position: absolute; width: 150px; height: 150px; border-radius: 50%;
+      background: rgba(255, 213, 79, 0.07); filter: blur(4px);
+      animation: vsi-drift 14s ease-in-out infinite alternate;
+    }
+    .floats > span:nth-child(2) { width: 210px; height: 210px; right: -40px; bottom: 8%; background: rgba(255, 213, 79, 0.05); animation-duration: 18s; }
+
+    .vsi-checklist { margin-top: 26px; display: grid; gap: 13px; max-width: 420px; }
+    .vsi-checklist > div { display: flex; gap: 13px; align-items: flex-start; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.10); border-radius: 14px; padding: 12px 14px; }
+    .vsi-checklist i { color: var(--gold); margin-top: 2px; font-size: 0.95rem; }
+    .vsi-checklist b { display: block; font-size: 0.93rem; font-weight: 600; }
+    .vsi-checklist p { margin: 2px 0 0; font-size: 0.8rem; line-height: 1.45; color: rgba(255,255,255,0.82); }
+
+    .vsi-col-b { display: flex; align-items: center; justify-content: center; padding: 56px 24px; }
+    .vsi-card {
+      width: 100%; max-width: 440px; background: #fff; border-radius: 24px;
+      padding: 36px 34px 30px; color: var(--ink);
+      box-shadow: 0 30px 70px rgba(26, 35, 126, 0.14), 0 4px 16px rgba(13, 20, 82, 0.06);
+      animation: vsi-rise 0.55s ease-out both;
+    }
+    .vsi-eyebrow { font-size: 0.72rem; letter-spacing: 0.3em; color: var(--navy); font-weight: 700; margin-bottom: 8px; }
+    .vsi-h1 { font-family: 'Playfair Display', serif; font-size: 1.85rem; line-height: 1.2; color: var(--navy-d); margin: 0 0 8px; }
+    .vsi-sub { color: var(--mut); font-size: 0.95rem; line-height: 1.55; margin: 0 0 20px; }
+
+    .vsi-banner, .vsi-err, .vsi-ok { border-radius: 12px; padding: 11px 14px; font-size: 0.86rem; line-height: 1.5; margin-bottom: 14px; }
+    .vsi-banner { background: #fff8e1; color: #7a5b00; border: 1px solid #ffe082; }
+    .vsi-err { background: #fdecea; color: #9a2f1f; border: 1px solid #ffcdd2; }
+    .vsi-ok { background: #e8f5e9; color: #1b5e20; border: 1px solid #a5d6a7; }
+
+    .vsi-google {
+      width: 100%; display: flex; align-items: center; justify-content: center; gap: 12px;
+      border: 1px solid #d9dee3; background: #fff; border-radius: 999px;
+      padding: 13px 18px; font-weight: 600; font-size: 0.95rem; color: #23272b; cursor: pointer;
+      transition: box-shadow 0.2s ease, transform 0.18s ease, background 0.2s ease;
+      font-family: inherit;
+    }
+    .vsi-google svg { width: 20px; height: 20px; flex: 0 0 auto; }
+    .vsi-google:hover { box-shadow: 0 6px 18px rgba(26, 35, 126, 0.14); transform: translateY(-1px); background: #fbfcfd; }
+    .vsi-google:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+    .vsi-google:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+    .vsi-note { margin: 11px 0 2px; text-align: center; font-size: 0.8rem; color: var(--mut); line-height: 1.5; }
+    .vsi-divider { display: flex; align-items: center; gap: 12px; color: #98a2ab; font-size: 0.76rem; margin: 18px 0 14px; text-transform: uppercase; letter-spacing: 0.12em; }
+    .vsi-divider::before, .vsi-divider::after { content: ""; flex: 1; height: 1px; background: #e6e9ed; }
+
+    .vsi-stack { display: grid; gap: 10px; }
+    .vsi-alt {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      border: 1px solid #d9dee3; background: #fff; border-radius: 14px; padding: 12px 16px;
+      font-weight: 500; font-size: 0.9rem; color: var(--navy); cursor: pointer; transition: background 0.2s, border-color 0.2s; font-family: inherit;
+    }
+    .vsi-alt:hover { background: #f3f5ff; border-color: #c3cef5; }
+    .vsi-alt:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+    .vsi-panel { margin-top: 14px; background: #f7f9fc; border: 1px solid #e3e8ef; border-radius: 16px; padding: 18px; }
+    .vsi-form .auth-field + .auth-field, .vsi-form > .auth-field { margin-top: 0; }
+    .vsi-inline-tip { font-size: 0.8rem; color: var(--mut); margin: 6px 0 0; }
+
+    .vsi-create { margin-top: 22px; border-top: 1px dashed #dfe3e9; padding-top: 18px; text-align: center; }
+    .vsi-create p { margin: 0 0 10px; font-size: 0.86rem; color: var(--mut); }
+    .vsi-create-btn {
+      width: 100%; border: none; border-radius: 999px; padding: 13px 18px; cursor: pointer;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-l) 100%);
+      color: #fff; font-weight: 700; font-size: 0.95rem; font-family: inherit; letter-spacing: 0.01em;
+      transition: box-shadow 0.2s ease, transform 0.18s ease, filter 0.2s ease;
+    }
+    .vsi-create-btn:hover { box-shadow: 0 10px 24px rgba(26, 35, 126, 0.28); transform: translateY(-1px); filter: brightness(1.05); }
+    .vsi-create-btn:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+    .vsi-create-caption { margin-top: 9px; font-size: 0.78rem; color: #8a95a0; }
+
+    .vsi-consent { margin: 14px 0 0; font-size: 0.74rem; line-height: 1.55; color: #8a95a0; text-align: center; }
+
+    .vsi-guru {
+      margin-top: 14px; width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      background: transparent; border: none; font-size: 0.84rem; font-weight: 600; color: var(--navy);
+      cursor: pointer; padding: 8px 12px; border-radius: 999px; transition: background 0.2s; font-family: inherit;
+    }
+    .vsi-guru:hover { background: #eef1ff; }
+    .vsi-guru:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+    .vsi-home { display: inline-flex; gap: 7px; margin-top: 8px; font-size: 0.82rem; color: var(--mut); text-decoration: none; align-items: center; }
+    .vsi-home:hover { color: var(--navy); text-decoration: underline; }
+
+    /* Feature strip */
+    .vsi-strip { background: #fff; border-top: 1px solid #e7e9ee; padding: 40px 24px 48px; }
+    .vsi-strip h2 { text-align: center; font-size: 0.74rem; letter-spacing: 0.34em; color: var(--gold, #f9a825); margin: 0 0 26px; font-weight: 700; }
+    .vsi-tiles { max-width: 1040px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .vsi-tile {
+      display: flex; gap: 13px; align-items: flex-start; text-decoration: none; color: var(--ink);
+      background: #f6f7fb; border: 1px solid #eef0f6; border-radius: 16px; padding: 16px; transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .vsi-tile:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(26, 35, 126, 0.12); }
+    .vsi-tile:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+    .vsi-tile .t-ic { flex: 0 0 auto; width: 42px; height: 42px; border-radius: 12px; background: #e9edff; color: var(--navy); display: flex; align-items: center; justify-content: center; font-size: 1rem; }
+    .vsi-tile b { display: block; font-size: 0.9rem; }
+    .vsi-tile span { font-size: 0.76rem; color: var(--mut); line-height: 1.45; display: block; margin-top: 2px; }
+
+    @keyframes vsi-drift { from { transform: translate(0, 0) } to { transform: translate(-18px, 26px) } }
+    @keyframes vsi-rise { from { opacity: 0; transform: translateY(14px) } to { opacity: 1; transform: translateY(0) } }
+
+    @media (max-width: 920px) {
+      .vsi-main { flex-direction: column; }
+      .vsi-col-a { padding: 36px 22px 30px; }
+      .vsi-art-svg { max-height: 210px; width: auto; margin: 18px auto 0; }
+      .vsi-checklist { grid-template-columns: 1fr 1fr; max-width: none; }
+      .vsi-col-b { padding: 30px 16px 40px; }
+      .vsi-card { padding: 30px 22px 26px; }
+      .vsi-tiles { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 430px) {
+      .vsi-main { min-height: 0; }
+      .vsi-col-b { padding: 22px 12px 34px; }
+      .vsi-card { padding: 26px 18px 24px; border-radius: 20px; }
+      .vsi-h1 { font-size: 1.6rem; }
+      .vsi-checklist { grid-template-columns: 1fr; }
+      .vsi-tiles { grid-template-columns: 1fr; }
+      .floats { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .vsi-card, .floats > span { animation: none !important; }
+      .vsi-google, .vsi-create-btn, .vsi-tile { transition: none !important; transform: none !important; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body class="vy-signin-page">
+  <a class="skip-link" href="#vsiMain" style="position:absolute;left:-9999px;top:0;background:#1a237e;color:#fff;padding:10px 16px;z-index:9999;border-radius:0 0 10px 0;">Skip to content</a>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="authNavbar" aria-label="Primary">
+    <div class="container nav-container">
+      <a href="/" class="logo"><i class="fas fa-graduation-cap"></i><span>Vyasa Academy</span></a>
+      <ul class="nav-links" id="authNavLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/cbse-study-material/">Study Material</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="authHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <main class="vsi vsi-main" id="vsiMain">
+    <!-- Art / brand panel -->
+    <section class="vsi-col-a" aria-label="Why study with Vyasa Academy">
+      <div class="floats" aria-hidden="true"><span></span><span></span></div>
+      <div class="vsi-art-wrap">
+        <div class="vsi-brandline">LEARN &bullet; UNDERSTAND &bullet; EXCEL</div>
+        <div class="vsi-brand"><span class="dot" aria-hidden="true"><i class="fas fa-graduation-cap"></i></span> Vyasa Academy</div>
+
+        <svg class="vsi-art-svg" viewBox="0 0 480 260" role="img" aria-label="Illustration of a student learning with books, formulas and science symbols">
+          <defs>
+            <linearGradient id="vsiSky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#ffd54f" stop-opacity="0.22"/>
+              <stop offset="1" stop-color="#ffd54f" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="vsiBook" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#3949ab"/>
+              <stop offset="1" stop-color="#1a237e"/>
+            </linearGradient>
+          </defs>
+          <rect width="480" height="260" fill="url(#vsiSky)" rx="22"/>
+          <circle cx="392" cy="46" r="7" fill="#ffd54f"/>
+          <circle cx="416" cy="82" r="4" fill="#ffd54f" opacity="0.7"/>
+          <circle cx="60" cy="50" r="5" fill="#ffd54f" opacity="0.6"/>
+          <circle cx="90" cy="96" r="3" fill="#ffd54f" opacity="0.5"/>
+
+          <text x="52" y="86" font-family="Georgia, serif" font-size="30" font-style="italic" fill="#bfd0ff" opacity="0.9">&#960;</text>
+          <text x="118" y="90" font-family="Georgia, serif" font-size="34" fill="#bfd0ff" opacity="0.9">&#931;</text>
+          <text x="168" y="86" font-family="Georgia, serif" font-size="30" fill="#bfd0ff" opacity="0.9">&#8747;</text>
+          <text x="225" y="90" font-family="Georgia, serif" font-size="26" fill="#ffd54f" opacity="0.9">&#8730;</text>
+          <text x="268" y="86" font-family="Georgia, serif" font-size="30" fill="#bfd0ff" opacity="0.9">&#964;</text>
+
+          <g>
+            <rect x="180" y="96" width="120" height="120" rx="18" fill="#ffffff" opacity="0.97"/>
+            <path d="M198 138c0-11 9-20 20-20h8v86h-8c-11 0-20-9-20-20v-46z" fill="url(#vsiBook)"/>
+            <path d="M262 118c11 0 20 9 20 20v46c0 11-9 20-20 20h-8V118h8z" fill="#283593"/>
+            <path d="M240 118v86" stroke="#e0e6f5" stroke-width="2" stroke-dasharray="4 4"/>
+            <circle cx="240" cy="132" r="6" fill="#f9a825"/>
+            <path d="M230 166l14-22 9 10 12-16" fill="none" stroke="#1a237e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="198" y="184" width="8" height="16" rx="2" fill="#ffd54f"/>
+            <rect x="214" y="184" width="8" height="16" rx="2" fill="#ffd54f"/>
+          </g>
+
+          <g>
+            <rect x="326" y="148" width="52" height="56" rx="12" fill="#fff" opacity="0.95"/>
+            <path d="M352 148v56" stroke="#c5cbe0" stroke-width="2.5"/>
+            <path d="M342 158h8M342 166h8M342 174h8" stroke="#3949ab" stroke-width="3" stroke-linecap="round"/>
+            <path d="M362 178l4 9" stroke="#1a237e" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="368" cy="192" r="4" fill="#f9a825"/>
+          </g>
+
+          <g>
+            <path d="M96 152c0-11 9-20 22-20h14v44h-14c-13 0-22-9-22-20v-4z" fill="#283593" opacity="0.9"/>
+            <path d="M132 132c13 0 22 9 22 20v4c0 11-9 20-22 20h-14v-44h14z" fill="#3949ab" opacity="0.95"/>
+            <rect x="110" y="152" width="22" height="40" fill="#fff" opacity="0.92"/>
+            <path d="M116 162l5-8 4 4 5-7" fill="none" stroke="#f9a825" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+
+          <g>
+            <path d="M222 52l10 4 6 20-12 8-12-8 6-20z" fill="#ffd54f"/>
+            <path d="M228 42l10 29" stroke="#1a237e" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="228" cy="40" r="5" fill="#1a237e"/>
+            <path d="M212 16l10 20-17 4 7-24z" fill="#e8b500"/>
+          </g>
+
+          <g opacity="0.9">
+            <circle cx="58" cy="196" r="18" fill="none" stroke="#7fa0ff" stroke-width="2.5" stroke-dasharray="3 4"/>
+            <circle cx="58" cy="196" r="6" fill="#ffd54f"/>
+            <line x1="58" y1="172" x2="58" y2="220" stroke="#7fa0ff" stroke-width="2"/>
+            <line x1="34" y1="196" x2="82" y2="196" stroke="#7fa0ff" stroke-width="2"/>
+          </g>
+        </svg>
+
+        <div class="vsi-checklist">
+          <div><i class="fas fa-book-open" aria-hidden="true"></i><span><b>Chapter-wise study material</b><p>CBSE &amp; ICSE notes for Classes VI to XII.</p></span></div>
+          <div><i class="fas fa-pen-nib" aria-hidden="true"></i><span><b>Practice papers &amp; tests</b><p>Board-style papers with marking schemes.</p></span></div>
+          <div><i class="fas fa-bullseye" aria-hidden="true"></i><span><b>Quizzes &amp; mock exams</b><p>Know your strengths before the boards.</p></span></div>
+          <div><i class="fas fa-chart-line" aria-hidden="true"></i><span><b>Progress dashboard</b><p>Track attendance, results and growth.</p></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sign-in card panel -->
+    <section class="vsi-col-b" aria-label="Student sign in">
+      <div class="vsi-card">
+        <div class="vsi-eyebrow">VYASA ACADEMY</div>
+        <h1 class="vsi-h1">Welcome back, Student! &#128075;</h1>
+        <p class="vsi-sub">Sign in to continue your learning journey with Vyasa Academy.</p>
+
+        <div id="authBanner" class="vsi-banner hidden" role="status"></div>
+        <div id="errBox" class="vsi-err hidden" role="alert"></div>
+        <div id="successBox" class="vsi-ok hidden" role="status"></div>
+
+        <button type="button" class="vsi-google" id="btnGoogle">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.3 6 29.4 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/>
+            <path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.3 6 29.4 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/>
+            <path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.7-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/>
+            <path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.3-2.3 4.3-4.1 5.6l6.2 5.2C40.7 36.6 43.6 31.6 43.6 24c0-1.3-.1-2.6-.4-3.9z"/>
+          </svg>
+          <span>Continue with Google</span>
+        </button>
+        <p class="vsi-note">Students sign in with any Google / Gmail account. Your student profile is created automatically.</p>
+
+        <div class="vsi-divider" aria-hidden="true">or</div>
+
+        <div class="vsi-stack">
+          <button type="button" class="vsi-alt" id="btnPhoneOption"><i class="fas fa-mobile-alt" aria-hidden="true"></i> Continue with Mobile Number</button>
+          <button type="button" class="vsi-alt" id="btnEmailOption"><i class="fas fa-envelope" aria-hidden="true"></i> Continue with Email</button>
+        </div>
+
+        <!-- Phone panel -->
+        <div class="vsi-panel hidden" id="phonePanel">
+          <form id="phoneForm" class="vsi-form" novalidate>
+            <div class="auth-field">
+              <label for="phone">Mobile number</label>
+              <input class="auth-input" id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="10-digit mobile number" required>
+              <p class="auth-hint hidden" id="phoneError"></p>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" id="phoneBtn"><span>Send one-time code</span></button>
+          </form>
+          <div class="hidden" id="otpSection">
+            <div class="auth-field">
+              <label for="otpCode">Enter the code sent to your mobile</label>
+              <input class="auth-input" id="otpCode" name="otpCode" type="text" inputmode="numeric" autocomplete="one-time-code" placeholder="6-digit code" maxlength="6">
+              <p class="auth-hint hidden" id="otpError"></p>
+            </div>
+            <button type="button" class="btn btn-primary btn-block" id="verifyOtpBtn"><span>Verify &amp; sign in</span></button>
+            <p class="auth-hint" id="otpInfo"></p>
+          </div>
+        </div>
+
+        <!-- Email panel -->
+        <div class="vsi-panel hidden" id="emailPanel">
+          <form id="loginForm" class="vsi-form" novalidate>
+            <div class="auth-field">
+              <label for="email">Email address</label>
+              <input class="auth-input" id="email" name="email" type="email" autocomplete="username" inputmode="email" autocapitalize="none" autocorrect="off" spellcheck="false" placeholder="you@example.com" required>
+              <p class="auth-hint hidden" id="emailError">Please enter your email address.</p>
+            </div>
+            <div class="auth-field">
+              <label for="password">Password</label>
+              <div class="password-wrap">
+                <input class="auth-input" id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required>
+                <button type="button" class="password-toggle" id="togglePw" aria-label="Show password"><i class="fas fa-eye"></i></button>
+              </div>
+              <p class="auth-hint hidden" id="pwError">Please enter your password.</p>
+            </div>
+            <div class="auth-check-row">
+              <label class="auth-check">
+                <input type="checkbox" id="remember" checked>
+                <span>Remember me</span>
+              </label>
+              <a href="/forgot-password/" class="auth-link">Forgot password?</a>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" id="loginBtn"><span>Sign in</span></button>
+          </form>
+          <p class="auth-hint vsi-inline-tip">Email &amp; password accounts are created by the academy administration after admission.</p>
+        </div>
+
+        <!-- New students -->
+        <div class="vsi-create">
+          <p>New to Vyasa Academy?</p>
+          <button type="button" class="vsi-create-btn" id="btnCreateStudent"><i class="fas fa-sparkles" aria-hidden="true"></i> Create Student Account</button>
+          <p class="vsi-create-caption">Free account &ndash; created instantly with your Google / Gmail profile.</p>
+        </div>
+
+        <p class="vsi-consent">By continuing, you agree to Vyasa Academy&rsquo;s standard Terms of Service and Privacy Policy.</p>
+
+        <button type="button" class="vsi-guru" id="btnGuru"><span aria-hidden="true">&#10024;</span> Need help signing in? Ask Vyasa Guru</button>
+
+        <a href="/" class="vsi-home"><i class="fas fa-arrow-left" aria-hidden="true"></i> Back to home</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Your learning space -->
+  <section class="vsi-strip" aria-label="Your learning space">
+    <h2>YOUR LEARNING SPACE</h2>
+    <div class="vsi-tiles">
+      <a class="vsi-tile" href="/cbse-study-material/">
+        <span class="t-ic" aria-hidden="true"><i class="fas fa-book-open"></i></span>
+        <span><b>Study Material</b><span>Chapter-wise notes &amp; theory for CBSE Classes VI&ndash;XII.</span></span>
+      </a>
+      <a class="vsi-tile" href="/#papers">
+        <span class="t-ic" aria-hidden="true"><i class="fas fa-file-alt"></i></span>
+        <span><b>Practice Papers</b><span>Board-style papers with marking schemes for every class.</span></span>
+      </a>
+      <a class="vsi-tile" href="/cbse-study-material/">
+        <span class="t-ic" aria-hidden="true"><i class="fas fa-bullseye"></i></span>
+        <span><b>Quizzes &amp; Tests</b><span>Chapter quizzes and timed mock tests that auto-score.</span></span>
+      </a>
+      <a class="vsi-tile" href="/student-dashboard/">
+        <span class="t-ic" aria-hidden="true"><i class="fas fa-chart-line"></i></span>
+        <span><b>Progress Dashboard</b><span>Your results, attendance and growth in one place.</span></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-about">
+        <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+        <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/#hero">Home</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/cbse-study-material/">Study Material</a></li>
+          <li><a href="/#papers">Practice Papers</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Popular Searches</h4>
+        <ul>
+          <li><a href="/best-tuition-centre-hulimavu/">Best Tuition Centre in Hulimavu</a></li>
+          <li><a href="/cbse-tuition-hulimavu/">CBSE Tuition in Hulimavu</a></li>
+          <li><a href="/icse-tuition-hulimavu/">ICSE Tuition Hulimavu</a></li>
+          <li><a href="/class-10-tuition-hulimavu/">Class 10 Tuition Hulimavu</a></li>
+          <li><a href="/tuition-centre-bangalore/">Best Tuition Centre in Bangalore</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/supabase-config.js"></script>
+  <script src="/supabase-auth.js"></script>
+  <script src="/chatbot/chatbot-loader.js" defer></script>
+  <script>
+    (function () {
+      'use strict';
+
+      function nextTarget() {
+        var next = new URLSearchParams(window.location.search).get('next') || '';
+        return (next && next.charAt(0) === '/') ? next : '';
+      }
+
+      /* ---------- Navbar ---------- */
+      var navbar = document.getElementById('authNavbar');
+      var hamburger = document.getElementById('authHamburger');
+      var navLinks = document.getElementById('authNavLinks');
+      hamburger.addEventListener('click', function () {
+        navbar.classList.toggle('open');
+        navLinks.classList.toggle('show');
+      });
+      navLinks.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+          hamburger.classList.remove('open');
+          navLinks.classList.remove('show');
+        }
+      });
+      window.addEventListener('scroll', function () {
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+      });
+
+      var alertBox = document.getElementById('authBanner');
+      var errBox = document.getElementById('errBox');
+      var successBox = document.getElementById('successBox');
+      var btnGoogle = document.getElementById('btnGoogle');
+      var btnCreateStudent = document.getElementById('btnCreateStudent');
+      var btnPhoneOption = document.getElementById('btnPhoneOption');
+      var btnEmailOption = document.getElementById('btnEmailOption');
+      var phonePanel = document.getElementById('phonePanel');
+      var emailPanel = document.getElementById('emailPanel');
+      var googleSpan = btnGoogle.querySelector('span');
+
+      function showError(msg) { errBox.textContent = msg; errBox.classList.remove('hidden'); }
+      function clearError() { errBox.textContent = ''; errBox.classList.add('hidden'); successBox.textContent = ''; successBox.classList.add('hidden'); }
+      function showPanel(el) {
+        var showPhone = (el === phonePanel);
+        phonePanel.classList.toggle('hidden', !showPhone);
+        emailPanel.classList.toggle('hidden', showPhone);
+        clearError();
+      }
+
+      btnPhoneOption.addEventListener('click', function () { showPanel(phonePanel); });
+      btnEmailOption.addEventListener('click', function () { showPanel(emailPanel); });
+
+      function launchGoogle(loadingEl, spanLabel, busyLabel, idleLabel) {
+        clearError();
+        if (!window.VyasaAuth || !window.VyasaAuth.isConfigured()) {
+          showError('Sign in is not configured yet. Please try again shortly.');
+          return;
+        }
+        loadingEl.disabled = true;
+        if (spanLabel) spanLabel.textContent = busyLabel;
+        window.VyasaAuth.signInWithGoogle().then(function (r) {
+          if (r && r.error) {
+            loadingEl.disabled = false;
+            if (spanLabel) spanLabel.textContent = idleLabel;
+            showError('Sign-in could not be completed. Please try again.');
+            return;
+          }
+        }).catch(function () {
+          loadingEl.disabled = false;
+          if (spanLabel) spanLabel.textContent = idleLabel;
+          showError('Sign-in could not be completed. Please try again.');
+        });
+      }
+
+      btnGoogle.addEventListener('click', function () {
+        launchGoogle(btnGoogle, googleSpan, 'Redirecting to Google...', 'Continue with Google');
+      });
+
+      btnCreateStudent.addEventListener('click', function () {
+        launchGoogle(btnCreateStudent, null, null, null);
+      });
+
+      /* ---------- Phone (OTP) ---------- */
+      var phoneForm = document.getElementById('phoneForm');
+      var phone = document.getElementById('phone');
+      var phoneError = document.getElementById('phoneError');
+      var phoneBtn = document.getElementById('phoneBtn');
+      var phoneBtnSpan = phoneBtn.querySelector('span');
+      var otpSection = document.getElementById('otpSection');
+      var otpCode = document.getElementById('otpCode');
+      var otpError = document.getElementById('otpError');
+      var otpInfo = document.getElementById('otpInfo');
+      var verifyOtpBtn = document.getElementById('verifyOtpBtn');
+      var verifyOtpSpan = verifyOtpBtn.querySelector('span');
+      var pendingPhone = null;
+
+      function normalizePhone(v) {
+        var d = v.replace(/[^\d]/g, '');
+        if (d.length === 10) return '91' + d;
+        if (d.length === 12 && d.indexOf('91') === 0) return d;
+        if (d.length === 11 && d.indexOf('0') === 0) return '91' + d.slice(1);
+        return d;
+      }
+
+      phoneForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        clearError();
+        var raw = phone.value.trim();
+        var num = normalizePhone(raw);
+        if (!/^91\d{10}$/.test(num)) {
+          phoneError.textContent = 'Please enter a valid 10-digit mobile number.';
+          phoneError.classList.remove('hidden');
+          return;
+        }
+        phoneError.classList.add('hidden');
+        if (!window.VyasaAuth || !window.VyasaAuth.isConfigured()) {
+          showError('Mobile number sign-in is not set up yet. Please use Google or email.');
+          return;
+        }
+        phoneBtn.disabled = true;
+        phoneBtnSpan.textContent = 'Sending code...';
+        window.VyasaAuth.signInWithPhone('+' + num).then(function (r) {
+          phoneBtn.disabled = false;
+          phoneBtnSpan.textContent = 'Send one-time code';
+          if (r && r.error) {
+            showError('Mobile number sign-in is not set up yet. Please use Google or email.');
+            return;
+          }
+          pendingPhone = '+' + num;
+          otpInfo.textContent = 'We sent a one-time code to the mobile number you entered. Enter it below to finish signing in.';
+          otpSection.classList.remove('hidden');
+          phoneForm.querySelector('button').classList.add('hidden');
+          otpCode.focus();
+        }).catch(function () {
+          phoneBtn.disabled = false;
+          phoneBtnSpan.textContent = 'Send one-time code';
+          showError('Mobile number sign-in is not set up yet. Please use Google or email.');
+        });
+      });
+
+      verifyOtpBtn.addEventListener('click', function () {
+        clearError();
+        var token = otpCode.value.trim();
+        if (!/^\d{6}$/.test(token)) {
+          otpError.textContent = 'Please enter the 6-digit code.';
+          otpError.classList.remove('hidden');
+          return;
+        }
+        otpError.classList.add('hidden');
+        if (!pendingPhone) { showError('Please request a new code and try again.'); return; }
+        verifyOtpSpan.textContent = 'Signing in...';
+        verifyOtpBtn.disabled = true;
+        window.VyasaAuth.getClient().auth.verifyOtp({
+          phone: pendingPhone,
+          token: token,
+          type: 'sms'
+        }).then(function (r) {
+          if (r.error) {
+            verifyOtpSpan.textContent = 'Verify & sign in';
+            verifyOtpBtn.disabled = false;
+            showError('That code is invalid or has expired. Please request a new one.');
+            return;
+          }
+          window.location.replace(nextTarget() || '/student-dashboard/');
+        }).catch(function () {
+          verifyOtpSpan.textContent = 'Verify & sign in';
+          verifyOtpBtn.disabled = false;
+          showError('Sign-in could not be completed. Please try again.');
+        });
+      });
+
+      /* ---------- Email & password (academy-managed accounts) ---------- */
+      var form = document.getElementById('loginForm');
+      var email = document.getElementById('email');
+      var password = document.getElementById('password');
+      var remember = document.getElementById('remember');
+      var togglePw = document.getElementById('togglePw');
+      var btn = document.getElementById('loginBtn');
+      var btnSpan = btn.querySelector('span');
+      var emailError = document.getElementById('emailError');
+      var pwError = document.getElementById('pwError');
+      var icon = togglePw.querySelector('i');
+
+      function setFieldError(input, hint, msg) {
+        input.classList.add('has-error');
+        hint.textContent = msg;
+        hint.classList.remove('hidden');
+      }
+      function clearFieldError(input, hint) {
+        input.classList.remove('has-error');
+        hint.textContent = '';
+        hint.classList.add('hidden');
+      }
+      function setLoading(on) {
+        btn.disabled = on;
+        btnSpan.textContent = on ? 'Signing in...' : 'Sign in';
+        if (on) btn.classList.add('loading');
+        else btn.classList.remove('loading');
+      }
+
+      function validate() {
+        var ok = true;
+        var v = email.value.trim();
+        if (!v) {
+          setFieldError(email, emailError, 'Please enter your email address.');
+          ok = false;
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) {
+          setFieldError(email, emailError, 'Please enter a valid email address.');
+          ok = false;
+        } else {
+          clearFieldError(email, emailError);
+        }
+        if (!password.value) {
+          setFieldError(password, pwError, 'Please enter your password.');
+          ok = false;
+        } else {
+          clearFieldError(password, pwError);
+        }
+        return ok;
+      }
+
+      email.addEventListener('input', function () { clearError(); clearFieldError(email, emailError); });
+      password.addEventListener('input', function () { clearError(); clearFieldError(password, pwError); });
+
+      togglePw.addEventListener('click', function () {
+        var show = password.type === 'password';
+        password.type = show ? 'text' : 'password';
+        icon.className = show ? 'fas fa-eye-slash' : 'fas fa-eye';
+        togglePw.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
+      });
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        clearError();
+        if (!validate()) return;
+        if (!window.VyasaAuth.isConfigured()) {
+          showError('Login is not configured yet. Please contact the academy administration.');
+          return;
+        }
+        setLoading(true);
+        var storage = remember.checked ? window.localStorage : window.sessionStorage;
+        var emailLower = email.value.trim().toLowerCase();
+        window.VyasaAuth.getClient(storage).auth
+          .signInWithPassword({ email: emailLower, password: password.value })
+          .then(function (r) {
+            if (r.error) throw r.error;
+            return window.VyasaAuth.fetchProfile();
+          })
+          .then(function (profile) {
+            if (!profile || !window.VyasaAuth.dashFor(profile.role)) {
+              return window.VyasaAuth.getClient(storage).auth.signOut().then(function () {
+                setLoading(false);
+                showError('Your account is not fully set up. Please contact the academy administration.');
+              });
+            }
+            window.location.replace(nextTarget() || window.VyasaAuth.dashFor(profile.role));
+          })
+          .catch(function (err) {
+            setLoading(false);
+            if (!navigator.onLine || (err && err.status === 0)) {
+              showError('Unable to connect. Please check your internet connection.');
+            } else {
+              showError('Incorrect email or password. Please try again.');
+            }
+          });
+      });
+
+      /* ---------- Vyasa Guru ---------- */
+      document.getElementById('btnGuru').addEventListener('click', function () {
+        if (window.VyasaAssistant && window.VyasaAssistant.open) window.VyasaAssistant.open();
+      });
+
+      /* ---------- Signed-in visitors ---------- */
+      function autoRedirectSignedIn() {
+        window.VyasaAuth.currentUser().then(function (user) {
+          if (!user) return;
+          return window.VyasaAuth.fetchProfile().then(function (profile) {
+            if (!profile || !window.VyasaAuth.dashFor(profile.role)) return;
+            window.location.replace(nextTarget() || window.VyasaAuth.dashFor(profile.role));
+          });
+        }).catch(function () { /* fall through */ });
+      }
+
+      if (!window.VyasaAuth.isConfigured()) {
+        window.VyasaAuth.showNotConfigured(alertBox);
+      } else {
+        autoRedirectSignedIn();
+      }
+    })();
+  </script>
+</body>
+</html>

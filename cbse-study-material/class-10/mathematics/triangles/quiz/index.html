@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CBSE Class 10 Maths Triangles Quiz | Chapter 6 | Vyasa Academy</title>
+  <meta name="description" content="Practice CBSE Class 10 Maths Triangles with 20 original MCQs on triangle similarity, the Basic Proportionality Theorem, the ratio of areas and real-life applications." />
+  <link rel="canonical" href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/triangles/quiz/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vyasa Academy" />
+  <meta property="og:title" content="CBSE Class 10 Maths Triangles Quiz | Chapter 6 | Vyasa Academy" />
+  <meta property="og:description" content="Practice CBSE Class 10 Maths Triangles with 20 original MCQs on triangle similarity, the Basic Proportionality Theorem, the ratio of areas and real-life applications." />
+  <meta property="og:url" content="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/triangles/quiz/" />
+  <meta property="og:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CBSE Class 10 Maths Triangles Quiz | Chapter 6 | Vyasa Academy" />
+  <meta name="twitter:description" content="Practice CBSE Class 10 Maths Triangles with 20 original MCQs on triangle similarity, the Basic Proportionality Theorem, the ratio of areas and real-life applications." />
+  <meta name="twitter:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","itemListElement":[{"position":1,"name":"Home","item":"https://www.vyasaacademy.in/","@type":"ListItem"},{"position":2,"name":"CBSE Study Material","item":"https://www.vyasaacademy.in/cbse-study-material/","@type":"ListItem"},{"position":3,"name":"Class 10","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/","@type":"ListItem"},{"position":4,"name":"Mathematics","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/","@type":"ListItem"},{"position":5,"name":"Triangles","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/triangles/","@type":"ListItem"},{"position":6,"name":"Quiz","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/triangles/quiz/","@type":"ListItem"}],"@type":"BreadcrumbList"}
+  </script>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+      processEscapes: true
+    }
+  };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <style>
+  .quiz-app { }
+  .quiz-facts { display: flex; flex-wrap: wrap; gap: 10px; margin: 4px 0 16px; }
+  .qf-chip { flex: 1 1 auto; min-width: 120px; border: 1px solid #e5e7eb; border-radius: 10px; padding: 10px 12px; background: #fff; }
+  .qf-chip .qf-n { font-size: 1.35rem; font-weight: 800; color: var(--primary); }
+  .qf-chip .qf-l { font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; color: var(--gray); }
+
+  .quiz-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin: 6px 0 14px; }
+  .quiz-progress-wrap { flex: 1 1 100%; }
+  .quiz-counter { font-weight: 800; color: var(--primary); }
+  .quiz-timer { display: inline-flex; align-items: center; gap: 8px; background: #eff6ff; border: 1px solid #bfdbfe; color: #1d4ed8; border-radius: 999px; padding: 6px 14px; font-weight: 700; }
+  .quiz-timer.warn { background: #fefce8; border-color: #fde68a; color: #a16207; }
+  .quiz-timer.danger { background: #fef2f2; border-color: #fecaca; color: #b91c1c; }
+  .progress-track { height: 12px; background: #e5e7eb; border-radius: 999px; overflow: hidden; }
+  .progress-fill { height: 100%; width: 5%; background: var(--primary); border-radius: 999px; transition: width 0.25s ease; }
+
+  .quiz-q { display: none; border: 1px solid #e5e7eb; border-radius: var(--radius); padding: 20px 22px; margin: 0 0 18px; }
+  .quiz-q.is-active { display: block; }
+  .quiz-q legend, .q-num { font-weight: 800; color: var(--primary); }
+  .quiz-q .q-diff { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; color: var(--gray); margin-left: 8px; }
+  .quiz-q .q-text { font-size: 1.06rem; font-weight: 600; margin: 8px 0 8px; color: var(--dark); }
+
+  .q-meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 12px; }
+  .q-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 0.74rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.4px; padding: 4px 12px; border-radius: 999px; }
+  .q-badge.pyq { background: #dcfce7; color: #15803d; border: 1px solid #86efac; }
+  .q-badge.original { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
+  .q-topic { font-size: 0.74rem; font-weight: 700; padding: 4px 12px; border-radius: 999px; background: #f3f4f6; color: #374151; border: 1px solid #e5e7eb; text-transform: uppercase; letter-spacing: 0.4px; }
+
+  .q-fig { margin: 6px 0 12px; }
+  .q-fig svg { max-width: 280px; width: 100%; height: auto; border: 1px solid #e5e7eb; border-radius: 10px; background: #fff; }
+  .q-fig figcaption { font-size: 0.85rem; color: var(--gray); margin-top: 4px; }
+
+  .opt { display: flex; align-items: flex-start; gap: 10px; border: 1px solid #e5e7eb; border-radius: 10px; padding: 12px 14px; margin: 8px 0; cursor: pointer; transition: var(--transition); background: #fff; }
+  .opt:hover { border-color: var(--primary); background: #eef2ff; }
+  .opt input { position: absolute; opacity: 0; pointer-events: none; }
+  .opt .opt-radio { flex-shrink: 0; width: 20px; height: 20px; margin-top: 2px; border: 2px solid #9ca3af; border-radius: 50%; position: relative; }
+  .opt input:focus-visible + .opt-radio { outline: 3px solid #fbbf24; outline-offset: 2px; }
+  .opt input:checked + .opt-radio { border-color: var(--primary); }
+  .opt input:checked + .opt-radio::after { content: ""; position: absolute; inset: 3px; background: var(--primary); border-radius: 50%; }
+  .opt .opt-key { flex-shrink: 0; font-weight: 800; color: var(--primary); width: 22px; }
+  .opt .opt-val { flex: 1; }
+
+  .opt.answered-correct { border-color: #16a34a; background: #f0fdf4; }
+  .opt.answered-wrong { border-color: #dc2626; background: #fef2f2; }
+
+  .quiz-controls { display: flex; flex-wrap: wrap; gap: 10px; margin: 8px 0 4px; }
+  .quiz-controls button, .quiz-actions button { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 22px; border-radius: var(--radius); border: 2px solid var(--primary); background: var(--primary); color: #fff; font-family: inherit; font-weight: 700; font-size: 0.97rem; cursor: pointer; transition: var(--transition); }
+  .quiz-controls button.secondary, .quiz-actions button.secondary { background: #fff; color: var(--primary); }
+  .quiz-controls button:disabled { opacity: 0.45; cursor: not-allowed; }
+  .quiz-controls button:focus-visible, .quiz-actions button:focus-visible { outline: 3px solid #fbbf24; outline-offset: 2px; }
+  .quiz-controls button.marked, .quiz-actions button.marked { background: #fff7ed; color: #c2410c; border-color: #fb923c; }
+
+  .quiz-nav-wrap { border: 1px solid #e5e7eb; border-radius: var(--radius); padding: 14px 16px; margin: 0 0 18px; background: #fafafa; }
+  .quiz-nav-wrap h3 { margin: 0 0 6px; font-size: 0.95rem; }
+  .quiz-nav { display: grid; grid-template-columns: repeat(10, 1fr); gap: 8px; }
+  .quiz-nav button { min-height: 38px; border: 2px solid #e5e7eb; border-radius: 8px; background: #fff; font-family: inherit; font-weight: 700; color: var(--dark); cursor: pointer; font-size: 0.9rem; transition: var(--transition); }
+  .quiz-nav button:hover { border-color: var(--primary); }
+  .quiz-nav button.nav-current { border-color: var(--primary); background: var(--primary); color: #fff; }
+  .quiz-nav button.nav-answered { background: #ecfdf5; border-color: #6ee7b7; color: #047857; }
+  .quiz-nav button.nav-answered.nav-current { background: var(--primary); border-color: var(--primary); color: #fff; }
+  .quiz-nav button.nav-reviewed { box-shadow: inset 0 0 0 2px #fb923c; }
+  .quiz-nav-legend { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 10px; font-size: 0.82rem; color: var(--gray); }
+  .quiz-nav-legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .legend-dot { width: 12px; height: 12px; border-radius: 3px; border: 1px solid #d1d5db; display: inline-block; background: #fff; }
+  .legend-dot.answered { background: #6ee7b7; border-color: #6ee7b7; }
+  .legend-dot.reviewed { box-shadow: inset 0 0 0 2px #fb923c; }
+
+  .quiz-panel { display: none; }
+  .quiz-panel.is-active { display: block; }
+
+  .result-card { text-align: center; background: #fff; border: 1px solid #e5e7eb; border-radius: var(--radius); padding: 30px 24px; margin: 10px 0 20px; }
+  .result-card .score-big { font-size: 2.8rem; font-weight: 800; color: var(--primary); }
+  .result-card .pct-big { font-size: 1.4rem; font-weight: 800; color: var(--accent-dark); margin: 6px 0 8px; }
+  .result-card .level-line { display: inline-block; font-weight: 800; color: #1d4ed8; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 999px; padding: 6px 16px; margin: 4px 0 12px; }
+  .result-card .msg { font-size: 1.02rem; color: var(--dark); max-width: 480px; margin: 0 auto; }
+
+  .result-summary { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 20px 0; }
+  .rs-chip { min-width: 120px; border: 1px solid #e5e7eb; border-radius: 10px; padding: 12px; background: #fff; }
+  .rs-chip .rs-n { font-size: 1.6rem; font-weight: 800; color: var(--dark); }
+  .rs-chip .rs-l { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; color: var(--gray); }
+  .rs-chip.good .rs-n { color: #16a34a; }
+  .rs-chip.warn .rs-n { color: #b91c1c; }
+
+  .explanations { margin: 24px 0 10px; }
+  .exp-card { border: 1px solid #e5e7eb; border-radius: var(--radius); margin: 12px 0; padding: 16px 18px; background: #fff; }
+  .exp-card .exp-head { font-weight: 800; color: var(--dark); margin-bottom: 8px; }
+  .exp-card .exp-head .exp-state { margin-left: 8px; font-size: 0.82rem; padding: 2px 10px; border-radius: 999px; font-weight: 700; }
+  .exp-state.ok { background: #dcfce7; color: #15803d; }
+  .exp-state.no { background: #fee2e2; color: #b91c1c; }
+  .exp-card .exp-row { margin: 4px 0; }
+  .exp-card .exp-row .exp-label { font-weight: 700; color: var(--gray); }
+  .exp-card .exp-note { margin-top: 8px; padding-top: 8px; border-top: 1px dashed #e5e7eb; color: var(--dark); }
+  .exp-meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0 10px; }
+  .exp-opts { margin: 8px 0; }
+  .exp-opts .opt { margin: 6px 0; cursor: default; }
+  .exp-opts .opt:hover { border-color: #e5e7eb; background: #fff; }
+  .exp-opts .opt.answered-correct:hover { border-color: #16a34a; background: #f0fdf4; }
+  .exp-opts .opt.answered-wrong:hover { border-color: #dc2626; background: #fef2f2; }
+
+  .quiz-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0; }
+
+  dialog { border: none; border-radius: var(--radius); padding: 0; box-shadow: 0 20px 60px rgba(0,0,0,0.25); max-width: 460px; width: 92%; }
+  dialog::backdrop { background: rgba(0,0,0,0.45); }
+  .modal-body { padding: 22px 24px; }
+  .modal-body h3 { margin: 0 0 10px; font-size: 1.15rem; }
+  .modal-actions { display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
+  .modal-actions button { min-height: 44px; padding: 10px 18px; border-radius: var(--radius); border: 2px solid var(--primary); background: var(--primary); color: #fff; font-family: inherit; font-weight: 700; cursor: pointer; }
+  .modal-actions button.secondary { background: #fff; color: var(--primary); }
+
+  .timed-note { background: #eef2ff; border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 12px 16px; margin: 4px 0 16px; font-size: 0.95rem; }
+  .notice-box { background: #fffbeb; border: 1px solid #fde68a; border-radius: var(--radius); padding: 14px 18px; margin: 4px 0 18px; font-size: 0.95rem; }
+  .notice-box .box-label { font-weight: 800; color: #b45309; margin-bottom: 4px; }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+  .resource-nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
+  .resource-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: var(--radius); border: 2px solid #e5e7eb; font-weight: 600; font-size: 0.92rem; color: var(--dark); background: var(--white); transition: var(--transition); }
+  .resource-nav a:hover, .resource-nav a.is-active { border-color: var(--primary); background: var(--primary); color: var(--white); }
+
+  .sm-back { display: inline-flex; align-items: center; gap: 8px; margin-top: 30px; padding: 10px 0; color: var(--primary); font-weight: 600; }
+  .sm-back:hover { color: var(--accent-dark); }
+
+  @media (max-width: 640px) {
+    .quiz-q { padding: 16px 14px; }
+    .quiz-q .q-text { font-size: 1rem; }
+    .opt { padding: 10px 12px; }
+    .result-card .score-big { font-size: 2.2rem; }
+    .quiz-controls button, .quiz-actions button { flex: 1 1 100%; }
+    .quiz-nav { grid-template-columns: repeat(5, 1fr); }
+  }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="/" class="logo"><i class="fas fa-graduation-cap"></i> Vyasa Academy</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="/">Home</a>
+      <a href="/#courses">Courses</a>
+      <a href="/cbse-study-material/" class="active">Study Material</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main class="sm-page">
+  <div class="container sm-container">
+    <nav class="sm-crumbs" aria-label="Breadcrumb">
+      <a href="https://www.vyasaacademy.in/">Home</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/">CBSE Study Material</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/">Class 10</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/">Mathematics</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/triangles/">Triangles</a> /
+      Quiz
+    </nav>
+
+    <section class="sm-hero sm-hero-slim">
+      <p class="sm-eyebrow">CBSE Class 10 &middot; Mathematics &middot; Chapter 6</p>
+      <h1>Class 10 Maths &#8211; Triangles Quiz</h1>
+      <p>Answer 20 multiple-choice questions on the similarity of triangles, the Basic Proportionality Theorem, the ratio of areas of similar triangles and real-life applications. Each question is worth 1 mark and you get 20 minutes.</p>
+    </section>
+
+    <nav class="resource-nav" aria-label="Chapter resources">
+      <a href="/cbse-study-material/class-10/mathematics/triangles/notes/"><i class="fas fa-book-open"></i> Notes</a>
+      <a href="/cbse-study-material/class-10/mathematics/triangles/practice-paper/"><i class="fas fa-file-lines"></i> Practice Paper</a>
+      <a class="is-active" href="/cbse-study-material/class-10/mathematics/triangles/quiz/"><i class="fas fa-bullseye"></i> Quiz</a>
+      <a href="/cbse-study-material/class-10/mathematics/triangles/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+    </nav>
+
+    <section class="quiz-app" id="quizApp" aria-label="Triangles interactive quiz">
+
+      <div id="startView">
+        <div class="quiz-facts" aria-label="Quiz information">
+          <div class="qf-chip"><div class="qf-n">20</div><div class="qf-l">Questions</div></div>
+          <div class="qf-chip"><div class="qf-n">20</div><div class="qf-l">Marks</div></div>
+          <div class="qf-chip"><div class="qf-n">1</div><div class="qf-l">Mark / Question</div></div>
+          <div class="qf-chip"><div class="qf-n">20</div><div class="qf-l">Minutes</div></div>
+        </div>
+
+        <p class="timed-note"><i class="fas fa-stopwatch"></i> This quiz is <strong>timed</strong>. You have <strong>20 minutes</strong> to answer all 20 questions. Warnings appear at the 5, 2 and 1 minute marks, and the quiz submits automatically when time runs out.</p>
+
+        <div class="notice-box">
+          <div class="box-label">About the questions</div>
+          Every question in this quiz is an original item written by Vyasa Academy in the CBSE board pattern and is labelled <span class="q-badge original">ORIGINAL &middot; CBSE EXAM-STYLE</span>. All questions stay within the triangles scope of this chapter: similarity of triangles, the Basic Proportionality Theorem and its converse, and the ratio of areas of similar triangles.
+        </div>
+
+        <noscript>
+          <div class="notice-box" role="alert">This interactive quiz requires JavaScript. You can use the chapter <a href="/cbse-study-material/class-10/mathematics/triangles/practice-paper/">practice paper</a> instead.</div>
+        </noscript>
+
+        <div class="quiz-actions">
+          <button type="button" id="btnStart"><i class="fas fa-play" aria-hidden="true"></i> Start Quiz</button>
+        </div>
+      </div>
+
+      <div id="quizView" style="display:none;">
+        <div class="quiz-top">
+          <span class="quiz-counter" id="quizCounter" aria-live="polite">Question 1 of 20</span>
+          <span class="quiz-timer" id="quizTimer" aria-live="off"><i class="fas fa-stopwatch" aria-hidden="true"></i><span id="quizTimerText">Time Remaining: 20:00</span><span class="visually-hidden" id="timerLive" aria-live="assertive"></span></span>
+        </div>
+        <div class="quiz-progress-wrap">
+          <div class="progress-track" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="20" aria-valuenow="1" id="progressBar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <span class="visually-hidden" id="progressText">At question 1 of 20</span>
+        </div>
+
+        <div class="quiz-nav-wrap">
+          <h3>Question Navigator</h3>
+          <div class="quiz-nav" id="quizNav" aria-label="Question navigation"></div>
+          <div class="quiz-nav-legend" aria-hidden="true">
+            <span><span class="legend-dot"></span> Not attempted</span>
+            <span><span class="legend-dot answered"></span> Answered</span>
+            <span><span class="legend-dot reviewed"></span> Marked for review</span>
+          </div>
+        </div>
+
+        <form id="quizForm" novalidate>
+          <fieldset class="quiz-q" id="q1" aria-labelledby="q1label">
+            <legend id="q1label"><span class="q-num">Question 1</span><span class="q-diff">Easy</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge original">ORIGINAL &middot; CBSE EXAM-STYLE</span><span class="q-topic">Similar figures</span></div>
+            <p class="q-text">Two figures are called similar if they have:</p>
+            <label class="opt"><input type="radio" name="q1" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">the same shape but not necessarily the same size</span></label>
+            <label class="opt"><input type="radio" name="q1" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">the same size but different shapes</span></label>
+            <label class="opt"><input type="radio" name="q1" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">the same shape and the same size</span></label>
+            <label class="opt"><input type="radio" name="q1" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">different shapes and different sizes</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q2" aria-labelledby="q2label">
+            <legend id="q2label"><span class="q-num">Question 2</span><span class="q-diff">Easy</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge original">ORIGINAL &middot; CBSE EXAM-STYLE</span><span class="q-topic">Corresponding parts</span></div>
+            <p class="q-text">If \(\triangle ABC \sim \triangle DEF\), then which of the following statements is always true?</p>
+            <label class="opt"><input type="radio" name="q2" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(\angle A = \angle D\)</span></label>
+            <label class="opt"><input type="radio" name="q2" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(\angle A = \angle F\)</span></label>
+            <label class="opt"><input type="radio" name="q2" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(AB = DE\)</span></label>
+            <label class="opt"><input type="radio" name="q2" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(AC = DF\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q3" aria-labelledby="q3label">
+            <legend id="q3label"><span class="q-num">Question 3</span><span class="q-diff">Easy</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge original">ORIGINAL &middot; CBSE EXAM-STYLE</span><span class="q-topic">Ratio of corresponding sides</span></div>
+            <p class="q-text">If \(\triangle ABC \sim \triangle DEF\) and \(\frac{AB}{DE} = \frac{3}{2}\), then \(\frac{BC}{EF}\) is:</p>
+            <label class="opt"><input type="radio" name="q3" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(\frac{2}{3}\)</span></label>
+            <label class="opt"><input type="radio" name="q3" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(\frac{9}{4}\)</span></label>
+            <label class="opt"><input type="radio" name="q3" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(\frac{3}{2}\)</span></label>
+            <label class="opt"><input type="radio" name="q3" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(\frac{5}{2}\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q4" aria-labelledby="q4label">
+            <legend id="q4label"><span class="q-num">Question 4</span><span class="q-diff">Moderate</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge original">ORIGINAL &middot; CBSE EXAM-STYLE</span><span class="q-topic">Criteria for similarity</span></div>
+            <p class="q-text">Which of the following is NOT a criterion for the similarity of two triangles?</p>
+            <label class="opt"><input type="radio" name="q4" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">AA</span></label>
+            <label class="opt"><input type="radio" name="q4" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">SAS</span></label>
+            <label class="opt"><input type="radio" name="q4" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">SSS</span></label>
+            <label class="opt"><input type="radio" name="q4" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">SSA</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q5" aria-labelledby="q5label">
+            <legend id="q5label"><span class="q-num">Question 5</span><span class="q-diff">Moderate</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge original">ORIGINAL &middot; CBSE EXAM-STYLE</span><span class="q-topic">Basic Proportionality Theorem</span></div>
+            <p class="q-text">In \(\triangle ABC\), \(D\) is a point on \(AB\) and \(E\) is a point on \(AC\) such that \(DE \parallel BC\). If \(AD = 2\), \(DB = 3\) and \(AE = 2.8\), then \(EC\) is:</p>
+            <label class="opt"><input type="radio" name="q5" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(4.2\)</span></label>
+            <label class="opt"><input type="radio" name="q5" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(1.4\)</span></label>
+            <label class="opt"><input type="radio" name="q5" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(3.8\)</span></label>
+            <label class="opt"><input type="radio" name="q5" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(5.6\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q6" aria-labelledby="q6label">
+            <legend id="q6label"><span class="q-num">Question 6</span><span class="q-diff">Moderate</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge original">ORIGINAL &middot; CBSE EXAM-STYLE</span><span class="q-topic">Converse of BPT</span></div>
+            <p class="q-text">In \(\triangle ABC\), \(D\) lies on \(AB\) and \(E\) lies on \(AC\). Which of the following conditions proves that \(DE \parallel BC\)?</p>
+            <label class="opt"><input type="radio" name="q6" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(\frac{AD}{AB} = \frac{AE}{EC}\)</span></label>
+            <label class="opt"><input type="radio" name="q6" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(\frac{AD}{DB} = \frac{AE}{EC}\)</span></label>
+            <label class="opt"><input type="radio" name="q6" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(\frac{AD}{DB} = \frac{AB}{AC}\)</span></label>
+            <label class="opt"><input type="radio" name="q6" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(\frac{DB}{AD} = \frac{AE}{EC}\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q7" aria-labelledby="q7label">
+            <legend id="q7label"><span class="q-num">Question 7</span><span class="q-diff">Moderate</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge original">ORIGINAL &middot; CBSE EXAM-STYLE</span><span class="q-topic">Ratio of areas</span></div>
+            <p class="q-text">The ratio of the corresponding sides of two similar triangles is \(4 : 5\). The ratio of their areas is:</p>
+            <label class="opt"><input type="radio" name="q7" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(4 : 5\)</span></label>
+            <label class="opt"><input type="radio" name="q7" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(16 : 25\)</span></label>
+            <label class="opt"><input type="radio" name="q7" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(8 : 10\)</span></label>
+            <label class="opt"><input type="radio" name="q7" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(2 : 5\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q8" aria-labelledby="q8label">
+            <legend id="q8label"><span class="q-num">Question 8</span><span class="q-diff">Moderate</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge original">ORIGINAL &middot; CBSE EXAM-STYLE</span><span class="q-topic">Ratio of areas and sides</span></div>
+            <p class="q-text">The areas of two similar triangles are in the ratio \(9 : 16\). The ratio of their corresponding sides is:</p>
+            <label class="opt"><input type="radio" name="q8" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(9 : 16\)</span></label>
+            <label class="opt"><input type="radio" name="q8" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(81 : 256\)</span></label>
+            <label class="opt"><input type="radio" name="q8" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(4 : 9\)</span></label>
+            <label class="opt"><input type="radio" name="q8" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(3 : 4\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q9" aria-labelledby="q9label">
+            <legend id="q9label"><span class="q-num">Question 9</span><span class="q-diff">Moderate</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge original">ORIGINAL &middot; CBSE EXAM-STYLE</span><span class="q-topic">Finding a missing side</span></div>
+            <p class="q-text">\(\triangle ABC \sim \triangle DEF\). If \(AB = 4\), \(DE = 10\) and \(BC = 6\), then \(EF\) is:</p>
+            <label class="opt"><input type="radio" name="q9" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(8\)</span></label>
+            <label class="opt"><input type="radio" name="q9" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(12\)</span></label>
+            <label class="opt"><input type="radio" name="q9" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(15\)</span></label>
+            <label class="opt"><input type="radio" name="q9" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(20\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q10" aria-labelledby="q10label">
+            <legend id="q10label"><span class="q-num">Question 10</span><span class="q-diff">Challenging</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge original">ORIGINAL &middot; CBSE EXAM-STYLE</span><span class="q-topic">Perimeters and areas</span></div>
+            <p class="q-text">The perimeters of two similar triangles are in the ratio \(2 : 3\). If the area of the larger triangle is \(36\ \mathrm{cm}^2\), then the area of the smaller triangle is:</p>
+            <label class="opt"><input type="radio" name="q10" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(16\ \mathrm{cm}^2\)</span></label>
+            <label class="opt"><input type="radio" name="q10" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(24\ \mathrm{cm}^2\)</span></label>
+            <label class="opt"><input type="radio" name="q10" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(12\ \mathrm{cm}^2\)</span></label>
+            <label class="opt"><input type="radio" name="q10" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(9\ \mathrm{cm}^2\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q11" aria-labelledby="q11label">
+            <legend id="q11label"><span class="q-num">Question 11</span><span class="q-diff">Easy</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge original">ORIGINAL &middot; CBSE EXAM-STYLE</span><span class="q-topic">Equilateral triangles</span></div>
+            <p class="q-text">Any two equilateral triangles are always:</p>
+            <label class="opt"><input type="radio" name="q11" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">congruent</span></label>
+            <label class="opt"><input type="radio" name="q11" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">similar</span></label>
+            <label class="opt"><input type="radio" name="q11" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">congruent and similar</span></label>
+            <label class="opt"><input type="radio" name="q11" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">neither similar nor congruent</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q12" aria-labelledby="q12label">
+            <legend id="q12label"><span class="q-num">Question 12</span><span class="q-diff">Moderate</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge original">ORIGINAL &middot; CBSE EXAM-STYLE</span><span class="q-topic">Always similar figures</span></div>
+            <p class="q-text">Which of the following pairs of figures is always similar?</p>
+            <label class="opt"><input type="radio" name="q12" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">two rectangles</span></label>
+            <label class="opt"><input type="radio" name="q12" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">two isosceles triangles</span></label>
+            <label class="opt"><input type="radio" name="q12" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">two squares</span></label>
+            <label class="opt"><input type="radio" name="q12" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">two rhombuses</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q13" aria-labelledby="q13label">
+            <legend id="q13label"><span class="q-num">Question 13</span><span class="q-diff">Moderate</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge original">ORIGINAL &middot; CBSE EXAM-STYLE</span><span class="q-topic">Height and shadow</span></div>
+            <p class="q-text">A boy of height \(1.5\ \mathrm{m}\) casts a shadow \(2\ \mathrm{m}\) long. At the same time, a tower casts a shadow \(30\ \mathrm{m}\) long. The height of the tower is:</p>
+            <label class="opt"><input type="radio" name="q13" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(25\ \mathrm{m}\)</span></label>
+            <label class="opt"><input type="radio" name="q13" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(22.5\ \mathrm{m}\)</span></label>
+            <label class="opt"><input type="radio" name="q13" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(30\ \mathrm{m}\)</span></label>
+            <label class="opt"><input type="radio" name="q13" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(20\ \mathrm{m}\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q14" aria-labelledby="q14label">
+            <legend id="q14label"><span class="q-num">Question 14</span><span class="q-diff">Moderate</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge original">ORIGINAL &middot; CBSE EXAM-STYLE</span><span class="q-topic">Perimeters from a side ratio</span></div>
+            <p class="q-text">The corresponding sides of two similar triangles are in the ratio \(3 : 2\). If the perimeter of the larger triangle is \(30\ \mathrm{cm}\), then the perimeter of the smaller triangle is:</p>
+            <label class="opt"><input type="radio" name="q14" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(20\ \mathrm{cm}\)</span></label>
+            <label class="opt"><input type="radio" name="q14" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(18\ \mathrm{cm}\)</span></label>
+            <label class="opt"><input type="radio" name="q14" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(22.5\ \mathrm{cm}\)</span></label>
+            <label class="opt"><input type="radio" name="q14" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(45\ \mathrm{cm}\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q15" aria-labelledby="q15label">
+            <legend id="q15label"><span class="q-num">Question 15</span><span class="q-diff">Moderate</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge original">ORIGINAL &middot; CBSE EXAM-STYLE</span><span class="q-topic">BPT: dividing a side</span></div>
+            <p class="q-text">In \(\triangle ABC\), \(DE \parallel BC\), where \(D\) is on \(AB\) and \(E\) is on \(AC\). If \(AD : DB = 2 : 3\) and \(AC = 20\ \mathrm{cm}\), then \(AE\) is:</p>
+            <label class="opt"><input type="radio" name="q15" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(6\ \mathrm{cm}\)</span></label>
+            <label class="opt"><input type="radio" name="q15" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(10\ \mathrm{cm}\)</span></label>
+            <label class="opt"><input type="radio" name="q15" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(12\ \mathrm{cm}\)</span></label>
+            <label class="opt"><input type="radio" name="q15" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(8\ \mathrm{cm}\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q16" aria-labelledby="q16label">
+            <legend id="q16label"><span class="q-num">Question 16</span><span class="q-diff">Challenging</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge original">ORIGINAL &middot; CBSE EXAM-STYLE</span><span class="q-topic">Key property of similarity</span></div>
+            <p class="q-text">If \(\triangle ABC \sim \triangle DEF\) such that \(A\) corresponds to \(D\), then which of the following is always true?</p>
+            <label class="opt"><input type="radio" name="q16" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">the areas of the two triangles are equal</span></label>
+            <label class="opt"><input type="radio" name="q16" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">the ratios of all pairs of corresponding sides are equal</span></label>
+            <label class="opt"><input type="radio" name="q16" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">the two triangles are congruent</span></label>
+            <label class="opt"><input type="radio" name="q16" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">the perimeters of the two triangles are equal</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q17" aria-labelledby="q17label">
+            <legend id="q17label"><span class="q-num">Question 17</span><span class="q-diff">Challenging</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge original">ORIGINAL &middot; CBSE EXAM-STYLE</span><span class="q-topic">Map scale</span></div>
+            <p class="q-text">On a map drawn to the scale \(1\ \mathrm{cm} : 4\ \mathrm{km}\), two towns are \(9\ \mathrm{cm}\) apart on the map. The actual distance between the towns is:</p>
+            <label class="opt"><input type="radio" name="q17" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(36\ \mathrm{km}\)</span></label>
+            <label class="opt"><input type="radio" name="q17" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(32\ \mathrm{km}\)</span></label>
+            <label class="opt"><input type="radio" name="q17" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(40\ \mathrm{km}\)</span></label>
+            <label class="opt"><input type="radio" name="q17" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(45\ \mathrm{km}\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q18" aria-labelledby="q18label">
+            <legend id="q18label"><span class="q-num">Question 18</span><span class="q-diff">Challenging</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge original">ORIGINAL &middot; CBSE EXAM-STYLE</span><span class="q-topic">Areas to find a side</span></div>
+            <p class="q-text">The areas of two similar triangles are \(25\ \mathrm{cm}^2\) and \(100\ \mathrm{cm}^2\). If \(AB = 7\ \mathrm{cm}\), where \(AB\) corresponds to \(DE\), then \(DE\) is:</p>
+            <label class="opt"><input type="radio" name="q18" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(28\ \mathrm{cm}\)</span></label>
+            <label class="opt"><input type="radio" name="q18" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(10.5\ \mathrm{cm}\)</span></label>
+            <label class="opt"><input type="radio" name="q18" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(14\ \mathrm{cm}\)</span></label>
+            <label class="opt"><input type="radio" name="q18" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(35\ \mathrm{cm}\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q19" aria-labelledby="q19label">
+            <legend id="q19label"><span class="q-num">Question 19</span><span class="q-diff">Challenging</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge original">ORIGINAL &middot; CBSE EXAM-STYLE</span><span class="q-topic">Converse of BPT</span></div>
+            <p class="q-text">In \(\triangle ABC\), \(D\) is a point on \(AB\) and \(E\) is a point on \(AC\) such that \(AD = x\), \(DB = 9\), \(AE = x + 2\) and \(EC = 12\). The value of \(x\) for which \(DE \parallel BC\) is:</p>
+            <label class="opt"><input type="radio" name="q19" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(8\)</span></label>
+            <label class="opt"><input type="radio" name="q19" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(4\)</span></label>
+            <label class="opt"><input type="radio" name="q19" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(5\)</span></label>
+            <label class="opt"><input type="radio" name="q19" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(6\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q20" aria-labelledby="q20label">
+            <legend id="q20label"><span class="q-num">Question 20</span><span class="q-diff">Challenging</span></legend>
+            <div class="q-meta-row" aria-hidden="true"><span class="q-badge original">ORIGINAL &middot; CBSE EXAM-STYLE</span><span class="q-topic">Height and shadow</span></div>
+            <p class="q-text">A vertical stick of height \(2\ \mathrm{m}\) casts a shadow \(1.6\ \mathrm{m}\) long. At the same time, the shadow of a nearby tree is \(12.8\ \mathrm{m}\) long. The height of the tree is:</p>
+            <label class="opt"><input type="radio" name="q20" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(16\ \mathrm{m}\)</span></label>
+            <label class="opt"><input type="radio" name="q20" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(12.8\ \mathrm{m}\)</span></label>
+            <label class="opt"><input type="radio" name="q20" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(14\ \mathrm{m}\)</span></label>
+            <label class="opt"><input type="radio" name="q20" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(15\ \mathrm{m}\)</span></label>
+          </fieldset>
+        </form>
+
+        <div class="quiz-controls">
+          <button type="button" class="secondary" id="btnPrev" aria-label="Previous question"><i class="fas fa-arrow-left" aria-hidden="true"></i> Previous</button>
+          <button type="button" id="btnMark" aria-label="Mark the current question for review"><i class="fas fa-flag" aria-hidden="true"></i> <span id="btnMarkText">Mark for Review</span></button>
+          <button type="button" class="secondary" id="btnClear" aria-label="Clear your response to the current question"><i class="fas fa-eraser" aria-hidden="true"></i> Clear Response</button>
+          <button type="button" id="btnNext">Next <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+          <button type="button" class="secondary" id="btnSubmit"><i class="fas fa-check" aria-hidden="true"></i> Submit Quiz</button>
+        </div>
+      </div>
+
+      <div class="quiz-panel" id="resultView">
+        <div class="result-card">
+          <h2 style="margin-top:0;"><i class="fas fa-trophy" aria-hidden="true"></i> Quiz Result</h2>
+          <div class="score-big" id="resScore">0 / 20</div>
+          <div class="pct-big" id="resPct">0%</div>
+          <div class="level-line" id="resLevel"></div>
+          <p class="msg" id="resMsg"></p>
+        </div>
+        <div class="result-summary">
+          <div class="rs-chip good"><div class="rs-n" id="resCorrect">0</div><div class="rs-l">Correct</div></div>
+          <div class="rs-chip warn"><div class="rs-n" id="resIncorrect">0</div><div class="rs-l">Incorrect</div></div>
+          <div class="rs-chip warn"><div class="rs-n" id="resUnanswered">0</div><div class="rs-l">Unanswered</div></div>
+          <div class="rs-chip"><div class="rs-n" id="resAccuracy">0%</div><div class="rs-l">Accuracy</div></div>
+          <div class="rs-chip"><div class="rs-n" id="resTime">00:00</div><div class="rs-l">Time Taken</div></div>
+        </div>
+        <div class="quiz-actions">
+          <button type="button" id="btnRetry"><i class="fas fa-redo" aria-hidden="true"></i> Retry Quiz</button>
+          <button type="button" class="secondary" id="btnReview"><i class="fas fa-list-check" aria-hidden="true"></i> Review Answers</button>
+        </div>
+      </div>
+
+      <div class="quiz-panel" id="reviewView">
+        <h2><i class="fas fa-list-check" aria-hidden="true"></i> Review Answers</h2>
+        <p>For each question, your answer and the correct answer are shown, together with the topic, difficulty, the source of the question, a hint and a short explanation.</p>
+        <div class="explanations" id="explanations"></div>
+        <div class="quiz-actions">
+          <button type="button" id="btnBackResult"><i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Result</button>
+          <button type="button" class="secondary" id="btnRetry2"><i class="fas fa-redo" aria-hidden="true"></i> Retry Quiz</button>
+        </div>
+      </div>
+
+      <nav class="resource-nav" aria-label="Chapter resources">
+        <a href="/cbse-study-material/class-10/mathematics/triangles/notes/"><i class="fas fa-book-open"></i> Notes</a>
+        <a href="/cbse-study-material/class-10/mathematics/triangles/practice-paper/"><i class="fas fa-file-lines"></i> Practice Paper</a>
+        <a href="/cbse-study-material/class-10/mathematics/triangles/quiz/" class="is-active"><i class="fas fa-bullseye"></i> Quiz</a>
+        <a href="/cbse-study-material/class-10/mathematics/triangles/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+      </nav>
+
+      <nav class="resource-nav" aria-label="Related chapters">
+        <a href="/cbse-study-material/class-10/mathematics/arithmetic-progressions/notes/"><i class="fas fa-arrow-right"></i> Chapter 5: Arithmetic Progressions Notes</a>
+        <a href="/cbse-study-material/class-10/mathematics/quadratic-equations/quiz/"><i class="fas fa-arrow-right"></i> Chapter 4: Quadratic Equations Quiz</a>
+        <a href="/cbse-study-material/class-10/mathematics/pair-of-linear-equations-in-two-variables/quiz/"><i class="fas fa-arrow-right"></i> Chapter 3: Pair of Linear Equations Quiz</a>
+        <a href="/cbse-study-material/class-10/mathematics/"><i class="fas fa-arrow-right"></i> Class 10 Mathematics</a>
+      </nav>
+    </section>
+
+    <a class="sm-back" href="/cbse-study-material/class-10/mathematics/triangles/"><i class="fas fa-arrow-left"></i> Back to Triangles</a>
+    <a class="sm-back" href="/cbse-study-material/class-10/mathematics/" style="margin-left: 12px;"><i class="fas fa-arrow-left"></i> All Mathematics chapters</a>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-about">
+      <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+      <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#courses">Courses</a></li>
+        <li><a href="/cbse-study-material/">Study Material</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Popular Searches</h4>
+      <ul>
+        <li><a href="/cbse-study-material/">CBSE Study Material</a></li>
+        <li><a href="/best-tuition-centre-hulimavu/">Best Tuition Centre in Hulimavu</a></li>
+        <li><a href="/cbse-tuition-hulimavu/">CBSE Tuition in Hulimavu</a></li>
+        <li><a href="/maths-tuition-hulimavu/">Maths Tuition in Hulimavu</a></li>
+        <li><a href="/science-tuition-hulimavu/">Science Tuition in Hulimavu</a></li>
+        <li><a href="/class-10-tuition-hulimavu/">Class 10 Tuition Hulimavu</a></li>
+        <li><a href="/class-12-tuition-hulimavu/">Class 12 Tuition Hulimavu</a></li>
+        <li><a href="/tuition-centre-bangalore/">Best Tuition Centre in Bangalore</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="/cbse-study-material/sm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/supabase-config.js"></script>
+<script src="/supabase-auth.js"></script>
+<script src="/supabase-nav.js" defer></script>
+<script src="/chatbot/chatbot-loader.js" defer></script><script>
+(function () {
+  "use strict";
+
+  var TOTAL = 20;
+  var TIME_LIMIT = 1200;
+
+  var startView = document.getElementById("startView");
+  var quizView = document.getElementById("quizView");
+
+  var QUESTIONS = [
+    { id: "q1",  topic: "Similar figures", difficulty: "Easy", correct: "a", sourceType: "original", sourceYear: "", sourceExam: "Original - CBSE Exam-Style" },
+    { id: "q2",  topic: "Corresponding parts", difficulty: "Easy", correct: "a", sourceType: "original", sourceYear: "", sourceExam: "Original - CBSE Exam-Style" },
+    { id: "q3",  topic: "Ratio of corresponding sides", difficulty: "Easy", correct: "c", sourceType: "original", sourceYear: "", sourceExam: "Original - CBSE Exam-Style" },
+    { id: "q4",  topic: "Criteria for similarity", difficulty: "Moderate", correct: "d", sourceType: "original", sourceYear: "", sourceExam: "Original - CBSE Exam-Style" },
+    { id: "q5",  topic: "Basic Proportionality Theorem", difficulty: "Moderate", correct: "a", sourceType: "original", sourceYear: "", sourceExam: "Original - CBSE Exam-Style" },
+    { id: "q6",  topic: "Converse of BPT", difficulty: "Moderate", correct: "b", sourceType: "original", sourceYear: "", sourceExam: "Original - CBSE Exam-Style" },
+    { id: "q7",  topic: "Ratio of areas", difficulty: "Moderate", correct: "b", sourceType: "original", sourceYear: "", sourceExam: "Original - CBSE Exam-Style" },
+    { id: "q8",  topic: "Ratio of areas and sides", difficulty: "Moderate", correct: "d", sourceType: "original", sourceYear: "", sourceExam: "Original - CBSE Exam-Style" },
+    { id: "q9",  topic: "Finding a missing side", difficulty: "Moderate", correct: "c", sourceType: "original", sourceYear: "", sourceExam: "Original - CBSE Exam-Style" },
+    { id: "q10", topic: "Perimeters and areas", difficulty: "Challenging", correct: "a", sourceType: "original", sourceYear: "", sourceExam: "Original - CBSE Exam-Style" },
+    { id: "q11", topic: "Equilateral triangles", difficulty: "Easy", correct: "b", sourceType: "original", sourceYear: "", sourceExam: "Original - CBSE Exam-Style" },
+    { id: "q12", topic: "Always similar figures", difficulty: "Moderate", correct: "c", sourceType: "original", sourceYear: "", sourceExam: "Original - CBSE Exam-Style" },
+    { id: "q13", topic: "Height and shadow", difficulty: "Moderate", correct: "b", sourceType: "original", sourceYear: "", sourceExam: "Original - CBSE Exam-Style" },
+    { id: "q14", topic: "Perimeters from a side ratio", difficulty: "Moderate", correct: "a", sourceType: "original", sourceYear: "", sourceExam: "Original - CBSE Exam-Style" },
+    { id: "q15", topic: "BPT: dividing a side", difficulty: "Moderate", correct: "d", sourceType: "original", sourceYear: "", sourceExam: "Original - CBSE Exam-Style" },
+    { id: "q16", topic: "Key property of similarity", difficulty: "Challenging", correct: "b", sourceType: "original", sourceYear: "", sourceExam: "Original - CBSE Exam-Style" },
+    { id: "q17", topic: "Map scale", difficulty: "Challenging", correct: "a", sourceType: "original", sourceYear: "", sourceExam: "Original - CBSE Exam-Style" },
+    { id: "q18", topic: "Areas to find a side", difficulty: "Challenging", correct: "c", sourceType: "original", sourceYear: "", sourceExam: "Original - CBSE Exam-Style" },
+    { id: "q19", topic: "Converse of BPT", difficulty: "Challenging", correct: "d", sourceType: "original", sourceYear: "", sourceExam: "Original - CBSE Exam-Style" },
+    { id: "q20", topic: "Height and shadow", difficulty: "Challenging", correct: "a", sourceType: "original", sourceYear: "", sourceExam: "Original - CBSE Exam-Style" }
+  ];
+
+  var EXPLANATIONS = {
+    q1:  "Similar figures have the same shape but not necessarily the same size. Two circles, all equilateral triangles and all squares are similar figures even when their sizes differ.",
+    q2:  "When two triangles are similar, corresponding angles are equal. The order of the letters matters: A corresponds to D, so angle A = angle D. Side lengths are proportional, not necessarily equal.",
+    q3:  "In similar triangles the ratios of all pairs of corresponding sides are equal. Since AB corresponds to DE and BC corresponds to EF, BC/EF = AB/DE = 3/2.",
+    q4:  "AA, SAS and SSS are genuine criteria for the similarity of two triangles. SSA does not prove similarity in general, so it is not one of the criteria.",
+    q5:  "By the Basic Proportionality Theorem, AD/DB = AE/EC, so 2/3 = 2.8/EC. Cross-multiplying gives EC = (2.8 x 3)/2 = 4.2.",
+    q6:  "The converse of the Basic Proportionality Theorem states that DE is parallel to BC when D divides AB in the same ratio in which E divides AC, that is AD/DB = AE/EC.",
+    q7:  "For similar triangles the ratio of the areas equals the square of the ratio of the corresponding sides. Here (4 : 5)^2 = 16 : 25.",
+    q8:  "The ratio of the areas is the square of the ratio of the corresponding sides, so the side ratio is the square root of the area ratio. The square root of 9 : 16 is 3 : 4.",
+    q9:  "Corresponding sides are proportional: AB/DE = BC/EF, that is 4/10 = 6/EF. Solving gives EF = (6 x 10)/4 = 15.",
+    q10: "The ratio of the areas is the square of the ratio of the perimeters, so the areas are in the ratio 4 : 9. The smaller area is 36 x 4/9 = 16 cm^2.",
+    q11: "Every equilateral triangle has all three angles equal to 60 degrees, so any two equilateral triangles are similar by AA. They are congruent only when their sides are equal as well.",
+    q12: "Two squares always have all angles equal and proportional sides, so they are always similar. Rectangles, rhombuses and isosceles triangles need not be similar.",
+    q13: "Heights and shadow lengths stay in the same ratio at the same time: 1.5/2 = h/30. Solving gives h = (1.5 x 30)/2 = 22.5 m.",
+    q14: "The ratio of the perimeters equals the ratio of the corresponding sides, 3 : 2 (larger : smaller). The smaller perimeter is 30 x 2/3 = 20 cm.",
+    q15: "Since AD : DB = 2 : 3, by the Basic Proportionality Theorem AE : EC = 2 : 3 as well. AC is divided in the ratio 2 : 3, so AE = (2/5) x 20 = 8 cm.",
+    q16: "By definition of similarity, corresponding angles are equal and all ratios of corresponding sides are equal. Areas, perimeters and side lengths are equal only when the triangles are also congruent.",
+    q17: "Every 1 cm on the map represents 4 km on the ground, so the actual distance is 9 x 4 = 36 km.",
+    q18: "The ratio of the areas is 25 : 100 = 1 : 4, so the ratio of the corresponding sides is 1 : 2. Hence DE = 2 x AB = 2 x 7 = 14 cm.",
+    q19: "DE is parallel to BC when AD/DB = AE/EC, that is x/9 = (x + 2)/12. Cross-multiplying, 12x = 9x + 18, so 3x = 18 and x = 6.",
+    q20: "At the same time, height and shadow length remain in the same ratio: 2/1.6 = h/12.8. Solving gives h = (2 x 12.8)/1.6 = 16 m."
+  };
+
+  var HINTS = {
+    q1:  "Recall that similar figures may differ in size but never in shape.",
+    q2:  "Check which vertex of the second triangle corresponds to A by following the order of the letters.",
+    q3:  "In similar triangles all ratios of corresponding sides are equal.",
+    q4:  "AA, SAS and SSS all prove similarity; find the combination that does not.",
+    q5:  "Apply the Basic Proportionality Theorem: AD/DB = AE/EC.",
+    q6:  "The converse of BPT compares the two ratios into which the sides are divided.",
+    q7:  "The ratio of the areas is the square of the ratio of the sides.",
+    q8:  "Take the square root of the ratio of the areas.",
+    q9:  "Set up AB/DE = BC/EF and solve for EF.",
+    q10: "Find the ratio of the areas from the ratio of the perimeters, then scale the larger area down.",
+    q11: "List the angles of any equilateral triangle.",
+    q12: "Think of a pair of shapes whose angles and side ratios are always fixed.",
+    q13: "Write the boy's height : shadow and the tower's height : shadow as two equal fractions.",
+    q14: "Perimeters are in the same ratio as the sides, so scale 30 by the smaller side ratio.",
+    q15: "Use AE : EC = AD : DB, then divide AC in that ratio.",
+    q16: "Similarity fixes the ratios of corresponding sides, not the actual sizes.",
+    q17: "Multiply the map distance by the distance that 1 cm represents.",
+    q18: "Convert the ratio of the areas to the ratio of the sides, then double AB.",
+    q19: "Set AD/DB = AE/EC and solve for x.",
+    q20: "Form the proportion height/shadow = height/shadow and solve."
+  };
+
+  var form = document.getElementById("quizForm");
+  var resultView = document.getElementById("resultView");
+  var reviewView = document.getElementById("reviewView");
+  var counterEl = document.getElementById("quizCounter");
+  var timerEl = document.getElementById("quizTimer");
+  var timerText = document.getElementById("quizTimerText");
+  var timerLive = document.getElementById("timerLive");
+  var progressFill = document.getElementById("progressFill");
+  var progressBar = document.getElementById("progressBar");
+  var progressText = document.getElementById("progressText");
+  var explanations = document.getElementById("explanations");
+  var quizNav = document.getElementById("quizNav");
+  var btnMark = document.getElementById("btnMark");
+  var btnMarkText = document.getElementById("btnMarkText");
+
+  var confirmDialog = document.createElement("dialog");
+  confirmDialog.id = "confirmDialog";
+  confirmDialog.innerHTML =
+    '<div class="modal-body">' +
+      '<h3>Submit quiz?</h3>' +
+      '<p id="confirmMsg">Do you want to submit the quiz?</p>' +
+      '<div class="modal-actions">' +
+        '<button type="button" class="secondary" id="confirmContinue">Continue Quiz</button>' +
+        '<button type="button" id="confirmSubmit">Submit Quiz</button>' +
+      '</div>' +
+    '</div>';
+  document.body.appendChild(confirmDialog);
+
+  var cards = [];
+  var navBtns = [];
+  var reviewed = [];
+  var warnedAt = {};
+  for (var i = 0; i < TOTAL; i++) {
+    cards.push(document.getElementById(QUESTIONS[i].id));
+    reviewed.push(false);
+  }
+
+  var timeLeft = TIME_LIMIT;
+  var timerId = null;
+  var submitted = false;
+  var autoSubmitted = false;
+  var currentIndex = 0;
+
+  function letter(idx) { return "ABCD".charAt(idx); }
+
+  function buildNav() {
+    quizNav.innerHTML = "";
+    navBtns = [];
+    for (var i = 0; i < TOTAL; i++) {
+      (function (idx) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.className = "nav-btn";
+        b.textContent = String(idx + 1);
+        b.setAttribute("aria-label", "Go to question " + (idx + 1));
+        b.addEventListener("click", function () { showCard(idx); });
+        quizNav.appendChild(b);
+        navBtns.push(b);
+      })(i);
+    }
+  }
+
+  function isAnswered(idx) {
+    return !!form.querySelector('input[name="' + QUESTIONS[idx].id + '"]:checked');
+  }
+
+  function refreshNav() {
+    for (var i = 0; i < TOTAL; i++) {
+      var cs = "nav-btn";
+      if (isAnswered(i)) cs += " nav-answered";
+      if (reviewed[i]) cs += " nav-reviewed";
+      if (i === currentIndex) cs += " nav-current";
+      navBtns[i].className = cs;
+      navBtns[i].setAttribute("aria-current", i === currentIndex ? "true" : "false");
+    }
+    if (reviewed[currentIndex]) {
+      btnMark.classList.add("marked");
+      btnMarkText.textContent = "Marked for Review";
+    } else {
+      btnMark.classList.remove("marked");
+      btnMarkText.textContent = "Mark for Review";
+    }
+  }
+
+  function showCard(idx) {
+    cards.forEach(function (c, i) { c.classList.toggle("is-active", i === idx); });
+    currentIndex = idx;
+    counterEl.textContent = "Question " + (idx + 1) + " of " + TOTAL;
+    progressFill.style.width = ((idx + 1) / TOTAL * 100) + "%";
+    progressBar.setAttribute("aria-valuenow", String(idx + 1));
+    progressText.textContent = "At question " + (idx + 1) + " of " + TOTAL;
+    refreshNav();
+  }
+
+  function updateTimerDisplay() {
+    var m = Math.floor(timeLeft / 60);
+    var s = timeLeft % 60;
+    timerText.textContent = "Time Remaining: " + String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0");
+    timerEl.classList.toggle("warn", timeLeft <= 300);
+    timerEl.classList.toggle("danger", timeLeft <= 60);
+    if (timeLeft === 300 && !warnedAt["300"]) { warnedAt["300"] = true; timerLive.textContent = "Warning: 5 minutes remaining."; }
+    if (timeLeft === 120 && !warnedAt["120"]) { warnedAt["120"] = true; timerLive.textContent = "Warning: 2 minutes remaining."; }
+    if (timeLeft === 60 && !warnedAt["60"]) { warnedAt["60"] = true; timerLive.textContent = "Warning: less than one minute remaining."; }
+  }
+
+  function startTimer() {
+    if (timerId) clearInterval(timerId);
+    timeLeft = TIME_LIMIT;
+    warnedAt = {};
+    autoSubmitted = false;
+    updateTimerDisplay();
+    timerId = setInterval(function () {
+      timeLeft--;
+      updateTimerDisplay();
+      if (timeLeft <= 0) {
+        clearInterval(timerId);
+        autoSubmitted = true;
+        submitQuiz();
+      }
+    }, 1000);
+  }
+
+  function gatherResults() {
+    var correct = 0, incorrect = 0, unanswered = 0;
+    QUESTIONS.forEach(function (q) {
+      var checked = form.querySelector('input[name="' + q.id + '"]:checked');
+      if (!checked) unanswered++;
+      else if (checked.value === q.correct) correct++;
+      else incorrect++;
+    });
+    return { correct: correct, incorrect: incorrect, unanswered: unanswered };
+  }
+
+  function levelFor(score) {
+    if (score >= 18) return { level: "Excellent", msg: "Outstanding! You have a strong command of the Triangles chapter." };
+    if (score >= 15) return { level: "Very Good", msg: "Very good work! A quick revision of the trickier questions will take you to the top." };
+    if (score >= 11) return { level: "Good", msg: "Good attempt. Revise the important concepts and try the quiz again." };
+    if (score >= 8) return { level: "Needs Improvement", msg: "A fair attempt. Go through the chapter notes once more and practise again." };
+    return { level: "Requires More Practice", msg: "Revise the chapter notes carefully and attempt the quiz again." };
+  }
+
+  function fmtTime(sec) {
+    var m = Math.floor(sec / 60);
+    var s = sec % 60;
+    return String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0");
+  }
+
+  function showResult() {
+    var r = gatherResults();
+    var score = r.correct;
+    var pct = Math.round((score / TOTAL) * 100);
+    var attempted = r.correct + r.incorrect;
+    var acc = attempted > 0 ? Math.round((r.correct / attempted) * 100) : 0;
+    var elapsed = autoSubmitted ? TIME_LIMIT : (TIME_LIMIT - timeLeft);
+    var lv = levelFor(score);
+    document.getElementById("resScore").textContent = score + " / " + TOTAL;
+    document.getElementById("resPct").textContent = pct + "%";
+    document.getElementById("resLevel").textContent = "Performance Level: " + lv.level;
+    document.getElementById("resMsg").textContent = lv.msg;
+    document.getElementById("resCorrect").textContent = r.correct;
+    document.getElementById("resIncorrect").textContent = r.incorrect;
+    document.getElementById("resUnanswered").textContent = r.unanswered;
+    document.getElementById("resAccuracy").textContent = acc + "%";
+    document.getElementById("resTime").textContent = fmtTime(elapsed);
+    quizView.style.display = "none";
+    resultView.style.display = "block";
+    reviewView.style.display = "none";
+    resultView.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function questionById(id) {
+    for (var i = 0; i < QUESTIONS.length; i++) {
+      if (QUESTIONS[i].id === id) return QUESTIONS[i];
+    }
+    return null;
+  }
+
+  function optionLetter(card, value) {
+    var opts = Array.prototype.slice.call(card.querySelectorAll(".opt"));
+    for (var i = 0; i < opts.length; i++) {
+      if (opts[i].querySelector("input").value === value) return letter(i);
+    }
+    return "";
+  }
+
+  function badgeHTML(q) {
+    if (q.sourceType === "PYQ") {
+      return '<span class="q-badge pyq">CBSE PYQ &middot; ' + q.sourceYear + "</span>";
+    }
+    return '<span class="q-badge original">ORIGINAL &middot; CBSE EXAM-STYLE</span>';
+  }
+
+  function buildReview() {
+    explanations.innerHTML = "";
+    cards.forEach(function (card) {
+      var q = questionById(card.id);
+      var checked = card.querySelector('input[type="radio"]:checked');
+      var yourVal = checked ? checked.value : null;
+      var isCorrect = yourVal === q.correct;
+
+      var wrap = document.createElement("div");
+      wrap.className = "exp-card";
+
+      var head = document.createElement("div");
+      head.className = "exp-head";
+      head.appendChild(document.createTextNode("Question " + card.dataset.number + " "));
+
+      var state = document.createElement("span");
+      state.className = "exp-state " + (isCorrect ? "ok" : "no");
+      state.textContent = isCorrect ? "\u2713 Correct" : (yourVal === null ? "\u2013 Not answered" : "\u2717 Incorrect");
+      state.setAttribute("aria-label", isCorrect ? "Correct" : (yourVal === null ? "Not answered" : "Incorrect"));
+      head.appendChild(state);
+      wrap.appendChild(head);
+
+      var meta = document.createElement("div");
+      meta.className = "exp-meta";
+      meta.innerHTML = badgeHTML(q) +
+        '<span class="q-topic">' + q.topic + "</span>" +
+        '<span class="q-diff">' + q.difficulty + "</span>";
+      wrap.appendChild(meta);
+
+      var qrow = document.createElement("div");
+      qrow.className = "exp-row";
+      var qlabel = document.createElement("span");
+      qlabel.className = "exp-label";
+      qlabel.textContent = "Question: ";
+      qrow.appendChild(qlabel);
+      qrow.appendChild(card.querySelector(".q-text").cloneNode(true));
+      wrap.appendChild(qrow);
+
+      var optsBox = document.createElement("div");
+      optsBox.className = "exp-opts";
+      var optList = Array.prototype.slice.call(card.querySelectorAll(".opt"));
+      optList.forEach(function (opt) {
+        var o = opt.cloneNode(true);
+        o.querySelector("input").checked = (opt.querySelector("input").checked);
+        o.querySelector("input").disabled = true;
+        if (opt.querySelector("input").value === q.correct) o.classList.add("answered-correct");
+        if (checked && opt.querySelector("input").value === yourVal && yourVal !== q.correct) o.classList.add("answered-wrong");
+        optsBox.appendChild(o);
+      });
+      wrap.appendChild(optsBox);
+
+      var yrow = document.createElement("div");
+      yrow.className = "exp-row";
+      var ylabel = document.createElement("span");
+      ylabel.className = "exp-label";
+      ylabel.textContent = "Your Answer: ";
+      yrow.appendChild(ylabel);
+      yrow.appendChild(document.createTextNode(yourVal ? "Option " + optionLetter(card, yourVal) + " - " + optionText(card, yourVal) : "Not answered"));
+      wrap.appendChild(yrow);
+
+      var crow = document.createElement("div");
+      crow.className = "exp-row";
+      var clabel = document.createElement("span");
+      clabel.className = "exp-label";
+      clabel.textContent = "Correct Answer: ";
+      crow.appendChild(clabel);
+      crow.appendChild(document.createTextNode("Option " + optionLetter(card, q.correct) + " - " + optionText(card, q.correct)));
+      wrap.appendChild(crow);
+
+      var srow = document.createElement("div");
+      srow.className = "exp-row";
+      var slabel = document.createElement("span");
+      slabel.className = "exp-label";
+      slabel.textContent = "Source: ";
+      srow.appendChild(slabel);
+      srow.appendChild(document.createTextNode(q.sourceExam));
+      wrap.appendChild(srow);
+
+      var krow = document.createElement("div");
+      krow.className = "exp-row";
+      var klabel = document.createElement("span");
+      klabel.className = "exp-label";
+      klabel.textContent = "Key concept: ";
+      krow.appendChild(klabel);
+      krow.appendChild(document.createTextNode(q.topic));
+      wrap.appendChild(krow);
+
+      var hrow = document.createElement("div");
+      hrow.className = "exp-row";
+      var hlabel = document.createElement("span");
+      hlabel.className = "exp-label";
+      hlabel.textContent = "Hint: ";
+      hrow.appendChild(hlabel);
+      hrow.appendChild(document.createTextNode(HINTS[q.id] || ""));
+      wrap.appendChild(hrow);
+
+      var note = document.createElement("div");
+      note.className = "exp-note";
+      var nlabel = document.createElement("span");
+      nlabel.className = "exp-label";
+      nlabel.textContent = "Explanation: ";
+      note.appendChild(nlabel);
+      note.appendChild(document.createTextNode(EXPLANATIONS[q.id] || ""));
+      wrap.appendChild(note);
+
+      explanations.appendChild(wrap);
+
+      var correctEl = card.querySelector('.opt input[value="' + q.correct + '"]');
+      if (correctEl && correctEl.parentNode) correctEl.parentNode.classList.add("answered-correct");
+      if (checked && checked.value !== q.correct) {
+        checked.parentNode.classList.add("answered-wrong");
+      }
+    });
+    quizView.style.display = "none";
+    resultView.style.display = "none";
+    reviewView.style.display = "block";
+    reviewView.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (window.MathJax && MathJax.typesetPromise) {
+      MathJax.typesetPromise([explanations]);
+    }
+  }
+
+  function optionText(card, value) {
+    var opts = Array.prototype.slice.call(card.querySelectorAll(".opt"));
+    for (var i = 0; i < opts.length; i++) {
+      var input = opts[i].querySelector("input");
+      if (input.value === value) {
+        var val = opts[i].querySelector(".opt-val");
+        var txt = "";
+        if (val) {
+          txt = val.textContent;
+        }
+        return txt.replace(/\s+/g, " ").trim();
+      }
+    }
+    return "";
+  }
+
+  function submitQuiz() {
+    if (submitted) return;
+    submitted = true;
+    if (timerId) clearInterval(timerId);
+    showResult();
+  }
+
+  function requestSubmit() {
+    if (submitted) return;
+    var r = gatherResults();
+    var parts = [];
+    if (r.unanswered > 0) parts.push(r.unanswered + " question(s) are unanswered");
+    var revCount = 0;
+    for (var i = 0; i < reviewed.length; i++) if (reviewed[i]) revCount++;
+    if (revCount > 0) parts.push(revCount + " question(s) are marked for review");
+    if (parts.length > 0) {
+      document.getElementById("confirmMsg").textContent =
+        parts.join("; ") + ". Do you want to submit the quiz?";
+      confirmDialog.showModal();
+    } else {
+      submitQuiz();
+    }
+  }
+
+  function retry() {
+    submitted = false;
+    if (timerId) clearInterval(timerId);
+    for (var i = 0; i < TOTAL; i++) reviewed[i] = false;
+    var radios = form.querySelectorAll('input[type="radio"]');
+    for (var j = 0; j < radios.length; j++) radios[j].checked = false;
+    cards.forEach(function (card) {
+      card.querySelectorAll(".opt").forEach(function (o) {
+        o.classList.remove("answered-correct", "answered-wrong");
+      });
+    });
+    quizView.style.display = "block";
+    resultView.style.display = "none";
+    reviewView.style.display = "none";
+    showCard(0);
+    startTimer();
+    quizView.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  form.addEventListener("change", function () {
+    refreshNav();
+  });
+
+  document.getElementById("btnPrev").addEventListener("click", function () {
+    if (currentIndex > 0) showCard(currentIndex - 1);
+  });
+
+  document.getElementById("btnNext").addEventListener("click", function () {
+    if (currentIndex < TOTAL - 1) showCard(currentIndex + 1);
+  });
+
+  btnMark.addEventListener("click", function () {
+    if (submitted) return;
+    reviewed[currentIndex] = !reviewed[currentIndex];
+    refreshNav();
+    var qnum = currentIndex + 1;
+    timerLive.textContent = reviewed[currentIndex]
+      ? "Question " + qnum + " marked for review."
+      : "Question " + qnum + " no longer marked for review.";
+  });
+
+  document.getElementById("btnClear").addEventListener("click", function () {
+    if (submitted) return;
+    var q = QUESTIONS[currentIndex];
+    var checked = form.querySelector('input[name="' + q.id + '"]:checked');
+    if (checked) checked.checked = false;
+    refreshNav();
+    var qnum = currentIndex + 1;
+    timerLive.textContent = "Response cleared for question " + qnum + ".";
+  });
+
+  document.getElementById("btnStart").addEventListener("click", function () {
+    startView.style.display = "none";
+    quizView.style.display = "block";
+    quizView.scrollIntoView({ behavior: "smooth", block: "start" });
+    startTimer();
+  });
+
+  document.getElementById("btnSubmit").addEventListener("click", requestSubmit);
+  document.getElementById("confirmContinue").addEventListener("click", function () { confirmDialog.close(); });
+  document.getElementById("confirmSubmit").addEventListener("click", function () { confirmDialog.close(); submitQuiz(); });
+  document.getElementById("btnRetry").addEventListener("click", retry);
+  document.getElementById("btnRetry2").addEventListener("click", retry);
+  document.getElementById("btnReview").addEventListener("click", buildReview);
+  document.getElementById("btnBackResult").addEventListener("click", function () {
+    reviewView.style.display = "none";
+    resultView.style.display = "block";
+  });
+
+  cards.forEach(function (card, idx) {
+    card.setAttribute("data-number", String(idx + 1));
+  });
+
+  buildNav();
+  showCard(0);
+})();
+</script>
+</body>
+</html>

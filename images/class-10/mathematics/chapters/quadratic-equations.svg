@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 230" role="img" aria-label="Quadratic Equations - simple parabola with two roots">
+  <rect width="400" height="230" fill="#ffffff"/>
+  <line x1="60" y1="175" x2="340" y2="175" stroke="#1a237e" stroke-width="8" stroke-linecap="round"/>
+  <polygon points="340,175 320,161 320,189" fill="#1a237e"/>
+  <line x1="200" y1="28" x2="200" y2="175" stroke="#c5cae9" stroke-width="5" stroke-dasharray="16 12"/>
+  <path d="M80 175 C120 25 280 25 320 175" stroke="#f9a825" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <circle cx="80" cy="175" r="12" fill="#1a237e"/>
+  <circle cx="320" cy="175" r="12" fill="#1a237e"/>
+</svg>

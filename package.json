@@ -1,0 +1,22 @@
+{
+  "name": "vyasa-academy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vyasa Academy – educational website for CBSE and ICSE students",
+  "author": "mahichowdary100 <mahichowdary100@gmail.com>",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "powershell -NoProfile -ExecutionPolicy Bypass -File cbse-study-material/_build.ps1",
+    "link-walk": "powershell -NoProfile -ExecutionPolicy Bypass -File \"$LOCALAPPDATA/Temp/opencode/walk-sm-links.ps1\""
+  },
+  "dependencies": {
+    "@google/genai": "^2.27.0",
+    "openai": "^7.15.0"
+  },
+  "main": "blog.js",
+  "keywords": [],
+  "type": "commonjs"
+}

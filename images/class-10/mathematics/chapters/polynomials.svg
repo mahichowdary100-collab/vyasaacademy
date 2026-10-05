@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 230" role="img" aria-label="Polynomials - simple curve crossing the x-axis">
+  <rect width="400" height="230" fill="#ffffff"/>
+  <line x1="60" y1="180" x2="340" y2="180" stroke="#1a237e" stroke-width="8" stroke-linecap="round"/>
+  <polygon points="340,180 320,166 320,194" fill="#1a237e"/>
+  <path d="M80 60 C130 200 230 40 320 180" stroke="#f9a825" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <circle cx="200" cy="164" r="14" fill="#1a237e"/>
+</svg>

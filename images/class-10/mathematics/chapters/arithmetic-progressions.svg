@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 230" role="img" aria-label="Arithmetic Progressions - three ascending equal steps">
+  <rect width="400" height="230" fill="#ffffff"/>
+  <rect x="70" y="165" width="60" height="50" rx="8" fill="#1a237e"/>
+  <rect x="170" y="125" width="60" height="90" rx="8" fill="#1a237e"/>
+  <rect x="270" y="85" width="60" height="130" rx="8" fill="#f9a825"/>
+  <line x1="55" y1="215" x2="345" y2="215" stroke="#1a237e" stroke-width="8" stroke-linecap="round"/>
+</svg>

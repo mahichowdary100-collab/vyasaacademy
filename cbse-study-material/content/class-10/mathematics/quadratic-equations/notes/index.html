@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CBSE Class 10 Maths Quadratic Equations Notes | Formulae &amp; Examples</title>
+  <meta name="description" content="CBSE Class 10 Mathematics Quadratic Equations notes covering the standard form, factorisation method, quadratic formula, discriminant, nature of roots, applications, competency questions, case-based examples, self-practice questions and exam tips." />
+  <link rel="canonical" href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/quadratic-equations/notes/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vyasa Academy" />
+  <meta property="og:title" content="CBSE Class 10 Maths Quadratic Equations Notes | Formulae &amp; Examples" />
+  <meta property="og:description" content="CBSE Class 10 Mathematics Quadratic Equations notes covering the standard form, factorisation method, quadratic formula, discriminant, nature of roots, applications, competency questions, case-based examples, self-practice questions and exam tips." />
+  <meta property="og:url" content="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/quadratic-equations/notes/" />
+  <meta property="og:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CBSE Class 10 Maths Quadratic Equations Notes | Formulae &amp; Examples" />
+  <meta name="twitter:description" content="CBSE Class 10 Mathematics Quadratic Equations notes covering the standard form, factorisation method, quadratic formula, discriminant, nature of roots, applications, competency questions, case-based examples, self-practice questions and exam tips." />
+  <meta name="twitter:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","itemListElement":[{"position":1,"name":"Home","item":"https://www.vyasaacademy.in/","@type":"ListItem"},{"position":2,"name":"CBSE Study Material","item":"https://www.vyasaacademy.in/cbse-study-material/","@type":"ListItem"},{"position":3,"name":"Class 10","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/","@type":"ListItem"},{"position":4,"name":"Mathematics","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/","@type":"ListItem"},{"position":5,"name":"Quadratic Equations","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/quadratic-equations/","@type":"ListItem"},{"position":6,"name":"Notes","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/quadratic-equations/notes/","@type":"ListItem"}],"@type":"BreadcrumbList"}
+  </script>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+      processEscapes: true
+    }
+  };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <style>
+  .sm-notes { font-size: 1rem; line-height: 1.8; }
+  .sm-notes h2 { font-size: 1.45rem; color: var(--primary); margin: 44px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--accent); }
+  .sm-notes h3 { font-size: 1.15rem; color: var(--dark); margin: 28px 0 12px; }
+  .sm-notes h4 { font-size: 1.05rem; color: var(--dark); margin: 20px 0 8px; }
+  .sm-notes p { margin-bottom: 14px; }
+  .sm-notes ul, .sm-notes ol { margin: 10px 0 16px 24px; }
+  .sm-notes li { margin-bottom: 6px; }
+  .sm-notes ul { list-style: disc; }
+
+  .def-box { background: #eef2ff; border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .def-box .box-label { font-weight: 700; color: var(--primary); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .result-box { background: #fff8e1; border-left: 4px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .result-box .box-label { font-weight: 700; color: var(--accent-dark); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .example-box { background: #f0fdf4; border-left: 4px solid #16a34a; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .example-box .box-label { font-weight: 700; color: #16a34a; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .tip-box { background: #eff6ff; border-left: 4px solid #2563eb; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .tip-box .box-label { font-weight: 700; color: #2563eb; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .warn-box { background: #fef2f2; border-left: 4px solid #dc2626; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .warn-box .box-label { font-weight: 700; color: #dc2626; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .steps { margin: 12px 0 16px; }
+  .steps .step { display: flex; gap: 12px; margin-bottom: 10px; }
+  .steps .step-num { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: var(--primary); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; margin-top: 3px; }
+  .steps .step-text { flex: 1; }
+
+  .table-wrap { overflow-x: auto; margin: 16px 0; -webkit-overflow-scrolling: touch; }
+  .sm-notes table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .sm-notes th { background: var(--primary); color: var(--white); text-align: left; padding: 12px 14px; font-weight: 600; white-space: nowrap; }
+  .sm-notes td { padding: 10px 14px; border-bottom: 1px solid #e5e7eb; }
+  .sm-notes tr:nth-child(even) td { background: #f9fafb; }
+  .sm-notes tr:hover td { background: #eef2ff; }
+
+  .highlight { background: #fef9c3; padding: 2px 5px; border-radius: 4px; font-weight: 600; }
+  .qbox { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: var(--radius); padding: 16px 20px; margin: 12px 0; }
+  .qbox .q-label { font-weight: 700; color: var(--primary); margin-bottom: 4px; }
+
+  .app-box { background: #ecfeff; border-left: 4px solid #0891b2; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .app-box .box-label { font-weight: 700; color: #0e7490; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .comp-box { background: #f5f3ff; border-left: 4px solid #7c3aed; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .comp-box .box-label { font-weight: 700; color: #6d28d9; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .solved-box { background: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #16a34a; border-radius: var(--radius); padding: 18px 22px; margin: 18px 0; box-shadow: 0 2px 8px rgba(15,23,42,.05); }
+  .solved-box .s-label { font-weight: 700; color: #16a34a; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  .solved-box .s-part { margin: 10px 0 0; }
+  .solved-box .s-part b { color: var(--primary); }
+
+  .solution-box { background: #f8fafc; border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 16px 0 4px; font-size: 0.95rem; }
+  .solution-box p { margin: 8px 0; }
+
+  .case-card { background: #fff; border: 1px solid #e2e8f0; border-radius: var(--radius); margin: 22px 0; box-shadow: 0 2px 8px rgba(15,23,42,.05); overflow: hidden; }
+  .case-card-header { background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: #fff; padding: 14px 20px; }
+  .case-card-header h3 { margin: 0; font-size: 1.05rem; }
+  .case-card-body { padding: 18px 20px; }
+
+  .concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 18px 0; }
+  .concept-card { background: #fff; border: 1px solid #e2e8f0; border-left: 4px solid var(--primary); border-radius: var(--radius); padding: 16px 18px; transition: var(--transition); }
+  .concept-card:hover { box-shadow: 0 6px 18px rgba(79,70,229,.12); transform: translateY(-2px); }
+  .concept-card h4 { color: var(--primary); margin: 0 0 6px; font-size: 1rem; }
+  .concept-card p { margin: 0; font-size: 0.92rem; }
+
+  .tag-pill { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: .4px; text-transform: uppercase; padding: 3px 10px; border-radius: 999px; vertical-align: middle; }
+  .tag-style { background: #e0e7ff; color: #3730a3; }
+
+  .sm-notes mjx-container { max-width: 100%; }
+  .sm-notes mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; }
+
+  .resource-nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
+  .resource-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: var(--radius); border: 2px solid #e5e7eb; font-weight: 600; font-size: 0.92rem; color: var(--dark); background: var(--white); transition: var(--transition); }
+  .resource-nav a:hover, .resource-nav a.is-active { border-color: var(--primary); background: var(--primary); color: var(--white); }
+
+  .sm-back { display: inline-flex; align-items: center; gap: 8px; margin-top: 30px; padding: 10px 0; color: var(--primary); font-weight: 600; }
+  .sm-back:hover { color: var(--accent-dark); }
+
+  .next-chapter { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; justify-content: space-between; margin-top: 26px; padding: 18px 22px; background: linear-gradient(135deg, #eef2ff, #ffffff); border: 1px solid #e0e7ff; border-radius: var(--radius); }
+  .next-chapter h3 { margin: 0; font-size: 1.02rem; }
+  .next-chapter p { margin: 4px 0 0; font-size: 0.9rem; }
+
+  @media (max-width: 640px) {
+    .sm-notes h2 { font-size: 1.25rem; }
+    .sm-notes { font-size: 0.95rem; }
+    .steps .step { gap: 8px; }
+    .steps .step-num { width: 22px; height: 22px; font-size: 0.75rem; }
+    .resource-nav { gap: 6px; }
+    .resource-nav a { padding: 8px 12px; font-size: 0.85rem; }
+    .concept-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 420px) {
+    .concept-grid { grid-template-columns: 1fr; }
+  }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="/" class="logo"><i class="fas fa-graduation-cap"></i> Vyasa Academy</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="/">Home</a>
+      <a href="/#courses">Courses</a>
+      <a href="/cbse-study-material/" class="active">Study Material</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main class="sm-page">
+  <div class="container sm-container">
+    <nav class="sm-crumbs" aria-label="Breadcrumb">
+      <a href="https://www.vyasaacademy.in/">Home</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/">CBSE Study Material</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/">Class 10</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/">Mathematics</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/quadratic-equations/">Quadratic Equations</a> /
+      Notes
+    </nav>
+
+    <section class="sm-hero sm-hero-slim">
+      <p class="sm-eyebrow">CBSE Class 10 Â· Mathematics</p>
+      <h1>Class 10 Mathematics â€“ Chapter 4: Quadratic Equations</h1>
+      <p>This chapter introduces equations in which the highest power of the variable is 2. You will learn to recognise a quadratic equation, write it in standard form, solve it by factorisation or with the quadratic formula, and use the discriminant to predict the nature of its roots. The same tools then help you answer real-life problems about areas, consecutive numbers, train speeds, heights and revenues. In <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/real-numbers/notes/">Chapter 1 â€“ Real Numbers</a> and <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/polynomials/notes/">Chapter 2 â€“ Polynomials</a>, factorisation helped split numbers and expressions; here it becomes the key to solving a whole family of equations.</p>
+    </section>
+
+    <nav class="resource-nav" aria-label="Chapter resources">
+      <a class="is-active" href="/cbse-study-material/class-10/mathematics/quadratic-equations/notes/"><i class="fas fa-book-open"></i> Notes</a>
+      <a href="/cbse-study-material/class-10/mathematics/quadratic-equations/practice-paper/"><i class="fas fa-file-lines"></i> Practice Paper</a>
+      <a href="/cbse-study-material/class-10/mathematics/quadratic-equations/quiz/"><i class="fas fa-bullseye"></i> Quiz</a>
+      <a href="/cbse-study-material/class-10/mathematics/quadratic-equations/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+    </nav>
+
+    <article class="sm-notes">
+
+      <section id="introduction">
+        <h2>1. Introduction to Quadratic Equations</h2>
+        <p>A <strong>quadratic equation in one variable</strong> is an equation that can be written in the form \(ax^2 + bx + c = 0\), where the unknown appears with highest exponent 2. The word "quadratic" comes from <em>quadratus</em>, Latin for "square".</p>
+        <p>Why do they matter? Whenever two things multiply to a fixed product â€” the two dimensions of a garden, the speed and time of a journey, the number of rows and benches in a hall â€” the relationship often becomes quadratic. Squaring also appears when a ball is thrown: its height is a quadratic function of time.</p>
+
+        <div class="concept-grid">
+          <div class="concept-card">
+            <h4>One variable</h4>
+            <p>A single letter, usually \(x\), carrying the square.</p>
+          </div>
+          <div class="concept-card">
+            <h4>Highest power 2</h4>
+            <p>After simplification the \(x^2\) term must survive.</p>
+          </div>
+          <div class="concept-card">
+            <h4>Three coefficients</h4>
+            <p>\[a x^2 + b x + c\] with \(a \neq 0\).</p>
+          </div>
+          <div class="concept-card">
+            <h4>Two roots</h4>
+            <p>Up to two real roots â€” equal, distinct or none.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="objectives">
+        <h2>2. What You Will Learn</h2>
+        <ul>
+          <li>Recognise a quadratic equation and express it in standard form.</li>
+          <li>Identify \(a\), \(b\) and \(c\), including equations not yet in standard form.</li>
+          <li>Find roots â€” by substitution, by factorisation and by the quadratic formula.</li>
+          <li>Compute the discriminant and predict the nature of the roots.</li>
+          <li>Fix unknown coefficients when a condition on the roots is given.</li>
+          <li>Form and solve quadratic equations from word problems.</li>
+          <li>Answer competency and case-based questions with reasoning, not just calculation.</li>
+        </ul>
+      </section>
+
+<section id="identifying">
+  <h2>3. Identifying a Quadratic Equation</h2>
+  <p>A quadratic equation contains a variable with highest power 2. When it is written out, collected and simplified, the term with \(x^2\) must still be present with a non-zero coefficient.</p>
+  <div class="def-box">
+    <div class="box-label">Definition</div>
+    <p>An equation of the form \(ax^2 + bx + c = 0\), where \(a \neq 0\), and \(a\), \(b\), \(c\) are real numbers, is a <strong>quadratic equation in one variable</strong> \(x\).</p>
+  </div>
+  <p>Not every equation that contains an \(x^2\) term is automatically quadratic â€” sometimes the squared terms cancel when both sides are simplified.</p>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Equation</th><th>Simplify / note</th><th>Quadratic?</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>\(2x^2 - 4x + 3 = 0\)</td><td>Already in standard form</td><td>Yes</td></tr>
+        <tr><td>\(x^2 = 25\)</td><td>\(x^2 - 25 = 0\), so \(b = 0\)</td><td>Yes</td></tr>
+        <tr><td>\(x(x + 3) = 0\)</td><td>\(x^2 + 3x = 0\), so \(c = 0\)</td><td>Yes</td></tr>
+        <tr><td>\(4x - 7 = 0\)</td><td>No \(x^2\) term at all</td><td>No â€” linear</td></tr>
+        <tr><td>\((x + 1)^2 = x^2 + 5\)</td><td>\(x^2 + 2x + 1 = x^2 + 5\) gives \(2x = 4\)</td><td>No â€” the \(x^2\) terms cancel</td></tr>
+        <tr><td>\(x^2(x - 1) = 0\)</td><td>Expands to \(x^3 - x^2 = 0\)</td><td>No â€” highest power is 3</td></tr>
+        <tr><td>\((x - 2)(x + 2) = 0\)</td><td>\(x^2 - 4 = 0\)</td><td>Yes</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="warn-box">
+    <div class="box-label">Careful</div>
+    <p>Always simplify both sides completely before deciding. A squared term that cancels does not make the equation quadratic.</p>
+  </div>
+</section>
+
+<section id="standard-form">
+  <h2>4. Standard Form</h2>
+  <p>Exams expect a quadratic to be written as</p>
+  <div class="result-box">
+    <div class="box-label">Standard form</div>
+    <p>\[ax^2 + bx + c = 0, \qquad a \neq 0\]</p>
+    </div>
+  <p>where:</p>
+  <ul>
+    <li>\(a\) is the coefficient of \(x^2\) (must not be 0, otherwise there is no \(x^2\) term and the equation is no longer quadratic);</li>
+    <li>\(b\) is the coefficient of \(x\);</li>
+    <li>\(c\) is the constant term.</li>
+  </ul>
+  <p>Either \(b\) or \(c\) may be 0 â€” the equation is still quadratic as long as \(a \neq 0\).</p>
+  <div class="example-box">
+    <div class="box-label">Worked example</div>
+    <p>Write \(x(2x - 5) = 3\) in standard form. Expand: \(2x^2 - 5x = 3\). Bring everything to one side: \(2x^2 - 5x - 3 = 0\). Here \(a = 2\), \(b = -5\), \(c = -3\).</p>
+  </div>
+</section>
+
+<section id="coefficients">
+  <h2>5. Identifying \(a\), \(b\) and \(c\)</h2>
+  <p>Before applying any method, put the equation in standard form and read the coefficients <em>with their signs</em>. A common exam pitfall is misreading a negative coefficient.</p>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Equation (as given)</th><th>Standard form</th><th>\(a\)</th><th>\(b\)</th><th>\(c\)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>\(3x^2 - 2x + 5 = 0\)</td><td>\(3x^2 - 2x + 5 = 0\)</td><td>3</td><td>-2</td><td>5</td></tr>
+        <tr><td>\(x^2 = 7\)</td><td>\(x^2 - 7 = 0\)</td><td>1</td><td>0</td><td>-7</td></tr>
+        <tr><td>\(4x - x^2 = -1\)</td><td>\(-x^2 + 4x + 1 = 0\)</td><td>-1</td><td>4</td><td>1</td></tr>
+        <tr><td>\(2x(x - 3) = 0\)</td><td>\(2x^2 - 6x = 0\)</td><td>2</td><td>-6</td><td>0</td></tr>
+        <tr><td>\((x + 1)^2 = 4\)</td><td>\(x^2 + 2x - 3 = 0\)</td><td>1</td><td>2</td><td>-3</td></tr>
+        <tr><td>\(\dfrac{x^2}{2} + 3x = 1\)</td><td>\(\dfrac{1}{2}x^2 + 3x - 1 = 0\)</td><td>\(\dfrac{1}{2}\)</td><td>3</td><td>-1</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tip-box">
+    <div class="box-label">Tip</div>
+    <p>Multiplying an equation by a non-zero constant does not change its roots, so \(x^2 + 6x - 2 = 0\) and \(2x^2 + 12x - 4 = 0\) have exactly the same solutions.</p>
+  </div>
+</section>
+
+<section id="roots">
+  <h2>6. Roots and Solutions</h2>
+  <p>A <strong>root</strong> (or <strong>solution</strong>) of the quadratic equation \(ax^2 + bx + c = 0\) is a value of \(x\) that satisfies the equation. Putting the value into the left-hand side must give 0.</p>
+  <div class="def-box">
+    <div class="box-label">Root</div>
+    <p>\(x = k\) is a root of \(ax^2 + bx + c = 0\) if and only if \(ak^2 + bk + c = 0\).</p>
+  </div>
+  <p>A quadratic equation can have at most two real roots. Depending on the coefficients it has:</p>
+  <ul>
+    <li>two distinct real roots, or</li>
+    <li>two equal real roots (one distinct value repeated), or</li>
+    <li>no real roots.</li>
+  </ul>
+  <p>Which of these happens is decided by the discriminant, introduced in Section 10.</p>
+</section>
+
+<section id="verification">
+  <h2>7. Verifying a Root</h2>
+  <p>To check whether \(x = k\) is a root, substitute \(k\) into the left-hand side of the standard form. If the result is 0, it is a root.</p>
+  <div class="steps">
+    <div class="step"><span class="step-num">1</span><span class="step-text">Write the equation in standard form, \(ax^2 + bx + c = 0\).</span></div>
+    <div class="step"><span class="step-num">2</span><span class="step-text">Substitute \(x = k\): compute \(ak^2 + bk + c\).</span></div>
+    <div class="step"><span class="step-num">3</span><span class="step-text">If the value is 0, \(k\) is a root; otherwise it is not.</span></div>
+  </div>
+  <div class="example-box">
+    <div class="box-label">Worked example</div>
+    <p>Check whether \(x = -2\) and \(x = 3\) are roots of \(x^2 - x - 6 = 0\).</p>
+    <p>For \(x = -2\): \((-2)^2 - (-2) - 6 = 4 + 2 - 6 = 0\) âœ“</p>
+    <p>For \(x = 3\): \((3)^2 - 3 - 6 = 9 - 3 - 6 = 0\) âœ“</p>
+    <p>Both values are roots. Indeed \((x + 2)(x - 3) = x^2 - x - 6\).</p>
+  </div>
+  <div class="warn-box">
+    <div class="box-label">Note</div>
+    <p>Verification alone does not prove you have found <em>all</em> roots. It proves the values you tested are correct. Solving the equation systematically shows the full set.</p>
+  </div>
+</section>
+<section id="factorisation">
+  <h2>8. Solving by Factorisation</h2>
+  <p>The most reliable first method is <strong>factorisation</strong>: rewrite the quadratic as a product of two linear factors, then use the zero product rule.</p>
+  <div class="result-box">
+    <div class="box-label">Zero product rule</div>
+    <p>If \(p \times q = 0\), then \(p = 0\) or \(q = 0\) (or both).</p>
+  </div>
+  <div class="steps">
+    <div class="step"><span class="step-num">1</span><span class="step-text">Write the equation in standard form: \(ax^2 + bx + c = 0\).</span></div>
+    <div class="step"><span class="step-num">2</span><span class="step-text">Find two numbers \(m\) and \(n\) such that \(m + n = b\) and \(m \times n = a \times c\).</span></div>
+    <div class="step"><span class="step-num">3</span><span class="step-text">Split the middle term: \(ax^2 + mx + nx + c = 0\).</span></div>
+    <div class="step"><span class="step-num">4</span><span class="step-text">Group and take out common factors to write \((px + q)(rx + s) = 0\).</span></div>
+    <div class="step"><span class="step-num">5</span><span class="step-text">Apply the zero product rule and solve the two linear equations.</span></div>
+  </div>
+
+  <div class="example-box">
+    <div class="box-label">Worked example (basic)</div>
+    <p>Solve \(x^2 - 5x + 6 = 0\).</p>
+    <p><strong>Step 1:</strong> Standard form done: \(a = 1\), \(b = -5\), \(c = 6\).</p>
+    <p><strong>Step 2:</strong> Need \(m + n = -5\), \(mn = 6 \implies m = -2, n = -3\).</p>
+    <p><strong>Step 3â€“4:</strong> \(x^2 - 2x - 3x + 6 = x(x - 2) - 3(x - 2) = (x - 2)(x - 3)\).</p>
+    <p><strong>Step 5:</strong> \((x - 2)(x - 3) = 0 \implies x = 2\) or \(x = 3\).</p>
+    <p><strong>Verify:</strong> \(4 - 10 + 6 = 0\) âœ“ and \(9 - 15 + 6 = 0\) âœ“. So the roots are \(x = 2\) and \(x = 3\).</p>
+  </div>
+
+  <div class="example-box">
+    <div class="box-label">Worked example (moderate)</div>
+    <p>Solve \(2x^2 + 7x + 3 = 0\).</p>
+    <p><strong>Step 2:</strong> \(a \times c = 2 \times 3 = 6\), and \(b = 7\). Find \(m + n = 7\), \(mn = 6 \implies m = 1, n = 6\).</p>
+    <p><strong>Step 3â€“4:</strong> \(2x^2 + x + 6x + 3 = x(2x + 1) + 3(2x + 1) = (2x + 1)(x + 3)\).</p>
+    <p><strong>Step 5:</strong> \((2x + 1)(x + 3) = 0 \implies x = -\dfrac{1}{2}\) or \(x = -3\).</p>
+    <p><strong>Verify:</strong> \(2\left(\frac{1}{4}\right) - \frac{7}{2} + 3 = \frac{1}{2} - \frac{7}{2} + 3 = 0\) âœ“; \(18 - 21 + 3 = 0\) âœ“.</p>
+  </div>
+
+  <div class="example-box">
+    <div class="box-label">Worked example (rearrange first)</div>
+    <p>Solve \(x(x - 3) = 10\).</p>
+    <p><strong>Step 1:</strong> \(x^2 - 3x - 10 = 0\), so \(a = 1, b = -3, c = -10\).</p>
+    <p><strong>Step 2:</strong> \(m + n = -3\), \(mn = -10 \implies m = -5, n = 2\).</p>
+    <p><strong>Step 3â€“4:</strong> \(x^2 - 5x + 2x - 10 = x(x - 5) + 2(x - 5) = (x - 5)(x + 2)\).</p>
+    <p><strong>Step 5:</strong> \(x = 5\) or \(x = -2\).</p>
+    <p><strong>Verify:</strong> \(5(2) = 10\) âœ“; \((-2)(-5) = 10\) âœ“.</p>
+  </div>
+
+  <div class="tip-box">
+    <div class="box-label">When does factorisation work best?</div>
+    <p>It works quickly when the two numbers \(m\) and \(n\) are easy to spot, i.e. when the roots are rational. When the numbers are not obvious, switch to the quadratic formula.</p>
+  </div>
+</section>
+
+<section id="quadratic-formula">
+  <h2>9. Solving with the Quadratic Formula</h2>
+  <p>Every quadratic equation \(ax^2 + bx + c = 0\) (with \(a \neq 0\)) can be solved by the <strong>quadratic formula</strong>:</p>
+  <div class="result-box">
+    <div class="box-label">Quadratic formula</div>
+    <p>\[x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\]</p>
+  </div>
+  <div class="steps">
+    <div class="step"><span class="step-num">1</span><span class="step-text">Write in standard form and identify \(a\), \(b\), \(c\).</span></div>
+    <div class="step"><span class="step-num">2</span><span class="step-text">Compute the discriminant \(D = b^2 - 4ac\).</span></div>
+    <div class="step"><span class="step-num">3</span><span class="step-text">If \(D \geq 0\), substitute into the formula and simplify the two roots.</span></div>
+    <div class="step"><span class="step-num">4</span><span class="step-text">If \(D < 0\), state that there are no real roots.</span></div>
+  </div>
+
+  <div class="example-box">
+    <div class="box-label">Worked example</div>
+    <p>Solve \(x^2 - 4x - 5 = 0\).</p>
+    <p>Here \(a = 1\), \(b = -4\), \(c = -5\). Discriminant \(D = (-4)^2 - 4(1)(-5) = 16 + 20 = 36\).</p>
+    <p>\[x = \frac{-(-4) \pm \sqrt{36}}{2(1)} = \frac{4 \pm 6}{2}\]</p>
+    <p>So \(x = \dfrac{4 + 6}{2} = 5\) and \(x = \dfrac{4 - 6}{2} = -1\).</p>
+    <p><strong>Verify:</strong> \(25 - 20 - 5 = 0\) âœ“; \(1 + 4 - 5 = 0\) âœ“.</p>
+  </div>
+
+  <div class="example-box">
+    <div class="box-label">Worked example (rational but factorisation hidden)</div>
+    <p>Solve \(2x^2 - 5x + 2 = 0\). Here \(a = 2\), \(b = -5\), \(c = 2\).</p>
+    <p>\(D = 25 - 16 = 9\).</p>
+    <p>\[x = \frac{5 \pm 3}{4}\]</p>
+    <p>So \(x = \dfrac{5 + 3}{4} = 2\) and \(x = \dfrac{5 - 3}{4} = \dfrac{1}{2}\).</p>
+  </div>
+
+  <div class="example-box">
+    <div class="box-label">Worked example (irrational roots)</div>
+    <p>Solve \(x^2 + 6x + 6 = 0\). Here \(a = 1\), \(b = 6\), \(c = 6\).</p>
+    <p>\(D = 36 - 24 = 12\).</p>
+    <p>\[x = \frac{-6 \pm \sqrt{12}}{2} = \frac{-6 \pm 2\sqrt{3}}{2} = -3 \pm \sqrt{3}\]</p>
+    <p>So the two roots are \(-3 + \sqrt{3}\) and \(-3 - \sqrt{3}\).</p>
+  </div>
+
+  <div class="warn-box">
+    <div class="box-label">Warning</div>
+    <p>Do not drop the \(\pm\) symbol, and do not forget the factor \(2a\) in the denominator. Write \(b\) with its sign: if \(b = -4\), then \(-b = 4\).</p>
+  </div>
+</section>
+
+<section id="discriminant">
+  <h2>10. The Discriminant</h2>
+  <p>The expression under the square root in the formula has its own name and role.</p>
+  <div class="def-box">
+    <div class="box-label">Discriminant</div>
+    <p>For \(ax^2 + bx + c = 0\), the <strong>discriminant</strong> is \(D = b^2 - 4ac\).</p>
+  </div>
+  <p>Without solving the equation, the discriminant tells you what kind of roots to expect:</p>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Discriminant</th><th>Nature of roots</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>\(D > 0\)</td><td>Two distinct real roots</td></tr>
+        <tr><td>\(D = 0\)</td><td>Two equal real roots (one real root, repeated)</td></tr>
+        <tr><td>\(D < 0\)</td><td>No real roots</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="example-box">
+    <div class="box-label">Worked example (\(D > 0\))</div>
+    <p>\(2x^2 - 7x + 3 = 0\): \(D = 49 - 24 = 25 > 0\), so there are <strong>two distinct real roots</strong>. Indeed \(x = \dfrac{7 \pm 5}{4} = 3, \dfrac{1}{2}\).</p>
+  </div>
+
+  <div class="example-box">
+    <div class="box-label">Worked example (\(D = 0\))</div>
+    <p>\(x^2 - 6x + 9 = 0\): \(D = 36 - 36 = 0\), so there are <strong>two equal real roots</strong>: \(x = \dfrac{6}{2} = 3\) (repeated). Note \(x^2 - 6x + 9 = (x - 3)^2\).</p>
+  </div>
+
+  <div class="example-box">
+    <div class="box-label">Worked example (\(D < 0\))</div>
+    <p>\(3x^2 + 2x + 5 = 0\): \(D = 4 - 60 = -56 < 0\), so the equation has <strong>no real roots</strong>.</p>
+  </div>
+
+  <div class="example-box">
+    <div class="box-label">Worked example (parameter via discriminant)</div>
+    <p>For what value of \(k\) does \(x^2 + 2x + k = 0\) have equal roots?</p>
+    <p>Equal roots \(\iff D = 0\), i.e. \(4 - 4k = 0 \implies k = 1\).</p>
+  </div>
+
+  <div class="comp-box">
+    <div class="box-label">Reasoning</div>
+    <p>Suppose two equations have the same coefficients except one has \(c = 2\) and the other \(c = -2\). The one with \(c = -2\) has \(D = b^2 + 8 > 0\), so it always has two distinct real roots. You can answer such questions purely from the sign of \(D\).</p>
+  </div>
+</section>
+
+<section id="nature-of-roots">
+  <h2>11. Nature of Roots â€” Summary</h2>
+  <p>The table below summarises everything about the nature of roots in one place.</p>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Value of \(D = b^2 - 4ac\)</th><th>Nature of roots</th><th>Example</th><th>Roots</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>\(D > 0\) and a perfect square</td><td>Two distinct rational real roots</td><td>\(x^2 - 5x + 6 = 0\), \(D = 1\)</td><td>\(2, 3\)</td></tr>
+        <tr><td>\(D > 0\) but not a perfect square</td><td>Two distinct irrational real roots</td><td>\(x^2 + 6x + 6 = 0\), \(D = 12\)</td><td>\(-3 \pm \sqrt{3}\)</td></tr>
+        <tr><td>\(D = 0\)</td><td>Two equal real roots (repeated)</td><td>\((x - 3)^2 = 0\)</td><td>\(3, 3\)</td></tr>
+        <tr><td>\(D < 0\)</td><td>No real roots</td><td>\(x^2 + 2 = 0\)</td><td>none (in reals)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tip-box">
+    <div class="box-label">Tip</div>
+    <p>When a standard-form equation is a perfect square like \((x - 3)^2\), the two roots coincide. Exam questions sometimes word this as "equal roots" or "one root repeated twice".</p>
+  </div>
+</section>
+
+<section id="parameters">
+  <h2>12. Unknown Parameters \(k\), \(p\), \(m\)</h2>
+  <p>A parameter is an unknown number inside the coefficients. The discriminant links it to the nature of roots, and substitution links it to a given root.</p>
+
+  <div class="example-box">
+    <div class="box-label">Worked example (a root is given)</div>
+    <p>If \(x = 2\) is a root of \(x^2 + px - 6 = 0\), find \(p\).</p>
+    <p>Substitute \(x = 2\): \(4 + 2p - 6 = 0 \implies 2p = 2 \implies p = 1\).</p>
+    <p>So the equation is \(x^2 + x - 6 = 0 = (x + 3)(x - 2)\), confirming 2 is a root and giving the other root \(-3\).</p>
+  </div>
+
+  <div class="example-box">
+    <div class="box-label">Worked example (equal roots condition)</div>
+    <p>For which \(k\) does \(kx^2 + 6x + 1 = 0\) have equal roots?</p>
+    <p>Equal roots \(\iff D = 0\): \(36 - 4k = 0 \implies k = 9\). The equation is \(9x^2 + 6x + 1 = (3x + 1)^2\), root \(x = -\dfrac{1}{3}\) (repeated).</p>
+  </div>
+
+  <div class="example-box">
+    <div class="box-label">Worked example (two distinct real roots)</div>
+    <p>For which \(p\) does \(px^2 - 2x + 1 = 0\) have two distinct real roots?</p>
+    <p>Need \(a \neq 0\) and \(D > 0\): \(4 - 4p > 0 \implies p < 1\), and \(p \neq 0\). So \(p < 1\), \(p \neq 0\).</p>
+  </div>
+
+  <div class="example-box">
+    <div class="box-label">Worked example (no real roots)</div>
+    <p>For which \(m\) does \(2x^2 + mx + 8 = 0\) have no real roots?</p>
+    <p>Need \(D < 0\): \(m^2 - 64 < 0 \implies m^2 < 64 \implies -8 < m < 8\).</p>
+  </div>
+</section>
+<section id="applications">
+  <h2>13. Application Word Problems</h2>
+  <p>Word problems ask you to <em>frame</em> the equation first. The 4-step plan below works for every such problem.</p>
+  <div class="steps">
+    <div class="step"><span class="step-num">1</span><span class="step-text">Choose a variable and state what it means (e.g. "let breadth = \(x\) m").</span></div>
+    <div class="step"><span class="step-num">2</span><span class="step-text">Translate the words into a quadratic equation using the given relation.</span></div>
+    <div class="step"><span class="step-num">3</span><span class="step-text">Solve by factorisation or the formula.</span></div>
+    <div class="step"><span class="step-num">4</span><span class="step-text">Discard the root that does not make sense in the situation (negative length, time, count) and verify the remaining root.</span></div>
+  </div>
+
+  <div class="app-box">
+    <div class="box-label">Application 1 â€” Consecutive integers</div>
+    <p>The product of two consecutive positive integers is 306. Let the integers be \(x\) and \(x + 1\). Then \(x(x+1) = 306\), i.e. \(x^2 + x - 306 = 0\). Factorising: \((x + 18)(x - 17) = 0 \implies x = 17\) (we reject \(-18\) as negative). The integers are <strong>17 and 18</strong>. Check: \(17 \times 18 = 306\) âœ“.</p>
+  </div>
+
+  <div class="app-box">
+    <div class="box-label">Application 2 â€” Rectangular garden</div>
+    <p>A garden is 4 m longer than it is wide. Let breadth be \(x\) m; length is \(x + 4\) m. Area \(= x(x+4) = 96\), so \(x^2 + 4x - 96 = 0\). Factorising: \((x + 12)(x - 8) = 0 \implies x = 8\) (reject \(-12\)). The garden is <strong>8 m by 12 m</strong>. Check: \(8 \times 12 = 96\) âœ“.</p>
+  </div>
+
+  <div class="app-box">
+    <div class="box-label">Application 3 â€” Train speed</div>
+    <p>A train travels 200 km at a uniform speed. If the speed had been 10 km/h more, the journey would have taken 1 hour less. Let the speed be \(x\) km/h. Time at speed \(x\) is \(\dfrac{200}{x}\), at \(x+10\) it is \(\dfrac{200}{x+10}\). Given \(\dfrac{200}{x} - \dfrac{200}{x+10} = 1\). Multiplying by \(x(x+10)\): \(200(x+10) - 200x = x(x+10)\), so \(x^2 + 10x - 2000 = 0\). Factorising: \((x + 50)(x - 40) = 0 \implies x = 40\) km/h (reject \(-50\)). <strong>Speed = 40 km/h.</strong> Check: \(\frac{200}{40} = 5\) h, \(\frac{200}{50} = 4\) h, difference 1 h âœ“.</p>
+  </div>
+
+  <div class="app-box">
+    <div class="box-label">Application 4 â€” Right triangle</div>
+    <p>The hypotenuse of a right triangle is 13 cm and the difference between the other two sides is 7 cm. Let the shorter side be \(x\) cm; the other is \(x + 7\) cm. By Pythagoras: \(x^2 + (x+7)^2 = 13^2\). Expanding: \(x^2 + x^2 + 14x + 49 = 169\), so \(2x^2 + 14x - 120 = 0\), i.e. \(x^2 + 7x - 60 = 0\). Factorising: \((x + 12)(x - 5) = 0 \implies x = 5\). Sides are <strong>5 cm and 12 cm</strong>. Check: \(5^2 + 12^2 = 25 + 144 = 169 = 13^2\) âœ“.</p>
+  </div>
+
+  <div class="app-box">
+    <div class="box-label">Application 5 â€” Height of a ball</div>
+    <p>A ball thrown upward has height \(h = 25t - 5t^2\) metres after \(t\) seconds. On the ground, \(h = 0\): \(25t - 5t^2 = 0 \implies 5t(5 - t) = 0\). So \(t = 0\) (when thrown) or \(t = 5\). The ball returns to the ground after <strong>5 seconds</strong>. Check: \(25(5) - 5(25) = 125 - 125 = 0\) âœ“.</p>
+  </div>
+
+  <div class="app-box">
+    <div class="box-label">Application 6 â€” Sum of squares</div>
+    <p>The sum of the squares of two consecutive positive integers is 365. Let them be \(n\) and \(n+1\). Then \(n^2 + (n+1)^2 = 365\), so \(n^2 + n^2 + 2n + 1 = 365\), giving \(2n^2 + 2n - 364 = 0\), i.e. \(n^2 + n - 182 = 0\). Factorising: \((n + 14)(n - 13) = 0 \implies n = 13\). The integers are <strong>13 and 14</strong>. Check: \(169 + 196 = 365\) âœ“.</p>
+  </div>
+
+  <div class="app-box">
+    <div class="box-label">Application 7 â€” Rectangular park</div>
+    <p>A rectangular park has area 240 mÂ². Its length is 4 m more than twice its breadth. Let breadth be \(b\) m; length is \(2b + 4\) m. Then \(b(2b+4) = 240\), so \(2b^2 + 4b - 240 = 0\), i.e. \(b^2 + 2b - 120 = 0\). Factorising: \((b + 12)(b - 10) = 0 \implies b = 10\). Breadth is <strong>10 m</strong>, length \(2(10)+4 = 24\) m. Check: \(10 \times 24 = 240\) âœ“.</p>
+  </div>
+
+  <div class="app-box">
+    <div class="box-label">Application 8 â€” Perimeter and fencing</div>
+    <p>A rectangular garden has perimeter 64 m and area 240 mÂ². Let length be \(l\) m and breadth \(b\) m. Perimeter \(2(l+b) = 64 \implies l + b = 32\), and \(lb = 240\). So \(l(32 - l) = 240 \implies 32l - l^2 = 240 \implies l^2 - 32l + 240 = 0\). Factorising: \((l - 20)(l - 12) = 0 \implies l = 20\) (or \(12\)). The garden is <strong>20 m by 12 m</strong>. If fencing costs &#8377;12 per metre, cost \(= 64 \times 12 =\) <strong>&#8377;768</strong>. Check: \(2(32) = 64\), \(20 \times 12 = 240\) âœ“.</p>
+  </div>
+</section>
+
+<section id="competency">
+  <h2>14. Competency and Reasoning Questions</h2>
+  <p>Competency questions test whether you understand <em>why</em> a method works, not just whether you can run it. They often hide a trap or ask for a choice of method.</p>
+
+  <div class="comp-box">
+    <div class="box-label">Recognise the non-quadratic immediately</div>
+    <p>From the following, pick the equation that is <strong>not</strong> quadratic: \(x^2 + 2x + 1 = 0\), \((x+1)(x-1) = 0\), \(x(x+3) = x^2 + 7\). <br /><strong>Reasoning.</strong> The third: \(x(x+3) = x^2 + 7\) gives \(x^2 + 3x = x^2 + 7\), so \(3x = 7\) â€” the \(x^2\) terms cancel. Seeing this without expanding wastes ten seconds; expanding still proves it.</p>
+  </div>
+
+  <div class="comp-box">
+    <div class="box-label">Choose the quicker method</div>
+    <p>Solve \(x^2 - 49 = 0\) in the fastest way.<br /><strong>Reasoning.</strong> Differences of squares: \(x^2 - 49 = (x - 7)(x + 7) = 0\), so \(x = \pm 7\). The quadratic formula would also work but is slower here.</p>
+  </div>
+
+  <div class="comp-box">
+    <div class="box-label">Parameter from nature of roots</div>
+    <p>For what value of \(k\) does \((k-1)x^2 + 2x - 8 = 0\) have two distinct real roots?<br /><strong>Reasoning.</strong> Coarse conditions: \((k-1) \neq 0 \implies k \neq 1\), and \(D = 4 + 32(k-1) > 0 \implies 32k - 28 > 0 \implies k > \frac{7}{8}\). Together, \(k > \frac{7}{8}\) with \(k \neq 1\).</p>
+  </div>
+
+  <div class="comp-box">
+    <div class="box-label">Spot the error</div>
+    <p>A student solves \(x^2 - 5x + 6 = 0\), factors as \((x - 2)(x - 3)\), then writes roots \(-2, -3\). Where is the error?<br /><strong>Reasoning.</strong> The factorisation is right, but the roots are wrong. \((x - 2) = 0\) gives \(x = +2\), not \(-2\); \((x - 3) = 0\) gives \(x = +3\). Correct roots: <strong>2 and 3</strong>. Substitution confirms: \(4 - 10 + 6 = 0\), \(9 - 15 + 6 = 0\).</p>
+  </div>
+
+  <div class="comp-box">
+    <div class="box-label">Interpret the discriminant</div>
+    <p>Can \(x^2 + 1 = 0\) be solved in the real numbers?<br /><strong>Reasoning.</strong> Rewriting gives \(x^2 = -1\). A square of a real number is never negative, so there is no real solution. Using \(D = 0 - 4 = -4 < 0\) gives the same answer immediately: no real roots.</p>
+  </div>
+
+  <div class="comp-box">
+    <div class="box-label">Find the other root</div>
+    <p>One root of \(x^2 - 9x + 20 = 0\) is 4. Find the other root <em>without</em> dividing polynomials.<br /><strong>Reasoning.</strong> The linear factor for root 4 is \((x - 4)\). Factorising the whole quadratic: \(x^2 - 9x + 20 = (x - 4)(x - 5)\), so the other root is <strong>5</strong>. Verify: \(25 - 45 + 20 = 0\) âœ“.</p>
+  </div>
+</section>
+
+<section id="case-based">
+  <h2>15. Case-Based Examples</h2>
+  <p>Case-based questions describe a situation and then ask 2â€“3 related sub-questions. Answer the sub-questions using the case data only, and show all working.</p>
+
+  <div class="case-card">
+    <div class="case-card-header"><h3>Case Study 1 â€” School Ground</h3></div>
+    <div class="case-card-body">
+      <p>A school ground is 12 m longer than it is wide, and its area is 405 mÂ². The school plans to fence the ground all around.</p>
+      <div class="qbox">
+        <p class="q-label">Question 1</p>
+        <p>Taking the breadth as \(x\) m, form the quadratic equation for the area of the ground.</p>
+      </div>
+      <div class="qbox">
+        <p class="q-label">Question 2</p>
+        <p>Solve the equation to find the breadth and length of the ground.</p>
+      </div>
+      <div class="qbox">
+        <p class="q-label">Question 3</p>
+        <p>Find the cost of fencing the ground at &#8377;45 per metre.</p>
+      </div>
+      <div class="solution-box">
+        <p><strong>Solution.</strong>&nbsp; (1)&nbsp; Length \(= x + 12\), area \(= x(x + 12)\). So the equation is <strong>\(x^2 + 12x - 405 = 0\)</strong>.</p>
+        <p>(2)&nbsp; Factorising: \((x + 27)(x - 15) = 0\), so \(x = 15\) (reject \(-27\)). Breadth = 15 m, Length = 27 m. Check \(15 \times 27 = 405\) âœ“.</p>
+        <p>(3)&nbsp; Perimeter \(= 2(15 + 27) = 84\) m. Cost \(= 84 \times 45 =\) <strong>&#8377;3780</strong>.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card-header"><h3>Case Study 2 â€” Study Tour</h3></div>
+    <div class="case-card-body">
+      <p>A class plans a tour. A coach charges a total of &#8377;2400 for the trip. If 4 more students join, the cost per student decreases by &#8377;20.</p>
+      <div class="qbox">
+        <p class="q-label">Question 1</p>
+        <p>Let the number of students be \(n\). Write the equation relating the cost per student before and after 4 more students join.</p>
+      </div>
+      <div class="qbox">
+        <p class="q-label">Question 2</p>
+        <p>Find the number of students on the trip.</p>
+      </div>
+      <div class="qbox">
+        <p class="q-label">Question 3</p>
+        <p>Find the cost per student originally and after the extra students join, and verify the difference.</p>
+      </div>
+      <div class="solution-box">
+        <p><strong>Solution.</strong>&nbsp; (1)&nbsp; Original cost per student \(= \dfrac{2400}{n}\); after \(n+4\) students it is \(\dfrac{2400}{n+4}\). Given \(\dfrac{2400}{n} - \dfrac{2400}{n+4} = 20\). Multiplying by \(n(n+4)\): \(2400(n+4) - 2400n = 20n(n+4)\), so \(9600 = 20n^2 + 80n\), i.e. <strong>\(n^2 + 4n - 480 = 0\)</strong>.</p>
+        <p>(2)&nbsp; Factorising: \((n + 24)(n - 20) = 0\), so \(n = 20\) (reject \(-24\)). <strong>20 students</strong>.</p>
+        <p>(3)&nbsp; Original: \(\dfrac{2400}{20} = \) &#8377;120 each; with 24 students: \(\dfrac{2400}{24} = \) &#8377;100 each. Difference \(= 20\) âœ“.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card-header"><h3>Case Study 3 â€” Consecutive Odd Numbers</h3></div>
+    <div class="case-card-body">
+      <p>The product of two consecutive odd positive integers is 323.</p>
+      <div class="qbox">
+        <p class="q-label">Question 1</p>
+        <p>Let the smaller integer be \(x\). Form the quadratic equation.</p>
+      </div>
+      <div class="qbox">
+        <p class="q-label">Question 2</p>
+        <p>Find the two integers.</p>
+      </div>
+      <div class="qbox">
+        <p class="q-label">Question 3</p>
+        <p>Verify by substitution that both integers satisfy the product condition.</p>
+      </div>
+      <div class="solution-box">
+        <p><strong>Solution.</strong>&nbsp; (1)&nbsp; Consecutive odd integers are \(x\) and \(x + 2\). Product: \(x(x+2) = 323\), so <strong>\(x^2 + 2x - 323 = 0\)</strong>.</p>
+        <p>(2)&nbsp; Factorising: \((x + 19)(x - 17) = 0\), so \(x = 17\) (reject \(-19\)). Integers are <strong>17 and 19</strong>.</p>
+        <p>(3)&nbsp; \(x = 17\): \(17(19) = 323\) âœ“. The factorisation itself guarantees both factors satisfy the equation.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card-header"><h3>Case Study 4 â€” Fair Tickets</h3></div>
+    <div class="case-card-body">
+      <p>A fair charges &#8377;\(x\) per ticket. The number of visitors that evening is \((400 - 2x)\), so the revenue is \(R(x) = x(400 - 2x)\).</p>
+      <div class="qbox">
+        <p class="q-label">Question 1</p>
+        <p>Express \(R(x)\) in standard form \(ax^2 + bx + c\) and write \(a\), \(b\), \(c\).</p>
+      </div>
+      <div class="qbox">
+        <p class="q-label">Question 2</p>
+        <p>For which ticket prices is the revenue zero?</p>
+      </div>
+      <div class="qbox">
+        <p class="q-label">Question 3</p>
+        <p>Find the revenue when the ticket price is &#8377;50.</p>
+      </div>
+      <div class="solution-box">
+        <p><strong>Solution.</strong>&nbsp; (1)&nbsp; \(R(x) = -2x^2 + 400x\), so \(a = -2\), \(b = 400\), \(c = 0\).</p>
+        <p>(2)&nbsp; \(x(400 - 2x) = 0 \implies x = 0\) (free entry, no revenue) or \(x = 200\). Revenue is zero at &#8377;0 and &#8377;200.</p>
+        <p>(3)&nbsp; \(R(50) = 50(400 - 100) = 50 \times 300 = \) <strong>&#8377;15,000</strong>.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card-header"><h3>Case Study 5 â€” Lawn and Path</h3></div>
+    <div class="case-card-body">
+      <p>A rectangular garden is 40 m by 30 m. A path of uniform width \(x\) m is cut around the inside edge, leaving a lawn of area 600 mÂ² in the middle.</p>
+      <div class="qbox">
+        <p class="q-label">Question 1</p>
+        <p>Write the dimensions of the lawn in terms of \(x\), and form the quadratic equation.</p>
+      </div>
+      <div class="qbox">
+        <p class="q-label">Question 2</p>
+        <p>Solve to find the width of the path.</p>
+      </div>
+      <div class="qbox">
+        <p class="q-label">Question 3</p>
+        <p>The equation has two solutions. Why is one of them rejected?</p>
+      </div>
+      <div class="solution-box">
+        <p><strong>Solution.</strong>&nbsp; (1)&nbsp; Lawn dimensions: \((40 - 2x)\) and \((30 - 2x)\). Area: \((40-2x)(30-2x) = 600\). Expanding: \(1200 - 80x - 60x + 4x^2 = 600\), so <strong>\(4x^2 - 140x + 600 = 0\)</strong>, i.e. \(x^2 - 35x + 150 = 0\).</p>
+        <p>(2)&nbsp; Factorising: \((x - 30)(x - 5) = 0 \implies x = 5\) (reject \(30\)). Path width = <strong>5 m</strong>.</p>
+        <p>(3)&nbsp; \(x = 30\) is rejected because a path of 30 m on each side would exceed half of the 30 m breadth, giving a negative lawn dimension. Only \(x = 5\) satisfies the geometry. Check: \((40-10)(30-10) = 30 \times 20 = 600\) âœ“.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="formulae">
+  <h2>16. Important Formulae</h2>
+  <div class="result-box">
+    <div class="box-label">Standard form</div>
+    <p>\(ax^2 + bx + c = 0\), where \(a \neq 0\).</p>
+  </div>
+  <div class="result-box">
+    <div class="box-label">Quadratic formula</div>
+    <p>\[x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\]</p>
+  </div>
+  <div class="result-box">
+    <div class="box-label">Discriminant</div>
+    <p>\[D = b^2 - 4ac\]</p>
+    <p>\(D > 0\): two distinct real roots; \(D = 0\): two equal real roots; \(D < 0\): no real roots.</p>
+  </div>
+  <div class="warn-box">
+    <div class="box-label">Warning</div>
+    <p><strong>Identify \(a\), \(b\), \(c\) correctly before applying the formula.</strong> Write the equation in standard form first, keep the signs of \(b\) and \(c\), and never drop the \(2a\) in the denominator.</p>
+  </div>
+</section>
+
+<section id="mistakes">
+  <h2>17. Common Examination Mistakes</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Common mistake</th><th>Correct method</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Not writing the equation in standard form before reading \(a\), \(b\), \(c\)</td><td>Simplify to \(ax^2 + bx + c = 0\) first, then read the coefficients with their signs</td></tr>
+        <tr><td>Stating \(a = 0\) or ignoring that condition</td><td>If \(a = 0\), the equation is linear, not quadratic</td></tr>
+        <tr><td>Dropping the \(\pm\) sign in the formula</td><td>Always compute both roots: \(x = \dfrac{-b + \sqrt{D}}{2a}\) and \(x = \dfrac{-b - \sqrt{D}}{2a}\)</td></tr>
+        <tr><td>Wrong sign substitution, e.g. using \(b = -4\) as \(b = +4\)</td><td>Substitute with signs: \(-b\) means the negative of \(b\), so \(b = -4\) gives \(-b = 4\)</td></tr>
+        <tr><td>Splitting the middle term using product \(c\) instead of \(ac\)</td><td>For \(ax^2 + bx + c\), find two numbers with product \(ac\) and sum \(b\)</td></tr>
+        <tr><td>Saying "no solution" for \(x^2 - 9 = 0\)</td><td>It has two real roots: \(x = \pm 3\). \(D \geq 0\) means real roots exist</td></tr>
+        <tr><td>Keeping a negative root as the answer in a word problem</td><td>Discard roots that make no sense (negative length, time, count), but state why you reject them</td></tr>
+        <tr><td>Forgetting to verify the found roots</td><td>Substitute each root back into the equation and check it gives 0</td></tr>
+        <tr><td>Confusing "equal roots" with "no roots"</td><td>Equal roots still exist (they are real); write the repeated root once or twice as asked</td></tr>
+        <tr><td>Not simplifying, e.g. leaving \(\dfrac{-6 \pm \sqrt{48}}{2}\)</td><td>Simplify radicals: \(\sqrt{48} = 4\sqrt{3}\), then reduce the fraction</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="warn-box">
+    <div class="box-label">Worked pitfall</div>
+    <p>For \(2x^2 - 7x + 3 = 0\), the middle term split needs numbers with product \(2 \times 3 = 6\) and sum \(-7\), so they are \(-1\) and \(-6\): \(2x^2 - x - 6x + 3 = (2x - 1)(x - 3)\). Correct roots: \(x = \dfrac{1}{2}\) and \(x = 3\).</p>
+  </div>
+</section>
+
+<section id="exam-tips">
+  <h2>18. CBSE Exam Tips</h2>
+  <ul>
+    <li>Read whether the question wants real roots, integer roots or roots "as decimals" â€” this decides how you present the answer.</li>
+    <li>Prefer factorisation when the numbers split easily; otherwise go straight to the quadratic formula. Do not waste time hunting for factors when \(a\), \(b\), \(c\) are large.</li>
+    <li>Write the standard form before touching the formula, and show the substitution step â€” it carries marks even if the arithmetic slips.</li>
+    <li>Compute the discriminant \(D\) before solving; it tells you whether roots exist and whether to expect a neat or radical form.</li>
+    <li>In word problems, state what your variable represents (e.g. "let breadth = \(x\) m") and label the final answer with units.</li>
+    <li>Always reject and explain impossible roots such as negative lengths, times or counts.</li>
+    <li>Verify every root by substitution if time permits â€” it catches most sign errors.</li>
+    <li>For case-based sections, read the whole case once before answering any sub-question.</li>
+  </ul>
+</section>
+
+<section id="quick-revision">
+  <h2>19. Quick Revision</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Concept</th><th>Key point</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Quadratic equation</td><td>\(ax^2 + bx + c = 0\), \(a \neq 0\)</td></tr>
+        <tr><td>Root</td><td>A value of \(x\) satisfying the equation</td></tr>
+        <tr><td>Maximum number of real roots</td><td>Two (equal or distinct)</td></tr>
+        <tr><td>Zero product rule</td><td>\(p \cdot q = 0 \implies p = 0\) or \(q = 0\)</td></tr>
+        <tr><td>Quadratic formula</td><td>\(x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}\)</td></tr>
+        <tr><td>Discriminant</td><td>\(D = b^2 - 4ac\)</td></tr>
+        <tr><td>\(D > 0\)</td><td>Two distinct real roots</td></tr>
+        <tr><td>\(D = 0\)</td><td>Two equal real roots</td></tr>
+        <tr><td>\(D < 0\)</td><td>No real roots</td></tr>
+        <tr><td>Word problems</td><td>Frame the equation, solve, reject impossible roots, verify</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<section id="self-practice">
+  <h2>20. Self-Practice Questions</h2>
+  <p>Thirty original questions written in the CBSE exam style. Answers and solutions are in Section 21.</p>
+
+  <h3>Conceptual</h3>
+
+  <div class="qbox"><p class="q-label">Q1.</p><p>Write \(3x^2 + 5x - 2x^2 + 7\) in standard form and state \(a\), \(b\), \(c\).</p></div>
+  <div class="qbox"><p class="q-label">Q2.</p><p>Which of the following is <strong>not</strong> a quadratic equation? \(x^2 = 4\); \(x(x+2) = 0\); \((x+1)^2 = x^2 + 3\).</p></div>
+  <div class="qbox"><p class="q-label">Q3.</p><p>In \(ax^2 + bx + c = 0\), why must \(a\) not be zero?</p></div>
+  <div class="qbox"><p class="q-label">Q4.</p><p>What information does the discriminant \(D = b^2 - 4ac\) give without solving the equation?</p></div>
+  <div class="qbox"><p class="q-label">Q5.</p><p>Does \(x^2 + 4 = 0\) have real roots? Justify.</p></div>
+  <div class="qbox"><p class="q-label">Q6.</p><p>Verify by substitution that 2 and 3 are roots of \(x^2 - 5x + 6 = 0\).</p></div>
+
+  <h3>Standard â€” solve</h3>
+
+  <div class="qbox"><p class="q-label">Q7.</p><p>Solve \(x^2 - 7x + 12 = 0\).</p></div>
+  <div class="qbox"><p class="q-label">Q8.</p><p>Solve \(x^2 + 6x + 8 = 0\).</p></div>
+  <div class="qbox"><p class="q-label">Q9.</p><p>Solve \(x^2 - 4 = 0\).</p></div>
+  <div class="qbox"><p class="q-label">Q10.</p><p>Solve \(x^2 + 7x + 10 = 0\).</p></div>
+  <div class="qbox"><p class="q-label">Q11.</p><p>Solve \(6x^2 + 5x - 6 = 0\).</p></div>
+  <div class="qbox"><p class="q-label">Q12.</p><p>Solve \(2x^2 - 8x + 8 = 0\).</p></div>
+  <div class="qbox"><p class="q-label">Q13.</p><p>Solve \(4x^2 - 4x + 1 = 0\).</p></div>
+  <div class="qbox"><p class="q-label">Q14.</p><p>Solve \(x^2 + 5x + 6 = 0\).</p></div>
+
+  <h3>Using the quadratic formula</h3>
+
+  <div class="qbox"><p class="q-label">Q15.</p><p>Solve \(9x^2 - 16 = 0\).</p></div>
+  <div class="qbox"><p class="q-label">Q16.</p><p>Solve \(x^2 - 3x - 4 = 0\) using the quadratic formula.</p></div>
+  <div class="qbox"><p class="q-label">Q17.</p><p>Solve \(2x^2 + x - 6 = 0\).</p></div>
+  <div class="qbox"><p class="q-label">Q18.</p><p>Find the nature of the roots of \(x^2 + 6x + 9 = 0\) and then solve it.</p></div>
+  <div class="qbox"><p class="q-label">Q19.</p><p>Solve \(3x^2 - 5x + 2 = 0\).</p></div>
+  <div class="qbox"><p class="q-label">Q20.</p><p>Solve \(2x^2 - 7x + 3 = 0\).</p></div>
+
+  <h3>Application based</h3>
+
+  <div class="qbox"><p class="q-label">Q21.</p><p>The product of two consecutive positive integers is 240. Form a quadratic equation and find the integers.</p></div>
+  <div class="qbox"><p class="q-label">Q22.</p><p>A rectangular ground has breadth \(x\) m. Its length is 3 m more than the breadth and the area is 108 mÂ². Find the dimensions.</p></div>
+  <div class="qbox"><p class="q-label">Q23.</p><p>A ball, thrown upward, is at height \(h = 20t - 5t^2\) metres after \(t\) seconds. When does it return to the ground?</p></div>
+  <div class="qbox"><p class="q-label">Q24.</p><p>The sum of the squares of two consecutive positive integers is 61. Find the integers.</p></div>
+  <div class="qbox"><p class="q-label">Q25.</p><p>A train travels 180 km. If its speed were 15 km/h more, the journey would take 1 hour less. Find the speed of the train.</p></div>
+
+  <h3>Competency / Reasoning</h3>
+
+  <div class="qbox"><p class="q-label">Q26.</p><p>A student claims the roots of \(x^2 - 7x + 12 = 0\) are \(-3\) and \(-4\). Is the claim correct? Explain.</p></div>
+  <div class="qbox"><p class="q-label">Q27.</p><p>For what value of \(k\) does \(kx^2 + 2x + 1 = 0\) have equal roots?</p></div>
+  <div class="qbox"><p class="q-label">Q28.</p><p>For the equation \(x^2 - 2x + c = 0\), the discriminant is \(D = 4 - 4c\). For which values of \(c\) does it have two distinct real roots?</p></div>
+
+  <h3>Case based</h3>
+
+  <div class="qbox"><p class="q-label">Q29 â€” Garden fencing.</p><p>A rectangular garden has length 4 m more than its breadth, and an area of 96 mÂ². (i) Taking breadth \(= x\), form the quadratic equation. (ii) Find the dimensions of the garden. (iii) Find the cost of fencing its boundary at &#8377;25 per metre.</p></div>
+  <div class="qbox"><p class="q-label">Q30 â€” Fair stall.</p><p>At a school fair a stall charges &#8377;\(x\) per ride. The number of visitors is \((300 - 3x)\), so the revenue is \(R = x(300 - 3x)\). (i) Express \(R\) as \(ax^2 + bx + c\). (ii) At which ticket prices is the revenue zero? (iii) Find the revenue when the ticket price is &#8377;20.</p></div>
+</section>
+
+<section id="answers">
+  <h2>21. Answers and Solutions</h2>
+
+  <div class="qbox"><p class="q-label">A1.</p><p>\(x^2 + 5x + 7 = 0\), with \(a = 1\), \(b = 5\), \(c = 7\).</p></div>
+  <div class="qbox"><p class="q-label">A2.</p><p>\((x+1)^2 = x^2 + 3\) is not quadratic: expanding gives \(x^2 + 2x + 1 = x^2 + 3 \Rightarrow 2x = 2\), a linear equation.</p></div>
+  <div class="qbox"><p class="q-label">A3.</p><p>If \(a = 0\), the \(x^2\) term disappears and the equation becomes linear (\(bx + c = 0\)), so it is no longer quadratic.</p></div>
+  <div class="qbox"><p class="q-label">A4.</p><p>It tells whether the roots are real and whether they are equal: \(D > 0\) two distinct real, \(D = 0\) two equal real, \(D < 0\) no real roots.</p></div>
+  <div class="qbox"><p class="q-label">A5.</p><p>No. \(D = 0 - 16 = -16 < 0\), so there are no real roots.</p></div>
+  <div class="qbox"><p class="q-label">A6.</p><p>For \(x = 2\): \(4 - 10 + 6 = 0\) âœ“. For \(x = 3\): \(9 - 15 + 6 = 0\) âœ“.</p></div>
+  <div class="qbox"><p class="q-label">A7.</p><p>\((x-3)(x-4) = 0 \Rightarrow x = 3\) or \(x = 4\).</p></div>
+  <div class="qbox"><p class="q-label">A8.</p><p>\((x+2)(x+4) = 0 \Rightarrow x = -2\) or \(x = -4\).</p></div>
+  <div class="qbox"><p class="q-label">A9.</p><p>\((x-2)(x+2) = 0 \Rightarrow x = \pm 2\).</p></div>
+  <div class="qbox"><p class="q-label">A10.</p><p>\((x+2)(x+5) = 0 \Rightarrow x = -2\) or \(x = -5\).</p></div>
+  <div class="qbox"><p class="q-label">A11.</p><p>\((3x-2)(2x+3) = 0 \Rightarrow x = \dfrac{2}{3}\) or \(x = -\dfrac{3}{2}\).</p></div>
+  <div class="qbox"><p class="q-label">A12.</p><p>\(2(x-2)^2 = 0 \Rightarrow x = 2\) (repeated).</p></div>
+  <div class="qbox"><p class="q-label">A13.</p><p>\((2x-1)^2 = 0 \Rightarrow x = \dfrac{1}{2}\) (repeated).</p></div>
+  <div class="qbox"><p class="q-label">A14.</p><p>\((x+2)(x+3) = 0 \Rightarrow x = -2\) or \(x = -3\).</p></div>
+  <div class="qbox"><p class="q-label">A15.</p><p>\((3x-4)(3x+4) = 0 \Rightarrow x = \pm \dfrac{4}{3}\).</p></div>
+  <div class="qbox"><p class="q-label">A16.</p><p>\(D = 9 + 16 = 25\); \(x = \dfrac{3 \pm 5}{2} \Rightarrow x = 4\) or \(x = -1\).</p></div>
+  <div class="qbox"><p class="q-label">A17.</p><p>\((2x-3)(x+2) = 0 \Rightarrow x = \dfrac{3}{2}\) or \(x = -2\).</p></div>
+  <div class="qbox"><p class="q-label">A18.</p><p>\(D = 36 - 36 = 0\): two equal real roots. \((x+3)^2 = 0 \Rightarrow x = -3\) (repeated).</p></div>
+  <div class="qbox"><p class="q-label">A19.</p><p>\((3x-2)(x-1) = 0 \Rightarrow x = \dfrac{2}{3}\) or \(x = 1\).</p></div>
+  <div class="qbox"><p class="q-label">A20.</p><p>\((2x-1)(x-3) = 0 \Rightarrow x = \dfrac{1}{2}\) or \(x = 3\).</p></div>
+  <div class="qbox"><p class="q-label">A21.</p><p>\(x(x+1) = 240 \Rightarrow x^2 + x - 240 = 0 \Rightarrow (x+16)(x-15) = 0\). Positive \(x = 15\); the integers are 15 and 16.</p></div>
+  <div class="qbox"><p class="q-label">A22.</p><p>\(x(x+3) = 108 \Rightarrow x^2 + 3x - 108 = 0 \Rightarrow (x+12)(x-9) = 0 \Rightarrow x = 9\). Dimensions: breadth 9 m, length 12 m.</p></div>
+  <div class="qbox"><p class="q-label">A23.</p><p>\(20t - 5t^2 = 0 \Rightarrow 5t(4-t) = 0 \Rightarrow t = 0\) or \(t = 4\). It returns to the ground after 4 seconds.</p></div>
+  <div class="qbox"><p class="q-label">A24.</p><p>\(n^2 + (n+1)^2 = 61 \Rightarrow n^2 + n - 30 = 0 \Rightarrow (n+6)(n-5) = 0 \Rightarrow n = 5\). The integers are 5 and 6.</p></div>
+  <div class="qbox"><p class="q-label">A25.</p><p>\(\dfrac{180}{x} - \dfrac{180}{x+15} = 1 \Rightarrow x^2 + 15x - 2700 = 0 \Rightarrow (x+60)(x-45) = 0 \Rightarrow x = 45\). Speed = 45 km/h.</p></div>
+  <div class="qbox"><p class="q-label">A26.</p><p>Incorrect. \((x-3)(x-4) = 0\) gives \(x = +3\) and \(x = +4\). The claimed roots \(-3, -4\) would make the product of factors positive and the signs of the middle terms flip.</p></div>
+  <div class="qbox"><p class="q-label">A27.</p><p>Equal roots \(\iff D = 0\): \(4 - 4k = 0 \Rightarrow k = 1\).</p></div>
+  <div class="qbox"><p class="q-label">A28.</p><p>Two distinct real roots \(\iff D > 0\): \(4 - 4c > 0 \Rightarrow c < 1\), and the equation is quadratic for any real \(c\).</p></div>
+  <div class="qbox"><p class="q-label">A29.</p><p>(i) \(x(x+4) = 96\), i.e. \(x^2 + 4x - 96 = 0\). (ii) \((x+12)(x-8) = 0 \Rightarrow x = 8\): breadth 8 m, length 12 m. (iii) Perimeter \(= 2(8+12) = 40\) m; cost \(= 40 \times 25 =\) &#8377;1000.</p></div>
+  <div class="qbox"><p class="q-label">A30.</p><p>(i) \(R = -3x^2 + 300x\), so \(a = -3\), \(b = 300\), \(c = 0\). (ii) \(x(300 - 3x) = 0 \Rightarrow x = 0\) or \(x = 100\). (iii) \(R(20) = 20(300 - 60) = 20 \times 240 =\) &#8377;4800.</p></div>
+</section>
+
+<section id="related">
+  <h2>22. Related Resources</h2>
+  <ul>
+    <li><a href="/cbse-study-material/class-10/mathematics/quadratic-equations/practice-paper/">Quadratic Equations â€” Practice Paper</a></li>
+    <li><a href="/cbse-study-material/class-10/mathematics/quadratic-equations/quiz/">Quadratic Equations â€” Quiz</a></li>
+    <li><a href="/cbse-study-material/class-10/mathematics/quadratic-equations/test/">Quadratic Equations â€” Chapter Test</a></li>
+    <li><a href="/cbse-study-material/class-10/mathematics/quadratic-equations/">Quadratic Equations â€” Chapter Overview</a></li>
+    <li><a href="/cbse-study-material/class-10/mathematics/">Class 10 Mathematics</a></li>
+    <li><a href="/cbse-study-material/class-10/">Class 10 Study Material</a></li>
+  </ul>
+  <div class="tip-box">
+    <div class="box-label">Next chapter</div>
+    <p>Continue with <a href="/cbse-study-material/class-10/mathematics/arithmetic-progressions/">Arithmetic Progressions</a> to see how quadratic equations connect with sequences.</p>
+  </div>
+</section>
+    </article>
+
+    <nav class="resource-nav" aria-label="More from this chapter">
+      <a href="/cbse-study-material/class-10/mathematics/quadratic-equations/notes/" class="is-active"><i class="fas fa-book-open"></i> Notes</a>
+      <a href="/cbse-study-material/class-10/mathematics/quadratic-equations/practice-paper/"><i class="fas fa-file-lines"></i> Practice Paper</a>
+      <a href="/cbse-study-material/class-10/mathematics/quadratic-equations/quiz/"><i class="fas fa-bullseye"></i> Quiz</a>
+      <a href="/cbse-study-material/class-10/mathematics/quadratic-equations/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+    </nav>
+
+    <div class="next-chapter">
+      <div>
+        <h3><i class="fas fa-arrow-right"></i> Next: Chapter 5 â€” Arithmetic Progressions</h3>
+        <p>Build on quadratic equations and look for patterns in sequences of numbers.</p>
+      </div>
+      <a class="btn btn-primary" href="/cbse-study-material/class-10/mathematics/arithmetic-progressions/">Open Chapter</a>
+    </div>
+
+    <a class="sm-back" href="/cbse-study-material/class-10/mathematics/quadratic-equations/"><i class="fas fa-arrow-left"></i> Back to Quadratic Equations</a>
+    <a class="sm-back" href="/cbse-study-material/class-10/mathematics/" style="margin-left: 12px;"><i class="fas fa-arrow-left"></i> All Mathematics chapters</a>
+
+  </div>
+</main>
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-about">
+      <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+      <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#courses">Courses</a></li>
+        <li><a href="/cbse-study-material/">Study Material</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Popular Searches</h4>
+      <ul>
+        <li><a href="/cbse-study-material/">CBSE Study Material</a></li>
+        <li><a href="/best-tuition-centre-hulimavu/">Best Tuition Centre in Hulimavu</a></li>
+        <li><a href="/cbse-tuition-hulimavu/">CBSE Tuition in Hulimavu</a></li>
+        <li><a href="/maths-tuition-hulimavu/">Maths Tuition in Hulimavu</a></li>
+        <li><a href="/science-tuition-hulimavu/">Science Tuition in Hulimavu</a></li>
+        <li><a href="/class-10-tuition-hulimavu/">Class 10 Tuition Hulimavu</a></li>
+        <li><a href="/class-12-tuition-hulimavu/">Class 12 Tuition Hulimavu</a></li>
+        <li><a href="/tuition-centre-bangalore/">Best Tuition Centre in Bangalore</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/cbse-study-material/sm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/supabase-config.js"></script>
+<script src="/supabase-auth.js"></script>
+<script src="/supabase-nav.js" defer></script>
+<script src="/chatbot/chatbot-loader.js" defer></script></body>
+</html>

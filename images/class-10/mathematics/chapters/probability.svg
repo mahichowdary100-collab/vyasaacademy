@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 230" role="img" aria-label="Probability - simple dice showing three dots">
+  <rect width="400" height="230" fill="#ffffff"/>
+  <rect x="120" y="45" width="160" height="160" rx="24" fill="#1a237e"/>
+  <circle cx="160" cy="125" r="16" fill="#ffffff"/>
+  <circle cx="200" cy="125" r="16" fill="#f9a825"/>
+  <circle cx="240" cy="125" r="16" fill="#ffffff"/>
+</svg>

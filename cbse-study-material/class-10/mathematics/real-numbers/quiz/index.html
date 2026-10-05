@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CBSE Class 10 Maths Real Numbers Quiz | Vyasa Academy</title>
+  <meta name="description" content="Test your Class 10 Maths Real Numbers knowledge with an interactive 20-question quiz covering prime factorisation, HCF, LCM and irrational numbers." />
+  <link rel="canonical" href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/real-numbers/quiz/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vyasa Academy" />
+  <meta property="og:title" content="CBSE Class 10 Maths Real Numbers Quiz | Vyasa Academy" />
+  <meta property="og:description" content="Test your Class 10 Maths Real Numbers knowledge with an interactive 20-question quiz covering prime factorisation, HCF, LCM and irrational numbers." />
+  <meta property="og:url" content="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/real-numbers/quiz/" />
+  <meta property="og:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CBSE Class 10 Maths Real Numbers Quiz | Vyasa Academy" />
+  <meta name="twitter:description" content="Test your Class 10 Maths Real Numbers knowledge with an interactive 20-question quiz covering prime factorisation, HCF, LCM and irrational numbers." />
+  <meta name="twitter:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","itemListElement":[{"position":1,"name":"Home","item":"https://www.vyasaacademy.in/","@type":"ListItem"},{"position":2,"name":"CBSE Study Material","item":"https://www.vyasaacademy.in/cbse-study-material/","@type":"ListItem"},{"position":3,"name":"Class 10","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/","@type":"ListItem"},{"position":4,"name":"Mathematics","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/","@type":"ListItem"},{"position":5,"name":"Real Numbers","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/real-numbers/","@type":"ListItem"},{"position":6,"name":"Quiz","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/real-numbers/quiz/","@type":"ListItem"}],"@type":"BreadcrumbList"}
+  </script>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+      processEscapes: true
+    }
+  };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <style>
+  .quiz-app { }
+  .quiz-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin: 6px 0 14px; }
+  .quiz-progress-wrap { flex: 1 1 100%; }
+  .quiz-counter { font-weight: 800; color: var(--primary); }
+  .quiz-timer { display: inline-flex; align-items: center; gap: 8px; background: #eff6ff; border: 1px solid #bfdbfe; color: #1d4ed8; border-radius: 999px; padding: 6px 14px; font-weight: 700; }
+  .quiz-timer.warn { background: #fef2f2; border-color: #fecaca; color: #b91c1c; }
+  .progress-track { height: 12px; background: #e5e7eb; border-radius: 999px; overflow: hidden; }
+  .progress-fill { height: 100%; width: 5%; background: var(--primary); border-radius: 999px; transition: width 0.25s ease; }
+
+  .quiz-q { display: none; border: 1px solid #e5e7eb; border-radius: var(--radius); padding: 20px 22px; margin: 0 0 18px; }
+  .quiz-q.is-active { display: block; }
+  .quiz-q legend, .q-num { font-weight: 800; color: var(--primary); }
+  .quiz-q .q-diff { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; color: var(--gray); margin-left: 8px; }
+  .quiz-q .q-text { font-size: 1.06rem; font-weight: 600; margin: 8px 0 14px; color: var(--dark); }
+
+  .opt { display: flex; align-items: flex-start; gap: 10px; border: 1px solid #e5e7eb; border-radius: 10px; padding: 12px 14px; margin: 8px 0; cursor: pointer; transition: var(--transition); background: #fff; }
+  .opt:hover { border-color: var(--primary); background: #eef2ff; }
+  .opt input { position: absolute; opacity: 0; pointer-events: none; }
+  .opt .opt-radio { flex-shrink: 0; width: 20px; height: 20px; margin-top: 2px; border: 2px solid #9ca3af; border-radius: 50%; position: relative; }
+  .opt input:focus-visible + .opt-radio { outline: 3px solid #fbbf24; outline-offset: 2px; }
+  .opt input:checked + .opt-radio { border-color: var(--primary); }
+  .opt input:checked + .opt-radio::after { content: ""; position: absolute; inset: 3px; background: var(--primary); border-radius: 50%; }
+  .opt .opt-key { flex-shrink: 0; font-weight: 800; color: var(--primary); width: 22px; }
+  .opt .opt-val { flex: 1; }
+
+  .quiz-ok .opts-ok .opt.answered-correct, .opt.answered-correct { border-color: #16a34a; background: #f0fdf4; }
+  .opt.answered-wrong { border-color: #dc2626; background: #fef2f2; }
+
+  .quiz-controls { display: flex; flex-wrap: wrap; gap: 10px; margin: 8px 0 4px; }
+  .quiz-controls button, .quiz-actions button { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 22px; border-radius: var(--radius); border: 2px solid var(--primary); background: var(--primary); color: #fff; font-family: inherit; font-weight: 700; font-size: 0.97rem; cursor: pointer; transition: var(--transition); }
+  .quiz-controls button.secondary, .quiz-actions button.secondary { background: #fff; color: var(--primary); }
+  .quiz-controls button:disabled { opacity: 0.45; cursor: not-allowed; }
+  .quiz-controls button:focus-visible, .quiz-actions button:focus-visible { outline: 3px solid #fbbf24; outline-offset: 2px; }
+
+  .quiz-panel { display: none; }
+  .quiz-panel.is-active { display: block; }
+
+  .result-card { text-align: center; background: #fff; border: 1px solid #e5e7eb; border-radius: var(--radius); padding: 30px 24px; margin: 10px 0 20px; }
+  .result-card .score-big { font-size: 2.8rem; font-weight: 800; color: var(--primary); }
+  .result-card .pct-big { font-size: 1.4rem; font-weight: 800; color: var(--accent-dark); margin: 6px 0 14px; }
+  .result-card .msg { font-size: 1.05rem; color: var(--dark); max-width: 480px; margin: 0 auto; }
+
+  .result-summary { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 20px 0; }
+  .rs-chip { min-width: 130px; border: 1px solid #e5e7eb; border-radius: 10px; padding: 12px; background: #fff; }
+  .rs-chip .rs-n { font-size: 1.6rem; font-weight: 800; color: var(--dark); }
+  .rs-chip .rs-l { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; color: var(--gray); }
+  .rs-chip.good .rs-n { color: #16a34a; }
+  .rs-chip.warn .rs-n { color: #b91c1c; }
+
+  .explanations { margin: 24px 0 10px; }
+  .exp-card { border: 1px solid #e5e7eb; border-radius: var(--radius); margin: 12px 0; padding: 16px 18px; background: #fff; }
+  .exp-card .exp-head { font-weight: 800; color: var(--dark); margin-bottom: 8px; }
+  .exp-card .exp-head .exp-state { margin-left: 8px; font-size: 0.82rem; padding: 2px 10px; border-radius: 999px; font-weight: 700; }
+  .exp-state.ok { background: #dcfce7; color: #15803d; }
+  .exp-state.no { background: #fee2e2; color: #b91c1c; }
+  .exp-card .exp-row { margin: 4px 0; }
+  .exp-card .exp-row .exp-label { font-weight: 700; color: var(--gray); }
+  .exp-card .exp-note { margin-top: 8px; padding-top: 8px; border-top: 1px dashed #e5e7eb; color: var(--dark); }
+
+  .quiz-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0; }
+
+  dialog { border: none; border-radius: var(--radius); padding: 0; box-shadow: 0 20px 60px rgba(0,0,0,0.25); max-width: 440px; width: 92%; }
+  dialog::backdrop { background: rgba(0,0,0,0.45); }
+  .modal-body { padding: 22px 24px; }
+  .modal-body h3 { margin: 0 0 10px; font-size: 1.15rem; }
+  .modal-actions { display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
+  .modal-actions button { min-height: 44px; padding: 10px 18px; border-radius: var(--radius); border: 2px solid var(--primary); background: var(--primary); color: #fff; font-family: inherit; font-weight: 700; cursor: pointer; }
+  .modal-actions button.secondary { background: #fff; color: var(--primary); }
+
+  .timed-note { background: #eef2ff; border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 12px 16px; margin: 4px 0 16px; font-size: 0.95rem; }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+  .resource-nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
+  .resource-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: var(--radius); border: 2px solid #e5e7eb; font-weight: 600; font-size: 0.92rem; color: var(--dark); background: var(--white); transition: var(--transition); }
+  .resource-nav a:hover, .resource-nav a.is-active { border-color: var(--primary); background: var(--primary); color: var(--white); }
+
+  .sm-back { display: inline-flex; align-items: center; gap: 8px; margin-top: 30px; padding: 10px 0; color: var(--primary); font-weight: 600; }
+  .sm-back:hover { color: var(--accent-dark); }
+
+  @media (max-width: 640px) {
+    .quiz-q { padding: 16px 14px; }
+    .quiz-q .q-text { font-size: 1rem; }
+    .opt { padding: 10px 12px; }
+    .result-card .score-big { font-size: 2.2rem; }
+    .quiz-controls button, .quiz-actions button { flex: 1 1 100%; }
+  }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="/" class="logo"><i class="fas fa-graduation-cap"></i> Vyasa Academy</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="/">Home</a>
+      <a href="/#courses">Courses</a>
+      <a href="/cbse-study-material/" class="active">Study Material</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main class="sm-page">
+  <div class="container sm-container">
+    <nav class="sm-crumbs" aria-label="Breadcrumb">
+      <a href="https://www.vyasaacademy.in/">Home</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/">CBSE Study Material</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/">Class 10</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/">Mathematics</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/real-numbers/">Real Numbers</a> /
+      Quiz
+    </nav>
+
+    <section class="sm-hero sm-hero-slim">
+      <p class="sm-eyebrow">CBSE Class 10 Â· Mathematics</p>
+      <h1>Class 10 Maths â€“ Real Numbers Quiz</h1>
+      <p>Test your understanding of Class 10 Real Numbers with this interactive chapter quiz.</p>
+    </section>
+
+    <nav class="resource-nav" aria-label="Chapter resources">
+      <a href="/cbse-study-material/class-10/mathematics/real-numbers/notes/"><i class="fas fa-book-open"></i> Notes</a>
+      <a href="/cbse-study-material/class-10/mathematics/real-numbers/practice-paper/"><i class="fas fa-file-lines"></i> Practice Paper</a>
+      <a class="is-active" href="/cbse-study-material/class-10/mathematics/real-numbers/quiz/"><i class="fas fa-bullseye"></i> Quiz</a>
+      <a href="/cbse-study-material/class-10/mathematics/real-numbers/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+    </nav>
+
+    <section class="quiz-app" id="quizApp" aria-label="Real Numbers interactive quiz">
+      <p class="timed-note"><i class="fas fa-stopwatch"></i> This quiz is <strong>timed</strong>. You have <strong>10 minutes</strong> to answer all 20 questions. When the time is up, the quiz submits automatically.</p>
+
+      <noscript>
+        <div class="notice-box" role="alert">This interactive quiz requires JavaScript. You can use the chapter <a href="/cbse-study-material/class-10/mathematics/real-numbers/practice-paper/">practice paper</a> instead.</div>
+      </noscript>
+
+      <div id="quizView">
+        <div class="quiz-top">
+          <span class="quiz-counter" id="quizCounter" aria-live="polite">Question 1 of 20</span>
+          <span class="quiz-timer" id="quizTimer" aria-live="off"><i class="fas fa-stopwatch" aria-hidden="true"></i><span id="quizTimerText">Time Remaining: 10:00</span><span class="visually-hidden" id="timerLive" aria-live="polite"></span></span>
+        </div>
+        <div class="quiz-progress-wrap">
+          <div class="progress-track" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="20" aria-valuenow="1" id="progressBar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <span class="visually-hidden" id="progressText">At question 1 of 20</span>
+        </div>
+
+        <form id="quizForm" novalidate>
+          <fieldset class="quiz-q" id="q1" aria-labelledby="q1label">
+            <legend id="q1label"><span class="q-num">Question 1</span><span class="q-diff">Easy</span></legend>
+            <p class="q-text">Which of the following is an irrational number?</p>
+            <label class="opt"><input type="radio" name="q1" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(\sqrt{49}\)</span></label>
+            <label class="opt"><input type="radio" name="q1" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(\frac{4}{3}\)</span></label>
+            <label class="opt"><input type="radio" name="q1" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(\sqrt{13}\)</span></label>
+            <label class="opt"><input type="radio" name="q1" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">0</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q2" aria-labelledby="q2label">
+            <legend id="q2label"><span class="q-num">Question 2</span><span class="q-diff">Moderate</span></legend>
+            <p class="q-text">Which of the following statements about numbers is correct?</p>
+            <label class="opt"><input type="radio" name="q2" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">The square of an irrational number is always irrational.</span></label>
+            <label class="opt"><input type="radio" name="q2" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">The difference of two rational numbers can be irrational.</span></label>
+            <label class="opt"><input type="radio" name="q2" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">The sum of two irrational numbers is always irrational.</span></label>
+            <label class="opt"><input type="radio" name="q2" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">The product of a non-zero rational number and an irrational number is always irrational.</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q3" aria-labelledby="q3label">
+            <legend id="q3label"><span class="q-num">Question 3</span><span class="q-diff">Moderate</span></legend>
+            <p class="q-text">An irrational number \(\sqrt{5}\) lies between which two consecutive integers?</p>
+            <label class="opt"><input type="radio" name="q3" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">2 and 3</span></label>
+            <label class="opt"><input type="radio" name="q3" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">1 and 2</span></label>
+            <label class="opt"><input type="radio" name="q3" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">3 and 4</span></label>
+            <label class="opt"><input type="radio" name="q3" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">4 and 5</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q4" aria-labelledby="q4label">
+            <legend id="q4label"><span class="q-num">Question 4</span><span class="q-diff">Easy</span></legend>
+            <p class="q-text">Which of the following is a prime number?</p>
+            <label class="opt"><input type="radio" name="q4" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">33</span></label>
+            <label class="opt"><input type="radio" name="q4" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">35</span></label>
+            <label class="opt"><input type="radio" name="q4" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">39</span></label>
+            <label class="opt"><input type="radio" name="q4" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">37</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q5" aria-labelledby="q5label">
+            <legend id="q5label"><span class="q-num">Question 5</span><span class="q-diff">Easy</span></legend>
+            <p class="q-text">How many prime numbers are there between 30 and 40?</p>
+            <label class="opt"><input type="radio" name="q5" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">2</span></label>
+            <label class="opt"><input type="radio" name="q5" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">1</span></label>
+            <label class="opt"><input type="radio" name="q5" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">3</span></label>
+            <label class="opt"><input type="radio" name="q5" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">4</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q6" aria-labelledby="q6label">
+            <legend id="q6label"><span class="q-num">Question 6</span><span class="q-diff">Easy</span></legend>
+            <p class="q-text">Which statement about the number 1 is correct?</p>
+            <label class="opt"><input type="radio" name="q6" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">1 is a prime number.</span></label>
+            <label class="opt"><input type="radio" name="q6" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">1 is a composite number.</span></label>
+            <label class="opt"><input type="radio" name="q6" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">1 is neither prime nor composite.</span></label>
+            <label class="opt"><input type="radio" name="q6" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">1 has infinitely many factors.</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q7" aria-labelledby="q7label">
+            <legend id="q7label"><span class="q-num">Question 7</span><span class="q-diff">Easy</span></legend>
+            <p class="q-text">The prime factorisation of 108 is:</p>
+            <label class="opt"><input type="radio" name="q7" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(2^2 \times 3^3\)</span></label>
+            <label class="opt"><input type="radio" name="q7" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(2^3 \times 3^2\)</span></label>
+            <label class="opt"><input type="radio" name="q7" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(2 \times 3^2 \times 5\)</span></label>
+            <label class="opt"><input type="radio" name="q7" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(2^2 \times 3^4\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q8" aria-labelledby="q8label">
+            <legend id="q8label"><span class="q-num">Question 8</span><span class="q-diff">Moderate</span></legend>
+            <p class="q-text">Which number has the prime factorisation \(2^3 \times 5 \times 11\)?</p>
+            <label class="opt"><input type="radio" name="q8" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">330</span></label>
+            <label class="opt"><input type="radio" name="q8" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">660</span></label>
+            <label class="opt"><input type="radio" name="q8" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">440</span></label>
+            <label class="opt"><input type="radio" name="q8" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">880</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q9" aria-labelledby="q9label">
+            <legend id="q9label"><span class="q-num">Question 9</span><span class="q-diff">Moderate</span></legend>
+            <p class="q-text">In the prime factorisation of 180, how many prime factors are there in total when each repeated prime is counted with its multiplicity?</p>
+            <label class="opt"><input type="radio" name="q9" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">3</span></label>
+            <label class="opt"><input type="radio" name="q9" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">4</span></label>
+            <label class="opt"><input type="radio" name="q9" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">5</span></label>
+            <label class="opt"><input type="radio" name="q9" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">6</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q10" aria-labelledby="q10label">
+            <legend id="q10label"><span class="q-num">Question 10</span><span class="q-diff">Challenging</span></legend>
+            <p class="q-text">If \(3^a \times 5^2 = 3^4 \times 5^b\), where \(a\) and \(b\) are positive integers, then the value of \(a + b\) is:</p>
+            <label class="opt"><input type="radio" name="q10" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">4</span></label>
+            <label class="opt"><input type="radio" name="q10" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">5</span></label>
+            <label class="opt"><input type="radio" name="q10" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">7</span></label>
+            <label class="opt"><input type="radio" name="q10" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">6</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q11" aria-labelledby="q11label">
+            <legend id="q11label"><span class="q-num">Question 11</span><span class="q-diff">Easy</span></legend>
+            <p class="q-text">The HCF of 12 and 18 is:</p>
+            <label class="opt"><input type="radio" name="q11" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">3</span></label>
+            <label class="opt"><input type="radio" name="q11" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">12</span></label>
+            <label class="opt"><input type="radio" name="q11" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">36</span></label>
+            <label class="opt"><input type="radio" name="q11" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">6</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q12" aria-labelledby="q12label">
+            <legend id="q12label"><span class="q-num">Question 12</span><span class="q-diff">Easy</span></legend>
+            <p class="q-text">The LCM of 8 and 12 is:</p>
+            <label class="opt"><input type="radio" name="q12" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">4</span></label>
+            <label class="opt"><input type="radio" name="q12" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">12</span></label>
+            <label class="opt"><input type="radio" name="q12" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">48</span></label>
+            <label class="opt"><input type="radio" name="q12" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">24</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q13" aria-labelledby="q13label">
+            <legend id="q13label"><span class="q-num">Question 13</span><span class="q-diff">Easy</span></legend>
+            <p class="q-text">The HCF of 15, 25 and 45 is:</p>
+            <label class="opt"><input type="radio" name="q13" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">3</span></label>
+            <label class="opt"><input type="radio" name="q13" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">15</span></label>
+            <label class="opt"><input type="radio" name="q13" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">5</span></label>
+            <label class="opt"><input type="radio" name="q13" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">45</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q14" aria-labelledby="q14label">
+            <legend id="q14label"><span class="q-num">Question 14</span><span class="q-diff">Moderate</span></legend>
+            <p class="q-text">The HCF of the numbers 24 and 36 is 12. Their LCM is:</p>
+            <label class="opt"><input type="radio" name="q14" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">48</span></label>
+            <label class="opt"><input type="radio" name="q14" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">72</span></label>
+            <label class="opt"><input type="radio" name="q14" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">96</span></label>
+            <label class="opt"><input type="radio" name="q14" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">144</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q15" aria-labelledby="q15label">
+            <legend id="q15label"><span class="q-num">Question 15</span><span class="q-diff">Moderate</span></legend>
+            <p class="q-text">If HCF(14, 42) = 14, then LCM(14, 42) is equal to:</p>
+            <label class="opt"><input type="radio" name="q15" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">14</span></label>
+            <label class="opt"><input type="radio" name="q15" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">42</span></label>
+            <label class="opt"><input type="radio" name="q15" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">84</span></label>
+            <label class="opt"><input type="radio" name="q15" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">28</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q16" aria-labelledby="q16label">
+            <legend id="q16label"><span class="q-num">Question 16</span><span class="q-diff">Challenging</span></legend>
+            <p class="q-text">The HCF and LCM of two numbers are 4 and 84. If one of the numbers is 12, the other number is:</p>
+            <label class="opt"><input type="radio" name="q16" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">28</span></label>
+            <label class="opt"><input type="radio" name="q16" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">16</span></label>
+            <label class="opt"><input type="radio" name="q16" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">36</span></label>
+            <label class="opt"><input type="radio" name="q16" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">42</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q17" aria-labelledby="q17label">
+            <legend id="q17label"><span class="q-num">Question 17</span><span class="q-diff">Moderate</span></legend>
+            <p class="q-text">Two bells ring at intervals of 15 minutes and 20 minutes. If they ring together at 10:00 a.m., at what time will they ring together next?</p>
+            <label class="opt"><input type="radio" name="q17" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">10:30 a.m.</span></label>
+            <label class="opt"><input type="radio" name="q17" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">10:45 a.m.</span></label>
+            <label class="opt"><input type="radio" name="q17" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">11:00 a.m.</span></label>
+            <label class="opt"><input type="radio" name="q17" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">11:15 a.m.</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q18" aria-labelledby="q18label">
+            <legend id="q18label"><span class="q-num">Question 18</span><span class="q-diff">Moderate</span></legend>
+            <p class="q-text">A shopkeeper has 42 pens and 63 pencils. He wants to make identical packets, each containing the same number of pens and the same number of pencils, with nothing left over. What is the maximum number of packets he can make?</p>
+            <label class="opt"><input type="radio" name="q18" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">7</span></label>
+            <label class="opt"><input type="radio" name="q18" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">21</span></label>
+            <label class="opt"><input type="radio" name="q18" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">63</span></label>
+            <label class="opt"><input type="radio" name="q18" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">126</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q19" aria-labelledby="q19label">
+            <legend id="q19label"><span class="q-num">Question 19</span><span class="q-diff">Challenging</span></legend>
+            <p class="q-text">Which is the correct first step in proving that \(\sqrt{3}\) is irrational by the method of contradiction?</p>
+            <label class="opt"><input type="radio" name="q19" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">Assume \(\sqrt{3}\) is irrational and show its square is 3.</span></label>
+            <label class="opt"><input type="radio" name="q19" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">Assume \(\sqrt{3} = \frac{p}{q}\) with coprime integers \(p, q\) and \(q \neq 0\).</span></label>
+            <label class="opt"><input type="radio" name="q19" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">Directly calculate the numerical value of \(\sqrt{3}\).</span></label>
+            <label class="opt"><input type="radio" name="q19" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">Show that 3 is a prime number.</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q20" aria-labelledby="q20label">
+            <legend id="q20label"><span class="q-num">Question 20</span><span class="q-diff">Challenging</span></legend>
+            <p class="q-text">In the proof that \(\sqrt{5}\) is irrational, we assume \(\sqrt{5} = \frac{p}{q}\) with coprime integers \(p, q\) and \(q \neq 0\). Squaring gives \(p^2 = 5q^2\). Since \(5\) divides \(p^2\), which conclusion follows directly?</p>
+            <label class="opt"><input type="radio" name="q20" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">5 divides \(q\).</span></label>
+            <label class="opt"><input type="radio" name="q20" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(p\) and \(q\) are both odd.</span></label>
+            <label class="opt"><input type="radio" name="q20" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">5 is equal to \(p\).</span></label>
+            <label class="opt"><input type="radio" name="q20" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">5 divides \(p\) because 5 is a prime.</span></label>
+          </fieldset>
+        </form>
+
+        <div class="quiz-controls">
+          <button type="button" class="secondary" id="btnPrev" aria-label="Previous question"><i class="fas fa-arrow-left" aria-hidden="true"></i> Previous</button>
+          <button type="button" id="btnNext">Next <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+          <button type="button" class="secondary" id="btnSubmit"><i class="fas fa-check" aria-hidden="true"></i> Submit Quiz</button>
+        </div>
+      </div>
+
+      <div class="quiz-panel" id="resultView">
+        <div class="result-card">
+          <h2 style="margin-top:0;"><i class="fas fa-trophy" aria-hidden="true"></i> Quiz Result</h2>
+          <div class="score-big" id="resScore">0 / 20</div>
+          <div class="pct-big" id="resPct">0%</div>
+          <p class="msg" id="resMsg"></p>
+        </div>
+        <div class="result-summary">
+          <div class="rs-chip"><div class="rs-n" id="resTotal">0</div><div class="rs-l">Total Questions</div></div>
+          <div class="rs-chip good"><div class="rs-n" id="resCorrect">0</div><div class="rs-l">Correct</div></div>
+          <div class="rs-chip warn"><div class="rs-n" id="resIncorrect">0</div><div class="rs-l">Incorrect</div></div>
+          <div class="rs-chip warn"><div class="rs-n" id="resUnanswered">0</div><div class="rs-l">Unanswered</div></div>
+        </div>
+        <div class="quiz-actions">
+          <button type="button" id="btnRetry"><i class="fas fa-redo" aria-hidden="true"></i> Retry Quiz</button>
+          <button type="button" class="secondary" id="btnReview"><i class="fas fa-list-check" aria-hidden="true"></i> Review Answers</button>
+        </div>
+      </div>
+
+      <div class="quiz-panel" id="reviewView">
+        <h2><i class="fas fa-list-check" aria-hidden="true"></i> Review Answers</h2>
+        <p>For each question, your answer and the correct answer are shown, with a short explanation.</p>
+        <div class="explanations" id="explanations"></div>
+        <div class="quiz-actions">
+          <button type="button" id="btnBackResult"><i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Result</button>
+          <button type="button" class="secondary" id="btnRetry2"><i class="fas fa-redo" aria-hidden="true"></i> Retry Quiz</button>
+        </div>
+      </div>
+
+      <nav class="resource-nav" aria-label="Chapter resources">
+        <a href="/cbse-study-material/class-10/mathematics/real-numbers/notes/"><i class="fas fa-book-open"></i> Notes</a>
+        <a href="/cbse-study-material/class-10/mathematics/real-numbers/practice-paper/"><i class="fas fa-file-lines"></i> Practice Paper</a>
+        <a href="/cbse-study-material/class-10/mathematics/real-numbers/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+      </nav>
+    </section>
+
+    <a class="sm-back" href="/cbse-study-material/class-10/mathematics/real-numbers/"><i class="fas fa-arrow-left"></i> Back to Real Numbers</a>
+    <a class="sm-back" href="/cbse-study-material/class-10/mathematics/" style="margin-left: 12px;"><i class="fas fa-arrow-left"></i> All Mathematics chapters</a>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-about">
+      <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+      <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#courses">Courses</a></li>
+        <li><a href="/cbse-study-material/">Study Material</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Popular Searches</h4>
+      <ul>
+        <li><a href="/cbse-study-material/">CBSE Study Material</a></li>
+        <li><a href="/best-tuition-centre-hulimavu/">Best Tuition Centre in Hulimavu</a></li>
+        <li><a href="/cbse-tuition-hulimavu/">CBSE Tuition in Hulimavu</a></li>
+        <li><a href="/maths-tuition-hulimavu/">Maths Tuition in Hulimavu</a></li>
+        <li><a href="/science-tuition-hulimavu/">Science Tuition in Hulimavu</a></li>
+        <li><a href="/class-10-tuition-hulimavu/">Class 10 Tuition Hulimavu</a></li>
+        <li><a href="/class-12-tuition-hulimavu/">Class 12 Tuition Hulimavu</a></li>
+        <li><a href="/tuition-centre-bangalore/">Best Tuition Centre in Bangalore</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="/cbse-study-material/sm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/supabase-config.js"></script>
+<script src="/supabase-auth.js"></script>
+<script src="/supabase-nav.js" defer></script>
+<script src="/chatbot/chatbot-loader.js" defer></script><script>
+(function () {
+  "use strict";
+
+  var TOTAL = 20;
+  var TIME_LIMIT = 600;
+
+  var QUESTIONS = [
+    { id: "q1",  topic: "irrational", difficulty: "Easy", correct: "c" },
+    { id: "q2",  topic: "rational-irrational", difficulty: "Moderate", correct: "d" },
+    { id: "q3",  topic: "irrational", difficulty: "Moderate", correct: "a" },
+    { id: "q4",  topic: "prime", difficulty: "Easy", correct: "d" },
+    { id: "q5",  topic: "prime", difficulty: "Easy", correct: "a" },
+    { id: "q6",  topic: "composite", difficulty: "Easy", correct: "c" },
+    { id: "q7",  topic: "prime-factorisation", difficulty: "Easy", correct: "a" },
+    { id: "q8",  topic: "prime-factorisation", difficulty: "Moderate", correct: "c" },
+    { id: "q9",  topic: "prime-factorisation", difficulty: "Moderate", correct: "c" },
+    { id: "q10", topic: "fta", difficulty: "Challenging", correct: "d" },
+    { id: "q11", topic: "hcf", difficulty: "Easy", correct: "d" },
+    { id: "q12", topic: "lcm", difficulty: "Easy", correct: "d" },
+    { id: "q13", topic: "hcf", difficulty: "Easy", correct: "c" },
+    { id: "q14", topic: "hcf-lcm", difficulty: "Moderate", correct: "b" },
+    { id: "q15", topic: "hcf-lcm", difficulty: "Moderate", correct: "b" },
+    { id: "q16", topic: "hcf-lcm", difficulty: "Challenging", correct: "a" },
+    { id: "q17", topic: "lcm-application", difficulty: "Moderate", correct: "c" },
+    { id: "q18", topic: "hcf-application", difficulty: "Moderate", correct: "b" },
+    { id: "q19", topic: "irrationality-proof", difficulty: "Challenging", correct: "b" },
+    { id: "q20", topic: "irrationality-proof", difficulty: "Challenging", correct: "d" }
+  ];
+
+  var EXPLANATIONS = {
+    q1:  "13 is not a perfect square, so \u221a13 cannot be written as a ratio of integers and is irrational. \u221a49 = 7, 4/3 and 0 are all rational.",
+    q2:  "A non-zero rational number times an irrational number is always irrational (e.g. 2 \u00d7 \u221a2 = 2\u221a2). The other statements fail: (2\u221a2)\u00b2 = 8 is rational, (3/4) \u2212 (1/4) = 1/2 is rational, and \u221a2 + (\u2212\u221a2) = 0 is rational.",
+    q3:  "Since 4 < 5 < 9, taking roots gives 2 < \u221a5 < 3. So \u221a5 lies between 2 and 3.",
+    q4:  "37 is only divisible by 1 and 37. 33 = 3 \u00d7 11, 35 = 5 \u00d7 7 and 39 = 3 \u00d7 13 are composite.",
+    q5:  "Between 30 and 40 the primes are 31 and 37. Every other number in that range is composite or even.",
+    q6:  "1 has exactly one positive factor, itself. Primes require exactly two factors and composites at least three, so 1 is neither.",
+    q7:  "108 = 2 \u00d7 54 = 2 \u00d7 2 \u00d7 27 = 2 \u00d7 2 \u00d7 3 \u00d7 3 \u00d7 3 = 2\u00b2 \u00d7 3\u00b3.",
+    q8:  "2\u00b3 \u00d7 5 \u00d7 11 = 8 \u00d7 5 \u00d7 11 = 40 \u00d7 11 = 440.",
+    q9:  "180 = 2\u00b2 \u00d7 3\u00b2 \u00d7 5. Counting each repeated prime: 2 appears twice, 3 twice, 5 once, so 2 + 2 + 1 = 5 prime factors in all.",
+    q10: "By the Fundamental Theorem of Arithmetic the prime factorisation is unique, so a = 4 and b = 2. Hence a + b = 6.",
+    q11: "12 = 2\u00b2 \u00d7 3 and 18 = 2 \u00d7 3\u00b2. The smallest power of each common prime gives HCF = 2 \u00d7 3 = 6.",
+    q12: "8 = 2\u00b3 and 12 = 2\u00b2 \u00d7 3. The greatest power of every prime appearing gives LCM = 2\u00b3 \u00d7 3 = 24.",
+    q13: "15 = 3 \u00d7 5, 25 = 5\u00b2 and 45 = 3\u00b2 \u00d7 5. The only common prime is 5, so HCF = 5.",
+    q14: "Using HCF \u00d7 LCM = product: 12 \u00d7 LCM = 24 \u00d7 36 = 864, so LCM = 864 \u00f7 12 = 72.",
+    q15: "Using HCF \u00d7 LCM = 14 \u00d7 42 = 588, LCM = 588 \u00f7 14 = 42. This also matches 42 being a multiple of 14.",
+    q16: "Other number = (HCF \u00d7 LCM) \u00f7 given number = (4 \u00d7 84) \u00f7 12 = 336 \u00f7 12 = 28.",
+    q17: "The bells ring together after LCM(15, 20) minutes. 15 = 3 \u00d7 5 and 20 = 2\u00b2 \u00d7 5, so LCM = 2\u00b2 \u00d7 3 \u00d7 5 = 60 minutes. 10:00 a.m. + 60 minutes = 11:00 a.m.",
+    q18: "The maximum number of identical packets is HCF(42, 63). 42 = 2 \u00d7 3 \u00d7 7 and 63 = 3\u00b2 \u00d7 7, so HCF = 3 \u00d7 7 = 21 packets.",
+    q19: "Proof by contradiction begins by assuming the opposite: that \u221a3 is rational, i.e. \u221a3 = p/q with coprime integers p, q and q \u2260 0. From there we show both p and q share the prime factor 3, contradicting coprimality.",
+    q20: "If a prime divides a square p\u00b2, it must divide p. Because 5 is prime, 5 divides p\u00b2 implies 5 divides p. Writing p = 5k then forces q\u00b2 = 5k\u00b2, so 5 divides q too \u2014 a contradiction."
+  };
+
+  var form = document.getElementById("quizForm");
+  var quizView = document.getElementById("quizView");
+  var resultView = document.getElementById("resultView");
+  var reviewView = document.getElementById("reviewView");
+  var counterEl = document.getElementById("quizCounter");
+  var timerEl = document.getElementById("quizTimer");
+  var timerText = document.getElementById("quizTimerText");
+  var timerLive = document.getElementById("timerLive");
+  var progressFill = document.getElementById("progressFill");
+  var progressBar = document.getElementById("progressBar");
+  var progressText = document.getElementById("progressText");
+  var explanations = document.getElementById("explanations");
+  var confirmDialog = document.createElement("dialog");
+  confirmDialog.id = "confirmDialog";
+  confirmDialog.innerHTML =
+    '<div class="modal-body">' +
+      '<h3>Unanswered questions</h3>' +
+      '<p id="confirmMsg">Some questions are unanswered. Do you want to submit the quiz?</p>' +
+      '<div class="modal-actions">' +
+        '<button type="button" class="secondary" id="confirmContinue">Continue Quiz</button>' +
+        '<button type="button" id="confirmSubmit">Submit Quiz</button>' +
+      '</div>' +
+    '</div>';
+  document.body.appendChild(confirmDialog);
+
+  var cards = [];
+  for (var i = 0; i < TOTAL; i++) {
+    cards.push(document.getElementById(QUESTIONS[i].id));
+  }
+
+  var timeLeft = TIME_LIMIT;
+  var timerId = null;
+  var submitted = false;
+  var currentIndex = 0;
+
+  function shuffle(arr) {
+    for (var i = arr.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = arr[i]; arr[i] = arr[j]; arr[j] = t;
+    }
+    return arr;
+  }
+
+  function letter(idx) { return "ABCD".charAt(idx); }
+
+  function orderQuestions() {
+    var ordered = shuffle(cards.slice());
+    ordered.forEach(function (card) { form.appendChild(card); });
+    ordered.forEach(function (card, idx) {
+      var num = card.querySelector(".q-num");
+      if (num) num.textContent = "Question " + (idx + 1);
+    });
+  }
+
+  function shuffleOptions(card) {
+    var opts = Array.prototype.slice.call(card.querySelectorAll(".opt"));
+    shuffle(opts);
+    opts.forEach(function (el) { card.appendChild(el); });
+    opts.forEach(function (el, idx) {
+      var key = el.querySelector(".opt-key");
+      if (key) key.textContent = letter(idx);
+    });
+  }
+
+  function resetAnswers() {
+    var radios = form.querySelectorAll('input[type="radio"]');
+    for (var i = 0; i < radios.length; i++) radios[i].checked = false;
+  }
+
+  function showCard(idx) {
+    cards.forEach(function (c, i) { c.classList.toggle("is-active", i === idx); });
+    currentIndex = idx;
+    counterEl.textContent = "Question " + (idx + 1) + " of " + TOTAL;
+    progressFill.style.width = ((idx) / TOTAL * 100) + "%";
+    progressBar.setAttribute("aria-valuenow", String(idx + 1));
+    progressText.textContent = "At question " + (idx + 1) + " of " + TOTAL;
+  }
+
+  function updateTimerDisplay() {
+    var m = Math.floor(timeLeft / 60);
+    var s = timeLeft % 60;
+    timerText.textContent = "Time Remaining: " + String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0");
+    if (timeLeft === 60) timerLive.textContent = "Less than one minute remaining.";
+    if (timeLeft <= 60) timerEl.classList.add("warn");
+  }
+
+  function startTimer() {
+    if (timerId) clearInterval(timerId);
+    timeLeft = TIME_LIMIT;
+    updateTimerDisplay();
+    timerId = setInterval(function () {
+      timeLeft--;
+      updateTimerDisplay();
+      if (timeLeft <= 0) {
+        clearInterval(timerId);
+        submitQuiz(true);
+      }
+    }, 1000);
+  }
+
+  function gatherResults() {
+    var correct = 0, incorrect = 0, unanswered = 0;
+    QUESTIONS.forEach(function (q) {
+      var checked = form.querySelector('input[name="' + q.id + '"]:checked');
+      if (!checked) unanswered++;
+      else if (checked.value === q.correct) correct++;
+      else incorrect++;
+    });
+    return { correct: correct, incorrect: incorrect, unanswered: unanswered };
+  }
+
+  function messageFor(pct) {
+    if (pct >= 90) return "Excellent! You have a strong understanding of Real Numbers.";
+    if (pct >= 75) return "Very Good! Review a few concepts and keep practising.";
+    if (pct >= 50) return "Good attempt. Revise the important concepts and try again.";
+    return "Review the chapter notes and attempt the quiz again.";
+  }
+
+  function showResult() {
+    var r = gatherResults();
+    var score = r.correct;
+    var pct = Math.round((score / TOTAL) * 100);
+    document.getElementById("resScore").textContent = score + " / " + TOTAL;
+    document.getElementById("resPct").textContent = pct + "%";
+    document.getElementById("resMsg").textContent = messageFor(pct);
+    document.getElementById("resTotal").textContent = TOTAL;
+    document.getElementById("resCorrect").textContent = r.correct;
+    document.getElementById("resIncorrect").textContent = r.incorrect;
+    document.getElementById("resUnanswered").textContent = r.unanswered;
+    quizView.classList.remove("is-active");
+    reviewView.classList.remove("is-active");
+    resultView.classList.add("is-active");
+    quizView.style.display = "none";
+    resultView.style.display = "block";
+    reviewView.style.display = "none";
+    quizView.closest(".sm-page").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function buildReview() {
+    explanations.innerHTML = "";
+    cards.forEach(function (card) {
+      var q = questionById(card.id);
+      var checked = card.querySelector('input[type="radio"]:checked');
+      var yourVal = checked ? checked.value : null;
+      var isCorrect = yourVal === q.correct;
+      var yourLetter = yourVal ? optionLetter(card, yourVal) : "Not answered";
+      var correctLetter = optionLetter(card, q.correct);
+
+      var wrap = document.createElement("div");
+      wrap.className = "exp-card";
+
+      var head = document.createElement("div");
+      head.className = "exp-head";
+      head.textContent = "Question " + card.dataset.number;
+
+      var state = document.createElement("span");
+      state.className = "exp-state " + (isCorrect ? "ok" : "no");
+      state.textContent = isCorrect ? "\u2713 Correct" : (yourVal === null ? "\u2013 Not answered" : "\u2717 Incorrect");
+      state.setAttribute("aria-label", isCorrect ? "Correct" : (yourVal === null ? "Not answered" : "Incorrect"));
+      head.appendChild(state);
+
+      var qtext = document.createElement("div");
+      qtext.className = "exp-row";
+      var qlabel = document.createElement("span");
+      qlabel.className = "exp-label";
+      qlabel.textContent = "Question: ";
+      qtext.appendChild(qlabel);
+      qtext.appendChild(card.querySelector(".q-text").cloneNode(true));
+
+      var yrow = document.createElement("div");
+      yrow.className = "exp-row";
+      var ylabel = document.createElement("span");
+      ylabel.className = "exp-label";
+      ylabel.textContent = "Your Answer: ";
+      yrow.appendChild(ylabel);
+      yrow.appendChild(document.createTextNode(yourLetter));
+
+      var crow = document.createElement("div");
+      crow.className = "exp-row";
+      var clabel = document.createElement("span");
+      clabel.className = "exp-label";
+      clabel.textContent = "Correct Answer: ";
+      crow.appendChild(clabel);
+      crow.appendChild(document.createTextNode(correctLetter));
+
+      var note = document.createElement("div");
+      note.className = "exp-note";
+      var nlabel = document.createElement("span");
+      nlabel.className = "exp-label";
+      nlabel.textContent = "Explanation: ";
+      note.appendChild(nlabel);
+      note.appendChild(document.createTextNode(EXPLANATIONS[q.id] || ""));
+
+      wrap.appendChild(head);
+      wrap.appendChild(qtext);
+      wrap.appendChild(yrow);
+      wrap.appendChild(crow);
+      wrap.appendChild(note);
+      explanations.appendChild(wrap);
+
+      var correctEl = card.querySelector('.opt input[value="' + q.correct + '"]');
+      if (correctEl && correctEl.parentNode) correctEl.parentNode.classList.add("answered-correct");
+      if (checked && checked.value !== q.correct) {
+        checked.parentNode.classList.add("answered-wrong");
+      }
+    });
+    quizView.style.display = "none";
+    resultView.style.display = "none";
+    reviewView.style.display = "block";
+    document.getElementById("quizApp").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function questionById(id) {
+    for (var i = 0; i < QUESTIONS.length; i++) {
+      if (QUESTIONS[i].id === id) return QUESTIONS[i];
+    }
+    return null;
+  }
+
+  function optionLetter(card, value) {
+    var opts = Array.prototype.slice.call(card.querySelectorAll(".opt"));
+    for (var i = 0; i < opts.length; i++) {
+      if (opts[i].querySelector("input").value === value) return "ABCD".charAt(i);
+    }
+    return "";
+  }
+
+  function requestSubmit() {
+    var r = gatherResults();
+    if (r.unanswered > 0) {
+      document.getElementById("confirmMsg").textContent =
+        r.unanswered + " question(s) are unanswered. Do you want to submit the quiz?";
+      confirmDialog.showModal();
+    } else {
+      submitQuiz(false);
+    }
+  }
+
+  function submitQuiz(auto) {
+    if (submitted) return;
+    submitted = true;
+    if (timerId) clearInterval(timerId);
+    showResult();
+  }
+
+  function retry() {
+    submitted = false;
+    resetAnswers();
+    cards.forEach(function (card) {
+      card.querySelectorAll(".opt").forEach(function (o) {
+        o.classList.remove("answered-correct", "answered-wrong");
+        o.querySelector("input").disabled = false;
+      });
+    });
+    orderQuestions();
+    cards.forEach(shuffleOptions);
+    quizView.style.display = "block";
+    resultView.style.display = "none";
+    reviewView.style.display = "none";
+    showCard(0);
+    startTimer();
+    document.getElementById("quizApp").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  document.getElementById("btnPrev").addEventListener("click", function () {
+    if (currentIndex > 0) showCard(currentIndex - 1);
+  });
+
+  document.getElementById("btnNext").addEventListener("click", function () {
+    if (currentIndex < TOTAL - 1) showCard(currentIndex + 1);
+  });
+
+  document.getElementById("btnSubmit").addEventListener("click", requestSubmit);
+  document.getElementById("confirmContinue").addEventListener("click", function () { confirmDialog.close(); });
+  document.getElementById("confirmSubmit").addEventListener("click", function () { confirmDialog.close(); submitQuiz(false); });
+  document.getElementById("btnRetry").addEventListener("click", retry);
+  document.getElementById("btnRetry2").addEventListener("click", retry);
+  document.getElementById("btnReview").addEventListener("click", buildReview);
+  document.getElementById("btnBackResult").addEventListener("click", function () {
+    reviewView.style.display = "none";
+    resultView.style.display = "block";
+  });
+
+  cards.forEach(function (card, idx) {
+    card.setAttribute("data-number", String(idx + 1));
+  });
+
+  orderQuestions();
+  cards.forEach(shuffleOptions);
+  showCard(0);
+  startTimer();
+})();
+</script>
+</body>
+</html>

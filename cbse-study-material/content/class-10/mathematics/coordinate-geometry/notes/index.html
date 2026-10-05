@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class 10 Maths Coordinate Geometry Notes | CBSE | Vyasa Academy</title>
+  <meta name="description" content="CBSE Class 10 Maths Coordinate Geometry (Chapter 7) notes covering the Cartesian coordinate system, quadrants, plotting and reading points, the distance formula, the midpoint formula, coordinate geometry applications, geometric shapes, worked examples, common mistakes, exam tips and a quick-revision formula box." />
+  <link rel="canonical" href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/coordinate-geometry/notes/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vyasa Academy" />
+  <meta property="og:title" content="Class 10 Maths Coordinate Geometry Notes | CBSE | Vyasa Academy" />
+  <meta property="og:description" content="CBSE Class 10 Maths Coordinate Geometry (Chapter 7) notes: Cartesian coordinate system, quadrants, plotting points, the distance formula, the midpoint formula, applications, worked examples, common mistakes, exam tips and a quick-revision formula box." />
+  <meta property="og:url" content="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/coordinate-geometry/notes/" />
+  <meta property="og:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Class 10 Maths Coordinate Geometry Notes | CBSE | Vyasa Academy" />
+  <meta name="twitter:description" content="CBSE Class 10 Maths Coordinate Geometry (Chapter 7) notes: Cartesian coordinate system, quadrants, plotting points, the distance formula, the midpoint formula, worked examples, common mistakes and exam tips." />
+  <meta name="twitter:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","itemListElement":[{"position":1,"name":"Home","item":"https://www.vyasaacademy.in/","@type":"ListItem"},{"position":2,"name":"CBSE Study Material","item":"https://www.vyasaacademy.in/cbse-study-material/","@type":"ListItem"},{"position":3,"name":"Class 10","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/","@type":"ListItem"},{"position":4,"name":"Mathematics","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/","@type":"ListItem"},{"position":5,"name":"Coordinate Geometry","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/coordinate-geometry/","@type":"ListItem"},{"position":6,"name":"Notes","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/coordinate-geometry/notes/","@type":"ListItem"}],"@type":"BreadcrumbList"}
+  </script>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+      processEscapes: true
+    }
+  };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <style>
+  .sm-notes { font-size: 1rem; line-height: 1.8; }
+  .sm-notes h2 { font-size: 1.45rem; color: var(--primary); margin: 44px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--accent); }
+  .sm-notes h3 { font-size: 1.15rem; color: var(--dark); margin: 28px 0 12px; }
+  .sm-notes h4 { font-size: 1.05rem; color: var(--dark); margin: 20px 0 8px; }
+  .sm-notes p { margin-bottom: 14px; }
+  .sm-notes ul, .sm-notes ol { margin: 10px 0 16px 24px; }
+  .sm-notes li { margin-bottom: 6px; }
+  .sm-notes ul { list-style: disc; }
+
+  .def-box { background: #eef2ff; border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .def-box .box-label { font-weight: 700; color: var(--primary); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .result-box { background: #fff8e1; border-left: 4px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .result-box .box-label { font-weight: 700; color: var(--accent-dark); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .example-box { background: #f0fdf4; border-left: 4px solid #16a34a; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .example-box .box-label { font-weight: 700; color: #16a34a; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .tip-box { background: #eff6ff; border-left: 4px solid #2563eb; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .tip-box .box-label { font-weight: 700; color: #2563eb; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .warn-box { background: #fef2f2; border-left: 4px solid #dc2626; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .warn-box .box-label { font-weight: 700; color: #dc2626; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .steps { margin: 12px 0 16px; }
+  .steps .step { display: flex; gap: 12px; margin-bottom: 10px; }
+  .steps .step-num { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: var(--primary); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; margin-top: 3px; }
+  .steps .step-text { flex: 1; }
+
+  .table-wrap { overflow-x: auto; margin: 16px 0; -webkit-overflow-scrolling: touch; }
+  .sm-notes table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .sm-notes th { background: var(--primary); color: var(--white); text-align: left; padding: 12px 14px; font-weight: 600; white-space: nowrap; }
+  .sm-notes td { padding: 10px 14px; border-bottom: 1px solid #e5e7eb; }
+  .sm-notes tr:nth-child(even) td { background: #f9fafb; }
+  .sm-notes tr:hover td { background: #eef2ff; }
+
+  .highlight { background: #fef9c3; padding: 2px 5px; border-radius: 4px; font-weight: 600; }
+  .qbox { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: var(--radius); padding: 16px 20px; margin: 12px 0; }
+  .qbox .q-label { font-weight: 700; color: var(--primary); margin-bottom: 4px; }
+
+  .app-box { background: #ecfeff; border-left: 4px solid #0891b2; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .app-box .box-label { font-weight: 700; color: #0e7490; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .comp-box { background: #f5f3ff; border-left: 4px solid #7c3aed; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .comp-box .box-label { font-weight: 700; color: #6d28d9; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .solved-box { background: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #16a34a; border-radius: var(--radius); padding: 18px 22px; margin: 18px 0; box-shadow: 0 2px 8px rgba(15,23,42,.05); }
+  .solved-box .s-label { font-weight: 700; color: #16a34a; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  .solved-box .s-part { margin: 10px 0 0; }
+  .solved-box .s-part b { color: var(--primary); }
+
+  .solution-box { background: #f8fafc; border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 16px 0 4px; font-size: 0.95rem; }
+  .solution-box p { margin: 8px 0; }
+
+  .case-card { background: #fff; border: 1px solid #e2e8f0; border-radius: var(--radius); margin: 22px 0; box-shadow: 0 2px 8px rgba(15,23,42,.05); overflow: hidden; }
+  .case-card-header { background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: #fff; padding: 14px 20px; }
+  .case-card-header h3 { margin: 0; font-size: 1.05rem; }
+  .case-card-body { padding: 18px 20px; }
+
+  .concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 18px 0; }
+  .concept-card { background: #fff; border: 1px solid #e2e8f0; border-left: 4px solid var(--primary); border-radius: var(--radius); padding: 16px 18px; transition: var(--transition); }
+  .concept-card:hover { box-shadow: 0 6px 18px rgba(79,70,229,.12); transform: translateY(-2px); }
+  .concept-card h4 { color: var(--primary); margin: 0 0 6px; font-size: 1rem; }
+  .concept-card p { margin: 0; font-size: 0.92rem; }
+
+  .tag-pill { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: .4px; text-transform: uppercase; padding: 3px 10px; border-radius: 999px; vertical-align: middle; }
+  .tag-style { background: #e0e7ff; color: #3730a3; }
+
+  .sm-notes mjx-container { max-width: 100%; }
+  .sm-notes mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; }
+
+  .resource-nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
+  .resource-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: var(--radius); border: 2px solid #e5e7eb; font-weight: 600; font-size: 0.92rem; color: var(--dark); background: var(--white); transition: var(--transition); }
+  .resource-nav a:hover, .resource-nav a.is-active { border-color: var(--primary); background: var(--primary); color: var(--white); }
+
+  .sm-back { display: inline-flex; align-items: center; gap: 8px; margin-top: 30px; padding: 10px 0; color: var(--primary); font-weight: 600; }
+  .sm-back:hover { color: var(--accent-dark); }
+
+  .next-chapter { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; justify-content: space-between; margin-top: 26px; padding: 18px 22px; background: linear-gradient(135deg, #eef2ff, #ffffff); border: 1px solid #e0e7ff; border-radius: var(--radius); }
+  .next-chapter h3 { margin: 0; font-size: 1.02rem; }
+  .next-chapter p { margin: 4px 0 0; font-size: 0.9rem; }
+
+  @media (max-width: 640px) {
+    .sm-notes h2 { font-size: 1.25rem; }
+    .sm-notes { font-size: 0.95rem; }
+    .steps .step { gap: 8px; }
+    .steps .step-num { width: 22px; height: 22px; font-size: 0.75rem; }
+    .resource-nav { gap: 6px; }
+    .resource-nav a { padding: 8px 12px; font-size: 0.85rem; }
+    .concept-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 420px) {
+    .concept-grid { grid-template-columns: 1fr; }
+  }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="/" class="logo"><i class="fas fa-graduation-cap"></i> Vyasa Academy</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="/">Home</a>
+      <a href="/#courses">Courses</a>
+      <a href="/cbse-study-material/" class="active">Study Material</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main class="sm-page">
+  <div class="container sm-container">
+    <nav class="sm-crumbs" aria-label="Breadcrumb">
+      <a href="https://www.vyasaacademy.in/">Home</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/">CBSE Study Material</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/">Class 10</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/">Mathematics</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/coordinate-geometry/">Coordinate Geometry</a> /
+      Notes
+    </nav>
+
+    <section class="sm-hero sm-hero-slim">
+      <p class="sm-eyebrow">CBSE Class 10 &middot; Mathematics</p>
+      <h1>Class 10 Mathematics &#8211; Chapter 7: Coordinate Geometry</h1>
+      <p>Coordinate geometry is the meeting point of <strong>algebra</strong> and <strong>geometry</strong>: every point of a plane is given a pair of numbers, and every pair of numbers is a point. Once a location has a number-pair, distances and midpoints can be <em>calculated</em> instead of measured. You already drew graphs of linear equations in earlier classes; in <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/triangles/notes/">Chapter 6 &#8211; Triangles</a> you reasoned with ratios and proportions, and in <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/arithmetic-progressions/notes/">Chapter 5 &#8211; Arithmetic Progressions</a> you studied steady, ordered patterns. This chapter puts both ideas on a numbered grid: it gives the distance formula and the midpoint formula, the two workhorses used everywhere from maps and floor plans to navigation and machine-crafted layouts. By the end you will be able to place points, name their quadrants, read coordinates from a graph, measure the gap between any two points and find the exact middle of any segment.</p>
+    </section>
+
+    <nav class="resource-nav" aria-label="Chapter resources">
+      <a class="is-active" href="/cbse-study-material/class-10/mathematics/coordinate-geometry/notes/"><i class="fas fa-book-open"></i> Notes</a>
+      <a href="/cbse-study-material/class-10/mathematics/coordinate-geometry/practice-paper/"><i class="fas fa-file-lines"></i> Practice Paper</a>
+      <a href="/cbse-study-material/class-10/mathematics/coordinate-geometry/quiz/"><i class="fas fa-bullseye"></i> Quiz</a>
+      <a href="/cbse-study-material/class-10/mathematics/coordinate-geometry/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+    </nav>
+
+    <article class="sm-notes">
+
+      <section id="introduction">
+        <h2>1. Introduction to Coordinate Geometry</h2>
+        <p>Coordinate geometry answers a simple question: <strong>where is this point, and how far apart are two points?</strong> Instead of describing positions with words ("roughly in the middle, a bit to the left"), it pins every location to a <strong>pair of numbers</strong> measured from fixed reference lines. Geometry done this way becomes arithmetic, and arithmetic can be done quickly, exactly and automatically.</p>
+        <p>The same tool runs the world around you: the grid on a city map that gives every street a number and letter, the floor plan of a house drawn on a grid, the search-by-coordinates of a navigation app, the square-by-square layout of a spreadsheet, and the position of a ship or an aircraft reported as a latitude and longitude. In every case, two numbers locate one point, and nothing about the shape is lost in the process.</p>
+
+        <div class="concept-grid">
+          <div class="concept-card">
+            <h4>Cartesian plane</h4>
+            <p>A flat grid made by two perpendicular number lines that cross at the origin.</p>
+          </div>
+          <div class="concept-card">
+            <h4>Ordered pair \((x,y)\)</h4>
+            <p>Two numbers that name one point; the order matters.</p>
+          </div>
+          <div class="concept-card">
+            <h4>Distance</h4>
+            <p>The straight-line gap between two points, found with the distance formula.</p>
+          </div>
+          <div class="concept-card">
+            <h4>Midpoint</h4>
+            <p>The point exactly halfway between two points, found by averaging coordinates.</p>
+          </div>
+        </div>
+
+        <p><strong>What you will learn in this chapter:</strong></p>
+        <ul>
+          <li>Describe the Cartesian plane, the axes, the origin and ordered pairs.</li>
+          <li>Name the four quadrants and recall the sign pattern of each.</li>
+          <li>Plot a point from its coordinates and read coordinates back from a graph.</li>
+          <li>Apply the distance formula, including points with negative coordinates and horizontal or vertical segments.</li>
+          <li>Find the midpoint of a segment and recover an unknown endpoint when the midpoint is known.</li>
+          <li>Recognise vertical and horizontal lines from the coordinates of their points.</li>
+          <li>Use distance and midpoint calculations to check simple geometric shapes like right triangles and rectangles.</li>
+        </ul>
+      </section>
+
+      <section id="cartesian-system">
+        <h2>2. Cartesian Coordinate System</h2>
+        <p>The <strong>Cartesian coordinate system</strong> places every point of the plane on a grid made of two number lines that cross at right angles at their zero marks. The horizontal number line is the <strong>\(x\)-axis</strong>; the vertical number line is the <strong>\(y\)-axis</strong>; and their crossing point is the <strong>origin <span class="highlight">\(O(0,0)\)</span></strong>. Positive numbers lie to the right on the \(x\)-axis and upwards on the \(y\)-axis; negative numbers lie to the left and downwards.</p>
+
+        <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartesian coordinate plane showing the x-axis, y-axis, origin O and a sample point P(2,3)" viewBox="0 0 560 460" width="560" height="460" style="max-width:100%;height:auto;display:block;margin:14px auto;">
+          <line x1="20" y1="230" x2="542" y2="230" stroke="#111827" stroke-width="2.5"/>
+          <polygon points="542,230 528,222 528,238" fill="#111827"/>
+          <line x1="280" y1="20" x2="280" y2="440" stroke="#111827" stroke-width="2.5"/>
+          <polygon points="280,20 272,34 288,34" fill="#111827"/>
+          <line x1="300" y1="224" x2="300" y2="236" stroke="#9ca3af" stroke-width="1.5"/>
+          <line x1="320" y1="224" x2="320" y2="236" stroke="#9ca3af" stroke-width="1.5"/>
+          <line x1="340" y1="224" x2="340" y2="236" stroke="#9ca3af" stroke-width="1.5"/>
+          <line x1="360" y1="224" x2="360" y2="236" stroke="#9ca3af" stroke-width="1.5"/>
+          <line x1="220" y1="224" x2="220" y2="236" stroke="#9ca3af" stroke-width="1.5"/>
+          <line x1="240" y1="224" x2="240" y2="236" stroke="#9ca3af" stroke-width="1.5"/>
+          <line x1="260" y1="224" x2="260" y2="236" stroke="#9ca3af" stroke-width="1.5"/>
+          <line x1="274" y1="210" x2="286" y2="210" stroke="#9ca3af" stroke-width="1.5"/>
+          <line x1="274" y1="190" x2="286" y2="190" stroke="#9ca3af" stroke-width="1.5"/>
+          <line x1="274" y1="170" x2="286" y2="170" stroke="#9ca3af" stroke-width="1.5"/>
+          <line x1="274" y1="250" x2="286" y2="250" stroke="#9ca3af" stroke-width="1.5"/>
+          <line x1="274" y1="270" x2="286" y2="270" stroke="#9ca3af" stroke-width="1.5"/>
+          <text x="304" y="220" text-anchor="middle" font-size="12" fill="#6b7280">1</text>
+          <text x="324" y="220" text-anchor="middle" font-size="12" fill="#6b7280">2</text>
+          <text x="344" y="220" text-anchor="middle" font-size="12" fill="#6b7280">3</text>
+          <text x="364" y="220" text-anchor="middle" font-size="12" fill="#6b7280">4</text>
+          <text x="216" y="220" text-anchor="middle" font-size="12" fill="#6b7280">-1</text>
+          <text x="236" y="220" text-anchor="middle" font-size="12" fill="#6b7280">-2</text>
+          <text x="256" y="220" text-anchor="middle" font-size="12" fill="#6b7280">-3</text>
+          <text x="266" y="206" text-anchor="end" font-size="12" fill="#6b7280">1</text>
+          <text x="266" y="186" text-anchor="end" font-size="12" fill="#6b7280">2</text>
+          <text x="266" y="166" text-anchor="end" font-size="12" fill="#6b7280">3</text>
+          <text x="266" y="254" text-anchor="end" font-size="12" fill="#6b7280">-1</text>
+          <text x="266" y="274" text-anchor="end" font-size="12" fill="#6b7280">-2</text>
+          <text x="470" y="214" text-anchor="middle" font-size="14" font-weight="700" fill="#374151">x-axis</text>
+          <text x="300" y="58" text-anchor="middle" font-size="14" font-weight="700" fill="#374151">y-axis</text>
+          <text x="258" y="244" text-anchor="end" font-size="15" font-weight="700" fill="#111827">O</text>
+          <circle cx="360" cy="110" r="6" fill="#d97706"/>
+          <text x="372" y="104" text-anchor="start" font-size="15" font-weight="700" fill="#d97706">P(2, 3)</text>
+          <line x1="360" y1="110" x2="360" y2="230" stroke="#d97706" stroke-width="1.5" stroke-dasharray="4,4"/>
+          <line x1="280" y1="110" x2="360" y2="110" stroke="#d97706" stroke-width="1.5" stroke-dasharray="4,4"/>
+        </svg>
+
+        <p>A point is named by an <strong>ordered pair</strong> written as \(P(x,y)\). The first number \(x\) is the <strong>x-coordinate</strong> (also called the <strong>abscissa</strong>) and tells how far the point is from the \(y\)-axis, moving right for positive values and left for negative values. The second number \(y\) is the <strong>y-coordinate</strong> (also called the <strong>ordinate</strong>) and tells how far the point is from the \(x\)-axis, moving up for positive values and down for negative values.</p>
+
+        <div class="def-box">
+          <div class="box-label">Ordered pair \(P(x,y)\)</div>
+          <p>\(P(x,y)\) locates a point whose <strong>x-coordinate (abscissa)</strong> is \(x\) and whose <strong>y-coordinate (ordinate)</strong> is \(y\). The pair is <strong>ordered</strong>: \((x,y)\) and \((y,x)\) are generally <span class="highlight">different points</span>. For example \(P(2,3)\) is two units right of the \(y\)-axis and three units above the \(x\)-axis, while \(P(3,2)\) is three units right and two units above.</p>
+        </div>
+        <div class="tip-box">
+          <div class="box-label">Reading order</div>
+          <p>Always read "across, then up": the first coordinate is the horizontal step \((x)\), the second is the vertical step \((y)\). This is why \((2,3)\) and \((3,2)\) are two different places on the plane.</p>
+        </div>
+      </section>
+
+      <section id="quadrants">
+        <h2>3. Quadrants</h2>
+        <p>The two axes divide the plane into four regions called <strong>quadrants</strong>, numbered anticlockwise starting from the top-right region. The sign pattern of a point tells you instantly which quadrant it lives in.</p>
+
+        <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Four quadrants of the Cartesian plane showing the sign pattern of coordinates in each region" viewBox="0 0 560 460" width="560" height="460" style="max-width:100%;height:auto;display:block;margin:14px auto;">
+          <line x1="20" y1="230" x2="542" y2="230" stroke="#111827" stroke-width="2.5"/>
+          <polygon points="542,230 528,222 528,238" fill="#111827"/>
+          <line x1="280" y1="20" x2="280" y2="440" stroke="#111827" stroke-width="2.5"/>
+          <polygon points="280,20 272,34 288,34" fill="#111827"/>
+          <text x="415" y="140" text-anchor="middle" font-size="17" font-weight="700" fill="#16a34a">I &nbsp;(+, +)</text>
+          <text x="145" y="140" text-anchor="middle" font-size="17" font-weight="700" fill="#dc2626">II &nbsp;(-, +)</text>
+          <text x="145" y="320" text-anchor="middle" font-size="17" font-weight="700" fill="#dc2626">III &nbsp;(-, -)</text>
+          <text x="415" y="320" text-anchor="middle" font-size="17" font-weight="700" fill="#16a34a">IV &nbsp;(+, -)</text>
+          <text x="300" y="218" text-anchor="start" font-size="13" font-weight="600" fill="#374151">x-axis</text>
+          <text x="300" y="52" text-anchor="middle" font-size="13" font-weight="600" fill="#374151">y-axis</text>
+          <text x="258" y="244" text-anchor="end" font-size="15" font-weight="700" fill="#111827">O</text>
+        </svg>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Quadrant</th><th>x-coordinate</th><th>y-coordinate</th><th>Example</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>First (I)</td><td>Positive</td><td>Positive</td><td>\((3,4)\)</td></tr>
+              <tr><td>Second (II)</td><td>Negative</td><td>Positive</td><td>\((-3,4)\)</td></tr>
+              <tr><td>Third (III)</td><td>Negative</td><td>Negative</td><td>\((-3,-4)\)</td></tr>
+              <tr><td>Fourth (IV)</td><td>Positive</td><td>Negative</td><td>\((3,-4)\)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Points on the axes</h3>
+        <p>A point never belongs to a quadrant if it sits on an axis:</p>
+        <ul>
+          <li>A point of the form \((a,0)\) lies on the <strong>x-axis</strong>; its ordinate is 0.</li>
+          <li>A point of the form \((0,b)\) lies on the <strong>y-axis</strong>; its abscissa is 0.</li>
+          <li>The point \((0,0)\) is the <strong>origin</strong> \(O\), where both axes meet.</li>
+        </ul>
+        <div class="tip-box">
+          <div class="box-label">Memory hook</div>
+          <p>Scan the signs of \((x,y)\). "Positive, negative" means fourth quadrant, "negative, positive" means second. Zero in either slot means the point is on an axis, not in any quadrant.</p>
+        </div>
+      </section>
+
+      <section id="plotting-points">
+        <h2>4. Plotting Points</h2>
+        <p>Plotting means converting a pair of numbers into a marked dot on the plane. The rule is to move exactly like a set of driving directions: turn right or left for the x-step, then up or down for the y-step.</p>
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-text">Start at the origin \(O(0,0)\).</div></div>
+          <div class="step"><div class="step-num">2</div><div class="step-text">Move along the \(x\)-axis: right by \(x\) units when \(x\) is positive, left by \(|x|\) units when \(x\) is negative. (If \(x = 0\), do not move horizontally.)</div></div>
+          <div class="step"><div class="step-num">3</div><div class="step-text">From there, move parallel to the \(y\)-axis: up by \(y\) units when \(y\) is positive, down by \(|y|\) units when \(y\) is negative. (If \(y = 0\), do not move vertically.)</div></div>
+          <div class="step"><div class="step-num">4</div><div class="step-text">Mark the point with a clear dot.</div></div>
+          <div class="step"><div class="step-num">5</div><div class="step-text">Label the point with its ordered pair so it can be read back later.</div></div>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Plotting the four points A(3,4), B(-3,4), C(-3,-4) and D(3,-4) on the Cartesian plane" viewBox="0 0 560 480" width="560" height="480" style="max-width:100%;height:auto;display:block;margin:14px auto;">
+          <line x1="20" y1="240" x2="542" y2="240" stroke="#111827" stroke-width="2.5"/>
+          <polygon points="542,240 528,232 528,248" fill="#111827"/>
+          <line x1="280" y1="20" x2="280" y2="462" stroke="#111827" stroke-width="2.5"/>
+          <polygon points="280,20 272,34 288,34" fill="#111827"/>
+          <line x1="145" y1="60" x2="145" y2="240" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="3,4"/>
+          <line x1="280" y1="60" x2="415" y2="60" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="3,4"/>
+          <line x1="145" y1="240" x2="145" y2="420" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="3,4"/>
+          <line x1="415" y1="240" x2="415" y2="420" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="3,4"/>
+          <line x1="100" y1="60" x2="145" y2="60" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="3,4"/>
+          <line x1="415" y1="60" x2="500" y2="60" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="3,4"/>
+          <line x1="100" y1="420" x2="145" y2="420" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="3,4"/>
+          <line x1="415" y1="420" x2="500" y2="420" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="3,4"/>
+          <circle cx="415" cy="60" r="6" fill="#4f46e5"/>
+          <text x="415" y="42" text-anchor="middle" font-size="15" font-weight="700" fill="#4f46e5">A(3, 4)</text>
+          <circle cx="145" cy="60" r="6" fill="#d97706"/>
+          <text x="145" y="42" text-anchor="middle" font-size="15" font-weight="700" fill="#d97706">B(-3, 4)</text>
+          <circle cx="145" cy="420" r="6" fill="#dc2626"/>
+          <text x="145" y="444" text-anchor="middle" font-size="15" font-weight="700" fill="#dc2626">C(-3, -4)</text>
+          <circle cx="415" cy="420" r="6" fill="#0891b2"/>
+          <text x="415" y="444" text-anchor="middle" font-size="15" font-weight="700" fill="#0891b2">D(3, -4)</text>
+          <text x="258" y="254" text-anchor="end" font-size="15" font-weight="700" fill="#111827">O</text>
+        </svg>
+
+        <div class="example-box">
+          <div class="box-label">Worked example (plotting)</div>
+          <p><strong>Plot \(P(-3,4)\).</strong> Start at \(O\). The x-coordinate is \(-3\), so move 3 units to the <strong>left</strong> along the x-axis. The y-coordinate is \(+4\), so move 4 units <strong>up</strong> parallel to the y-axis. Mark and label the dot \(P(-3,4)\). This point lies in the second quadrant, which is exactly what the signs \(( -, + )\) predict.</p>
+        </div>
+      </section>
+
+      <section id="reading-coordinates">
+        <h2>5. Reading Coordinates from a Graph</h2>
+        <p>Reading coordinates is the reverse of plotting: start at the point, and travel straight to the axes to find the two numbers. Drop a vertical line from the point to the \(x\)-axis: the number where it lands is the <strong>x-coordinate</strong>. Drop a horizontal line to the \(y\)-axis: the number where it lands is the <strong>y-coordinate</strong>.</p>
+
+        <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reading coordinates: point P(3,2) with dashed lines to the axes, and points Q(-2,3), R(2,-3) and S(-4,1)" viewBox="0 0 560 400" width="560" height="400" style="max-width:100%;height:auto;display:block;margin:14px auto;">
+          <line x1="20" y1="220" x2="542" y2="220" stroke="#111827" stroke-width="2.5"/>
+          <polygon points="542,220 528,212 528,228" fill="#111827"/>
+          <line x1="280" y1="20" x2="280" y2="390" stroke="#111827" stroke-width="2.5"/>
+          <polygon points="280,20 272,34 288,34" fill="#111827"/>
+          <line x1="415" y1="130" x2="415" y2="220" stroke="#4f46e5" stroke-width="1.6" stroke-dasharray="4,4"/>
+          <line x1="280" y1="130" x2="415" y2="130" stroke="#4f46e5" stroke-width="1.6" stroke-dasharray="4,4"/>
+          <circle cx="415" cy="130" r="6" fill="#4f46e5"/>
+          <text x="428" y="124" text-anchor="start" font-size="15" font-weight="700" fill="#4f46e5">P(3, 2)</text>
+          <circle cx="190" cy="85" r="6" fill="#d97706"/>
+          <text x="202" y="80" text-anchor="start" font-size="15" font-weight="700" fill="#d97706">Q(-2, 3)</text>
+          <circle cx="370" cy="355" r="6" fill="#dc2626"/>
+          <text x="382" y="368" text-anchor="start" font-size="15" font-weight="700" fill="#dc2626">R(2, -3)</text>
+          <circle cx="100" cy="175" r="6" fill="#0891b2"/>
+          <text x="70" y="166" text-anchor="end" font-size="15" font-weight="700" fill="#0891b2">S(-4, 1)</text>
+          <text x="422" y="236" text-anchor="middle" font-size="12" fill="#6b7280">read x = 3 here</text>
+          <text x="256" y="122" text-anchor="end" font-size="12" fill="#6b7280">read y = 2 here</text>
+          <text x="258" y="234" text-anchor="end" font-size="15" font-weight="700" fill="#111827">O</text>
+        </svg>
+
+        <div class="def-box">
+          <div class="box-label">Reading rule</div>
+          <p>Read the <strong>x-coordinate first</strong>, then the <strong>y-coordinate second</strong>, and write the answer as the ordered pair \((x,y)\). For example, the points above read as \(\mathbf{P}(3,2)\), \(\mathbf{Q}(-2,3)\), \(\mathbf{R}(2,-3)\) and \(\mathbf{S}(-4,1)\).</p>
+        </div>
+        <div class="warn-box">
+          <div class="box-label">Careful</div>
+          <p>The horizontal step is always recorded first. Swapping gives a different point: reading \(P\) as \((2,3)\) instead of \((3,2)\) moves the point to a completely different location.</p>
+        </div>
+      </section>
+
+      <section id="distance-formula">
+        <h2>6. Distance Between Two Points</h2>
+        <p>The distance between two points \(A(x_1,y_1)\) and \(B(x_2,y_2)\) is the length of the straight segment joining them. To find it without measuring, we borrow a right triangle from the grid and use the Pythagoras theorem.</p>
+
+        <div class="result-box">
+          <div class="box-label">Distance formula</div>
+          <p>\[ \boxed{AB = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}} \]</p>
+        </div>
+
+        <p><strong>What each part means:</strong></p>
+        <ul>
+          <li>\((x_2 - x_1)\) is the <strong>horizontal step</strong> between the points; squaring it makes it non-negative even when the step is leftwards.</li>
+          <li>\((y_2 - y_1)\) is the <strong>vertical step</strong> between the points; squaring removes the sign.</li>
+          <li>The two squares are the two legs of a right triangle, so their sum is the square of the hypotenuse.</li>
+          <li>The square root at the end converts the squared length back into an actual distance.</li>
+        </ul>
+
+        <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two points A(2,1) and B(5,4) joined by segment AB, with dashed horizontal and vertical legs forming a right triangle" viewBox="0 0 560 360" width="560" height="360" style="max-width:100%;height:auto;display:block;margin:14px auto;">
+          <line x1="20" y1="280" x2="542" y2="280" stroke="#111827" stroke-width="2"/>
+          <polygon points="542,280 528,272 528,288" fill="#111827"/>
+          <line x1="80" y1="40" x2="80" y2="320" stroke="#111827" stroke-width="2"/>
+          <polygon points="80,40 72,54 88,54" fill="#111827"/>
+          <line x1="160" y1="240" x2="280" y2="240" stroke="#9ca3af" stroke-width="1.6" stroke-dasharray="5,5"/>
+          <line x1="280" y1="120" x2="280" y2="240" stroke="#9ca3af" stroke-width="1.6" stroke-dasharray="5,5"/>
+          <line x1="160" y1="240" x2="280" y2="120" stroke="#4f46e5" stroke-width="4"/>
+          <polygon points="280,240 288,240 288,248 280,248" fill="#111827"/>
+          <circle cx="160" cy="240" r="6" fill="#4f46e5"/>
+          <text x="118" y="224" text-anchor="start" font-size="15" font-weight="700" fill="#4f46e5">A(2, 1)</text>
+          <circle cx="280" cy="120" r="6" fill="#4f46e5"/>
+          <text x="288" y="106" text-anchor="start" font-size="15" font-weight="700" fill="#4f46e5">B(5, 4)</text>
+          <circle cx="280" cy="240" r="5" fill="#111827"/>
+          <text x="292" y="256" text-anchor="start" font-size="14" font-weight="700" fill="#374151">C(5, 1)</text>
+          <text x="216" y="258" text-anchor="middle" font-size="13" font-weight="600" fill="#6b7280">x2 - x1 = 3</text>
+          <text x="296" y="182" text-anchor="start" font-size="13" font-weight="600" fill="#6b7280">y2 - y1 = 3</text>
+          <text x="206" y="176" text-anchor="middle" font-size="14" font-weight="700" fill="#4f46e5">distance AB</text>
+        </svg>
+
+        <p>The point \(C\) shares \(A\)'s y-coordinate and \(B\)'s x-coordinate, so \(AC\) is horizontal and \(CB\) is vertical, making \(ABC\) a right triangle with \(AB\) as its hypotenuse. The horizontal leg has length \(|x_2 - x_1|\), the vertical leg has length \(|y_2 - y_1|\), and the Pythagoras theorem turns those two legs into the hypotenuse \(AB = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}\).</p>
+      </section>
+
+      <section id="distance-derivation">
+        <h2>7. Derivation of the Distance Formula</h2>
+        <p>We derive the formula from scratch so you can see exactly why it works. Take two points \(A(x_1,y_1)\) and \(B(x_2,y_2)\) and introduce the helper point \(C(x_2,y_1)\), the corner where the horizontal step from \(A\) meets the vertical step from \(B\).</p>
+
+        <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Right triangle with legs x2-x1 and y2-y1 and hypotenuse AB showing the distance formula derivation" viewBox="0 0 560 300" width="560" height="300" style="max-width:100%;height:auto;display:block;margin:14px auto;">
+          <line x1="120" y1="220" x2="430" y2="220" stroke="#9ca3af" stroke-width="2.5" stroke-dasharray="6,5"/>
+          <line x1="430" y1="60" x2="430" y2="220" stroke="#9ca3af" stroke-width="2.5" stroke-dasharray="6,5"/>
+          <line x1="120" y1="220" x2="430" y2="60" stroke="#4f46e5" stroke-width="4"/>
+          <polygon points="430,220 438,220 438,228 430,228" fill="#111827"/>
+          <circle cx="120" cy="220" r="6" fill="#4f46e5"/>
+          <text x="62" y="238" text-anchor="start" font-size="16" font-weight="700" fill="#4f46e5">A(x1, y1)</text>
+          <circle cx="430" cy="60" r="6" fill="#4f46e5"/>
+          <text x="438" y="46" text-anchor="start" font-size="16" font-weight="700" fill="#4f46e5">B(x2, y2)</text>
+          <circle cx="430" cy="220" r="5" fill="#111827"/>
+          <text x="440" y="238" text-anchor="start" font-size="16" font-weight="700" fill="#374151">C(x2, y1)</text>
+          <text x="275" y="242" text-anchor="middle" font-size="14" font-weight="700" fill="#374151">horizontal leg = x2 - x1</text>
+          <text x="452" y="140" text-anchor="start" font-size="14" font-weight="700" fill="#374151">vertical leg = y2 - y1</text>
+          <text x="250" y="118" text-anchor="middle" font-size="14" font-weight="700" fill="#4f46e5">hypotenuse AB</text>
+        </svg>
+
+        <div class="solved-box">
+          <div class="s-label">Derivation &#8212; Distance formula</div>
+          <div class="s-part"><b>Horizontal difference:</b> travelling from \(A\) to \(B\), the x-coordinate changes by \(\Delta x = x_2 - x_1\). This is the length of leg \(AC\).</div>
+          <div class="s-part"><b>Vertical difference:</b> travelling from \(A\) to \(B\), the y-coordinate changes by \(\Delta y = y_2 - y_1\). This is the length of leg \(CB\).</div>
+          <div class="s-part"><b>Apply Pythagoras:</b> in the right triangle \(ACB\), the hypotenuse squared equals the sum of the squares of the two legs:</div>
+          <div class="s-part">\[ AB^2 = (\Delta x)^2 + (\Delta y)^2 = (x_2 - x_1)^2 + (y_2 - y_1)^2 \]</div>
+          <div class="s-part"><b>Take the positive square root:</b> distance is a length, never negative, so</div>
+          <div class="s-part">\[ \boxed{AB = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}} \]</div>
+        </div>
+        <div class="tip-box">
+          <div class="box-label">Order does not matter</div>
+          <p>Squares wipe out minus signs, so \(AB\) computed as "from A to B" equals \(BA\) computed as "from B to A". You may subtract either way round within each bracket.</p>
+        </div>
+      </section>
+
+      <section id="distance-examples">
+        <h2>8. Distance Formula &#8212; Worked Examples</h2>
+        <p>Each example follows the same skeleton: <strong>Given &#8594; Formula &#8594; Substitution &#8594; Simplification &#8594; Answer</strong>.</p>
+
+        <div class="example-box">
+          <div class="box-label">Worked example 1 &#8212; both coordinates positive</div>
+          <p><strong>Given:</strong> \(A(2,3)\) and \(B(5,7)\). Find \(AB\).</p>
+          <p><strong>Formula:</strong> \(AB = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\)</p>
+          <p><strong>Substitution:</strong> \(AB = \sqrt{(5 - 2)^2 + (7 - 3)^2}\)</p>
+          <p><strong>Simplification:</strong> \(= \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25}\)</p>
+          <p><strong>Answer:</strong> \(AB = 5\) units. &#10003;</p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Worked example 2 &#8212; negative coordinates</div>
+          <p><strong>Given:</strong> \(P(-2,-1)\) and \(Q(2,2)\). Find \(PQ\).</p>
+          <p><strong>Formula:</strong> \(PQ = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\)</p>
+          <p><strong>Substitution:</strong> \(PQ = \sqrt{(2 - (-2))^2 + (2 - (-1))^2}\)</p>
+          <p><strong>Simplification:</strong> \(= \sqrt{(2 + 2)^2 + (2 + 1)^2} = \sqrt{4^2 + 3^2} = \sqrt{16 + 9} = \sqrt{25}\)</p>
+          <p><strong>Answer:</strong> \(PQ = 5\) units. &#10003;</p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Worked example 3 &#8212; points in different quadrants</div>
+          <p><strong>Given:</strong> \(A(-1,2)\) in the second quadrant and \(B(3,-1)\) in the fourth quadrant. Find \(AB\).</p>
+          <p><strong>Formula:</strong> \(AB = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\)</p>
+          <p><strong>Substitution:</strong> \(AB = \sqrt{(3 - (-1))^2 + (-1 - 2)^2}\)</p>
+          <p><strong>Simplification:</strong> \(= \sqrt{(3 + 1)^2 + (-3)^2} = \sqrt{4^2 + 9} = \sqrt{16 + 9} = \sqrt{25}\)</p>
+          <p><strong>Answer:</strong> \(AB = 5\) units. &#10003;</p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Worked example 4 &#8212; horizontal line</div>
+          <p><strong>Given:</strong> \(P(-2,1)\) and \(Q(4,1)\). Find \(PQ\).</p>
+          <p><strong>Formula:</strong> \(PQ = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\)</p>
+          <p><strong>Substitution:</strong> \(PQ = \sqrt{(4 - (-2))^2 + (1 - 1)^2}\)</p>
+          <p><strong>Simplification:</strong> \(= \sqrt{6^2 + 0^2} = \sqrt{36}\)</p>
+          <p><strong>Answer:</strong> \(PQ = 6\) units. The two points share the same y-coordinate, so the segment is horizontal and the distance is simply \(|4 - (-2)| = 6\). &#10003;</p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Worked example 5 &#8212; vertical line</div>
+          <p><strong>Given:</strong> \(M(3,-1)\) and \(N(3,5)\). Find \(MN\).</p>
+          <p><strong>Formula:</strong> \(MN = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\)</p>
+          <p><strong>Substitution:</strong> \(MN = \sqrt{(3 - 3)^2 + (5 - (-1))^2}\)</p>
+          <p><strong>Simplification:</strong> \(= \sqrt{0^2 + 6^2} = \sqrt{36}\)</p>
+          <p><strong>Answer:</strong> \(MN = 6\) units. The two points share the same x-coordinate, so the segment is vertical and the distance is simply \(|5 - (-1)| = 6\). &#10003;</p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Worked example 6 &#8212; unknown coordinate from a given distance</div>
+          <p><strong>Given:</strong> The distance between \(A(1,2)\) and \(P(x,-1)\) is 5 units. Find \(x\).</p>
+          <p><strong>Formula:</strong> \(AP = \sqrt{(x - 1)^2 + (-1 - 2)^2} = 5\)</p>
+          <p><strong>Substitution:</strong> \(\sqrt{(x - 1)^2 + (-3)^2} = \sqrt{(x - 1)^2 + 9} = 5\)</p>
+          <p><strong>Simplification:</strong> square both sides: \((x - 1)^2 + 9 = 25\), so \((x - 1)^2 = 16\), giving \(x - 1 = \pm 4\).</p>
+          <p><strong>Answer:</strong> \(x = 5\) or \(x = -3\). Both \((5,-1)\) and \((-3,-1)\) are exactly 5 units from \(A(1,2)\). &#10003;</p>
+        </div>
+      </section>
+
+      <section id="midpoint">
+        <h2>9. Midpoint of a Line Segment</h2>
+        <p>The <strong>midpoint</strong> of a segment \(AB\) is the single point \(M\) that lies exactly halfway between \(A\) and \(B\). Split the horizontal step in half and the vertical step in half, and the two halves meet at the midpoint.</p>
+
+        <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Segment AB with midpoint M(4,4) between A(1,2) and B(7,6) shown on the coordinate plane" viewBox="0 0 560 260" width="560" height="260" style="max-width:100%;height:auto;display:block;margin:14px auto;">
+          <line x1="60" y1="230" x2="542" y2="230" stroke="#111827" stroke-width="2"/>
+          <polygon points="542,230 528,222 528,238" fill="#111827"/>
+          <line x1="100" y1="20" x2="100" y2="252" stroke="#111827" stroke-width="2"/>
+          <polygon points="100,20 92,34 108,34" fill="#111827"/>
+          <line x1="130" y1="170" x2="310" y2="50" stroke="#4f46e5" stroke-width="4"/>
+          <circle cx="130" cy="170" r="6" fill="#4f46e5"/>
+          <text x="108" y="190" text-anchor="start" font-size="15" font-weight="700" fill="#4f46e5">A(1, 2)</text>
+          <circle cx="310" cy="50" r="6" fill="#4f46e5"/>
+          <text x="318" y="38" text-anchor="start" font-size="15" font-weight="700" fill="#4f46e5">B(7, 6)</text>
+          <circle cx="220" cy="110" r="7" fill="#d97706"/>
+          <text x="232" y="116" text-anchor="start" font-size="15" font-weight="700" fill="#d97706">M(4, 4)</text>
+          <text x="258" y="244" text-anchor="end" font-size="15" font-weight="700" fill="#111827">O</text>
+        </svg>
+
+        <div class="result-box">
+          <div class="box-label">Midpoint formula</div>
+          <p>\[ \boxed{M\left( \frac{x_1 + x_2}{2}\,,\ \frac{y_1 + y_2}{2} \right)} \]</p>
+        </div>
+
+        <p>Why averaging? To reach the middle of the segment you must cover half of the total horizontal travel and half of the total vertical travel. Halfway between \(x_1\) and \(x_2\) on the number line is their average \(\frac{x_1+x_2}{2}\), and likewise for the y-coordinates.</p>
+      </section>
+
+      <section id="midpoint-derivation">
+        <h2>10. Midpoint Formula &#8212; Derivation</h2>
+        <p>Let \(A(x_1,y_1)\) and \(B(x_2,y_2)\) be the endpoints, and let \(M(x,y)\) be their midpoint. Project \(A\), \(M\) and \(B\) straight down onto the x-axis. They land on the x-axis at \((x_1,0)\), \((x,0)\) and \((x_2,0)\) in that order, and projection preserves "halfway between": the projected point of \(M\) is exactly the midpoint of the two projected endpoints on the axis.</p>
+        <div class="solved-box">
+          <div class="s-label">Derivation &#8212; Midpoint formula</div>
+          <div class="s-part"><b>Midpoint on the x-axis:</b> a point halfway between \((x_1,0)\) and \((x_2,0)\) splits the gap \(x_2 - x_1\) into two equal halves. Halfway from \(x_1\) toward \(x_2\) is</div>
+          <div class="s-part">\[ x = x_1 + \frac{x_2 - x_1}{2} = \frac{2x_1 + x_2 - x_1}{2} = \frac{x_1 + x_2}{2} \]</div>
+          <div class="s-part"><b>Midpoint on the y-axis:</b> projecting A, M and B onto the y-axis gives, by exactly the same argument,</div>
+          <div class="s-part">\[ y = y_1 + \frac{y_2 - y_1}{2} = \frac{y_1 + y_2}{2} \]</div>
+          <div class="s-part"><b>Conclusion:</b> the midpoint is</div>
+          <div class="s-part">\[ \boxed{M\left( \frac{x_1 + x_2}{2}\,,\ \frac{y_1 + y_2}{2} \right)} \]</div>
+        </div>
+        <div class="tip-box">
+          <div class="box-label">Check it is halfway</div>
+          <p>Verify with the diagram above: \(A(1,2)\) and \(B(7,6)\) differ by 6 in x and 4 in y. The midpoint moves 3 right and 2 up from \(A\), landing at \((4,4)\), and 3 left and 2 down from \(B\) lands at the same \((4,4)\).</p>
+        </div>
+      </section>
+
+      <section id="midpoint-examples">
+        <h2>11. Midpoint Formula &#8212; Worked Examples</h2>
+
+        <div class="example-box">
+          <div class="box-label">Worked example 1 &#8212; midpoint of two points</div>
+          <p><strong>Given:</strong> \(A(2,4)\) and \(B(6,8)\). Find the midpoint \(M\).</p>
+          <p><strong>Formula:</strong> \(M\left( \frac{x_1 + x_2}{2}, \frac{y_1 + y_2}{2} \right)\)</p>
+          <p><strong>Substitution:</strong> \(M\left( \frac{2 + 6}{2}, \frac{4 + 8}{2} \right)\)</p>
+          <p><strong>Calculation:</strong> \(= \left( \frac{8}{2}, \frac{12}{2} \right) = (4,6)\)</p>
+          <p><strong>Answer:</strong> \(M(4,6)\). &#10003;</p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Worked example 2 &#8212; negative coordinates</div>
+          <p><strong>Given:</strong> \(P(-4,-2)\) and \(Q(2,6)\). Find the midpoint \(M\).</p>
+          <p><strong>Formula:</strong> \(M\left( \frac{x_1 + x_2}{2}, \frac{y_1 + y_2}{2} \right)\)</p>
+          <p><strong>Substitution:</strong> \(M\left( \frac{-4 + 2}{2}, \frac{-2 + 6}{2} \right)\)</p>
+          <p><strong>Calculation:</strong> \(= \left( \frac{-2}{2}, \frac{4}{2} \right) = (-1,2)\)</p>
+          <p><strong>Answer:</strong> \(M(-1,2)\). &#10003;</p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Worked example 3 &#8212; points in different quadrants</div>
+          <p><strong>Given:</strong> \(A(5,-3)\) in the fourth quadrant and \(B(-1,7)\) in the second quadrant. Find the midpoint \(M\).</p>
+          <p><strong>Formula:</strong> \(M\left( \frac{x_1 + x_2}{2}, \frac{y_1 + y_2}{2} \right)\)</p>
+          <p><strong>Substitution:</strong> \(M\left( \frac{5 + (-1)}{2}, \frac{-3 + 7}{2} \right)\)</p>
+          <p><strong>Calculation:</strong> \(= \left( \frac{4}{2}, \frac{4}{2} \right) = (2,2)\)</p>
+          <p><strong>Answer:</strong> \(M(2,2)\). &#10003;</p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Worked example 4 &#8212; unknown endpoint</div>
+          <p><strong>Given:</strong> \(M(3,4)\) is the midpoint of \(A(1,2)\) and \(B\). Find \(B\).</p>
+          <p><strong>Formula:</strong> \(M\left( \frac{x_1 + x_2}{2}, \frac{y_1 + y_2}{2} \right)\) with \(A\) as \((x_1,y_1)\) and \(B\) as \((x_2,y_2)\).</p>
+          <p><strong>Substitution:</strong> \(\frac{1 + x_2}{2} = 3\) and \(\frac{2 + y_2}{2} = 4\).</p>
+          <p><strong>Calculation:</strong> \(1 + x_2 = 6 \implies x_2 = 5\); \(2 + y_2 = 8 \implies y_2 = 6\).</p>
+          <p><strong>Answer:</strong> \(B(5,6)\). &#10003; (Check: \(M\) of \((1,2)\) and \((5,6)\) is \(\left(3,4\right)\), correct.)</p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Worked example 5 &#8212; application</div>
+          <p><strong>Given:</strong> Two towns stand at \(A(-3,1)\) and \(B(7,5)\) on a district map. A water tank is to be built at the point exactly halfway between them. Find the tank's position.</p>
+          <p><strong>Formula:</strong> \(M\left( \frac{x_1 + x_2}{2}, \frac{y_1 + y_2}{2} \right)\)</p>
+          <p><strong>Substitution:</strong> \(M\left( \frac{-3 + 7}{2}, \frac{1 + 5}{2} \right)\)</p>
+          <p><strong>Calculation:</strong> \(= \left( \frac{4}{2}, \frac{6}{2} \right) = (2,3)\)</p>
+          <p><strong>Answer:</strong> The tank should be built at \((2,3)\). &#10003;</p>
+        </div>
+      </section>
+
+      <section id="applications">
+        <h2>12. Applications of Coordinate Geometry</h2>
+        <p>The same two ideas &#8212; distance and midpoint &#8212; run a surprising amount of the world. Whenever a position can be pinned to a grid, coordinate geometry can measure it without a tape.</p>
+
+        <div class="concept-grid">
+          <div class="concept-card">
+            <h4>Maps</h4>
+            <p>Every street and landmark has a grid cell; distance and midpoint help locate the real gap between two places.</p>
+          </div>
+          <div class="concept-card">
+            <h4>Floor plans</h4>
+            <p>A house plan drawn on a grid lets builders read exact placements and find the centre of a room or the middle of a wall.</p>
+          </div>
+          <div class="concept-card">
+            <h4>Position tracking</h4>
+            <p>A delivery rider or a ship is a live point on a map; distance-between-points answers "how far away is it now?".</p>
+          </div>
+          <div class="concept-card">
+            <h4>Grid layouts</h4>
+            <p>Games, chessboards, spreadsheets and printed layouts all use number-pairs to place objects precisely.</p>
+          </div>
+          <div class="concept-card">
+            <h4>Measuring distances</h4>
+            <p>Distance on a scaled map, straight-line gaps in a park, and rejection distances in sports can all be computed from coordinates.</p>
+          </div>
+          <div class="concept-card">
+            <h4>Midpoint of a path</h4>
+            <p>Finding the halfway point of a route, the centre of a plot, or the balance point of two ends is a midpoint calculation.</p>
+          </div>
+          <div class="concept-card">
+            <h4>Simple modelling</h4>
+            <p>Ideas like "is this corner square?" or "is this plot a rectangle?" are geometry questions the distance formula can answer with coordinates.</p>
+          </div>
+        </div>
+
+        <div class="app-box">
+          <div class="box-label">Real-world link</div>
+          <p>Navigation apps compute straight-line ("as the crow flies") distances with the distance formula, then combine the midpoint idea with road data to give the shortest practical route between two locations.</p>
+        </div>
+      </section>
+
+      <section id="relationships">
+        <h2>13. Important Conceptual Relationships</h2>
+        <p>Two coordinates can tell you a geometric fact without any calculation. When the two coordinates of a pair match, the points line up neatly.</p>
+
+        <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Points P(3,2) and Q(3,-2) sharing the same x-coordinate lie on a vertical line; points R(-2,4) and S(2,4) sharing the same y-coordinate lie on a horizontal line" viewBox="0 0 560 340" width="560" height="340" style="max-width:100%;height:auto;display:block;margin:14px auto;">
+          <text x="150" y="26" text-anchor="middle" font-size="14" font-weight="700" fill="#374151">same x &#8594; vertical</text>
+          <line x1="30" y1="200" x2="262" y2="200" stroke="#111827" stroke-width="2"/>
+          <polygon points="262,200 248,192 248,208" fill="#111827"/>
+          <line x1="84" y1="40" x2="84" y2="336" stroke="#111827" stroke-width="2"/>
+          <polygon points="84,40 76,54 92,54" fill="#111827"/>
+          <line x1="144" y1="70" x2="144" y2="330" stroke="#dc2626" stroke-width="3" stroke-dasharray="5,5"/>
+          <circle cx="144" cy="160" r="6" fill="#4f46e5"/>
+          <text x="158" y="154" text-anchor="start" font-size="14" font-weight="700" fill="#4f46e5">P(3, 2)</text>
+          <circle cx="144" cy="240" r="6" fill="#4f46e5"/>
+          <text x="158" y="246" text-anchor="start" font-size="14" font-weight="700" fill="#4f46e5">Q(3, -2)</text>
+          <text x="72" y="214" text-anchor="end" font-size="14" font-weight="700" fill="#111827">O</text>
+          <text x="395" y="26" text-anchor="middle" font-size="14" font-weight="700" fill="#374151">same y &#8594; horizontal</text>
+          <line x1="40" y1="200" x2="545" y2="200" stroke="#111827" stroke-width="2"/>
+          <polygon points="545,200 531,192 531,208" fill="#111827"/>
+          <line x1="330" y1="40" x2="330" y2="336" stroke="#111827" stroke-width="2"/>
+          <polygon points="330,40 322,54 338,54" fill="#111827"/>
+          <line x1="270" y1="120" x2="410" y2="120" stroke="#0891b2" stroke-width="3" stroke-dasharray="5,5"/>
+          <circle cx="290" cy="120" r="6" fill="#d97706"/>
+          <text x="278" y="110" text-anchor="end" font-size="14" font-weight="700" fill="#d97706">R(-2, 4)</text>
+          <circle cx="370" cy="120" r="6" fill="#d97706"/>
+          <text x="382" y="110" text-anchor="start" font-size="14" font-weight="700" fill="#d97706">S(2, 4)</text>
+          <text x="318" y="214" text-anchor="end" font-size="14" font-weight="700" fill="#111827">O</text>
+        </svg>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Condition</th><th>Meaning</th><th>Distance simplifies to</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>\(x_1 = x_2\)</td><td>The segment is vertical (points share one x-coordinate)</td><td>\(AB = |y_2 - y_1|\)</td></tr>
+              <tr><td>\(y_1 = y_2\)</td><td>The segment is horizontal (points share one y-coordinate)</td><td>\(AB = |x_2 - x_1|\)</td></tr>
+              <tr><td>\(x_1 = x_2\) and \(y_1 = y_2\)</td><td>The "two" points are the same point</td><td>\(AB = 0\)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="warn-box">
+          <div class="box-label">Common trap</div>
+          <p>A vertical line is <strong>not</strong> "x is the same as y". It is "x is the same <em>as each other for every point on it</em>", i.e. all the points share one x-value. Penned the other way: a horizontal line shares one y-value.</p>
+        </div>
+      </section>
+
+      <section id="shapes">
+        <h2>14. Coordinate Geometry and Geometric Shapes</h2>
+        <p>Coordinates turn shape-properties into number-checks. Because the distance formula gives every side and diagonal exactly, we can verify whether a figure is a right triangle, a rectangle, a square or a set of collinear points by pure calculation.</p>
+
+        <div class="example-box">
+          <div class="box-label">Worked example &#8212; a right triangle check</div>
+          <p><strong>Given:</strong> \(A(1,2)\), \(B(4,2)\), \(C(4,6)\). Show that \(\triangle ABC\) is right-angled.</p>
+          <p><strong>Working:</strong> find all three side lengths with the distance formula.</p>
+          <p>\(AB = \sqrt{(4-1)^2 + (2-2)^2} = \sqrt{9 + 0} = 3\)</p>
+          <p>\(BC = \sqrt{(4-4)^2 + (6-2)^2} = \sqrt{0 + 16} = 4\)</p>
+          <p>\(AC = \sqrt{(4-1)^2 + (6-2)^2} = \sqrt{9 + 16} = 5\)</p>
+          <p><strong>Conclusion:</strong> \(3^2 + 4^2 = 9 + 16 = 25 = 5^2\), so the Pythagoras relation holds and \(\triangle ABC\) is right-angled at \(B\) (where the horizontal side \(AB\) meets the vertical side \(BC\)). &#10003;</p>
+        </div>
+
+        <div class="example-box">
+          <div class="box-label">Worked example &#8212; a rectangle check</div>
+          <p><strong>Given:</strong> \(A(1,1)\), \(B(5,1)\), \(C(5,3)\), \(D(1,3)\). Show that \(ABCD\) is a rectangle.</p>
+          <p><strong>Working:</strong> check sides and diagonals.</p>
+          <p>Sides: \(AB\) has \(y_1 = y_2 = 1\), so it is horizontal with \(AB = 4\). \(BC\) has \(x_1 = x_2 = 5\), so it is vertical with \(BC = 2\). \(CD\) is horizontal with \(CD = 4\) and \(DA\) is vertical with \(DA = 2\). Every corner joins a horizontal side to a vertical side, giving four right angles.</p>
+          <p>Diagonals: \(AC = \sqrt{(5-1)^2 + (3-1)^2} = \sqrt{16 + 4} = \sqrt{20}\) and \(BD = \sqrt{(1-5)^2 + (3-1)^2} = \sqrt{16 + 4} = \sqrt{20}\). They are equal, confirming the rectangle. &#10003;</p>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rectangle ABCD with vertices at A(1,1), B(5,1), C(5,3) and D(1,3), with equal dashed diagonals shown" viewBox="0 0 560 380" width="560" height="380" style="max-width:100%;height:auto;display:block;margin:14px auto;">
+          <line x1="20" y1="300" x2="542" y2="300" stroke="#9ca3af" stroke-width="1.5"/>
+          <line x1="60" y1="20" x2="60" y2="340" stroke="#9ca3af" stroke-width="1.5"/>
+          <rect x="100" y="150" width="230" height="140" fill="#eef2ff" stroke="#16a34a" stroke-width="3"/>
+          <line x1="100" y1="290" x2="330" y2="150" stroke="#d97706" stroke-width="2" stroke-dasharray="5,5"/>
+          <line x1="100" y1="150" x2="330" y2="290" stroke="#d97706" stroke-width="2" stroke-dasharray="5,5"/>
+          <text x="90" y="308" text-anchor="end" font-size="15" font-weight="700" fill="#16a34a">A(1, 1)</text>
+          <text x="338" y="308" text-anchor="start" font-size="15" font-weight="700" fill="#16a34a">B(5, 1)</text>
+          <text x="338" y="142" text-anchor="start" font-size="15" font-weight="700" fill="#16a34a">C(5, 3)</text>
+          <text x="90" y="142" text-anchor="end" font-size="15" font-weight="700" fill="#16a34a">D(1, 3)</text>
+          <text x="215" y="214" text-anchor="middle" font-size="13" font-weight="700" fill="#374151">AB = 4</text>
+          <text x="215" y="228" text-anchor="middle" font-size="13" font-weight="700" fill="#374151">BC = 2</text>
+          <text x="266" y="196" text-anchor="start" font-size="12" font-weight="700" fill="#b45309">AC = BD</text>
+        </svg>
+
+        <div class="tip-box">
+          <div class="box-label">Also useful</div>
+          <p>Three points \(A, B, C\) are <strong>collinear</strong> (on one straight line) precisely when the larger distance equals the sum of the two smaller ones, i.e. \(AB + BC = AC\) for the correct ordering. For example, \(P(-1,2)\), \(Q(1,4)\), \(R(3,6)\) satisfy \(PQ = 2\sqrt{2}\), \(QR = 2\sqrt{2}\) and \(PR = 4\sqrt{2}\), so they lie on one line.</p>
+        </div>
+      </section>
+
+      <section id="common-mistakes">
+        <h2>15. Common Mistakes</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Mistake</th><th>Why it happens</th><th>Fix</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Writing y before x, e.g. \((4,3)\) instead of \((3,4)\)</td><td>Reading up before across</td><td>Always write \((x,y)\): across first, up second</td></tr>
+              <tr><td>Wrong quadrant for a point</td><td>Ignoring one of the signs</td><td>Check both signs; \(( -, + )\) means left and up, quadrant II</td></tr>
+              <tr><td>Sign errors inside the brackets</td><td>Subtracting a negative incorrectly</td><td>Bracket the negative number: \((x_2 - (-3))^2\)</td></tr>
+              <tr><td>Forgetting brackets around negative differences</td><td>Squaring a negative difference sloppily</td><td>Square the whole difference: \((-4)^2\), never \(-4^2 = -16\)</td></tr>
+              <tr><td>Wrong subtraction order</td><td>Mixing \(x_1 - x_2\) with \(y_2 - y_1\)</td><td>Squaring fixes the sign, but stay consistent: both as \(x_2-x_1\) and \(y_2-y_1\)</td></tr>
+              <tr><td>Forgetting to square</td><td>Adding differences without squaring</td><td>The formula needs squares: write each bracket squared</td></tr>
+              <tr><td>Ignoring the square root</td><td>Stopping at the squared number</td><td>Finish with \(\sqrt{\,}\) and report the distance</td></tr>
+              <tr><td>Using the wrong endpoint's coordinates in midpoint</td><td>Averaging mismatched pairs</td><td>Average the x's together and the y's together, never x with y</td></tr>
+              <tr><td>Dividing instead of averaging</td><td>Misremembering the midpoint rule</td><td>Add the two coordinates first, then divide each sum by 2</td></tr>
+              <tr><td>Arithmetic slips in \(\sqrt{0 + 36}\)</td><td>Rushing the final steps</td><td>Write each simplification line and check squares before adding</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="warn-box">
+          <div class="box-label">Pattern to internalise</div>
+          <p>\((3,-4)\) is <span class="highlight">not</span> the same as \((-3,4)\). The first is right and down (quadrant IV); the second is left and up (quadrant II). One careless sign moves the point across two quadrants.</p>
+        </div>
+      </section>
+
+      <section id="exam-tips">
+        <h2>16. Exam Tips</h2>
+        <div class="tip-box">
+          <div class="box-label">Exam-ready checklist</div>
+          <ul>
+            <li>Always write coordinates in the \((x,y)\) order, and label plots with their ordered pair.</li>
+            <li>Check the signs of both coordinates before substituting.</li>
+            <li>Write the formula first, then substitute values underneath it.</li>
+            <li>Use brackets for negative numbers: \((x_2 - (-3))^2\) removes sign confusion.</li>
+            <li>Simplify the squares carefully and add them before taking the root.</li>
+            <li>Confirm the final distance is non-negative; a distance can never be negative.</li>
+            <li>For midpoints, average the x-coordinates separately and the y-coordinates separately.</li>
+            <li>Label points clearly on diagrams so the examiner can follow your working.</li>
+            <li>Show enough steps: each substitution line earns marks, even if the final answer is wrong.</li>
+          </ul>
+        </div>
+        <div class="tip-box">
+          <div class="box-label">Time-saving check</div>
+          <p>When the coordinates share an x or a y, skip the full formula mentally: vertical distance is \(|y_2 - y_1|\), horizontal distance is \(|x_2 - x_1|\). Spotting this can save a full minute per question.</p>
+        </div>
+      </section>
+
+      <section id="quick-revision">
+        <h2>17. Quick Revision</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Concept</th><th>Key result</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Ordered pair for a point</td><td>\((x,y)\) &#8212; x first, y second</td></tr>
+              <tr><td>x-coordinate</td><td>Abscissa</td></tr>
+              <tr><td>y-coordinate</td><td>Ordinate</td></tr>
+              <tr><td>Origin</td><td>\((0,0)\)</td></tr>
+              <tr><td>Distance between \(A(x_1,y_1)\), \(B(x_2,y_2)\)</td><td>\(\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}\)</td></tr>
+              <tr><td>Midpoint of \(A(x_1,y_1)\), \(B(x_2,y_2)\)</td><td>\(\left( \frac{x_1+x_2}{2}, \frac{y_1+y_2}{2} \right)\)</td></tr>
+              <tr><td>Same x-coordinate</td><td>Vertical line; distance \(= |y_2-y_1|\)</td></tr>
+              <tr><td>Same y-coordinate</td><td>Horizontal line; distance \(= |x_2-x_1|\)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Quadrant</th><th>Sign of x</th><th>Sign of y</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>I</td><td>\(+\)</td><td>\(+\)</td></tr>
+              <tr><td>II</td><td>\(-\)</td><td>\(+\)</td></tr>
+              <tr><td>III</td><td>\(-\)</td><td>\(-\)</td></tr>
+              <tr><td>IV</td><td>\(+\)</td><td>\(-\)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="formula-box">
+        <h2>18. Coordinate Geometry Formula Box</h2>
+        <div class="result-box">
+          <div class="box-label">Distance formula</div>
+          <p>\[ \boxed{AB = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}} \]</p>
+          <p>for \(A(x_1,y_1)\) and \(B(x_2,y_2)\).</p>
+        </div>
+        <div class="result-box">
+          <div class="box-label">Midpoint formula</div>
+          <p>\[ \boxed{M\left( \frac{x_1+x_2}{2}\,,\ \frac{y_1+y_2}{2} \right)} \]</p>
+          <p>for the midpoint \(M\) of the segment joining \(A(x_1,y_1)\) and \(B(x_2,y_2)\).</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Coordinate notation</div>
+          <p>\[ \boxed{P(x,y)} \]</p>
+          <p>Every point is named by the ordered pair of its coordinates: \(x\) the abscissa, \(y\) the ordinate.</p>
+        </div>
+        <div class="warn-box">
+          <div class="box-label">Scope note</div>
+          <p>These two formulas cover the coordinate geometry taught in Class 10: distance and midpoint. Recognise that a "midpoint" is just the special halfway-ratio case of dividing a segment, which you meet fully in later classes.</p>
+        </div>
+      </section>
+
+      <section id="worked-examples">
+        <h2>19. Worked Examples &#8212; Consolidated Section</h2>
+        <p>The ten examples below travel through the whole chapter: quadrants, plotting, reading, distances (positive, negative, horizontal, vertical), midpoints, unknown endpoints and a geometric figure.</p>
+
+        <div class="solved-box">
+          <div class="s-label">Worked Example 1</div>
+          <div class="s-part"><b>Question:</b> Identify the quadrant of each point: \(P(-3,5)\), \(Q(4,-2)\), \(R(-2,-6)\), \(S(5,1)\), and the locations of \(T(0,3)\) and \(U(4,0)\).</div>
+          <div class="s-part"><b>Concept:</b> the sign pattern \((x,y)\) decides the quadrant; a zero coordinate means the point is on an axis.</div>
+          <div class="s-part"><b>Working:</b> \(P(-3,5)\) is \((-,+)\) &#8594; quadrant II. \(Q(4,-2)\) is \((+,-)\) &#8594; quadrant IV. \(R(-2,-6)\) is \((-,-)\) &#8594; quadrant III. \(S(5,1)\) is \((+,+)\) &#8594; quadrant I. \(T(0,3)\) has \(x = 0\) &#8594; on the y-axis. \(U(4,0)\) has \(y = 0\) &#8594; on the x-axis.</div>
+          <div class="s-part"><b>Final Answer:</b> P &#8594; II, Q &#8594; IV, R &#8594; III, S &#8594; I, T on the y-axis, U on the x-axis.</div>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label">Worked Example 2</div>
+          <div class="s-part"><b>Question:</b> Plot the point \((3,-2)\).</div>
+          <div class="s-part"><b>Concept:</b> move along x first, then parallel to y.</div>
+          <div class="s-part"><b>Working:</b> start at \(O(0,0)\); move 3 units right along the x-axis; then move 2 units down parallel to the y-axis.</div>
+          <div class="s-part"><b>Final Answer:</b> the dot at \((3,-2)\), in quadrant IV.</div>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label">Worked Example 3</div>
+          <div class="s-part"><b>Question:</b> On a grid, a point is 2 units right of the y-axis and 5 units below the x-axis. Write its coordinates.</div>
+          <div class="s-part"><b>Concept:</b> "right of the y-axis" fixes the x-coordinate; "below the x-axis" fixes the y-coordinate.</div>
+          <div class="s-part"><b>Working:</b> right by 2 means \(x = 2\); below the x-axis by 5 means \(y = -5\).</div>
+          <div class="s-part"><b>Final Answer:</b> the point is \((2,-5)\).</div>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label">Worked Example 4</div>
+          <div class="s-part"><b>Question:</b> Find the distance between \(A(1,2)\) and \(B(4,6)\).</div>
+          <div class="s-part"><b>Formula:</b> \(AB = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}\)</div>
+          <div class="s-part"><b>Substitution:</b> \(AB = \sqrt{(4-1)^2 + (6-2)^2}\)</div>
+          <div class="s-part"><b>Working:</b> \(=\sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5\)</div>
+          <div class="s-part"><b>Final Answer:</b> \(AB = 5\) units.</div>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label">Worked Example 5</div>
+          <div class="s-part"><b>Question:</b> Find the distance between \(P(-2,3)\) and \(Q(4,-5)\).</div>
+          <div class="s-part"><b>Formula:</b> \(PQ = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}\)</div>
+          <div class="s-part"><b>Substitution:</b> \(PQ = \sqrt{(4 - (-2))^2 + (-5 - 3)^2}\)</div>
+          <div class="s-part"><b>Working:</b> \(=\sqrt{(4+2)^2 + (-8)^2} = \sqrt{6^2 + 64} = \sqrt{36 + 64} = \sqrt{100} = 10\)</div>
+          <div class="s-part"><b>Final Answer:</b> \(PQ = 10\) units.</div>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label">Worked Example 6</div>
+          <div class="s-part"><b>Question:</b> Find the distance between \(P(-3,4)\) and \(Q(5,4)\).</div>
+          <div class="s-part"><b>Concept:</b> the y-coordinates are equal, so the segment is horizontal.</div>
+          <div class="s-part"><b>Formula:</b> \(PQ = |x_2 - x_1| = |5 - (-3)|\)</div>
+          <div class="s-part"><b>Working:</b> \(= |5+3| = 8\)</div>
+          <div class="s-part"><b>Final Answer:</b> \(PQ = 8\) units.</div>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label">Worked Example 7</div>
+          <div class="s-part"><b>Question:</b> Find the distance between \(A(2,-1)\) and \(B(2,7)\).</div>
+          <div class="s-part"><b>Concept:</b> the x-coordinates are equal, so the segment is vertical.</div>
+          <div class="s-part"><b>Formula:</b> \(AB = |y_2 - y_1| = |7 - (-1)|\)</div>
+          <div class="s-part"><b>Working:</b> \(= |7+1| = 8\)</div>
+          <div class="s-part"><b>Final Answer:</b> \(AB = 8\) units.</div>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label">Worked Example 8</div>
+          <div class="s-part"><b>Question:</b> Find the midpoint of \(A(-2,3)\) and \(B(6,-7)\).</div>
+          <div class="s-part"><b>Formula:</b> \(M\left(\frac{x_1+x_2}{2}, \frac{y_1+y_2}{2}\right)\)</div>
+          <div class="s-part"><b>Substitution:</b> \(M\left(\frac{-2+6}{2}, \frac{3+(-7)}{2}\right)\)</div>
+          <div class="s-part"><b>Working:</b> \(= \left(\frac{4}{2}, \frac{-4}{2}\right) = (2,-2)\)</div>
+          <div class="s-part"><b>Final Answer:</b> midpoint \(M(2,-2)\).</div>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label">Worked Example 9</div>
+          <div class="s-part"><b>Question:</b> \(M(-1,2)\) is the midpoint of \(A(3,5)\) and \(B(p,q)\). Find \(p\) and \(q\).</div>
+          <div class="s-part"><b>Formula:</b> \(M\left(\frac{x_A+x_B}{2}, \frac{y_A+y_B}{2}\right)\)</div>
+          <div class="s-part"><b>Substitution:</b> \(\frac{3+p}{2} = -1\) and \(\frac{5+q}{2} = 2\)</div>
+          <div class="s-part"><b>Working:</b> \(3 + p = -2 \implies p = -5\); \(5 + q = 4 \implies q = -1\)</div>
+          <div class="s-part"><b>Final Answer:</b> \(B(-5,-1)\). Check: midpoint of \((3,5)\) and \((-5,-1)\) is \(\left(\frac{-2}{2}, \frac{4}{2}\right) = (-1,2)\). &#10003;</div>
+        </div>
+
+        <div class="solved-box">
+          <div class="s-label">Worked Example 10</div>
+          <div class="s-part"><b>Question:</b> \(A(1,1)\), \(B(5,1)\), \(C(5,3)\) and \(D(1,3)\) are the corners of a field on a map. Show that the field is a rectangle and state its perimeter.</div>
+          <div class="s-part"><b>Concept:</b> parallel-to-the-axes corners give right angles; equal diagonals confirm the rectangle.</div>
+          <div class="s-part"><b>Formula:</b> \(AB = |x_2-x_1|\), \(BC = |y_2-y_1|\), \(AC = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}\)</div>
+          <div class="s-part"><b>Working:</b> \(AB = 5 - 1 = 4\), \(BC = 3 - 1 = 2\), \(CD = 5 - 1 = 4\) (horizontal), \(DA = 3 - 1 = 2\) (vertical). Diagonals \(AC = \sqrt{16+4} = \sqrt{20}\) and \(BD = \sqrt{16+4} = \sqrt{20}\) are equal. Perimeter \(= 4 + 2 + 4 + 2 = 12\).</div>
+          <div class="s-part"><b>Final Answer:</b> \(ABCD\) is a rectangle of perimeter 12 units.</div>
+        </div>
+      </section>
+
+      <section id="related">
+        <h2>20. Related Resources</h2>
+        <ul>
+          <li><a href="/cbse-study-material/class-10/mathematics/coordinate-geometry/practice-paper/">Coordinate Geometry &#8212; Practice Paper</a></li>
+          <li><a href="/cbse-study-material/class-10/mathematics/coordinate-geometry/quiz/">Coordinate Geometry &#8212; Quiz</a></li>
+          <li><a href="/cbse-study-material/class-10/mathematics/coordinate-geometry/test/">Coordinate Geometry &#8212; Chapter Test</a></li>
+          <li><a href="/cbse-study-material/class-10/mathematics/coordinate-geometry/">Coordinate Geometry &#8212; Chapter Overview</a></li>
+          <li><a href="/cbse-study-material/class-10/mathematics/">Class 10 Mathematics</a></li>
+          <li><a href="/cbse-study-material/class-10/">Class 10 Study Material</a></li>
+        </ul>
+        <div class="tip-box">
+          <div class="box-label">Next chapter</div>
+          <p>Continue with <a href="/cbse-study-material/class-10/mathematics/introduction-to-trigonometry/">Introduction to Trigonometry</a> to see right-triangle ratios take over where coordinates leave off.</p>
+        </div>
+      </section>
+    </article>
+
+    <nav class="resource-nav" aria-label="More from this chapter">
+      <a href="/cbse-study-material/class-10/mathematics/coordinate-geometry/notes/" class="is-active"><i class="fas fa-book-open"></i> Notes</a>
+      <a href="/cbse-study-material/class-10/mathematics/coordinate-geometry/practice-paper/"><i class="fas fa-file-lines"></i> Practice Paper</a>
+      <a href="/cbse-study-material/class-10/mathematics/coordinate-geometry/quiz/"><i class="fas fa-bullseye"></i> Quiz</a>
+      <a href="/cbse-study-material/class-10/mathematics/coordinate-geometry/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+    </nav>
+
+    <div class="next-chapter">
+      <div>
+        <h3><i class="fas fa-arrow-right"></i> Next: Chapter 8 &#8212; Introduction to Trigonometry</h3>
+        <p>Carry the numbered-grid thinking from coordinates into right-triangle ratios and their applications.</p>
+      </div>
+      <a class="btn btn-primary" href="/cbse-study-material/class-10/mathematics/introduction-to-trigonometry/">Open Chapter</a>
+    </div>
+
+    <a class="sm-back" href="/cbse-study-material/class-10/mathematics/coordinate-geometry/"><i class="fas fa-arrow-left"></i> Back to Coordinate Geometry</a>
+    <a class="sm-back" href="/cbse-study-material/class-10/mathematics/" style="margin-left: 12px;"><i class="fas fa-arrow-left"></i> All Mathematics chapters</a>
+
+  </div>
+</main>
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-about">
+      <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+      <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#courses">Courses</a></li>
+        <li><a href="/cbse-study-material/">Study Material</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Popular Searches</h4>
+      <ul>
+        <li><a href="/cbse-study-material/">CBSE Study Material</a></li>
+        <li><a href="/best-tuition-centre-hulimavu/">Best Tuition Centre in Hulimavu</a></li>
+        <li><a href="/cbse-tuition-hulimavu/">CBSE Tuition in Hulimavu</a></li>
+        <li><a href="/maths-tuition-hulimavu/">Maths Tuition in Hulimavu</a></li>
+        <li><a href="/science-tuition-hulimavu/">Science Tuition in Hulimavu</a></li>
+        <li><a href="/class-10-tuition-hulimavu/">Class 10 Tuition Hulimavu</a></li>
+        <li><a href="/class-12-tuition-hulimavu/">Class 12 Tuition Hulimavu</a></li>
+        <li><a href="/tuition-centre-bangalore/">Best Tuition Centre in Bangalore</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/cbse-study-material/sm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/supabase-config.js"></script>
+<script src="/supabase-auth.js"></script>
+<script src="/supabase-nav.js" defer></script>
+<script src="/chatbot/chatbot-loader.js" defer></script></body>
+</html>
