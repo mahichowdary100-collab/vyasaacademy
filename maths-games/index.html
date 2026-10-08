@@ -237,6 +237,29 @@
       border: 1.5px dashed rgba(107,114,128,0.5);
     }
     .mg-btn-soon i { font-size: 0.8rem; }
+    .mg-card-playable {
+      border: 2px solid var(--accent);
+      background: linear-gradient(180deg, #fffdf4 0%, var(--white) 55%);
+      box-shadow: 0 6px 26px rgba(249,168,37,0.22);
+    }
+    .mg-card-playable:hover { border-color: var(--accent-dark); }
+    .mg-badge-play { background: var(--accent); color: var(--primary-dark); border: 1px solid var(--accent-dark); }
+    .mg-badge-play i { font-size: 0.68rem; }
+    .mg-btn-play {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      background: var(--accent);
+      color: var(--primary-dark);
+      text-decoration: none;
+      border: 1px solid var(--accent-dark);
+      transition: var(--transition);
+    }
+    .mg-btn-play:hover { background: var(--accent-dark); color: var(--white); transform: translateY(-2px); }
 
     .mg-empty { text-align: center; padding: 44px 20px; color: var(--gray); font-size: 1.05rem; }
     .mg-empty i { font-size: 1.6rem; color: var(--accent); display: block; margin-bottom: 12px; }
@@ -541,20 +564,20 @@
       <p class="mg-results" id="mgResults" role="status" aria-live="polite"></p>
 
       <div class="mg-grid" id="mgGrid">
-        <article class="mg-card" data-category="speed" data-search="maths speed challenge solve maths questions quickly and accurately speed mental maths quick arithmetic contest">
+        <article class="mg-card mg-card-playable" data-category="speed" data-search="maths speed challenge solve maths questions quickly and accurately speed mental maths quick arithmetic contest play now">
           <div class="mg-card-top">
             <span class="mg-card-icon" aria-hidden="true">⚡</span>
-            <span class="mg-badge mg-badge-soon"><i class="fas fa-hourglass-half" aria-hidden="true"></i>Coming Soon</span>
+            <span class="mg-badge mg-badge-play"><i class="fas fa-play" aria-hidden="true"></i>Play Now</span>
           </div>
           <h3>Maths Speed Challenge</h3>
-          <p>Solve Maths questions as quickly and accurately as possible.</p>
+          <p>Solve Maths questions as quickly and accurately as possible. Now live and fully playable!</p>
           <div class="mg-meta">
             <span class="mg-chip">Speed</span>
             <span class="mg-chip">Mental Maths</span>
           </div>
           <div class="mg-card-foot">
             <span class="mg-level"><i class="fas fa-signal" aria-hidden="true"></i>Multiple Levels</span>
-            <span class="mg-btn-soon"><i class="fas fa-hourglass-half" aria-hidden="true"></i>Coming Soon</span>
+            <a class="mg-btn-play" href="/maths-games/speed-challenge/">▶ Play Now</a>
           </div>
         </article>
 
@@ -724,13 +747,13 @@
           <div>
             <span class="mg-featured-kicker"><i class="fas fa-star" aria-hidden="true"></i> Featured Game</span>
             <h3>⚡ Maths Speed Challenge</h3>
-            <p>Solve Maths questions as quickly and accurately as possible. Every correct answer earns you time, every mistake costs you.</p>
+            <p>Answer as many questions as you can before the timer runs out. Choose your difficulty, pick your question types and beat your personal best.</p>
             <ul class="mg-featured-facts">
               <li><i class="fas fa-tag" aria-hidden="true"></i> Speed &amp; Mental Maths</li>
               <li><i class="fas fa-signal" aria-hidden="true"></i> Multiple Levels</li>
-              <li><i class="fas fa-hourglass-half" aria-hidden="true"></i> Coming Soon</li>
+              <li><i class="fas fa-play" aria-hidden="true"></i> Playable Now</li>
             </ul>
-            <span class="mg-btn-soon mg-btn-on-dark"><i class="fas fa-hourglass-half" aria-hidden="true"></i>Coming Soon</span>
+            <a class="mg-btn-play" href="/maths-games/speed-challenge/">▶ Play Now</a>
           </div>
         </div>
       </div>
@@ -866,7 +889,7 @@
         <p>Every game in our Maths learning arcade is planned around the concepts students meet in the CBSE curriculum. The same ideas behind our study notes and chapter tests appear inside the challenges, so classroom learning and game practice reinforce each other naturally.</p>
         <h3>Built for daily CBSE preparation</h3>
         <p>Whether a student is revising for a weekly test, preparing for board exams, or simply building speed and accuracy, the games will sit alongside the resources they already use &mdash; detailed notes, practice questions and chapter tests &mdash; to make CBSE Mathematics preparation more consistent and enjoyable.</p>
-        <p>Games are currently being prepared and will be added to each <a href="/cbse-study-material/">CBSE study material</a> hub. In the meantime, explore the Maths resources below:</p>
+        <p>The <a href="/maths-games/speed-challenge/">Maths Speed Challenge</a> is now live and free to play. More games are being prepared and will be added to each <a href="/cbse-study-material/">CBSE study material</a> hub. In the meantime, explore the Maths resources below:</p>
         <div class="mg-seo-links">
           <a class="mg-seo-chip" href="/cbse-study-material/">📚 Study Material</a>
           <a class="mg-seo-chip" href="/cbse-study-material/class-9/mathematics/">📗 Class 9 Maths</a>
