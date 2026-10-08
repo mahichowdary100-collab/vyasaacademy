@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Factor Detective | Maths Game | Vyasa Academy</title>
+  <meta name="description" content="Play Factor Detective by Vyasa Academy to practise factors, multiples, prime numbers and divisibility through an interactive maths game." />
+  <link rel="canonical" href="https://www.vyasaacademy.in/maths-games/factor-detective/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vyasa Academy" />
+  <meta property="og:title" content="Factor Detective | Maths Game | Vyasa Academy" />
+  <meta property="og:description" content="Play Factor Detective by Vyasa Academy to practise factors, multiples, prime numbers and divisibility through an interactive maths game." />
+  <meta property="og:url" content="https://www.vyasaacademy.in/maths-games/factor-detective/" />
+  <meta property="og:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Factor Detective | Maths Game | Vyasa Academy" />
+  <meta name="twitter:description" content="Play Factor Detective by Vyasa Academy to practise factors, multiples, prime numbers and divisibility through an interactive maths game." />
+  <meta name="twitter:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.vyasaacademy.in/" },
+      { "@type": "ListItem", "position": 2, "name": "Vyasa Maths Games", "item": "https://www.vyasaacademy.in/maths-games/" },
+      { "@type": "ListItem", "position": 3, "name": "Factor Detective", "item": "https://www.vyasaacademy.in/maths-games/factor-detective/" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Factor Detective | Maths Game | Vyasa Academy",
+    "applicationCategory": "GameApplication",
+    "url": "https://www.vyasaacademy.in/maths-games/factor-detective/",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "description": "Play Factor Detective by Vyasa Academy to practise factors, multiples, prime numbers and divisibility through an interactive maths game.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+    "publisher": { "@type": "Organization", "name": "Vyasa Academy", "url": "https://vyasaacademy.in/" }
+  }
+  </script>
+  <style>
+    /* ===== VYASA FACTOR DETECTIVE (page-scoped) ===== */
+    .mg-fd-hero {
+      position: relative;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, var(--primary-dark) 100%);
+      color: var(--white);
+      overflow: hidden;
+      padding: 110px 0 88px;
+      text-align: center;
+    }
+    .mg-fd-hero-bg { position: absolute; inset: 0; pointer-events: none; }
+    .mg-fd-symbol {
+      position: absolute;
+      font-weight: 800;
+      font-family: 'Playfair Display', serif;
+      color: var(--accent-light);
+      opacity: 0.12;
+      user-select: none;
+      animation: mg-fd-float 9s ease-in-out infinite;
+    }
+    @keyframes mg-fd-float {
+      0%, 100% { transform: translateY(0) rotate(-5deg); }
+      50% { transform: translateY(-16px) rotate(5deg); }
+    }
+    .mg-fd-symbol-1 { top: 10%; left: 7%; font-size: 3rem; }
+    .mg-fd-symbol-2 { top: 20%; right: 9%; font-size: 2.3rem; animation-delay: 1.2s; }
+    .mg-fd-symbol-3 { bottom: 16%; left: 14%; font-size: 2.7rem; animation-delay: 2s; }
+    .mg-fd-symbol-4 { bottom: 26%; right: 16%; font-size: 2rem; animation-delay: 0.6s; }
+    .mg-fd-symbol-5 { top: 48%; left: 3.5%; font-size: 1.9rem; animation-delay: 1.6s; }
+    .mg-fd-symbol-6 { top: 56%; right: 3.5%; font-size: 1.9rem; animation-delay: 2.4s; }
+
+    .mg-fd-hero-content { position: relative; z-index: 1; max-width: 780px; margin: 0 auto; }
+    .mg-fd-crumbs {
+      position: relative;
+      z-index: 1;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 18px;
+    }
+    .mg-fd-crumbs a { color: rgba(255,255,255,0.85); text-decoration: underline; text-underline-offset: 3px; }
+    .mg-fd-crumbs a:hover { color: var(--accent-light); }
+    .mg-fd-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,213,79,0.4);
+      color: var(--accent-light);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      padding: 7px 18px;
+      border-radius: 50px;
+      margin-bottom: 20px;
+    }
+    .mg-fd-hero h1 { font-size: 3.1rem; font-weight: 800; line-height: 1.12; margin-bottom: 14px; }
+    .mg-fd-tagline { font-size: 1.4rem; font-weight: 600; color: var(--accent-light); margin-bottom: 12px; }
+    .mg-fd-hero-sub { font-size: 1.05rem; opacity: 0.86; max-width: 640px; margin: 0 auto; line-height: 1.7; }
+
+    .mg-fd-section { padding: 76px 0; }
+    .mg-fd-section-alt { background: var(--white); }
+
+    .mg-fd-layout {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 28px;
+      align-items: start;
+      max-width: 1020px;
+      margin: 0 auto;
+    }
+    .mg-fd-panel {
+      background: var(--white);
+      border: 1px solid rgba(26,35,126,0.06);
+      border-radius: 20px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+    }
+
+    .mg-fd-group { margin-bottom: 26px; }
+    .mg-fd-group:last-child { margin-bottom: 0; }
+    .mg-fd-group-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+    .mg-fd-group-title i { color: var(--accent-dark); }
+    .mg-fd-opts { display: flex; flex-wrap: wrap; gap: 10px; }
+    .mg-fd-opt {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--white);
+      border: 1.5px solid rgba(26,35,126,0.18);
+      color: var(--primary);
+      padding: 11px 20px;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: inherit;
+    }
+    .mg-fd-opt:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .mg-fd-opt.is-active { background: var(--primary); border-color: var(--primary); color: var(--white); }
+
+    .mg-fd-start-row { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-top: 6px; }
+    .mg-fd-start { padding: 16px 44px; font-size: 1.05rem; }
+    .mg-fd-end-link {
+      color: var(--gray);
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: var(--transition);
+    }
+    .mg-fd-end-link:hover { color: var(--primary); border-bottom-color: var(--accent); }
+
+    .mg-fd-pb { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: var(--white); border-radius: 20px; padding: 30px; box-shadow: var(--shadow-lg); }
+    .mg-fd-pb h3 { font-size: 1.15rem; margin-bottom: 4px; }
+    .mg-fd-pb-note { font-size: 0.9rem; color: rgba(255,255,255,0.8); margin-bottom: 20px; }
+    .mg-fd-pb-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .mg-fd-pb-cell { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 14px; padding: 16px 10px; text-align: center; }
+    .mg-fd-pb-num { display: block; font-size: 1.45rem; font-weight: 800; color: var(--accent-light); line-height: 1.1; }
+    .mg-fd-pb-lbl { display: block; font-size: 0.68rem; color: rgba(255,255,255,0.78); text-transform: uppercase; letter-spacing: 0.7px; margin-top: 5px; }
+
+    .mg-fd-arena { max-width: 920px; margin: 0 auto; }
+
+    .mg-fd-hud { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 28px; }
+    .mg-fd-stat {
+      flex: 1 1 150px;
+      max-width: 210px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--white);
+      border: 1px solid rgba(26,35,126,0.06);
+      border-radius: 16px;
+      padding: 14px 18px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .mg-fd-stat-time { flex: 1 1 210px; max-width: 260px; border-color: rgba(249,168,37,0.4); }
+    .mg-fd-stat-time.is-warning { border-color: var(--accent-dark); background: #fff8e1; }
+    .mg-fd-stat-time.is-danger { border-color: #d32f2f; background: #ffebee; animation: mg-fd-pulse 1s ease-in-out infinite; }
+    @keyframes mg-fd-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.04); } }
+    .mg-fd-stat-ico { font-size: 1.3rem; flex-shrink: 0; }
+    .mg-fd-stat-lbl { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.8px; color: var(--gray); font-weight: 700; }
+    .mg-fd-stat-val { font-size: 1.35rem; font-weight: 800; color: var(--primary); margin-left: auto; line-height: 1.1; }
+    .mg-fd-stat-time .mg-fd-stat-val { color: var(--accent-dark); font-size: 1.7rem; }
+    .mg-fd-stat-time.is-danger .mg-fd-stat-val { color: #d32f2f; }
+
+    .mg-fd-case-row { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; gap: 14px; margin-bottom: 12px; }
+    .mg-fd-case-index { font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.4px; color: var(--gray); }
+    .mg-fd-case-type {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--light);
+      border: 1px solid rgba(26,35,126,0.1);
+      color: var(--primary);
+      padding: 7px 16px;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .mg-fd-qcard {
+      background: var(--white);
+      border: 2px solid rgba(26,35,126,0.08);
+      border-radius: 24px;
+      padding: 40px 30px 34px;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .mg-fd-qcard.mg-fd-qpop { animation: mg-fd-pop 0.28s ease; }
+    @keyframes mg-fd-pop { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .mg-fd-qcard.is-correct { border-color: #2e7d32; box-shadow: 0 0 0 4px rgba(46,125,50,0.15), var(--shadow-lg); }
+    .mg-fd-qcard.is-wrong { border-color: #c62828; box-shadow: 0 0 0 4px rgba(198,40,40,0.12), var(--shadow-lg); }
+    .mg-fd-number {
+      font-size: clamp(2.8rem, 10vw, 4.6rem);
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: 0.5px;
+      line-height: 1.1;
+      word-break: break-word;
+      font-family: 'Playfair Display', serif;
+    }
+    .mg-fd-prompt { margin-top: 10px; font-size: 1.12rem; font-weight: 600; color: var(--dark); line-height: 1.55; min-height: 1.6em; }
+    .mg-fd-options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+      gap: 12px;
+      max-width: 640px;
+      margin: 22px auto 0;
+    }
+    .mg-fd-opt-answer {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      background: var(--white);
+      border: 2px solid rgba(26,35,126,0.2);
+      color: var(--primary);
+      padding: 12px 16px;
+      border-radius: 14px;
+      font-size: 1.12rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: inherit;
+      word-break: break-word;
+    }
+    .mg-fd-opt-answer:hover:not(:disabled) { border-color: var(--accent); transform: translateY(-2px); box-shadow: var(--shadow); }
+    .mg-fd-opt-answer.is-selected { background: var(--primary); border-color: var(--primary); color: var(--white); }
+    .mg-fd-opt-answer.is-correct { background: #2e7d32; border-color: #2e7d32; color: var(--white); }
+    .mg-fd-opt-answer.is-wrong { background: #c62828; border-color: #c62828; color: var(--white); }
+    .mg-fd-opt-answer.is-missed { background: #e8f5e9; border-color: #2e7d32; color: #2e7d32; }
+    .mg-fd-opt-answer:disabled { cursor: default; }
+
+    .mg-fd-check { margin-top: 24px; padding: 14px 40px; font-size: 1rem; }
+    .mg-fd-check:disabled { opacity: 0.55; cursor: not-allowed; }
+
+    .mg-fd-feedback { min-height: 1.9em; text-align: center; margin-top: 16px; font-size: 1rem; font-weight: 600; }
+    .mg-fd-feedback.is-good { color: #2e7d32; }
+    .mg-fd-feedback.is-bad { color: #c62828; }
+    .mg-fd-hint { min-height: 1.4em; text-align: center; margin-top: 6px; font-size: 0.9rem; color: var(--gray); }
+
+    .mg-fd-toast {
+      position: fixed;
+      left: 50%;
+      bottom: 34px;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--primary);
+      color: var(--white);
+      padding: 14px 26px;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 700;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(255,213,79,0.35);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 60;
+    }
+    .mg-fd-toast.is-visible { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    .mg-fd-announce {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+
+    .mg-fd-results { max-width: 720px; margin: 0 auto; text-align: center; }
+    .mg-fd-results h2 { font-size: clamp(1.9rem, 5vw, 2.6rem); margin-bottom: 8px; color: var(--dark); }
+    .mg-fd-results-sub { color: var(--gray); font-size: 1.05rem; margin-bottom: 30px; }
+    .mg-fd-newbest {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #e8f5e9;
+      border: 1px solid #2e7d32;
+      color: #2e7d32;
+      padding: 10px 22px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 26px;
+    }
+    .mg-fd-newbest.hidden { display: none; }
+    .mg-fd-res-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 22px; }
+    .mg-fd-res-cell { background: var(--white); border: 1px solid rgba(26,35,126,0.06); border-radius: 18px; padding: 26px 14px; box-shadow: var(--shadow); }
+    .mg-fd-res-cell.is-primary { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); border: none; }
+    .mg-fd-res-num { display: block; font-size: 2.1rem; font-weight: 800; color: var(--primary); line-height: 1.1; }
+    .mg-fd-res-cell.is-primary .mg-fd-res-num { color: var(--accent-light); }
+    .mg-fd-res-lbl { display: block; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 1px; color: var(--gray); margin-top: 6px; }
+    .mg-fd-res-cell.is-primary .mg-fd-res-lbl { color: rgba(255,255,255,0.85); }
+    .mg-fd-fbmsg { font-size: 1.1rem; font-weight: 600; color: var(--primary); margin-bottom: 28px; }
+    .mg-fd-res-actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .mg-fd-res-actions .btn { font-size: 1rem; }
+
+    .mg-fd-sr {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+    .mg-bump { animation: mg-fd-bump 0.35s ease; }
+    @keyframes mg-fd-bump {
+      0% { transform: scale(1); }
+      40% { transform: scale(1.35); color: var(--accent-dark); }
+      100% { transform: scale(1); }
+    }
+
+    .mg-fd-seo-content { max-width: 820px; margin: 0 auto; color: var(--dark); }
+    .mg-fd-seo-content h3 { color: var(--primary); font-size: 1.12rem; margin: 22px 0 8px; }
+    .mg-fd-seo-content p { color: var(--gray); font-size: 1rem; line-height: 1.8; margin-bottom: 14px; }
+    .mg-fd-seo-links { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 4px; }
+    .mg-fd-seo-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--light);
+      color: var(--primary);
+      border: 1px solid rgba(26,35,126,0.1);
+      padding: 10px 18px;
+      border-radius: 50px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+    .mg-fd-seo-chip:hover { background: var(--accent-light); border-color: var(--accent); color: var(--primary-dark); }
+
+    .mg-fd-opt:focus-visible,
+    .mg-fd-opt-answer:focus-visible,
+    .mg-fd-check:focus-visible,
+    .mg-fd-end-link:focus-visible,
+    .mg-fd-seo-chip:focus-visible,
+    .btn:focus-visible { outline: 3px solid rgba(249,168,37,0.65); outline-offset: 2px; }
+
+    @media (max-width: 900px) {
+      .mg-fd-layout { grid-template-columns: 1fr; }
+      .mg-fd-pb { order: -1; }
+    }
+    @media (max-width: 768px) {
+      .mg-fd-hero { padding: 96px 0 70px; }
+      .mg-fd-hero h1 { font-size: 2.3rem; }
+      .mg-fd-section { padding: 60px 0; }
+    }
+    @media (max-width: 560px) {
+      .mg-fd-res-grid { grid-template-columns: repeat(2, 1fr); }
+      .mg-fd-res-cell.is-primary { grid-column: 1 / -1; }
+      .mg-fd-pb-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .mg-fd-hero h1 { font-size: 1.9rem; }
+      .mg-fd-tagline { font-size: 1.15rem; }
+      .mg-fd-hero-sub { font-size: 0.98rem; }
+      .mg-fd-panel, .mg-fd-pb { padding: 24px 20px; }
+      .mg-fd-qcard { padding: 32px 18px 26px; }
+      .mg-fd-stat { flex-basis: 46%; max-width: none; }
+      .mg-fd-stat-time { flex-basis: 100%; max-width: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .mg-fd-symbol { animation: none; }
+      .mg-fd-stat-time.is-danger { animation: none; }
+      .mg-fd-qcard.mg-fd-qpop { animation: none; }
+      .mg-bump { animation: none; }
+      .mg-fd-opt:hover, .mg-fd-opt-answer:hover, .mg-fd-stat, .btn { transform: none; transition: none; }
+      .mg-fd-toast { transition: none; }
+    }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="/" class="logo"><i class="fas fa-graduation-cap"></i> Vyasa Academy</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#courses">Courses</a></li>
+      <li><a href="/#papers">Practice Papers</a></li>
+      <li><a href="/cbse-study-material/">Study Material</a></li>
+      <li><a href="/maths-games/" class="active" aria-current="page">🎮 Maths Games</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- START SCREEN -->
+  <section class="mg-fd-hero" id="mgFdStartScreen">
+    <div class="mg-fd-hero-bg" aria-hidden="true">
+      <span class="mg-fd-symbol mg-fd-symbol-1">2</span>
+      <span class="mg-fd-symbol mg-fd-symbol-2">7</span>
+      <span class="mg-fd-symbol mg-fd-symbol-3">√</span>
+      <span class="mg-fd-symbol mg-fd-symbol-4">×</span>
+      <span class="mg-fd-symbol mg-fd-symbol-5">÷</span>
+      <span class="mg-fd-symbol mg-fd-symbol-6">%</span>
+    </div>
+    <div class="container mg-fd-hero-content">
+      <nav class="mg-fd-crumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a> / <a href="/maths-games/">Maths Games</a> / <span aria-current="page">Factor Detective</span>
+      </nav>
+      <span class="mg-fd-badge">Factors, Primes &amp; Divisibility</span>
+      <h1>🕵️ Factor Detective</h1>
+      <p class="mg-fd-tagline">Crack the number. Find the factors.</p>
+      <p class="mg-fd-hero-sub">Investigate numbers, discover their factors and test your divisibility skills.</p>
+    </div>
+  </section>
+
+  <section class="mg-fd-section mg-fd-section-alt">
+    <div class="container">
+      <div class="mg-fd-layout">
+        <div class="mg-fd-panel" id="mgSettingsPanel">
+          <div class="section-header" style="padding:0 0 22px;">
+            <span class="section-tag">Set Up</span>
+            <h2>Open a Case File</h2>
+            <p>Pick your level, time limit and challenge type. No login needed.</p>
+          </div>
+
+          <div class="mg-fd-group" role="group" aria-label="Choose difficulty">
+            <span class="mg-fd-group-title"><i class="fas fa-signal" aria-hidden="true"></i>Difficulty</span>
+            <div class="mg-fd-opts" data-setting-group="difficulty">
+              <button type="button" class="mg-fd-opt" data-setting="difficulty" data-value="easy" aria-pressed="false">Easy</button>
+              <button type="button" class="mg-fd-opt is-active" data-setting="difficulty" data-value="medium" aria-pressed="true">Medium</button>
+              <button type="button" class="mg-fd-opt" data-setting="difficulty" data-value="hard" aria-pressed="false">Hard</button>
+            </div>
+          </div>
+
+          <div class="mg-fd-group" role="group" aria-label="Choose time limit">
+            <span class="mg-fd-group-title"><i class="fas fa-hourglass-half" aria-hidden="true"></i>Time</span>
+            <div class="mg-fd-opts" data-setting-group="timeLimit">
+              <button type="button" class="mg-fd-opt" data-setting="timeLimit" data-value="30" aria-pressed="false">30 seconds</button>
+              <button type="button" class="mg-fd-opt is-active" data-setting="timeLimit" data-value="60" aria-pressed="true">60 seconds</button>
+              <button type="button" class="mg-fd-opt" data-setting="timeLimit" data-value="90" aria-pressed="false">90 seconds</button>
+            </div>
+          </div>
+
+          <div class="mg-fd-group" role="group" aria-label="Choose challenge type">
+            <span class="mg-fd-group-title"><i class="fas fa-search" aria-hidden="true"></i>Challenge Type</span>
+            <div class="mg-fd-opts" data-setting-group="challengeType">
+              <button type="button" class="mg-fd-opt" data-setting="challengeType" data-value="find-factor" aria-pressed="false">Find the Factor</button>
+              <button type="button" class="mg-fd-opt" data-setting="challengeType" data-value="all-factors" aria-pressed="false">Find All Factors</button>
+              <button type="button" class="mg-fd-opt" data-setting="challengeType" data-value="prime" aria-pressed="false">Prime Detective</button>
+              <button type="button" class="mg-fd-opt" data-setting="challengeType" data-value="divisibility" aria-pressed="false">Divisibility</button>
+              <button type="button" class="mg-fd-opt is-active" data-setting="challengeType" data-value="mixed" aria-pressed="true">Mixed</button>
+            </div>
+          </div>
+
+          <div class="mg-fd-start-row">
+            <button type="button" class="btn btn-primary mg-fd-start" id="mgFdStartBtn">🔎 Start Investigation</button>
+            <a class="mg-fd-end-link" href="/maths-games/">← Back to Maths Games</a>
+          </div>
+        </div>
+
+        <aside class="mg-fd-pb" aria-label="Personal best">
+          <h3>🏆 Personal Best</h3>
+          <p class="mg-fd-pb-note">Your best is saved on this device.</p>
+          <div class="mg-fd-pb-grid" id="mgPbGrid">
+            <div class="mg-fd-pb-cell"><span class="mg-fd-pb-num" id="mgFdPbScore">—</span><span class="mg-fd-pb-lbl">Score</span></div>
+            <div class="mg-fd-pb-cell"><span class="mg-fd-pb-num" id="mgFdPbAccuracy">—</span><span class="mg-fd-pb-lbl">Accuracy</span></div>
+            <div class="mg-fd-pb-cell"><span class="mg-fd-pb-num" id="mgFdPbStreak">—</span><span class="mg-fd-pb-lbl">Best Streak</span></div>
+            <div class="mg-fd-pb-cell"><span class="mg-fd-pb-num" id="mgFdPbGames">—</span><span class="mg-fd-pb-lbl">Games</span></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAME SCREEN -->
+  <section class="mg-fd-section mg-fd-section-alt" id="mgFdGameScreen" hidden>
+    <div class="container">
+      <div class="mg-fd-arena">
+        <div class="mg-fd-hud" role="group" aria-label="Game stats">
+          <div class="mg-fd-stat mg-fd-stat-time" id="mgFdTimeBox">
+            <span class="mg-fd-stat-ico" aria-hidden="true">⏱</span>
+            <span class="mg-fd-stat-lbl">Time</span>
+            <span class="mg-fd-stat-val" id="mgFdTime">60</span>
+          </div>
+          <div class="mg-fd-stat">
+            <span class="mg-fd-stat-ico" aria-hidden="true">⭐</span>
+            <span class="mg-fd-stat-lbl">Score</span>
+            <span class="mg-fd-stat-val" id="mgFdScore">0</span>
+          </div>
+          <div class="mg-fd-stat">
+            <span class="mg-fd-stat-ico" aria-hidden="true">✓</span>
+            <span class="mg-fd-stat-lbl">Solved</span>
+            <span class="mg-fd-stat-val" id="mgFdSolved">0</span>
+          </div>
+          <div class="mg-fd-stat">
+            <span class="mg-fd-stat-ico" aria-hidden="true">✗</span>
+            <span class="mg-fd-stat-lbl">Wrong</span>
+            <span class="mg-fd-stat-val" id="mgFdWrong">0</span>
+          </div>
+          <div class="mg-fd-stat">
+            <span class="mg-fd-stat-ico" aria-hidden="true">🔥</span>
+            <span class="mg-fd-stat-lbl">Streak</span>
+            <span class="mg-fd-stat-val" id="mgFdStreak">0</span>
+          </div>
+        </div>
+
+        <div class="mg-fd-case-row">
+          <p class="mg-fd-case-index" id="mgFdCaseIndex">Case 1</p>
+          <p class="mg-fd-case-type" id="mgFdCaseType" aria-live="polite">Find the Factor</p>
+        </div>
+
+        <div class="mg-fd-qcard" id="mgFdQCard">
+          <p class="mg-fd-number" id="mgFdNumber">24</p>
+          <p class="mg-fd-prompt" id="mgFdPrompt">Which number is a factor of 24?</p>
+          <div class="mg-fd-options" id="mgFdOptions" role="group" aria-label="Answer options"></div>
+          <button type="button" class="btn btn-primary mg-fd-check" id="mgFdCheck" disabled>✓ Check Answer</button>
+          <p class="mg-fd-feedback" id="mgFdFeedback" role="status" aria-live="polite"></p>
+          <p class="mg-fd-hint" id="mgFdHint" aria-hidden="true"></p>
+        </div>
+
+        <p class="mg-fd-announce" id="mgFdAnnounce" aria-live="assertive" aria-atomic="true"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- END SCREEN -->
+  <section class="mg-fd-section" id="mgFdEndScreen" hidden>
+    <div class="container">
+      <div class="mg-fd-results">
+        <h2>🏆 Investigation Complete!</h2>
+        <p class="mg-fd-results-sub" id="mgFdResultSub">Time is up. Here is how your investigation went.</p>
+        <p class="mg-fd-newbest hidden" id="mgFdNewBest"><i class="fas fa-trophy" aria-hidden="true"></i>New Personal Best!</p>
+        <div class="mg-fd-res-grid" id="mgResultsGrid">
+          <div class="mg-fd-res-cell is-primary">
+            <span class="mg-fd-res-num" id="mgFdResScore">0</span>
+            <span class="mg-fd-res-lbl">Score</span>
+          </div>
+          <div class="mg-fd-res-cell">
+            <span class="mg-fd-res-num" id="mgFdResCases">0</span>
+            <span class="mg-fd-res-lbl">Cases Solved</span>
+          </div>
+          <div class="mg-fd-res-cell">
+            <span class="mg-fd-res-num" id="mgFdResCorrect">0</span>
+            <span class="mg-fd-res-lbl">Correct</span>
+          </div>
+          <div class="mg-fd-res-cell">
+            <span class="mg-fd-res-num" id="mgFdResWrong">0</span>
+            <span class="mg-fd-res-lbl">Wrong</span>
+          </div>
+          <div class="mg-fd-res-cell">
+            <span class="mg-fd-res-num" id="mgFdResAccuracy">0%</span>
+            <span class="mg-fd-res-lbl">Accuracy</span>
+          </div>
+          <div class="mg-fd-res-cell">
+            <span class="mg-fd-res-num" id="mgFdResStreak">0</span>
+            <span class="mg-fd-res-lbl">Best Streak</span>
+          </div>
+        </div>
+        <p class="mg-fd-fbmsg" id="mgFdFbMsg" role="status" aria-live="polite"></p>
+        <div class="mg-fd-res-actions">
+          <button type="button" class="btn btn-primary" id="mgFdPlayAgain">🔄 Investigate Again</button>
+          <a href="/maths-games/" class="btn btn-secondary" style="background:var(--primary);border-color:var(--primary);">🎮 More Maths Games</a>
+          <a href="/cbse-study-material/class-10/mathematics/real-numbers/" class="btn" style="color:var(--primary);border:2px solid var(--primary);background:var(--white);">📚 Practise Number Systems</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO CONTENT -->
+  <section class="mg-fd-section mg-fd-section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Why It Helps</span>
+        <h2>Sharpen Factor Skills with Factor Detective</h2>
+        <p>A quick, focused way to build confidence with factors, primes and divisibility.</p>
+      </div>
+      <div class="mg-fd-seo-content">
+        <p>The <strong>Factor Detective</strong> game turns number practice into a detective challenge. Students investigate a number, decide which values divide it exactly, complete the full factor list or judge whether it is prime, earning points for every correct answer and bonus points for streaks.</p>
+        <h3>Four challenge types in one game</h3>
+        <p><strong>Find the Factor</strong> asks which option divides the target number exactly; <strong>Find All Factors</strong> asks for the complete factor list of a number such as 24 (1, 2, 3, 4, 6, 8, 12 and 24); <strong>Prime Detective</strong> tests whether a number is prime or composite; and <strong>Divisibility Detective</strong> checks which numbers divide the target exactly, or whether a number is divisible by a single divisor. In <em>Mixed</em> mode all four styles appear at random.</p>
+        <h3>Fit practice into the CBSE routine</h3>
+        <p>Factors, multiples, primes and divisibility rules appear throughout the CBSE Mathematics curriculum, from <a href="/cbse-study-material/class-6/mathematics/">Class 6 Maths</a> all the way to <a href="/cbse-study-material/class-10/mathematics/real-numbers/">Number Systems in Class 10 Maths</a>. Pair the game with our full <a href="/cbse-study-material/">CBSE study material</a> and chapter tests, or explore the other <a href="/maths-games/">Maths games</a> we have built.</p>
+        <div class="mg-fd-seo-links">
+          <a class="mg-fd-seo-chip" href="/maths-games/">🎮 All Maths Games</a>
+          <a class="mg-fd-seo-chip" href="/maths-games/speed-challenge/">⚡ Maths Speed Challenge</a>
+          <a class="mg-fd-seo-chip" href="/maths-games/equation-hunter/">🎯 Equation Hunter</a>
+          <a class="mg-fd-seo-chip" href="/maths-games/coordinate-shooter/">📍 Coordinate Shooter</a>
+          <a class="mg-fd-seo-chip" href="/cbse-study-material/class-10/mathematics/real-numbers/">🔢 Number Systems</a>
+          <a class="mg-fd-seo-chip" href="/cbse-study-material/">📚 Study Material</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-about">
+      <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+      <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#faculty">Faculty</a></li>
+        <li><a href="/#courses">Courses</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/cbse-study-material/">Study Material</a></li>
+        <li><a href="/maths-games/">🎮 Maths Games</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Popular Searches</h4>
+      <ul>
+        <li><a href="/best-tuition-centre-hulimavu/">Best Tuition Centre in Hulimavu</a></li>
+        <li><a href="/best-coaching-centre-hulimavu/">Best Coaching Centre in Hulimavu</a></li>
+        <li><a href="/cbse-tuition-hulimavu/">CBSE Tuition in Hulimavu</a></li>
+        <li><a href="/maths-tuition-hulimavu/">Maths Tuition in Hulimavu</a></li>
+        <li><a href="/science-tuition-hulimavu/">Science Tuition in Hulimavu</a></li>
+        <li><a href="/kcet-coaching-hulimavu/">KCET Coaching in Hulimavu</a></li>
+        <li><a href="/class-10-tuition-hulimavu/">Class 10 Tuition Hulimavu</a></li>
+        <li><a href="/icse-tuition-hulimavu/">ICSE Tuition Hulimavu</a></li>
+        <li><a href="/tuition-classes-near-bannerghatta-road/">Tuition near Bannerghatta Road</a></li>
+        <li><a href="/cbse-tuition-bangalore/">CBSE Tuition Bangalore</a></li>
+        <li><a href="/tuition-centre-bangalore/">Best Tuition Centre in Bangalore</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ============================================================
+     Pure game logic (exported when run under Node for tests)
+     ============================================================ */
+
+  function randInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function pick(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+  }
+
+  function shuffle(arr) {
+    var copy = arr.slice();
+    for (var i = copy.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = copy[i];
+      copy[i] = copy[j];
+      copy[j] = t;
+    }
+    return copy;
+  }
+
+  function listToText(arr) {
+    if (!arr.length) { return ''; }
+    if (arr.length === 1) { return String(arr[0]); }
+    return arr.slice(0, -1).join(', ') + ' and ' + arr[arr.length - 1];
+  }
+
+  function getFactors(n) {
+    if (n <= 0) { return []; }
+    var small = [];
+    var big = [];
+    for (var i = 1; i * i <= n; i++) {
+      if (n % i === 0) {
+        small.push(i);
+        if (i * i !== n) { big.push(n / i); }
+      }
+    }
+    return small.concat(big.reverse());
+  }
+
+  function isPrime(n) {
+    if (n < 2) { return false; }
+    if (n === 2) { return true; }
+    if (n % 2 === 0) { return false; }
+    for (var i = 3; i * i <= n; i += 2) {
+      if (n % i === 0) { return false; }
+    }
+    return true;
+  }
+
+  function getPrimeFactors(n) {
+    var out = [];
+    var m = n;
+    var d = 2;
+    while (d * d <= m) {
+      while (m % d === 0) {
+        out.push(d);
+        m = m / d;
+      }
+      d++;
+    }
+    if (m > 1) { out.push(m); }
+    return out;
+  }
+
+  var RANGES = {
+    'find-factor': { easy: [4, 30], medium: [10, 90], hard: [80, 400] },
+    'all-factors': { easy: [4, 30], medium: [10, 90], hard: [60, 360] },
+    'prime': { easy: [2, 30], medium: [10, 100], hard: [50, 300] },
+    'divisibility': { easy: [4, 30], medium: [10, 100], hard: [60, 420] }
+  };
+  var ALL_FACTORS_TARGET = { easy: 8, medium: 10, hard: 12 };
+  var DIVISOR_POOLS = {
+    easy: [2, 3, 4, 5, 6],
+    medium: [2, 3, 4, 5, 6, 7, 9, 10],
+    hard: [2, 3, 4, 5, 6, 7, 9, 10, 11, 12]
+  };
+  var YESNO_DIVISORS = { easy: [2, 3, 5], medium: [2, 3, 5, 7], hard: [2, 3, 5, 7, 9, 11] };
+  var DIFF_BONUS = { easy: 0, medium: 5, hard: 10 };
+
+  function pickNonFactors(n, count) {
+    var out = [];
+    var attempts = 0;
+    while (out.length < count && attempts < 800) {
+      attempts++;
+      var v = randInt(2, n + 6);
+      if (n % v !== 0 && out.indexOf(v) === -1) { out.push(v); }
+    }
+    return out;
+  }
+
+  function makeFindFactor(difficulty) {
+    var range = RANGES['find-factor'][difficulty];
+    var kind = Math.random() < 0.5 ? 'is' : 'not';
+    for (var attempt = 0; attempt < 120; attempt++) {
+      var n = randInt(range[0], range[1]);
+      var factors = getFactors(n);
+      if (kind === 'not') {
+        if (factors.length < 4) { continue; }
+        var distractors = shuffle(factors).slice(0, 3);
+        var wrong = pickNonFactors(n, 1);
+        if (wrong.length) {
+          return {
+            id: null, type: 'find-factor', kind: 'not', difficulty: difficulty,
+            number: n, text: 'Which number is NOT a factor of ' + n + '?',
+            options: shuffle(distractors.concat([wrong[0]])),
+            multi: false, correctAnswers: [wrong[0]], divisor: null,
+            explanation: 'A number is a factor of ' + n + ' only if it divides it exactly.'
+          };
+        }
+      } else {
+        var candidates = factors.filter(function (f) { return f > 1 && f < n; });
+        var correct = candidates.length ? pick(candidates) : n;
+        var wrongOpts = pickNonFactors(n, 3);
+        if (wrongOpts.length === 3) {
+          return {
+            id: null, type: 'find-factor', kind: 'is', difficulty: difficulty,
+            number: n, text: 'Which number is a factor of ' + n + '?',
+            options: shuffle([correct].concat(wrongOpts)),
+            multi: false, correctAnswers: [correct], divisor: null,
+            explanation: 'A number is a factor of ' + n + ' only if it divides it exactly.'
+          };
+        }
+      }
+    }
+    return makeFindFactor(difficulty === 'easy' ? 'medium' : difficulty === 'medium' ? 'hard' : 'easy');
+  }
+
+  function makeAllFactors(difficulty) {
+    var range = RANGES['all-factors'][difficulty];
+    var target = ALL_FACTORS_TARGET[difficulty];
+    for (var attempt = 0; attempt < 120; attempt++) {
+      var n = randInt(range[0], range[1]);
+      var factors = getFactors(n);
+      if (factors.length < 3 || factors.length >= target) { continue; }
+      var distractors = pickNonFactors(n, target - factors.length);
+      return {
+        id: null, type: 'all-factors', kind: null, difficulty: difficulty,
+        number: n, text: 'Find all the factors of ' + n + '.',
+        options: shuffle(factors.concat(distractors)),
+        multi: true, correctAnswers: factors.slice(), divisor: null,
+        explanation: 'Every factor of ' + n + ' divides it exactly, with no remainder.'
+      };
+    }
+    return makeAllFactors(difficulty === 'easy' ? 'medium' : difficulty === 'medium' ? 'hard' : 'easy');
+  }
+
+  function makePrime(difficulty) {
+    var range = RANGES['prime'][difficulty];
+    var wantPrime = Math.random() < 0.5;
+    var n = 2;
+    for (var attempt = 0; attempt < 200; attempt++) {
+      n = randInt(range[0], range[1]);
+      if (isPrime(n) === wantPrime) { break; }
+    }
+    return {
+      id: null, type: 'prime', kind: null, difficulty: difficulty,
+      number: n, text: 'Is ' + n + ' a prime number?',
+      options: shuffle(['Prime', 'Composite']),
+      multi: false, correctAnswers: isPrime(n) ? ['Prime'] : ['Composite'], divisor: null,
+      explanation: isPrime(n)
+        ? n + ' is prime because its only factors are 1 and ' + n + '.'
+        : n + ' is composite because it has factors other than 1 and itself.'
+    };
+  }
+
+  function makeDivYesNo(difficulty) {
+    var pool = YESNO_DIVISORS[difficulty];
+    var range = RANGES['divisibility'][difficulty];
+    var d = pick(pool);
+    var wantYes = Math.random() < 0.5;
+    var n = range[0];
+    for (var attempt = 0; attempt < 200; attempt++) {
+      if (wantYes) {
+        var lo = Math.ceil(range[0] / d);
+        var hi = Math.floor(range[1] / d);
+        if (hi >= lo) {
+          n = d * randInt(lo, hi);
+          if (n % d === 0) { break; }
+        }
+      } else {
+        n = randInt(range[0], range[1]);
+        if (n % d !== 0) { break; }
+      }
+    }
+    return {
+      id: null, type: 'divisibility', kind: 'yesno', difficulty: difficulty,
+      number: n, text: 'Is ' + n + ' divisible by ' + d + '?',
+      options: shuffle(['Yes', 'No']),
+      multi: false, correctAnswers: n % d === 0 ? ['Yes'] : ['No'], divisor: d,
+      explanation: n % d === 0
+        ? n + ' ÷ ' + d + ' = ' + (n / d) + ', so yes, it is divisible by ' + d + '.'
+        : n + ' ÷ ' + d + ' leaves a remainder, so no, it is not divisible by ' + d + '.'
+    };
+  }
+
+  function makeDivDivisors(difficulty) {
+    var pool = DIVISOR_POOLS[difficulty];
+    var range = RANGES['divisibility'][difficulty];
+    var n = range[0];
+    for (var attempt = 0; attempt < 200; attempt++) {
+      n = randInt(range[0], range[1]);
+      var trues = pool.filter(function (d) { return n % d === 0; });
+      var falses = pool.filter(function (d) { return n % d !== 0; });
+      if (trues.length >= 2 && falses.length >= 1) { break; }
+    }
+    var options = shuffle(pool.slice());
+    return {
+      id: null, type: 'divisibility', kind: 'divisors', difficulty: difficulty,
+      number: n, text: 'Which of these numbers divide ' + n + ' exactly?',
+      options: options,
+      multi: true, correctAnswers: options.filter(function (d) { return n % d === 0; }), divisor: null,
+      explanation: n + ' is divisible by ' + listToText(options.filter(function (d) { return n % d === 0; })) + '.'
+    };
+  }
+
+  function makeDivisibility(difficulty) {
+    return Math.random() < 0.5 ? makeDivYesNo(difficulty) : makeDivDivisors(difficulty);
+  }
+
+  function makeQuestion(type, difficulty) {
+    if (type === 'find-factor') { return makeFindFactor(difficulty); }
+    if (type === 'all-factors') { return makeAllFactors(difficulty); }
+    if (type === 'prime') { return makePrime(difficulty); }
+    return makeDivisibility(difficulty);
+  }
+
+  function questionId(q) {
+    return q.type + ':' + (q.kind || 'x') + ':' + q.number + ':' + (q.divisor || 'x') + ':' + q.options.join(',');
+  }
+
+  function pickQuestion(type, difficulty, usedIds) {
+    var resolved = type;
+    if (type === 'mixed') {
+      resolved = ['find-factor', 'all-factors', 'prime', 'divisibility'][randInt(0, 3)];
+    }
+    var q;
+    for (var attempt = 0; attempt < 30; attempt++) {
+      q = makeQuestion(resolved, difficulty);
+      if (!usedIds || !usedIds.has(questionId(q))) { break; }
+    }
+    if (usedIds) { usedIds.add(questionId(q)); }
+    q.id = questionId(q);
+    return q;
+  }
+
+  function computeAnswer(q) {
+    if (q.type === 'find-factor') {
+      return q.options.filter(function (v) {
+        return (q.kind === 'is') ? (q.number % v === 0) : (q.number % v !== 0);
+      });
+    }
+    if (q.type === 'all-factors') { return getFactors(q.number); }
+    if (q.type === 'prime') { return isPrime(q.number) ? ['Prime'] : ['Composite']; }
+    if (q.kind === 'yesno') { return (q.number % q.divisor === 0) ? ['Yes'] : ['No']; }
+    return q.options.filter(function (v) { return q.number % v === 0; });
+  }
+
+  function sameSet(a, b) {
+    if (a.length !== b.length) { return false; }
+    return a.every(function (v) { return b.indexOf(v) !== -1; });
+  }
+
+  function answerText(q) {
+    var correct = computeAnswer(q);
+    if (q.type === 'all-factors') {
+      return 'The factors of ' + q.number + ' are ' + listToText(getFactors(q.number)) + '.';
+    }
+    if (q.type === 'prime') {
+      return q.number + ' is ' + correct[0].toLowerCase() + '.';
+    }
+    if (q.type === 'divisibility') {
+      if (q.kind === 'yesno') {
+        return correct[0] === 'Yes'
+          ? 'Yes, ' + q.number + ' is divisible by ' + q.divisor + '.'
+          : 'No, ' + q.number + ' is not divisible by ' + q.divisor + '.';
+      }
+      return q.number + ' is divisible by ' + listToText(correct) + '.';
+    }
+    return 'Correct answer: ' + correct[0];
+  }
+
+  function explanationFor(q) {
+    return q.explanation || answerText(q);
+  }
+
+  function pointsFor(difficulty, streak) {
+    var pts = 10 + (DIFF_BONUS[difficulty] || 0);
+    if (streak > 0 && streak % 3 === 0) { pts += 5; }
+    if (streak > 0 && streak % 5 === 0) { pts += 10; }
+    if (streak > 0 && streak % 10 === 0) { pts += 20; }
+    return pts;
+  }
+
+  function accuracyFor(correct, attempted) {
+    if (attempted === 0) { return 0; }
+    return Math.round((correct / attempted) * 100);
+  }
+
+  function feedbackFor(accuracy) {
+    if (accuracy >= 90) { return 'Outstanding detective work! You cracked nearly every case.'; }
+    if (accuracy >= 75) { return 'Great investigation! Your factor skills are sharp.'; }
+    if (accuracy >= 50) { return 'Good work, detective! A little more practice will crack more cases.'; }
+    return 'Every case builds your skills. Keep investigating\u2014accuracy first!';
+  }
+
+  var api = {
+    randInt: randInt,
+    getFactors: getFactors,
+    isPrime: isPrime,
+    getPrimeFactors: getPrimeFactors,
+    makeQuestion: makeQuestion,
+    pickQuestion: pickQuestion,
+    computeAnswer: computeAnswer,
+    answerText: answerText,
+    explanationFor: explanationFor,
+    pointsFor: pointsFor,
+    accuracyFor: accuracyFor,
+    feedbackFor: feedbackFor
+  };
+
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = api;
+    return;
+  }
+
+  /* ============================================================
+     Browser wiring
+     ============================================================ */
+
+  var localStorageKey = 'vyasa_factor_detective_stats';
+  var NEXT_MS = 1150;
+
+  var TYPE_LABELS = {
+    'find-factor': 'Find the Factor',
+    'all-factors': 'Find All Factors',
+    'prime': 'Prime Detective',
+    'divisibility': 'Divisibility Detective'
+  };
+
+  var SETTINGS = { difficulty: 'medium', timeLimit: 60, challengeType: 'mixed' };
+
+  var state = {
+    score: 0, correct: 0, wrong: 0, attempted: 0,
+    streak: 0, bestStreak: 0, ended: false, locked: false,
+    timerId: null, pendingAdvance: null, deadline: 0
+  };
+
+  var usedIds = null;
+  var currentQuestion = null;
+  var optionButtons = [];
+
+  var els = {
+    hamburger: document.getElementById('hamburger'),
+    navLinks: document.getElementById('navLinks'),
+    startScreen: document.getElementById('mgFdStartScreen'),
+    gameScreen: document.getElementById('mgFdGameScreen'),
+    endScreen: document.getElementById('mgFdEndScreen'),
+    startBtn: document.getElementById('mgFdStartBtn'),
+    playAgain: document.getElementById('mgFdPlayAgain'),
+    caseIndex: document.getElementById('mgFdCaseIndex'),
+    caseType: document.getElementById('mgFdCaseType'),
+    qCard: document.getElementById('mgFdQCard'),
+    number: document.getElementById('mgFdNumber'),
+    prompt: document.getElementById('mgFdPrompt'),
+    options: document.getElementById('mgFdOptions'),
+    check: document.getElementById('mgFdCheck'),
+    feedback: document.getElementById('mgFdFeedback'),
+    hint: document.getElementById('mgFdHint'),
+    announce: document.getElementById('mgFdAnnounce'),
+    toast: null,
+    score: document.getElementById('mgFdScore'),
+    solved: document.getElementById('mgFdSolved'),
+    wrong: document.getElementById('mgFdWrong'),
+    streak: document.getElementById('mgFdStreak'),
+    time: document.getElementById('mgFdTime'),
+    timeBox: document.getElementById('mgFdTimeBox')
+  };
+
+  function toastEl() {
+    if (!els.toast) {
+      els.toast = document.createElement('div');
+      els.toast.className = 'mg-fd-toast';
+      els.toast.setAttribute('role', 'status');
+      els.toast.setAttribute('aria-live', 'polite');
+      document.body.appendChild(els.toast);
+    }
+    return els.toast;
+  }
+
+  /* ---------- navigation ---------- */
+  function closeNav() {
+    if (els.hamburger) { els.hamburger.classList.remove('open'); }
+    if (els.navLinks) { els.navLinks.classList.remove('show'); }
+  }
+  if (els.hamburger) {
+    els.hamburger.addEventListener('click', function () {
+      els.hamburger.classList.toggle('open');
+      if (els.navLinks) { els.navLinks.classList.toggle('show'); }
+    });
+  }
+  if (els.navLinks) {
+    Array.prototype.forEach.call(els.navLinks.querySelectorAll('a'), function (link) {
+      link.addEventListener('click', closeNav);
+    });
+  }
+
+  /* ---------- settings ---------- */
+  function wireSettings() {
+    var groups = document.querySelectorAll('[data-setting-group]');
+    Array.prototype.forEach.call(groups, function (group) {
+      var settingName = group.getAttribute('data-setting-group');
+      var btns = group.querySelectorAll('.mg-fd-opt');
+      Array.prototype.forEach.call(btns, function (btn) {
+        btn.addEventListener('click', function () {
+          var value = btn.getAttribute('data-value');
+          if (settingName === 'timeLimit') { value = parseInt(value, 10); }
+          SETTINGS[settingName] = value;
+          Array.prototype.forEach.call(btns, function (b) {
+            var on = b === btn;
+            b.classList.toggle('is-active', on);
+            b.setAttribute('aria-pressed', on ? 'true' : 'false');
+          });
+        });
+      });
+    });
+  }
+
+  /* ---------- local storage ---------- */
+  function loadBest() {
+    try {
+      var raw = localStorage.getItem(localStorageKey);
+      if (!raw) { return null; }
+      var data = JSON.parse(raw);
+      if (data && typeof data === 'object') { return data; }
+    } catch (e) { /* storage unavailable */ }
+    return null;
+  }
+
+  function saveBest(accuracy) {
+    var best = loadBest() || { bestScore: 0, bestAccuracy: 0, bestStreak: 0, gamesPlayed: 0 };
+    var isNewBest = false;
+    if (state.score > best.bestScore) { best.bestScore = state.score; isNewBest = true; }
+    if (accuracy > best.bestAccuracy) { best.bestAccuracy = accuracy; }
+    if (state.bestStreak > best.bestStreak) { best.bestStreak = state.bestStreak; }
+    best.gamesPlayed = (best.gamesPlayed || 0) + 1;
+    try {
+      localStorage.setItem(localStorageKey, JSON.stringify(best));
+    } catch (e) { /* storage unavailable */ }
+    return isNewBest;
+  }
+
+  function renderPersonalBest() {
+    var best = loadBest();
+    var scoreEl = document.getElementById('mgFdPbScore');
+    var accEl = document.getElementById('mgFdPbAccuracy');
+    var streakEl = document.getElementById('mgFdPbStreak');
+    var gamesEl = document.getElementById('mgFdPbGames');
+    var note = document.querySelector('.mg-fd-pb-note');
+    if (best && (best.bestScore > 0 || best.gamesPlayed > 0)) {
+      scoreEl.textContent = best.bestScore;
+      accEl.textContent = best.bestAccuracy + '%';
+      streakEl.textContent = best.bestStreak;
+      gamesEl.textContent = best.gamesPlayed;
+      if (note) { note.textContent = 'Beat your best to level up.'; }
+    }
+  }
+
+  /* ---------- timer ---------- */
+  function renderTime(seconds) {
+    if (!els.time) { return; }
+    els.time.textContent = seconds;
+    els.timeBox.classList.toggle('is-warning', seconds <= 10 && seconds > 5);
+    els.timeBox.classList.toggle('is-danger', seconds <= 5);
+  }
+
+  function startTimer() {
+    state.deadline = Date.now() + (SETTINGS.timeLimit * 1000);
+    renderTime(SETTINGS.timeLimit);
+    state.timerId = window.setInterval(function () {
+      var remainingMs = state.deadline - Date.now();
+      var remaining = Math.max(0, Math.ceil(remainingMs / 1000));
+      renderTime(remaining);
+      announceOnce(10, '10 seconds left');
+      announceOnce(5, '5 seconds left');
+      if (remainingMs <= 0) { endGame(); }
+    }, 250);
+  }
+
+  var announced = {};
+  function announceOnce(second, message) {
+    var remaining = Math.max(0, Math.ceil((state.deadline - Date.now()) / 1000));
+    if (remaining === second && !announced[second]) {
+      announced[second] = true;
+      announce(message);
+    }
+  }
+
+  function announce(message) {
+    if (els.announce) {
+      els.announce.textContent = message;
+      window.setTimeout(function () {
+        if (els.announce && els.announce.textContent === message) {
+          els.announce.textContent = '';
+        }
+      }, 4000);
+    }
+  }
+
+  /* ---------- screens ---------- */
+  function showScreen(name) {
+    els.startScreen.hidden = name !== 'start';
+    els.gameScreen.hidden = name !== 'game';
+    els.endScreen.hidden = name !== 'end';
+  }
+
+  /* ---------- hud ---------- */
+  function renderHud() {
+    els.score.textContent = state.score;
+    els.solved.textContent = state.correct;
+    els.wrong.textContent = state.wrong;
+    els.streak.textContent = state.streak;
+  }
+
+  function bumpScore() {
+    els.score.classList.remove('mg-bump');
+    void els.score.offsetWidth;
+    els.score.classList.add('mg-bump');
+  }
+
+  /* ---------- toast ---------- */
+  var toastTimerId = null;
+  function showToast(message) {
+    var el = toastEl();
+    el.textContent = message;
+    el.classList.add('is-visible');
+    if (toastTimerId) { window.clearTimeout(toastTimerId); }
+    toastTimerId = window.setTimeout(function () {
+      el.classList.remove('is-visible');
+    }, 1800);
+  }
+
+  /* ---------- options ---------- */
+  function parseOptionValue(value) {
+    var num = Number(value);
+    return isNaN(num) ? value : num;
+  }
+
+  function onOptionClick(btn) {
+    if (state.ended || state.locked) { return; }
+    if (currentQuestion.multi) {
+      var on = btn.classList.toggle('is-selected');
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    } else {
+      optionButtons.forEach(function (b) {
+        var sel = b === btn;
+        b.classList.toggle('is-selected', sel);
+        b.setAttribute('aria-pressed', sel ? 'true' : 'false');
+      });
+    }
+    updateCheck();
+  }
+
+  function updateCheck() {
+    var any = optionButtons.some(function (b) { return b.classList.contains('is-selected'); });
+    els.check.disabled = !any || state.ended || state.locked;
+  }
+
+  function collectSelected() {
+    return optionButtons
+      .filter(function (b) { return b.classList.contains('is-selected'); })
+      .map(function (b) { return parseOptionValue(b.getAttribute('data-value')); });
+  }
+
+  function lockInputs(locked) {
+    state.locked = locked;
+    optionButtons.forEach(function (b) { b.disabled = locked; });
+    els.check.disabled = locked || !optionButtons.some(function (b) { return b.classList.contains('is-selected'); });
+  }
+
+  function markAnswer(correctVals, selected) {
+    optionButtons.forEach(function (b) {
+      var v = parseOptionValue(b.getAttribute('data-value'));
+      var isSel = b.classList.contains('is-selected');
+      if (correctVals.indexOf(v) !== -1) {
+        b.classList.add(isSel ? 'is-correct' : 'is-missed');
+      } else if (isSel) {
+        b.classList.add('is-wrong');
+      }
+    });
+  }
+
+  function renderQuestion() {
+    var q = currentQuestion;
+    els.caseIndex.textContent = 'Case ' + (state.attempted + 1);
+    els.caseType.textContent = TYPE_LABELS[q.type];
+    els.number.textContent = q.number;
+    els.prompt.textContent = q.text;
+    optionButtons = [];
+    els.options.textContent = '';
+    q.options.forEach(function (value) {
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = q.multi ? 'mg-fd-opt-answer' : 'mg-fd-opt-answer mg-fd-single';
+      btn.setAttribute('data-value', String(value));
+      btn.setAttribute('aria-pressed', 'false');
+      if (q.type === 'prime') {
+        btn.textContent = value === 'Prime' ? '🟢 Prime' : '🔵 Composite';
+      } else if (q.kind === 'yesno') {
+        btn.textContent = value === 'Yes' ? '✅ Yes' : '❌ No';
+      } else {
+        btn.textContent = value;
+      }
+      btn.addEventListener('click', function () { onOptionClick(btn); });
+      els.options.appendChild(btn);
+      optionButtons.push(btn);
+    });
+    els.check.disabled = true;
+    els.feedback.textContent = '';
+    els.feedback.className = 'mg-fd-feedback';
+    els.hint.textContent = '';
+    els.qCard.classList.remove('is-correct', 'is-wrong');
+    els.qCard.classList.remove('mg-fd-qpop');
+    void els.qCard.offsetWidth;
+    els.qCard.classList.add('mg-fd-qpop');
+  }
+
+  function checkAnswer() {
+    if (state.ended || state.locked) { return; }
+    var selected = collectSelected();
+    if (!selected.length) { return; }
+    lockInputs(true);
+    state.attempted++;
+    var correctVals = computeAnswer(currentQuestion);
+    var isCorrect = sameSet(selected, correctVals);
+    markAnswer(correctVals, selected);
+    if (isCorrect) {
+      state.correct++;
+      state.streak++;
+      if (state.streak > state.bestStreak) { state.bestStreak = state.streak; }
+      var pts = pointsFor(SETTINGS.difficulty, state.streak);
+      state.score += pts;
+      els.feedback.textContent = 'Case Solved! 🕵️' + (pts > 10 ? ' (+' + pts + ')' : '');
+      els.feedback.className = 'mg-fd-feedback is-good';
+      els.hint.textContent = 'Correct answer: ' + answerText(currentQuestion);
+      els.qCard.classList.add('is-correct');
+      bumpScore();
+      if (state.streak === 3 || state.streak % 5 === 0) {
+        showToast('🔥 ' + state.streak + ' Case Streak!');
+      }
+    } else {
+      state.wrong++;
+      state.streak = 0;
+      els.feedback.textContent = 'Evidence doesn\u2019t match. ' + answerText(currentQuestion);
+      els.feedback.className = 'mg-fd-feedback is-bad';
+      els.hint.textContent = explanationFor(currentQuestion);
+      els.qCard.classList.add('is-wrong');
+    }
+    renderHud();
+    if (!state.ended) {
+      state.pendingAdvance = window.setTimeout(advanceQuestion, NEXT_MS);
+    }
+  }
+
+  function advanceQuestion() {
+    state.pendingAdvance = null;
+    if (state.ended) { return; }
+    currentQuestion = pickQuestion(SETTINGS.challengeType, SETTINGS.difficulty, usedIds);
+    state.locked = false;
+    renderQuestion();
+  }
+
+  /* ---------- gameplay ---------- */
+  function resetState() {
+    state.score = 0; state.correct = 0; state.wrong = 0; state.attempted = 0;
+    state.streak = 0; state.bestStreak = 0; state.ended = false; state.locked = false;
+    if (state.timerId) { window.clearInterval(state.timerId); state.timerId = null; }
+    if (state.pendingAdvance) { window.clearTimeout(state.pendingAdvance); state.pendingAdvance = null; }
+    announced = {};
+    usedIds = new Set();
+    currentQuestion = null;
+    optionButtons = [];
+    els.timeBox.classList.remove('is-warning', 'is-danger');
+    renderHud();
+  }
+
+  function startGame() {
+    if (state.timerId) { window.clearInterval(state.timerId); state.timerId = null; }
+    resetState();
+    showScreen('game');
+    currentQuestion = pickQuestion(SETTINGS.challengeType, SETTINGS.difficulty, usedIds);
+    renderQuestion();
+    startTimer();
+    if (optionButtons.length) { optionButtons[0].focus(); }
+  }
+
+  function endGame() {
+    if (state.ended) { return; }
+    state.ended = true;
+    if (state.timerId) { window.clearInterval(state.timerId); state.timerId = null; }
+    if (state.pendingAdvance) { window.clearTimeout(state.pendingAdvance); state.pendingAdvance = null; }
+    lockInputs(true);
+    announce('Time is up!');
+    var accuracy = accuracyFor(state.correct, state.attempted);
+    var isNewBest = saveBest(accuracy);
+    renderResults(accuracy, isNewBest);
+    showScreen('end');
+    if (els.playAgain) { els.playAgain.focus(); }
+  }
+
+  function renderResults(accuracy, isNewBest) {
+    document.getElementById('mgFdResScore').textContent = state.score;
+    document.getElementById('mgFdResCases').textContent = state.attempted;
+    document.getElementById('mgFdResCorrect').textContent = state.correct;
+    document.getElementById('mgFdResWrong').textContent = state.wrong;
+    document.getElementById('mgFdResAccuracy').textContent = accuracy + '%';
+    document.getElementById('mgFdResStreak').textContent = state.bestStreak;
+    document.getElementById('mgFdFbMsg').textContent = feedbackFor(accuracy);
+    var nb = document.getElementById('mgFdNewBest');
+    nb.classList.toggle('hidden', !isNewBest);
+    renderPersonalBest();
+  }
+
+  /* ---------- expose for automated testing (no answers) ---------- */
+  window.mgFd = {
+    question: function () {
+      var q = currentQuestion;
+      if (!q) { return null; }
+      return {
+        id: q.id, type: q.type, kind: q.kind, number: q.number,
+        text: q.text, options: q.options.slice(), multi: q.multi, divisor: q.divisor
+      };
+    }
+  };
+
+  /* ---------- events ---------- */
+  wireSettings();
+  renderPersonalBest();
+
+  els.startBtn.addEventListener('click', startGame);
+  els.playAgain.addEventListener('click', startGame);
+  els.check.addEventListener('click', checkAnswer);
+})();
+</script>
+</body>
+</html>
