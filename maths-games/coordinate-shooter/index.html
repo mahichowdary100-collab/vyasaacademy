@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coordinate Shooter | Maths Game | Vyasa Academy</title>
+  <meta name="description" content="Play Coordinate Shooter by Vyasa Academy and practise coordinate geometry by locating points on an interactive Cartesian plane." />
+  <link rel="canonical" href="https://www.vyasaacademy.in/maths-games/coordinate-shooter/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vyasa Academy" />
+  <meta property="og:title" content="Coordinate Shooter | Maths Game | Vyasa Academy" />
+  <meta property="og:description" content="Play Coordinate Shooter by Vyasa Academy and practise coordinate geometry by locating points on an interactive Cartesian plane." />
+  <meta property="og:url" content="https://www.vyasaacademy.in/maths-games/coordinate-shooter/" />
+  <meta property="og:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Coordinate Shooter | Maths Game | Vyasa Academy" />
+  <meta name="twitter:description" content="Play Coordinate Shooter by Vyasa Academy and practise coordinate geometry by locating points on an interactive Cartesian plane." />
+  <meta name="twitter:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.vyasaacademy.in/" },
+      { "@type": "ListItem", "position": 2, "name": "Vyasa Maths Games", "item": "https://www.vyasaacademy.in/maths-games/" },
+      { "@type": "ListItem", "position": 3, "name": "Coordinate Shooter", "item": "https://www.vyasaacademy.in/maths-games/coordinate-shooter/" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Coordinate Shooter | Maths Game | Vyasa Academy",
+    "applicationCategory": "GameApplication",
+    "url": "https://www.vyasaacademy.in/maths-games/coordinate-shooter/",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "description": "Play Coordinate Shooter by Vyasa Academy and practise coordinate geometry by locating points on an interactive Cartesian plane.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+    "publisher": { "@type": "Organization", "name": "Vyasa Academy", "url": "https://vyasaacademy.in/" }
+  }
+  </script>
+  <style>
+    /* ===== VYASA COORDINATE SHOOTER (page-scoped) ===== */
+    .mg-cs-hero {
+      position: relative;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, var(--primary-dark) 100%);
+      color: var(--white);
+      overflow: hidden;
+      padding: 110px 0 88px;
+      text-align: center;
+    }
+    .mg-cs-hero-bg { position: absolute; inset: 0; pointer-events: none; }
+    .mg-cs-symbol {
+      position: absolute;
+      font-weight: 800;
+      font-family: 'Playfair Display', serif;
+      color: var(--accent-light);
+      opacity: 0.12;
+      user-select: none;
+      animation: mg-cs-float 9s ease-in-out infinite;
+    }
+    @keyframes mg-cs-float {
+      0%, 100% { transform: translateY(0) rotate(-5deg); }
+      50% { transform: translateY(-16px) rotate(5deg); }
+    }
+    .mg-cs-symbol-1 { top: 10%; left: 7%; font-size: 2.4rem; }
+    .mg-cs-symbol-2 { top: 22%; right: 9%; font-size: 2rem; animation-delay: 1.2s; }
+    .mg-cs-symbol-3 { bottom: 15%; left: 13%; font-size: 2.2rem; animation-delay: 2s; }
+    .mg-cs-symbol-4 { bottom: 25%; right: 15%; font-size: 2rem; animation-delay: 0.6s; }
+    .mg-cs-symbol-5 { top: 48%; left: 3.5%; font-size: 1.8rem; animation-delay: 1.6s; }
+    .mg-cs-symbol-6 { top: 56%; right: 3.5%; font-size: 1.8rem; animation-delay: 2.4s; }
+
+    .mg-cs-hero-content { position: relative; z-index: 1; max-width: 780px; margin: 0 auto; }
+    .mg-cs-crumbs {
+      position: relative;
+      z-index: 1;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 18px;
+    }
+    .mg-cs-crumbs a { color: rgba(255,255,255,0.85); text-decoration: underline; text-underline-offset: 3px; }
+    .mg-cs-crumbs a:hover { color: var(--accent-light); }
+    .mg-cs-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,213,79,0.4);
+      color: var(--accent-light);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      padding: 7px 18px;
+      border-radius: 50px;
+      margin-bottom: 20px;
+    }
+    .mg-cs-hero h1 { font-size: 3.1rem; font-weight: 800; line-height: 1.12; margin-bottom: 14px; }
+    .mg-cs-tagline { font-size: 1.4rem; font-weight: 600; color: var(--accent-light); margin-bottom: 12px; }
+    .mg-cs-hero-sub { font-size: 1.05rem; opacity: 0.86; max-width: 640px; margin: 0 auto; line-height: 1.7; }
+
+    .mg-cs-section { padding: 76px 0; }
+    .mg-cs-section-alt { background: var(--white); }
+
+    .mg-cs-layout {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 28px;
+      align-items: start;
+      max-width: 1020px;
+      margin: 0 auto;
+    }
+    .mg-cs-panel {
+      background: var(--white);
+      border: 1px solid rgba(26,35,126,0.06);
+      border-radius: 20px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+    }
+
+    .mg-cs-group { margin-bottom: 26px; }
+    .mg-cs-group:last-child { margin-bottom: 0; }
+    .mg-cs-group-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+    .mg-cs-group-title i { color: var(--accent-dark); }
+    .mg-cs-opts { display: flex; flex-wrap: wrap; gap: 10px; }
+    .mg-cs-opt {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--white);
+      border: 1.5px solid rgba(26,35,126,0.18);
+      color: var(--primary);
+      padding: 11px 20px;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: inherit;
+    }
+    .mg-cs-opt:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .mg-cs-opt.is-active { background: var(--primary); border-color: var(--primary); color: var(--white); }
+
+    .mg-cs-start-row { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-top: 6px; }
+    .mg-cs-start { padding: 16px 44px; font-size: 1.05rem; }
+    .mg-cs-end-link {
+      color: var(--gray);
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: var(--transition);
+    }
+    .mg-cs-end-link:hover { color: var(--primary); border-bottom-color: var(--accent); }
+
+    .mg-cs-pb { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: var(--white); border-radius: 20px; padding: 30px; box-shadow: var(--shadow-lg); }
+    .mg-cs-pb h3 { font-size: 1.15rem; margin-bottom: 4px; }
+    .mg-cs-pb-note { font-size: 0.9rem; color: rgba(255,255,255,0.8); margin-bottom: 20px; }
+    .mg-cs-pb-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .mg-cs-pb-cell { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 14px; padding: 16px 10px; text-align: center; }
+    .mg-cs-pb-num { display: block; font-size: 1.5rem; font-weight: 800; color: var(--accent-light); line-height: 1.1; }
+    .mg-cs-pb-lbl { display: block; font-size: 0.7rem; color: rgba(255,255,255,0.78); text-transform: uppercase; letter-spacing: 0.8px; margin-top: 5px; }
+
+    .mg-cs-arena { max-width: 700px; margin: 0 auto; }
+
+    .mg-cs-hud { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 26px; }
+    .mg-cs-stat {
+      flex: 1 1 130px;
+      max-width: 200px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--white);
+      border: 1px solid rgba(26,35,126,0.06);
+      border-radius: 16px;
+      padding: 14px 18px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .mg-cs-stat-time { flex: 1 1 210px; max-width: 260px; border-color: rgba(249,168,37,0.4); }
+    .mg-cs-stat-time.is-warning { border-color: var(--accent-dark); background: #fff8e1; }
+    .mg-cs-stat-time.is-danger { border-color: #d32f2f; background: #ffebee; animation: mg-cs-pulse 1s ease-in-out infinite; }
+    @keyframes mg-cs-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.04); } }
+    .mg-cs-stat-ico { font-size: 1.3rem; flex-shrink: 0; }
+    .mg-cs-stat-lbl { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.8px; color: var(--gray); font-weight: 700; }
+    .mg-cs-stat-val { font-size: 1.35rem; font-weight: 800; color: var(--primary); margin-left: auto; line-height: 1.1; }
+    .mg-cs-stat-time .mg-cs-stat-val { color: var(--accent-dark); font-size: 1.7rem; }
+    .mg-cs-stat-time.is-danger .mg-cs-stat-val { color: #d32f2f; }
+
+    .mg-cs-prompt {
+      text-align: center;
+      font-size: clamp(1.15rem, 3.2vw, 1.5rem);
+      font-weight: 700;
+      color: var(--primary);
+      background: var(--light);
+      border: 1px solid rgba(26,35,126,0.1);
+      border-radius: 16px;
+      padding: 16px 18px;
+      margin-bottom: 20px;
+    }
+    .mg-cs-prompt.is-clear { background: transparent; border-color: transparent; }
+
+    .mg-cs-plane-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 640px;
+      margin: 0 auto;
+      aspect-ratio: 1 / 1;
+      background: var(--white);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    #mgCsCanvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+      touch-action: manipulation;
+      cursor: crosshair;
+    }
+    #mgCsCanvas:focus-visible { outline: 3px solid rgba(249,168,37,0.65); outline-offset: -3px; }
+
+    .mg-cs-aim-hint { text-align: center; font-size: 0.85rem; color: var(--gray); margin: 12px 0 22px; }
+
+    .mg-cs-identify {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: flex-end;
+      justify-content: center;
+      margin: 4px 0 6px;
+    }
+    .mg-cs-field { display: flex; flex-direction: column; gap: 6px; }
+    .mg-cs-field label { font-size: 0.8rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.8px; }
+    .mg-cs-field input {
+      width: 92px;
+      text-align: center;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--dark);
+      padding: 10px 8px;
+      border: 2px solid rgba(26,35,126,0.25);
+      border-radius: 12px;
+      background: var(--white);
+      font-family: inherit;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .mg-cs-field input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 4px rgba(249,168,37,0.2); }
+    .mg-cs-field input:disabled { background: var(--light); color: var(--gray); }
+    .mg-cs-identify-submit { padding: 12px 26px; font-size: 0.98rem; }
+
+    .mg-cs-feedback { min-height: 1.6em; text-align: center; margin-top: 16px; font-size: 1rem; font-weight: 600; }
+    .mg-cs-feedback.is-good { color: #2e7d32; }
+    .mg-cs-feedback.is-bad { color: #c62828; }
+
+    .mg-cs-toast {
+      position: fixed;
+      left: 50%;
+      bottom: 34px;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--primary);
+      color: var(--white);
+      padding: 14px 26px;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 700;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(255,213,79,0.35);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 60;
+    }
+    .mg-cs-toast.is-visible { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    .mg-cs-sr {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+
+    .mg-cs-results { max-width: 720px; margin: 0 auto; text-align: center; }
+    .mg-cs-results h2 { font-size: clamp(1.9rem, 5vw, 2.6rem); margin-bottom: 8px; color: var(--dark); }
+    .mg-cs-results-sub { color: var(--gray); font-size: 1.05rem; margin-bottom: 30px; }
+    .mg-cs-newbest {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #e8f5e9;
+      border: 1px solid #2e7d32;
+      color: #2e7d32;
+      padding: 10px 22px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 26px;
+    }
+    .mg-cs-newbest.hidden { display: none; }
+    .mg-cs-res-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 22px; }
+    .mg-cs-res-cell { background: var(--white); border: 1px solid rgba(26,35,126,0.06); border-radius: 18px; padding: 26px 14px; box-shadow: var(--shadow); }
+    .mg-cs-res-cell.is-primary { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); border: none; }
+    .mg-cs-res-num { display: block; font-size: 2.1rem; font-weight: 800; color: var(--primary); line-height: 1.1; }
+    .mg-cs-res-cell.is-primary .mg-cs-res-num { color: var(--accent-light); }
+    .mg-cs-res-lbl { display: block; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 1px; color: var(--gray); margin-top: 6px; }
+    .mg-cs-res-cell.is-primary .mg-cs-res-lbl { color: rgba(255,255,255,0.85); }
+    .mg-cs-fbmsg { font-size: 1.1rem; font-weight: 600; color: var(--primary); margin-bottom: 28px; }
+    .mg-cs-res-actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .mg-cs-res-actions .btn { font-size: 1rem; }
+
+    .mg-bump { animation: mg-cs-bump 0.35s ease; }
+    @keyframes mg-cs-bump {
+      0% { transform: scale(1); }
+      40% { transform: scale(1.35); color: var(--accent-dark); }
+      100% { transform: scale(1); }
+    }
+
+    .mg-cs-seo-content { max-width: 820px; margin: 0 auto; color: var(--dark); }
+    .mg-cs-seo-content h3 { color: var(--primary); font-size: 1.12rem; margin: 22px 0 8px; }
+    .mg-cs-seo-content p { color: var(--gray); font-size: 1rem; line-height: 1.8; margin-bottom: 14px; }
+    .mg-cs-seo-links { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 4px; }
+    .mg-cs-seo-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--light);
+      color: var(--primary);
+      border: 1px solid rgba(26,35,126,0.1);
+      padding: 10px 18px;
+      border-radius: 50px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+    .mg-cs-seo-chip:hover { background: var(--accent-light); border-color: var(--accent); color: var(--primary-dark); }
+
+    .mg-cs-opt:focus-visible,
+    .mg-cs-field input:focus-visible,
+    .mg-cs-submit:focus-visible,
+    .mg-cs-end-link:focus-visible,
+    .mg-cs-seo-chip:focus-visible,
+    .btn:focus-visible { outline: 3px solid rgba(249,168,37,0.65); outline-offset: 2px; }
+
+    @media (max-width: 900px) {
+      .mg-cs-layout { grid-template-columns: 1fr; }
+      .mg-cs-pb { order: -1; }
+    }
+    @media (max-width: 768px) {
+      .mg-cs-hero { padding: 96px 0 70px; }
+      .mg-cs-hero h1 { font-size: 2.3rem; }
+      .mg-cs-section { padding: 60px 0; }
+    }
+    @media (max-width: 480px) {
+      .mg-cs-hero h1 { font-size: 1.9rem; }
+      .mg-cs-tagline { font-size: 1.15rem; }
+      .mg-cs-hero-sub { font-size: 0.98rem; }
+      .mg-cs-panel, .mg-cs-pb { padding: 24px 20px; }
+      .mg-cs-stat { flex-basis: 44%; max-width: none; }
+      .mg-cs-stat-time { flex-basis: 100%; max-width: none; }
+      .mg-cs-prompt { font-size: 1.1rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .mg-cs-symbol { animation: none; }
+      .mg-cs-stat-time.is-danger { animation: none; }
+      .mg-bump { animation: none; }
+      .mg-cs-opt:hover, .mg-cs-stat, .btn { transform: none; transition: none; }
+      .mg-cs-toast { transition: none; }
+    }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="/" class="logo"><i class="fas fa-graduation-cap"></i> Vyasa Academy</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#courses">Courses</a></li>
+      <li><a href="/#papers">Practice Papers</a></li>
+      <li><a href="/cbse-study-material/">Study Material</a></li>
+      <li><a href="/maths-games/" class="active" aria-current="page">🎮 Maths Games</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- START SCREEN -->
+  <section class="mg-cs-hero" id="mgCsStartScreen">
+    <div class="mg-cs-hero-bg" aria-hidden="true">
+      <span class="mg-cs-symbol mg-cs-symbol-1">(3, 4)</span>
+      <span class="mg-cs-symbol mg-cs-symbol-2">(&#8722;2, 5)</span>
+      <span class="mg-cs-symbol mg-cs-symbol-3">±</span>
+      <span class="mg-cs-symbol mg-cs-symbol-4">x</span>
+      <span class="mg-cs-symbol mg-cs-symbol-5">y</span>
+      <span class="mg-cs-symbol mg-cs-symbol-6">O</span>
+    </div>
+    <div class="container mg-cs-hero-content">
+      <nav class="mg-cs-crumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a> / <a href="/maths-games/">Maths Games</a> / <span aria-current="page">Coordinate Shooter</span>
+      </nav>
+      <span class="mg-cs-badge">Coordinate Geometry</span>
+      <h1>🎯 Coordinate Shooter</h1>
+      <p class="mg-cs-tagline">Aim. Locate. Hit the Target.</p>
+      <p class="mg-cs-hero-sub">Test your coordinate geometry skills by locating points on the Cartesian plane.</p>
+    </div>
+  </section>
+
+  <section class="mg-cs-section mg-cs-section-alt">
+    <div class="container">
+      <div class="mg-cs-layout">
+        <div class="mg-cs-panel" id="mgSettingsPanel">
+          <div class="section-header" style="padding:0 0 22px;">
+            <span class="section-tag">Set Up</span>
+            <h2>Choose Your Mission</h2>
+            <p>Pick your difficulty, time limit and game mode. No login needed.</p>
+          </div>
+
+          <div class="mg-cs-group" role="group" aria-label="Choose difficulty">
+            <span class="mg-cs-group-title"><i class="fas fa-signal" aria-hidden="true"></i>Difficulty</span>
+            <div class="mg-cs-opts" data-setting-group="difficulty">
+              <button type="button" class="mg-cs-opt" data-setting="difficulty" data-value="easy" aria-pressed="false">Easy</button>
+              <button type="button" class="mg-cs-opt is-active" data-setting="difficulty" data-value="medium" aria-pressed="true">Medium</button>
+              <button type="button" class="mg-cs-opt" data-setting="difficulty" data-value="hard" aria-pressed="false">Hard</button>
+            </div>
+          </div>
+
+          <div class="mg-cs-group" role="group" aria-label="Choose time limit">
+            <span class="mg-cs-group-title"><i class="fas fa-hourglass-half" aria-hidden="true"></i>Time</span>
+            <div class="mg-cs-opts" data-setting-group="timeLimit">
+              <button type="button" class="mg-cs-opt" data-setting="timeLimit" data-value="30" aria-pressed="false">30 seconds</button>
+              <button type="button" class="mg-cs-opt is-active" data-setting="timeLimit" data-value="60" aria-pressed="true">60 seconds</button>
+              <button type="button" class="mg-cs-opt" data-setting="timeLimit" data-value="90" aria-pressed="false">90 seconds</button>
+            </div>
+          </div>
+
+          <div class="mg-cs-group" role="group" aria-label="Choose game mode">
+            <span class="mg-cs-group-title"><i class="fas fa-crosshairs" aria-hidden="true"></i>Mode</span>
+            <div class="mg-cs-opts" data-setting-group="mode">
+              <button type="button" class="mg-cs-opt" data-setting="mode" data-value="find" aria-pressed="false">Find the Point</button>
+              <button type="button" class="mg-cs-opt" data-setting="mode" data-value="identify" aria-pressed="false">Identify the Coordinate</button>
+              <button type="button" class="mg-cs-opt is-active" data-setting="mode" data-value="mixed" aria-pressed="true">Mixed</button>
+            </div>
+          </div>
+
+          <div class="mg-cs-start-row">
+            <button type="button" class="btn btn-primary mg-cs-start" id="mgCsStartBtn">🎯 Start Game</button>
+            <a class="mg-cs-end-link" href="/maths-games/">← Back to Maths Games</a>
+          </div>
+        </div>
+
+        <aside class="mg-cs-pb" aria-label="Personal best">
+          <h3>🏆 Personal Best</h3>
+          <p class="mg-cs-pb-note">Your best is saved on this device.</p>
+          <div class="mg-cs-pb-grid" id="mgCsPbGrid">
+            <div class="mg-cs-pb-cell"><span class="mg-cs-pb-num" id="mgCsPbScore">—</span><span class="mg-cs-pb-lbl">Score</span></div>
+            <div class="mg-cs-pb-cell"><span class="mg-cs-pb-num" id="mgCsPbAccuracy">—</span><span class="mg-cs-pb-lbl">Accuracy</span></div>
+            <div class="mg-cs-pb-cell"><span class="mg-cs-pb-num" id="mgCsPbStreak">—</span><span class="mg-cs-pb-lbl">Best Streak</span></div>
+            <div class="mg-cs-pb-cell"><span class="mg-cs-pb-num" id="mgCsPbGames">—</span><span class="mg-cs-pb-lbl">Games Played</span></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAME SCREEN -->
+  <section class="mg-cs-section mg-cs-section-alt" id="mgCsGameScreen" hidden>
+    <div class="container">
+      <div class="mg-cs-arena">
+        <div class="mg-cs-hud" role="group" aria-label="Game stats">
+          <div class="mg-cs-stat mg-cs-stat-time" id="mgCsTimeBox">
+            <span class="mg-cs-stat-ico" aria-hidden="true">⏱</span>
+            <span class="mg-cs-stat-lbl">Time</span>
+            <span class="mg-cs-stat-val" id="mgCsTime">60</span>
+          </div>
+          <div class="mg-cs-stat">
+            <span class="mg-cs-stat-ico" aria-hidden="true">⭐</span>
+            <span class="mg-cs-stat-lbl">Score</span>
+            <span class="mg-cs-stat-val" id="mgCsScore">0</span>
+          </div>
+          <div class="mg-cs-stat">
+            <span class="mg-cs-stat-ico" aria-hidden="true">✓</span>
+            <span class="mg-cs-stat-lbl">Hits</span>
+            <span class="mg-cs-stat-val" id="mgCsHits">0</span>
+          </div>
+          <div class="mg-cs-stat">
+            <span class="mg-cs-stat-ico" aria-hidden="true">✗</span>
+            <span class="mg-cs-stat-lbl">Misses</span>
+            <span class="mg-cs-stat-val" id="mgCsMisses">0</span>
+          </div>
+          <div class="mg-cs-stat">
+            <span class="mg-cs-stat-ico" aria-hidden="true">🔥</span>
+            <span class="mg-cs-stat-lbl">Streak</span>
+            <span class="mg-cs-stat-val" id="mgCsStreak">0</span>
+          </div>
+        </div>
+
+        <div class="mg-cs-prompt" id="mgCsPrompt" role="status" aria-live="polite">🎯 Find: (0, 0)</div>
+
+        <div class="mg-cs-plane-wrap">
+          <canvas id="mgCsCanvas" width="640" height="640" tabindex="0" aria-label="Cartesian coordinate plane from negative 10 to 10 on both axes. In Find the Point mode, click the given point or use the arrow keys to aim and Enter to fire. In Identify the Coordinate mode, read the coordinates of the highlighted point."></canvas>
+        </div>
+        <p class="mg-cs-aim-hint" id="mgCsHint"></p>
+
+        <form class="mg-cs-identify" id="mgCsIdentify" hidden autocomplete="off">
+          <div class="mg-cs-field">
+            <label for="mgCsX">X</label>
+            <input type="text" inputmode="numeric" pattern="-?[0-9]*" id="mgCsX" placeholder="x" autocomplete="off" />
+          </div>
+          <div class="mg-cs-field">
+            <label for="mgCsY">Y</label>
+            <input type="text" inputmode="numeric" pattern="-?[0-9]*" id="mgCsY" placeholder="y" autocomplete="off" />
+          </div>
+          <button type="submit" class="btn btn-primary mg-cs-identify-submit" id="mgCsSubmit">Submit</button>
+        </form>
+
+        <p class="mg-cs-feedback" id="mgCsFeedback" role="status" aria-live="polite"></p>
+
+        <p class="mg-cs-sr" id="mgCsAnnounce" aria-live="assertive" aria-atomic="true"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- END SCREEN -->
+  <section class="mg-cs-section" id="mgCsEndScreen" hidden>
+    <div class="container">
+      <div class="mg-cs-results">
+        <h2>🏆 Coordinate Mission Complete!</h2>
+        <p class="mg-cs-results-sub" id="mgCsResultSub">Time is up. Here is how you tracked coordinates.</p>
+        <p class="mg-cs-newbest hidden" id="mgCsNewBest"><i class="fas fa-trophy" aria-hidden="true"></i>New Personal Best!</p>
+        <div class="mg-cs-res-grid" id="mgCsResultsGrid">
+          <div class="mg-cs-res-cell is-primary">
+            <span class="mg-cs-res-num" id="mgCsResScore">0</span>
+            <span class="mg-cs-res-lbl">Score</span>
+          </div>
+          <div class="mg-cs-res-cell">
+            <span class="mg-cs-res-num" id="mgCsResAttempted">0</span>
+            <span class="mg-cs-res-lbl">Attempted</span>
+          </div>
+          <div class="mg-cs-res-cell">
+            <span class="mg-cs-res-num" id="mgCsResHits">0</span>
+            <span class="mg-cs-res-lbl">Hits</span>
+          </div>
+          <div class="mg-cs-res-cell">
+            <span class="mg-cs-res-num" id="mgCsResMisses">0</span>
+            <span class="mg-cs-res-lbl">Misses</span>
+          </div>
+          <div class="mg-cs-res-cell">
+            <span class="mg-cs-res-num" id="mgCsResAccuracy">0%</span>
+            <span class="mg-cs-res-lbl">Accuracy</span>
+          </div>
+          <div class="mg-cs-res-cell">
+            <span class="mg-cs-res-num" id="mgCsResStreak">0</span>
+            <span class="mg-cs-res-lbl">Best Streak</span>
+          </div>
+        </div>
+        <p class="mg-cs-fbmsg" id="mgCsFeedbackMsg" role="status" aria-live="polite"></p>
+        <div class="mg-cs-res-actions">
+          <button type="button" class="btn btn-primary" id="mgCsPlayAgain">🔄 Play Again</button>
+          <a href="/maths-games/" class="btn btn-secondary" style="background:var(--primary);border-color:var(--primary);">🎮 More Maths Games</a>
+          <a href="/cbse-study-material/class-10/mathematics/coordinate-geometry/" class="btn" style="color:var(--primary);border:2px solid var(--primary);background:var(--white);">📚 Practise Coordinate Geometry</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO CONTENT -->
+  <section class="mg-cs-section mg-cs-section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Why It Helps</span>
+        <h2>Practise Coordinate Geometry with Coordinate Shooter</h2>
+        <p>Read coordinates, locate points and explore all four quadrants on a real interactive plane.</p>
+      </div>
+      <div class="mg-cs-seo-content">
+        <p>The <strong>Coordinate Shooter</strong> game turns coordinate geometry practice into a fast hands-on challenge. In <em>Find the Point</em> mode a coordinate such as (4, 3) is shown and the student clicks its location on the plane. In <em>Identify the Coordinate</em> mode a point is highlighted and the student types its X and Y values.</p>
+        <h3>Explore all four quadrants and the axes</h3>
+        <p>Every target is placed exactly where its mathematical coordinate appears: x units right or left from the origin and y units up or down. On easy difficulty coordinates stay within -5 to +5, while medium and hard levels range from -10 to +10 and include points on the x-axis, the y-axis, the origin and all four quadrants.</p>
+        <h3>A quick daily boost alongside CBSE study</h3>
+        <p>Coordinate geometry is a core CBSE Mathematics topic from Class 9 onwards. Pair the game with our <a href="/cbse-study-material/class-10/mathematics/coordinate-geometry/">Class 10 Coordinate Geometry</a> chapter notes, tests and quizzes, or explore more <a href="/maths-games/">Maths games</a> on Vyasa Academy.</p>
+        <div class="mg-cs-seo-links">
+          <a class="mg-cs-seo-chip" href="/maths-games/">🎮 All Maths Games</a>
+          <a class="mg-cs-seo-chip" href="/maths-games/speed-challenge/">⚡ Maths Speed Challenge</a>
+          <a class="mg-cs-seo-chip" href="/maths-games/equation-hunter/">🎯 Equation Hunter</a>
+          <a class="mg-cs-seo-chip" href="/cbse-study-material/class-10/mathematics/coordinate-geometry/">📘 Coordinate Geometry Notes</a>
+          <a class="mg-cs-seo-chip" href="/cbse-study-material/">📚 Study Material</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-about">
+      <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+      <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#faculty">Faculty</a></li>
+        <li><a href="/#courses">Courses</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/cbse-study-material/">Study Material</a></li>
+        <li><a href="/maths-games/">🎮 Maths Games</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Popular Searches</h4>
+      <ul>
+        <li><a href="/best-tuition-centre-hulimavu/">Best Tuition Centre in Hulimavu</a></li>
+        <li><a href="/best-coaching-centre-hulimavu/">Best Coaching Centre in Hulimavu</a></li>
+        <li><a href="/cbse-tuition-hulimavu/">CBSE Tuition in Hulimavu</a></li>
+        <li><a href="/maths-tuition-hulimavu/">Maths Tuition in Hulimavu</a></li>
+        <li><a href="/science-tuition-hulimavu/">Science Tuition in Hulimavu</a></li>
+        <li><a href="/kcet-coaching-hulimavu/">KCET Coaching in Hulimavu</a></li>
+        <li><a href="/class-10-tuition-hulimavu/">Class 10 Tuition Hulimavu</a></li>
+        <li><a href="/icse-tuition-hulimavu/">ICSE Tuition Hulimavu</a></li>
+        <li><a href="/tuition-classes-near-bannerghatta-road/">Tuition near Bannerghatta Road</a></li>
+        <li><a href="/cbse-tuition-bangalore/">CBSE Tuition Bangalore</a></li>
+        <li><a href="/tuition-centre-bangalore/">Best Tuition Centre in Bangalore</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ============================================================
+     Pure game logic (exported when run under Node for tests)
+     ============================================================ */
+
+  var GRID_MIN = -10;
+  var GRID_MAX = 10;
+  var GRID_EXTENT = GRID_MAX - GRID_MIN;
+
+  function randInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function clampCoord(v) {
+    return Math.max(GRID_MIN, Math.min(GRID_MAX, v));
+  }
+
+  function quadrantOf(x, y) {
+    if (x === 0 && y === 0) { return 'origin'; }
+    if (y === 0) { return 'x-axis'; }
+    if (x === 0) { return 'y-axis'; }
+    if (x > 0 && y > 0) { return 'q1'; }
+    if (x < 0 && y > 0) { return 'q2'; }
+    if (x < 0 && y < 0) { return 'q3'; }
+    return 'q4';
+  }
+
+  function generateCoordinate(difficulty, prev) {
+    var lim = difficulty === 'easy' ? 5 : 10;
+    var x, y, r;
+    if (difficulty === 'hard') {
+      r = Math.random();
+      if (r < 0.08) {
+        x = 0; y = 0;
+      } else if (r < 0.24) {
+        if (Math.random() < 0.5) { x = 0; y = randInt(-lim, lim); }
+        else { x = randInt(-lim, lim); y = 0; }
+        if (x === 0 && y === 0) { x = 1; }
+      } else if (r < 0.4 && prev) {
+        var axis = Math.random() < 0.5;
+        var dir = Math.random() < 0.5 ? -1 : 1;
+        x = axis ? clampCoord(prev.x + dir) : (Math.random() < 0.5 ? randInt(-lim, lim) : prev.x);
+        y = axis ? (Math.random() < 0.5 ? randInt(-lim, lim) : prev.y) : clampCoord(prev.y + dir);
+        if (x === prev.x && y === prev.y) { x = clampCoord(prev.x + 1); }
+      } else if (r < 0.6) {
+        x = randInt(6, 10) * (Math.random() < 0.5 ? -1 : 1);
+        y = randInt(6, 10) * (Math.random() < 0.5 ? -1 : 1);
+        if (x === 0) { x = 7; }
+        if (y === 0) { y = 7; }
+      } else {
+        x = randInt(-lim, lim);
+        y = randInt(-lim, lim);
+        if (x === 0 && y === 0 && Math.random() < 0.75) { x = randInt(-lim, lim); if (x === 0) { x = 1; } }
+      }
+    } else {
+      x = randInt(-lim, lim);
+      y = randInt(-lim, lim);
+      if (x === 0 && y === 0 && Math.random() < 0.75) { x = randInt(-lim, lim); if (x === 0) { x = 1; } }
+    }
+    return { x: x, y: y };
+  }
+
+  var recentKeys = [];
+  var lastTarget = null;
+
+  function keysCollide(key) {
+    for (var i = 0; i < recentKeys.length; i++) {
+      if (recentKeys[i] === key) { return true; }
+    }
+    return false;
+  }
+
+  function rememberKey(key) {
+    recentKeys.push(key);
+    if (recentKeys.length > 40) { recentKeys.shift(); }
+  }
+
+  function generateTarget(difficulty, mode) {
+    var target, key;
+    for (var attempt = 0; attempt < 60; attempt++) {
+      target = generateCoordinate(difficulty, lastTarget);
+      key = mode + ':' + target.x + ':' + target.y;
+      if (!keysCollide(key)) { break; }
+    }
+    rememberKey(key);
+    lastTarget = target;
+    return { mode: mode, target: target };
+  }
+
+  function resolveMode(setting, curMode, consecutive) {
+    if (setting !== 'mixed') { return { mode: setting, consecutive: consecutive }; }
+    if (consecutive >= 3) {
+      return { mode: curMode === 'find' ? 'identify' : 'find', consecutive: 1 };
+    }
+    if (Math.random() < 0.5) {
+      return { mode: curMode === 'find' ? 'identify' : 'find', consecutive: 1 };
+    }
+    return { mode: curMode, consecutive: consecutive + 1 };
+  }
+
+  function mathToScreen(mx, my, box) {
+    return { sx: box.cx + mx * box.unit, sy: box.cy - my * box.unit };
+  }
+
+  function screenToMath(sx, sy, box) {
+    return { mx: (sx - box.cx) / box.unit, my: (box.cy - sy) / box.unit };
+  }
+
+  function checkHit(click, target, hitRadius) {
+    var dx = click.x - target.x;
+    var dy = click.y - target.y;
+    return Math.sqrt(dx * dx + dy * dy) <= hitRadius;
+  }
+
+  function streakBonus(streak) {
+    var pts = 0;
+    if (streak > 0 && streak % 3 === 0) { pts += 5; }
+    if (streak > 0 && streak % 5 === 0) { pts += 10; }
+    if (streak > 0 && streak % 10 === 0) { pts += 20; }
+    return pts;
+  }
+
+  function hitPoints(fast, streak) {
+    return (fast ? 15 : 10) + streakBonus(streak);
+  }
+
+  function accuracyFor(correct, attempted) {
+    if (attempted === 0) { return 0; }
+    return Math.round((correct / attempted) * 100);
+  }
+
+  function feedbackFor(accuracy) {
+    if (accuracy >= 90) { return 'Outstanding! Your coordinate geometry is spot on.'; }
+    if (accuracy >= 75) { return 'Great work! Keep tracking those coordinates.'; }
+    if (accuracy >= 50) { return 'Good attempt! Quadrants and axes take practice.'; }
+    return 'Keep practising. You will hit the target with more practice.';
+  }
+
+  var api = {
+    GRID_MIN: GRID_MIN,
+    GRID_MAX: GRID_MAX,
+    GRID_EXTENT: GRID_EXTENT,
+    randInt: randInt,
+    quadrantOf: quadrantOf,
+    generateCoordinate: generateCoordinate,
+    generateTarget: generateTarget,
+    resolveMode: resolveMode,
+    mathToScreen: mathToScreen,
+    screenToMath: screenToMath,
+    checkHit: checkHit,
+    streakBonus: streakBonus,
+    hitPoints: hitPoints,
+    accuracyFor: accuracyFor,
+    feedbackFor: feedbackFor
+  };
+
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = api;
+    return;
+  }
+
+  /* ============================================================
+     Browser wiring
+     ============================================================ */
+
+  var localStorageKey = 'vyasa_coordinate_shooter_stats';
+  var HIT_RADIUS = 0.47;
+  var MAX_TARGET_MISSES = 3;
+  var FAST_BONUS_MS = 5000;
+  var HIT_ADVANCE_MS = 650;
+
+  var SETTINGS = { difficulty: 'medium', timeLimit: 60, mode: 'mixed' };
+
+  var state = {
+    score: 0, hits: 0, misses: 0, streak: 0, bestStreak: 0, attempts: 0,
+    targetWrong: 0, resolved: false, ended: false,
+    timerId: null, deadline: 0, currentMode: 'find', consecutive: 0,
+    target: { x: 0, y: 0 }, targetShownAt: 0
+  };
+
+  var cross = { x: 0, y: 0 };
+
+  var els = {
+    hamburger: document.getElementById('hamburger'),
+    navLinks: document.getElementById('navLinks'),
+    startScreen: document.getElementById('mgCsStartScreen'),
+    gameScreen: document.getElementById('mgCsGameScreen'),
+    endScreen: document.getElementById('mgCsEndScreen'),
+    startBtn: document.getElementById('mgCsStartBtn'),
+    playAgain: document.getElementById('mgCsPlayAgain'),
+    canvas: document.getElementById('mgCsCanvas'),
+    prompt: document.getElementById('mgCsPrompt'),
+    hint: document.getElementById('mgCsHint'),
+    identify: document.getElementById('mgCsIdentify'),
+    xInput: document.getElementById('mgCsX'),
+    yInput: document.getElementById('mgCsY'),
+    submit: document.getElementById('mgCsSubmit'),
+    feedback: document.getElementById('mgCsFeedback'),
+    announce: document.getElementById('mgCsAnnounce'),
+    toast: null,
+    score: document.getElementById('mgCsScore'),
+    hits: document.getElementById('mgCsHits'),
+    misses: document.getElementById('mgCsMisses'),
+    streak: document.getElementById('mgCsStreak'),
+    time: document.getElementById('mgCsTime'),
+    timeBox: document.getElementById('mgCsTimeBox')
+  };
+
+  var ctx = els.canvas.getContext('2d');
+  var cssW = 1;
+  var cssH = 1;
+  var box = null;
+  var effects = [];
+  var animId = 0;
+
+  function toastEl() {
+    if (!els.toast) {
+      els.toast = document.createElement('div');
+      els.toast.className = 'mg-cs-toast';
+      els.toast.setAttribute('role', 'status');
+      els.toast.setAttribute('aria-live', 'polite');
+      document.body.appendChild(els.toast);
+    }
+    return els.toast;
+  }
+
+  function closeNav() {
+    if (els.hamburger) { els.hamburger.classList.remove('open'); }
+    if (els.navLinks) { els.navLinks.classList.remove('show'); }
+  }
+
+  function wireSettings() {
+    var groups = document.querySelectorAll('[data-setting-group]');
+    Array.prototype.forEach.call(groups, function (group) {
+      var settingName = group.getAttribute('data-setting-group');
+      var btns = group.querySelectorAll('.mg-cs-opt');
+      Array.prototype.forEach.call(btns, function (btn) {
+        btn.addEventListener('click', function () {
+          SETTINGS[settingName] = btn.getAttribute('data-value');
+          if (settingName === 'timeLimit') {
+            SETTINGS.timeLimit = parseInt(btn.getAttribute('data-value'), 10);
+          }
+          Array.prototype.forEach.call(btns, function (b) {
+            var on = b === btn;
+            b.classList.toggle('is-active', on);
+            b.setAttribute('aria-pressed', on ? 'true' : 'false');
+          });
+        });
+      });
+    });
+  }
+
+  function loadBest() {
+    try {
+      var raw = localStorage.getItem(localStorageKey);
+      if (!raw) { return null; }
+      var data = JSON.parse(raw);
+      if (data && typeof data === 'object') { return data; }
+    } catch (e) { /* storage unavailable */ }
+    return null;
+  }
+
+  function saveBest(accuracy) {
+    var best = loadBest() || { bestScore: 0, bestAccuracy: 0, bestStreak: 0, gamesPlayed: 0 };
+    var isNewBest = false;
+    if (state.score > best.bestScore) { best.bestScore = state.score; isNewBest = true; }
+    if (accuracy > best.bestAccuracy) { best.bestAccuracy = accuracy; }
+    if (state.bestStreak > best.bestStreak) { best.bestStreak = state.bestStreak; }
+    best.gamesPlayed = (best.gamesPlayed || 0) + 1;
+    try {
+      localStorage.setItem(localStorageKey, JSON.stringify(best));
+    } catch (e) { /* storage unavailable */ }
+    return isNewBest;
+  }
+
+  function renderPersonalBest() {
+    var best = loadBest();
+    if (best && (best.bestScore > 0 || best.gamesPlayed > 0)) {
+      document.getElementById('mgCsPbScore').textContent = best.bestScore;
+      document.getElementById('mgCsPbAccuracy').textContent = best.bestAccuracy + '%';
+      document.getElementById('mgCsPbStreak').textContent = best.bestStreak;
+      document.getElementById('mgCsPbGames').textContent = best.gamesPlayed;
+      var note = document.querySelector('.mg-cs-pb-note');
+      if (note) { note.textContent = 'Beat your best to level up.'; }
+    }
+  }
+
+  function announce(message) {
+    if (els.announce) {
+      els.announce.textContent = message;
+      window.setTimeout(function () {
+        if (els.announce && els.announce.textContent === message) {
+          els.announce.textContent = '';
+        }
+      }, 4000);
+    }
+  }
+
+  function showScreen(name) {
+    els.startScreen.hidden = name !== 'start';
+    els.gameScreen.hidden = name !== 'game';
+    els.endScreen.hidden = name !== 'end';
+  }
+
+  function renderHud() {
+    els.score.textContent = state.score;
+    els.hits.textContent = state.hits;
+    els.misses.textContent = state.misses;
+    els.streak.textContent = state.streak;
+  }
+
+  function bumpScore() {
+    els.score.classList.remove('mg-bump');
+    void els.score.offsetWidth;
+    els.score.classList.add('mg-bump');
+  }
+
+  var toastTimerId = null;
+  function showToast(message) {
+    var el = toastEl();
+    el.textContent = message;
+    el.classList.add('is-visible');
+    if (toastTimerId) { window.clearTimeout(toastTimerId); }
+    toastTimerId = window.setTimeout(function () {
+      el.classList.remove('is-visible');
+    }, 1800);
+  }
+
+  function setFeedback(message, kind) {
+    els.feedback.textContent = message;
+    els.feedback.className = 'mg-cs-feedback' + (kind ? ' ' + kind : '');
+  }
+
+  function renderTime(seconds) {
+    if (!els.time) { return; }
+    els.time.textContent = seconds;
+    els.timeBox.classList.toggle('is-warning', seconds <= 10 && seconds > 5);
+    els.timeBox.classList.toggle('is-danger', seconds <= 5);
+  }
+
+  var announced = {};
+  function startTimer() {
+    state.deadline = Date.now() + (SETTINGS.timeLimit * 1000);
+    renderTime(SETTINGS.timeLimit);
+    state.timerId = window.setInterval(function () {
+      var remainingMs = state.deadline - Date.now();
+      var remaining = Math.max(0, Math.ceil(remainingMs / 1000));
+      renderTime(remaining);
+      if (remaining === 10 && !announced[10]) { announced[10] = true; announce('10 seconds left'); }
+      if (remaining === 5 && !announced[5]) { announced[5] = true; announce('5 seconds left'); }
+      if (remainingMs <= 0) { endGame(); }
+    }, 250);
+  }
+
+  function computeBox(w, h) {
+    var margin = 28;
+    var plot = Math.max(1, Math.min(w, h) - 2 * margin);
+    var unit = plot / GRID_EXTENT;
+    return { cx: w / 2, cy: h / 2, unit: unit, margin: margin };
+  }
+
+  function resizeCanvas() {
+    var rect = els.canvas.getBoundingClientRect();
+    cssW = Math.max(1, Math.floor(rect.width || 1));
+    cssH = Math.max(1, Math.floor(rect.height || 1));
+    var dpr = Math.max(1, (typeof window !== 'undefined' && window.devicePixelRatio) || 1);
+    els.canvas.width = Math.round(cssW * dpr);
+    els.canvas.height = Math.round(cssH * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    box = computeBox(cssW, cssH);
+    drawScene();
+  }
+
+  function addEffect(type, mathPoint) {
+    var now = Date.now();
+    var dur = type === 'miss' ? 650 : 850;
+    effects.push({ type: type, x: mathPoint.x, y: mathPoint.y, t0: now, dur: dur });
+    ensureAnim();
+  }
+
+  function pruneEffects() {
+    var now = Date.now();
+    for (var i = effects.length - 1; i >= 0; i--) {
+      if (now > effects[i].t0 + effects[i].dur) { effects.splice(i, 1); }
+    }
+  }
+
+  function ensureAnim() {
+    if (animId) { return; }
+    animId = 1;
+    function tick() {
+      drawScene();
+      if (effects.length > 0) {
+        animId = (typeof window.requestAnimationFrame === 'function') ? window.requestAnimationFrame(tick) : 0;
+      } else {
+        animId = 0;
+      }
+    }
+    tick();
+  }
+
+  function drawScene() {
+    if (!ctx || !box) { return; }
+    var now = Date.now();
+    ctx.clearRect(0, 0, cssW, cssH);
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, cssW, cssH);
+    drawGrid();
+    if (state.currentMode === 'identify' || state.resolved) { drawTarget(); }
+    if (state.currentMode === 'find' && !state.resolved) { drawCrosshair(); }
+    drawEffects(now);
+    pruneEffects();
+    if (effects.length > 0 && !animId) {
+      animId = 1;
+      (function loop() {
+        drawScene();
+        if (effects.length > 0) {
+          animId = (typeof window.requestAnimationFrame === 'function') ? window.requestAnimationFrame(loop) : 0;
+        } else {
+          animId = 0;
+        }
+      })();
+    }
+  }
+
+  function drawGrid() {
+    var i, sx, sy, p;
+    ctx.lineWidth = 1;
+    for (i = GRID_MIN; i <= GRID_MAX; i++) {
+      var heavy = Math.abs(i) % 5 === 0;
+      ctx.strokeStyle = heavy ? 'rgba(26,35,126,0.16)' : 'rgba(26,35,126,0.07)';
+      ctx.beginPath();
+      sx = box.cx + i * box.unit;
+      ctx.moveTo(sx, 0);
+      ctx.lineTo(sx, cssH);
+      ctx.stroke();
+      ctx.beginPath();
+      sy = box.cy - i * box.unit;
+      ctx.moveTo(0, sy);
+      ctx.lineTo(cssW, sy);
+      ctx.stroke();
+    }
+    ctx.strokeStyle = '#1a237e';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(0, box.cy);
+    ctx.lineTo(cssW, box.cy);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(box.cx, 0);
+    ctx.lineTo(box.cx, cssH);
+    ctx.stroke();
+    ctx.fillStyle = '#6b7280';
+    ctx.font = '11px Inter, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    for (i = GRID_MIN; i <= GRID_MAX; i += 2) {
+      p = mathToScreen(i, 0, box);
+      if (i !== 0) { ctx.fillText(String(i), p.sx, box.cy + 15); }
+      p = mathToScreen(0, i, box);
+      if (i !== 0) { ctx.fillText(String(i), box.cx - 15, p.sy); }
+    }
+    ctx.fillStyle = '#6b7280';
+    ctx.fillText('0', box.cx - 15, box.cy + 15);
+    ctx.strokeStyle = '#1a237e';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    p = mathToScreen(GRID_MAX, 0, box);
+    ctx.moveTo(p.sx - 8, p.sy - 4);
+    ctx.lineTo(p.sx, p.sy);
+    ctx.lineTo(p.sx - 8, p.sy + 4);
+    ctx.stroke();
+    ctx.beginPath();
+    p = mathToScreen(0, GRID_MAX, box);
+    ctx.moveTo(p.sx - 4, p.sy + 8);
+    ctx.lineTo(p.sx, p.sy);
+    ctx.lineTo(p.sx + 4, p.sy + 8);
+    ctx.stroke();
+  }
+
+  function drawTarget() {
+    var p = mathToScreen(state.target.x, state.target.y, box);
+    var isLiveIdentify = state.currentMode === 'identify' && !state.resolved;
+    ctx.strokeStyle = 'rgba(26,35,126,0.25)';
+    ctx.lineWidth = 1;
+    ctx.setLineDash([4, 4]);
+    ctx.beginPath();
+    ctx.moveTo(p.sx, p.sy);
+    ctx.lineTo(p.sx, box.cy);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(p.sx, p.sy);
+    ctx.lineTo(box.cx, p.sy);
+    ctx.stroke();
+    ctx.setLineDash([]);
+    var pulse = isLiveIdentify ? (9 + 3 * Math.sin(Date.now() / 160)) : 9;
+    ctx.beginPath();
+    ctx.arc(p.sx, p.sy, pulse + 7, 0, Math.PI * 2);
+    ctx.strokeStyle = isLiveIdentify ? 'rgba(249,168,37,0.45)' : 'rgba(198,40,40,0.45)';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(p.sx, p.sy, 6, 0, Math.PI * 2);
+    ctx.fillStyle = isLiveIdentify ? '#f9a825' : '#c62828';
+    ctx.fill();
+    ctx.strokeStyle = '#1a237e';
+    ctx.lineWidth = 1;
+    ctx.stroke();
+  }
+
+  function drawCrosshair() {
+    var cx = box.cx + cross.x * box.unit;
+    var cy = box.cy - cross.y * box.unit;
+    ctx.strokeStyle = 'rgba(26,35,126,0.35)';
+    ctx.lineWidth = 1;
+    ctx.setLineDash([3, 5]);
+    ctx.beginPath();
+    ctx.moveTo(cx, 0);
+    ctx.lineTo(cx, cssH);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(0, cy);
+    ctx.lineTo(cssW, cy);
+    ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.beginPath();
+    ctx.arc(cx, cy, 8, 0, Math.PI * 2);
+    ctx.strokeStyle = '#1a237e';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(cx, cy, 2.5, 0, Math.PI * 2);
+    ctx.fillStyle = '#f9a825';
+    ctx.fill();
+  }
+
+  function drawEffects(now) {
+    var i, e, p, a;
+    for (i = 0; i < effects.length; i++) {
+      e = effects[i];
+      a = 1 - (now - e.t0) / e.dur;
+      if (a <= 0) { continue; }
+      p = mathToScreen(e.x, e.y, box);
+      if (e.type === 'miss') {
+        ctx.strokeStyle = 'rgba(198,40,40,' + a + ')';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(p.sx - 6, p.sy - 6);
+        ctx.lineTo(p.sx + 6, p.sy + 6);
+        ctx.moveTo(p.sx + 6, p.sy - 6);
+        ctx.lineTo(p.sx - 6, p.sy + 6);
+        ctx.stroke();
+      } else if (e.type === 'ripple') {
+        var radius = 6 + (26 - 6) * (1 - a);
+        ctx.beginPath();
+        ctx.arc(p.sx, p.sy, radius, 0, Math.PI * 2);
+        ctx.strokeStyle = 'rgba(46,125,50,' + a + ')';
+        ctx.lineWidth = 3;
+        ctx.stroke();
+      }
+    }
+  }
+
+  function updateTaskUi() {
+    var isFind = state.currentMode === 'find';
+    els.identify.hidden = isFind;
+    if (isFind) {
+      els.prompt.textContent = '🎯 Find: (' + state.target.x + ', ' + state.target.y + ')';
+      els.hint.textContent = 'Click the point on the grid, or use Arrow keys + Enter to aim.';
+    } else {
+      els.prompt.textContent = 'What are the coordinates of the highlighted point?';
+      els.hint.textContent = 'Read the X and Y coordinates of the highlighted point, then type them below.';
+    }
+    els.xInput.value = '';
+    els.yInput.value = '';
+    els.xInput.disabled = false;
+    els.yInput.disabled = false;
+    els.submit.disabled = false;
+    els.prompt.classList.remove('is-clear');
+    drawScene();
+    if (!state.ended) {
+      if (isFind) { els.canvas.focus(); }
+      else { els.xInput.focus(); }
+    }
+  }
+
+  function loadNextTarget() {
+    var res = resolveMode(SETTINGS.mode, state.currentMode, state.consecutive);
+    state.currentMode = res.mode;
+    state.consecutive = res.consecutive;
+    var t = generateTarget(SETTINGS.difficulty, state.currentMode);
+    state.target = t.target;
+    state.targetWrong = 0;
+    state.resolved = false;
+    state.targetShownAt = Date.now();
+    cross.x = 0;
+    cross.y = 0;
+    setFeedback('', null);
+    updateTaskUi();
+  }
+
+  function completeTarget(correct) {
+    state.resolved = true;
+    state.attempts++;
+    if (correct) {
+      state.hits++;
+      state.streak++;
+      if (state.streak > state.bestStreak) { state.bestStreak = state.streak; }
+      var fast = (Date.now() - state.targetShownAt) <= FAST_BONUS_MS;
+      var pts = hitPoints(fast, state.streak);
+      state.score += pts;
+      addEffect('ripple', { x: state.target.x, y: state.target.y });
+      setFeedback('🎯 Direct Hit!' + (pts > 10 ? ' (+' + pts + ' points)' : ''), 'is-good');
+      bumpScore();
+      if (state.streak === 3 || state.streak % 5 === 0) {
+        showToast('🔥 ' + state.streak + ' Target Streak!');
+      }
+    } else {
+      state.misses++;
+      state.streak = 0;
+      addEffect('ripple', { x: state.target.x, y: state.target.y });
+      setFeedback('The target was (' + state.target.x + ', ' + state.target.y + ').', 'is-bad');
+    }
+    renderHud();
+    window.setTimeout(function () {
+      if (state.ended) { return; }
+      loadNextTarget();
+    }, HIT_ADVANCE_MS);
+  }
+
+  function handleAim(mx, my) {
+    if (state.ended || state.resolved) { return; }
+    if (state.currentMode !== 'find') { return; }
+    if (checkHit({ x: mx, y: my }, state.target, HIT_RADIUS)) {
+      completeTarget(true);
+      return;
+    }
+    state.targetWrong++;
+    state.streak = 0;
+    addEffect('miss', { x: mx, y: my });
+    renderHud();
+    if (state.targetWrong >= MAX_TARGET_MISSES) {
+      completeTarget(false);
+    } else {
+      setFeedback('Miss! Try again. Keep aiming.', 'is-bad');
+    }
+  }
+
+  function onCanvasClick(e) {
+    if (state.ended || state.resolved) { return; }
+    if (state.currentMode !== 'find') { return; }
+    var rect = els.canvas.getBoundingClientRect();
+    var px = (typeof e.offsetX === 'number') ? e.offsetX : (e.clientX - rect.left);
+    var py = (typeof e.offsetY === 'number') ? e.offsetY : (e.clientY - rect.top);
+    var m = screenToMath(px, py, box);
+    cross.x = Math.round(m.mx);
+    cross.y = Math.round(m.my);
+    handleAim(m.mx, m.my);
+  }
+
+  function onCanvasKey(e) {
+    if (state.ended || state.resolved) { return; }
+    if (state.currentMode !== 'find') { return; }
+    var key = e.key;
+    if (key === 'ArrowUp' || key === 'ArrowDown' || key === 'ArrowLeft' || key === 'ArrowRight' || key === 'Enter' || key === ' ') {
+      if (e.preventDefault) { e.preventDefault(); }
+      if (key === 'Enter' || key === ' ') {
+        handleAim(cross.x, cross.y);
+        return;
+      }
+      if (key === 'ArrowUp') { cross.y = clampCoord(cross.y + 1); }
+      else if (key === 'ArrowDown') { cross.y = clampCoord(cross.y - 1); }
+      else if (key === 'ArrowLeft') { cross.x = clampCoord(cross.x - 1); }
+      else if (key === 'ArrowRight') { cross.x = clampCoord(cross.x + 1); }
+      drawScene();
+    }
+  }
+
+  function handleSubmit(event) {
+    if (event && event.preventDefault) { event.preventDefault(); }
+    if (state.ended || state.resolved) { return; }
+    if (state.currentMode !== 'identify') { return; }
+    var xs = els.xInput.value.trim();
+    var ys = els.yInput.value.trim();
+    if (!/^-?\d+$/.test(xs) || !/^-?\d+$/.test(ys)) {
+      setFeedback('Enter two whole numbers for X and Y.', null);
+      return;
+    }
+    var xv = parseInt(xs, 10);
+    var yv = parseInt(ys, 10);
+    if (xv === state.target.x && yv === state.target.y) {
+      completeTarget(true);
+      return;
+    }
+    state.targetWrong++;
+    state.streak = 0;
+    addEffect('miss', { x: xv, y: yv });
+    renderHud();
+    if (state.targetWrong >= MAX_TARGET_MISSES) {
+      completeTarget(false);
+    } else {
+      setFeedback('Miss! Try again. Keep aiming.', 'is-bad');
+    }
+  }
+
+  function resetState() {
+    state.score = 0; state.hits = 0; state.misses = 0; state.streak = 0;
+    state.bestStreak = 0; state.attempts = 0;
+    state.targetWrong = 0; state.resolved = false; state.ended = false;
+    state.currentMode = 'find'; state.consecutive = 0;
+    if (state.timerId) { window.clearInterval(state.timerId); state.timerId = null; }
+    announced = {};
+    effects = [];
+    els.timeBox.classList.remove('is-warning', 'is-danger');
+    setFeedback('', null);
+    renderHud();
+  }
+
+  function startGame() {
+    if (state.timerId) { window.clearInterval(state.timerId); state.timerId = null; }
+    resetState();
+    showScreen('game');
+    resizeCanvas();
+    loadNextTarget();
+    startTimer();
+  }
+
+  function endGame() {
+    if (state.ended) { return; }
+    state.ended = true;
+    if (state.timerId) { window.clearInterval(state.timerId); state.timerId = null; }
+    if (!state.resolved) {
+      state.attempts++;
+      state.misses++;
+    }
+    els.xInput.disabled = true;
+    els.yInput.disabled = true;
+    els.submit.disabled = true;
+    announce('Time is up!');
+    var accuracy = accuracyFor(state.hits, state.attempts);
+    var isNewBest = saveBest(accuracy);
+    renderResults(accuracy, isNewBest);
+    showScreen('end');
+    if (els.playAgain) { els.playAgain.focus(); }
+  }
+
+  function renderResults(accuracy, isNewBest) {
+    document.getElementById('mgCsResScore').textContent = state.score;
+    document.getElementById('mgCsResAttempted').textContent = state.attempts;
+    document.getElementById('mgCsResHits').textContent = state.hits;
+    document.getElementById('mgCsResMisses').textContent = state.misses;
+    document.getElementById('mgCsResAccuracy').textContent = accuracy + '%';
+    document.getElementById('mgCsResStreak').textContent = state.bestStreak;
+    document.getElementById('mgCsFeedbackMsg').textContent = feedbackFor(accuracy);
+    var nb = document.getElementById('mgCsNewBest');
+    if (isNewBest) { nb.classList.remove('hidden'); }
+    else { nb.classList.add('hidden'); }
+    renderPersonalBest();
+  }
+
+  wireSettings();
+  renderPersonalBest();
+
+  if (els.hamburger) {
+    els.hamburger.addEventListener('click', function () {
+      els.hamburger.classList.toggle('open');
+      if (els.navLinks) { els.navLinks.classList.toggle('show'); }
+    });
+  }
+  if (els.navLinks) {
+    Array.prototype.forEach.call(els.navLinks.querySelectorAll('a'), function (link) {
+      link.addEventListener('click', closeNav);
+    });
+  }
+
+  els.startBtn.addEventListener('click', startGame);
+  els.playAgain.addEventListener('click', startGame);
+  els.identify.addEventListener('submit', handleSubmit);
+  els.canvas.addEventListener('click', onCanvasClick);
+  els.canvas.addEventListener('keydown', onCanvasKey);
+  if (typeof window !== 'undefined') {
+    window.addEventListener('resize', function () {
+      if (!state.ended && !els.gameScreen.hidden) { resizeCanvas(); }
+    });
+    window.mgCs = {
+      target: function () { return { x: state.target.x, y: state.target.y }; },
+      mode: function () { return state.currentMode; }
+    };
+  }
+  if (typeof ResizeObserver !== 'undefined' && els.canvas && els.canvas.parentElement) {
+    window._mgCsRo = new ResizeObserver(function () {
+      if (!state.ended && !els.gameScreen.hidden) { resizeCanvas(); }
+    });
+    window._mgCsRo.observe(els.canvas.parentElement);
+  }
+})();
+</script>
+</body>
+</html>
