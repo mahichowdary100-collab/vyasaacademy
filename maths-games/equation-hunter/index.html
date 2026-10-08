@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Equation Hunter | Maths Game | Vyasa Academy</title>
+  <meta name="description" content="Play Equation Hunter by Vyasa Academy and practise solving algebraic equations through a fast, interactive maths learning game." />
+  <link rel="canonical" href="https://www.vyasaacademy.in/maths-games/equation-hunter/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vyasa Academy" />
+  <meta property="og:title" content="Equation Hunter | Maths Game | Vyasa Academy" />
+  <meta property="og:description" content="Play Equation Hunter by Vyasa Academy and practise solving algebraic equations through a fast, interactive maths learning game." />
+  <meta property="og:url" content="https://www.vyasaacademy.in/maths-games/equation-hunter/" />
+  <meta property="og:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Equation Hunter | Maths Game | Vyasa Academy" />
+  <meta name="twitter:description" content="Play Equation Hunter by Vyasa Academy and practise solving algebraic equations through a fast, interactive maths learning game." />
+  <meta name="twitter:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.vyasaacademy.in/" },
+      { "@type": "ListItem", "position": 2, "name": "Vyasa Maths Games", "item": "https://www.vyasaacademy.in/maths-games/" },
+      { "@type": "ListItem", "position": 3, "name": "Equation Hunter", "item": "https://www.vyasaacademy.in/maths-games/equation-hunter/" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Equation Hunter | Maths Game | Vyasa Academy",
+    "applicationCategory": "GameApplication",
+    "url": "https://www.vyasaacademy.in/maths-games/equation-hunter/",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "description": "Play Equation Hunter by Vyasa Academy and practise solving algebraic equations through a fast, interactive maths learning game.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+    "publisher": { "@type": "Organization", "name": "Vyasa Academy", "url": "https://vyasaacademy.in/" }
+  }
+  </script>
+  <style>
+    /* ===== VYASA EQUATION HUNTER (page-scoped) ===== */
+    .mg-eg-hero {
+      position: relative;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, var(--primary-dark) 100%);
+      color: var(--white);
+      overflow: hidden;
+      padding: 110px 0 88px;
+      text-align: center;
+    }
+    .mg-eg-hero-bg { position: absolute; inset: 0; pointer-events: none; }
+    .mg-eg-symbol {
+      position: absolute;
+      font-weight: 800;
+      font-family: 'Playfair Display', serif;
+      color: var(--accent-light);
+      opacity: 0.12;
+      user-select: none;
+      animation: mg-eg-float 9s ease-in-out infinite;
+    }
+    @keyframes mg-eg-float {
+      0%, 100% { transform: translateY(0) rotate(-5deg); }
+      50% { transform: translateY(-16px) rotate(5deg); }
+    }
+    .mg-eg-symbol-1 { top: 10%; left: 7%; font-size: 3rem; }
+    .mg-eg-symbol-2 { top: 20%; right: 9%; font-size: 2.3rem; animation-delay: 1.2s; }
+    .mg-eg-symbol-3 { bottom: 16%; left: 14%; font-size: 2.7rem; animation-delay: 2s; }
+    .mg-eg-symbol-4 { bottom: 26%; right: 16%; font-size: 2rem; animation-delay: 0.6s; }
+    .mg-eg-symbol-5 { top: 48%; left: 3.5%; font-size: 1.9rem; animation-delay: 1.6s; }
+    .mg-eg-symbol-6 { top: 56%; right: 3.5%; font-size: 1.9rem; animation-delay: 2.4s; }
+
+    .mg-eg-hero-content { position: relative; z-index: 1; max-width: 780px; margin: 0 auto; }
+    .mg-eg-crumbs {
+      position: relative;
+      z-index: 1;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 18px;
+    }
+    .mg-eg-crumbs a { color: rgba(255,255,255,0.85); text-decoration: underline; text-underline-offset: 3px; }
+    .mg-eg-crumbs a:hover { color: var(--accent-light); }
+    .mg-eg-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,213,79,0.4);
+      color: var(--accent-light);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      padding: 7px 18px;
+      border-radius: 50px;
+      margin-bottom: 20px;
+    }
+    .mg-eg-hero h1 { font-size: 3.1rem; font-weight: 800; line-height: 1.12; margin-bottom: 14px; }
+    .mg-eg-tagline { font-size: 1.4rem; font-weight: 600; color: var(--accent-light); margin-bottom: 12px; }
+    .mg-eg-hero-sub { font-size: 1.05rem; opacity: 0.86; max-width: 640px; margin: 0 auto; line-height: 1.7; }
+
+    .mg-eg-section { padding: 76px 0; }
+    .mg-eg-section-alt { background: var(--white); }
+
+    .mg-eg-layout {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 28px;
+      align-items: start;
+      max-width: 1020px;
+      margin: 0 auto;
+    }
+    .mg-eg-panel {
+      background: var(--white);
+      border: 1px solid rgba(26,35,126,0.06);
+      border-radius: 20px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+    }
+
+    .mg-eg-group { margin-bottom: 26px; }
+    .mg-eg-group:last-child { margin-bottom: 0; }
+    .mg-eg-group-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+    .mg-eg-group-title i { color: var(--accent-dark); }
+    .mg-eg-opts { display: flex; flex-wrap: wrap; gap: 10px; }
+    .mg-eg-opt {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--white);
+      border: 1.5px solid rgba(26,35,126,0.18);
+      color: var(--primary);
+      padding: 11px 20px;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: inherit;
+    }
+    .mg-eg-opt:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .mg-eg-opt.is-active { background: var(--primary); border-color: var(--primary); color: var(--white); }
+
+    .mg-eg-start-row { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-top: 6px; }
+    .mg-eg-start { padding: 16px 44px; font-size: 1.05rem; }
+    .mg-eg-end-link {
+      color: var(--gray);
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: var(--transition);
+    }
+    .mg-eg-end-link:hover { color: var(--primary); border-bottom-color: var(--accent); }
+
+    .mg-eg-pb { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: var(--white); border-radius: 20px; padding: 30px; box-shadow: var(--shadow-lg); }
+    .mg-eg-pb h3 { font-size: 1.15rem; margin-bottom: 4px; }
+    .mg-eg-pb-note { font-size: 0.9rem; color: rgba(255,255,255,0.8); margin-bottom: 20px; }
+    .mg-eg-pb-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .mg-eg-pb-cell { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 14px; padding: 16px 10px; text-align: center; }
+    .mg-eg-pb-num { display: block; font-size: 1.5rem; font-weight: 800; color: var(--accent-light); line-height: 1.1; }
+    .mg-eg-pb-lbl { display: block; font-size: 0.7rem; color: rgba(255,255,255,0.78); text-transform: uppercase; letter-spacing: 0.8px; margin-top: 5px; }
+
+    .mg-eg-arena { max-width: 920px; margin: 0 auto; }
+
+    .mg-eg-hud { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 28px; }
+    .mg-eg-stat {
+      flex: 1 1 150px;
+      max-width: 210px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--white);
+      border: 1px solid rgba(26,35,126,0.06);
+      border-radius: 16px;
+      padding: 14px 18px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .mg-eg-stat-time { flex: 1 1 210px; max-width: 260px; border-color: rgba(249,168,37,0.4); }
+    .mg-eg-stat-time.is-warning { border-color: var(--accent-dark); background: #fff8e1; }
+    .mg-eg-stat-time.is-danger { border-color: #d32f2f; background: #ffebee; animation: mg-eg-pulse 1s ease-in-out infinite; }
+    @keyframes mg-eg-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.04); } }
+    .mg-eg-stat-ico { font-size: 1.3rem; flex-shrink: 0; }
+    .mg-eg-stat-lbl { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.8px; color: var(--gray); font-weight: 700; }
+    .mg-eg-stat-val { font-size: 1.35rem; font-weight: 800; color: var(--primary); margin-left: auto; line-height: 1.1; }
+    .mg-eg-stat-time .mg-eg-stat-val { color: var(--accent-dark); font-size: 1.7rem; }
+    .mg-eg-stat-time.is-danger .mg-eg-stat-val { color: #d32f2f; }
+
+    .mg-eg-qindex { text-align: center; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.4px; color: var(--gray); margin-bottom: 12px; }
+
+    .mg-eg-qcard {
+      background: var(--white);
+      border: 2px solid rgba(26,35,126,0.08);
+      border-radius: 24px;
+      padding: 44px 30px;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .mg-eg-qcard.mg-eg-qpop { animation: mg-eg-pop 0.28s ease; }
+    @keyframes mg-eg-pop { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .mg-eg-qcard.is-correct { border-color: #2e7d32; box-shadow: 0 0 0 4px rgba(46,125,50,0.15), var(--shadow-lg); }
+    .mg-eg-qcard.is-wrong { border-color: #c62828; box-shadow: 0 0 0 4px rgba(198,40,40,0.12), var(--shadow-lg); }
+    .mg-eg-qtext {
+      font-size: clamp(1.9rem, 6vw, 3.2rem);
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: 0.5px;
+      line-height: 1.3;
+      word-break: break-word;
+      font-family: 'Playfair Display', serif;
+    }
+    .mg-eg-ask { margin-top: 20px; font-size: 0.95rem; font-weight: 700; color: var(--gray); text-transform: uppercase; letter-spacing: 1px; }
+
+    .mg-eg-form { display: flex; gap: 12px; justify-content: center; margin-top: 14px; }
+    .mg-eg-answer {
+      flex: 0 1 300px;
+      min-width: 0;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--dark);
+      padding: 14px 18px;
+      border: 2px solid rgba(26,35,126,0.25);
+      border-radius: 14px;
+      background: var(--white);
+      font-family: inherit;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .mg-eg-answer:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 4px rgba(249,168,37,0.2); }
+    .mg-eg-answer:disabled { background: var(--light); color: var(--gray); }
+    .mg-eg-submit { padding: 15px 34px; font-size: 1rem; }
+    .mg-eg-submit:disabled { opacity: 0.55; cursor: not-allowed; }
+
+    .mg-eg-feedback { min-height: 1.6em; text-align: center; margin-top: 18px; font-size: 1rem; font-weight: 600; }
+    .mg-eg-feedback.is-good { color: #2e7d32; }
+    .mg-eg-feedback.is-bad { color: #c62828; }
+
+    .mg-eg-toast {
+      position: fixed;
+      left: 50%;
+      bottom: 34px;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--primary);
+      color: var(--white);
+      padding: 14px 26px;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 700;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(255,213,79,0.35);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 60;
+    }
+    .mg-eg-toast.is-visible { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    .mg-eg-announce {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+
+    .mg-eg-results { max-width: 720px; margin: 0 auto; text-align: center; }
+    .mg-eg-results h2 { font-size: clamp(1.9rem, 5vw, 2.6rem); margin-bottom: 8px; color: var(--dark); }
+    .mg-eg-results-sub { color: var(--gray); font-size: 1.05rem; margin-bottom: 30px; }
+    .mg-eg-newbest {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #e8f5e9;
+      border: 1px solid #2e7d32;
+      color: #2e7d32;
+      padding: 10px 22px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 26px;
+    }
+    .mg-eg-newbest.hidden { display: none; }
+    .mg-eg-res-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 22px; }
+    .mg-eg-res-cell { background: var(--white); border: 1px solid rgba(26,35,126,0.06); border-radius: 18px; padding: 26px 14px; box-shadow: var(--shadow); }
+    .mg-eg-res-cell.is-primary { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); border: none; }
+    .mg-eg-res-num { display: block; font-size: 2.1rem; font-weight: 800; color: var(--primary); line-height: 1.1; }
+    .mg-eg-res-cell.is-primary .mg-eg-res-num { color: var(--accent-light); }
+    .mg-eg-res-lbl { display: block; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 1px; color: var(--gray); margin-top: 6px; }
+    .mg-eg-res-cell.is-primary .mg-eg-res-lbl { color: rgba(255,255,255,0.85); }
+    .mg-eg-fbmsg { font-size: 1.1rem; font-weight: 600; color: var(--primary); margin-bottom: 28px; }
+    .mg-eg-res-actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .mg-eg-res-actions .btn { font-size: 1rem; }
+
+    .mg-eg-sr {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+    .mg-bump { animation: mg-eg-bump 0.35s ease; }
+    @keyframes mg-eg-bump {
+      0% { transform: scale(1); }
+      40% { transform: scale(1.35); color: var(--accent-dark); }
+      100% { transform: scale(1); }
+    }
+
+    .mg-eg-seo-content { max-width: 820px; margin: 0 auto; color: var(--dark); }
+    .mg-eg-seo-content h3 { color: var(--primary); font-size: 1.12rem; margin: 22px 0 8px; }
+    .mg-eg-seo-content p { color: var(--gray); font-size: 1rem; line-height: 1.8; margin-bottom: 14px; }
+    .mg-eg-seo-links { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 4px; }
+    .mg-eg-seo-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--light);
+      color: var(--primary);
+      border: 1px solid rgba(26,35,126,0.1);
+      padding: 10px 18px;
+      border-radius: 50px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+    .mg-eg-seo-chip:hover { background: var(--accent-light); border-color: var(--accent); color: var(--primary-dark); }
+
+    .mg-eg-opt:focus-visible,
+    .mg-eg-answer:focus-visible,
+    .mg-eg-submit:focus-visible,
+    .mg-eg-end-link:focus-visible,
+    .mg-eg-seo-chip:focus-visible,
+    .btn:focus-visible { outline: 3px solid rgba(249,168,37,0.65); outline-offset: 2px; }
+
+    @media (max-width: 900px) {
+      .mg-eg-layout { grid-template-columns: 1fr; }
+      .mg-eg-pb { order: -1; }
+    }
+    @media (max-width: 768px) {
+      .mg-eg-hero { padding: 96px 0 70px; }
+      .mg-eg-hero h1 { font-size: 2.3rem; }
+      .mg-eg-section { padding: 60px 0; }
+      .mg-eg-form { flex-direction: column; align-items: center; }
+      .mg-eg-answer { flex: 1 0 auto; width: 100%; max-width: 360px; }
+      .mg-eg-submit { width: 100%; max-width: 360px; }
+    }
+    @media (max-width: 560px) {
+      .mg-eg-res-grid { grid-template-columns: repeat(2, 1fr); }
+      .mg-eg-res-cell.is-primary { grid-column: 1 / -1; }
+    }
+    @media (max-width: 480px) {
+      .mg-eg-hero h1 { font-size: 1.9rem; }
+      .mg-eg-tagline { font-size: 1.15rem; }
+      .mg-eg-hero-sub { font-size: 0.98rem; }
+      .mg-eg-panel, .mg-eg-pb { padding: 24px 20px; }
+      .mg-eg-qcard { padding: 34px 18px; }
+      .mg-eg-stat { flex-basis: 46%; max-width: none; }
+      .mg-eg-stat-time { flex-basis: 100%; max-width: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .mg-eg-symbol { animation: none; }
+      .mg-eg-stat-time.is-danger { animation: none; }
+      .mg-eg-qcard.mg-eg-qpop { animation: none; }
+      .mg-bump { animation: none; }
+      .mg-eg-opt:hover, .mg-eg-stat, .btn { transform: none; transition: none; }
+      .mg-eg-toast { transition: none; }
+    }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="/" class="logo"><i class="fas fa-graduation-cap"></i> Vyasa Academy</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#courses">Courses</a></li>
+      <li><a href="/#papers">Practice Papers</a></li>
+      <li><a href="/cbse-study-material/">Study Material</a></li>
+      <li><a href="/maths-games/" class="active" aria-current="page">🎮 Maths Games</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- START SCREEN -->
+  <section class="mg-eg-hero" id="mgStartScreen">
+    <div class="mg-eg-hero-bg" aria-hidden="true">
+      <span class="mg-eg-symbol mg-eg-symbol-1">π</span>
+      <span class="mg-eg-symbol mg-eg-symbol-2">√</span>
+      <span class="mg-eg-symbol mg-eg-symbol-3">∑</span>
+      <span class="mg-eg-symbol mg-eg-symbol-4">×</span>
+      <span class="mg-eg-symbol mg-eg-symbol-5">=</span>
+      <span class="mg-eg-symbol mg-eg-symbol-6">÷</span>
+    </div>
+    <div class="container mg-eg-hero-content">
+      <nav class="mg-eg-crumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a> / <a href="/maths-games/">Maths Games</a> / <span aria-current="page">Equation Hunter</span>
+      </nav>
+      <span class="mg-eg-badge">Algebra &amp; Equations</span>
+      <h1>🎯 Equation Hunter</h1>
+      <p class="mg-eg-tagline">Find the unknown. Beat the clock.</p>
+      <p class="mg-eg-hero-sub">Sharpen your algebra skills by solving equations as quickly and accurately as possible.</p>
+    </div>
+  </section>
+
+  <section class="mg-eg-section mg-eg-section-alt">
+    <div class="container">
+      <div class="mg-eg-layout">
+        <div class="mg-eg-panel" id="mgSettingsPanel">
+          <div class="section-header" style="padding:0 0 22px;">
+            <span class="section-tag">Set Up</span>
+            <h2>Choose Your Hunt</h2>
+            <p>Pick your level, time limit and equation type. No login needed.</p>
+          </div>
+
+          <div class="mg-eg-group" role="group" aria-label="Choose difficulty">
+            <span class="mg-eg-group-title"><i class="fas fa-signal" aria-hidden="true"></i>Difficulty</span>
+            <div class="mg-eg-opts" data-setting-group="difficulty">
+              <button type="button" class="mg-eg-opt" data-setting="difficulty" data-value="easy" aria-pressed="false">Easy</button>
+              <button type="button" class="mg-eg-opt is-active" data-setting="difficulty" data-value="medium" aria-pressed="true">Medium</button>
+              <button type="button" class="mg-eg-opt" data-setting="difficulty" data-value="hard" aria-pressed="false">Hard</button>
+            </div>
+          </div>
+
+          <div class="mg-eg-group" role="group" aria-label="Choose time limit">
+            <span class="mg-eg-group-title"><i class="fas fa-hourglass-half" aria-hidden="true"></i>Time</span>
+            <div class="mg-eg-opts" data-setting-group="timeLimit">
+              <button type="button" class="mg-eg-opt" data-setting="timeLimit" data-value="30" aria-pressed="false">30 seconds</button>
+              <button type="button" class="mg-eg-opt is-active" data-setting="timeLimit" data-value="60" aria-pressed="true">60 seconds</button>
+              <button type="button" class="mg-eg-opt" data-setting="timeLimit" data-value="90" aria-pressed="false">90 seconds</button>
+            </div>
+          </div>
+
+          <div class="mg-eg-group" role="group" aria-label="Choose equation type">
+            <span class="mg-eg-group-title"><i class="fas fa-equals" aria-hidden="true"></i>Equation Type</span>
+            <div class="mg-eg-opts" data-setting-group="equationType">
+              <button type="button" class="mg-eg-opt" data-setting="equationType" data-value="one-step" aria-pressed="false">One-Step</button>
+              <button type="button" class="mg-eg-opt" data-setting="equationType" data-value="two-step" aria-pressed="false">Two-Step</button>
+              <button type="button" class="mg-eg-opt is-active" data-setting="equationType" data-value="mixed" aria-pressed="true">Mixed</button>
+            </div>
+          </div>
+
+          <div class="mg-eg-start-row">
+            <button type="button" class="btn btn-primary mg-eg-start" id="mgStartBtn">🎯 Start Hunting</button>
+            <a class="mg-eg-end-link" href="/maths-games/">← Back to Maths Games</a>
+          </div>
+        </div>
+
+        <aside class="mg-eg-pb" aria-label="Personal best">
+          <h3>🏆 Personal Best</h3>
+          <p class="mg-eg-pb-note">Your best is saved on this device.</p>
+          <div class="mg-eg-pb-grid" id="mgPbGrid">
+            <div class="mg-eg-pb-cell"><span class="mg-eg-pb-num" id="mgPbScore">—</span><span class="mg-eg-pb-lbl">Score</span></div>
+            <div class="mg-eg-pb-cell"><span class="mg-eg-pb-num" id="mgPbAccuracy">—</span><span class="mg-eg-pb-lbl">Accuracy</span></div>
+            <div class="mg-eg-pb-cell"><span class="mg-eg-pb-num" id="mgPbStreak">—</span><span class="mg-eg-pb-lbl">Best Streak</span></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAME SCREEN -->
+  <section class="mg-eg-section mg-eg-section-alt" id="mgGameScreen" hidden>
+    <div class="container">
+      <div class="mg-eg-arena">
+        <div class="mg-eg-hud" role="group" aria-label="Game stats">
+          <div class="mg-eg-stat mg-eg-stat-time" id="mgTimeBox">
+            <span class="mg-eg-stat-ico" aria-hidden="true">⏱</span>
+            <span class="mg-eg-stat-lbl">Time</span>
+            <span class="mg-eg-stat-val" id="mgTime">60</span>
+          </div>
+          <div class="mg-eg-stat">
+            <span class="mg-eg-stat-ico" aria-hidden="true">⭐</span>
+            <span class="mg-eg-stat-lbl">Score</span>
+            <span class="mg-eg-stat-val" id="mgScore">0</span>
+          </div>
+          <div class="mg-eg-stat">
+            <span class="mg-eg-stat-ico" aria-hidden="true">✓</span>
+            <span class="mg-eg-stat-lbl">Correct</span>
+            <span class="mg-eg-stat-val" id="mgCorrect">0</span>
+          </div>
+          <div class="mg-eg-stat">
+            <span class="mg-eg-stat-ico" aria-hidden="true">✗</span>
+            <span class="mg-eg-stat-lbl">Wrong</span>
+            <span class="mg-eg-stat-val" id="mgWrong">0</span>
+          </div>
+          <div class="mg-eg-stat">
+            <span class="mg-eg-stat-ico" aria-hidden="true">🔥</span>
+            <span class="mg-eg-stat-lbl">Streak</span>
+            <span class="mg-eg-stat-val" id="mgStreak">0</span>
+          </div>
+        </div>
+
+        <p class="mg-eg-qindex" id="mgQIndex">Question 1</p>
+
+        <div class="mg-eg-qcard" id="mgQCard">
+          <p class="mg-eg-qtext" id="mgQuestion">x + 2 = 8</p>
+          <p class="mg-eg-ask">What is x?</p>
+          <form class="mg-eg-form" id="mgForm" autocomplete="off">
+            <label for="mgAnswer" class="mg-eg-sr" id="mgAnswerLabel">Enter the value of x</label>
+            <input type="text" inputmode="numeric" pattern="-?[0-9]*" id="mgAnswer" class="mg-eg-answer" placeholder="Enter x" aria-describedby="mgFeedback" autocomplete="off" />
+            <button type="submit" class="btn btn-primary mg-eg-submit" id="mgSubmit">Submit</button>
+          </form>
+          <p class="mg-eg-feedback" id="mgFeedback" role="status" aria-live="polite"></p>
+        </div>
+
+        <p class="mg-eg-announce" id="mgAnnounce" aria-live="assertive" aria-atomic="true"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- END SCREEN -->
+  <section class="mg-eg-section" id="mgEndScreen" hidden>
+    <div class="container">
+      <div class="mg-eg-results">
+        <h2>🏆 Hunt Complete!</h2>
+        <p class="mg-eg-results-sub" id="mgResultSub">Time is up. Here is how you solved equations.</p>
+        <p class="mg-eg-newbest hidden" id="mgNewBest"><i class="fas fa-trophy" aria-hidden="true"></i>New Personal Best!</p>
+        <div class="mg-eg-res-grid" id="mgResultsGrid">
+          <div class="mg-eg-res-cell is-primary">
+            <span class="mg-eg-res-num" id="mgResScore">0</span>
+            <span class="mg-eg-res-lbl">Score</span>
+          </div>
+          <div class="mg-eg-res-cell">
+            <span class="mg-eg-res-num" id="mgResAttempted">0</span>
+            <span class="mg-eg-res-lbl">Attempted</span>
+          </div>
+          <div class="mg-eg-res-cell">
+            <span class="mg-eg-res-num" id="mgResCorrect">0</span>
+            <span class="mg-eg-res-lbl">Correct</span>
+          </div>
+          <div class="mg-eg-res-cell">
+            <span class="mg-eg-res-num" id="mgResWrong">0</span>
+            <span class="mg-eg-res-lbl">Wrong</span>
+          </div>
+          <div class="mg-eg-res-cell">
+            <span class="mg-eg-res-num" id="mgResAccuracy">0%</span>
+            <span class="mg-eg-res-lbl">Accuracy</span>
+          </div>
+          <div class="mg-eg-res-cell">
+            <span class="mg-eg-res-num" id="mgResStreak">0</span>
+            <span class="mg-eg-res-lbl">Best Streak</span>
+          </div>
+        </div>
+        <p class="mg-eg-fbmsg" id="mgFeedbackMsg" role="status" aria-live="polite"></p>
+        <div class="mg-eg-res-actions">
+          <button type="button" class="btn btn-primary" id="mgPlayAgain">🔄 Hunt Again</button>
+          <a href="/maths-games/" class="btn btn-secondary" style="background:var(--primary);border-color:var(--primary);">🎮 More Maths Games</a>
+          <a href="/cbse-study-material/" class="btn" style="color:var(--primary);border:2px solid var(--primary);background:var(--white);">📚 Practise Algebra</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO CONTENT -->
+  <section class="mg-eg-section mg-eg-section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Why It Helps</span>
+        <h2>Practise Algebra with Equation Hunter</h2>
+        <p>A quick, focused way to sharpen equation-solving skills.</p>
+      </div>
+      <div class="mg-eg-seo-content">
+        <p>The <strong>Equation Hunter</strong> game turns algebra practice into a fast mental challenge. Students are shown an equation such as <em>3x + 5 = 20</em> and must find the value of x before the timer runs out, earning points for every correct answer and bonus points for streaks.</p>
+        <h3>From one-step to two-step equations</h3>
+        <p>Questions are built backwards from a known solution, so every equation is guaranteed to have a clean integer answer. On the easy level students solve simple equations like <em>x + 6 = 14</em>; the medium level adds two-step forms like <em>3x - 4 = 20</em>; and the hard level introduces bracket equations such as <em>2(x + 4) = 18</em> with the occasional negative answer.</p>
+        <h3>Fit practice into the CBSE routine</h3>
+        <p>Equation solving sits at the heart of the CBSE Mathematics curriculum from middle school onwards. Pair the game with our full <a href="/cbse-study-material/">CBSE study material</a>, chapter tests for <a href="/cbse-study-material/class-9/mathematics/">Class 9 Maths</a> and <a href="/cbse-study-material/class-10/mathematics/">Class 10 Maths</a>, or explore more <a href="/maths-games/">Maths games</a>.</p>
+        <div class="mg-eg-seo-links">
+          <a class="mg-eg-seo-chip" href="/maths-games/">🎮 All Maths Games</a>
+          <a class="mg-eg-seo-chip" href="/maths-games/speed-challenge/">⚡ Maths Speed Challenge</a>
+          <a class="mg-eg-seo-chip" href="/cbse-study-material/">📚 Study Material</a>
+          <a class="mg-eg-seo-chip" href="/cbse-study-material/class-9/mathematics/">📗 Class 9 Maths</a>
+          <a class="mg-eg-seo-chip" href="/cbse-study-material/class-10/mathematics/">📘 Class 10 Maths</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-about">
+      <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+      <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#faculty">Faculty</a></li>
+        <li><a href="/#courses">Courses</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/cbse-study-material/">Study Material</a></li>
+        <li><a href="/maths-games/">🎮 Maths Games</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Popular Searches</h4>
+      <ul>
+        <li><a href="/best-tuition-centre-hulimavu/">Best Tuition Centre in Hulimavu</a></li>
+        <li><a href="/best-coaching-centre-hulimavu/">Best Coaching Centre in Hulimavu</a></li>
+        <li><a href="/cbse-tuition-hulimavu/">CBSE Tuition in Hulimavu</a></li>
+        <li><a href="/maths-tuition-hulimavu/">Maths Tuition in Hulimavu</a></li>
+        <li><a href="/science-tuition-hulimavu/">Science Tuition in Hulimavu</a></li>
+        <li><a href="/kcet-coaching-hulimavu/">KCET Coaching in Hulimavu</a></li>
+        <li><a href="/class-10-tuition-hulimavu/">Class 10 Tuition Hulimavu</a></li>
+        <li><a href="/icse-tuition-hulimavu/">ICSE Tuition Hulimavu</a></li>
+        <li><a href="/tuition-classes-near-bannerghatta-road/">Tuition near Bannerghatta Road</a></li>
+        <li><a href="/cbse-tuition-bangalore/">CBSE Tuition Bangalore</a></li>
+        <li><a href="/tuition-centre-bangalore/">Best Tuition Centre in Bangalore</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ============================================================
+     Pure game logic (exported when run under Node for tests)
+     ============================================================ */
+
+  function randInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function pick(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+  }
+
+  function makeQuestion(equation, answer, difficulty, type) {
+    return { equation: equation, answer: answer, difficulty: difficulty, type: type, explanation: null };
+  }
+
+  /* ---- one-step forms: x + a = b | x - a = b | ax = b | x/a = b ---- */
+
+  function genOneStep(difficulty) {
+    var f = pick(['add', 'sub', 'mul', 'div']);
+    var a, x, b;
+    if (difficulty === 'easy') {
+      if (f === 'add') { x = randInt(2, 15); a = randInt(2, 12); return makeQuestion('x + ' + a + ' = ' + (x + a), x, difficulty, 'one-step'); }
+      if (f === 'sub') { a = randInt(2, 12); x = randInt(4, 20); return makeQuestion('x \u2212 ' + a + ' = ' + (x - a), x, difficulty, 'one-step'); }
+      if (f === 'mul') { x = randInt(2, 9); a = randInt(2, 9); return makeQuestion(a + 'x = ' + (a * x), x, difficulty, 'one-step'); }
+      a = randInt(2, 9); b = randInt(2, 9);
+      return makeQuestion('x \u00f7 ' + a + ' = ' + b, a * b, difficulty, 'one-step');
+    }
+    if (difficulty === 'medium') {
+      if (f === 'add') { x = randInt(5, 40); a = randInt(5, 30); return makeQuestion('x + ' + a + ' = ' + (x + a), x, difficulty, 'one-step'); }
+      if (f === 'sub') { a = randInt(5, 30); x = randInt(12, 60); return makeQuestion('x \u2212 ' + a + ' = ' + (x - a), x, difficulty, 'one-step'); }
+      if (f === 'mul') { x = randInt(3, 12); a = randInt(3, 12); return makeQuestion(a + 'x = ' + (a * x), x, difficulty, 'one-step'); }
+      a = randInt(3, 12); b = randInt(3, 12);
+      return makeQuestion('x \u00f7 ' + a + ' = ' + b, a * b, difficulty, 'one-step');
+    }
+    if (f === 'add') { x = randInt(10, 80); a = randInt(10, 60); return makeQuestion('x + ' + a + ' = ' + (x + a), x, difficulty, 'one-step'); }
+    if (f === 'sub') { a = randInt(10, 60); x = randInt(25, 120); return makeQuestion('x \u2212 ' + a + ' = ' + (x - a), x, difficulty, 'one-step'); }
+    if (f === 'mul') { x = randInt(4, 15); a = randInt(4, 15); return makeQuestion(a + 'x = ' + (a * x), x, difficulty, 'one-step'); }
+    a = randInt(4, 15); b = randInt(4, 15);
+    return makeQuestion('x \u00f7 ' + a + ' = ' + b, a * b, difficulty, 'one-step');
+  }
+
+  /* ---- two-step forms: ax + b = c | ax - b = c | x/a + b = c | x/a - b = c ---- */
+
+  function signedJoin(value) {
+    return value < 0 ? [' \u2212 ', -value] : [' + ', value];
+  }
+
+  function subtractJoin(value) {
+    return value < 0 ? [' + ', -value] : [' \u2212 ', value];
+  }
+
+  function genTwoStep(difficulty) {
+    var f = pick(['mul-add', 'mul-sub', 'div-add', 'div-sub']);
+    var a, x, b, c, q;
+
+    if (difficulty === 'easy') {
+      a = randInt(2, 5); x = randInt(2, 8); b = randInt(1, 10);
+      return makeQuestion(a + 'x + ' + b + ' = ' + (a * x + b), x, difficulty, 'two-step');
+    }
+
+    if (f === 'mul-add') {
+      if (difficulty === 'medium') { x = randInt(2, 12); a = randInt(2, 6); b = randInt(2, 20); c = a * x + b; }
+      else {
+        x = randInt(-10, 12);
+        if (x === 0) { x = 1; }
+        a = randInt(2, 7); b = randInt(-18, 18);
+        if (b === 0) { b = 1; }
+        c = a * x + b;
+      }
+      var s1 = signedJoin(b);
+      return makeQuestion(a + 'x' + s1[0] + s1[1] + ' = ' + c, x, difficulty, 'two-step');
+    }
+
+    if (f === 'mul-sub') {
+      if (difficulty === 'medium') { x = randInt(3, 15); a = randInt(2, 6); c = randInt(1, a * x - 1); b = a * x - c; }
+      else {
+        x = randInt(-10, 15);
+        a = randInt(2, 7);
+        b = randInt(-20, 20);
+        if (b === 0) { b = 3; }
+        c = a * x - b;
+      }
+      var s2 = subtractJoin(b);
+      return makeQuestion(a + 'x' + s2[0] + s2[1] + ' = ' + c, x, difficulty, 'two-step');
+    }
+
+    if (f === 'div-add') {
+      if (difficulty === 'medium') { a = randInt(2, 9); q = randInt(2, 12); b = randInt(2, 15); x = a * q; c = q + b; }
+      else { a = randInt(2, 12); q = randInt(3, 15); b = randInt(3, 25); x = a * q; c = q + b; }
+      var s3 = signedJoin(b);
+      return makeQuestion('x \u00f7 ' + a + s3[0] + s3[1] + ' = ' + c, x, difficulty, 'two-step');
+    }
+
+    if (difficulty === 'medium') { a = randInt(2, 9); c = randInt(2, 12); b = randInt(2, 15); x = a * (c + b); }
+    else { a = randInt(2, 12); c = randInt(3, 15); b = randInt(3, 25); x = a * (c + b); }
+    var s4 = subtractJoin(b);
+    return makeQuestion('x \u00f7 ' + a + s4[0] + s4[1] + ' = ' + (c), x, difficulty, 'two-step');
+  }
+
+  /* ---- bracket forms: a(x + b) = c | a(x - b) = c ---- */
+
+  function genBracket(difficulty) {
+    var f = pick(['add', 'sub']);
+    var a, x, b, c, zero;
+    if (f === 'add') {
+      do {
+        a = randInt(2, 6); x = randInt(-8, 12); b = randInt(2, 9);
+        zero = (x + b) === 0;
+      } while (zero || a * (x + b) === 0);
+      c = a * (x + b);
+      return makeQuestion(a + '(x + ' + b + ') = ' + c, x, difficulty, 'bracket');
+    }
+    do {
+      a = randInt(2, 6); x = randInt(-8, 14); b = randInt(2, 9);
+      zero = (x - b) === 0;
+    } while (zero || a * (x - b) === 0);
+    c = a * (x - b);
+    return makeQuestion(a + '(x \u2212 ' + b + ') = ' + c, x, difficulty, 'bracket');
+  }
+
+  function pickStructure(eqType, difficulty) {
+    if (eqType === 'one-step') { return 'one-step'; }
+    if (eqType === 'two-step') { return 'two-step'; }
+    if (difficulty === 'easy') { return 'one-step'; }
+    if (difficulty === 'medium') { return pick(['one-step', 'two-step']); }
+    return pick(['one-step', 'two-step', 'bracket']);
+  }
+
+  var STRUCTURE_GENERATORS = {
+    'one-step': genOneStep,
+    'two-step': genTwoStep,
+    'bracket': genBracket
+  };
+
+  var recentKeys = [];
+
+  function keysCollide(key) {
+    for (var i = 0; i < recentKeys.length; i++) {
+      if (recentKeys[i] === key) { return true; }
+    }
+    return false;
+  }
+
+  function rememberKey(key) {
+    recentKeys.push(key);
+    if (recentKeys.length > 40) { recentKeys.shift(); }
+  }
+
+  function generateQuestion(difficulty, eqType) {
+    var structure = pickStructure(eqType, difficulty);
+    var gen = STRUCTURE_GENERATORS[structure];
+    var key;
+    var q;
+    for (var attempt = 0; attempt < 80; attempt++) {
+      q = gen(difficulty);
+      key = eqType + ':' + q.equation;
+      if (!keysCollide(key)) { break; }
+    }
+    rememberKey(key);
+    return q;
+  }
+
+  function pointsForStreak(streak) {
+    var pts = 10;
+    if (streak > 0 && streak % 3 === 0) { pts += 5; }
+    if (streak > 0 && streak % 5 === 0) { pts += 10; }
+    if (streak > 0 && streak % 10 === 0) { pts += 20; }
+    return pts;
+  }
+
+  function accuracyFor(correct, attempted) {
+    if (attempted === 0) { return 0; }
+    return Math.round((correct / attempted) * 100);
+  }
+
+  function feedbackFor(accuracy) {
+    if (accuracy >= 90) { return 'Outstanding! Your algebraic thinking is excellent.'; }
+    if (accuracy >= 75) { return 'Great work! Keep solving equations to get faster.'; }
+    if (accuracy >= 50) { return 'Good attempt! A little more practice will sharpen your skills.'; }
+    return 'Keep practising. Accuracy comes first\u2014speed will follow.';
+  }
+
+  var api = {
+    randInt: randInt,
+    generateQuestion: generateQuestion,
+    pointsForStreak: pointsForStreak,
+    accuracyFor: accuracyFor,
+    feedbackFor: feedbackFor
+  };
+
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = api;
+    return;
+  }
+
+  /* ============================================================
+     Browser wiring
+     ============================================================ */
+
+  var localStorageKey = 'vyasa_equation_hunter_stats';
+
+  var SETTINGS = { difficulty: 'medium', timeLimit: 60, equationType: 'mixed' };
+
+  var state = {
+    score: 0, correct: 0, wrong: 0, attempted: 0,
+    streak: 0, bestStreak: 0, ended: false, timerId: null, deadline: 0
+  };
+
+  var currentQuestion = { equation: 'x + 2 = 8', answer: 6, explanation: null };
+
+  var els = {
+    hamburger: document.getElementById('hamburger'),
+    navLinks: document.getElementById('navLinks'),
+    startScreen: document.getElementById('mgStartScreen'),
+    gameScreen: document.getElementById('mgGameScreen'),
+    endScreen: document.getElementById('mgEndScreen'),
+    startBtn: document.getElementById('mgStartBtn'),
+    playAgain: document.getElementById('mgPlayAgain'),
+    qIndex: document.getElementById('mgQIndex'),
+    qCard: document.getElementById('mgQCard'),
+    question: document.getElementById('mgQuestion'),
+    form: document.getElementById('mgForm'),
+    answer: document.getElementById('mgAnswer'),
+    submit: document.getElementById('mgSubmit'),
+    feedback: document.getElementById('mgFeedback'),
+    announce: document.getElementById('mgAnnounce'),
+    toast: null,
+    score: document.getElementById('mgScore'),
+    correct: document.getElementById('mgCorrect'),
+    wrong: document.getElementById('mgWrong'),
+    streak: document.getElementById('mgStreak'),
+    time: document.getElementById('mgTime'),
+    timeBox: document.getElementById('mgTimeBox')
+  };
+
+  function toastEl() {
+    if (!els.toast) {
+      els.toast = document.createElement('div');
+      els.toast.className = 'mg-eg-toast';
+      els.toast.setAttribute('role', 'status');
+      els.toast.setAttribute('aria-live', 'polite');
+      document.body.appendChild(els.toast);
+    }
+    return els.toast;
+  }
+
+  /* ---------- navigation ---------- */
+  function closeNav() {
+    if (els.hamburger) { els.hamburger.classList.remove('open'); }
+    if (els.navLinks) { els.navLinks.classList.remove('show'); }
+  }
+  if (els.hamburger) {
+    els.hamburger.addEventListener('click', function () {
+      els.hamburger.classList.toggle('open');
+      if (els.navLinks) { els.navLinks.classList.toggle('show'); }
+    });
+  }
+  if (els.navLinks) {
+    Array.prototype.forEach.call(els.navLinks.querySelectorAll('a'), function (link) {
+      link.addEventListener('click', closeNav);
+    });
+  }
+
+  /* ---------- settings ---------- */
+  function wireSettings() {
+    var groups = document.querySelectorAll('[data-setting-group]');
+    Array.prototype.forEach.call(groups, function (group) {
+      var settingName = group.getAttribute('data-setting-group');
+      var btns = group.querySelectorAll('.mg-eg-opt');
+      Array.prototype.forEach.call(btns, function (btn) {
+        btn.addEventListener('click', function () {
+          SETTINGS[settingName] = btn.getAttribute('data-value');
+          if (settingName === 'timeLimit') {
+            SETTINGS.timeLimit = parseInt(btn.getAttribute('data-value'), 10);
+          }
+          Array.prototype.forEach.call(btns, function (b) {
+            var on = b === btn;
+            b.classList.toggle('is-active', on);
+            b.setAttribute('aria-pressed', on ? 'true' : 'false');
+          });
+        });
+      });
+    });
+  }
+
+  /* ---------- local storage ---------- */
+  function loadBest() {
+    try {
+      var raw = localStorage.getItem(localStorageKey);
+      if (!raw) { return null; }
+      var data = JSON.parse(raw);
+      if (data && typeof data === 'object') { return data; }
+    } catch (e) { /* storage unavailable */ }
+    return null;
+  }
+
+  function saveBest(accuracy) {
+    var best = loadBest() || { bestScore: 0, bestAccuracy: 0, bestStreak: 0, gamesPlayed: 0 };
+    var isNewBest = false;
+    if (state.score > best.bestScore) { best.bestScore = state.score; isNewBest = true; }
+    if (accuracy > best.bestAccuracy) { best.bestAccuracy = accuracy; }
+    if (state.bestStreak > best.bestStreak) { best.bestStreak = state.bestStreak; }
+    best.gamesPlayed = (best.gamesPlayed || 0) + 1;
+    try {
+      localStorage.setItem(localStorageKey, JSON.stringify(best));
+    } catch (e) { /* storage unavailable */ }
+    return isNewBest;
+  }
+
+  function renderPersonalBest() {
+    var best = loadBest();
+    var scoreEl = document.getElementById('mgPbScore');
+    var accEl = document.getElementById('mgPbAccuracy');
+    var streakEl = document.getElementById('mgPbStreak');
+    var note = document.querySelector('.mg-eg-pb-note');
+    if (best && (best.bestScore > 0 || best.gamesPlayed > 0)) {
+      scoreEl.textContent = best.bestScore;
+      accEl.textContent = best.bestAccuracy + '%';
+      streakEl.textContent = best.bestStreak;
+      if (note) { note.textContent = 'Beat your best to level up.'; }
+    }
+  }
+
+  /* ---------- timer ---------- */
+  function renderTime(seconds) {
+    if (!els.time) { return; }
+    els.time.textContent = seconds;
+    els.timeBox.classList.toggle('is-warning', seconds <= 10 && seconds > 5);
+    els.timeBox.classList.toggle('is-danger', seconds <= 5);
+  }
+
+  function startTimer() {
+    state.deadline = Date.now() + (SETTINGS.timeLimit * 1000);
+    renderTime(SETTINGS.timeLimit);
+    state.timerId = window.setInterval(function () {
+      var remainingMs = state.deadline - Date.now();
+      var remaining = Math.max(0, Math.ceil(remainingMs / 1000));
+      renderTime(remaining);
+      announceOnce(10, '10 seconds left');
+      announceOnce(5, '5 seconds left');
+      if (remainingMs <= 0) { endGame(); }
+    }, 250);
+  }
+
+  var announced = {};
+  function announceOnce(second, message) {
+    var remaining = Math.max(0, Math.ceil((state.deadline - Date.now()) / 1000));
+    if (remaining === second && !announced[second]) {
+      announced[second] = true;
+      announce(message);
+    }
+  }
+
+  function announce(message) {
+    if (els.announce) {
+      els.announce.textContent = message;
+      window.setTimeout(function () {
+        if (els.announce && els.announce.textContent === message) {
+          els.announce.textContent = '';
+        }
+      }, 4000);
+    }
+  }
+
+  /* ---------- screens ---------- */
+  function showScreen(name) {
+    els.startScreen.hidden = name !== 'start';
+    els.gameScreen.hidden = name !== 'game';
+    els.endScreen.hidden = name !== 'end';
+  }
+
+  /* ---------- hud ---------- */
+  function renderHud() {
+    els.score.textContent = state.score;
+    els.correct.textContent = state.correct;
+    els.wrong.textContent = state.wrong;
+    els.streak.textContent = state.streak;
+  }
+
+  function bumpScore() {
+    els.score.classList.remove('mg-bump');
+    void els.score.offsetWidth;
+    els.score.classList.add('mg-bump');
+  }
+
+  /* ---------- toast ---------- */
+  var toastTimerId = null;
+  function showToast(message) {
+    var el = toastEl();
+    el.textContent = message;
+    el.classList.add('is-visible');
+    if (toastTimerId) { window.clearTimeout(toastTimerId); }
+    toastTimerId = window.setTimeout(function () {
+      el.classList.remove('is-visible');
+    }, 1800);
+  }
+
+  /* ---------- gameplay ---------- */
+  function resetState() {
+    state.score = 0; state.correct = 0; state.wrong = 0; state.attempted = 0;
+    state.streak = 0; state.bestStreak = 0; state.ended = false;
+    if (state.timerId) { window.clearInterval(state.timerId); state.timerId = null; }
+    announced = {};
+    els.timeBox.classList.remove('is-warning', 'is-danger');
+    els.feedback.textContent = '';
+    els.feedback.className = 'mg-eg-feedback';
+    els.qCard.classList.remove('is-correct', 'is-wrong');
+    els.answer.disabled = false;
+    els.submit.disabled = false;
+    renderHud();
+  }
+
+  function startGame() {
+    if (state.timerId) { window.clearInterval(state.timerId); state.timerId = null; }
+    resetState();
+    showScreen('game');
+    currentQuestion = generateQuestion(SETTINGS.difficulty, SETTINGS.equationType);
+    renderQuestion();
+    startTimer();
+    focusAnswer();
+  }
+
+  function renderQuestion() {
+    els.question.textContent = currentQuestion.equation;
+    els.qIndex.textContent = 'Question ' + (state.attempted + 1);
+    els.feedback.textContent = '';
+    els.feedback.className = 'mg-eg-feedback';
+    els.qCard.classList.remove('is-correct', 'is-wrong');
+    els.qCard.classList.remove('mg-eg-qpop');
+    void els.qCard.offsetWidth;
+    els.qCard.classList.add('mg-eg-qpop');
+    els.answer.value = '';
+  }
+
+  function focusAnswer() {
+    if (els.answer && !els.answer.disabled) { els.answer.focus(); }
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    if (state.ended) { return; }
+    var raw = els.answer.value.trim();
+    if (raw === '') { return; }
+    if (!/^-?\d+$/.test(raw)) { return; }
+    var parsed = parseInt(raw, 10);
+
+    state.attempted++;
+    var isCorrect = parsed === currentQuestion.answer;
+
+    if (isCorrect) {
+      state.correct++;
+      state.streak++;
+      if (state.streak > state.bestStreak) { state.bestStreak = state.streak; }
+      var pts = pointsForStreak(state.streak);
+      state.score += pts;
+      showFeedback(true, pts);
+      bumpScore();
+      if (state.streak === 3 || state.streak % 5 === 0) {
+        showToast('🎯 Algebra Streak: ' + state.streak + '!');
+      }
+    } else {
+      state.wrong++;
+      state.streak = 0;
+      showFeedback(false, 0);
+    }
+
+    renderHud();
+
+    if (!state.ended) {
+      currentQuestion = generateQuestion(SETTINGS.difficulty, SETTINGS.equationType);
+      renderQuestion();
+      focusAnswer();
+    }
+  }
+
+  function showFeedback(isCorrect, pts) {
+    if (isCorrect) {
+      els.feedback.textContent = '✓ Correct! 🎯 x = ' + currentQuestion.answer +
+        (pts > 10 ? ' (+' + pts + ')' : '');
+      els.feedback.className = 'mg-eg-feedback is-good';
+      els.qCard.classList.add('is-correct');
+    } else {
+      els.feedback.textContent = '✗ Not quite. x = ' + currentQuestion.answer;
+      els.feedback.className = 'mg-eg-feedback is-bad';
+      els.qCard.classList.add('is-wrong');
+    }
+  }
+
+  function endGame() {
+    if (state.ended) { return; }
+    state.ended = true;
+    if (state.timerId) { window.clearInterval(state.timerId); state.timerId = null; }
+    els.answer.disabled = true;
+    els.submit.disabled = true;
+    announce('Time is up!');
+    var accuracy = accuracyFor(state.correct, state.attempted);
+    var isNewBest = saveBest(accuracy);
+    renderResults(accuracy, isNewBest);
+    showScreen('end');
+    if (els.playAgain) { els.playAgain.focus(); }
+  }
+
+  function renderResults(accuracy, isNewBest) {
+    document.getElementById('mgResScore').textContent = state.score;
+    document.getElementById('mgResAttempted').textContent = state.attempted;
+    document.getElementById('mgResCorrect').textContent = state.correct;
+    document.getElementById('mgResWrong').textContent = state.wrong;
+    document.getElementById('mgResAccuracy').textContent = accuracy + '%';
+    document.getElementById('mgResStreak').textContent = state.bestStreak;
+    document.getElementById('mgFeedbackMsg').textContent = feedbackFor(accuracy);
+    var nb = document.getElementById('mgNewBest');
+    if (isNewBest) {
+      nb.classList.remove('hidden');
+    } else {
+      nb.classList.add('hidden');
+    }
+    renderPersonalBest();
+  }
+
+  /* ---------- events ---------- */
+  wireSettings();
+  renderPersonalBest();
+
+  els.startBtn.addEventListener('click', startGame);
+  els.playAgain.addEventListener('click', startGame);
+  els.form.addEventListener('submit', handleSubmit);
+})();
+</script>
+</body>
+</html>
