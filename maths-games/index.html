@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vyasa Maths Games | Fun Mathematics Learning Games | Vyasa Academy</title>
+  <meta name="description" content="Browse Vyasa Academy's Maths learning arcade. Pick any game you like - speed, numbers, algebra, geometry, graphs, statistics or probability - and practise CBSE Mathematics through interactive challenges. Games coming soon." />
+  <link rel="canonical" href="https://www.vyasaacademy.in/maths-games/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vyasa Academy" />
+  <meta property="og:title" content="Vyasa Maths Games | Fun Mathematics Learning Games | Vyasa Academy" />
+  <meta property="og:description" content="Pick any Maths game you like - speed, numbers, algebra, geometry, graphs, statistics or probability - and practise CBSE Mathematics while having fun. Games coming soon." />
+  <meta property="og:url" content="https://www.vyasaacademy.in/maths-games/" />
+  <meta property="og:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vyasa Maths Games | Fun Mathematics Learning Games | Vyasa Academy" />
+  <meta name="twitter:description" content="Pick any Maths game you like and improve your skills while having fun. Games coming soon." />
+  <meta name="twitter:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.vyasaacademy.in/" },
+      { "@type": "ListItem", "position": 2, "name": "Vyasa Maths Games", "item": "https://www.vyasaacademy.in/maths-games/" }
+    ]
+  }
+  </script>
+  <style>
+    /* ===== VYASA MATHS GAMES HUB (page-scoped) ===== */
+    .mg-hero {
+      position: relative;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, var(--primary-dark) 100%);
+      color: var(--white);
+      overflow: hidden;
+      padding: 110px 0 92px;
+      text-align: center;
+    }
+    .mg-hero-bg { position: absolute; inset: 0; pointer-events: none; }
+    .mg-symbol {
+      position: absolute;
+      font-weight: 800;
+      font-family: 'Playfair Display', serif;
+      color: var(--accent-light);
+      opacity: 0.12;
+      user-select: none;
+      animation: mg-float 9s ease-in-out infinite;
+    }
+    @keyframes mg-float {
+      0%, 100% { transform: translateY(0) rotate(-5deg); }
+      50% { transform: translateY(-16px) rotate(5deg); }
+    }
+    .mg-symbol-1 { top: 10%; left: 7%; font-size: 3rem; }
+    .mg-symbol-2 { top: 20%; right: 9%; font-size: 2.3rem; animation-delay: 1.2s; }
+    .mg-symbol-3 { bottom: 16%; left: 14%; font-size: 2.7rem; animation-delay: 2s; }
+    .mg-symbol-4 { bottom: 26%; right: 16%; font-size: 2rem; animation-delay: 0.6s; }
+    .mg-symbol-5 { top: 48%; left: 3.5%; font-size: 1.9rem; animation-delay: 1.6s; }
+    .mg-symbol-6 { top: 56%; right: 3.5%; font-size: 1.9rem; animation-delay: 2.4s; }
+
+    .mg-hero-content { position: relative; z-index: 1; max-width: 780px; margin: 0 auto; }
+    .mg-crumbs {
+      position: relative;
+      z-index: 1;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 18px;
+    }
+    .mg-crumbs a { color: rgba(255,255,255,0.85); text-decoration: underline; text-underline-offset: 3px; }
+    .mg-crumbs a:hover { color: var(--accent-light); }
+    .mg-hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,213,79,0.4);
+      color: var(--accent-light);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      padding: 7px 18px;
+      border-radius: 50px;
+      margin-bottom: 20px;
+    }
+    .mg-hero h1 { font-size: 3.2rem; font-weight: 800; line-height: 1.12; margin-bottom: 14px; }
+    .mg-hero-tagline { font-size: 1.45rem; font-weight: 600; color: var(--accent-light); margin-bottom: 12px; }
+    .mg-hero-sub { font-size: 1.08rem; opacity: 0.86; max-width: 620px; margin: 0 auto 30px; line-height: 1.7; }
+    .mg-hero-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .mg-hero-note { margin-top: 22px; font-size: 0.9rem; opacity: 0.72; }
+    .mg-hero-note i { color: var(--accent-light); margin-right: 6px; }
+
+    .mg-section { padding: 84px 0; }
+    .mg-section-alt { background: var(--white); }
+
+    .mg-toolbar { max-width: 760px; margin: 0 auto 40px; }
+    .mg-search-wrap { margin-bottom: 18px; }
+    .mg-search-label {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    .mg-search {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--white);
+      border: 1.5px solid rgba(26,35,126,0.18);
+      border-radius: 50px;
+      padding: 6px 8px 6px 20px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .mg-search > i { color: var(--gray); font-size: 0.95rem; }
+    .mg-search input {
+      flex: 1;
+      min-width: 0;
+      border: none;
+      outline: none;
+      background: transparent;
+      color: var(--dark);
+      padding: 11px 4px;
+      font-size: 0.98rem;
+    }
+    .mg-search:focus-within { border-color: var(--accent); box-shadow: 0 0 0 4px rgba(249,168,37,0.16); }
+    .mg-search-clear {
+      background: var(--light);
+      border: none;
+      color: var(--gray);
+      font-size: 0.8rem;
+      width: 30px;
+      height: 30px;
+      flex: 0 0 30px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .mg-search-clear:hover { background: var(--accent-light); color: var(--primary-dark); }
+
+    .mg-filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .mg-filter {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--white);
+      border: 1.5px solid rgba(26,35,126,0.18);
+      color: var(--primary);
+      padding: 9px 17px;
+      border-radius: 50px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .mg-filter:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .mg-filter.is-active { background: var(--primary); border-color: var(--primary); color: var(--white); }
+
+    .mg-results { text-align: center; font-size: 0.85rem; color: var(--gray); min-height: 1.3em; margin: 0 0 26px; }
+
+    .mg-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .mg-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--white);
+      border: 1px solid rgba(26,35,126,0.06);
+      border-radius: 16px;
+      padding: 26px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .mg-card:not(.is-hidden) { animation: mg-pop 0.35s ease; }
+    @keyframes mg-pop {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .mg-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: rgba(26,35,126,0.12); }
+    .mg-card.is-hidden { display: none; }
+    .mg-card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+    .mg-card-icon {
+      width: 54px;
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.65rem;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent-light), #ffe082);
+      color: var(--primary-dark);
+    }
+    .mg-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 6px 11px;
+      border-radius: 50px;
+    }
+    .mg-badge-soon { background: var(--light); color: var(--gray); border: 1px solid rgba(107,114,128,0.25); }
+    .mg-badge-soon i { font-size: 0.68rem; }
+    .mg-card h3 { font-size: 1.18rem; color: var(--primary); margin-bottom: 8px; }
+    .mg-card > p { font-size: 0.93rem; color: var(--gray); flex: 1; margin-bottom: 16px; }
+    .mg-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+    .mg-chip {
+      background: var(--light);
+      color: var(--primary);
+      border: 1px solid rgba(26,35,126,0.09);
+      padding: 4px 11px;
+      border-radius: 50px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+    .mg-card-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .mg-level { font-size: 0.8rem; color: var(--gray); font-weight: 600; }
+    .mg-level i { color: var(--accent-dark); margin-right: 6px; }
+    .mg-btn-soon {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      background: var(--light);
+      color: var(--gray);
+      border: 1.5px dashed rgba(107,114,128,0.5);
+    }
+    .mg-btn-soon i { font-size: 0.8rem; }
+
+    .mg-empty { text-align: center; padding: 44px 20px; color: var(--gray); font-size: 1.05rem; }
+    .mg-empty i { font-size: 1.6rem; color: var(--accent); display: block; margin-bottom: 12px; }
+    .mg-empty.hidden { display: none; }
+
+    .mg-featured-wrap { max-width: 1000px; margin: 0 auto; }
+    .mg-featured {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 36px;
+      align-items: center;
+      background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+      border-radius: 20px;
+      padding: 40px;
+      color: var(--white);
+      box-shadow: var(--shadow-lg);
+    }
+    .mg-featured-art { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,213,79,0.25); border-radius: 16px; padding: 14px; }
+    .mg-featured-art svg { width: 100%; height: auto; display: block; }
+    .mg-featured-kicker {
+      display: inline-block;
+      background: rgba(249,168,37,0.16);
+      color: var(--accent-light);
+      border: 1px solid rgba(249,168,37,0.4);
+      padding: 5px 13px;
+      border-radius: 50px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+    .mg-featured h3 { font-size: 1.7rem; margin-bottom: 10px; }
+    .mg-featured > div > p { color: rgba(255,255,255,0.85); font-size: 1rem; line-height: 1.7; margin-bottom: 18px; }
+    .mg-featured-facts { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 22px; }
+    .mg-featured-facts li { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); border-radius: 50px; padding: 6px 13px; font-size: 0.82rem; }
+    .mg-btn-on-dark {
+      background: rgba(255,255,255,0.12);
+      color: var(--white);
+      border-color: rgba(255,255,255,0.65);
+    }
+
+    .mg-daily { background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%); padding: 72px 0; }
+    .mg-daily-inner { display: grid; grid-template-columns: 1.35fr 1fr; gap: 36px; align-items: center; }
+    .mg-daily-copy h2 { color: var(--white); font-size: 2rem; margin-bottom: 12px; }
+    .mg-daily-copy p { color: rgba(255,255,255,0.82); font-size: 1.05rem; max-width: 460px; margin-bottom: 22px; line-height: 1.7; }
+    .mg-daily-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .mg-stat { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 16px; padding: 26px 12px; text-align: center; }
+    .mg-stat-num { display: block; font-size: 1.9rem; font-weight: 800; color: var(--accent-light); line-height: 1.1; }
+    .mg-stat-lbl { display: block; font-size: 0.78rem; color: rgba(255,255,255,0.75); text-transform: uppercase; letter-spacing: 1px; margin-top: 6px; }
+
+    .mg-challenge-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+    .mg-challenge-card {
+      background: var(--white);
+      border: 1px solid rgba(26,35,126,0.06);
+      border-radius: 16px;
+      padding: 30px 24px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .mg-challenge-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .mg-challenge-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      border-radius: 16px;
+      background: var(--light);
+    }
+    .mg-challenge-card h3 { color: var(--primary); font-size: 1.05rem; margin-bottom: 8px; }
+    .mg-challenge-card p { color: var(--gray); font-size: 0.9rem; margin-bottom: 16px; }
+    .mg-chip-soon { background: var(--light); color: var(--gray); border: 1px dashed rgba(107,114,128,0.45); }
+
+    .mg-path {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+      max-width: 1020px;
+      margin: 0 auto;
+    }
+    .mg-step {
+      position: relative;
+      background: var(--white);
+      border: 1px solid rgba(26,35,126,0.06);
+      border-radius: 16px;
+      padding: 30px 22px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .mg-step:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .mg-step-num {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: rgba(26,35,126,0.16);
+    }
+    .mg-step-icon { font-size: 1.9rem; margin-bottom: 12px; }
+    .mg-step h3 { color: var(--primary); font-size: 1.08rem; margin-bottom: 6px; }
+    .mg-step p { color: var(--gray); font-size: 0.9rem; }
+    .mg-step:not(:last-child)::after {
+      content: '→';
+      position: absolute;
+      top: 50%;
+      right: -18px;
+      transform: translateY(-50%);
+      color: var(--accent-dark);
+      font-size: 1.5rem;
+      z-index: 2;
+    }
+
+    .mg-flow {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      max-width: 860px;
+      margin: 0 auto 26px;
+    }
+    .mg-flow-step {
+      background: var(--white);
+      border: 1px solid rgba(26,35,126,0.1);
+      border-radius: 50px;
+      padding: 12px 20px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--primary);
+      box-shadow: var(--shadow);
+    }
+    .mg-flow-step b {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: var(--primary-dark);
+      font-size: 0.78rem;
+      margin-right: 8px;
+    }
+    .mg-flow-arrow { color: var(--accent-dark); font-size: 1.3rem; font-weight: 800; }
+    .mg-journey { text-align: center; font-size: 0.95rem; color: var(--gray); max-width: 680px; margin: 0 auto 26px; }
+
+    .mg-seo-content { max-width: 820px; margin: 0 auto; color: var(--dark); }
+    .mg-seo-content h3 { color: var(--primary); font-size: 1.12rem; margin: 22px 0 8px; }
+    .mg-seo-content p { color: var(--gray); font-size: 1rem; line-height: 1.8; margin-bottom: 14px; }
+    .mg-seo-links { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 4px; }
+    .mg-seo-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--light);
+      color: var(--primary);
+      border: 1px solid rgba(26,35,126,0.1);
+      padding: 10px 18px;
+      border-radius: 50px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+    .mg-seo-chip:hover { background: var(--accent-light); border-color: var(--accent); color: var(--primary-dark); }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 30px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--primary);
+      background: var(--white);
+      border: 2px solid var(--primary);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .btn-outline:hover { background: var(--primary); color: var(--white); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(26,35,126,0.25); }
+
+    .mg-filter:focus-visible,
+    .mg-search input:focus-visible,
+    .mg-search-clear:focus-visible,
+    .btn-outline:focus-visible,
+    .mg-seo-chip:focus-visible { outline: 3px solid rgba(249,168,37,0.65); outline-offset: 2px; }
+
+    @media (max-width: 1024px) {
+      .mg-featured { grid-template-columns: 1fr; }
+      .mg-challenge-grid { grid-template-columns: repeat(2, 1fr); }
+      .mg-path { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+      .mg-step:not(:last-child)::after { display: none; }
+    }
+
+    @media (max-width: 768px) {
+      .mg-hero { padding: 96px 0 72px; }
+      .mg-hero h1 { font-size: 2.4rem; }
+      .mg-section { padding: 64px 0; }
+      .mg-daily-inner { grid-template-columns: 1fr; }
+      .mg-hero-cta .btn { padding: 13px 24px; }
+    }
+
+    @media (max-width: 560px) {
+      .mg-challenge-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .mg-hero h1 { font-size: 1.95rem; }
+      .mg-hero-tagline { font-size: 1.2rem; }
+      .mg-path { grid-template-columns: 1fr; }
+      .mg-grid { grid-template-columns: 1fr; }
+      .mg-daily-stats { gap: 10px; }
+      .mg-stat { padding: 20px 8px; }
+      .mg-stat-num { font-size: 1.6rem; }
+      .mg-featured { padding: 28px 22px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .mg-symbol { animation: none; }
+      .mg-card:not(.is-hidden) { animation: none; }
+      .mg-card:hover, .mg-challenge-card:hover, .mg-step:hover,
+      .mg-featured, .mg-filter:hover, .btn-outline:hover, .mg-seo-chip:hover { transform: none; transition: none; }
+    }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="/" class="logo"><i class="fas fa-graduation-cap"></i> Vyasa Academy</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#courses">Courses</a></li>
+      <li><a href="/#papers">Practice Papers</a></li>
+      <li><a href="/cbse-study-material/">Study Material</a></li>
+      <li><a href="/maths-games/" class="active" aria-current="page">🎮 Maths Games</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="mg-hero" id="hero">
+    <div class="mg-hero-bg" aria-hidden="true">
+      <span class="mg-symbol mg-symbol-1">π</span>
+      <span class="mg-symbol mg-symbol-2">√</span>
+      <span class="mg-symbol mg-symbol-3">∑</span>
+      <span class="mg-symbol mg-symbol-4">×</span>
+      <span class="mg-symbol mg-symbol-5">=</span>
+      <span class="mg-symbol mg-symbol-6">÷</span>
+    </div>
+    <div class="container mg-hero-content">
+      <nav class="mg-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <span aria-current="page">Maths Games</span></nav>
+      <span class="mg-hero-badge">Maths Learning Arcade</span>
+      <h1>🎮 Vyasa Maths Games</h1>
+      <p class="mg-hero-tagline">Learn Maths. Play. Improve.</p>
+      <p class="mg-hero-sub">Choose any game you like, challenge yourself, and improve your Maths skills while having fun.</p>
+      <div class="mg-hero-cta">
+        <a href="#choose" class="btn btn-primary">🎮 Explore Games</a>
+        <a href="/cbse-study-material/" class="btn btn-secondary">📚 Study Maths</a>
+      </div>
+      <p class="mg-hero-note"><i class="fas fa-bolt" aria-hidden="true"></i>No sign-up. No class selection. Just open, browse, choose and play.</p>
+    </div>
+  </section>
+
+  <!-- CHOOSE YOUR CHALLENGE -->
+  <section class="mg-section" id="choose">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Games Lobby</span>
+        <h2>🎮 Choose Your Challenge</h2>
+        <p>Pick any game and start your Maths challenge.</p>
+      </div>
+
+      <div class="mg-toolbar">
+        <div class="mg-search-wrap">
+          <label class="mg-search-label" for="mgSearch">🔎 Find a Maths Game</label>
+          <div class="mg-search" role="search">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <input type="search" id="mgSearch" name="mgSearch" placeholder="Search games..." autocomplete="off" />
+            <button type="button" class="mg-search-clear" id="mgSearchClear" aria-label="Clear search"><i class="fas fa-times" aria-hidden="true"></i></button>
+          </div>
+        </div>
+        <div class="mg-filters" role="group" aria-label="Filter games by category">
+          <button type="button" class="mg-filter is-active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="mg-filter" data-filter="speed" aria-pressed="false">⚡ Speed</button>
+          <button type="button" class="mg-filter" data-filter="numbers" aria-pressed="false">🔢 Numbers</button>
+          <button type="button" class="mg-filter" data-filter="algebra" aria-pressed="false">🧩 Algebra</button>
+          <button type="button" class="mg-filter" data-filter="geometry" aria-pressed="false">📐 Geometry</button>
+          <button type="button" class="mg-filter" data-filter="graphs" aria-pressed="false">📍 Graphs</button>
+          <button type="button" class="mg-filter" data-filter="statistics" aria-pressed="false">📊 Statistics</button>
+          <button type="button" class="mg-filter" data-filter="probability" aria-pressed="false">🎲 Probability</button>
+        </div>
+      </div>
+
+      <p class="mg-results" id="mgResults" role="status" aria-live="polite"></p>
+
+      <div class="mg-grid" id="mgGrid">
+        <article class="mg-card" data-category="speed" data-search="maths speed challenge solve maths questions quickly and accurately speed mental maths quick arithmetic contest">
+          <div class="mg-card-top">
+            <span class="mg-card-icon" aria-hidden="true">⚡</span>
+            <span class="mg-badge mg-badge-soon"><i class="fas fa-hourglass-half" aria-hidden="true"></i>Coming Soon</span>
+          </div>
+          <h3>Maths Speed Challenge</h3>
+          <p>Solve Maths questions as quickly and accurately as possible.</p>
+          <div class="mg-meta">
+            <span class="mg-chip">Speed</span>
+            <span class="mg-chip">Mental Maths</span>
+          </div>
+          <div class="mg-card-foot">
+            <span class="mg-level"><i class="fas fa-signal" aria-hidden="true"></i>Multiple Levels</span>
+            <span class="mg-btn-soon"><i class="fas fa-hourglass-half" aria-hidden="true"></i>Coming Soon</span>
+          </div>
+        </article>
+
+        <article class="mg-card" data-category="algebra" data-search="equation hunter solve equations defeat challenges algebra linear quadratic algebraic challenges">
+          <div class="mg-card-top">
+            <span class="mg-card-icon" aria-hidden="true">🎯</span>
+            <span class="mg-badge mg-badge-soon"><i class="fas fa-hourglass-half" aria-hidden="true"></i>Coming Soon</span>
+          </div>
+          <h3>Equation Hunter</h3>
+          <p>Solve equations and defeat increasingly difficult mathematical challenges.</p>
+          <div class="mg-meta">
+            <span class="mg-chip">Algebra</span>
+            <span class="mg-chip">Equations</span>
+          </div>
+          <div class="mg-card-foot">
+            <span class="mg-level"><i class="fas fa-signal" aria-hidden="true"></i>Multiple Levels</span>
+            <span class="mg-btn-soon"><i class="fas fa-hourglass-half" aria-hidden="true"></i>Coming Soon</span>
+          </div>
+        </article>
+
+        <article class="mg-card" data-category="graphs" data-search="coordinate shooter find correct coordinates hit target coordinate plane x axis y axis graph graphs">
+          <div class="mg-card-top">
+            <span class="mg-card-icon" aria-hidden="true">📍</span>
+            <span class="mg-badge mg-badge-soon"><i class="fas fa-hourglass-half" aria-hidden="true"></i>Coming Soon</span>
+          </div>
+          <h3>Coordinate Shooter</h3>
+          <p>Find the correct coordinates and hit the target on the coordinate plane.</p>
+          <div class="mg-meta">
+            <span class="mg-chip">Coordinate Geometry</span>
+            <span class="mg-chip">Graphs</span>
+          </div>
+          <div class="mg-card-foot">
+            <span class="mg-level"><i class="fas fa-signal" aria-hidden="true"></i>Multiple Levels</span>
+            <span class="mg-btn-soon"><i class="fas fa-hourglass-half" aria-hidden="true"></i>Coming Soon</span>
+          </div>
+        </article>
+
+        <article class="mg-card" data-category="algebra" data-search="factor detective discover factors identify patterns factorisation factorise prime algebra">
+          <div class="mg-card-top">
+            <span class="mg-card-icon" aria-hidden="true">🧩</span>
+            <span class="mg-badge mg-badge-soon"><i class="fas fa-hourglass-half" aria-hidden="true"></i>Coming Soon</span>
+          </div>
+          <h3>Factor Detective</h3>
+          <p>Discover factors, identify patterns and solve factorisation challenges.</p>
+          <div class="mg-meta">
+            <span class="mg-chip">Algebra</span>
+            <span class="mg-chip">Factorisation</span>
+          </div>
+          <div class="mg-card-foot">
+            <span class="mg-level"><i class="fas fa-signal" aria-hidden="true"></i>Multiple Levels</span>
+            <span class="mg-btn-soon"><i class="fas fa-hourglass-half" aria-hidden="true"></i>Coming Soon</span>
+          </div>
+        </article>
+
+        <article class="mg-card" data-category="geometry" data-search="geometry builder solve geometry challenges angles triangles shapes measurements perimeter area">
+          <div class="mg-card-top">
+            <span class="mg-card-icon" aria-hidden="true">📐</span>
+            <span class="mg-badge mg-badge-soon"><i class="fas fa-hourglass-half" aria-hidden="true"></i>Coming Soon</span>
+          </div>
+          <h3>Geometry Builder</h3>
+          <p>Solve geometry challenges involving angles, triangles, shapes and measurements.</p>
+          <div class="mg-meta">
+            <span class="mg-chip">Geometry</span>
+            <span class="mg-chip">Shapes</span>
+          </div>
+          <div class="mg-card-foot">
+            <span class="mg-level"><i class="fas fa-signal" aria-hidden="true"></i>Multiple Levels</span>
+            <span class="mg-btn-soon"><i class="fas fa-hourglass-half" aria-hidden="true"></i>Coming Soon</span>
+          </div>
+        </article>
+
+        <article class="mg-card" data-category="numbers" data-search="number ninja master numbers patterns calculations quick mathematical challenges operations sequences multiples">
+          <div class="mg-card-top">
+            <span class="mg-card-icon" aria-hidden="true">🔢</span>
+            <span class="mg-badge mg-badge-soon"><i class="fas fa-hourglass-half" aria-hidden="true"></i>Coming Soon</span>
+          </div>
+          <h3>Number Ninja</h3>
+          <p>Master numbers, patterns and calculations through quick mathematical challenges.</p>
+          <div class="mg-meta">
+            <span class="mg-chip">Numbers</span>
+            <span class="mg-chip">Patterns</span>
+          </div>
+          <div class="mg-card-foot">
+            <span class="mg-level"><i class="fas fa-signal" aria-hidden="true"></i>Multiple Levels</span>
+            <span class="mg-btn-soon"><i class="fas fa-hourglass-half" aria-hidden="true"></i>Coming Soon</span>
+          </div>
+        </article>
+
+        <article class="mg-card" data-category="probability" data-search="probability challenge test probability skills interactive mathematical challenges outcomes likelihood chance dice logic">
+          <div class="mg-card-top">
+            <span class="mg-card-icon" aria-hidden="true">🎲</span>
+            <span class="mg-badge mg-badge-soon"><i class="fas fa-hourglass-half" aria-hidden="true"></i>Coming Soon</span>
+          </div>
+          <h3>Probability Challenge</h3>
+          <p>Test your probability skills through interactive mathematical challenges.</p>
+          <div class="mg-meta">
+            <span class="mg-chip">Probability</span>
+            <span class="mg-chip">Logic</span>
+          </div>
+          <div class="mg-card-foot">
+            <span class="mg-level"><i class="fas fa-signal" aria-hidden="true"></i>Multiple Levels</span>
+            <span class="mg-btn-soon"><i class="fas fa-hourglass-half" aria-hidden="true"></i>Coming Soon</span>
+          </div>
+        </article>
+
+        <article class="mg-card" data-category="statistics" data-search="data detective analyse charts tables data solve mathematical mysteries statistics mean median mode">
+          <div class="mg-card-top">
+            <span class="mg-card-icon" aria-hidden="true">📊</span>
+            <span class="mg-badge mg-badge-soon"><i class="fas fa-hourglass-half" aria-hidden="true"></i>Coming Soon</span>
+          </div>
+          <h3>Data Detective</h3>
+          <p>Analyse charts, tables and data to solve mathematical mysteries.</p>
+          <div class="mg-meta">
+            <span class="mg-chip">Statistics</span>
+            <span class="mg-chip">Data</span>
+          </div>
+          <div class="mg-card-foot">
+            <span class="mg-level"><i class="fas fa-signal" aria-hidden="true"></i>Multiple Levels</span>
+            <span class="mg-btn-soon"><i class="fas fa-hourglass-half" aria-hidden="true"></i>Coming Soon</span>
+          </div>
+        </article>
+      </div>
+
+      <p class="mg-empty hidden" id="mgEmpty"><i class="fas fa-search" aria-hidden="true"></i>No games found. Try another search.</p>
+    </div>
+  </section>
+
+  <!-- FEATURED CHALLENGE -->
+  <section class="mg-section mg-section-alt" id="featured">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Featured</span>
+        <h2>⭐ Featured Challenge</h2>
+        <p>The game of the moment, ready for every Maths enthusiast.</p>
+      </div>
+      <div class="mg-featured-wrap">
+        <div class="mg-featured">
+          <div class="mg-featured-art">
+            <svg viewBox="0 0 340 240" role="img" aria-labelledby="mgFeaturedArtTitle mgFeaturedArtDesc">
+              <title id="mgFeaturedArtTitle">Coordinate plane with a target at coordinates (3, 2)</title>
+              <desc id="mgFeaturedArtDesc">A mini coordinate grid with the x-axis and y-axis drawn in gold, and a bullseye target marked at the point (3, 2).</desc>
+              <g stroke="rgba(255,255,255,0.10)" stroke-width="1">
+                <line x1="40" y1="25" x2="40" y2="195" />
+                <line x1="80" y1="25" x2="80" y2="195" />
+                <line x1="120" y1="25" x2="120" y2="195" />
+                <line x1="160" y1="25" x2="160" y2="195" />
+                <line x1="200" y1="25" x2="200" y2="195" />
+                <line x1="240" y1="25" x2="240" y2="195" />
+                <line x1="280" y1="25" x2="280" y2="195" />
+                <line x1="20" y1="40" x2="320" y2="40" />
+                <line x1="20" y1="70" x2="320" y2="70" />
+                <line x1="20" y1="120" x2="320" y2="120" />
+                <line x1="20" y1="150" x2="320" y2="150" />
+                <line x1="20" y1="180" x2="320" y2="180" />
+              </g>
+              <line x1="160" y1="200" x2="160" y2="20" stroke="#ffd54f" stroke-width="2.5" />
+              <line x1="15" y1="110" x2="325" y2="110" stroke="#ffd54f" stroke-width="2.5" />
+              <text x="170" y="37" fill="#ffd54f" font-size="14" font-family="Inter, sans-serif" font-weight="700">y</text>
+              <text x="315" y="101" fill="#ffd54f" font-size="14" font-family="Inter, sans-serif" font-weight="700">x</text>
+              <circle cx="280" cy="30" r="20" fill="none" stroke="#f9a825" stroke-width="3" opacity="0.85" />
+              <circle cx="280" cy="30" r="12" fill="none" stroke="#f9a825" stroke-width="3" />
+              <circle cx="280" cy="30" r="5" fill="#f9a825" />
+              <path d="M250 178 l-14 -34 12 -4 -10 -26 30 40 -14 4 16 32 z" fill="#ffd54f" opacity="0.95" />
+              <text x="232" y="24" fill="#ffffff" font-size="13" font-family="Inter, sans-serif" font-weight="700">(3, 2)</text>
+            </svg>
+          </div>
+          <div>
+            <span class="mg-featured-kicker"><i class="fas fa-star" aria-hidden="true"></i> Featured Game</span>
+            <h3>⚡ Maths Speed Challenge</h3>
+            <p>Solve Maths questions as quickly and accurately as possible. Every correct answer earns you time, every mistake costs you.</p>
+            <ul class="mg-featured-facts">
+              <li><i class="fas fa-tag" aria-hidden="true"></i> Speed &amp; Mental Maths</li>
+              <li><i class="fas fa-signal" aria-hidden="true"></i> Multiple Levels</li>
+              <li><i class="fas fa-hourglass-half" aria-hidden="true"></i> Coming Soon</li>
+            </ul>
+            <span class="mg-btn-soon mg-btn-on-dark"><i class="fas fa-hourglass-half" aria-hidden="true"></i>Coming Soon</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAILY MATHS CHALLENGE -->
+  <section class="mg-daily" id="daily">
+    <div class="container mg-daily-inner">
+      <div class="mg-daily-copy">
+        <span class="section-tag">Daily Practice</span>
+        <h2>⚡ Daily Maths Challenge</h2>
+        <p>Come back every day and test your Maths skills with a quick challenge.</p>
+        <span class="mg-btn-soon mg-btn-on-dark"><i class="fas fa-hourglass-half" aria-hidden="true"></i>Coming Soon</span>
+      </div>
+      <div class="mg-daily-stats">
+        <div class="mg-stat"><span class="mg-stat-num">10</span><span class="mg-stat-lbl">Questions</span></div>
+        <div class="mg-stat"><span class="mg-stat-num">2</span><span class="mg-stat-lbl">Minutes</span></div>
+        <div class="mg-stat"><span class="mg-stat-num">Daily</span><span class="mg-stat-lbl">Challenge</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHALLENGE YOURSELF -->
+  <section class="mg-section" id="challenge">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Motivation</span>
+        <h2>🏆 Challenge Yourself</h2>
+        <p>Future features that will keep you motivated and help you grow.</p>
+      </div>
+      <div class="mg-challenge-grid">
+        <article class="mg-challenge-card">
+          <span class="mg-challenge-icon" aria-hidden="true">🔥</span>
+          <h3>Build Your Streak</h3>
+          <p>Keep practising and improve your consistency.</p>
+          <span class="mg-chip mg-chip-soon">Coming Soon</span>
+        </article>
+        <article class="mg-challenge-card">
+          <span class="mg-challenge-icon" aria-hidden="true">⭐</span>
+          <h3>Earn Points</h3>
+          <p>Score points by solving Maths challenges correctly.</p>
+          <span class="mg-chip mg-chip-soon">Coming Soon</span>
+        </article>
+        <article class="mg-challenge-card">
+          <span class="mg-challenge-icon" aria-hidden="true">🎯</span>
+          <h3>Improve Your Accuracy</h3>
+          <p>Track your progress and identify areas to improve.</p>
+          <span class="mg-chip mg-chip-soon">Coming Soon</span>
+        </article>
+        <article class="mg-challenge-card">
+          <span class="mg-challenge-icon" aria-hidden="true">🏆</span>
+          <h3>Become a Maths Champion</h3>
+          <p>Challenge yourself and aim for your personal best.</p>
+          <span class="mg-chip mg-chip-soon">Coming Soon</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEARN - PLAY - PRACTISE - MASTER -->
+  <section class="mg-section mg-section-alt" id="path">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Learning Path</span>
+        <h2>Learn &rarr; Play &rarr; Practise &rarr; Master</h2>
+        <p>Our four-step path to real confidence in Mathematics.</p>
+      </div>
+      <div class="mg-path">
+        <div class="mg-step">
+          <span class="mg-step-num">01</span>
+          <span class="mg-step-icon" aria-hidden="true">📖</span>
+          <h3>Learn</h3>
+          <p>Understand the Maths concept.</p>
+        </div>
+        <div class="mg-step">
+          <span class="mg-step-num">02</span>
+          <span class="mg-step-icon" aria-hidden="true">🎮</span>
+          <h3>Play</h3>
+          <p>Use an interactive game to practise it.</p>
+        </div>
+        <div class="mg-step">
+          <span class="mg-step-num">03</span>
+          <span class="mg-step-icon" aria-hidden="true">📝</span>
+          <h3>Practise</h3>
+          <p>Solve more questions.</p>
+        </div>
+        <div class="mg-step">
+          <span class="mg-step-num">04</span>
+          <span class="mg-step-icon" aria-hidden="true">🏆</span>
+          <h3>Master</h3>
+          <p>Take a test and improve your performance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLAY WHILE YOU LEARN -->
+  <section class="mg-section" id="learn">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Chapter Connection</span>
+        <h2>🎮 Play While You Learn</h2>
+        <p>Our Maths games will also be connected to relevant chapter pages, so students can practise a concept immediately after learning it.</p>
+      </div>
+      <div class="mg-flow" role="list" aria-label="How a chapter journey will work">
+        <span class="mg-flow-step" role="listitem"><b>1</b>Learn the concept</span>
+        <span class="mg-flow-arrow" aria-hidden="true">→</span>
+        <span class="mg-flow-step" role="listitem"><b>2</b>Play a game</span>
+        <span class="mg-flow-arrow" aria-hidden="true">→</span>
+        <span class="mg-flow-step" role="listitem"><b>3</b>Practise questions</span>
+        <span class="mg-flow-arrow" aria-hidden="true">→</span>
+        <span class="mg-flow-step" role="listitem"><b>4</b>Take the chapter test</span>
+      </div>
+      <p class="mg-journey">This is the experience we are building. Game links on chapter pages are coming soon &mdash; today you can already learn the concept, practise questions and take the chapter test.</p>
+      <div style="text-align:center;">
+        <a href="/cbse-study-material/" class="btn-outline">📚 Explore Study Material</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO CONTENT -->
+  <section class="mg-section mg-section-alt" id="about-games">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">About Our Games</span>
+        <h2>Maths Learning Games for Students</h2>
+        <p>Making everyday Mathematics practice feel like play.</p>
+      </div>
+      <div class="mg-seo-content">
+        <p>Vyasa Academy's Maths Learning Games are designed to help CBSE students practise mathematical concepts through interactive challenges. Instead of drilling through long worksheets, students can pick a game that matches what they are learning &mdash; from mental arithmetic speed drills to algebra, geometry, coordinate graphs, statistics and probability &mdash; and improve through short, focused play sessions.</p>
+        <h3>Games that complement the CBSE syllabus</h3>
+        <p>Every game in our Maths learning arcade is planned around the concepts students meet in the CBSE curriculum. The same ideas behind our study notes and chapter tests appear inside the challenges, so classroom learning and game practice reinforce each other naturally.</p>
+        <h3>Built for daily CBSE preparation</h3>
+        <p>Whether a student is revising for a weekly test, preparing for board exams, or simply building speed and accuracy, the games will sit alongside the resources they already use &mdash; detailed notes, practice questions and chapter tests &mdash; to make CBSE Mathematics preparation more consistent and enjoyable.</p>
+        <p>Games are currently being prepared and will be added to each <a href="/cbse-study-material/">CBSE study material</a> hub. In the meantime, explore the Maths resources below:</p>
+        <div class="mg-seo-links">
+          <a class="mg-seo-chip" href="/cbse-study-material/">📚 Study Material</a>
+          <a class="mg-seo-chip" href="/cbse-study-material/class-9/mathematics/">📗 Class 9 Maths</a>
+          <a class="mg-seo-chip" href="/cbse-study-material/class-10/mathematics/">📘 Class 10 Maths</a>
+          <a class="mg-seo-chip" href="/blog/mathematics/">📝 Maths Study Blog</a>
+          <a class="mg-seo-chip" href="/blog/cbse-class-9-maths/">🟩 Class 9 Maths Guide</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-about">
+      <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+      <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#faculty">Faculty</a></li>
+        <li><a href="/#courses">Courses</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/cbse-study-material/">Study Material</a></li>
+        <li><a href="/maths-games/">🎮 Maths Games</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Popular Searches</h4>
+      <ul>
+        <li><a href="/best-tuition-centre-hulimavu/">Best Tuition Centre in Hulimavu</a></li>
+        <li><a href="/best-coaching-centre-hulimavu/">Best Coaching Centre in Hulimavu</a></li>
+        <li><a href="/cbse-tuition-hulimavu/">CBSE Tuition in Hulimavu</a></li>
+        <li><a href="/maths-tuition-hulimavu/">Maths Tuition in Hulimavu</a></li>
+        <li><a href="/science-tuition-hulimavu/">Science Tuition in Hulimavu</a></li>
+        <li><a href="/kcet-coaching-hulimavu/">KCET Coaching in Hulimavu</a></li>
+        <li><a href="/class-10-tuition-hulimavu/">Class 10 Tuition Hulimavu</a></li>
+        <li><a href="/icse-tuition-hulimavu/">ICSE Tuition Hulimavu</a></li>
+        <li><a href="/tuition-classes-near-bannerghatta-road/">Tuition near Bannerghatta Road</a></li>
+        <li><a href="/cbse-tuition-bangalore/">CBSE Tuition Bangalore</a></li>
+        <li><a href="/tuition-centre-bangalore/">Best Tuition Centre in Bangalore</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  var hamburger = document.getElementById('hamburger');
+  var navLinks = document.getElementById('navLinks');
+
+  function closeNav() {
+    if (hamburger) { hamburger.classList.remove('open'); }
+    if (navLinks) { navLinks.classList.remove('show'); }
+  }
+
+  if (hamburger) {
+    hamburger.addEventListener('click', function () {
+      hamburger.classList.toggle('open');
+      if (navLinks) { navLinks.classList.toggle('show'); }
+    });
+  }
+  if (navLinks) {
+    Array.prototype.forEach.call(navLinks.querySelectorAll('a'), function (link) {
+      link.addEventListener('click', closeNav);
+    });
+  }
+
+  var searchInput = document.getElementById('mgSearch');
+  var clearBtn = document.getElementById('mgSearchClear');
+  var filterBtns = Array.prototype.slice.call(document.querySelectorAll('.mg-filter'));
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.mg-card'));
+  var empty = document.getElementById('mgEmpty');
+  var results = document.getElementById('mgResults');
+  var currentFilter = 'all';
+  var searchTerm = '';
+
+  function applyFilter() {
+    var q = searchTerm.toLowerCase();
+    var visible = 0;
+    cards.forEach(function (card) {
+      var cat = card.getAttribute('data-category') || '';
+      var searchText = card.getAttribute('data-search') || '';
+      var okCat = currentFilter === 'all' || cat === currentFilter;
+      var okQ = !q || searchText.toLowerCase().indexOf(q) !== -1;
+      var show = okCat && okQ;
+      card.classList.toggle('is-hidden', !show);
+      if (show) { visible++; }
+    });
+    if (empty) { empty.classList.toggle('hidden', visible > 0); }
+    if (results) {
+      if (currentFilter === 'all' && !q && visible === cards.length) {
+        results.textContent = '';
+      } else {
+        results.textContent = visible > 0
+          ? visible + ' game' + (visible === 1 ? '' : 's') + ' found'
+          : 'No games found. Try another search.';
+      }
+    }
+  }
+
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      currentFilter = btn.getAttribute('data-filter');
+      filterBtns.forEach(function (b) {
+        var isActive = b === btn;
+        b.classList.toggle('is-active', isActive);
+        b.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      });
+      applyFilter();
+    });
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', function () {
+      searchTerm = searchInput.value;
+      applyFilter();
+    });
+  }
+
+  if (clearBtn) {
+    clearBtn.addEventListener('click', function () {
+      if (searchInput) {
+        searchInput.value = '';
+        searchTerm = '';
+        searchInput.focus();
+      }
+      applyFilter();
+    });
+  }
+
+  applyFilter();
+})();
+</script>
+</body>
+</html>
