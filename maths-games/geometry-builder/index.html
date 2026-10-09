@@ -1,0 +1,1995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geometry Builder | Maths Game | Vyasa Academy</title>
+  <meta name="description" content="Play Geometry Builder by Vyasa Academy to practise angles, triangles, quadrilaterals, area, perimeter and symmetry through interactive geometry challenges." />
+  <link rel="canonical" href="https://www.vyasaacademy.in/maths-games/geometry-builder/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vyasa Academy" />
+  <meta property="og:title" content="Geometry Builder | Maths Game | Vyasa Academy" />
+  <meta property="og:description" content="Play Geometry Builder by Vyasa Academy to practise angles, triangles, quadrilaterals, area, perimeter and symmetry through interactive geometry challenges." />
+  <meta property="og:url" content="https://www.vyasaacademy.in/maths-games/geometry-builder/" />
+  <meta property="og:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Geometry Builder | Maths Game | Vyasa Academy" />
+  <meta name="twitter:description" content="Play Geometry Builder by Vyasa Academy to practise angles, triangles, quadrilaterals, area, perimeter and symmetry through interactive geometry challenges." />
+  <meta name="twitter:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.vyasaacademy.in/" },
+      { "@type": "ListItem", "position": 2, "name": "Vyasa Maths Games", "item": "https://www.vyasaacademy.in/maths-games/" },
+      { "@type": "ListItem", "position": 3, "name": "Geometry Builder", "item": "https://www.vyasaacademy.in/maths-games/geometry-builder/" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Geometry Builder | Maths Game | Vyasa Academy",
+    "applicationCategory": "GameApplication",
+    "url": "https://www.vyasaacademy.in/maths-games/geometry-builder/",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "description": "Play Geometry Builder by Vyasa Academy to practise angles, triangles, quadrilaterals, area, perimeter and symmetry through interactive geometry challenges.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+    "publisher": { "@type": "Organization", "name": "Vyasa Academy", "url": "https://vyasaacademy.in/" }
+  }
+  </script>
+  <style>
+    /* ===== VYASA GEOMETRY BUILDER (page-scoped) ===== */
+    .mg-gb-hero {
+      position: relative;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, var(--primary-dark) 100%);
+      color: var(--white);
+      overflow: hidden;
+      padding: 110px 0 88px;
+      text-align: center;
+    }
+    .mg-gb-hero-bg { position: absolute; inset: 0; pointer-events: none; }
+    .mg-gb-symbol {
+      position: absolute;
+      font-weight: 800;
+      font-family: 'Playfair Display', serif;
+      color: var(--accent-light);
+      opacity: 0.13;
+      user-select: none;
+      animation: mg-gb-float 9s ease-in-out infinite;
+    }
+    @keyframes mg-gb-float {
+      0%, 100% { transform: translateY(0) rotate(-5deg); }
+      50% { transform: translateY(-16px) rotate(5deg); }
+    }
+    .mg-gb-symbol-1 { top: 10%; left: 7%; font-size: 3rem; }
+    .mg-gb-symbol-2 { top: 18%; right: 9%; font-size: 2.3rem; animation-delay: 1.2s; }
+    .mg-gb-symbol-3 { bottom: 16%; left: 13%; font-size: 2.7rem; animation-delay: 2s; }
+    .mg-gb-symbol-4 { bottom: 26%; right: 15%; font-size: 2rem; animation-delay: 0.6s; }
+    .mg-gb-symbol-5 { top: 48%; left: 3.5%; font-size: 1.9rem; animation-delay: 1.6s; }
+    .mg-gb-symbol-6 { top: 56%; right: 3.5%; font-size: 1.9rem; animation-delay: 2.4s; }
+
+    .mg-gb-hero-content { position: relative; z-index: 1; max-width: 780px; margin: 0 auto; }
+    .mg-gb-crumbs {
+      position: relative;
+      z-index: 1;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 18px;
+    }
+    .mg-gb-crumbs a { color: rgba(255,255,255,0.85); text-decoration: underline; text-underline-offset: 3px; }
+    .mg-gb-crumbs a:hover { color: var(--accent-light); }
+    .mg-gb-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,213,79,0.4);
+      color: var(--accent-light);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      padding: 7px 18px;
+      border-radius: 50px;
+      margin-bottom: 20px;
+    }
+    .mg-gb-hero h1 { font-size: 3.1rem; font-weight: 800; line-height: 1.12; margin-bottom: 14px; }
+    .mg-gb-tagline { font-size: 1.4rem; font-weight: 600; color: var(--accent-light); margin-bottom: 12px; }
+    .mg-gb-hero-sub { font-size: 1.05rem; opacity: 0.86; max-width: 640px; margin: 0 auto; line-height: 1.7; }
+
+    .mg-gb-section { padding: 76px 0; }
+    .mg-gb-section-alt { background: var(--white); }
+
+    .mg-gb-layout {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 28px;
+      align-items: start;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .mg-gb-panel {
+      background: var(--white);
+      border: 1px solid rgba(26,35,126,0.06);
+      border-radius: 20px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+    }
+
+    .mg-gb-group { margin-bottom: 26px; }
+    .mg-gb-group:last-child { margin-bottom: 0; }
+    .mg-gb-group-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+    .mg-gb-group-title i { color: var(--accent-dark); }
+    .mg-gb-opts { display: flex; flex-wrap: wrap; gap: 10px; }
+    .mg-gb-opt {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--white);
+      border: 1.5px solid rgba(26,35,126,0.18);
+      color: var(--primary);
+      padding: 11px 20px;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: inherit;
+    }
+    .mg-gb-opt:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .mg-gb-opt.is-active { background: var(--primary); border-color: var(--primary); color: var(--white); }
+
+    .mg-gb-start-row { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-top: 6px; }
+    .mg-gb-start { padding: 16px 44px; font-size: 1.05rem; }
+    .mg-gb-end-link {
+      color: var(--gray);
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: var(--transition);
+    }
+    .mg-gb-end-link:hover { color: var(--primary); border-bottom-color: var(--accent); }
+
+    .mg-gb-pb { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: var(--white); border-radius: 20px; padding: 30px; box-shadow: var(--shadow-lg); }
+    .mg-gb-pb h3 { font-size: 1.15rem; margin-bottom: 4px; }
+    .mg-gb-pb-note { font-size: 0.9rem; color: rgba(255,255,255,0.8); margin-bottom: 20px; }
+    .mg-gb-pb-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .mg-gb-pb-cell { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 14px; padding: 16px 10px; text-align: center; }
+    .mg-gb-pb-num { display: block; font-size: 1.45rem; font-weight: 800; color: var(--accent-light); line-height: 1.1; }
+    .mg-gb-pb-lbl { display: block; font-size: 0.68rem; color: rgba(255,255,255,0.78); text-transform: uppercase; letter-spacing: 0.7px; margin-top: 5px; }
+
+    .mg-gb-arena { max-width: 1080px; margin: 0 auto; }
+
+    .mg-gb-hud { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 28px; }
+    .mg-gb-stat {
+      flex: 1 1 150px;
+      max-width: 210px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--white);
+      border: 1px solid rgba(26,35,126,0.06);
+      border-radius: 16px;
+      padding: 14px 18px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .mg-gb-stat-time { flex: 1 1 210px; max-width: 260px; border-color: rgba(249,168,37,0.4); }
+    .mg-gb-stat-time.is-warning { border-color: var(--accent-dark); background: #fff8e1; }
+    .mg-gb-stat-time.is-danger { border-color: #d32f2f; background: #ffebee; animation: mg-gb-pulse 1s ease-in-out infinite; }
+    @keyframes mg-gb-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.04); } }
+    .mg-gb-stat-ico { font-size: 1.3rem; flex-shrink: 0; }
+    .mg-gb-stat-lbl { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.8px; color: var(--gray); font-weight: 700; }
+    .mg-gb-stat-val { font-size: 1.35rem; font-weight: 800; color: var(--primary); margin-left: auto; line-height: 1.1; }
+    .mg-gb-stat-time .mg-gb-stat-val { color: var(--accent-dark); font-size: 1.7rem; }
+    .mg-gb-stat-time.is-danger .mg-gb-stat-val { color: #d32f2f; }
+
+    .mg-gb-case-row { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; gap: 14px; margin-bottom: 12px; }
+    .mg-gb-case-index { font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.4px; color: var(--gray); }
+    .mg-gb-case-type {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--light);
+      border: 1px solid rgba(26,35,126,0.1);
+      color: var(--primary);
+      padding: 7px 16px;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .mg-gb-qcard {
+      background: var(--white);
+      border: 2px solid rgba(26,35,126,0.08);
+      border-radius: 24px;
+      padding: 34px 30px 30px;
+      box-shadow: var(--shadow-lg);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+    .mg-gb-qcard.mg-gb-qpop { animation: mg-gb-pop 0.28s ease; }
+    @keyframes mg-gb-pop { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .mg-gb-qcard.is-correct { border-color: #2e7d32; box-shadow: 0 0 0 4px rgba(46,125,50,0.15), var(--shadow-lg); }
+    .mg-gb-qcard.is-wrong { border-color: #c62828; box-shadow: 0 0 0 4px rgba(198,40,40,0.12), var(--shadow-lg); }
+    .mg-gb-prompt { font-size: 1.12rem; font-weight: 600; color: var(--dark); line-height: 1.55; min-height: 1.6em; margin-bottom: 12px; }
+
+    .mg-gb-stage { margin: 0 auto 6px; max-width: 640px; }
+    .mg-gb-svg {
+      width: 100%;
+      height: auto;
+      background:
+        linear-gradient(rgba(26,35,126,0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(26,35,126,0.045) 1px, transparent 1px),
+        var(--light);
+      background-size: 40px 40px;
+      border-radius: 16px;
+      border: 1px solid rgba(26,35,126,0.08);
+      touch-action: none;
+    }
+    .mg-gb-handle { cursor: grab; }
+    .mg-gb-handle:active { cursor: grabbing; }
+    .mg-gb-readout { min-height: 1.5em; font-size: 0.98rem; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
+
+    .mg-gb-answer-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px; margin: 6px 0 12px; }
+    .mg-gb-answer-label { font-weight: 600; color: var(--dark); }
+    .mg-gb-answer-input {
+      font-family: inherit;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--primary);
+      border: 2px solid rgba(26,35,126,0.2);
+      border-radius: 12px;
+      padding: 10px 14px;
+      width: 130px;
+      text-align: center;
+    }
+    .mg-gb-answer-input:focus-visible { outline: 3px solid rgba(249,168,37,0.65); outline-offset: 2px; border-color: var(--accent); }
+    .mg-gb-unit { font-weight: 700; color: var(--gray); }
+
+    .mg-gb-check { margin-top: 4px; padding: 13px 40px; font-size: 1rem; }
+    .mg-gb-check:disabled { opacity: 0.55; cursor: not-allowed; }
+
+    .mg-gb-feedback { min-height: 1.9em; text-align: center; margin-top: 14px; font-size: 1rem; font-weight: 600; }
+    .mg-gb-feedback.is-good { color: #2e7d32; }
+    .mg-gb-feedback.is-bad { color: #c62828; }
+    .mg-gb-hint { min-height: 1.4em; text-align: center; margin-top: 6px; font-size: 0.9rem; color: var(--gray); }
+
+    .mg-gb-toast {
+      position: fixed;
+      left: 50%;
+      bottom: 34px;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--primary);
+      color: var(--white);
+      padding: 14px 26px;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 700;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(255,213,79,0.35);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 60;
+    }
+    .mg-gb-toast.is-visible { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    .mg-gb-announce {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+
+    .mg-gb-results { max-width: 760px; margin: 0 auto; text-align: center; }
+    .mg-gb-results h2 { font-size: clamp(1.9rem, 5vw, 2.6rem); margin-bottom: 8px; color: var(--dark); }
+    .mg-gb-results-sub { color: var(--gray); font-size: 1.05rem; margin-bottom: 30px; }
+    .mg-gb-newbest {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #e8f5e9;
+      border: 1px solid #2e7d32;
+      color: #2e7d32;
+      padding: 10px 22px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 26px;
+    }
+    .mg-gb-newbest.hidden { display: none; }
+    .mg-gb-res-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 22px; }
+    .mg-gb-res-cell { background: var(--white); border: 1px solid rgba(26,35,126,0.06); border-radius: 18px; padding: 26px 14px; box-shadow: var(--shadow); }
+    .mg-gb-res-cell.is-primary { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); border: none; }
+    .mg-gb-res-num { display: block; font-size: 2.1rem; font-weight: 800; color: var(--primary); line-height: 1.1; }
+    .mg-gb-res-cell.is-primary .mg-gb-res-num { color: var(--accent-light); }
+    .mg-gb-res-lbl { display: block; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 1px; color: var(--gray); margin-top: 6px; }
+    .mg-gb-res-cell.is-primary .mg-gb-res-lbl { color: rgba(255,255,255,0.85); }
+    .mg-gb-skills-wrap { margin: 6px 0 14px; }
+    .mg-gb-skills-title { font-size: 0.95rem; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+    .mg-gb-skills { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+    .mg-gb-skill-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--light);
+      border: 1px solid rgba(26,35,126,0.1);
+      color: var(--primary);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .mg-gb-fbmsg { font-size: 1.1rem; font-weight: 600; color: var(--primary); margin-bottom: 28px; }
+    .mg-gb-res-actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .mg-gb-res-actions .btn { font-size: 1rem; }
+
+    .mg-gb-sr {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+    .mg-bump { animation: mg-gb-bump 0.35s ease; }
+    @keyframes mg-gb-bump {
+      0% { transform: scale(1); }
+      40% { transform: scale(1.35); color: var(--accent-dark); }
+      100% { transform: scale(1); }
+    }
+
+    .mg-gb-seo-content { max-width: 820px; margin: 0 auto; color: var(--dark); }
+    .mg-gb-seo-content h3 { color: var(--primary); font-size: 1.12rem; margin: 22px 0 8px; }
+    .mg-gb-seo-content p { color: var(--gray); font-size: 1rem; line-height: 1.8; margin-bottom: 14px; }
+    .mg-gb-seo-links { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 4px; }
+    .mg-gb-seo-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--light);
+      color: var(--primary);
+      border: 1px solid rgba(26,35,126,0.1);
+      padding: 10px 18px;
+      border-radius: 50px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+    .mg-gb-seo-chip:hover { background: var(--accent-light); border-color: var(--accent); color: var(--primary-dark); }
+
+    .mg-gb-opt:focus-visible,
+    .mg-gb-check:focus-visible,
+    .mg-gb-end-link:focus-visible,
+    .mg-gb-seo-chip:focus-visible,
+    .mg-gb-handle:focus-visible,
+    .btn:focus-visible { outline: 3px solid rgba(249,168,37,0.65); outline-offset: 2px; }
+
+    @media (max-width: 900px) {
+      .mg-gb-layout { grid-template-columns: 1fr; }
+      .mg-gb-pb { order: -1; }
+    }
+    @media (max-width: 768px) {
+      .mg-gb-hero { padding: 96px 0 70px; }
+      .mg-gb-hero h1 { font-size: 2.3rem; }
+      .mg-gb-section { padding: 60px 0; }
+    }
+    @media (max-width: 560px) {
+      .mg-gb-res-grid { grid-template-columns: repeat(2, 1fr); }
+      .mg-gb-res-cell.is-primary { grid-column: 1 / -1; }
+      .mg-gb-pb-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .mg-gb-hero h1 { font-size: 1.9rem; }
+      .mg-gb-tagline { font-size: 1.15rem; }
+      .mg-gb-hero-sub { font-size: 0.98rem; }
+      .mg-gb-panel, .mg-gb-pb { padding: 24px 20px; }
+      .mg-gb-qcard { padding: 28px 16px 24px; }
+      .mg-gb-stat { flex-basis: 46%; max-width: none; }
+      .mg-gb-stat-time { flex-basis: 100%; max-width: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .mg-gb-symbol { animation: none; }
+      .mg-gb-stat-time.is-danger { animation: none; }
+      .mg-gb-qcard.mg-gb-qpop { animation: none; }
+      .mg-bump { animation: none; }
+      .mg-gb-opt:hover, .mg-gb-stat, .btn { transform: none; transition: none; }
+      .mg-gb-toast { transition: none; }
+    }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="/" class="logo"><i class="fas fa-graduation-cap"></i> Vyasa Academy</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#courses">Courses</a></li>
+      <li><a href="/#papers">Practice Papers</a></li>
+      <li><a href="/cbse-study-material/">Study Material</a></li>
+      <li><a href="/maths-games/" class="active" aria-current="page">🎮 Maths Games</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- START SCREEN -->
+  <section class="mg-gb-hero" id="mgGbStartScreen">
+    <div class="mg-gb-hero-bg" aria-hidden="true">
+      <span class="mg-gb-symbol mg-gb-symbol-1">∠</span>
+      <span class="mg-gb-symbol mg-gb-symbol-2">△</span>
+      <span class="mg-gb-symbol mg-gb-symbol-3">□</span>
+      <span class="mg-gb-symbol mg-gb-symbol-4">⬡</span>
+      <span class="mg-gb-symbol mg-gb-symbol-5">∟</span>
+      <span class="mg-gb-symbol mg-gb-symbol-6">∥</span>
+    </div>
+    <div class="container mg-gb-hero-content">
+      <nav class="mg-gb-crumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a> / <a href="/maths-games/">Maths Games</a> / <span aria-current="page">Geometry Builder</span>
+      </nav>
+      <span class="mg-gb-badge">Angles, Shapes &amp; Symmetry</span>
+      <h1>📐 Geometry Builder</h1>
+      <p class="mg-gb-tagline">Build it. Measure it. Master it.</p>
+      <p class="mg-gb-hero-sub">Construct geometric shapes, measure angles and solve geometry challenges through interactive practice.</p>
+    </div>
+  </section>
+
+  <section class="mg-gb-section mg-gb-section-alt">
+    <div class="container">
+      <div class="mg-gb-layout">
+        <div class="mg-gb-panel" id="mgSettingsPanel">
+          <div class="section-header" style="padding:0 0 22px;">
+            <span class="section-tag">Set Up</span>
+            <h2>Build Your Session</h2>
+            <p>Pick your level, time limit and challenge type. No login needed.</p>
+          </div>
+
+          <div class="mg-gb-group" role="group" aria-label="Choose difficulty">
+            <span class="mg-gb-group-title"><i class="fas fa-signal" aria-hidden="true"></i>Difficulty</span>
+            <div class="mg-gb-opts" data-setting-group="difficulty">
+              <button type="button" class="mg-gb-opt" data-setting="difficulty" data-value="easy" aria-pressed="false">Easy</button>
+              <button type="button" class="mg-gb-opt is-active" data-setting="difficulty" data-value="medium" aria-pressed="true">Medium</button>
+              <button type="button" class="mg-gb-opt" data-setting="difficulty" data-value="hard" aria-pressed="false">Hard</button>
+            </div>
+          </div>
+
+          <div class="mg-gb-group" role="group" aria-label="Choose time limit">
+            <span class="mg-gb-group-title"><i class="fas fa-hourglass-half" aria-hidden="true"></i>Time</span>
+            <div class="mg-gb-opts" data-setting-group="timeLimit">
+              <button type="button" class="mg-gb-opt" data-setting="timeLimit" data-value="60" aria-pressed="false">60 seconds</button>
+              <button type="button" class="mg-gb-opt is-active" data-setting="timeLimit" data-value="90" aria-pressed="true">90 seconds</button>
+              <button type="button" class="mg-gb-opt" data-setting="timeLimit" data-value="120" aria-pressed="false">120 seconds</button>
+            </div>
+          </div>
+
+          <div class="mg-gb-group" role="group" aria-label="Choose challenge type">
+            <span class="mg-gb-group-title"><i class="fas fa-shapes" aria-hidden="true"></i>Challenge Type</span>
+            <div class="mg-gb-opts" data-setting-group="challengeType">
+              <button type="button" class="mg-gb-opt" data-setting="challengeType" data-value="angle" aria-pressed="false">Angles</button>
+              <button type="button" class="mg-gb-opt" data-setting="challengeType" data-value="triangle" aria-pressed="false">Triangles</button>
+              <button type="button" class="mg-gb-opt" data-setting="challengeType" data-value="quadrilateral" aria-pressed="false">Quadrilaterals</button>
+              <button type="button" class="mg-gb-opt" data-setting="challengeType" data-value="perimeter-area" aria-pressed="false">Perimeter &amp; Area</button>
+              <button type="button" class="mg-gb-opt" data-setting="challengeType" data-value="symmetry" aria-pressed="false">Symmetry</button>
+              <button type="button" class="mg-gb-opt is-active" data-setting="challengeType" data-value="mixed" aria-pressed="true">Mixed</button>
+            </div>
+          </div>
+
+          <div class="mg-gb-start-row">
+            <button type="button" class="btn btn-primary mg-gb-start" id="mgGbStartBtn">📐 Start Building</button>
+            <a class="mg-gb-end-link" href="/maths-games/">← Back to Maths Games</a>
+          </div>
+        </div>
+
+        <aside class="mg-gb-pb" aria-label="Personal best">
+          <h3>🏆 Personal Best</h3>
+          <p class="mg-gb-pb-note" id="mgGbPbNote">Your best is saved on this device.</p>
+          <div class="mg-gb-pb-grid">
+            <div class="mg-gb-pb-cell"><span class="mg-gb-pb-num" id="mgGbPbScore">—</span><span class="mg-gb-pb-lbl">Score</span></div>
+            <div class="mg-gb-pb-cell"><span class="mg-gb-pb-num" id="mgGbPbAccuracy">—</span><span class="mg-gb-pb-lbl">Accuracy</span></div>
+            <div class="mg-gb-pb-cell"><span class="mg-gb-pb-num" id="mgGbPbStreak">—</span><span class="mg-gb-pb-lbl">Best Streak</span></div>
+            <div class="mg-gb-pb-cell"><span class="mg-gb-pb-num" id="mgGbPbGames">—</span><span class="mg-gb-pb-lbl">Games</span></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAME SCREEN -->
+  <section class="mg-gb-section mg-gb-section-alt" id="mgGbGameScreen" hidden>
+    <div class="container">
+      <div class="mg-gb-arena">
+        <div class="mg-gb-hud" role="group" aria-label="Game stats">
+          <div class="mg-gb-stat mg-gb-stat-time" id="mgGbTimeBox">
+            <span class="mg-gb-stat-ico" aria-hidden="true">⏱</span>
+            <span class="mg-gb-stat-lbl">Time</span>
+            <span class="mg-gb-stat-val" id="mgGbTime">90</span>
+          </div>
+          <div class="mg-gb-stat">
+            <span class="mg-gb-stat-ico" aria-hidden="true">⭐</span>
+            <span class="mg-gb-stat-lbl">Score</span>
+            <span class="mg-gb-stat-val" id="mgGbScore">0</span>
+          </div>
+          <div class="mg-gb-stat">
+            <span class="mg-gb-stat-ico" aria-hidden="true">✓</span>
+            <span class="mg-gb-stat-lbl">Solved</span>
+            <span class="mg-gb-stat-val" id="mgGbSolved">0</span>
+          </div>
+          <div class="mg-gb-stat">
+            <span class="mg-gb-stat-ico" aria-hidden="true">✗</span>
+            <span class="mg-gb-stat-lbl">Wrong</span>
+            <span class="mg-gb-stat-val" id="mgGbWrong">0</span>
+          </div>
+          <div class="mg-gb-stat">
+            <span class="mg-gb-stat-ico" aria-hidden="true">🔥</span>
+            <span class="mg-gb-stat-lbl">Streak</span>
+            <span class="mg-gb-stat-val" id="mgGbStreak">0</span>
+          </div>
+        </div>
+
+        <div class="mg-gb-case-row">
+          <p class="mg-gb-case-index" id="mgGbCaseIndex">Challenge 1</p>
+          <p class="mg-gb-case-type" id="mgGbCaseType" aria-live="polite">Angle Builder</p>
+        </div>
+
+        <div class="mg-gb-qcard" id="mgGbQCard">
+          <p class="mg-gb-prompt" id="mgGbPrompt">Build an angle of 60°.</p>
+
+          <div class="mg-gb-stage">
+            <svg class="mg-gb-svg" id="mgGbSvg" viewBox="0 0 600 480" role="img" aria-label="Geometry construction workspace">
+              <g id="mgGbLayer"></g>
+            </svg>
+            <p class="mg-gb-readout" id="mgGbReadout" aria-live="polite">Angle: 60°</p>
+          </div>
+
+          <div class="mg-gb-answer-row" id="mgGbAnswerRow" hidden>
+            <label class="mg-gb-answer-label" for="mgGbAnswerInput">Your Answer</label>
+            <input class="mg-gb-answer-input" id="mgGbAnswerInput" type="text" inputmode="decimal" autocomplete="off" aria-label="Your numeric answer" />
+            <span class="mg-gb-unit" id="mgGbAnswerUnit">cm²</span>
+          </div>
+
+          <button type="button" class="btn btn-primary mg-gb-check" id="mgGbCheck">✓ Check Geometry</button>
+          <p class="mg-gb-feedback" id="mgGbFeedback" role="status" aria-live="polite"></p>
+          <p class="mg-gb-hint" id="mgGbHint" aria-hidden="true"></p>
+        </div>
+
+        <p class="mg-gb-announce" id="mgGbAnnounce" aria-live="assertive" aria-atomic="true"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- END SCREEN -->
+  <section class="mg-gb-section" id="mgGbEndScreen" hidden>
+    <div class="container">
+      <div class="mg-gb-results">
+        <h2>🏆 Geometry Session Complete!</h2>
+        <p class="mg-gb-results-sub" id="mgGbResultSub">Time is up. Here is how your building went.</p>
+        <p class="mg-gb-newbest hidden" id="mgGbNewBest"><i class="fas fa-trophy" aria-hidden="true"></i>New Personal Best!</p>
+        <div class="mg-gb-res-grid">
+          <div class="mg-gb-res-cell is-primary">
+            <span class="mg-gb-res-num" id="mgGbResScore">0</span>
+            <span class="mg-gb-res-lbl">Score</span>
+          </div>
+          <div class="mg-gb-res-cell">
+            <span class="mg-gb-res-num" id="mgGbResAttempted">0</span>
+            <span class="mg-gb-res-lbl">Attempted</span>
+          </div>
+          <div class="mg-gb-res-cell">
+            <span class="mg-gb-res-num" id="mgGbResCorrect">0</span>
+            <span class="mg-gb-res-lbl">Correct</span>
+          </div>
+          <div class="mg-gb-res-cell">
+            <span class="mg-gb-res-num" id="mgGbResWrong">0</span>
+            <span class="mg-gb-res-lbl">Wrong</span>
+          </div>
+          <div class="mg-gb-res-cell">
+            <span class="mg-gb-res-num" id="mgGbResAccuracy">0%</span>
+            <span class="mg-gb-res-lbl">Accuracy</span>
+          </div>
+          <div class="mg-gb-res-cell">
+            <span class="mg-gb-res-num" id="mgGbResStreak">0</span>
+            <span class="mg-gb-res-lbl">Best Streak</span>
+          </div>
+        </div>
+        <div class="mg-gb-skills-wrap" id="mgGbSkillsWrap" hidden>
+          <p class="mg-gb-skills-title">✨ Geometry Skills Practised</p>
+          <div class="mg-gb-skills" id="mgGbResSkills"></div>
+        </div>
+        <p class="mg-gb-fbmsg" id="mgGbFbMsg" role="status" aria-live="polite"></p>
+        <div class="mg-gb-res-actions">
+          <button type="button" class="btn btn-primary" id="mgGbPlayAgain">🔄 Build Again</button>
+          <a href="/maths-games/" class="btn btn-secondary" style="background:var(--primary);border-color:var(--primary);">🎮 More Maths Games</a>
+          <a href="/cbse-study-material/class-10/mathematics/coordinate-geometry/" class="btn" style="color:var(--primary);border:2px solid var(--primary);background:var(--white);">📚 Practise Geometry</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO CONTENT -->
+  <section class="mg-gb-section mg-gb-section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Why It Helps</span>
+        <h2>Build Geometry Skills with Geometry Builder</h2>
+        <p>A hands-on way to practise angles, triangles, quadrilaterals, perimeter, area and symmetry.</p>
+      </div>
+      <div class="mg-gb-seo-content">
+        <p>The <strong>Geometry Builder</strong> game lets students construct and measure shapes directly on screen. Drag points to build exact angles, triangles and quadrilaterals, rotate a symmetry line into place, or type in the result for perimeter and area challenges, earning points for every correct build and bonus points for precise construction and streaks.</p>
+        <h3>Five challenge types in one game</h3>
+        <p><strong>Angle Builder</strong> asks you to drag an arm until it makes a target angle such as 60° or 90°. <strong>Triangle Builder</strong> challenges you to construct equilateral, isosceles or right-angled triangles. <strong>Quadrilateral Builder</strong> asks for squares, rectangles or parallelograms. <strong>Perimeter &amp; Area</strong> tests calculations such as the area of an 8 cm × 5 cm rectangle (40 cm²) or the perimeter of a square. <strong>Symmetry</strong> asks you to draw a true line of symmetry across a square, rectangle or isosceles triangle. In <em>Mixed</em> mode every builder appears at random.</p>
+        <h3>Fit geometry into the CBSE routine</h3>
+        <p>Geometry runs throughout the CBSE Mathematics curriculum, from basic shapes in <a href="/cbse-study-material/class-6/mathematics/">Class 6 Maths</a> to triangles and circles in <a href="/cbse-study-material/class-9/mathematics/">Class 9 Maths</a> and <a href="/cbse-study-material/class-10/mathematics/triangles/">Triangles</a> and <a href="/cbse-study-material/class-10/mathematics/circles/">Circles</a> in Class 10. Pair the game with <a href="/cbse-study-material/class-10/mathematics/coordinate-geometry/">Class 10 Coordinate Geometry</a> notes and our full <a href="/cbse-study-material/">CBSE study material</a>, or explore the other <a href="/maths-games/">Maths games</a> we have built.</p>
+        <div class="mg-gb-seo-links">
+          <a class="mg-gb-seo-chip" href="/maths-games/">🎮 All Maths Games</a>
+          <a class="mg-gb-seo-chip" href="/maths-games/speed-challenge/">⚡ Maths Speed Challenge</a>
+          <a class="mg-gb-seo-chip" href="/maths-games/equation-hunter/">🎯 Equation Hunter</a>
+          <a class="mg-gb-seo-chip" href="/maths-games/coordinate-shooter/">📍 Coordinate Shooter</a>
+          <a class="mg-gb-seo-chip" href="/maths-games/factor-detective/">🧩 Factor Detective</a>
+          <a class="mg-gb-seo-chip" href="/cbse-study-material/class-10/mathematics/coordinate-geometry/">📐 Coordinate Geometry</a>
+          <a class="mg-gb-seo-chip" href="/cbse-study-material/">📚 Study Material</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-about">
+      <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+      <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#faculty">Faculty</a></li>
+        <li><a href="/#courses">Courses</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/cbse-study-material/">Study Material</a></li>
+        <li><a href="/maths-games/">🎮 Maths Games</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Popular Searches</h4>
+      <ul>
+        <li><a href="/best-tuition-centre-hulimavu/">Best Tuition Centre in Hulimavu</a></li>
+        <li><a href="/best-coaching-centre-hulimavu/">Best Coaching Centre in Hulimavu</a></li>
+        <li><a href="/cbse-tuition-hulimavu/">CBSE Tuition in Hulimavu</a></li>
+        <li><a href="/maths-tuition-hulimavu/">Maths Tuition in Hulimavu</a></li>
+        <li><a href="/science-tuition-hulimavu/">Science Tuition in Hulimavu</a></li>
+        <li><a href="/kcet-coaching-hulimavu/">KCET Coaching in Hulimavu</a></li>
+        <li><a href="/class-10-tuition-hulimavu/">Class 10 Tuition Hulimavu</a></li>
+        <li><a href="/icse-tuition-hulimavu/">ICSE Tuition Hulimavu</a></li>
+        <li><a href="/tuition-classes-near-bannerghatta-road/">Tuition near Bannerghatta Road</a></li>
+        <li><a href="/cbse-tuition-bangalore/">CBSE Tuition Bangalore</a></li>
+        <li><a href="/tuition-centre-bangalore/">Best Tuition Centre in Bangalore</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ============================================================
+     Pure game logic (exported when run under Node for tests)
+     ============================================================ */
+
+  var VIEW_W = 600;
+  var VIEW_H = 480;
+
+  var TOL = {
+    easy:   { angle: 5,  sideRel: 0.06, rightAngle: 6, sym: 10 },
+    medium: { angle: 3,  sideRel: 0.04, rightAngle: 4, sym: 8 },
+    hard:   { angle: 2,  sideRel: 0.03, rightAngle: 3, sym: 6 }
+  };
+
+  var DIFF_BONUS = { easy: 0, medium: 5, hard: 10 };
+
+  var ANGLE_POOL = {
+    easy:   [30, 45, 60, 90],
+    medium: [30, 45, 60, 90, 120, 135],
+    hard:   [30, 45, 60, 90, 120, 135, 150, 180]
+  };
+
+  var TRIANGLE_BUILDS = ['equilateral', 'isosceles', 'right'];
+  var QUAD_BUILDS = ['square', 'rectangle', 'parallelogram'];
+  var SYM_SHAPES = ['square', 'rectangle', 'isosceles-triangle'];
+  var SYM_AXES = {
+    'square': [0, 45, 90, 135],
+    'rectangle': [0, 90],
+    'isosceles-triangle': [90]
+  };
+
+  var SKILL_LABEL = {
+    angle: 'Angles',
+    triangle: 'Triangles',
+    quadrilateral: 'Quadrilaterals',
+    'perimeter-area': 'Perimeter & Area',
+    symmetry: 'Symmetry'
+  };
+
+  var TYPE_LABEL = {
+    angle: 'Angle Builder',
+    triangle: 'Triangle Builder',
+    quadrilateral: 'Quadrilateral Builder',
+    'perimeter-area': 'Perimeter & Area',
+    symmetry: 'Symmetry Finder'
+  };
+
+  /* ---------- random helpers ---------- */
+  function randInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function pick(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+  }
+
+  /* ---------- geometry primitives ---------- */
+  function distance(ax, ay, bx, by) {
+    var dx = bx - ax;
+    var dy = by - ay;
+    return Math.sqrt(dx * dx + dy * dy);
+  }
+
+  function angleAt(ax, ay, bx, by, cx, cy) {
+    var ux = ax - bx;
+    var uy = ay - by;
+    var vx = cx - bx;
+    var vy = cy - by;
+    var lu = Math.sqrt(ux * ux + uy * uy);
+    var lv = Math.sqrt(vx * vx + vy * vy);
+    if (lu < 1e-9 || lv < 1e-9) { return 0; }
+    var cos = (ux * vx + uy * vy) / (lu * lv);
+    cos = Math.max(-1, Math.min(1, cos));
+    return Math.acos(cos) * 180 / Math.PI;
+  }
+
+  function armAngle(px, py, ox, oy) {
+    var dx = px - ox;
+    var dy = py - oy;
+    var len = Math.sqrt(dx * dx + dy * dy);
+    if (len < 1e-9) { return 0; }
+    var cos = dx / len;
+    cos = Math.max(-1, Math.min(1, cos));
+    return Math.acos(cos) * 180 / Math.PI;
+  }
+
+  function normalize180(deg) {
+    var d = ((deg % 180) + 180) % 180;
+    return d;
+  }
+
+  function angleDiff(a, b) {
+    var d = Math.abs(normalize180(a) - normalize180(b));
+    return Math.min(d, 180 - d);
+  }
+
+  function edgeDirection(ax, ay, bx, by) {
+    return normalize180(Math.atan2(by - ay, bx - ax) * 180 / Math.PI);
+  }
+
+  function sidesOf(points) {
+    var out = [];
+    for (var i = 0; i < points.length; i++) {
+      var a = points[i];
+      var b = points[(i + 1) % points.length];
+      out.push(distance(a.x, a.y, b.x, b.y));
+    }
+    return out;
+  }
+
+  function anglesOf(points) {
+    var out = [];
+    for (var i = 0; i < points.length; i++) {
+      var b = points[i];
+      var a = points[(i + points.length - 1) % points.length];
+      var c = points[(i + 1) % points.length];
+      out.push(angleAt(a.x, a.y, b.x, b.y, c.x, c.y));
+    }
+    return out;
+  }
+
+  function polygonArea(points) {
+    var sum = 0;
+    for (var i = 0; i < points.length; i++) {
+      var a = points[i];
+      var b = points[(i + 1) % points.length];
+      sum += (a.x * b.y - b.x * a.y);
+    }
+    return Math.abs(sum) / 2;
+  }
+
+  function triangleArea(points) {
+    var a = points[0];
+    var b = points[1];
+    var c = points[2];
+    return Math.abs((b.x - a.x) * (c.y - a.y) - (c.x - a.x) * (b.y - a.y)) / 2;
+  }
+
+  function mean(arr) {
+    if (!arr.length) { return 0; }
+    var s = 0;
+    for (var i = 0; i < arr.length; i++) { s += arr[i]; }
+    return s / arr.length;
+  }
+
+  function maxAbsDev(arr, ref) {
+    var m = -Infinity;
+    for (var i = 0; i < arr.length; i++) { m = Math.max(m, Math.abs(arr[i] - ref)); }
+    return m;
+  }
+
+  /* ---------- challenge generation ---------- */
+  function generateAngle(difficulty) {
+    var pool = ANGLE_POOL[difficulty];
+    return { targetDeg: pick(pool) };
+  }
+
+  function generateTriangle(difficulty) {
+    var build = pick(TRIANGLE_BUILDS);
+    return { build: build };
+  }
+
+  function generateQuadrilateral(difficulty) {
+    var build = pick(QUAD_BUILDS);
+    return { build: build };
+  }
+
+  function makePArea(shape, dims, ask) {
+    var value;
+    var unit = ask === 'perimeter' ? 'cm' : 'cm²';
+    var formula;
+    var prompt;
+    if (shape === 'rectangle') {
+      var l = dims.l;
+      var w = dims.w;
+      if (ask === 'perimeter') {
+        value = 2 * (l + w);
+        formula = '2 × (' + l + ' + ' + w + ')';
+        prompt = 'Find the perimeter of a rectangle with length ' + l + ' cm and width ' + w + ' cm.';
+      } else {
+        value = l * w;
+        formula = l + ' × ' + w;
+        prompt = 'Find the area of a rectangle with length ' + l + ' cm and width ' + w + ' cm.';
+      }
+    } else if (shape === 'square') {
+      var s = dims.s;
+      if (ask === 'perimeter') {
+        value = 4 * s;
+        formula = '4 × ' + s;
+        prompt = 'Find the perimeter of a square with side ' + s + ' cm.';
+      } else {
+        value = s * s;
+        formula = s + ' × ' + s;
+        prompt = 'Find the area of a square with side ' + s + ' cm.';
+      }
+    } else {
+      var b = dims.b;
+      var h = dims.h;
+      value = (b * h) / 2;
+      formula = '½ × ' + b + ' × ' + h;
+      prompt = 'Find the area of a triangle with base ' + b + ' cm and height ' + h + ' cm.';
+    }
+    return { value: value, unit: unit, formula: formula, prompt: prompt };
+  }
+
+  function generatePArea(difficulty) {
+    var r = Math.random();
+    var shape;
+    var dims;
+    var ask;
+    var preferRect = r < 0.45;
+    if (preferRect) {
+      shape = 'rectangle';
+      dims = { l: randInt(4, 12), w: randInt(3, 9) };
+      ask = Math.random() < 0.55 ? 'area' : 'perimeter';
+    } else if (r < 0.7) {
+      shape = 'square';
+      dims = { s: randInt(3, 10) };
+      ask = Math.random() < 0.55 ? 'area' : 'perimeter';
+    } else {
+      shape = 'triangle';
+      dims = { b: randInt(4, 12), h: randInt(3, 10) };
+      ask = 'area';
+    }
+    var built = makePArea(shape, dims, ask);
+    return {
+      shape: shape,
+      dims: dims,
+      ask: ask,
+      answer: built.value,
+      unit: built.unit,
+      formula: built.formula
+    };
+  }
+
+  function generateSymmetry(difficulty) {
+    return { shape: pick(SYM_SHAPES) };
+  }
+
+  function generateChallenge(type, difficulty) {
+    var c = {
+      type: type,
+      difficulty: difficulty,
+      skill: SKILL_LABEL[type],
+      label: TYPE_LABEL[type]
+    };
+    if (type === 'angle') { c.angle = generateAngle(difficulty); }
+    if (type === 'triangle') { c.triangle = generateTriangle(difficulty); }
+    if (type === 'quadrilateral') { c.quad = generateQuadrilateral(difficulty); }
+    if (type === 'perimeter-area') { c.pa = generatePArea(difficulty); }
+    if (type === 'symmetry') { c.sym = generateSymmetry(difficulty); }
+    return c;
+  }
+
+  function pickChallengeType(setting) {
+    if (setting !== 'mixed') { return setting; }
+    return pick(['angle', 'triangle', 'quadrilateral', 'perimeter-area', 'symmetry']);
+  }
+
+  function promptText(ch) {
+    if (ch.type === 'angle') { return 'Build an angle of ' + ch.angle.targetDeg + '°.'; }
+    if (ch.type === 'triangle') {
+      var t = ch.triangle.build;
+      if (t === 'equilateral') { return 'Build an equilateral triangle (all three sides equal).'; }
+      if (t === 'isosceles') { return 'Build an isosceles triangle (exactly two sides equal).'; }
+      return 'Build a right-angled triangle (one angle is exactly 90°).';
+    }
+    if (ch.type === 'quadrilateral') {
+      var q = ch.quad.build;
+      if (q === 'square') { return 'Build a square (four equal sides, four right angles).'; }
+      if (q === 'rectangle') { return 'Build a rectangle (opposite sides equal, four right angles).'; }
+      return 'Build a parallelogram (opposite sides equal and parallel).';
+    }
+    if (ch.type === 'perimeter-area') { return ch.pa.prompt; }
+    var s = ch.sym.shape;
+    var name = s === 'isosceles-triangle' ? 'isosceles triangle' : s;
+    return 'Draw a line of symmetry through the ' + name + '.';
+  }
+
+  /* ---------- validation ---------- */
+  function validateAngle(ch, construction, tol) {
+    var err = Math.abs(angleDiff(construction.angleDeg, ch.angle.targetDeg));
+    return { correct: err <= tol.angle, errDeg: err };
+  }
+
+  function validateTriangle(ch, points, tol) {
+    if (points.length < 3) { return { correct: false, errDeg: null }; }
+    var sides = sidesOf(points);
+    var angles = anglesOf(points);
+    var meanSide = mean(sides);
+    var area = triangleArea(points);
+    if (meanSide < 60 || area < 1000) { return { correct: false, errDeg: null }; }
+    var build = ch.triangle.build;
+    var ok = false;
+    var errDeg = null;
+    if (build === 'equilateral') {
+      var sideDev = maxAbsDev(sides, meanSide) / meanSide;
+      var angDev = maxAbsDev(angles, 60);
+      ok = sideDev <= tol.sideRel && angDev <= tol.rightAngle;
+      errDeg = Math.max(sideDev * 57.3, angDev);
+    } else if (build === 'isosceles') {
+      var d01 = Math.abs(sides[0] - sides[1]) / meanSide;
+      var d12 = Math.abs(sides[1] - sides[2]) / meanSide;
+      var d20 = Math.abs(sides[2] - sides[0]) / meanSide;
+      var minPair = Math.min(d01, d12, d20);
+      ok = minPair <= tol.sideRel;
+      errDeg = minPair * 57.3;
+    } else {
+      var minRight = Math.min(Math.abs(angles[0] - 90), Math.abs(angles[1] - 90), Math.abs(angles[2] - 90));
+      ok = minRight <= tol.rightAngle;
+      errDeg = minRight;
+    }
+    return { correct: ok, errDeg: errDeg };
+  }
+
+  function validateQuad(ch, points, tol) {
+    if (points.length < 4) { return { correct: false, errDeg: null }; }
+    var sides = sidesOf(points);
+    var angles = anglesOf(points);
+    var meanSide = mean(sides);
+    var area = polygonArea(points);
+    if (meanSide < 50 || area < 2000) { return { correct: false, errDeg: null }; }
+    var build = ch.quad.build;
+    var ok = false;
+    var errDeg = null;
+    var allRight = maxAbsDev(angles, 90) <= tol.rightAngle;
+    var opp01 = Math.abs(sides[0] - sides[2]) / meanSide;
+    var opp12 = Math.abs(sides[1] - sides[3]) / meanSide;
+    var p0 = points[0];
+    var p1 = points[1];
+    var p2 = points[2];
+    var p3 = points[3];
+    var dTop = edgeDirection(p0.x, p0.y, p1.x, p1.y);
+    var dBot = edgeDirection(p3.x, p3.y, p2.x, p2.y);
+    var dLeft = edgeDirection(p3.x, p3.y, p0.x, p0.y);
+    var dRight = edgeDirection(p1.x, p1.y, p2.x, p2.y);
+    var parHoriz = angleDiff(dTop, dBot) <= tol.sym;
+    var parVert = angleDiff(dLeft, dRight) <= tol.sym;
+    var parErr = Math.max(angleDiff(dTop, dBot), angleDiff(dLeft, dRight));
+    if (build === 'square') {
+      var sideDev = maxAbsDev(sides, meanSide) / meanSide;
+      ok = sideDev <= tol.sideRel && allRight;
+      errDeg = Math.max(sideDev * 57.3, maxAbsDev(angles, 90));
+    } else if (build === 'rectangle') {
+      ok = opp01 <= tol.sideRel && opp12 <= tol.sideRel && allRight;
+      errDeg = Math.max(opp01 * 57.3, Math.max(opp12 * 57.3, maxAbsDev(angles, 90)));
+    } else {
+      ok = opp01 <= tol.sideRel && opp12 <= tol.sideRel && parHoriz && parVert;
+      errDeg = Math.max(opp01 * 57.3, Math.max(opp12 * 57.3, parErr));
+    }
+    return { correct: ok, errDeg: errDeg };
+  }
+
+  function parseNumber(input) {
+    if (typeof input !== 'string' && typeof input !== 'number') { return null; }
+    var t = String(input).trim().replace(/\s*cm²\s*$/i, '').replace(/\s*cm2\s*$/i, '').replace(/\s*cm\s*$/i, '').trim();
+    if (!t) { return null; }
+    if (!/^-?\d*\.?\d+$/.test(t)) { return null; }
+    var v = parseFloat(t);
+    return isFinite(v) ? v : null;
+  }
+
+  function validatePArea(ch, input) {
+    var v = parseNumber(input);
+    if (v === null) { return { correct: false, errDeg: null }; }
+    var ok = Math.abs(v - ch.pa.answer) < 0.011;
+    return { correct: ok, errDeg: ok ? 0 : null };
+  }
+
+  function validateSymmetry(ch, construction, tol) {
+    var axes = SYM_AXES[ch.sym.shape] || [];
+    var best = Infinity;
+    for (var i = 0; i < axes.length; i++) {
+      best = Math.min(best, angleDiff(construction.lineDeg, axes[i]));
+    }
+    return { correct: best <= tol.sym, errDeg: best };
+  }
+
+  function validateChallenge(ch, construction, difficulty) {
+    var tol = TOL[difficulty];
+    var res;
+    if (ch.type === 'angle') { res = validateAngle(ch, construction, tol); }
+    else if (ch.type === 'triangle') { res = validateTriangle(ch, construction.points, tol); }
+    else if (ch.type === 'quadrilateral') { res = validateQuad(ch, construction.points, tol); }
+    else if (ch.type === 'perimeter-area') { res = validatePArea(ch, construction.answer); }
+    else if (ch.type === 'symmetry') { res = validateSymmetry(ch, construction, tol); }
+    else { res = { correct: false, errDeg: null }; }
+    return res;
+  }
+
+  function precisionBonus(ch, res) {
+    if (res && typeof res.errDeg === 'number' && isFinite(res.errDeg) && res.correct) {
+      if (res.errDeg <= 0.5) { return 10; }
+      if (res.errDeg <= 1) { return 5; }
+    }
+    return 0;
+  }
+
+  /* ---------- feedback ---------- */
+  function feedbackFor(ch, res, difficulty) {
+    var tol = TOL[difficulty];
+    var err = res && typeof res.errDeg === 'number' ? res.errDeg : Infinity;
+    if (ch.type === 'perimeter-area') {
+      if (res.correct) {
+        return 'Correct! ' + (ch.pa.ask === 'perimeter' ? 'Perimeter' : 'Area') + ' = ' + ch.pa.answer + ' ' + ch.pa.unit;
+      }
+      return 'Not quite. Check the formula.';
+    }
+    if (ch.type === 'angle') {
+      if (res.correct) { return 'Perfect Angle! 📐'; }
+      return err <= tol.angle * 2 ? 'Almost there! Adjust the angle.' : 'Keep building. Check the geometry.';
+    }
+    if (res.correct) { return 'Perfect Construction! 📐'; }
+    return err <= tol.angle * 2 ? 'Almost perfect! A small adjustment was needed.' : 'Keep building. Check the geometry.';
+  }
+
+  function hintFor(ch) {
+    if (ch.type === 'angle') { return 'Drag the arm until the angle matches ' + ch.angle.targetDeg + '°.'; }
+    if (ch.type === 'triangle') {
+      if (ch.triangle.build === 'equilateral') { return 'Make all three sides equal.'; }
+      if (ch.triangle.build === 'isosceles') { return 'Make exactly two sides equal.'; }
+      return 'Make one corner a perfect right angle (90°).';
+    }
+    if (ch.type === 'quadrilateral') {
+      if (ch.quad.build === 'square') { return 'Four equal sides and four right angles.'; }
+      if (ch.quad.build === 'rectangle') { return 'Opposite sides equal, four right angles.'; }
+      return 'Opposite sides equal and parallel.';
+    }
+    if (ch.type === 'perimeter-area') { return ch.pa.ask === 'perimeter' ? 'Perimeter = 2 × (length + width)' : (ch.pa.shape === 'triangle' ? 'Area = ½ × base × height' : 'Area = length × width'); }
+    return 'Rotate the line until it splits the shape into mirror images.';
+  }
+
+  /* ---------- scoring ---------- */
+  function streakBonus(streak) {
+    if (streak === 3) { return 5; }
+    if (streak === 5) { return 10; }
+    if (streak === 10) { return 20; }
+    return 0;
+  }
+
+  function pointsFor(difficulty, streak, precision) {
+    return 10 + (DIFF_BONUS[difficulty] || 0) + (precision || 0) + streakBonus(streak);
+  }
+
+  function accuracyFor(correct, attempted) {
+    if (attempted === 0) { return 0; }
+    return Math.round((correct / attempted) * 100);
+  }
+
+  function sessionMessage(accuracy, correct) {
+    if (accuracy >= 90 && correct > 0) { return 'Outstanding! Your constructions were precise.'; }
+    if (accuracy >= 75) { return 'Great building! Your geometry is sharp.'; }
+    if (accuracy >= 50) { return 'Good work! Keep practising for perfect shapes.'; }
+    return 'Every build teaches. Focus on accuracy first!';
+  }
+
+  /* ---------- ideal constructions (used by tests + rendering) ---------- */
+  function idealPoints(ch) {
+    if (ch.type === 'angle') { return { angleDeg: ch.angle.targetDeg }; }
+    if (ch.type === 'symmetry') { return { lineDeg: SYM_AXES[ch.sym.shape][0] }; }
+    if (ch.type === 'perimeter-area') { return { answer: String(ch.pa.answer) }; }
+    if (ch.type === 'triangle') {
+      var b = ch.triangle.build;
+      var pts;
+      if (b === 'equilateral') {
+        var s = 170;
+        var h = s * Math.sqrt(3) / 2;
+        pts = [
+          { x: 300 - s / 2, y: 240 + h / 3 },
+          { x: 300 + s / 2, y: 240 + h / 3 },
+          { x: 300, y: 240 - (2 * h / 3) }
+        ];
+      } else if (b === 'isosceles') {
+        pts = [
+          { x: 210, y: 320 },
+          { x: 390, y: 320 },
+          { x: 300, y: 160 }
+        ];
+      } else {
+        pts = [
+          { x: 200, y: 340 },
+          { x: 400, y: 340 },
+          { x: 200, y: 160 }
+        ];
+      }
+      return { points: pts };
+    }
+    if (ch.type === 'quadrilateral') {
+      var q = ch.quad.build;
+      var qpts;
+      if (q === 'square') {
+        qpts = [
+          { x: 200, y: 140 },
+          { x: 400, y: 140 },
+          { x: 400, y: 340 },
+          { x: 200, y: 340 }
+        ];
+      } else if (q === 'rectangle') {
+        qpts = [
+          { x: 160, y: 150 },
+          { x: 440, y: 150 },
+          { x: 440, y: 330 },
+          { x: 160, y: 330 }
+        ];
+      } else {
+        qpts = [
+          { x: 180, y: 180 },
+          { x: 420, y: 180 },
+          { x: 450, y: 340 },
+          { x: 210, y: 340 }
+        ];
+      }
+      return { points: qpts };
+    }
+    return {};
+  }
+
+  /* ---------- default constructions for a fresh challenge ---------- */
+  function defaultConstruction(ch) {
+    if (ch.type === 'angle') { return { angleDeg: 30, points: [], lineDeg: 0, answer: '' }; }
+    if (ch.type === 'triangle') {
+      return { angleDeg: 30, points: [{ x: 200, y: 160 }, { x: 380, y: 200 }, { x: 320, y: 380 }], lineDeg: 0, answer: '' };
+    }
+    if (ch.type === 'quadrilateral') {
+      return { angleDeg: 30, points: [{ x: 200, y: 160 }, { x: 400, y: 160 }, { x: 380, y: 320 }, { x: 220, y: 320 }], lineDeg: 0, answer: '' };
+    }
+    if (ch.type === 'perimeter-area') { return { angleDeg: 30, points: [], lineDeg: 0, answer: '' }; }
+    return { angleDeg: 30, points: [], lineDeg: 45, answer: '' };
+  }
+
+  var api = {
+    VIEW_W: VIEW_W,
+    VIEW_H: VIEW_H,
+    TOL: TOL,
+    DIFF_BONUS: DIFF_BONUS,
+    ANGLE_POOL: ANGLE_POOL,
+    SYM_AXES: SYM_AXES,
+    randInt: randInt,
+    distance: distance,
+    angleAt: angleAt,
+    armAngle: armAngle,
+    normalize180: normalize180,
+    angleDiff: angleDiff,
+    edgeDirection: edgeDirection,
+    sidesOf: sidesOf,
+    anglesOf: anglesOf,
+    polygonArea: polygonArea,
+    triangleArea: triangleArea,
+    generateChallenge: generateChallenge,
+    pickChallengeType: pickChallengeType,
+    makePArea: makePArea,
+    promptText: promptText,
+    validateChallenge: validateChallenge,
+    precisionBonus: precisionBonus,
+    feedbackFor: feedbackFor,
+    hintFor: hintFor,
+    streakBonus: streakBonus,
+    pointsFor: pointsFor,
+    accuracyFor: accuracyFor,
+    sessionMessage: sessionMessage,
+    idealPoints: idealPoints,
+    defaultConstruction: defaultConstruction,
+    parseNumber: parseNumber,
+    SKILL_LABEL: SKILL_LABEL,
+    TYPE_LABEL: TYPE_LABEL
+  };
+
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = api;
+    return;
+  }
+
+  /* ============================================================
+     Browser wiring
+     ============================================================ */
+
+  var localStorageKey = 'vyasa_geometry_builder_stats';
+  var NEXT_MS = 1500;
+
+  var SETTINGS = { difficulty: 'medium', timeLimit: 90, challengeType: 'mixed' };
+
+  var state = {
+    score: 0, correct: 0, wrong: 0, attempted: 0,
+    streak: 0, bestStreak: 0, ended: false, locked: false,
+    timerId: null, pendingAdvance: null, deadline: 0
+  };
+
+  var currentChallenge = null;
+  var construction = { angleDeg: 30, points: [], lineDeg: 0, answer: '' };
+  var skillsSeen = {};
+  var dragHandle = null;
+
+  var els = {
+    hamburger: document.getElementById('hamburger'),
+    navLinks: document.getElementById('navLinks'),
+    startScreen: document.getElementById('mgGbStartScreen'),
+    gameScreen: document.getElementById('mgGbGameScreen'),
+    endScreen: document.getElementById('mgGbEndScreen'),
+    startBtn: document.getElementById('mgGbStartBtn'),
+    playAgain: document.getElementById('mgGbPlayAgain'),
+    caseIndex: document.getElementById('mgGbCaseIndex'),
+    caseType: document.getElementById('mgGbCaseType'),
+    qCard: document.getElementById('mgGbQCard'),
+    prompt: document.getElementById('mgGbPrompt'),
+    svg: document.getElementById('mgGbSvg'),
+    layer: document.getElementById('mgGbLayer'),
+    readout: document.getElementById('mgGbReadout'),
+    answerRow: document.getElementById('mgGbAnswerRow'),
+    answerInput: document.getElementById('mgGbAnswerInput'),
+    answerUnit: document.getElementById('mgGbAnswerUnit'),
+    check: document.getElementById('mgGbCheck'),
+    feedback: document.getElementById('mgGbFeedback'),
+    hint: document.getElementById('mgGbHint'),
+    announce: document.getElementById('mgGbAnnounce'),
+    toast: null,
+    score: document.getElementById('mgGbScore'),
+    solved: document.getElementById('mgGbSolved'),
+    wrong: document.getElementById('mgGbWrong'),
+    streak: document.getElementById('mgGbStreak'),
+    time: document.getElementById('mgGbTime'),
+    timeBox: document.getElementById('mgGbTimeBox'),
+    pbScore: document.getElementById('mgGbPbScore'),
+    pbAccuracy: document.getElementById('mgGbPbAccuracy'),
+    pbStreak: document.getElementById('mgGbPbStreak'),
+    pbGames: document.getElementById('mgGbPbGames'),
+    pbNote: document.getElementById('mgGbPbNote'),
+    resScore: document.getElementById('mgGbResScore'),
+    resAttempted: document.getElementById('mgGbResAttempted'),
+    resCorrect: document.getElementById('mgGbResCorrect'),
+    resWrong: document.getElementById('mgGbResWrong'),
+    resAccuracy: document.getElementById('mgGbResAccuracy'),
+    resStreak: document.getElementById('mgGbResStreak'),
+    resSkills: document.getElementById('mgGbResSkills'),
+    skillsWrap: document.getElementById('mgGbSkillsWrap'),
+    fbMsg: document.getElementById('mgGbFbMsg'),
+    newBest: document.getElementById('mgGbNewBest')
+  };
+
+  function toastEl() {
+    if (!els.toast) {
+      els.toast = document.createElement('div');
+      els.toast.className = 'mg-gb-toast';
+      els.toast.setAttribute('role', 'status');
+      els.toast.setAttribute('aria-live', 'polite');
+      document.body.appendChild(els.toast);
+    }
+    return els.toast;
+  }
+
+  /* ---------- navigation ---------- */
+  function closeNav() {
+    if (els.hamburger) { els.hamburger.classList.remove('open'); }
+    if (els.navLinks) { els.navLinks.classList.remove('show'); }
+  }
+  if (els.hamburger) {
+    els.hamburger.addEventListener('click', function () {
+      els.hamburger.classList.toggle('open');
+      if (els.navLinks) { els.navLinks.classList.toggle('show'); }
+    });
+  }
+  if (els.navLinks) {
+    Array.prototype.forEach.call(els.navLinks.querySelectorAll('a'), function (link) {
+      link.addEventListener('click', closeNav);
+    });
+  }
+
+  /* ---------- settings ---------- */
+  function wireSettings() {
+    var groups = document.querySelectorAll('[data-setting-group]');
+    Array.prototype.forEach.call(groups, function (group) {
+      var settingName = group.getAttribute('data-setting-group');
+      var btns = group.querySelectorAll('.mg-gb-opt');
+      Array.prototype.forEach.call(btns, function (btn) {
+        btn.addEventListener('click', function () {
+          var value = btn.getAttribute('data-value');
+          if (settingName === 'timeLimit') { value = parseInt(value, 10); }
+          SETTINGS[settingName] = value;
+          Array.prototype.forEach.call(btns, function (b) {
+            var on = b === btn;
+            b.classList.toggle('is-active', on);
+            b.setAttribute('aria-pressed', on ? 'true' : 'false');
+          });
+        });
+      });
+    });
+  }
+
+  /* ---------- local storage ---------- */
+  function loadBest() {
+    try {
+      var raw = localStorage.getItem(localStorageKey);
+      if (!raw) { return null; }
+      var data = JSON.parse(raw);
+      if (data && typeof data === 'object') { return data; }
+    } catch (e) { /* storage unavailable */ }
+    return null;
+  }
+
+  function saveBest(accuracy) {
+    var best = loadBest() || { bestScore: 0, bestAccuracy: 0, bestStreak: 0, gamesPlayed: 0 };
+    var isNewBest = false;
+    if (state.score > best.bestScore) { best.bestScore = state.score; isNewBest = true; }
+    if (accuracy > best.bestAccuracy) { best.bestAccuracy = accuracy; }
+    if (state.bestStreak > best.bestStreak) { best.bestStreak = state.bestStreak; }
+    best.gamesPlayed = (best.gamesPlayed || 0) + 1;
+    try {
+      localStorage.setItem(localStorageKey, JSON.stringify(best));
+    } catch (e) { /* storage unavailable */ }
+    return isNewBest;
+  }
+
+  function renderPersonalBest() {
+    var best = loadBest();
+    if (best && (best.bestScore > 0 || best.gamesPlayed > 0)) {
+      els.pbScore.textContent = best.bestScore;
+      els.pbAccuracy.textContent = best.bestAccuracy + '%';
+      els.pbStreak.textContent = best.bestStreak;
+      els.pbGames.textContent = best.gamesPlayed;
+      if (els.pbNote) { els.pbNote.textContent = 'Beat your best to level up.'; }
+    }
+  }
+
+  /* ---------- timer ---------- */
+  function renderTime(seconds) {
+    if (!els.time) { return; }
+    els.time.textContent = seconds;
+    els.timeBox.classList.toggle('is-warning', seconds <= 10 && seconds > 5);
+    els.timeBox.classList.toggle('is-danger', seconds <= 5);
+  }
+
+  function startTimer() {
+    state.deadline = Date.now() + (SETTINGS.timeLimit * 1000);
+    renderTime(SETTINGS.timeLimit);
+    state.timerId = window.setInterval(function () {
+      var remainingMs = state.deadline - Date.now();
+      var remaining = Math.max(0, Math.ceil(remainingMs / 1000));
+      renderTime(remaining);
+      announceOnce(10, '10 seconds left');
+      announceOnce(5, '5 seconds left');
+      if (remainingMs <= 0) { endGame(); }
+    }, 250);
+  }
+
+  var announced = {};
+  function announceOnce(second, message) {
+    var remaining = Math.max(0, Math.ceil((state.deadline - Date.now()) / 1000));
+    if (remaining === second && !announced[second]) {
+      announced[second] = true;
+      announce(message);
+    }
+  }
+
+  function announce(message) {
+    if (els.announce) {
+      els.announce.textContent = message;
+      window.setTimeout(function () {
+        if (els.announce && els.announce.textContent === message) {
+          els.announce.textContent = '';
+        }
+      }, 4000);
+    }
+  }
+
+  /* ---------- screens ---------- */
+  function showScreen(name) {
+    els.startScreen.hidden = name !== 'start';
+    els.gameScreen.hidden = name !== 'game';
+    els.endScreen.hidden = name !== 'end';
+  }
+
+  /* ---------- hud ---------- */
+  function renderHud() {
+    els.score.textContent = state.score;
+    els.solved.textContent = state.correct;
+    els.wrong.textContent = state.wrong;
+    els.streak.textContent = state.streak;
+  }
+
+  function bumpScore() {
+    els.score.classList.remove('mg-bump');
+    void els.score.offsetWidth;
+    els.score.classList.add('mg-bump');
+  }
+
+  /* ---------- toast ---------- */
+  var toastTimerId = null;
+  function showToast(message) {
+    var el = toastEl();
+    el.textContent = message;
+    el.classList.add('is-visible');
+    if (toastTimerId) { window.clearTimeout(toastTimerId); }
+    toastTimerId = window.setTimeout(function () {
+      el.classList.remove('is-visible');
+    }, 1800);
+  }
+
+  /* ---------- svg helpers ---------- */
+  function svgNS() { return 'http://www.w3.org/2000/svg'; }
+
+  function svgEl(tag, attrs) {
+    var n = document.createElementNS(svgNS(), tag);
+    for (var k in attrs) {
+      if (attrs.hasOwnProperty(k)) { n.setAttribute(k, attrs[k]); }
+    }
+    return n;
+  }
+
+  function clearChild(node) {
+    while (node.firstChild) { node.removeChild(node.firstChild); }
+  }
+
+  function renderGrid(layer) {
+    var i;
+    var line;
+    for (i = 0; i <= VIEW_W; i += 40) {
+      line = svgEl('line', { x1: i, y1: 0, x2: i, y2: VIEW_H, class: 'ct-axis', stroke: '#d8dbea', 'stroke-width': 1 });
+      layer.appendChild(line);
+    }
+    for (i = 0; i <= VIEW_H; i += 40) {
+      line = svgEl('line', { x1: 0, y1: i, x2: VIEW_W, y2: i, class: 'ct-axis', stroke: '#d8dbea', 'stroke-width': 1 });
+      layer.appendChild(line);
+    }
+    var ax = svgEl('line', { x1: 0, y1: 240, x2: VIEW_W, y2: 240, class: 'ct-axis', stroke: '#b8bdda', 'stroke-width': 1.5 });
+    var ay = svgEl('line', { x1: 300, y1: 0, x2: 300, y2: VIEW_H, class: 'ct-axis', stroke: '#b8bdda', 'stroke-width': 1.5 });
+    var z = svgEl('circle', { cx: 300, cy: 240, r: 4, class: 'ct-zero', fill: '#b8bdda' });
+    layer.appendChild(ax);
+    layer.appendChild(ay);
+    layer.appendChild(z);
+  }
+
+  function handleCircle(cx, cy, key, extra) {
+    var c = svgEl('circle', {
+      cx: cx, cy: cy, r: 14, class: 'mg-gb-handle',
+      fill: '#f9a825', stroke: '#1a237e', 'stroke-width': 3,
+      'data-handle': key
+    });
+    if (extra) {
+      for (var k in extra) { c.setAttribute(k, extra[k]); }
+    }
+    c.setAttribute('tabindex', '0');
+    c.setAttribute('role', 'slider');
+    c.setAttribute('aria-label', key);
+    return c;
+  }
+
+  function labelEl(x, y, text) {
+    return svgEl('text', { x: x, y: y, class: 'ct-lab', fill: '#1a237e', 'font-size': 15, 'font-weight': 700, 'text-anchor': 'middle' });
+  }
+
+  function renderAngle(ch, layer) {
+    var ox = 120;
+    var oy = 380;
+    var target = ch.angle.targetDeg;
+    var armLen = 260;
+    var baseEndX = ox + armLen;
+    renderGrid(layer);
+    layer.appendChild(svgEl('line', { x1: ox, y1: oy, x2: baseEndX, y2: oy, class: 'ct-curve', stroke: '#1a237e', 'stroke-width': 3 }));
+    var hx = ox + armLen * Math.cos(construction.angleDeg * Math.PI / 180);
+    var hy = oy - armLen * Math.sin(construction.angleDeg * Math.PI / 180);
+    layer.appendChild(svgEl('line', { x1: ox, y1: oy, x2: hx, y2: hy, class: 'ct-curve', stroke: '#f9a825', 'stroke-width': 3 }));
+    var r = 90;
+    var arc = svgEl('path', {
+      d: 'M ' + (ox + r) + ' ' + oy + ' A ' + r + ' ' + r + ' 0 ' + (construction.angleDeg > 180 ? 1 : 0) + ' 1 ' + (ox + r * Math.cos(construction.angleDeg * Math.PI / 180)) + ' ' + (oy - r * Math.sin(construction.angleDeg * Math.PI / 180)),
+      fill: 'none', stroke: '#f9a825', 'stroke-width': 2, 'stroke-dasharray': '4 4'
+    });
+    layer.appendChild(arc);
+    layer.appendChild(handleCircle(hx, hy, 'angle'));
+    layer.appendChild(svgEl('circle', { cx: ox, cy: oy, r: 5, fill: '#1a237e' }));
+    layer.appendChild(labelEl(ox + 66, oy - 40, 'target ' + target + '°'));
+  }
+
+  function renderTriangle(ch, layer) {
+    renderGrid(layer);
+    var pts = construction.points;
+    var sides = sidesOf(pts);
+    var path = svgEl('polygon', {
+      points: pts.map(function (p) { return p.x + ',' + p.y; }).join(' '),
+      fill: 'rgba(26,35,126,0.08)', stroke: '#1a237e', 'stroke-width': 3
+    });
+    layer.appendChild(path);
+    for (var i = 0; i < pts.length; i++) {
+      var p = pts[i];
+      layer.appendChild(handleCircle(p.x, p.y, 'v' + i));
+      var b = pts[(i + 1) % pts.length];
+      layer.appendChild(labelEl((p.x + b.x) / 2, (p.y + b.y) / 2 - 8, Math.round(sides[i]) + ''));
+    }
+  }
+
+  function renderQuad(ch, layer) {
+    renderGrid(layer);
+    var pts = construction.points;
+    var sides = sidesOf(pts);
+    var path = svgEl('polygon', {
+      points: pts.map(function (p) { return p.x + ',' + p.y; }).join(' '),
+      fill: 'rgba(26,35,126,0.08)', stroke: '#1a237e', 'stroke-width': 3
+    });
+    layer.appendChild(path);
+    for (var i = 0; i < pts.length; i++) {
+      var p = pts[i];
+      layer.appendChild(handleCircle(p.x, p.y, 'v' + i));
+      var b = pts[(i + 1) % pts.length];
+      layer.appendChild(labelEl((p.x + b.x) / 2, (p.y + b.y) / 2 - 8, Math.round(sides[i]) + ''));
+    }
+  }
+
+  function renderPArea(ch, layer) {
+    renderGrid(layer);
+    var cx = 300;
+    var cy = 240;
+    var shape = ch.pa.shape;
+    if (shape === 'rectangle') {
+      var lw = ch.pa.dims.l * 18;
+      var hw = ch.pa.dims.w * 18;
+      var x0 = cx - lw / 2;
+      var y0 = cy - hw / 2;
+      layer.appendChild(svgEl('rect', { x: x0, y: y0, width: lw, height: hw, fill: 'rgba(26,35,126,0.08)', stroke: '#1a237e', 'stroke-width': 3 }));
+      layer.appendChild(labelEl(cx, y0 + hw + 24, ch.pa.dims.l + ' cm'));
+      layer.appendChild(labelEl(x0 - 46, cy, ch.pa.dims.w + ' cm'));
+      layer.appendChild(labelEl(cx, y0 + 70, 'L = ' + ch.pa.dims.l + ''));
+      layer.appendChild(labelEl(cx, cy, 'W = ' + ch.pa.dims.w + ''));
+    } else if (shape === 'square') {
+      var side = ch.pa.dims.s * 18;
+      var sx0 = cx - side / 2;
+      var sy0 = cy - side / 2;
+      layer.appendChild(svgEl('rect', { x: sx0, y: sy0, width: side, height: side, fill: 'rgba(26,35,126,0.08)', stroke: '#1a237e', 'stroke-width': 3 }));
+      layer.appendChild(labelEl(cx, sy0 + side + 24, ch.pa.dims.s + ' cm'));
+      layer.appendChild(labelEl(cx, cy, 'side ' + ch.pa.dims.s));
+    } else {
+      var bx = ch.pa.dims.b * 16;
+      var bh = ch.pa.dims.h * 18;
+      var baseY = cy + bh / 2;
+      layer.appendChild(svgEl('polygon', {
+        points: (cx - bx / 2) + ',' + baseY + ' ' + (cx + bx / 2) + ',' + baseY + ' ' + cx + ',' + (cy - bh / 2),
+        fill: 'rgba(26,35,126,0.08)', stroke: '#1a237e', 'stroke-width': 3
+      }));
+      layer.appendChild(svgEl('line', { x1: cx, y1: baseY, x2: cx, y2: cy - bh / 2, class: 'ct-curve', stroke: '#f9a825', 'stroke-width': 2, 'stroke-dasharray': '5 4' }));
+      layer.appendChild(labelEl(cx, baseY + 26, 'base ' + ch.pa.dims.b + ' cm'));
+      layer.appendChild(labelEl(cx - bx / 2 - 30, cy, 'h ' + ch.pa.dims.h));
+    }
+  }
+
+  function renderSymmetry(ch, layer) {
+    renderGrid(layer);
+    var cx = 300;
+    var cy = 240;
+    var shape = ch.sym.shape;
+    var pts;
+    if (shape === 'square') {
+      pts = [{ x: cx - 90, y: cy - 90 }, { x: cx + 90, y: cy - 90 }, { x: cx + 90, y: cy + 90 }, { x: cx - 90, y: cy + 90 }];
+    } else if (shape === 'rectangle') {
+      pts = [{ x: cx - 130, y: cy - 80 }, { x: cx + 130, y: cy - 80 }, { x: cx + 130, y: cy + 80 }, { x: cx - 130, y: cy + 80 }];
+    } else {
+      pts = [{ x: cx - 100, y: cy + 90 }, { x: cx + 100, y: cy + 90 }, { x: cx, y: cy - 100 }];
+    }
+    layer.appendChild(svgEl('polygon', {
+      points: pts.map(function (p) { return p.x + ',' + p.y; }).join(' '),
+      fill: 'rgba(26,35,126,0.08)', stroke: '#1a237e', 'stroke-width': 3
+    }));
+    var len = 200;
+    var rad = construction.lineDeg * Math.PI / 180;
+    var ex1 = cx + len * Math.cos(rad);
+    var ey1 = cy - len * Math.sin(rad);
+    var ex2 = cx - len * Math.cos(rad);
+    var ey2 = cy + len * Math.sin(rad);
+    layer.appendChild(svgEl('line', { x1: ex1, y1: ey1, x2: ex2, y2: ey2, class: 'ct-curve', stroke: '#f9a825', 'stroke-width': 3, 'stroke-dasharray': '8 5' }));
+    layer.appendChild(handleCircle(ex1, ey1, 'sym'));
+    layer.appendChild(svgEl('circle', { cx: cx, cy: cy, r: 5, fill: '#1a237e' }));
+  }
+
+  /* ---------- readout ---------- */
+  function updateReadout() {
+    if (!currentChallenge) { return; }
+    var ch = currentChallenge;
+    if (ch.type === 'angle') {
+      els.readout.textContent = 'Angle: ' + Math.round(angleDiff(construction.angleDeg, 0)) + '°';
+    } else if (ch.type === 'triangle' || ch.type === 'quadrilateral') {
+      var sides = sidesOf(construction.points);
+      els.readout.textContent = 'Sides: ' + sides.map(function (s) { return Math.round(s); }).join(', ');
+    } else if (ch.type === 'symmetry') {
+      els.readout.textContent = 'Line: ' + Math.round(normalize180(construction.lineDeg)) + '°';
+    } else {
+      els.readout.textContent = '';
+    }
+  }
+
+  /* ---------- render ---------- */
+  function renderGeometry() {
+    if (!els.svg || !els.layer) { return; }
+    clearChild(els.layer);
+    if (!currentChallenge) { return; }
+    var ch = currentChallenge;
+    if (ch.type === 'angle') { renderAngle(ch, els.layer); }
+    else if (ch.type === 'triangle') { renderTriangle(ch, els.layer); }
+    else if (ch.type === 'quadrilateral') { renderQuad(ch, els.layer); }
+    else if (ch.type === 'perimeter-area') { renderPArea(ch, els.layer); }
+    else if (ch.type === 'symmetry') { renderSymmetry(ch, els.layer); }
+  }
+
+  /* ---------- svg coordinate math ---------- */
+  function svgPoint(evt) {
+    var svg = els.svg;
+    if (!svg || typeof svg.createSVGPoint !== 'function') { return null; }
+    var pt = svg.createSVGPoint();
+    pt.x = evt.clientX;
+    pt.y = evt.clientY;
+    var ctm = svg.getScreenCTM();
+    if (!ctm || !ctm.inverse) { return null; }
+    var p = pt.matrixTransform(ctm.inverse());
+    return { x: p.x, y: p.y };
+  }
+
+  function clampPoint(p) {
+    return { x: Math.max(20, Math.min(VIEW_W - 20, p.x)), y: Math.max(20, Math.min(VIEW_H - 20, p.y)) };
+  }
+
+  /* ---------- drag interaction ---------- */
+  function handlePointerDown(evt) {
+    if (state.ended || state.locked || !currentChallenge) { return; }
+    var t = evt.target;
+    if (!t || typeof t.getAttribute !== 'function') { return; }
+    var key = t.getAttribute('data-handle');
+    if (!key) { return; }
+    dragHandle = key;
+    if (els.svg && typeof els.svg.setPointerCapture === 'function') {
+      try { els.svg.setPointerCapture(evt.pointerId); } catch (e) { /* ignore */ }
+    }
+    evt.preventDefault();
+    applyDrag(evt);
+  }
+
+  function handlePointerMove(evt) {
+    if (!dragHandle) { return; }
+    applyDrag(evt);
+  }
+
+  function handlePointerUp(evt) {
+    if (!dragHandle) { return; }
+    dragHandle = null;
+    if (els.svg && typeof els.svg.releasePointerCapture === 'function') {
+      try { els.svg.releasePointerCapture(evt.pointerId); } catch (e) { /* ignore */ }
+    }
+  }
+
+  function applyDrag(evt) {
+    var p = svgPoint(evt);
+    if (!p) { return; }
+    var ch = currentChallenge;
+    if (dragHandle === 'angle') {
+      construction.angleDeg = armAngle(p.x, p.y, 120, 380);
+      construction.angleDeg = Math.max(1, Math.min(180, construction.angleDeg));
+    } else if (dragHandle === 'v0' || dragHandle === 'v1' || dragHandle === 'v2' || dragHandle === 'v3') {
+      var idx = Number(dragHandle.slice(1));
+      construction.points[idx] = clampPoint(p);
+    } else if (dragHandle === 'sym') {
+      var cx = 300;
+      var cy = 240;
+      construction.lineDeg = normalize180(Math.atan2(-(p.y - cy), p.x - cx) * 180 / Math.PI);
+    }
+    renderGeometry();
+    updateReadout();
+  }
+
+  /* ---------- answer input ---------- */
+  function wireAnswerInput() {
+    if (!els.answerInput) { return; }
+    els.answerInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') { checkAnswer(); }
+    });
+  }
+
+  /* ---------- question rendering ---------- */
+  function renderQuestion() {
+    var ch = currentChallenge;
+    els.caseIndex.textContent = 'Challenge ' + (state.attempted + 1);
+    els.caseType.textContent = ch.label;
+    els.prompt.textContent = promptText(ch);
+    construction = defaultConstruction(ch);
+    els.answerRow.hidden = ch.type !== 'perimeter-area';
+    if (els.answerInput) { els.answerInput.value = ''; }
+    if (els.answerUnit) {
+      els.answerUnit.textContent = ch.type === 'perimeter-area' ? ch.pa.unit : 'cm²';
+    }
+    if (els.check) {
+      els.check.textContent = '✓ Check Geometry';
+      els.check.disabled = false;
+    }
+    els.feedback.textContent = '';
+    els.feedback.className = 'mg-gb-feedback';
+    els.hint.textContent = '';
+    els.qCard.classList.remove('is-correct', 'is-wrong');
+    els.qCard.classList.remove('mg-gb-qpop');
+    void els.qCard.offsetWidth;
+    els.qCard.classList.add('mg-gb-qpop');
+    skillsSeen[ch.skill] = true;
+    renderGeometry();
+    updateReadout();
+  }
+
+  function lockInputs(locked) {
+    state.locked = locked;
+    els.check.disabled = locked;
+    if (els.answerInput) { els.answerInput.disabled = locked; }
+  }
+
+  /* ---------- gameplay ---------- */
+  function resetState() {
+    state.score = 0; state.correct = 0; state.wrong = 0; state.attempted = 0;
+    state.streak = 0; state.bestStreak = 0; state.ended = false; state.locked = false;
+    if (state.timerId) { window.clearInterval(state.timerId); state.timerId = null; }
+    if (state.pendingAdvance) { window.clearTimeout(state.pendingAdvance); state.pendingAdvance = null; }
+    announced = {};
+    dragHandle = null;
+    skillsSeen = {};
+    currentChallenge = null;
+    els.timeBox.classList.remove('is-warning', 'is-danger');
+    renderHud();
+  }
+
+  function checkAnswer() {
+    if (state.ended || state.locked) { return; }
+    if (!currentChallenge) { return; }
+    lockInputs(true);
+    state.attempted++;
+    var ch = currentChallenge;
+    var res = validateChallenge(ch, construction, SETTINGS.difficulty);
+    if (res.correct) {
+      state.correct++;
+      state.streak++;
+      if (state.streak > state.bestStreak) { state.bestStreak = state.streak; }
+      var precision = precisionBonus(ch, res);
+      var pts = pointsFor(SETTINGS.difficulty, state.streak, precision);
+      state.score += pts;
+      els.feedback.textContent = feedbackFor(ch, res, SETTINGS.difficulty) + (pts > 10 ? ' (+' + pts + ')' : '');
+      els.feedback.className = 'mg-gb-feedback is-good';
+      els.qCard.classList.add('is-correct');
+      bumpScore();
+      if (state.streak === 3 || state.streak === 5 || state.streak === 10) {
+        showToast('🔥 ' + state.streak + ' Geometry Streak!');
+      }
+    } else {
+      state.wrong++;
+      state.streak = 0;
+      els.feedback.textContent = feedbackFor(ch, res, SETTINGS.difficulty);
+      els.feedback.className = 'mg-gb-feedback is-bad';
+      els.qCard.classList.add('is-wrong');
+    }
+    els.hint.textContent = hintFor(ch);
+    renderHud();
+    if (!state.ended) {
+      state.pendingAdvance = window.setTimeout(advanceQuestion, NEXT_MS);
+    }
+  }
+
+  function advanceQuestion() {
+    state.pendingAdvance = null;
+    if (state.ended) { return; }
+    var type = pickChallengeType(SETTINGS.challengeType);
+    currentChallenge = generateChallenge(type, SETTINGS.difficulty);
+    state.locked = false;
+    if (els.answerInput) { els.answerInput.disabled = false; }
+    renderQuestion();
+  }
+
+  function startGame() {
+    if (state.timerId) { window.clearInterval(state.timerId); state.timerId = null; }
+    resetState();
+    showScreen('game');
+    advanceQuestion();
+    startTimer();
+  }
+
+  function endGame() {
+    if (state.ended) { return; }
+    state.ended = true;
+    if (state.timerId) { window.clearInterval(state.timerId); state.timerId = null; }
+    if (state.pendingAdvance) { window.clearTimeout(state.pendingAdvance); state.pendingAdvance = null; }
+    state.locked = true;
+    announce('Time is up!');
+    var accuracy = accuracyFor(state.correct, state.attempted);
+    var isNewBest = saveBest(accuracy);
+    renderResults(accuracy, isNewBest);
+    showScreen('end');
+    if (els.playAgain) { els.playAgain.focus(); }
+  }
+
+  function renderResults(accuracy, isNewBest) {
+    els.resScore.textContent = state.score;
+    els.resAttempted.textContent = state.attempted;
+    els.resCorrect.textContent = state.correct;
+    els.resWrong.textContent = state.wrong;
+    els.resAccuracy.textContent = accuracy + '%';
+    els.resStreak.textContent = state.bestStreak;
+    els.fbMsg.textContent = sessionMessage(accuracy, state.correct);
+    els.newBest.classList.toggle('hidden', !isNewBest);
+    var skills = Object.keys(skillsSeen).sort();
+    if (skills.length) {
+      els.skillsWrap.hidden = false;
+      els.resSkills.textContent = '';
+      skills.forEach(function (s) {
+        var chip = document.createElement('span');
+        chip.className = 'mg-gb-skill-chip';
+        chip.textContent = '✨ ' + s;
+        els.resSkills.appendChild(chip);
+      });
+    } else {
+      els.skillsWrap.hidden = true;
+    }
+    renderPersonalBest();
+  }
+
+  /* ---------- sandboxed construction mutators for automated tests (no answers) ---------- */
+  function constructionSnapshot() {
+    return {
+      angleDeg: construction.angleDeg,
+      lineDeg: construction.lineDeg,
+      answer: construction.answer,
+      points: construction.points.map(function (p) { return { x: p.x, y: p.y }; })
+    };
+  }
+
+  window.mgGb = {
+    challenge: function () {
+      var ch = currentChallenge;
+      if (!ch) { return null; }
+      var out = {
+        type: ch.type,
+        difficulty: ch.difficulty,
+        skill: ch.skill,
+        label: ch.label,
+        prompt: promptText(ch)
+      };
+      if (ch.type === 'angle') { out.targetDeg = ch.angle.targetDeg; }
+      if (ch.type === 'triangle') { out.build = ch.triangle.build; }
+      if (ch.type === 'quadrilateral') { out.build = ch.quad.build; }
+      if (ch.type === 'perimeter-area') { out.shape = ch.pa.shape; out.dims = JSON.parse(JSON.stringify(ch.pa.dims)); out.ask = ch.pa.ask; }
+      if (ch.type === 'symmetry') { out.shape = ch.sym.shape; }
+      return out;
+    },
+    construction: constructionSnapshot,
+    setAngle: function (deg) {
+      construction.angleDeg = Math.max(1, Math.min(180, Number(deg)));
+      renderGeometry();
+      updateReadout();
+      return constructionSnapshot();
+    },
+    setLine: function (deg) {
+      construction.lineDeg = normalize180(Number(deg));
+      renderGeometry();
+      updateReadout();
+      return constructionSnapshot();
+    },
+    moveVertex: function (i, x, y) {
+      construction.points[i] = clampPoint({ x: Number(x), y: Number(y) });
+      renderGeometry();
+      updateReadout();
+      return constructionSnapshot();
+    },
+    setAnswer: function (s) {
+      if (els.answerInput) { els.answerInput.value = String(s); }
+      construction.answer = String(s);
+      return constructionSnapshot();
+    }
+  };
+
+  /* ---------- events ---------- */
+  wireSettings();
+  wireAnswerInput();
+  renderPersonalBest();
+
+  if (els.svg) {
+    els.svg.addEventListener('pointerdown', handlePointerDown);
+    els.svg.addEventListener('pointermove', handlePointerMove);
+    els.svg.addEventListener('pointerup', handlePointerUp);
+    els.svg.addEventListener('pointercancel', handlePointerUp);
+  }
+
+  els.startBtn.addEventListener('click', startGame);
+  els.playAgain.addEventListener('click', startGame);
+  els.check.addEventListener('click', checkAnswer);
+})();
+</script>
+</body>
+</html>
