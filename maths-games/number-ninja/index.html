@@ -1,0 +1,1722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Number Ninja | Maths Arcade Game | Vyasa Academy</title>
+  <meta name="description" content="Play Number Ninja by Vyasa Academy, a timed maths arcade game featuring mental arithmetic, fractions, percentages, combo streaks and progressive challenges." />
+  <link rel="canonical" href="https://www.vyasaacademy.in/maths-games/number-ninja/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vyasa Academy" />
+  <meta property="og:title" content="Number Ninja | Maths Arcade Game | Vyasa Academy" />
+  <meta property="og:description" content="Play Number Ninja by Vyasa Academy, a timed maths arcade game featuring mental arithmetic, fractions, percentages, combo streaks and progressive challenges." />
+  <meta property="og:url" content="https://www.vyasaacademy.in/maths-games/number-ninja/" />
+  <meta property="og:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Number Ninja | Maths Arcade Game | Vyasa Academy" />
+  <meta name="twitter:description" content="Play Number Ninja by Vyasa Academy, a timed maths arcade game featuring mental arithmetic, fractions, percentages, combo streaks and progressive challenges." />
+  <meta name="twitter:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.vyasaacademy.in/" },
+      { "@type": "ListItem", "position": 2, "name": "Vyasa Maths Games", "item": "https://www.vyasaacademy.in/maths-games/" },
+      { "@type": "ListItem", "position": 3, "name": "Number Ninja", "item": "https://www.vyasaacademy.in/maths-games/number-ninja/" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Number Ninja | Maths Arcade Game | Vyasa Academy",
+    "applicationCategory": "GameApplication",
+    "url": "https://www.vyasaacademy.in/maths-games/number-ninja/",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "description": "Play Number Ninja by Vyasa Academy, a timed maths arcade game featuring mental arithmetic, fractions, percentages, combo streaks and progressive challenges.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+    "publisher": { "@type": "Organization", "name": "Vyasa Academy", "url": "https://vyasaacademy.in/" }
+  }
+  </script>
+  <style>
+    /* ===== VYASA NUMBER NINJA (page-scoped) ===== */
+    .nn-hero {
+      position: relative;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, var(--primary-dark) 100%);
+      color: var(--white);
+      overflow: hidden;
+      padding: 110px 0 84px;
+      text-align: center;
+    }
+    .nn-hero-bg { position: absolute; inset: 0; pointer-events: none; }
+    .nn-symbol {
+      position: absolute;
+      font-weight: 800;
+      font-family: 'Playfair Display', serif;
+      color: var(--accent-light);
+      opacity: 0.12;
+      user-select: none;
+      animation: nn-float 9s ease-in-out infinite;
+    }
+    @keyframes nn-float {
+      0%, 100% { transform: translateY(0) rotate(-4deg); }
+      50% { transform: translateY(-16px) rotate(4deg); }
+    }
+    .nn-symbol-1 { top: 10%; left: 7%; font-size: 3rem; }
+    .nn-symbol-2 { top: 18%; right: 9%; font-size: 2.4rem; animation-delay: 1.2s; }
+    .nn-symbol-3 { bottom: 16%; left: 13%; font-size: 2.8rem; animation-delay: 2s; }
+    .nn-symbol-4 { bottom: 28%; right: 15%; font-size: 2rem; animation-delay: 0.6s; }
+    .nn-symbol-5 { top: 46%; left: 3.5%; font-size: 1.9rem; animation-delay: 1.6s; }
+    .nn-symbol-6 { top: 56%; right: 3.5%; font-size: 1.9rem; animation-delay: 2.4s; }
+
+    .nn-hero-content { position: relative; z-index: 1; max-width: 820px; margin: 0 auto; }
+    .nn-crumbs {
+      position: relative;
+      z-index: 1;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 18px;
+    }
+    .nn-crumbs a { color: rgba(255,255,255,0.85); text-decoration: underline; text-underline-offset: 3px; }
+    .nn-crumbs a:hover { color: var(--accent-light); }
+    .nn-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,213,79,0.4);
+      color: var(--accent-light);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      padding: 7px 18px;
+      border-radius: 50px;
+      margin-bottom: 20px;
+    }
+    .nn-hero h1 { font-size: 3.2rem; font-weight: 800; line-height: 1.12; margin-bottom: 12px; }
+    .nn-tagline { font-size: 1.35rem; font-weight: 600; color: var(--accent-light); margin-bottom: 10px; }
+    .nn-hero-sub { font-size: 1.05rem; opacity: 0.88; max-width: 620px; margin: 0 auto; line-height: 1.7; }
+
+    .nn-section { padding: 76px 0; }
+    .nn-section-alt { background: var(--white); }
+
+    .nn-layout {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 28px;
+      align-items: start;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .nn-panel {
+      background: var(--white);
+      border: 1px solid rgba(26,35,126,0.06);
+      border-radius: 20px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+    }
+
+    .nn-group { margin-bottom: 26px; }
+    .nn-group:last-child { margin-bottom: 0; }
+    .nn-group-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+    .nn-group-title i { color: var(--accent-dark); }
+    .nn-opts { display: flex; flex-wrap: wrap; gap: 10px; }
+    .nn-opt {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--white);
+      border: 1.5px solid rgba(26,35,126,0.18);
+      color: var(--primary);
+      padding: 11px 18px;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: inherit;
+    }
+    .nn-opt:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .nn-opt.is-active { background: var(--primary); border-color: var(--primary); color: var(--white); }
+
+    .nn-start-row { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-top: 6px; }
+    .nn-start { padding: 16px 46px; font-size: 1.05rem; }
+    .nn-end-link {
+      color: var(--gray);
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: var(--transition);
+    }
+    .nn-end-link:hover { color: var(--primary); border-bottom-color: var(--accent); }
+
+    .nn-pb { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: var(--white); border-radius: 20px; padding: 30px; box-shadow: var(--shadow-lg); }
+    .nn-pb h3 { font-size: 1.15rem; margin-bottom: 4px; }
+    .nn-pb-note { font-size: 0.9rem; color: rgba(255,255,255,0.8); margin-bottom: 20px; }
+    .nn-pb-none { font-size: 0.95rem; color: var(--accent-light); font-weight: 600; margin-bottom: 18px; }
+    .nn-pb-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .nn-pb-grid.grid-5 { grid-template-columns: repeat(5, 1fr); }
+    .nn-pb-cell { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 14px; padding: 14px 8px; text-align: center; }
+    .nn-pb-num { display: block; font-size: 1.35rem; font-weight: 800; color: var(--accent-light); line-height: 1.1; }
+    .nn-pb-lbl { display: block; font-size: 0.66rem; color: rgba(255,255,255,0.78); text-transform: uppercase; letter-spacing: 0.6px; margin-top: 5px; }
+
+    .nn-demo { margin-top: 26px; border-radius: 16px; border: 1px solid rgba(26,35,126,0.08); background: linear-gradient(135deg, rgba(26,35,126,0.04), rgba(249,168,37,0.08)); padding: 18px; }
+    .nn-demo-title { font-size: 0.85rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 12px; }
+    .nn-demo-title i { color: var(--accent-dark); }
+    .nn-demo-card-wrap { position: relative; min-height: 96px; }
+    .nn-demo-card {
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      background: var(--white);
+      border: 1px solid rgba(26,35,126,0.12);
+      border-radius: 12px;
+      padding: 12px 16px;
+      box-shadow: var(--shadow);
+    }
+    .nn-demo-q { font-size: 1.15rem; font-weight: 800; color: var(--primary); }
+    .nn-demo-a { font-size: 1.15rem; font-weight: 800; color: #0e9f3b; }
+    .nn-demo-strike { font-size: 0.72rem; font-weight: 800; color: #0e9f3b; background: rgba(14,159,59,0.1); border: 1px solid rgba(14,159,59,0.3); padding: 4px 8px; border-radius: 50px; letter-spacing: 0.4px; }
+    .nn-demo-card.is-1 { display: flex; animation: nn-demo 6.6s ease-in-out infinite 0s; }
+    .nn-demo-card.is-2 { display: flex; animation: nn-demo 6.6s ease-in-out infinite 2.2s; }
+    .nn-demo-card.is-3 { display: flex; animation: nn-demo 6.6s ease-in-out infinite 4.4s; }
+    @keyframes nn-demo {
+      0% { opacity: 0; transform: translateY(6px); }
+      6% { opacity: 1; transform: translateY(0); }
+      30% { opacity: 1; }
+      36% { opacity: 0; transform: translateY(-6px); }
+      100% { opacity: 0; }
+    }
+
+    /* ---------- game arena ---------- */
+    .nn-arena-wrap { max-width: 1080px; margin: 0 auto; }
+    .nn-arena {
+      background: radial-gradient(ellipse at top, #27328f 0%, #1a237e 45%, #0d1452 100%);
+      border-radius: 24px;
+      padding: 30px 34px 36px;
+      border: 1px solid rgba(255,213,79,0.25);
+      box-shadow: var(--shadow-lg);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+    .nn-arena::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 18% 12%, rgba(249,168,37,0.10) 0%, transparent 45%);
+      pointer-events: none;
+    }
+    .nn-arena ::selection { background: var(--accent); color: var(--primary-dark); }
+
+    .nn-hud-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 22px; position: relative; z-index: 1; }
+    .nn-hud-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.12rem; }
+    .nn-hud-brand i { color: var(--accent-light); }
+    .nn-hud-lvlpill {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,213,79,0.45);
+      color: var(--accent-light);
+      font-size: 0.86rem;
+      font-weight: 800;
+      padding: 6px 14px;
+      border-radius: 50px;
+      letter-spacing: 0.4px;
+      transition: transform 0.2s ease;
+    }
+    .nn-hud-lvlpill.is-levelup { animation: nn-levelpop 0.9s ease; }
+    @keyframes nn-levelpop {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,213,79,0); }
+      40% { transform: scale(1.22); box-shadow: 0 0 0 12px rgba(255,213,79,0.35); }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,213,79,0); }
+    }
+
+    .nn-hud { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-bottom: 14px; position: relative; z-index: 1; }
+    .nn-stat {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 14px;
+      padding: 12px 10px 10px;
+      text-align: center;
+      transition: transform 0.15s ease;
+    }
+    .nn-stat-num { display: block; font-size: 1.5rem; font-weight: 800; color: var(--accent-light); line-height: 1.05; font-variant-numeric: tabular-nums; }
+    .nn-stat-lbl { display: block; font-size: 0.66rem; color: rgba(255,255,255,0.72); text-transform: uppercase; letter-spacing: 0.7px; margin-top: 4px; }
+    .nn-stat-time { background: rgba(255,255,255,0.1); border-color: rgba(255,213,79,0.4); }
+    .nn-stat-time.nn-is-warning { animation: nn-timewarn 0.8s ease-in-out infinite; }
+    .nn-stat-time.nn-is-danger { animation: nn-timedanger 0.5s ease-in-out infinite; }
+    @keyframes nn-timewarn { 0%,100% { background: rgba(255,255,255,0.1); } 50% { background: rgba(249,168,37,0.35); } }
+    @keyframes nn-timedanger { 0%,100% { background: rgba(239,83,80,0.4); transform: scale(1); } 50% { background: rgba(239,83,80,0.75); transform: scale(1.05); } }
+    .nn-bump { animation: nn-bump 0.25s ease; }
+    @keyframes nn-bump { 0% { transform: scale(1); } 50% { transform: scale(1.35); } 100% { transform: scale(1); } }
+
+    .nn-levelbar { margin-bottom: 22px; position: relative; z-index: 1; }
+    .nn-levelbar-row { display: flex; justify-content: space-between; align-items: baseline; font-size: 0.78rem; color: rgba(255,255,255,0.8); margin-bottom: 6px; }
+    .nn-levelbar-row b { color: var(--accent-light); }
+    .nn-levelbar-track { height: 8px; border-radius: 50px; background: rgba(255,255,255,0.12); overflow: hidden; }
+    .nn-levelbar-fill { height: 100%; width: 0%; border-radius: 50px; background: linear-gradient(90deg, var(--accent) 0%, var(--accent-light) 100%); transition: width 0.3s ease; }
+
+    .nn-life-row { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: rgba(255,255,255,0.8); position: relative; z-index: 1; margin-bottom: 20px; }
+    .nn-lives { display: inline-flex; gap: 6px; }
+    .nn-life {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px; height: 30px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: var(--white);
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+    }
+    .nn-life.is-full { background: rgba(249,168,37,0.18); border-color: var(--accent-light); color: var(--accent-light); }
+    .nn-life.is-lost { opacity: 0.28; }
+
+    .nn-qcard {
+      position: relative;
+      z-index: 1;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 20px;
+      padding: 34px 28px 28px;
+      text-align: center;
+      transition: box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .nn-qcard.is-boss { border-color: var(--accent-light); box-shadow: 0 0 26px rgba(255,213,79,0.28); }
+    .nn-qkind { font-size: 0.72rem; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 10px; }
+    .nn-boss-tag { display: inline-block; color: var(--accent-light); margin-left: 8px; }
+    .nn-qtext {
+      font-size: clamp(2.2rem, 6vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+      font-variant-numeric: tabular-nums;
+    }
+    .nn-qtext .nn-op-sym { color: var(--accent-light); }
+    .nn-qfoot { font-size: 1rem; color: rgba(255,255,255,0.7); margin-bottom: 22px; }
+
+    .nn-answer-row { display: flex; align-items: stretch; justify-content: center; gap: 10px; flex-wrap: wrap; }
+    .nn-answer-input {
+      width: min(300px, 70vw);
+      padding: 16px 18px;
+      font-size: 1.6rem;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+      text-align: center;
+      border-radius: 14px;
+      border: 2px solid var(--accent);
+      background: var(--white);
+      color: var(--primary-dark);
+      outline: none;
+      transition: box-shadow 0.2s ease, border-color 0.2s ease;
+      font-family: inherit;
+    }
+    .nn-answer-input:focus { box-shadow: 0 0 0 4px rgba(255,213,79,0.35); }
+    .nn-neg-btn {
+      width: 56px;
+      border-radius: 14px;
+      border: 2px solid rgba(255,255,255,0.4);
+      background: rgba(255,255,255,0.08);
+      color: var(--white);
+      font-size: 1.4rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: inherit;
+    }
+    .nn-neg-btn:hover { border-color: var(--accent-light); color: var(--accent-light); }
+    .nn-submit-btn {
+      padding: 14px 30px;
+      font-size: 1.05rem;
+      border-radius: 14px;
+      border: none;
+      font-family: inherit;
+    }
+    .nn-feedback {
+      min-height: 30px;
+      margin-top: 16px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.92);
+    }
+    .nn-feedback.is-good { color: #7ef2a5; }
+    .nn-feedback.is-bad { color: #ffab91; }
+    .nn-feedback .nn-correct-ans { color: var(--accent-light); font-weight: 800; }
+
+    .nn-boss-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 5;
+      background: linear-gradient(135deg, rgba(13,20,82,0.96), rgba(26,35,126,0.94));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      text-align: center;
+      animation: nn-bossin 0.4s ease;
+    }
+    .nn-boss-overlay.nn-hidden { display: none; }
+    @keyframes nn-bossin { from { opacity: 0; } to { opacity: 1; } }
+    .nn-boss-emoji { font-size: 3.4rem; animation: nn-bossswing 0.8s ease-in-out infinite alternate; }
+    @keyframes nn-bossswing { from { transform: rotate(-14deg) translateY(0); } to { transform: rotate(14deg) translateY(-8px); } }
+    .nn-boss-label { font-size: 2.4rem; font-weight: 800; color: var(--accent-light); letter-spacing: 1px; }
+    .nn-boss-hint { font-size: 1rem; color: rgba(255,255,255,0.85); }
+
+    .nn-hint-link { color: rgba(255,255,255,0.55); font-size: 0.85rem; margin-top: 18px; display: inline-block; position: relative; z-index: 1; }
+
+    /* ---------- results ---------- */
+    .nn-results {
+      max-width: 720px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: 24px;
+      padding: 44px 40px;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(26,35,126,0.06);
+    }
+    .nn-results h2 { font-size: 2rem; margin-bottom: 6px; }
+    .nn-results-sub { color: var(--gray); margin-bottom: 8px; font-size: 1rem; }
+    .nn-newbest {
+      display: inline-block;
+      margin: 4px 0 16px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-light));
+      color: var(--primary-dark);
+      font-weight: 800;
+      font-size: 0.9rem;
+      padding: 8px 20px;
+      border-radius: 50px;
+      animation: nn-best 0.8s ease;
+    }
+    @keyframes nn-best { 0% { transform: scale(0.6); opacity: 0; } 60% { transform: scale(1.1); } 100% { transform: scale(1); opacity: 1; } }
+    .nn-res-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px; }
+    .nn-res-cell { background: rgba(26,35,126,0.04); border: 1px solid rgba(26,35,126,0.1); border-radius: 16px; padding: 18px 10px; }
+    .nn-res-cell.is-primary { background: var(--primary); border-color: var(--primary); }
+    .nn-res-num { display: block; font-size: 1.7rem; font-weight: 800; color: var(--primary); line-height: 1.05; font-variant-numeric: tabular-nums; }
+    .nn-res-cell.is-primary .nn-res-num { color: var(--accent-light); }
+    .nn-res-lbl { display: block; font-size: 0.7rem; color: var(--gray); text-transform: uppercase; letter-spacing: 0.7px; margin-top: 6px; }
+    .nn-res-cell.is-primary .nn-res-lbl { color: rgba(255,255,255,0.8); }
+    .nn-fbmsg { font-size: 1.05rem; font-weight: 600; color: var(--primary); margin-bottom: 24px; line-height: 1.6; }
+    .nn-res-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+
+    .nn-seo-content { max-width: 860px; margin: 0 auto; color: var(--text,#374151); line-height: 1.85; }
+    .nn-seo-content h3 { color: var(--primary); margin: 22px 0 8px; }
+    .nn-seo-content p { margin-bottom: 14px; }
+    .nn-seo-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+    .nn-seo-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(26,35,126,0.05);
+      border: 1px solid rgba(26,35,126,0.15);
+      color: var(--primary);
+      padding: 9px 16px;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    .nn-seo-chip:hover { background: var(--primary); color: var(--white); transform: translateY(-2px); }
+
+    @media (max-width: 920px) {
+      .nn-layout { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nn-hero h1 { font-size: 2.2rem; }
+      .nn-tagline { font-size: 1.1rem; }
+      .nn-hero-sub { font-size: 0.98rem; }
+      .nn-hero { padding: 96px 0 64px; }
+      .nn-panel { padding: 24px 20px; }
+      .nn-arena { padding: 22px 16px 26px; }
+      .nn-hud { grid-template-columns: repeat(3, 1fr); }
+      .nn-stat-num { font-size: 1.25rem; }
+      .nn-qcard { padding: 26px 14px 22px; }
+      .nn-pb-grid { grid-template-columns: repeat(2, 1fr); }
+      .nn-pb-grid.grid-5 { grid-template-columns: repeat(3, 1fr); }
+      .nn-res-grid { grid-template-columns: repeat(2, 1fr); }
+      .nn-results { padding: 32px 18px; }
+      .nn-answer-input { width: min(240px, 66vw); font-size: 1.35rem; padding: 13px 10px; }
+      .nn-hud-top { flex-wrap: wrap; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .nn-symbol { animation: none; }
+      .nn-demo-card.is-1, .nn-demo-card.is-2, .nn-demo-card.is-3 { animation: none; opacity: 1; }
+      .nn-demo-card.is-2, .nn-demo-card.is-3 { display: none; }
+      .nn-stat-time.nn-is-warning, .nn-stat-time.nn-is-danger { animation: none; }
+      .nn-hud-lvlpill.is-levelup { animation: none; }
+      .nn-boss-emoji { animation: none; }
+      .nn-bump, .nn-best { animation: none; }
+      .nn-opt:hover, .nn-stat, .btn { transform: none; transition: none; }
+      .nn-arena { overflow-x: hidden; }
+    }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="/" class="logo"><i class="fas fa-graduation-cap"></i> Vyasa Academy</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#courses">Courses</a></li>
+      <li><a href="/#papers">Practice Papers</a></li>
+      <li><a href="/cbse-study-material/">Study Material</a></li>
+      <li><a href="/maths-games/" class="active" aria-current="page">🎮 Maths Games</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- START SCREEN -->
+  <section class="nn-hero" id="nnStartScreen">
+    <div class="nn-hero-bg" aria-hidden="true">
+      <span class="nn-symbol nn-symbol-1">÷</span>
+      <span class="nn-symbol nn-symbol-2">×</span>
+      <span class="nn-symbol nn-symbol-3">%</span>
+      <span class="nn-symbol nn-symbol-4">π</span>
+      <span class="nn-symbol nn-symbol-5">−</span>
+      <span class="nn-symbol nn-symbol-6">+</span>
+    </div>
+    <div class="container nn-hero-content">
+      <nav class="nn-crumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a> / <a href="/maths-games/">Maths Games</a> / <span aria-current="page">Number Ninja</span>
+      </nav>
+      <span class="nn-badge">Mental Arithmetic &middot; Combos &middot; Boss Rounds</span>
+      <h1>⚔️ Number Ninja</h1>
+      <p class="nn-tagline">Think Fast. Strike Smart. Become a Maths Ninja.</p>
+      <p class="nn-hero-sub">Ready to test your Maths reflexes? Answer quick-fire questions, build combos, climb levels and face the Boss Round.</p>
+    </div>
+  </section>
+
+  <section class="nn-section nn-section-alt">
+    <div class="container">
+      <div class="nn-layout">
+
+        <div class="nn-panel" id="nnSettingsPanel">
+          <div class="section-header" style="padding:0 0 22px;">
+            <span class="section-tag">Set Up</span>
+            <h2>Choose Your Battle</h2>
+            <p>Pick a difficulty, timer and challenge type. No login needed.</p>
+          </div>
+
+          <div class="nn-group" role="group" aria-label="Choose difficulty">
+            <span class="nn-group-title"><i class="fas fa-signal" aria-hidden="true"></i>Difficulty</span>
+            <div class="nn-opts" data-setting-group="difficulty">
+              <button type="button" class="nn-opt" data-setting="difficulty" data-value="rookie" aria-pressed="false">Rookie</button>
+              <button type="button" class="nn-opt is-active" data-setting="difficulty" data-value="warrior" aria-pressed="true">Warrior</button>
+              <button type="button" class="nn-opt" data-setting="difficulty" data-value="ninja" aria-pressed="false">Ninja</button>
+            </div>
+          </div>
+
+          <div class="nn-group" role="group" aria-label="Choose game duration">
+            <span class="nn-group-title"><i class="fas fa-stopwatch" aria-hidden="true"></i>Game Duration</span>
+            <div class="nn-opts" data-setting-group="duration">
+              <button type="button" class="nn-opt is-active" data-setting="duration" data-value="60" aria-pressed="true">60 seconds</button>
+              <button type="button" class="nn-opt" data-setting="duration" data-value="90" aria-pressed="false">90 seconds</button>
+              <button type="button" class="nn-opt" data-setting="duration" data-value="120" aria-pressed="false">120 seconds</button>
+            </div>
+          </div>
+
+          <div class="nn-group" role="group" aria-label="Choose challenge type">
+            <span class="nn-group-title"><i class="fas fa-crosshairs" aria-hidden="true"></i>Challenge</span>
+            <div class="nn-opts" data-setting-group="challenge">
+              <button type="button" class="nn-opt" data-setting="challenge" data-value="multiplication" aria-pressed="false">Multiplication</button>
+              <button type="button" class="nn-opt" data-setting="challenge" data-value="addsub" aria-pressed="false">Addition &amp; Subtraction</button>
+              <button type="button" class="nn-opt" data-setting="challenge" data-value="fractions" aria-pressed="false">Fractions</button>
+              <button type="button" class="nn-opt" data-setting="challenge" data-value="percent" aria-pressed="false">Percentages</button>
+              <button type="button" class="nn-opt is-active" data-setting="challenge" data-value="mixed" aria-pressed="true">Mixed Maths</button>
+            </div>
+          </div>
+
+          <div class="nn-start-row">
+            <button type="button" class="btn btn-primary nn-start" id="nnStartBtn">⚡ START BATTLE</button>
+            <a href="/maths-games/" class="nn-end-link"><i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Maths Games</a>
+          </div>
+        </div>
+
+        <aside class="nn-pb" id="nnPbPanel">
+          <h3><i class="fas fa-trophy" aria-hidden="true"></i> Your Personal Best</h3>
+          <p class="nn-pb-note">Stored privately on this device. No account needed.</p>
+          <div id="nnPbNone" class="nn-pb-none">No battles yet &mdash; your first strike awaits!</div>
+          <div class="nn-pb-grid grid-5" id="nnPbGrid" hidden></div>
+
+          <div class="nn-demo" aria-hidden="true">
+            <p class="nn-demo-title"><i class="fas fa-bolt" aria-hidden="true"></i> How to strike</p>
+            <div class="nn-demo-card-wrap">
+              <div class="nn-demo-card is-1">
+                <span class="nn-demo-q">24 × 6 = ?</span>
+                <span class="nn-demo-a">144</span>
+                <span class="nn-demo-strike">⚡ PERFECT STRIKE!</span>
+              </div>
+              <div class="nn-demo-card is-2">
+                <span class="nn-demo-q">25% of 80 = ?</span>
+                <span class="nn-demo-a">20</span>
+                <span class="nn-demo-strike">⚡ PERFECT STRIKE!</span>
+              </div>
+              <div class="nn-demo-card is-3">
+                <span class="nn-demo-q">&frac13; of 27 = ?</span>
+                <span class="nn-demo-a">9</span>
+                <span class="nn-demo-strike">⚡ PERFECT STRIKE!</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GAME SCREEN -->
+  <section class="nn-section" id="nnGameScreen" hidden>
+    <div class="container">
+      <div class="nn-arena-wrap">
+        <div class="nn-arena" id="nnArena">
+
+          <div class="nn-hud-top">
+            <span class="nn-hud-brand"><i class="fas fa-bolt" aria-hidden="true"></i> NUMBER NINJA</span>
+            <span class="nn-hud-lvlpill" id="nnLvlPill"><span id="nnLevelNum">1</span> · <span id="nnLevelName">Rookie Reflexes</span></span>
+            <button type="button" class="nn-opt" id="nnSoundBtn" aria-pressed="false" aria-label="Toggle sound" style="padding:8px 14px;font-size:0.9rem;">🔇 Sound</button>
+          </div>
+
+          <div class="nn-hud">
+            <div class="nn-stat nn-stat-time" id="nnStatTime">
+              <span class="nn-stat-num" id="nnTimeVal">60</span>
+              <span class="nn-stat-lbl">Time</span>
+            </div>
+            <div class="nn-stat">
+              <span class="nn-stat-num" id="nnScoreVal">0</span>
+              <span class="nn-stat-lbl">Score</span>
+            </div>
+            <div class="nn-stat">
+              <span class="nn-stat-num" id="nnXpVal">0</span>
+              <span class="nn-stat-lbl">XP</span>
+            </div>
+            <div class="nn-stat">
+              <span class="nn-stat-num" id="nnComboVal">x0</span>
+              <span class="nn-stat-lbl">Combo</span>
+            </div>
+            <div class="nn-stat">
+              <span class="nn-stat-num" id="nnStreakVal">0</span>
+              <span class="nn-stat-lbl">Best Combo</span>
+            </div>
+            <div class="nn-stat">
+              <span class="nn-stat-num" id="nnBossVal">0</span>
+              <span class="nn-stat-lbl">Boss Wins</span>
+            </div>
+          </div>
+
+          <div class="nn-levelbar" role="progressbar" aria-label="Level progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div class="nn-levelbar-row"><span>Level <b id="nnLevelNameRow">1 · Rookie Reflexes</b></span><span><b id="nnXpNext">0</b> / <span id="nnXpTarget">50</span> XP</span></div>
+            <div class="nn-levelbar-track"><div class="nn-levelbar-fill" id="nnProgressFill"></div></div>
+          </div>
+
+          <div class="nn-life-row">
+            <span>Mistakes:</span>
+            <span class="nn-lives" id="nnLives" aria-hidden="true"></span>
+            <span id="nnMistakesSr" class="sr-only" style="position:absolute;left:-9999px;">3 mistake markers remaining</span>
+          </div>
+
+          <div class="nn-qcard" id="nnQCard">
+            <p class="nn-qkind" id="nnQKind">Mixed Maths</p>
+            <p class="nn-qtext" id="nnQuestionText" aria-live="polite">24 × 6 = ?</p>
+            <p class="nn-qfoot">Type your answer, then press <b>STRIKE!</b> or press <b>Enter</b>.</p>
+
+            <div class="nn-answer-row">
+              <input class="nn-answer-input" id="nnAnswerInput" type="text" inputmode="numeric" enterkeyhint="go" autocomplete="off" aria-label="Your numeric answer" />
+              <button type="button" class="nn-neg-btn" id="nnNegBtn" title="Toggle negative sign" aria-label="Toggle negative sign">±</button>
+              <button type="button" class="btn btn-primary nn-submit-btn" id="nnSubmitBtn">STRIKE! ⚡</button>
+            </div>
+
+            <p class="nn-feedback" id="nnFeedback" role="status" aria-live="polite"></p>
+          </div>
+
+          <div class="nn-boss-overlay nn-hidden" id="nnBossOverlay" role="alert">
+            <span class="nn-boss-emoji" aria-hidden="true">⚔️</span>
+            <span class="nn-boss-label">BOSS ROUND!</span>
+            <span class="nn-boss-hint">Strike the boss question for +20 bonus points. Keep it quick &mdash; the clock is still running!</span>
+          </div>
+        </div>
+
+        <p style="text-align:center;margin-top:16px;"><a href="/maths-games/" class="nn-end-link"><i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Maths Games</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS SCREEN -->
+  <section class="nn-section" id="nnEndScreen" hidden>
+    <div class="container">
+      <div class="nn-results">
+        <h2>🏆 Battle Complete!</h2>
+        <p class="nn-results-sub">Time is up. Here is how your battle went.</p>
+        <span class="nn-newbest" id="nnNewBest" hidden><i class="fas fa-trophy" aria-hidden="true"></i> New Personal Best Score!</span>
+        <div class="nn-res-grid">
+          <div class="nn-res-cell is-primary"><span class="nn-res-num" id="nnResScore">0</span><span class="nn-res-lbl">Score</span></div>
+          <div class="nn-res-cell"><span class="nn-res-num" id="nnResXp">0</span><span class="nn-res-lbl">XP Earned</span></div>
+          <div class="nn-res-cell"><span class="nn-res-num" id="nnResAttempted">0</span><span class="nn-res-lbl">Attempted</span></div>
+          <div class="nn-res-cell"><span class="nn-res-num" id="nnResCorrect">0</span><span class="nn-res-lbl">Correct</span></div>
+          <div class="nn-res-cell"><span class="nn-res-num" id="nnResWrong">0</span><span class="nn-res-lbl">Incorrect</span></div>
+          <div class="nn-res-cell"><span class="nn-res-num" id="nnResAccuracy">0%</span><span class="nn-res-lbl">Accuracy</span></div>
+          <div class="nn-res-cell"><span class="nn-res-num" id="nnResBest">0</span><span class="nn-res-lbl">Highest Combo</span></div>
+          <div class="nn-res-cell"><span class="nn-res-num" id="nnResLevel">1</span><span class="nn-res-lbl">Highest Level</span></div>
+          <div class="nn-res-cell"><span class="nn-res-num" id="nnResBoss">0</span><span class="nn-res-lbl">Boss Wins</span></div>
+        </div>
+        <p class="nn-fbmsg" id="nnFbMsg" role="status" aria-live="polite"></p>
+        <div class="nn-res-actions">
+          <button type="button" class="btn btn-primary" id="nnPlayAgain">⚡ PLAY AGAIN</button>
+          <a href="/maths-games/" class="btn btn-secondary" style="background:var(--primary);border-color:var(--primary);">🎮 More Maths Games</a>
+          <a href="/cbse-study-material/class-6/mathematics/" class="btn" style="color:var(--primary);border:2px solid var(--primary);background:var(--white);">📚 Practise Maths</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO CONTENT -->
+  <section class="nn-section nn-section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Why It Helps</span>
+        <h2>Sharpen Mental Maths Skills with Number Ninja</h2>
+        <p>A quick-fire arcade way to practise arithmetic, fractions and percentages.</p>
+      </div>
+      <div class="nn-seo-content">
+        <p>The <strong>Number Ninja</strong> game is a timed maths arcade built for students who want to think faster. Answer quick-fire questions on multiplication, addition and subtraction, fractions and percentages, build combo streaks, earn XP and level up from <em>Rookie Reflexes</em> to <em>Ninja Master</em>. Every 10 answers you will face an <em>⚔️ Boss Round</em> with a slightly tougher question &mdash; hit it for a bonus while the main clock keeps running.</p>
+        <h3>Combo streaks and progressive levels</h3>
+        <p>Correct answers raise your combo: <strong>3</strong> in a row triggers a combo bonus, <strong>5</strong> is a Super Combo, <strong>10</strong> unlocks Ninja Mode and <strong>20</strong> is a Legendary Streak. Wrong answers reset the combo and consume one of three mistake markers, but the battle never ends early &mdash; you keep playing until time runs out. Session XP is earned only from genuine correct answers and disclosed bonus awards, and it drives climbing through six levels.</p>
+        <h3>Built for the CBSE routine</h3>
+        <p>Mental arithmetic and percentage skills are foundational across the CBSE Mathematics curriculum, from <a href="/cbse-study-material/class-6/mathematics/">Class 6 Maths</a> and <a href="/cbse-study-material/class-7/mathematics/">Class 7 Maths</a> to <a href="/cbse-study-material/class-8/mathematics/">Class 8 Maths</a>. Pair the game with our free <a href="/cbse-study-material/">CBSE study material</a> or explore the other <a href="/maths-games/">Maths games</a> we have built for students.</p>
+        <div class="nn-seo-links">
+          <a class="nn-seo-chip" href="/maths-games/">🎮 All Maths Games</a>
+          <a class="nn-seo-chip" href="/maths-games/speed-challenge/">⚡ Maths Speed Challenge</a>
+          <a class="nn-seo-chip" href="/maths-games/equation-hunter/">🎯 Equation Hunter</a>
+          <a class="nn-seo-chip" href="/maths-games/coordinate-shooter/">📍 Coordinate Shooter</a>
+          <a class="nn-seo-chip" href="/maths-games/factor-detective/">🧩 Factor Detective</a>
+          <a class="nn-seo-chip" href="/maths-games/geometry-builder/">📐 Geometry Builder</a>
+          <a class="nn-seo-chip" href="/cbse-study-material/class-6/mathematics/">🧠 Class 6 Maths</a>
+          <a class="nn-seo-chip" href="/cbse-study-material/class-7/mathematics/">➗ Class 7 Maths</a>
+          <a class="nn-seo-chip" href="/cbse-study-material/class-8/mathematics/">📊 Class 8 Maths</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-about">
+      <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+      <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#faculty">Faculty</a></li>
+        <li><a href="/#courses">Courses</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/cbse-study-material/">Study Material</a></li>
+        <li><a href="/maths-games/">🎮 Maths Games</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Popular Searches</h4>
+      <ul>
+        <li><a href="/best-tuition-centre-hulimavu/">Best Tuition Centre in Hulimavu</a></li>
+        <li><a href="/best-coaching-centre-hulimavu/">Best Coaching Centre in Hulimavu</a></li>
+        <li><a href="/cbse-tuition-hulimavu/">CBSE Tuition in Hulimavu</a></li>
+        <li><a href="/maths-tuition-hulimavu/">Maths Tuition in Hulimavu</a></li>
+        <li><a href="/science-tuition-hulimavu/">Science Tuition in Hulimavu</a></li>
+        <li><a href="/kcet-coaching-hulimavu/">KCET Coaching in Hulimavu</a></li>
+        <li><a href="/class-10-tuition-hulimavu/">Class 10 Tuition Hulimavu</a></li>
+        <li><a href="/icse-tuition-hulimavu/">ICSE Tuition Hulimavu</a></li>
+        <li><a href="/tuition-classes-near-bannerghatta-road/">Tuition near Bannerghatta Road</a></li>
+        <li><a href="/cbse-tuition-bangalore/">CBSE Tuition Bangalore</a></li>
+        <li><a href="/tuition-centre-bangalore/">Best Tuition Centre in Bangalore</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ============================================================
+     Pure game logic (exported when run under Node for tests)
+     ============================================================ */
+
+  var BASE_POINTS = 10;      // points for every correct answer
+  var BOSS_BONUS = 20;       // extra bonus for a correct Boss Round answer
+  var MISTAKES_MAX = 3;      // mistake markers per round
+  var BOSS_MIN_TIME = 8;     // seconds that must remain for a Boss Round to appear
+  var BOSS_EVERY = 10;       // introduce a Boss Round after every N questions attempted
+  var FEEDBACK_MS = 550;     // how long the strike feedback stays before the next question
+  var BOSS_ANNOUNCE_MS = 1200;
+
+  var DIFFS = {
+    rookie:  { key: "rookie",  label: "Rookie",  bonus: 0 },
+    warrior: { key: "warrior", label: "Warrior", bonus: 2 },
+    ninja:   { key: "ninja",   label: "Ninja",   bonus: 5 }
+  };
+
+  var DURATIONS = [60, 90, 120];
+
+  var CATEGORIES = ["multiplication", "addsub", "fractions", "percent"];
+
+  var CATEGORY_LABEL = {
+    multiplication: "Multiplication",
+    addsub: "Addition & Subtraction",
+    fractions: "Fractions",
+    percent: "Percentages",
+    mixed: "Mixed Maths"
+  };
+
+  var COMBO_MILESTONES = [
+    { combo: 3,  label: "COMBO x3",          bonus: 5  },
+    { combo: 5,  label: "SUPER COMBO!",      bonus: 10 },
+    { combo: 10, label: "NINJA MODE!",       bonus: 20 },
+    { combo: 20, label: "LEGENDARY STREAK!", bonus: 40 }
+  ];
+
+  var LEVELS = [
+    { level: 1, name: "Rookie Reflexes", xp: 0   },
+    { level: 2, name: "Quick Thinker",   xp: 50  },
+    { level: 3, name: "Sharp Shooter",   xp: 120 },
+    { level: 4, name: "Maths Warrior",   xp: 220 },
+    { level: 5, name: "Number Ninja",    xp: 360 },
+    { level: 6, name: "Ninja Master",    xp: 550 }
+  ];
+
+  /* ---------- random helpers ---------- */
+
+  function irand(min, max) {
+    return min + Math.floor(Math.random() * (max - min + 1));
+  }
+  function pick(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+  }
+
+  /* ---------- question generators ---------- */
+  /* mode: "rookie" | "warrior" | "ninja" | "boss"
+     Every generator returns a question { category, kind, prompt, answer }
+     where prompt is the maths expression (renderer appends " = ?") and
+     answer is the exact integer result. Fraction and percentage prompts
+     are always constructed so the answer is an exact integer. */
+
+  function generateMultiplicationQuestion(mode) {
+    var a, b, sign, answer;
+    if (mode === "rookie") {
+      a = irand(2, 9); b = irand(2, 10); sign = 1;
+    } else if (mode === "warrior") {
+      a = irand(3, 12); b = irand(3, 14); sign = 1;
+    } else if (mode === "ninja") {
+      a = irand(6, 15); b = irand(7, 20); sign = (Math.random() < 0.3) ? -1 : 1;
+    } else { /* boss */
+      a = irand(12, 30); b = irand(12, 30); sign = 1;
+    }
+    answer = a * b * sign;
+    return { category: "multiplication", kind: "mul", prompt: a + " × " + (b * sign), answer: answer };
+  }
+
+  function generateAdditionQuestion(mode) {
+    var a, b;
+    if (mode === "rookie") { a = irand(2, 20); b = irand(2, 20); }
+    else if (mode === "warrior") { a = irand(15, 90); b = irand(15, 90); }
+    else { a = irand(25, 150); b = irand(25, 150); }
+    return { category: "addsub", kind: "add", prompt: a + " + " + b, answer: a + b };
+  }
+
+  function generateSubtractionQuestion(mode) {
+    var a, b;
+    if (mode === "rookie") {
+      a = irand(10, 30); b = irand(2, a);
+    } else if (mode === "warrior") {
+      a = irand(30, 150); b = irand(2, a);
+    } else if (mode === "ninja") {
+      if (Math.random() < 0.35) { a = irand(20, 90); b = irand(a + 5, a + 60); }
+      else { a = irand(30, 180); b = irand(2, a); }
+    } else { /* boss */
+      a = irand(100, 300); b = irand(100, 300);
+    }
+    return { category: "addsub", kind: "sub", prompt: a + " − " + b, answer: a - b };
+  }
+
+  function generateAddSubQuestion(mode) {
+    return (Math.random() < 0.5)
+      ? generateAdditionQuestion(mode)
+      : generateSubtractionQuestion(mode);
+  }
+
+  function generateFractionQuestion(mode) {
+    var pair; // {numerator, denominator(1), whole}
+    if (mode === "rookie") {
+      var kinds = ["half", "third", "quarter"];
+      var k = pick(kinds);
+      if (k === "half") { pair = { p: 1, q: 2, w: irand(1, 20) * 2 }; }
+      else if (k === "third") { pair = { p: 1, q: 3, w: irand(1, 12) * 3 }; }
+      else { pair = { p: 1, q: 4, w: irand(1, 12) * 4 }; }
+    } else if (mode === "warrior") {
+      var kindsW = ["half", "third", "twothirds", "quarter"];
+      var kw = pick(kindsW);
+      if (kw === "half") { pair = { p: 1, q: 2, w: irand(1, 50) * 2 }; }
+      else if (kw === "third") { pair = { p: 1, q: 3, w: irand(1, 25) * 3 }; }
+      else if (kw === "twothirds") { pair = { p: 2, q: 3, w: irand(1, 20) * 3 }; }
+      else { pair = { p: 1, q: 4, w: irand(1, 25) * 4 }; }
+    } else if (mode === "ninja") {
+      var kindsN = ["half", "third", "twothirds", "threequarters", "fifth"];
+      var kn = pick(kindsN);
+      if (kn === "half") { pair = { p: 1, q: 2, w: irand(1, 80) * 2 }; }
+      else if (kn === "third") { pair = { p: 1, q: 3, w: irand(1, 40) * 3 }; }
+      else if (kn === "twothirds") { pair = { p: 2, q: 3, w: irand(1, 40) * 3 }; }
+      else if (kn === "threequarters") { pair = { p: 3, q: 4, w: irand(1, 25) * 4 }; }
+      else { pair = { p: 1, q: 5, w: irand(1, 30) * 5 }; }
+    } else { /* boss */
+      var kindsB = ["half", "third", "twothirds", "threequarters", "fifth"];
+      var kb = pick(kindsB);
+      if (kb === "half") { pair = { p: 1, q: 2, w: irand(1, 120) * 2 }; }
+      else if (kb === "third") { pair = { p: 1, q: 3, w: irand(1, 60) * 3 }; }
+      else if (kb === "twothirds") { pair = { p: 2, q: 3, w: irand(1, 45) * 3 }; }
+      else if (kb === "threequarters") { pair = { p: 3, q: 4, w: irand(1, 40) * 4 }; }
+      else { pair = { p: 1, q: 5, w: irand(1, 50) * 5 }; }
+    }
+    return {
+      category: "fractions",
+      kind: "frac",
+      prompt: pair.p + "/" + pair.q + " of " + pair.w,
+      answer: (pair.w * pair.p) / pair.q
+    };
+  }
+
+  function generatePercentageQuestion(mode) {
+    var r, w;
+    if (mode === "rookie") {
+      var kinds = ["10", "25", "50"];
+      var k = pick(kinds);
+      if (k === "10") { r = 10; w = irand(1, 12) * 10; }
+      else if (k === "25") { r = 25; w = irand(1, 12) * 4; }
+      else { r = 50; w = irand(1, 20) * 2; }
+    } else if (mode === "warrior") {
+      var kindsW = ["10", "20", "25", "50"];
+      var kw = pick(kindsW);
+      if (kw === "10") { r = 10; w = irand(1, 30) * 10; }
+      else if (kw === "20") { r = 20; w = irand(1, 25) * 5; }
+      else if (kw === "25") { r = 25; w = irand(1, 20) * 4; }
+      else { r = 50; w = irand(1, 40) * 2; }
+    } else if (mode === "ninja") {
+      var kindsN = ["15", "25", "35", "45", "60", "75"];
+      var kn = pick(kindsN);
+      if (kn === "15") { r = 15; w = irand(1, 15) * 20; }
+      else if (kn === "25") { r = 25; w = irand(1, 25) * 4; }
+      else if (kn === "35") { r = 35; w = irand(1, 10) * 20; }
+      else if (kn === "45") { r = 45; w = irand(1, 10) * 20; }
+      else if (kn === "60") { r = 60; w = irand(1, 20) * 5; }
+      else { r = 75; w = irand(1, 20) * 4; }
+    } else { /* boss */
+      var kindsB = ["15", "25", "35", "45", "60", "75"];
+      var kb = pick(kindsB);
+      if (kb === "15") { r = 15; w = irand(1, 25) * 20; }
+      else if (kb === "25") { r = 25; w = irand(1, 40) * 4; }
+      else if (kb === "35") { r = 35; w = irand(1, 20) * 20; }
+      else if (kb === "45") { r = 45; w = irand(1, 20) * 20; }
+      else if (kb === "60") { r = 60; w = irand(1, 30) * 5; }
+      else { r = 75; w = irand(1, 30) * 4; }
+    }
+    return { category: "percent", kind: "percent", prompt: r + "% of " + w, answer: (w * r) / 100 };
+  }
+
+  function challengeCategory(challenge) {
+    if (challenge === "mixed") { return pick(CATEGORIES); }
+    return challenge;
+  }
+
+  /* A "question" today is a single numeric prompt. For future proofing the
+     interface still exposes validateAnswer() so the answer rule lives in
+     exactly one place. */
+  function generateQuestion(difficulty, challenge) {
+    var cat = challengeCategory(challenge);
+    var mode = difficulty === "rookie" ? "rookie" : difficulty === "ninja" ? "ninja" : "warrior";
+    return generateByCategory(cat, mode);
+  }
+
+  /* Boss questions are one level harder than the player's difficulty, and
+     harder still when the player is already on Ninja. */
+  function generateBossQuestion(difficulty, challenge) {
+    var cat = challengeCategory(challenge);
+    var mode = difficulty === "rookie" ? "warrior" : difficulty === "warrior" ? "ninja" : "boss";
+    return generateByCategory(cat, mode);
+  }
+
+  function generateByCategory(cat, mode) {
+    if (cat === "multiplication") { return generateMultiplicationQuestion(mode); }
+    if (cat === "addsub") { return generateAddSubQuestion(mode); }
+    if (cat === "fractions") { return generateFractionQuestion(mode); }
+    return generatePercentageQuestion(mode);
+  }
+
+  /* ---------- answer validation ---------- */
+
+  function parseInteger(s) {
+    if (typeof s !== "string") {
+      if (typeof s === "number") { s = String(s); } else { return null; }
+    }
+    var t = s.trim().replace(/−/g, "-");
+    if (!/^-?\d+$/.test(t)) { return null; }
+    return parseInt(t, 10);
+  }
+
+  function validateAnswer(input, q) {
+    var n = parseInteger(input);
+    return n !== null && n === q.answer;
+  }
+
+  /* ---------- scoring ---------- */
+
+  function milestoneForCombo(combo) {
+    for (var i = 0; i < COMBO_MILESTONES.length; i++) {
+      if (COMBO_MILESTONES[i].combo === combo) { return COMBO_MILESTONES[i]; }
+    }
+    return null;
+  }
+
+  /* Points for a correct answer = base + difficulty bonus + combo
+     milestone bonus (awarded only when that exact combo is reached).
+     A correct Boss answer adds BOSS_BONUS on top, applied separately. */
+  function correctPoints(difficulty, combo) {
+    var m = milestoneForCombo(combo);
+    return BASE_POINTS + DIFFS[difficulty].bonus + (m ? m.bonus : 0);
+  }
+
+  /* ---------- level progression ---------- */
+
+  function levelInfo(xp) {
+    var cur = LEVELS[0];
+    for (var i = 0; i < LEVELS.length; i++) {
+      if (xp >= LEVELS[i].xp) { cur = LEVELS[i]; }
+    }
+    var next = cur.level < LEVELS.length ? LEVELS[cur.level] : null;
+    var progress = next ? Math.min(1, (xp - cur.xp) / (next.xp - cur.xp)) : 1;
+    return {
+      level: cur.level,
+      name: cur.name,
+      xp: cur.xp,
+      nextXp: next ? next.xp : null,
+      progress: progress
+    };
+  }
+
+  /* ---------- feedback & results ---------- */
+
+  function correctCallout() {
+    return "PERFECT STRIKE!";
+  }
+  function wrongCallout() {
+    return "Missed! Refocus and strike again.";
+  }
+
+  function accuracyFor(state) {
+    if (!state.attempted) { return 0; }
+    return Math.round((state.correct / state.attempted) * 100);
+  }
+
+  function sessionMessage(stats) {
+    if (!stats.attempted) {
+      return "No answers this round — press Play Again and show your skills!";
+    }
+    if (stats.accuracy >= 90 && stats.score >= 200) {
+      return "Outstanding! You are a true Ninja Master. 👑";
+    }
+    if (stats.accuracy >= 80) {
+      return "Superb shooting! You are a certified Maths Ninja. 🥷";
+    }
+    if (stats.accuracy >= 60) {
+      return "Great work! A few more strikes and you will level up fast.";
+    }
+    if (stats.accuracy >= 40) {
+      return "Good effort! Keep training — speed comes with practice.";
+    }
+    return "Nice try! Refocus, breathe and aim again. Every ninja starts somewhere.";
+  }
+
+  /* ---------- state ---------- */
+
+  function newState(settings) {
+    return {
+      phase: "setup",          // setup | playing | evaluating | over
+      settings: settings,      // { difficulty, duration, challenge }
+      score: 0,
+      xp: 0,
+      combo: 0,
+      bestCombo: 0,
+      attempted: 0,
+      correct: 0,
+      wrong: 0,
+      mistakes: MISTAKES_MAX,
+      bossWins: 0,
+      timeLeft: settings.duration,
+      question: null,
+      isBoss: false,
+      level: 1,
+      levelName: LEVELS[0].name,
+      timerId: null,
+      evaluating: false,
+      announcing: false
+    };
+  }
+
+  /* ============================================================
+     Exports for automated tests (Node)
+     ============================================================ */
+
+  var api = {
+    BASE_POINTS: BASE_POINTS,
+    BOSS_BONUS: BOSS_BONUS,
+    BOSS_MIN_TIME: BOSS_MIN_TIME,
+    BOSS_EVERY: BOSS_EVERY,
+    MISTAKES_MAX: MISTAKES_MAX,
+    DIFFS: DIFFS,
+    DURATIONS: DURATIONS,
+    CATEGORIES: CATEGORIES,
+    CATEGORY_LABEL: CATEGORY_LABEL,
+    COMBO_MILESTONES: COMBO_MILESTONES,
+    LEVELS: LEVELS,
+    irand: irand,
+    pick: pick,
+    generateQuestion: generateQuestion,
+    generateBossQuestion: generateBossQuestion,
+    generateAdditionQuestion: generateAdditionQuestion,
+    generateSubtractionQuestion: generateSubtractionQuestion,
+    generateMultiplicationQuestion: generateMultiplicationQuestion,
+    generateFractionQuestion: generateFractionQuestion,
+    generatePercentageQuestion: generatePercentageQuestion,
+    generateByCategory: generateByCategory,
+    parseInteger: parseInteger,
+    validateAnswer: validateAnswer,
+    milestoneForCombo: milestoneForCombo,
+    correctPoints: correctPoints,
+    levelInfo: levelInfo,
+    correctCallout: correctCallout,
+    wrongCallout: wrongCallout,
+    accuracyFor: accuracyFor,
+    sessionMessage: sessionMessage,
+    newState: newState,
+    recomputeAnswer: recomputeAnswer
+  };
+
+  function recomputeAnswer(q) {
+    /* Recompute the expected answer from the prompt text so tests can
+       prove generation matches its stored answer without trusting it. */
+    var s = q.prompt;
+    if (q.kind === "mul") {
+      var mm = s.match(/^(-?\d+) × (-?\d+)$/);
+      if (!mm) { return null; }
+      return parseInt(mm[1], 10) * parseInt(mm[2], 10);
+    }
+    if (q.kind === "add") {
+      var am = s.match(/^(-?\d+) \+ (-?\d+)$/);
+      if (!am) { return null; }
+      return parseInt(am[1], 10) + parseInt(am[2], 10);
+    }
+    if (q.kind === "sub") {
+      var sm = s.match(/^(-?\d+) − (-?\d+)$/);
+      if (!sm) { return null; }
+      return parseInt(sm[1], 10) - parseInt(sm[2], 10);
+    }
+    if (q.kind === "frac") {
+      var fm = s.match(/^(\d+)\/(\d+) of (-?\d+)$/);
+      if (!fm) { return null; }
+      var a = parseInt(fm[1], 10), b = parseInt(fm[2], 10), c = parseInt(fm[3], 10);
+      if (b === 0) { return null; }
+      return (c * a) / b;
+    }
+    if (q.kind === "percent") {
+      var pm = s.match(/^(-?\d+)% of (-?\d+)$/);
+      if (!pm) { return null; }
+      return (parseInt(pm[2], 10) * parseInt(pm[1], 10)) / 100;
+    }
+    return null;
+  }
+
+  if (typeof module !== "undefined" && module.exports) {
+    module.exports = api;
+    return;
+  }
+
+  /* ============================================================
+     Browser wiring
+     ============================================================ */
+
+  var LS_KEY = "vyasa_number_ninja_stats";
+
+  function defaultPb() {
+    return { bestScore: 0, bestAccuracy: 0, bestCombo: 0, highestLevel: 1, gamesPlayed: 0, totalXp: 0 };
+  }
+
+  function storageGet(key) {
+    try { return window.localStorage.getItem(key); } catch (e) { return null; }
+  }
+  function storageSet(key, value) {
+    try { window.localStorage.setItem(key, value); } catch (e) { /* ignore */ }
+  }
+
+  function readPb() {
+    try {
+      var raw = storageGet(LS_KEY);
+      if (!raw) { return null; }
+      var d = JSON.parse(raw);
+      if (!d || typeof d !== "object") { return null; }
+      var base = defaultPb();
+      return {
+        bestScore: typeof d.bestScore === "number" ? d.bestScore : base.bestScore,
+        bestAccuracy: typeof d.bestAccuracy === "number" ? d.bestAccuracy : base.bestAccuracy,
+        bestCombo: typeof d.bestCombo === "number" ? d.bestCombo : base.bestCombo,
+        highestLevel: typeof d.highestLevel === "number" ? d.highestLevel : base.highestLevel,
+        gamesPlayed: typeof d.gamesPlayed === "number" ? d.gamesPlayed : base.gamesPlayed,
+        totalXp: typeof d.totalXp === "number" ? d.totalXp : base.totalXp
+      };
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function writePb(d) {
+    storageSet(LS_KEY, JSON.stringify(d));
+  }
+
+  var state = null;
+  var els = {};
+  var soundOn = false;
+  var audioCtx = null;
+
+  var reducedMotion = typeof window !== "undefined" &&
+    window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function $(id) {
+    if (!els[id]) {
+      els[id] = document.getElementById(id);
+    }
+    return els[id];
+  }
+
+  /* ---------- settings ---------- */
+
+  var settings = { difficulty: "warrior", duration: 60, challenge: "mixed" };
+
+  function wireSettings() {
+    var groups = document.querySelectorAll("[data-setting-group]");
+    for (var i = 0; i < groups.length; i++) {
+      (function (group) {
+        var key = group.getAttribute("data-setting-group");
+        var btns = group.querySelectorAll("[data-setting]");
+        for (var j = 0; j < btns.length; j++) {
+          (function (btn) {
+            btn.addEventListener("click", function () {
+              settings[key] = key === "duration" ? parseInt(btn.getAttribute("data-value"), 10) : btn.getAttribute("data-value");
+              for (var k = 0; k < btns.length; k++) {
+                var b = btns[k];
+                var active = b === btn;
+                b.classList.toggle("is-active", active);
+                b.setAttribute("aria-pressed", active ? "true" : "false");
+              }
+            });
+          })(btns[j]);
+        }
+      })(groups[i]);
+    }
+  }
+
+  function readSettingsFromUi() {
+    /* settings kept live by wireSettings; nothing extra needed */
+    return settings;
+  }
+
+  /* ---------- personal best ---------- */
+
+  function renderPersonalBest() {
+    var pb = readPb() || defaultPb();
+    var none = $("nnPbNone");
+    var grid = $("nnPbGrid");
+    if (!pb.gamesPlayed) {
+      if (none) { none.style.display = ""; }
+      if (grid) { grid.hidden = true; }
+      return;
+    }
+    if (none) { none.style.display = "none"; }
+    if (!grid) { return; }
+    var cells = [
+      { num: pb.bestScore, lbl: "Best Score" },
+      { num: pb.bestAccuracy + "%", lbl: "Best Accuracy" },
+      { num: pb.bestCombo, lbl: "Best Combo" },
+      { num: "Lv " + pb.highestLevel, lbl: "Highest Level" },
+      { num: pb.gamesPlayed, lbl: "Games" }
+    ];
+    var html = "";
+    for (var i = 0; i < cells.length; i++) {
+      html += '<div class="nn-pb-cell"><span class="nn-pb-num">' + cells[i].num + '</span><span class="nn-pb-lbl">' + cells[i].lbl + '</span></div>';
+    }
+    grid.innerHTML = html;
+    grid.hidden = false;
+  }
+
+  /* ---------- rendering helpers ---------- */
+
+  function showScreen(which) {
+    var startS = $("nnStartScreen");
+    var gameS = $("nnGameScreen");
+    var endS = $("nnEndScreen");
+    if (startS) { startS.hidden = which !== "start"; }
+    if (gameS) { gameS.hidden = which !== "game"; }
+    if (endS) { endS.hidden = which !== "end"; }
+    window.scrollTo(0, 0);
+  }
+
+  function renderLives() {
+    var wrap = $("nnLives");
+    var sr = $("nnMistakesSr");
+    if (!wrap) { return; }
+    var html = "";
+    for (var i = 0; i < MISTAKES_MAX; i++) {
+      var full = i < state.mistakes;
+      html += '<span class="nn-life ' + (full ? "is-full" : "is-lost") + '" aria-hidden="true">' + (full ? "❤️" : "✖") + '</span>';
+    }
+    wrap.innerHTML = html;
+    if (sr) { sr.textContent = (state.mistakes === 1 ? "1 mistake marker remaining" : state.mistakes + " mistake markers remaining"); }
+  }
+
+  function renderHud() {
+    var t = $("nnTimeVal"); if (t) { t.textContent = state.timeLeft; }
+    var s = $("nnScoreVal"); if (s) { s.textContent = state.score; }
+    var x = $("nnXpVal"); if (x) { x.textContent = state.xp; }
+    var c = $("nnComboVal"); if (c) { c.textContent = "x" + state.combo; }
+    var st = $("nnStreakVal"); if (st) { st.textContent = state.bestCombo; }
+    var b = $("nnBossVal"); if (b) { b.textContent = state.bossWins; }
+
+    var timeStat = $("nnStatTime");
+    if (timeStat) {
+      timeStat.classList.toggle("nn-is-warning", state.timeLeft <= 10 && state.timeLeft > 5);
+      timeStat.classList.toggle("nn-is-danger", state.timeLeft <= 5);
+    }
+
+    var info = levelInfo(state.xp);
+    var pillNum = $("nnLevelNum"); if (pillNum) { pillNum.textContent = info.level; }
+    var pillName = $("nnLevelName"); if (pillName) { pillName.textContent = info.name; }
+    var row = $("nnLevelNameRow"); if (row) { row.textContent = info.level + " · " + info.name; }
+    var cur = $("nnXpNext"); if (cur) { cur.textContent = state.xp; }
+    var target = $("nnXpTarget");
+    if (target) { target.textContent = info.nextXp !== null ? info.nextXp : info.xp; }
+    var bar = $("nnProgressFill");
+    if (bar) {
+      bar.style.width = Math.round(info.progress * 100) + "%";
+      bar.setAttribute("aria-valuenow", Math.round(info.progress * 100));
+    }
+  }
+
+  function renderQuestion() {
+    var q = state.question;
+    if (!q) { return; }
+    var kind = $("nnQKind");
+    var text = $("nnQuestionText");
+    var card = $("nnQCard");
+    if (kind) {
+      var bossTag = state.isBoss ? '<span class="nn-boss-tag">⚔️ Boss</span>' : "";
+      kind.innerHTML = CATEGORY_LABEL[q.category] + bossTag;
+    }
+    if (text) { text.textContent = q.prompt + " = ?"; }
+    if (card) {
+      card.classList.toggle("is-boss", !!state.isBoss);
+      card.classList.remove("nn-bump");
+    }
+    var input = $("nnAnswerInput");
+    if (input) {
+      input.value = "";
+      input.disabled = false;
+      input.focus({ preventScroll: true });
+    }
+    var fb = $("nnFeedback");
+    if (fb) { fb.textContent = ""; fb.className = "nn-feedback"; }
+  }
+
+  function setAnswerInput(value) {
+    var input = $("nnAnswerInput");
+    if (input) { input.value = value; }
+  }
+
+  /* ---------- timer ---------- */
+
+  function startTimer() {
+    if (state.timerId !== null) {
+      winClearInterval(state.timerId);
+    }
+    state.timerId = winSetInterval(function () {
+      if (!state || state.phase !== "playing") { return; }
+      state.timeLeft = Math.max(0, state.timeLeft - 1);
+      renderHud();
+      if (state.timeLeft <= 0) {
+        endGame();
+      }
+    }, 1000);
+  }
+
+  var winSetInterval = function (fn, ms) { return window.setInterval(fn, ms); };
+  var winClearInterval = function (id) { window.clearInterval(id); };
+  var winSetTimeout = function (fn, ms) { return window.setTimeout(fn, ms); };
+
+  /* ---------- boss / next question ---------- */
+
+  function decideBoss() {
+    if (!state || state.isBoss) { return false; }
+    if (state.phase !== "playing") { return false; }
+    if (state.attempted < BOSS_EVERY) { return false; }
+    if (state.attempted % BOSS_EVERY !== 0) { return false; }
+    if (state.timeLeft <= BOSS_MIN_TIME) { return false; }
+    return true;
+  }
+
+  function announceBoss() {
+    var overlay = $("nnBossOverlay");
+    if (overlay) { overlay.classList.remove("nn-hidden"); }
+    state.announcing = true;
+    playSound("boss");
+    winSetTimeout(function () {
+      if (!state || state.phase !== "playing") { return; }
+      if (overlay) { overlay.classList.add("nn-hidden"); }
+      state.announcing = false;
+      var input = $("nnAnswerInput");
+      if (input) { input.focus({ preventScroll: true }); }
+    }, BOSS_ANNOUNCE_MS);
+  }
+
+  function loadNextQuestion() {
+    var isBoss = decideBoss();
+    state.isBoss = isBoss;
+    state.question = isBoss
+      ? generateBossQuestion(state.settings.difficulty, state.settings.challenge)
+      : generateQuestion(state.settings.difficulty, state.settings.challenge);
+    state.evaluating = false;
+    renderQuestion();
+    if (isBoss) {
+      announceBoss();
+    }
+  }
+
+  /* ---------- answering ---------- */
+
+  function submitAnswer() {
+    if (!state || state.phase !== "playing") { return; }
+    if (state.evaluating || state.announcing) { return; }
+    if (!state.question) { return; }
+    var q = state.question;
+    var input = $("nnAnswerInput");
+    var raw = input ? input.value : "";
+    var ok = validateAnswer(raw, q);
+
+    state.evaluating = true;
+    if (input) { input.disabled = true; }
+
+    if (ok) {
+      awardCorrect(q);
+    } else {
+      awardWrong(q, raw);
+    }
+    scheduleNext();
+  }
+
+  function awardCorrect(q) {
+    state.combo += 1;
+    state.attempted += 1;
+    state.correct += 1;
+    if (state.combo > state.bestCombo) { state.bestCombo = state.combo; }
+
+    var milestone = milestoneForCombo(state.combo);
+    var pts = correctPoints(state.settings.difficulty, state.combo);
+    if (state.isBoss) {
+      pts += BOSS_BONUS;
+      state.bossWins += 1;
+    }
+    state.score += pts;
+    state.xp += pts;
+
+    var prevLevel = state.level;
+    var info = levelInfo(state.xp);
+    var leveledUp = info.level > prevLevel;
+    state.level = info.level;
+    state.levelName = info.name;
+
+    var fb = $("nnFeedback");
+    var msg = correctCallout() + (milestone ? " " + milestone.label : "");
+    var cls = "nn-feedback is-good";
+    if (state.isBoss) {
+      msg = "BOSS DOWN! " + correctCallout() + " +" + pts + " points";
+      cls = "nn-feedback is-good";
+    }
+    if (leveledUp) {
+      msg += " — Level up! " + info.name + "!";
+      var pill = $("nnLvlPill");
+      if (pill && !reducedMotion) { pill.classList.remove("is-levelup"); void pill.offsetWidth; pill.classList.add("is-levelup"); }
+    }
+    if (fb) { fb.textContent = msg; fb.className = cls; }
+
+    if (milestone || leveledUp) {
+      triggerBurst();
+    }
+    if (milestone) { playSound("milestone"); }
+    if (leveledUp) { playSound("levelup"); }
+    playSound("correct");
+
+    var s = $("nnScoreVal"); if (s) { s.classList.remove("nn-bump"); void s.offsetWidth; s.classList.add("nn-bump"); }
+    renderHud();
+    renderLives();
+  }
+
+  function awardWrong(q) {
+    state.attempted += 1;
+    state.wrong += 1;
+    if (state.mistakes > 0) { state.mistakes -= 1; }
+    var prevCombo = state.combo;
+    state.combo = 0;
+
+    var fb = $("nnFeedback");
+    if (fb) {
+      fb.textContent = wrongCallout() + " The answer was " + q.answer + ".";
+      fb.className = "nn-feedback is-bad";
+    }
+    if (prevCombo > 0) { playSound("milestone"); }
+    playSound("wrong");
+    renderHud();
+    renderLives();
+  }
+
+  function scheduleNext() {
+    winSetTimeout(function () {
+      if (!state || state.phase !== "playing") { return; }
+      if (state.timeLeft <= 0) { endGame(); return; }
+      loadNextQuestion();
+    }, FEEDBACK_MS);
+  }
+
+  /* ---------- end game ---------- */
+
+  function endGame() {
+    if (!state || state.phase === "over") { return; }
+    if (state.timerId !== null) { winClearInterval(state.timerId); state.timerId = null; }
+    state.phase = "over";
+    state.timeLeft = Math.max(0, state.timeLeft);
+    state.isBoss = false;
+    state.announcing = false;
+    var overlay = $("nnBossOverlay");
+    if (overlay) { overlay.classList.add("nn-hidden"); }
+
+    var acc = accuracyFor(state);
+    var info = levelInfo(state.xp);
+
+    var pb = readPb() || defaultPb();
+    var newBest = state.score > pb.bestScore;
+    if (newBest) { pb.bestScore = state.score; }
+    if (acc > pb.bestAccuracy) { pb.bestAccuracy = acc; }
+    if (state.bestCombo > pb.bestCombo) { pb.bestCombo = state.bestCombo; }
+    if (info.level > pb.highestLevel) { pb.highestLevel = info.level; }
+    pb.gamesPlayed = pb.gamesPlayed + 1;
+    pb.totalXp = pb.totalXp + state.xp;
+    writePb(pb);
+
+    var scoreEl = $("nnResScore"); if (scoreEl) { scoreEl.textContent = state.score; }
+    var xpEl = $("nnResXp"); if (xpEl) { xpEl.textContent = state.xp; }
+    var atEl = $("nnResAttempted"); if (atEl) { atEl.textContent = state.attempted; }
+    var coEl = $("nnResCorrect"); if (coEl) { coEl.textContent = state.correct; }
+    var woEl = $("nnResWrong"); if (woEl) { woEl.textContent = state.wrong; }
+    var acEl = $("nnResAccuracy"); if (acEl) { acEl.textContent = acc + "%"; }
+    var beEl = $("nnResBest"); if (beEl) { beEl.textContent = state.bestCombo; }
+    var lvEl = $("nnResLevel"); if (lvEl) { lvEl.textContent = info.level + " · " + info.name; }
+    var bgEl = $("nnResBoss"); if (bgEl) { bgEl.textContent = state.bossWins; }
+    var nbEl = $("nnNewBest"); if (nbEl) { nbEl.hidden = !newBest; }
+    var fbEl = $("nnFbMsg");
+    var stats = { accuracy: acc, score: state.score, attempted: state.attempted };
+    if (fbEl) { fbEl.textContent = sessionMessage(stats); }
+
+    renderPersonalBest();
+    showScreen("end");
+    playSound("end");
+  }
+
+  /* ---------- game flow ---------- */
+
+  function startGame() {
+    var s = readSettingsFromUi();
+    if (!s.difficulty || !s.challenge) { s = settings; }
+    state = newState({ difficulty: s.difficulty, duration: s.duration, challenge: s.challenge });
+    state.phase = "playing";
+    showScreen("game");
+    renderLives();
+    renderHud();
+    loadNextQuestion();
+    startTimer();
+  }
+
+  function playAgain() {
+    startGame();
+  }
+
+  /* ---------- negligible sound (Web Audio, no external files) ---------- */
+
+  function ensureAudio() {
+    if (!audioCtx) {
+      var AC = window.AudioContext || window.webkitAudioContext;
+      if (AC) { audioCtx = new AC(); }
+    }
+    if (audioCtx && audioCtx.state === "suspended") {
+      audioCtx.resume();
+    }
+  }
+
+  function beep(freq, dur, type, when, gain) {
+    if (!soundOn || !audioCtx) { return; }
+    try {
+      var osc = audioCtx.createOscillator();
+      var g = audioCtx.createGain();
+      osc.type = type || "square";
+      osc.frequency.value = freq;
+      g.gain.value = gain || 0.12;
+      g.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + dur);
+      osc.connect(g);
+      g.connect(audioCtx.destination);
+      osc.start(when || audioCtx.currentTime);
+      osc.stop((when || audioCtx.currentTime) + dur + 0.03);
+    } catch (e) {
+      /* audio is optional */
+    }
+  }
+
+  function playSound(name) {
+    if (!soundOn) { return; }
+    if (name === "correct") { beep(660, 0.12, "square"); }
+    else if (name === "wrong") { beep(180, 0.2, "sawtooth"); }
+    else if (name === "milestone") { beep(880, 0.1, "square"); }
+    else if (name === "levelup") { beep(523, 0.12, "square"); beep(784, 0.16, "square", audioCtx.currentTime + 0.12); }
+    else if (name === "boss") { beep(330, 0.18, "sawtooth"); beep(392, 0.22, "sawtooth", audioCtx.currentTime + 0.18); }
+    else if (name === "end") { beep(392, 0.14, "square"); beep(523, 0.14, "square", audioCtx.currentTime + 0.14); beep(659, 0.2, "square", audioCtx.currentTime + 0.28); }
+  }
+
+  /* ---------- lightweight burst (CSS shimmer on the question card) ---------- */
+
+  function triggerBurst() {
+    if (reducedMotion) { return; }
+    var card = $("nnQCard");
+    if (!card) { return; }
+    card.classList.remove("nn-bump");
+    void card.offsetWidth;
+    card.classList.add("nn-bump");
+  }
+
+  /* ---------- events ---------- */
+
+  function wireEvents() {
+    wireSettings();
+
+    var startBtn = $("nnStartBtn");
+    if (startBtn) { startBtn.addEventListener("click", startGame); }
+
+    var playAgainBtn = $("nnPlayAgain");
+    if (playAgainBtn) { playAgainBtn.addEventListener("click", playAgain); }
+
+    var submitBtn = $("nnSubmitBtn");
+    if (submitBtn) { submitBtn.addEventListener("click", submitAnswer); }
+
+    var input = $("nnAnswerInput");
+    if (input) {
+      input.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.keyCode === 13) {
+          e.preventDefault();
+          submitAnswer();
+        }
+      });
+    }
+
+    var negBtn = $("nnNegBtn");
+    if (negBtn) {
+      negBtn.addEventListener("click", function () {
+        var i = $("nnAnswerInput");
+        if (!i) { return; }
+        var v = i.value.trim();
+        if (v.charAt(0) === "-") { i.value = v.slice(1); }
+        else { i.value = "-" + v; }
+        i.focus({ preventScroll: true });
+      });
+    }
+
+    var soundBtn = $("nnSoundBtn");
+    if (soundBtn) {
+      soundBtn.addEventListener("click", function () {
+        ensureAudio();
+        soundOn = !soundOn;
+        soundBtn.textContent = soundOn ? "🔊 Sound On" : "🔇 Sound";
+        soundBtn.setAttribute("aria-pressed", soundOn ? "true" : "false");
+        if (soundOn) { playSound("correct"); }
+      });
+    }
+
+    if (typeof window !== "undefined" && window.__NN_TEST__) {
+      window.__NN__ = {
+        state: function () { return state; },
+        start: startGame,
+        submit: submitAnswer,
+        end: endGame,
+        loadNext: loadNextQuestion,
+        decideBoss: decideBoss,
+        playAgain: playAgain,
+        readPb: readPb,
+        renderPersonalBest: renderPersonalBest,
+        setInput: setAnswerInput,
+        tick: function () {
+          if (state && state.phase === "playing") {
+            state.timeLeft -= 1;
+            renderHud();
+            if (state.timeLeft <= 0) { endGame(); }
+          }
+        }
+      };
+    }
+  }
+
+  /* ---------- init ---------- */
+
+  renderPersonalBest();
+  wireEvents();
+})();
+</script>
+</body>
+</html>
