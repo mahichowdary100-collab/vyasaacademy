@@ -1,0 +1,1892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Detective | Statistics Maths Game | Vyasa Academy</title>
+  <meta name="description" content="Master mean, median, mode, bar graphs, pie charts, and data interpretation through interactive statistics puzzles at Vyasa Academy." />
+  <link rel="canonical" href="https://www.vyasaacademy.in/maths-games/data-detective/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0b1f3f" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vyasa Academy" />
+  <meta property="og:title" content="Data Detective | Statistics Maths Game | Vyasa Academy" />
+  <meta property="og:description" content="Master mean, median, mode, bar graphs, pie charts, and data interpretation through interactive statistics puzzles at Vyasa Academy." />
+  <meta property="og:url" content="https://www.vyasaacademy.in/maths-games/data-detective/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Data Detective | Statistics Maths Game | Vyasa Academy" />
+  <meta name="twitter:description" content="Master mean, median, mode, bar graphs, pie charts, and data interpretation through interactive statistics puzzles at Vyasa Academy." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.vyasaacademy.in/" },
+      { "@type": "ListItem", "position": 2, "name": "Maths Games", "item": "https://www.vyasaacademy.in/maths-games/" },
+      { "@type": "ListItem", "position": 3, "name": "Data Detective", "item": "https://www.vyasaacademy.in/maths-games/data-detective/" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Data Detective — Crack the Data Code!",
+    "url": "https://www.vyasaacademy.in/maths-games/data-detective/",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Any",
+    "description": "Free statistics practice game covering mean, median, mode, bar charts, pie charts and data tables for school students.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+    "publisher": { "@type": "Organization", "name": "Vyasa Academy", "url": "https://www.vyasaacademy.in/" }
+  }
+  </script>
+  <style>
+    :root {
+      --dd-bg: #0b1f3f;
+      --dd-bg2: #0f2a52;
+      --dd-card: #122a52;
+      --dd-line: rgba(255, 255, 255, 0.10);
+      --dd-accent: #ff9800;
+      --dd-accent-light: #ffc069;
+      --dd-accent-dark: #e57d00;
+      --dd-blue: #42a5f5;
+      --dd-text: #f2f6fc;
+      --dd-muted: #a9b8d0;
+      --dd-good: #43d17c;
+      --dd-bad: #ff5c6c;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body.dd-body {
+      margin: 0;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 80% -10%, #16356b 0%, var(--dd-bg) 45%, var(--dd-bg) 100%);
+      color: var(--dd-text);
+      line-height: 1.55;
+    }
+    a { color: var(--dd-accent-light); }
+    .dd-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--dd-line);
+      background: rgba(11, 31, 63, 0.85);
+      position: sticky;
+      top: 0;
+      z-index: 40;
+    }
+    .dd-top-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.05rem; letter-spacing: 0.2px; }
+    .dd-top a { text-decoration: none; color: var(--dd-text); }
+    .dd-top a:focus-visible { outline: 2px solid var(--dd-accent); outline-offset: 2px; border-radius: 4px; }
+    .dd-back { display: inline-flex; align-items: center; gap: 6px; color: var(--dd-muted) !important; font-size: 0.9rem; padding: 8px 12px; border-radius: 8px; }
+    .dd-back:hover { color: var(--dd-text) !important; background: rgba(255, 255, 255, 0.06); }
+    .dd-btn-sound {
+      background: transparent;
+      border: 1px solid var(--dd-line);
+      color: var(--dd-text);
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    .dd-btn-sound:focus-visible { outline: 2px solid var(--dd-accent); outline-offset: 2px; }
+    .dd-btn-sound:hover { background: rgba(255, 255, 255, 0.06); }
+    .dd-main { max-width: 980px; margin: 0 auto; padding: 20px 16px 60px; }
+    .dd-screen[hidden] { display: none !important; }
+    .dd-hero { text-align: center; padding: 18px 0 8px; }
+    .dd-hero h1 { font-size: clamp(1.9rem, 5vw, 2.8rem); margin: 0 0 8px; color: #ffffff; }
+    .dd-tagline { color: var(--dd-accent-light); font-weight: 600; font-size: 1.15rem; margin: 0 0 18px; }
+    .dd-panel { background: var(--dd-card); border: 1px solid var(--dd-line); border-radius: 16px; padding: 18px; margin: 14px 0; }
+    .dd-h2 { font-size: 1.05rem; margin: 0 0 10px; display: flex; align-items: center; gap: 8px; color: #ffffff; }
+    .dd-mute { color: var(--dd-muted); }
+    .dd-how {
+      background: linear-gradient(135deg, #173a75, #101f42);
+      border: 1px solid var(--dd-line);
+      border-radius: 14px;
+      padding: 14px 16px;
+      margin: 10px 0 16px;
+    }
+    .dd-how small { text-transform: uppercase; letter-spacing: 1.5px; color: var(--dd-accent); font-weight: 700; }
+    .dd-how h2 { font-size: 1rem; margin: 4px 0 6px; color: #ffffff; }
+    .dd-how p { margin: 0; color: var(--dd-muted); font-size: 0.94rem; }
+    .dd-settings label.dd-settings-label {
+      display: block;
+      font-weight: 700;
+      margin: 14px 0 8px;
+      color: #ffffff;
+      font-size: 0.95rem;
+    }
+    .dd-opts { display: flex; flex-wrap: wrap; gap: 8px; }
+    .dd-opt {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--dd-line);
+      color: var(--dd-text);
+      border-radius: 999px;
+      padding: 9px 15px;
+      font-size: 0.92rem;
+      cursor: pointer;
+    }
+    .dd-opt:focus-visible { outline: 2px solid var(--dd-accent); outline-offset: 2px; }
+    .dd-opt:hover { background: rgba(255, 255, 255, 0.1); }
+    .dd-opt.is-active { background: var(--dd-accent); border-color: var(--dd-accent); color: #10203a; font-weight: 700; }
+    .dd-mode-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; }
+    .dd-mode-card {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-align: left;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--dd-line);
+      color: var(--dd-text);
+      border-radius: 12px;
+      padding: 12px 14px;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+    .dd-mode-card:focus-visible { outline: 2px solid var(--dd-accent); outline-offset: 2px; }
+    .dd-mode-card:hover { background: rgba(255, 255, 255, 0.08); }
+    .dd-mode-card.is-active { border-color: var(--dd-accent); background: rgba(255, 152, 0, 0.12); }
+    .dd-mode-card .dd-mi { font-size: 1.3rem; }
+    .dd-mode-card small { display: block; color: var(--dd-muted); font-size: 0.78rem; }
+    .dd-pb { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; }
+    .dd-pb-cell { background: rgba(255, 255, 255, 0.04); border: 1px solid var(--dd-line); border-radius: 10px; padding: 10px; text-align: center; }
+    .dd-pb-num { display: block; font-size: 1.35rem; font-weight: 800; color: var(--dd-accent-light); }
+    .dd-pb-lbl { font-size: 0.76rem; color: var(--dd-muted); }
+    .dd-pb-none { color: var(--dd-muted); font-size: 0.9rem; margin: 0; }
+    .dd-btn {
+      display: inline-block;
+      background: var(--dd-accent);
+      border: none;
+      color: #10203a;
+      font-weight: 800;
+      font-size: 1.05rem;
+      border-radius: 12px;
+      padding: 14px 26px;
+      cursor: pointer;
+    }
+    .dd-btn:focus-visible { outline: 3px solid #ffffff; outline-offset: 3px; }
+    .dd-btn:hover { background: var(--dd-accent-light); }
+    .dd-btn-dark { background: rgba(255, 255, 255, 0.08); border: 1px solid var(--dd-line); color: var(--dd-text); }
+    .dd-btn-dark:hover { background: rgba(255, 255, 255, 0.14); }
+    .dd-btn-row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 16px; }
+    /* game screen */
+    .dd-hud { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+    .dd-stat { background: var(--dd-card); border: 1px solid var(--dd-line); border-radius: 12px; padding: 8px 14px; text-align: center; min-width: 86px; flex: 1 1 auto; }
+    .dd-stat b { display: block; font-size: 1.15rem; color: #ffffff; }
+    .dd-stat span { font-size: 0.72rem; color: var(--dd-muted); text-transform: uppercase; letter-spacing: 0.6px; }
+    .dd-stat.is-warning b { color: var(--dd-bad); }
+    .dd-pills { display: flex; gap: 8px; align-items: center; margin-bottom: 14px; font-size: 0.82rem; color: var(--dd-muted); }
+    .dd-pill { background: var(--dd-card); border: 1px solid var(--dd-line); border-radius: 999px; padding: 4px 12px; }
+    .dd-case { background: var(--dd-card); border: 1px solid var(--dd-line); border-radius: 12px; padding: 8px 14px; margin-bottom: 14px; }
+    .dd-case-row { display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: var(--dd-muted); margin-bottom: 6px; }
+    .dd-case-track { height: 8px; border-radius: 999px; background: rgba(255, 255, 255, 0.1); overflow: hidden; }
+    .dd-case-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--dd-accent), var(--dd-accent-light)); border-radius: 999px; transition: width 0.35s ease; }
+    .dd-dossier { background: var(--dd-card); border: 1px solid var(--dd-line); border-radius: 16px; padding: 18px; }
+    .dd-qkind { color: var(--dd-accent); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+    .dd-q { font-size: 1.1rem; font-weight: 700; color: #ffffff; margin: 6px 0 12px; }
+    .dd-data { margin: 12px 0 14px; }
+    .dd-chart-svg { max-width: 100%; height: auto; display: block; margin: 0 auto; background: rgba(255, 255, 255, 0.02); border-radius: 10px; }
+    .dd-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .dd-chip {
+      background: #17428a;
+      color: #e8f1ff;
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .dd-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+    .dd-table th, .dd-table td { padding: 8px 10px; border: 1px solid var(--dd-line); text-align: left; }
+    .dd-table th { background: rgba(255, 255, 255, 0.06); }
+    .dd-table tfoot th, .dd-table tfoot td { font-weight: 700; color: var(--dd-accent-light); }
+    .dd-sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+    .dd-choices { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+    .dd-choice {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--dd-line);
+      color: var(--dd-text);
+      border-radius: 12px;
+      padding: 14px 12px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .dd-choice:focus-visible { outline: 2px solid var(--dd-accent); outline-offset: 2px; }
+    .dd-choice:hover { background: rgba(255, 255, 255, 0.1); }
+    .dd-choice.is-selected.is-correct { background: rgba(67, 209, 124, 0.2); border-color: var(--dd-good); }
+    .dd-choice.is-selected.is-wrong { background: rgba(255, 92, 108, 0.2); border-color: var(--dd-bad); }
+    .dd-choice:disabled { opacity: 0.55; cursor: default; }
+    .dd-choice:not(:disabled):hover { background: rgba(255, 255, 255, 0.1); }
+    .dd-num-row { display: flex; gap: 10px; max-width: 340px; }
+    .dd-num {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--dd-line);
+      border-radius: 12px;
+      color: var(--dd-text);
+      font-size: 1.1rem;
+      padding: 12px 14px;
+    }
+    .dd-num:focus-visible { outline: 2px solid var(--dd-accent); outline-offset: 2px; }
+    .dd-feedback { font-weight: 700; margin-top: 14px; min-height: 24px; }
+    .dd-feedback.is-good { color: var(--dd-good); }
+    .dd-feedback.is-bad { color: var(--dd-bad); }
+    .dd-expln { margin: 8px 0 0; color: var(--dd-muted); font-size: 0.95rem; }
+    .dd-theory {
+      margin: 8px 0 0;
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: rgba(66, 165, 245, 0.12);
+      border: 1px solid rgba(66, 165, 245, 0.35);
+      color: #cddff5;
+      font-size: 0.9rem;
+    }
+    .dd-game-controls { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .dd-paused {
+      position: fixed;
+      inset: 0;
+      background: rgba(6, 16, 36, 0.92);
+      z-index: 60;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .dd-overlay-card { background: var(--dd-card); border: 1px solid var(--dd-line); border-radius: 16px; padding: 30px; text-align: center; max-width: 420px; width: 100%; }
+    .dd-overlay-card h2 { margin: 0 0 6px; }
+    .dd-overlay-card p { color: var(--dd-muted); margin: 0 0 18px; }
+    .dd-big-score { font-size: 2.4rem; font-weight: 800; color: var(--dd-accent-light); margin: 6px 0; }
+    .dd-bonus { color: var(--dd-good); font-weight: 700; }
+    .dd-ach { display: flex; gap: 10px; align-items: flex-start; background: rgba(255, 255, 255, 0.04); border: 1px solid var(--dd-line); border-radius: 10px; padding: 10px 12px; margin: 6px 0; }
+    .dd-ach-ico { font-size: 1.4rem; }
+    .dd-ach-name { font-weight: 700; color: #ffffff; }
+    .dd-ach-desc { color: var(--dd-muted); font-size: 0.85rem; }
+    .dd-results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; margin: 12px 0; }
+    .dd-seo { margin-top: 40px; border-top: 1px solid var(--dd-line); padding-top: 24px; }
+    .dd-seo h2 { color: #ffffff; }
+    .dd-seo p, .dd-seo li { color: var(--dd-muted); font-size: 0.95rem; }
+    .dd-seo-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .dd-seo-chip {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--dd-line);
+      color: var(--dd-muted);
+      border-radius: 999px;
+      padding: 7px 13px;
+      font-size: 0.88rem;
+      text-decoration: none;
+    }
+    .dd-seo-chip:hover { color: var(--dd-text); border-color: var(--dd-accent); }
+    .dd-foot { text-align: center; color: var(--dd-muted); font-size: 0.85rem; padding: 20px 10px 34px; border-top: 1px solid var(--dd-line); margin-top: 30px; }
+    .dd-strong { animation: ddPop 0.45s ease; }
+    @media (prefers-reduced-motion: reduce) {
+      .dd-strong { animation: none !important; }
+      .dd-case-fill { transition: none; }
+      html { scroll-behavior: auto; }
+    }
+    @keyframes ddPop {
+      0% { transform: scale(0.985); }
+      40% { transform: scale(1.01); }
+      100% { transform: scale(1); }
+    }
+    @media (max-width: 520px) {
+      .dd-main { padding: 12px 12px 50px; }
+      .dd-stat { min-width: 72px; padding: 6px 8px; }
+      .dd-choice { padding: 12px 8px; font-size: 0.95rem; }
+      .dd-hero h1 { font-size: 1.7rem; }
+    }
+  </style>
+</head>
+<body class="dd-body">
+  <header class="dd-top">
+    <div class="dd-top-brand"><span aria-hidden="true">🕵️</span><span>Data Detective</span></div>
+    <a class="dd-back" href="/maths-games/"><span aria-hidden="true">←</span> Back to Maths Games</a>
+    <button type="button" class="dd-btn-sound" id="ddSoundBtn" aria-pressed="false">🔇 Sound</button>
+  </header>
+
+  <main class="dd-main">
+    <!-- START SCREEN -->
+    <section class="dd-screen" id="ddStartScreen">
+      <div class="dd-hero">
+        <h1>🔍 Data Detective</h1>
+        <p class="dd-tagline">Read the Data. Spot the Pattern. Solve the Mystery.</p>
+      </div>
+
+      <div class="dd-how" aria-live="polite">
+        <small>Your Brief</small>
+        <h2 id="ddHowTitle">Chart Detective</h2>
+        <p id="ddHowText">Read bar charts to uncover the twisted truth about votes, scores and totals. Spot the highest bar, chase totals and compare differences before the timer catches you.</p>
+        <p class="dd-mute" id="ddHowChip"></p>
+      </div>
+
+      <div class="dd-panel">
+        <h2 class="dd-h2">🧩 Choose Your Case</h2>
+        <div class="dd-mode-grid" data-setting-group="mode" role="group" aria-label="Game mode">
+          <button type="button" class="dd-mode-card is-active" data-setting="mode" data-value="chart" aria-pressed="true"><span class="dd-mi" aria-hidden="true">📊</span><span>Chart Detective<small>Bar graphs &amp; totals</small></span></button>
+          <button type="button" class="dd-mode-card" data-setting="mode" data-value="pie" aria-pressed="false"><span class="dd-mi" aria-hidden="true">🥧</span><span>Pie Chart Mystery<small>Fractions, % &amp; angles</small></span></button>
+          <button type="button" class="dd-mode-card" data-setting="mode" data-value="mean" aria-pressed="false"><span class="dd-mi" aria-hidden="true">➗</span><span>Mean Master<small>Average = sum ÷ n</small></span></button>
+          <button type="button" class="dd-mode-card" data-setting="mode" data-value="medmode" aria-pressed="false"><span class="dd-mi" aria-hidden="true">🔢</span><span>Median &amp; Mode<small>Middle value &amp; most common</small></span></button>
+          <button type="button" class="dd-mode-card" data-setting="mode" data-value="table" aria-pressed="false"><span class="dd-mi" aria-hidden="true">🗂️</span><span>Data Table Detective<small>Frequency tables</small></span></button>
+          <button type="button" class="dd-mode-card" data-setting="mode" data-value="ultimate" aria-pressed="false"><span class="dd-mi" aria-hidden="true">🕵️</span><span>Ultimate Mystery<small>All clues. 10 questions.</small></span></button>
+        </div>
+      </div>
+
+      <div class="dd-panel">
+        <h2 class="dd-h2">⚖️ Investigative Level</h2>
+        <div class="dd-opts" data-setting-group="diff" role="group" aria-label="Difficulty">
+          <button type="button" class="dd-opt is-active" data-setting="diff" data-value="easy" aria-pressed="true">Easy Clues</button>
+          <button type="button" class="dd-opt" data-setting="diff" data-value="medium" aria-pressed="false">Medium</button>
+          <button type="button" class="dd-opt" data-setting="diff" data-value="hard" aria-pressed="false">Hard</button>
+        </div>
+        <label class="dd-settings-label" for="ddDuration">
+          ⏱️ Crime Scene Window: how long do you have?
+        </label>
+        <div class="dd-opts" id="ddDuration" data-setting-group="duration" role="group" aria-label="Session duration">
+          <button type="button" class="dd-opt is-active" data-setting="duration" data-value="60" aria-pressed="true">60s</button>
+          <button type="button" class="dd-opt" data-setting="duration" data-value="90" aria-pressed="false">90s</button>
+          <button type="button" class="dd-opt" data-setting="duration" data-value="120" aria-pressed="false">120s</button>
+        </div>
+      </div>
+
+      <div class="dd-panel">
+        <h2 class="dd-h2">🏅 Case File (Personal Best)</h2>
+        <p class="dd-pb-none dd-mute" id="ddPbNone">No cases solved yet — earn your first report!</p>
+        <div class="dd-pb" id="ddPbGrid" hidden></div>
+      </div>
+
+      <div class="dd-btn-row">
+        <button type="button" class="dd-btn" id="ddStartBtn">🕵️ Start Investigating</button>
+      </div>
+    </section>
+
+    <!-- GAME SCREEN -->
+    <section class="dd-screen" id="ddGameScreen" hidden>
+      <div class="dd-hud">
+        <div class="dd-stat" id="ddStatTime"><b id="ddTimerVal">60</b><span>Seconds</span></div>
+        <div class="dd-stat"><b id="ddScoreVal">0</b><span>Score</span></div>
+        <div class="dd-stat"><b id="ddAttemptedVal">0</b><span>Asked</span></div>
+        <div class="dd-stat"><b id="ddCorrectVal">0</b><span>Correct</span></div>
+        <div class="dd-stat"><b id="ddAccuracyVal">0%</b><span>Accuracy</span></div>
+        <div class="dd-stat"><b id="ddStreakVal">0</b><span>Streak</span></div>
+      </div>
+
+      <div class="dd-pills">
+        <span class="dd-pill" id="ddModePill">📊 Chart Detective</span>
+        <span class="dd-pill" id="ddDiffPill">Easy</span>
+      </div>
+
+      <div class="dd-case" id="ddCaseWrap" hidden>
+        <div class="dd-case-row">
+          <span>🕵️ Case progress</span>
+          <span id="ddCaseLabel">0/10</span>
+        </div>
+        <div class="dd-case-track" role="progressbar" id="ddCaseTrack" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" aria-label="Mystery case progress"><div class="dd-case-fill" id="ddCaseBar"></div></div>
+      </div>
+
+      <div class="dd-dossier" id="ddQCard">
+        <span class="dd-qkind" id="ddQKind">Clue</span>
+        <p class="dd-q" id="ddQPrompt">Clue pending…</p>
+        <div class="dd-data" id="ddDataPanel"></div>
+        <div class="dd-choices" id="ddChoices"></div>
+        <div class="dd-num-row" id="ddNumWrap" hidden>
+          <label class="dd-sr-only" for="ddNumInput">Type your answer</label>
+          <input class="dd-num" id="ddNumInput" type="number" step="any" inputmode="decimal" autocomplete="off" placeholder="Type your answer…" />
+          <button type="button" class="dd-btn" id="ddNumSubmit">Submit</button>
+        </div>
+        <p class="dd-feedback" id="ddFeedback" aria-live="polite"></p>
+        <p class="dd-expln" id="ddExplain"></p>
+        <p class="dd-theory" id="ddTheory" hidden></p>
+      </div>
+
+      <div class="dd-game-controls">
+        <button type="button" class="dd-btn dd-btn-dark" id="ddPauseBtn">⏸ Pause</button>
+        <button type="button" class="dd-btn dd-btn-dark" id="ddRestartBtn">🔄 Restart</button>
+        <a class="dd-btn dd-btn-dark" href="/maths-games/">← Exit</a>
+      </div>
+    </section>
+
+    <!-- PAUSED OVERLAY -->
+    <div class="dd-paused dd-hidden" id="ddPausedOverlay" hidden>
+      <div class="dd-overlay-card">
+        <span style="font-size:2rem" aria-hidden="true">⏸</span>
+        <h2>Case Paused</h2>
+        <p>The crime scene is frozen. Resume when you are ready.</p>
+        <div class="dd-btn-row" style="margin-top:0">
+          <button type="button" class="dd-btn" id="ddPauseResume">▶ Resume</button>
+          <button type="button" class="dd-btn dd-btn-dark" id="ddPauseRestart">🔄 Restart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASE SOLVED OVERLAY -->
+    <div class="dd-paused dd-hidden" id="ddCaseScreen" hidden>
+      <div class="dd-overlay-card">
+        <span style="font-size:2.4rem" aria-hidden="true">🕵️</span>
+        <h2>Case Solved!</h2>
+        <p>You cracked the case in the <b id="ddCaseModeName">Ultimate Mystery</b>.</p>
+        <div class="dd-big-score" id="ddCaseScore">0 pts</div>
+        <p class="dd-bonus" id="ddCaseBonus">+25 Case-Completion Bonus</p>
+        <div class="dd-btn-row" style="margin-top:0">
+          <button type="button" class="dd-btn" id="ddCaseReport">📋 See My Report</button>
+          <button type="button" class="dd-btn dd-btn-dark" id="ddCaseAgain">🔄 New Case</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESULTS SCREEN -->
+    <section class="dd-screen" id="ddEndScreen" hidden>
+      <div class="dd-hero">
+        <h2 class="dd-h2">🕵️ Case Report</h2>
+        <p class="dd-tagline" id="ddFbMsg"></p>
+      </div>
+
+      <div class="dd-panel">
+        <h2 class="dd-h2">📉 Mission Breakdown</h2>
+        <div class="dd-results-grid">
+          <div class="dd-pb-cell"><span class="dd-pb-num" id="ddResScore">0</span><span class="dd-pb-lbl">Score</span></div>
+          <div class="dd-pb-cell"><span class="dd-pb-num" id="ddResAttempted">0</span><span class="dd-pb-lbl">Questions</span></div>
+          <div class="dd-pb-cell"><span class="dd-pb-num" id="ddResCorrect">0</span><span class="dd-pb-lbl">Correct</span></div>
+          <div class="dd-pb-cell"><span class="dd-pb-num" id="ddResWrong">0</span><span class="dd-pb-lbl">Wrong</span></div>
+          <div class="dd-pb-cell"><span class="dd-pb-num" id="ddResAccuracy">0%</span><span class="dd-pb-lbl">Accuracy</span></div>
+          <div class="dd-pb-cell"><span class="dd-pb-num" id="ddResBest">0</span><span class="dd-pb-lbl">Best Streak</span></div>
+          <div class="dd-pb-cell" id="ddResCaseCell" hidden><span class="dd-pb-num">✅</span><span class="dd-pb-lbl">Case Solved</span></div>
+        </div>
+        <p class="dd-mute" id="ddResModes"></p>
+      </div>
+
+      <div class="dd-panel">
+        <h2 class="dd-h2">🏅 Achievements Unlocked</h2>
+        <div id="ddAchList"></div>
+        <p class="dd-pb-none dd-mute" id="ddNewBest" hidden>🎉 New personal best score!</p>
+      </div>
+
+      <div class="dd-btn-row">
+        <button type="button" class="dd-btn" id="ddPlayAgain">🔄 Play Again</button>
+        <a class="dd-btn dd-btn-dark" href="/maths-games/">← More Games</a>
+      </div>
+    </section>
+
+    <!-- SEO CONTENT -->
+    <section class="dd-seo">
+      <h2>Master statistics with Data Detective</h2>
+      <p>Data Detective turns CBSE and ICSE statistics revision into a detective story. Practise reading <strong>bar charts</strong>, decoding <strong>pie charts</strong>, computing the <strong>mean</strong>, finding the <strong>median</strong> and <strong>mode</strong>, and interrogating <strong>frequency tables</strong> — all with instant feedback and step-by-step explanations. Every dataset is generated fresh so no two cases repeat.</p>
+      <h3>What you will practise</h3>
+      <ul>
+        <li>Mean = sum of observations ÷ number of observations.</li>
+        <li>Median = the middle value after sorting (average of the two middles when n is even).</li>
+        <li>Mode = the most frequent value; datasets with no repeated value have no mode.</li>
+        <li>Pie sector angle = (category value ÷ total) × 360°.</li>
+        <li>Reading totals, differences, highest/lowest and averages from graphs and tables.</li>
+      </ul>
+      <p>Statistics and data handling appear throughout the school curriculum. Practise alongside our <a href="/cbse-study-material/class-8/mathematics/">Class 8 Mathematics</a> and <a href="/cbse-study-material/class-9/mathematics/">Class 9 Mathematics</a> study material, then challenge yourself with more <a href="/maths-games/">maths games</a>.</p>
+      <div class="dd-seo-chips">
+        <a class="dd-seo-chip" href="/maths-games/speed-challenge/">⚡ Maths Speed Challenge</a>
+        <a class="dd-seo-chip" href="/maths-games/number-ninja/">🔢 Number Ninja</a>
+        <a class="dd-seo-chip" href="/maths-games/probability-challenge/">🎲 Probability Challenge</a>
+        <a class="dd-seo-chip" href="/maths-games/geometry-builder/">📐 Geometry Builder</a>
+        <a class="dd-seo-chip" href="/maths-games/factor-detective/">🧩 Factor Detective</a>
+        <a class="dd-seo-chip" href="/maths-games/coordinate-shooter/">📍 Coordinate Shooter</a>
+        <a class="dd-seo-chip" href="/maths-games/equation-hunter/">🎯 Equation Hunter</a>
+        <a class="dd-seo-chip" href="/cbse-study-material/">📚 CBSE Study Material</a>
+        <a class="dd-seo-chip" href="/cbse-study-material/class-10/mathematics/statistics/">📊 Class 10 Statistics</a>
+        <a class="dd-seo-chip" href="/cbse-study-material/class-10/mathematics/probability/">🎲 Class 10 Probability</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="dd-foot">
+    <p>© 2026 <a href="/">Vyasa Academy</a> · <a href="/maths-games/">Maths Games</a> · Free educational resources for students.</p>
+  </footer>
+
+  <script>
+  (function () {
+    'use strict';
+
+    /* ==========================================
+       DATA DETECTIVE — Crack the Data Code!
+       ========================================== */
+
+    var LS_KEY = "vyasa_data_detective_stats";
+    var BASE_POINTS = 10;
+    var CASE_LENGTH = 10;
+    var CASE_BONUS = 25;
+    var FEEDBACK_MS = 1200;
+
+    var MODES = {
+      chart: { icon: "📊", label: "Chart Detective" },
+      pie: { icon: "🥧", label: "Pie Chart Mystery" },
+      mean: { icon: "➗", label: "Mean Master" },
+      medmode: { icon: "🔢", label: "Median &amp; Mode" },
+      table: { icon: "🗂️", label: "Data Table Detective" },
+      ultimate: { icon: "🕵️", label: "Ultimate Mystery" }
+    };
+
+    var DIFFS = { easy: { label: "Easy", bonus: 0 }, medium: { label: "Medium", bonus: 2 }, hard: { label: "Hard", bonus: 4 } };
+
+    var STREAK_MILESTONES = [
+      { streak: 3, bonus: 5, label: "COMBO x3!" },
+      { streak: 5, bonus: 10, label: "HOT STREAK!" },
+      { streak: 10, bonus: 20, label: "ON FIRE!" }
+    ];
+
+    var ACHIEVEMENTS = [
+      { id: "first", name: "First Clue", desc: "Answer your first question correctly.", icon: "🔍" },
+      { id: "chart", name: "Chart Expert", desc: "Get 5 chart questions correct.", icon: "📊" },
+      { id: "avg", name: "Average Ace", desc: "Get 5 mean questions correct.", icon: "➗" },
+      { id: "pattern", name: "Pattern Finder", desc: "Get 5 median or mode questions correct.", icon: "🔢" },
+      { id: "master", name: "Master Detective", desc: "Solve a complete Ultimate Mystery case.", icon: "🕵️" }
+    ];
+
+    var MODE_HOW = {
+      chart: { title: "Chart Detective", chip: "Read the bars. The answer is always in the data.", text: "Read bar charts to uncover the twisted truth about votes, scores and totals. Spot the highest bar, chase totals and compare differences before the timer catches you." },
+      pie: { title: "Pie Chart Mystery", chip: "Sector angle = (value ÷ total) × 360°.", text: "Pie charts reveal fractions, percentages and sector angles. Convert values into shares of the whole, and watch the angles always add up to 360°." },
+      mean: { title: "Mean Master", chip: "Mean = sum of observations ÷ number of observations.", text: "Averages are detective algebra. Add every clue, count the clues, divide — and the mean appears. Type your answer; decimals and halves count." },
+      medmode: { title: "Median &amp; Mode", chip: "Median = middle after sorting. Mode = most frequent.", text: "Sort the numbers, find the middle value (or average the two middles), then hunt the most repeated value. A dataset with no repeats has no mode." },
+      table: { title: "Data Table Detective", chip: "Total = sum of every frequency.", text: "Frequency tables store evidence in rows. Sum the totals, compare frequencies, find the biggest and smallest — and calculate averages." },
+      ultimate: { title: "Ultimate Mystery", chip: "10 questions. Every clue type. One case.", text: "One case, ten evidence files, five clue types. Answer all ten questions to crack the case, earn the case-completion bonus and reach the Case Solved! screen." }
+    };
+
+    var CHART_LABELS_POOL = ["Apples", "Bananas", "Cherries", "Dates", "Grapes", "Kiwis", "Mangoes", "Oranges", "Papayas", "Plums"];
+    var PIE_LABELS_POOL = ["Red", "Blue", "Green", "Yellow", "Orange", "Purple", "Pink", "Grey", "Violet", "Teal"];
+    var TABLE_LABELS_POOL = ["Basketball", "Football", "Cricket", "Hockey", "Tennis", "Badminton", "Swimming", "Athletics", "Karate", "Dance", "Music", "Drama"];
+
+    var COLORS = ["#42a5f5", "#ff9800", "#43d17c", "#ff5c6c", "#ab7df6", "#ffee58", "#4dd0e1", "#f48fb1", "#8d95a6", "#ffb74d"];
+
+    /* ---------- randomness ---------- */
+
+    function makeRng(seed) {
+      var s = seed >>> 0;
+      return function () {
+        s = (s * 1664525 + 1013904223) >>> 0;
+        return s / 4294967296;
+      };
+    }
+
+    var rng = Math.random;
+    function setRng(f) { if (typeof f === "function") { rng = f; } }
+
+    function ri(min, max) { return min + Math.floor(rng() * (max - min + 1)); }
+    function pick(arr) { return arr[Math.floor(rng() * arr.length)]; }
+    function shuffle(arr) {
+      var a = arr.slice();
+      for (var i = a.length - 1; i > 0; i--) {
+        var j = Math.floor(rng() * (i + 1));
+        var t = a[i]; a[i] = a[j]; a[j] = t;
+      }
+      return a;
+    }
+    function sampleDistinct(pool, k) {
+      var a = shuffle(pool);
+      return a.slice(0, k);
+    }
+
+    /* ---------- pure statistics helpers ---------- */
+
+    function sumArr(arr) {
+      var s = 0;
+      for (var i = 0; i < arr.length; i++) { s += arr[i]; }
+      return s;
+    }
+
+    function meanv(arr) {
+      if (!arr || !arr.length) { return 0; }
+      return sumArr(arr) / arr.length;
+    }
+
+    function medianv(arr) {
+      if (!arr || !arr.length) { return 0; }
+      var s = arr.slice().sort(function (a, b) { return a - b; });
+      var n = s.length;
+      var m = Math.floor(n / 2);
+      if (n % 2 === 1) { return s[m]; }
+      return (s[m - 1] + s[m]) / 2;
+    }
+
+    function modeInfo(arr) {
+      if (!arr || !arr.length) { return { maxFreq: 0, modes: [], any: false }; }
+      var f = {};
+      for (var i = 0; i < arr.length; i++) {
+        var k = String(arr[i]);
+        f[k] = (f[k] || 0) + 1;
+      }
+      var maxFreq = 0;
+      for (var key in f) { if (Object.prototype.hasOwnProperty.call(f, key)) { if (f[key] > maxFreq) { maxFreq = f[key]; } } }
+      var modes = [];
+      var keys = Object.keys(f).sort(function (a, b) { return parseFloat(a) - parseFloat(b); });
+      for (var j = 0; j < keys.length; j++) {
+        if (f[keys[j]] === maxFreq) { modes.push(parseFloat(keys[j])); }
+      }
+      return { maxFreq: maxFreq, modes: modes, any: maxFreq > 1 };
+    }
+
+    function gcd(a, b) {
+      a = Math.abs(a); b = Math.abs(b);
+      while (b) { var t = b; b = a % b; a = t; }
+      return a;
+    }
+
+    function fracStr(num, den) {
+      var g = gcd(Math.round(num), Math.round(den));
+      return Math.round(num / g) + "/" + Math.round(den / g);
+    }
+
+    function fmtNum(x) {
+      if (typeof x !== "number" || isNaN(x)) { return String(x); }
+      if (Math.abs(x - Math.round(x)) < 1e-9) { return String(Math.round(x)); }
+      var s = x.toFixed(2);
+      if (s.indexOf(".") !== -1) {
+        s = s.replace(/0+$/, "");
+        if (s.charAt(s.length - 1) === ".") { s = s.slice(0, -1); }
+      }
+      return s;
+    }
+
+    function isNumericAnswer(userVal, answer) {
+      if (typeof userVal !== "number" || isNaN(userVal)) { return false; }
+      if (typeof answer !== "number") { return false; }
+      return Math.abs(userVal - answer) < 1e-6;
+    }
+
+    /* largest-remainder rounding: parts that sum exactly to `target` */
+    function roundingHats(values, target) {
+      var total = sumArr(values);
+      if (total <= 0) { var z = []; for (var i = 0; i < values.length; i++) { z.push(0); } return z; }
+      var n = values.length;
+      var exact = [];
+      for (var j = 0; j < n; j++) { exact.push((values[j] / total) * target); }
+      var floor = exact.map(Math.floor);
+      var rem = floor.map(function (v, ix) { return exact[ix] - v; });
+      var diff = target - sumArr(floor);
+      var order = [];
+      for (var k = 0; k < n; k++) { order.push(k); }
+      order.sort(function (a, b) { return rem[b] - rem[a]; });
+      for (var m = 0; m < diff; m++) {
+        if (m >= order.length) { break; }
+        floor[order[m]] += 1;
+      }
+      return floor;
+    }
+
+    function pctRounded(values) { return roundingHats(values, 100); }
+    function angleRounded(values) { return roundingHats(values, 360); }
+
+    /* ---------- distractor / MCQ builders ---------- */
+
+    function toLabel(v) { return fmtNum(v); }
+
+    function optNumbers(correct, extra) {
+      var set = [correct];
+      var seeds = [1, -1, 2, -2, 0.5, -0.5, 3, -3, 5, -5, 10, -10, 4, -4, 0.25, -0.25];
+      var guards = 0;
+      while (set.length < 4 && guards < 200) {
+        guards++;
+        var step = seeds[(set.length - 1) % seeds.length];
+        var cand = correct + step;
+        if (cand < 0) { cand = correct - step; }
+        var lbl = toLabel(cand);
+        var dup = false;
+        for (var i = 0; i < set.length; i++) {
+          if (toLabel(set[i]) === lbl) { dup = true; break; }
+        }
+        if (!dup) { set.push(cand); }
+      }
+      var extraAdd = 0;
+      while (set.length < 4 && extraAdd < 40) {
+        extraAdd++;
+        var c2 = correct + (extraAdd * 7);
+        var l2 = toLabel(c2);
+        var twice = false;
+        for (var j = 0; j < set.length; j++) { if (toLabel(set[j]) === l2) { twice = true; break; } }
+        if (!twice) { set.push(c2); }
+      }
+      return shuffle(set.map(function (v) { return { key: v, label: toLabel(v) }; }));
+    }
+
+    /* returns {options:[{key,label}], answer:indexOfCorrect} with 4 unique labels */
+    function buildMcq(correctLabel, distractors, extraLabels) {
+      var pool = [];
+      var seen = {};
+      function add(l) {
+        if (seen[l] || l === "" || l === null || l === undefined) { return; }
+        seen[l] = true;
+        pool.push(l);
+      }
+      add(correctLabel);
+      for (var i = 0; i < distractors.length; i++) { add(distractors[i]); }
+      if (extraLabels) { for (var k = 0; k < extraLabels.length; k++) { add(extraLabels[k]); } }
+      var filler = 0;
+      while (pool.length < 4 && filler < 60) {
+        filler++;
+        var f = correctLabel + " " + (filler + 2);
+        add(f);
+      }
+      var opts = shuffle(pool).map(function (l) { return { key: l, label: l }; });
+      var ansIdx = 0;
+      for (var j = 0; j < opts.length; j++) { if (opts[j].key === correctLabel) { ansIdx = j; } }
+      return { options: opts, answer: ansIdx, correctLabel: correctLabel };
+    }
+
+    /* ---------- question generators ---------- */
+
+    function generateChartQuestion(diff) {
+      var k = diff === "easy" ? 4 : diff === "medium" ? 5 : 6;
+      var labels = sampleDistinct(CHART_LABELS_POOL, k);
+      var values = [];
+      for (var i = 0; i < k; i++) {
+        var lo = diff === "easy" ? 1 : diff === "medium" ? 2 : 4;
+        var hi = diff === "easy" ? 9 : diff === "medium" ? 18 : 30;
+        values.push(ri(lo, hi));
+      }
+      var total = sumArr(values);
+      var maxIdx = 0; var minIdx = 0;
+      for (var m = 1; m < k; m++) {
+        if (values[m] > values[maxIdx]) { maxIdx = m; }
+        if (values[m] < values[minIdx]) { minIdx = m; }
+      }
+
+      var taskPick = rng();
+      var q = {
+        mode: "chart", diff: diff, type: "mcq",
+        kindLabel: "Chart Detective · Evidence",
+        prompt: "The bar chart shows votes for fruit favourites.", chart: { labels: labels, values: values, total: total, maxIdx: maxIdx, minIdx: minIdx },
+        explain: "", theoryText: "Total = sum of all bars. Compare bar heights to find the highest and lowest."
+      };
+
+      var otherLabels = [];
+      for (var c = 0; c < k; c++) { if (c !== maxIdx) { otherLabels.push(labels[c]); } }
+      var otherLabels2 = [];
+      for (var d = 0; d < k; d++) { if (d !== minIdx) { otherLabels2.push(labels[d]); } }
+
+      if (diff === "easy" && taskPick < 0.5) {
+        var hiM = buildMcq(labels[maxIdx], otherLabels.slice(0, 3), null);
+        q.prompt = "Which fruit received the MOST votes?";
+        q.answer = hiM.answer; q.options = hiM.options;
+        q.explain = labels[maxIdx] + " has the tallest bar with " + values[maxIdx] + " votes.";
+      } else if (diff === "easy" && taskPick < 0.75) {
+        var loM = buildMcq(labels[minIdx], otherLabels2.slice(0, 3), null);
+        q.prompt = "Which fruit received the FEWEST votes?";
+        q.answer = loM.answer; q.options = loM.options;
+        q.explain = labels[minIdx] + " has the shortest bar with " + values[minIdx] + " votes.";
+      } else if (taskPick < 0.9) {
+        var numQ = optNumbers(total);
+        q.prompt = "How many votes were cast in TOTAL?";
+        q.answer = numQ.findIndex(function (o) { return o.key === total; });
+        q.options = numQ;
+        q.explain = "Total = " + values.join(" + ") + " = " + total + " votes.";
+      } else {
+        var diffV = values[maxIdx] - values[minIdx];
+        var dQ = optNumbers(diffV);
+        q.prompt = "How many more votes did " + labels[maxIdx] + " get than " + labels[minIdx] + "?";
+        q.answer = dQ.findIndex(function (o) { return o.key === diffV; });
+        q.options = dQ;
+        q.explain = labels[maxIdx] + " got " + values[maxIdx] + ", " + labels[minIdx] + " got " + values[minIdx] + ". Difference = " + values[maxIdx] + " − " + values[minIdx] + " = " + diffV + ".";
+      }
+      return q;
+    }
+
+    function pieSectorData(diff) {
+      var k = diff === "easy" ? 3 : 4;
+      if (diff === "hard") { k = 5; }
+      var labels = sampleDistinct(PIE_LABELS_POOL, k);
+      var values = [];
+      for (var i = 0; i < k; i++) {
+        var lo = diff === "easy" ? 1 : 2;
+        var hi = diff === "easy" ? 8 : diff === "medium" ? 20 : 34;
+        values.push(ri(lo, hi));
+      }
+      var total = sumArr(values);
+      var pcts = pctRounded(values);
+      var angles = angleRounded(values);
+      var sectors = [];
+      for (var j = 0; j < k; j++) {
+        sectors.push({ label: labels[j], value: values[j], total: total, pct: pcts[j], angle: angles[j], color: COLORS[j % COLORS.length] });
+      }
+      return sectors;
+    }
+
+    function generatePieQuestion(diff) {
+      var sectors = pieSectorData(diff);
+      var k = sectors.length;
+      var total = sectors[0].total;
+      var q = {
+        mode: "pie", diff: diff, type: "mcq",
+        kindLabel: "Pie Chart Mystery · Evidence",
+        prompt: "The pie chart shows how the whole was shared.", data: sectors,
+        explain: "", theoryText: "Each sector is a fraction of the whole. Sector angle = (value ÷ total) × 360°."
+      };
+
+      var idx = ri(0, k - 1);
+      var sec = sectors[idx];
+      var roll = rng();
+
+      if (diff === "easy" && roll < 0.5) {
+        var per = optNumbers(sec.pct);
+        q.prompt = "What percentage of the total is the " + sec.label + " sector?";
+        q.answer = per.findIndex(function (o) { return o.key === sec.pct; });
+        q.options = per;
+        q.explain = "Share = " + sec.pct + "% of the whole (value " + sec.value + " of " + total + ").";
+      } else if (diff === "hard" && roll < 0.8) {
+        var ang = optNumbers(sec.angle);
+        q.prompt = "What is the sector angle for " + sec.label + "? (Sector angle = (value ÷ total) × 360°)";
+        q.answer = ang.findIndex(function (o) { return o.key === sec.angle; });
+        q.options = ang;
+        q.explain = "Angle = (" + sec.value + " ÷ " + total + ") × 360° = " + sec.angle + "°. All sector angles together total 360°.";
+      } else if (roll < 0.7) {
+        var fracs = [];
+        for (var f = 0; f < sectors.length; f++) { fracs.push(fracStr(sectors[f].value, total)); }
+        var correctFrac = fracStr(sec.value, total);
+        var rest = fracs.filter(function (x) { return x !== correctFrac; });
+        var fm = buildMcq(correctFrac, rest.slice(0, 3), null);
+        q.prompt = "What fraction of the total is the " + sec.label + " sector?";
+        q.answer = fm.answer; q.options = fm.options;
+        q.explain = sec.label + " = " + sec.value + " out of " + total + " in total, so the fraction is " + sec.value + "/" + total + " = " + correctFrac + ".";
+      } else if (diff !== "easy") {
+        var val = optNumbers(sec.value);
+        q.prompt = "If the total is " + total + ", how many does the " + sec.label + " sector represent?";
+        q.answer = val.findIndex(function (o) { return o.key === sec.value; });
+        q.options = val;
+        q.explain = "The " + sec.label + " sector shows a value of " + sec.value + " (" + sec.pct + "% of " + total + ").";
+      } else {
+        var mostIdx = 0;
+        for (var t = 1; t < k; t++) { if (sectors[t].value > sectors[mostIdx].value) { mostIdx = t; } }
+        var labelPool = sectors.map(function (s) { return s.label; });
+        var others = labelPool.filter(function (l) { return l !== sectors[mostIdx].label; });
+        var em = buildMcq(sectors[mostIdx].label, others.slice(0, 3), null);
+        q.prompt = "Which sector is the LARGEST?";
+        q.answer = em.answer; q.options = em.options;
+        q.explain = sectors[mostIdx].label + " has the biggest share with value " + sectors[mostIdx].value + " (" + sectors[mostIdx].pct + "%).";
+      }
+      return q;
+    }
+
+    function generateMeanQuestion(diff) {
+      var n = diff === "easy" ? 4 + ri(0, 1) : diff === "medium" ? 5 + ri(0, 2) : 6 + ri(0, 2);
+      var step = diff === "easy" ? 1 : 0.5;
+      var values = [];
+      for (var i = 0; i < n; i++) {
+        var lo = diff === "easy" ? 2 : 3;
+        var hi = diff === "easy" ? 8 : diff === "medium" ? 16 : 30;
+        values.push(step * ri(lo, hi));
+      }
+      var ans = meanv(values);
+      return {
+        mode: "mean", diff: diff, type: "num",
+        kindLabel: "Mean Master · Evidence",
+        prompt: "Find the MEAN of these " + n + " observations:",
+        dataset: values, answer: ans,
+        explain: "Mean = (sum of all values) ÷ " + n + " = " + fmtNum(sumArr(values)) + " ÷ " + n + " = " + fmtNum(ans) + ".",
+        theoryText: "Mean = sum of observations ÷ number of observations."
+      };
+    }
+
+    function generateMedModeQuestion(diff) {
+      var n = diff === "easy" ? 5 : diff === "medium" ? ri(6, 7) : 7 + ri(0, 1);
+      var values = [];
+      var hasMode = diff === "easy" ? rng() < 0.75 : rng() < 0.6;
+      if (hasMode) {
+        values.push(ri(1, 8));
+        values.push(values[0]);
+        for (var i = 2; i < n; i++) { values.push(ri(1, 9)); }
+      } else {
+        var base = sampleDistinct([1, 2, 3, 4, 5, 6, 7, 8, 9], n);
+        values = base.slice();
+      }
+      values = shuffle(values);
+      var med = medianv(values);
+      var info = modeInfo(values);
+
+      var q = {
+        mode: "medmode", diff: diff, type: "mcq",
+        kindLabel: "Median &amp; Mode · Evidence",
+        prompt: "Study this dataset of " + n + " numbers.",
+        dataset: values,
+        explain: "", theoryText: "Median = middle value of the sorted list (average of the two middles when n is even). Mode = most frequent value. If no value repeats, there is no mode."
+      };
+
+      var askMedian = rng() < 0.5;
+      if (askMedian) {
+        q.type = "num";
+        q.kindLabel = "Median &amp; Mode · The Middle";
+        q.prompt = "Find the MEDIAN of the dataset.";
+        q.answer = med;
+        var sorted = values.slice().sort(function (a, b) { return a - b; });
+        var midWord = n % 2 === 1 ? "middle value is " + fmtNum(sorted[Math.floor(n / 2)]) : "two middle values are " + fmtNum(sorted[n / 2 - 1]) + " and " + fmtNum(sorted[n / 2]) + ", so we average them";
+        q.explain = "Sorted: " + sorted.join(", ") + ". The " + midWord + ". Median = " + fmtNum(med) + ".";
+      } else {
+        q.prompt = "Find the MODE of the dataset.";
+        if (!info.any) {
+          var distinct = [];
+          var seen = {};
+          for (var v = 0; v < values.length; v++) {
+            var key = toLabel(values[v]);
+            if (!seen[key]) { seen[key] = true; distinct.push(toLabel(values[v])); }
+          }
+          var bundleNoMode = buildMcq("No mode", distinct.slice(0, 3), null);
+          q.answer = bundleNoMode.answer; q.options = bundleNoMode.options;
+          q.explain = "No value appears more than once (max frequency = 1), so this dataset has NO mode.";
+        } else if (info.modes.length === 1) {
+          var correctLabel = toLabel(info.modes[0]);
+          var cands = [];
+          var used = {};
+          for (var t = 0; t < values.length && cands.length < 8; t++) {
+            var ll = toLabel(values[t]);
+            if (ll !== correctLabel && !used[ll]) { used[ll] = true; cands.push(ll); }
+          }
+          var extra = [correctLabel, "No mode"];
+          for (var e = 1; e <= 3; e++) {
+            var near = toLabel(info.modes[0] + e);
+            if (cands.length < 8 && !used[near]) { cands.push(near); }
+          }
+          var bOne = buildMcq(correctLabel, cands.slice(0, 3), null);
+          q.answer = bOne.answer; q.options = bOne.options;
+          q.explain = "The value " + fmtNum(info.modes[0]) + " appears " + info.maxFreq + " times — more than any other, so it is the mode.";
+        } else {
+          var modesLabel = info.modes.map(toLabel).join(" and ");
+          var dist2 = [];
+          var seen2 = {};
+          for (var w = 0; w < values.length && dist2.length < 6; w++) {
+            var lw = toLabel(values[w]);
+            if (!seen2[lw]) { seen2[lw] = true; dist2.push(lw); }
+          }
+          var correctTie = "Two modes: " + modesLabel;
+          var tiers = [];
+          if (info.modes.length > 2) { tiers.push("Multiple modes"); }
+          tiers.push("No mode");
+          for (var r = 0; r < dist2.length; r++) { tiers.push(dist2[r]); }
+          var bTie = buildMcq(correctTie, tiers.slice(0, 3), null);
+          q.answer = bTie.answer; q.options = bTie.options;
+          q.explain = "The values " + modesLabel + " appear " + info.maxFreq + " times each — thousands equally. Convention: when several values tie for the highest frequency, the mode is reported as all of them (" + modesLabel + ").";
+        }
+      }
+      return q;
+    }
+
+    function generateTableQuestion(diff) {
+      var rows = diff === "easy" ? 4 : diff === "medium" ? 5 : 6;
+      var labels = sampleDistinct(TABLE_LABELS_POOL, rows);
+      var values = [];
+      for (var i = 0; i < rows; i++) {
+        var lo = diff === "easy" ? 2 : 3;
+        var hi = diff === "easy" ? 9 : diff === "medium" ? 16 : 24;
+        values.push(ri(lo, hi));
+      }
+      var total = sumArr(values);
+      var maxIdx = 0; var minIdx = 0;
+      for (var m = 1; m < rows; m++) {
+        if (values[m] > values[maxIdx]) { maxIdx = m; }
+        if (values[m] < values[minIdx]) { minIdx = m; }
+      }
+      var q = {
+        mode: "table", diff: diff, type: "mcq",
+        kindLabel: "Data Table Detective · Evidence",
+        prompt: "The table shows which activities students chose.",
+        table: { labels: labels, values: values, total: total, maxIdx: maxIdx, minIdx: minIdx, caption: "Favourite activities of a class of " + total + " pupils" },
+        explain: "", theoryText: "Total = sum of every frequency."
+      };
+
+      var roll = rng();
+      if (diff === "easy" && roll < 0.5) {
+        var mostOther = [];
+        for (var a = 0; a < rows; a++) { if (a !== maxIdx) { mostOther.push(labels[a]); } }
+        var mm = buildMcq(labels[maxIdx], mostOther.slice(0, 3), null);
+        q.prompt = "Which activity was chosen by the MOST pupils?";
+        q.answer = mm.answer; q.options = mm.options;
+        q.explain = labels[maxIdx] + " has the largest frequency (" + values[maxIdx] + ").";
+      } else if (roll < 0.6) {
+        var tot = optNumbers(total);
+        q.prompt = "How many pupils chose an activity in TOTAL?";
+        q.answer = tot.findIndex(function (o) { return o.key === total; });
+        q.options = tot;
+        q.explain = "Total = " + values.join(" + ") + " = " + total + ".";
+      } else if (roll < 0.75) {
+        var idx = ri(0, rows - 1);
+        var fq = optNumbers(values[idx]);
+        q.prompt = "How many pupils chose " + labels[idx] + "?";
+        q.answer = fq.findIndex(function (o) { return o.key === values[idx]; });
+        q.options = fq;
+        q.explain = "The row for " + labels[idx] + " shows a frequency of " + values[idx] + ".";
+      } else if (roll < 0.9 || diff === "easy") {
+        var diff2 = values[maxIdx] - values[minIdx];
+        var df = optNumbers(diff2);
+        q.prompt = "How many more pupils chose " + labels[maxIdx] + " over " + labels[minIdx] + "?";
+        q.answer = df.findIndex(function (o) { return o.key === diff2; });
+        q.options = df;
+        q.explain = labels[maxIdx] + " = " + values[maxIdx] + ", " + labels[minIdx] + " = " + values[minIdx] + ". Difference = " + diff2 + ".";
+      } else {
+        var avg = meanv(values);
+        var av = optNumbers(avg);
+        q.prompt = "What is the MEAN of the frequencies?";
+        q.answer = av.findIndex(function (o) { return o.key === avg; });
+        q.options = av;
+        q.explain = "Mean = (" + values.join(" + ") + ") ÷ " + rows + " = " + fmtNum(sumArr(values)) + " ÷ " + rows + " = " + fmtNum(avg) + ".";
+      }
+      return q;
+    }
+
+    function effectiveDifficulty(userDiff, caseCount) {
+      var order = ["easy", "medium", "hard"];
+      var base = order.indexOf(userDiff);
+      return order[Math.max(base, caseCount >= 5 ? 1 : 0, caseCount >= 8 ? 2 : 0)];
+    }
+
+    function generateUltimateQuestion(diff, caseCount) {
+      var topics = ["chart", "pie", "mean", "medmode", "table"];
+      var topic = pick(topics);
+      var eff = effectiveDifficulty(diff, caseCount);
+      var q = generateQuestion(topic, eff);
+      q.base = topic;
+      q.mode = "ultimate";
+      q.kindLabel = "Ultimate Mystery · Case File " + (caseCount + 1) + "/" + CASE_LENGTH + " · " + q.kindLabel;
+      return q;
+    }
+
+    function generateQuestion(topic, diff) {
+      if (topic === "chart") { return generateChartQuestion(diff); }
+      if (topic === "pie") { return generatePieQuestion(diff); }
+      if (topic === "mean") { return generateMeanQuestion(diff); }
+      if (topic === "medmode") { return generateMedModeQuestion(diff); }
+      if (topic === "table") { return generateTableQuestion(diff); }
+      return generateChartQuestion(diff);
+    }
+
+    function generateGameQuestion(mode, diff, caseCount) {
+      if (mode === "ultimate") { return generateUltimateQuestion(diff, caseCount); }
+      return generateQuestion(mode, diff);
+    }
+
+    function domainForQuestion(q) { return q.base || q.mode; }
+
+    /* ---------- SVG renderers ---------- */
+
+    function escapeXml(s) {
+      return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    }
+
+    function barChartSVG(chart) {
+      var labels = chart.labels, values = chart.values;
+      var n = labels.length;
+      var W = 360, H = 230;
+      var M = { t: 20, r: 12, b: 40, l: 36 };
+      var plotW = W - M.l - M.r, plotH = H - M.t - M.b;
+      var baseY = M.t + plotH;
+      var maxV = Math.max.apply(null, values);
+      var scaleMax = Math.max(maxV, 1);
+      var slot = plotW / n;
+      var bw = Math.min(34, slot * 0.52);
+
+      var aria = "Bar chart: ";
+      for (var i = 0; i < n; i++) { aria += labels[i] + " " + values[i] + (i < n - 1 ? ", " : ""); }
+      var out = '<svg class="dd-chart-svg" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + escapeXml(aria) + '" xmlns="http://www.w3.org/2000/svg">';
+      out += '<g class="dd-axis">';
+      out += '<line x1="' + M.l + '" y1="' + M.t + '" x2="' + M.l + '" y2="' + baseY + '" stroke="rgba(255,255,255,0.35)" stroke-width="1" />';
+      out += '<line x1="' + M.l + '" y1="' + baseY + '" x2="' + (W - M.r) + '" y2="' + baseY + '" class="dd-zero" stroke="rgba(255,255,255,0.55)" stroke-width="1.5" />';
+      var gridRows = [0, 0.25, 0.5, 0.75, 1];
+      for (var gr = 0; gr < gridRows.length; gr++) {
+        var gy = baseY - gridRows[gr] * plotH;
+        var gv = Math.round(gridRows[gr] * scaleMax * 10) / 10;
+        out += '<line x1="' + M.l + '" y1="' + gy + '" x2="' + (W - M.r) + '" y2="' + gy + '" stroke="rgba(255,255,255,0.10)" stroke-width="1" stroke-dasharray="3 4" />';
+        if (gridRows[gr] > 0) {
+          out += '<text x="' + (M.l - 6) + '" y="' + (gy + 4) + '" text-anchor="end" class="dd-lab" font-size="10" fill="rgba(255,255,255,0.6)">' + fmtNum(gv) + '</text>';
+        }
+      }
+      out += '</g>';
+      for (var b = 0; b < n; b++) {
+        var cx = M.l + slot * b + slot / 2;
+        var h = (values[b] / scaleMax) * plotH;
+        out += '<rect class="dd-bar" x="' + (cx - bw / 2) + '" y="' + (baseY - h) + '" width="' + bw + '" height="' + h + '" rx="3" fill="' + COLORS[b % COLORS.length] + '" />';
+        out += '<text x="' + cx + '" y="' + (baseY - h - 5) + '" text-anchor="middle" class="dd-lab" font-size="11" font-weight="700" fill="#ffffff">' + values[b] + '</text>';
+        out += '<text x="' + cx + '" y="' + (baseY + 16) + '" text-anchor="middle" class="dd-lab" font-size="10" fill="rgba(255,255,255,0.75)">' + escapeXml(labels[b]) + '</text>';
+      }
+      out += '</svg>';
+      return out;
+    }
+
+    function pieSVG(sectors) {
+      var W = 320, cx = 110, cy = 104, r = 86;
+      var rowsH = 20 + sectors.length * 20 + 8;
+      var H = 170 + rowsH;
+      var Hh = 170 + sectors.length * 20 + 8;
+      var H2 = Math.max(H, Hh);
+      var aria = "Pie chart: ";
+      for (var i = 0; i < sectors.length; i++) { aria += sectors[i].label + " " + sectors[i].pct + "% (" + sectors[i].value + "); "; }
+      aria += "Total " + sectors[0].total + ".";
+      var out = '<svg class="dd-chart-svg" viewBox="0 0 ' + W + ' ' + H2 + '" role="img" aria-label="' + escapeXml(aria) + '" xmlns="http://www.w3.org/2000/svg">';
+      var start = 0;
+      for (var s = 0; s < sectors.length; s++) {
+        var ang = sectors[s].angle;
+        var end = start + ang;
+        var a0 = start, a1 = end;
+        var x0 = cx + r * Math.sin((a0 * Math.PI) / 180);
+        var y0 = cy - r * Math.cos((a0 * Math.PI) / 180);
+        var x1 = cx + r * Math.sin((a1 * Math.PI) / 180);
+        var y1 = cy - r * Math.cos((a1 * Math.PI) / 180);
+        var large = ang > 180 ? 1 : 0;
+        var path = "M " + cx + " " + cy + " L " + x0.toFixed(2) + " " + y0.toFixed(2) + " A " + r + " " + r + " 0 " + large + " 1 " + x1.toFixed(2) + " " + y1.toFixed(2) + " Z";
+        out += '<path class="dd-pie" d="' + path + '" fill="' + sectors[s].color + '" stroke="#0b1f3f" stroke-width="2" />';
+        var midA = (a0 + a1) / 2;
+        var mx = cx + r * 0.62 * Math.sin((midA * Math.PI) / 180);
+        var my = cy - r * 0.62 * Math.cos((midA * Math.PI) / 180);
+        out += '<text x="' + mx.toFixed(1) + '" y="' + my.toFixed(1) + '" text-anchor="middle" class="dd-lab" font-size="10" font-weight="700" fill="#0b1f3f">' + sectors[s].pct + '%</text>';
+        start = end;
+      }
+      out += '<g class="dd-legend">';
+      for (var l = 0; l < sectors.length; l++) {
+        var ly = 170 + 20 + l * 20;
+        out += '<rect x="14" y="' + (ly - 11) + '" width="13" height="13" rx="3" fill="' + sectors[l].color + '" />';
+        out += '<text x="33" y="' + ly + '" class="dd-lab" font-size="12" fill="rgba(255,255,255,0.9)">' + escapeXml(sectors[l].label) + ' — ' + sectors[l].pct + '% (' + sectors[l].value + ')</text>';
+      }
+      out += '</g></svg>';
+      return out;
+    }
+
+    function tableHTML(tbl) {
+      var html = '<table class="dd-table"><caption class="dd-sr-only">' + escapeXml(tbl.caption) + '</caption>';
+      html += '<thead><tr><th scope="col">Activity</th><th scope="col">Pupils</th></tr></thead><tbody>';
+      for (var i = 0; i < tbl.labels.length; i++) {
+        html += '<tr><td>' + escapeXml(tbl.labels[i]) + '</td><td>' + tbl.values[i] + '</td></tr>';
+      }
+      html += '</tbody><tfoot><tr><th scope="row">Total</th><td>' + tbl.total + '</td></tr></tfoot></table>';
+      return html;
+    }
+
+    /* ---------- state ---------- */
+
+    var settings = { mode: "chart", diff: "easy", duration: 60 };
+
+    function newState(cfg) {
+      var s = {
+        mode: cfg.mode, diff: cfg.diff, duration: cfg.duration,
+        timeLeft: cfg.duration, timerId: null, phase: "idle",
+        score: 0, attempted: 0, correct: 0, wrong: 0,
+        streak: 0, bestStreak: 0,
+        question: null, evaluating: false,
+        caseCount: 0, caseSolved: false,
+        achievementsEarned: [],
+        stat: { chart: 0, pie: 0, mean: 0, medmode: 0, table: 0 },
+        modesSeen: {}
+      };
+      return s;
+    }
+
+    var state = null;
+    var soundOn = false;
+    var audioCtx = null;
+    var reducedMotion = false;
+
+    function accuracyFor(s) {
+      if (!s || !s.attempted) { return 0; }
+      return Math.round((s.correct / s.attempted) * 100);
+    }
+
+    function milestoneForStreak(streak) {
+      for (var i = 0; i < STREAK_MILESTONES.length; i++) {
+        if (STREAK_MILESTONES[i].streak === streak) { return STREAK_MILESTONES[i]; }
+      }
+      return null;
+    }
+
+    function pointsFor(diff, streakAtAward) {
+      var pts = BASE_POINTS + (DIFFS[diff] ? DIFFS[diff].bonus : 0);
+      var m = milestoneForStreak(streakAtAward);
+      if (m) { pts += m.bonus; }
+      return pts;
+    }
+
+    function checkAchievements(s) {
+      var out = [];
+      if (s.correct >= 1 && s.achievementsEarned.indexOf("first") === -1) { out.push("first"); }
+      if (s.stat.chart >= 5 && s.achievementsEarned.indexOf("chart") === -1) { out.push("chart"); }
+      if (s.stat.mean >= 5 && s.achievementsEarned.indexOf("avg") === -1) { out.push("avg"); }
+      if (s.stat.medmode >= 5 && s.achievementsEarned.indexOf("pattern") === -1) { out.push("pattern"); }
+      if (s.caseSolved && s.achievementsEarned.indexOf("master") === -1) { out.push("master"); }
+      for (var i = 0; i < out.length; i++) {
+        if (s.achievementsEarned.indexOf(out[i]) === -1) { s.achievementsEarned.push(out[i]); }
+      }
+      return s.achievementsEarned;
+    }
+
+    /* ---------- localStorage ---------- */
+
+    function defaultPb() {
+      return { bestScore: 0, bestAccuracy: 0, bestStreak: 0, casesSolved: 0, gamesPlayed: 0, totalCorrect: 0, achievementsEarned: [] };
+    }
+
+    function readPb() {
+      try {
+        var raw = window.localStorage.getItem(LS_KEY);
+        if (!raw) { return null; }
+        var d = JSON.parse(raw);
+        var pb = defaultPb();
+        if (typeof d.bestScore === "number") { pb.bestScore = d.bestScore; }
+        if (typeof d.bestAccuracy === "number") { pb.bestAccuracy = d.bestAccuracy; }
+        if (typeof d.bestStreak === "number") { pb.bestStreak = d.bestStreak; }
+        if (typeof d.casesSolved === "number") { pb.casesSolved = d.casesSolved; }
+        if (typeof d.gamesPlayed === "number") { pb.gamesPlayed = d.gamesPlayed; }
+        if (typeof d.totalCorrect === "number") { pb.totalCorrect = d.totalCorrect; }
+        if (d.achievementsEarned && d.achievementsEarned.length) {
+          for (var i = 0; i < d.achievementsEarned.length; i++) {
+            if (pb.achievementsEarned.indexOf(d.achievementsEarned[i]) === -1) { pb.achievementsEarned.push(d.achievementsEarned[i]); }
+          }
+        }
+        return pb;
+      } catch (e) { return null; }
+    }
+
+    function writePb(pb) {
+      try { window.localStorage.setItem(LS_KEY, JSON.stringify(pb)); return true; }
+      catch (e) { return false; }
+    }
+
+    /* ---------- DOM helpers ---------- */
+
+    function $(id) { return document.getElementById(id); }
+
+    var winSetInterval = function (fn, ms) { return window.setInterval(fn, ms); };
+    var winClearInterval = function (id) { window.clearInterval(id); };
+    var winSetTimeout = function (fn, ms) { return window.setTimeout(fn, ms); };
+
+    function renderHowCard(mode) {
+      var h = MODE_HOW[mode] || MODE_HOW.chart;
+      var t = $("ddHowTitle");
+      var x = $("ddHowText");
+      var c = $("ddHowChip");
+      if (t) { t.textContent = h.title; }
+      if (x) { x.textContent = h.text; }
+      if (c) { c.textContent = h.chip; }
+    }
+
+    function renderPersonalBest() {
+      var pb = readPb() || defaultPb();
+      var none = $("ddPbNone");
+      var grid = $("ddPbGrid");
+      if (!pb.gamesPlayed) {
+        if (none) { none.style.display = ""; }
+        if (grid) { grid.hidden = true; }
+        return;
+      }
+      if (none) { none.style.display = "none"; }
+      if (!grid) { return; }
+      var cells = [
+        { num: pb.bestScore, lbl: "Best Score" },
+        { num: pb.bestAccuracy + "%", lbl: "Best Accuracy" },
+        { num: pb.bestStreak, lbl: "Best Streak" },
+        { num: pb.achievementsEarned.length, lbl: "Achievements" },
+        { num: pb.casesSolved, lbl: "Cases Solved" },
+        { num: pb.totalCorrect, lbl: "Correct" }
+      ];
+      var html = "";
+      for (var i = 0; i < cells.length; i++) {
+        html += '<div class="dd-pb-cell"><span class="dd-pb-num">' + cells[i].num + '</span><span class="dd-pb-lbl">' + cells[i].lbl + '</span></div>';
+      }
+      grid.innerHTML = html;
+      grid.hidden = false;
+    }
+
+    function showScreen(which) {
+      var startS = $("ddStartScreen");
+      var gameS = $("ddGameScreen");
+      var endS = $("ddEndScreen");
+      if (startS) { startS.hidden = which !== "start"; }
+      if (gameS) { gameS.hidden = which !== "game"; }
+      if (endS) { endS.hidden = which !== "end"; }
+    }
+
+    function renderHud() {
+      var t = $("ddTimerVal");
+      var sc = $("ddScoreVal");
+      var at = $("ddAttemptedVal");
+      var co = $("ddCorrectVal");
+      var ac = $("ddAccuracyVal");
+      var st = $("ddStreakVal");
+      if (t) { t.textContent = state ? state.timeLeft : 0; }
+      if (sc) { sc.textContent = state ? state.score : 0; }
+      if (at) { at.textContent = state ? state.attempted : 0; }
+      if (co) { co.textContent = state ? state.correct : 0; }
+      if (ac) { ac.textContent = state ? accuracyFor(state) + "%" : "0%"; }
+      if (st) { st.textContent = state ? state.streak : 0; }
+      var tm = $("ddStatTime");
+      if (tm && state) { tm.classList.toggle("is-warning", state.timeLeft <= 10 && state.phase === "playing"); }
+      var m = $("ddModePill");
+      if (m) { m.textContent = (MODES[state.mode] ? MODES[state.mode].icon + " " + MODES[state.mode].label : state.mode); }
+      var d = $("ddDiffPill");
+      if (d && DIFFS[state.diff]) { d.textContent = DIFFS[state.diff].label; }
+    }
+
+    function renderCase() {
+      var wrap = $("ddCaseWrap");
+      if (!state) { if (wrap) { wrap.hidden = true; } return; }
+      if (state.mode !== "ultimate") { if (wrap) { wrap.hidden = true; } return; }
+      if (wrap) { wrap.hidden = false; }
+      var label = $("ddCaseLabel");
+      var bar = $("ddCaseBar");
+      var track = $("ddCaseTrack");
+      var n = Math.min(state.caseCount, CASE_LENGTH);
+      if (label) { label.textContent = n + "/" + CASE_LENGTH; }
+      if (bar) { bar.style.width = (n / CASE_LENGTH) * 100 + "%"; }
+      if (track) { track.setAttribute("aria-valuenow", String(n)); }
+    }
+
+    function renderQuestion() {
+      if (!state || !state.question) { return; }
+      var q = state.question;
+      var kind = $("ddQKind");
+      var txt = $("ddQPrompt");
+      var data = $("ddDataPanel");
+      if (kind) { kind.textContent = q.kindLabel; }
+      if (txt) { txt.textContent = q.prompt; }
+
+      if (data) {
+        data.innerHTML = "";
+        if (q.chart) { data.innerHTML = barChartSVG(q.chart); }
+        else if (q.data) { data.innerHTML = pieSVG(q.data); }
+        else if (q.table) { data.innerHTML = tableHTML(q.table); }
+        else if (q.dataset && q.dataset.length) {
+          var html = '<div class="dd-chips" role="img" aria-label="Dataset: ' + q.dataset.join(", ") + '">';
+          for (var i = 0; i < q.dataset.length; i++) {
+            html += '<span class="dd-chip">' + fmtNum(q.dataset[i]) + '</span>';
+          }
+          html += "</div>";
+          data.innerHTML = html;
+        }
+      }
+
+      var wrap = $("ddChoices");
+      var numWrap = $("ddNumWrap");
+      if (wrap) { wrap.innerHTML = ""; }
+      if (numWrap) { numWrap.hidden = true; }
+
+      if (q.type === "num") {
+        if (numWrap) {
+          numWrap.hidden = false;
+          var input = $("ddNumInput");
+          if (input) {
+            input.value = "";
+            input.disabled = false;
+            $("ddNumSubmit").disabled = false;
+          }
+        }
+      } else {
+        var items = q.options || [];
+        for (var j = 0; j < items.length; j++) {
+          (function (item, idx) {
+            var b = document.createElement("button");
+            b.type = "button";
+            b.className = "dd-choice";
+            b.textContent = item.label;
+            b.setAttribute("data-choice", String(idx));
+            b.addEventListener("click", function () {
+              if (state && state.evaluating) { return; }
+              submitAnswer(idx);
+            });
+            wrap.appendChild(b);
+          })(items[j], j);
+        }
+      }
+
+      var fb = $("ddFeedback"); if (fb) { fb.textContent = ""; fb.className = "dd-feedback"; }
+      var ex = $("ddExplain"); if (ex) { ex.textContent = ""; }
+      var th = $("ddTheory"); if (th) { th.hidden = true; th.textContent = ""; }
+    }
+
+    function loadNextQuestion() {
+      if (!state) { return; }
+      var q = generateGameQuestion(state.mode, state.diff, state.caseCount);
+      state.question = q;
+      state.trackQuestionDomain(q);
+      state.evaluating = false;
+      renderQuestion();
+    }
+
+    /* ---------- scoring / answering ---------- */
+
+    function recordDomain(s, domain) {
+      if (!s.stat[domain]) { s.stat[domain] = 0; }
+      s.stat[domain] += 1;
+      s.modesSeen[domain] = true;
+    }
+
+    function awardCorrect(predLabel) {
+      state.streak += 1;
+      if (state.streak > state.bestStreak) { state.bestStreak = state.streak; }
+      state.attempted += 1;
+      state.correct += 1;
+      var domain = domainForQuestion(state.question);
+      recordDomain(state, domain);
+      checkAchievements(state);
+
+      var m = milestoneForStreak(state.streak);
+      var pts = pointsFor(state.diff, state.streak);
+      state.score += pts;
+
+      var fb = $("ddFeedback");
+      if (fb) {
+        fb.textContent = "✅ Clue solved! +" + pts + (m ? " — " + m.label + " bonus!" : "");
+        fb.className = "dd-feedback is-good";
+      }
+      if (m) { triggerBurst(); playSound("milestone"); }
+      renderHud();
+    }
+
+    function awardWrong(q, predLabel) {
+      state.attempted += 1;
+      state.wrong += 1;
+      state.streak = 0;
+      var domain = domainForQuestion(q);
+      state.modesSeen[domain] = true;
+      checkAchievements(state);
+
+      var fb = $("ddFeedback");
+      if (fb) {
+        fb.textContent = "❌ Not quite. The correct answer was " + predLabel + ".";
+        fb.className = "dd-feedback is-bad";
+      }
+      playSound("wrong");
+      renderHud();
+    }
+
+    function submitAnswer(v) {
+      if (!state || state.phase !== "playing") { return; }
+      if (state.evaluating || !state.question) { return; }
+      var q = state.question;
+      state.evaluating = true;
+
+      var ok = false;
+      var predLabel = "";
+      if (q.type === "num") {
+        var parsed = typeof v === "number" ? v : parseFloat(String(v));
+        ok = isNumericAnswer(parsed, q.answer);
+        predLabel = fmtNum(q.answer);
+      } else {
+        ok = Number(v) === q.answer;
+        var chosen = q.options[Number(v)];
+        predLabel = chosen ? chosen.label : "?";
+      }
+
+      if (ok) {
+        awardCorrect(predLabel);
+      } else {
+        awardWrong(q, predLabel);
+      }
+
+      renderReveal(q, ok, v);
+
+      var ex = $("ddExplain");
+      if (ex) { ex.textContent = q.explain; }
+      var th = $("ddTheory");
+      if (th) { th.textContent = q.theoryText; th.hidden = false; }
+
+      if (state.mode === "ultimate") { state.caseCount += 1; }
+      renderHud();
+      renderCase();
+
+      if (state.mode === "ultimate" && state.caseCount >= CASE_LENGTH) {
+        endCase();
+        return;
+      }
+      scheduleNext();
+    }
+
+    function renderReveal(q, ok, v) {
+      if (q.type === "num") {
+        var input = $("ddNumInput");
+        if (input) { input.disabled = true; }
+        var submit = $("ddNumSubmit");
+        if (submit) { submit.disabled = true; }
+        return;
+      }
+      var wrap = $("ddChoices");
+      if (!wrap) { return; }
+      var children = wrap.children;
+      for (var i = 0; i < children.length; i++) {
+        var b = children[i];
+        b.disabled = true;
+        var key = b.getAttribute("data-choice");
+        if (key !== null) {
+          var idx = Number(key);
+          if (idx === q.answer) { b.classList.add("is-correct"); }
+          if (idx === Number(v)) { b.classList.add("is-selected"); }
+        }
+      }
+    }
+
+    function scheduleNext() {
+      winSetTimeout(function () {
+        if (!state || state.phase !== "playing") { return; }
+        if (state.timeLeft <= 0) { endGame(); return; }
+        loadNextQuestion();
+      }, FEEDBACK_MS);
+    }
+
+    /* ---------- flow ---------- */
+
+    function startTimer() {
+      if (state.timerId !== null) { winClearInterval(state.timerId); }
+      state.timerId = winSetInterval(function () {
+        if (!state || state.phase !== "playing") { return; }
+        state.timeLeft = Math.max(0, state.timeLeft - 1);
+        renderHud();
+        if (state.timeLeft <= 0) { endGame(); }
+      }, 1000);
+    }
+
+    function endCase() {
+      if (!state || state.phase === "over") { return; }
+      if (state.timerId !== null) { winClearInterval(state.timerId); state.timerId = null; }
+      state.caseSolved = true;
+      state.score += CASE_BONUS;
+      checkAchievements(state);
+      state.phase = "casecomplete";
+      var overlay = $("ddCaseScreen");
+      if (overlay) { overlay.classList.remove("dd-hidden"); overlay.hidden = false; }
+      var mn = $("ddCaseModeName");
+      if (mn) { mn.textContent = MODES.ultimate.label; }
+      var sc = $("ddCaseScore");
+      if (sc) { sc.textContent = state.score + " pts"; }
+      var bn = $("ddCaseBonus");
+      if (bn) { bn.textContent = "+" + CASE_BONUS + " Case-Completion Bonus"; }
+      playSound("end");
+    }
+
+    function endGame() {
+      if (!state || state.phase === "over") { return; }
+      if (state.timerId !== null) { winClearInterval(state.timerId); state.timerId = null; }
+      state.phase = "over";
+      state.timeLeft = Math.max(0, state.timeLeft);
+      var overlay = $("ddCaseScreen");
+      if (overlay) { overlay.classList.add("dd-hidden"); overlay.hidden = true; }
+
+      var acc = accuracyFor(state);
+      var pb = readPb() || defaultPb();
+      var newBest = state.score > pb.bestScore;
+      if (newBest) { pb.bestScore = state.score; }
+      if (acc > pb.bestAccuracy) { pb.bestAccuracy = acc; }
+      if (state.bestStreak > pb.bestStreak) { pb.bestStreak = state.bestStreak; }
+      if (state.caseSolved) { pb.casesSolved += 1; }
+      var merged = pb.achievementsEarned.slice();
+      for (var i = 0; i < state.achievementsEarned.length; i++) {
+        if (merged.indexOf(state.achievementsEarned[i]) === -1) { merged.push(state.achievementsEarned[i]); }
+      }
+      pb.achievementsEarned = merged.slice(0, ACHIEVEMENTS.length);
+      pb.gamesPlayed += 1;
+      pb.totalCorrect += state.correct;
+      writePb(pb);
+
+      var scoreEl = $("ddResScore"); if (scoreEl) { scoreEl.textContent = state.score; }
+      var atEl = $("ddResAttempted"); if (atEl) { atEl.textContent = state.attempted; }
+      var coEl = $("ddResCorrect"); if (coEl) { coEl.textContent = state.correct; }
+      var woEl = $("ddResWrong"); if (woEl) { woEl.textContent = state.wrong; }
+      var acEl = $("ddResAccuracy"); if (acEl) { acEl.textContent = acc + "%"; }
+      var beEl = $("ddResBest"); if (beEl) { beEl.textContent = state.bestStreak; }
+      var ccEl = $("ddResCaseCell"); if (ccEl) { ccEl.hidden = !state.caseSolved; }
+      var nbEl = $("ddNewBest"); if (nbEl) { nbEl.hidden = !newBest; }
+
+      var modeNames = [];
+      for (var key in state.modesSeen) {
+        if (Object.prototype.hasOwnProperty.call(state.modesSeen, key)) {
+          var label = MODES[key] ? MODES[key].icon + " " + (MODES[key].label === "Median &amp; Mode" ? "Median & Mode" : MODES[key].label) : key;
+          modeNames.push(label);
+        }
+      }
+      var modesEl = $("ddResModes");
+      if (modesEl) {
+        modesEl.textContent = modeNames.length ? "Evidence types covered: " + modeNames.join(", ") + "." : "";
+      }
+
+      var achEl = $("ddAchList");
+      if (achEl) {
+        if (state.achievementsEarned.length) {
+          var html = "";
+          for (var j = 0; j < state.achievementsEarned.length; j++) {
+            var ai = null;
+            for (var k = 0; k < ACHIEVEMENTS.length; k++) {
+              if (ACHIEVEMENTS[k].id === state.achievementsEarned[j]) { ai = ACHIEVEMENTS[k]; }
+            }
+            if (ai) {
+              html += '<div class="dd-ach"><span class="dd-ach-ico">' + ai.icon + '</span><span><span class="dd-ach-name">' + ai.name + '</span><br /><span class="dd-ach-desc">' + ai.desc + '</span></span></div>';
+            }
+          }
+          achEl.innerHTML = html;
+        } else {
+          achEl.innerHTML = '<div class="dd-ach"><span class="dd-ach-ico">🔍</span><span><span class="dd-ach-name">Keep hunting!</span><br /><span class="dd-ach-desc">No achievements yet this round — read the data, solve clues and unlock them.</span></span></div>';
+        }
+      }
+
+      var fbEl = $("ddFbMsg");
+      if (fbEl) {
+        var msg = "You solved " + state.correct + " of " + state.attempted + " clues. ";
+        msg += acc >= 80 ? "Outstanding detective work!" : acc >= 50 ? "Smart reading — dig deeper!" : "Every new clue builds your skills. Try again!";
+        fbEl.textContent = msg;
+      }
+
+      renderPersonalBest();
+      showScreen("end");
+      playSound("end");
+    }
+
+    function pauseGame() {
+      if (!state || state.phase !== "playing") { return; }
+      if (state.timerId !== null) { winClearInterval(state.timerId); state.timerId = null; }
+      state.phase = "paused";
+      var overlay = $("ddPausedOverlay");
+      if (overlay) { overlay.classList.remove("dd-hidden"); overlay.hidden = false; }
+      var pb = $("ddPauseBtn");
+      if (pb) { pb.textContent = "▶ Resume"; }
+    }
+
+    function resumeGame() {
+      if (!state || state.phase !== "paused") { return; }
+      state.phase = "playing";
+      var overlay = $("ddPausedOverlay");
+      if (overlay) { overlay.classList.add("dd-hidden"); overlay.hidden = true; }
+      var pb = $("ddPauseBtn");
+      if (pb) { pb.textContent = "⏸ Pause"; }
+      startTimer();
+    }
+
+    function startGame() {
+      state = newState(settings);
+      state.phase = "playing";
+      state.trackQuestionDomain = function (q) { state.modesSeen[domainForQuestion(q)] = true; };
+      showScreen("game");
+      loadNextQuestion();
+      startTimer();
+      renderHud();
+      renderCase();
+    }
+
+    function restartGame() {
+      var s = { mode: state ? state.mode : settings.mode, diff: state ? state.diff : settings.diff, duration: state ? state.duration : settings.duration };
+      state = newState(s);
+      state.phase = "playing";
+      state.trackQuestionDomain = function (q) { state.modesSeen[domainForQuestion(q)] = true; };
+      var overlay = $("ddPausedOverlay");
+      if (overlay) { overlay.classList.add("dd-hidden"); overlay.hidden = true; }
+      var cas = $("ddCaseScreen");
+      if (cas) { cas.classList.add("dd-hidden"); cas.hidden = true; }
+      var pb = $("ddPauseBtn");
+      if (pb) { pb.textContent = "⏸ Pause"; }
+      showScreen("game");
+      loadNextQuestion();
+      startTimer();
+      renderHud();
+      renderCase();
+      renderPersonalBest();
+    }
+
+    function playAgain() {
+      startGame();
+    }
+
+    function caseSeeReport() {
+      endGame();
+    }
+    function caseNewCase() {
+      endGame();
+      startGame();
+    }
+
+    /* ---------- negligible sound (Web Audio) ---------- */
+
+    function ensureAudio() {
+      if (!audioCtx) {
+        var AC = window.AudioContext || window.webkitAudioContext;
+        if (AC) { audioCtx = new AC(); }
+      }
+      if (audioCtx && audioCtx.state === "suspended") { audioCtx.resume(); }
+    }
+
+    function beep(freq, dur, type, when, gain) {
+      if (!soundOn || !audioCtx) { return; }
+      try {
+        var osc = audioCtx.createOscillator();
+        var g = audioCtx.createGain();
+        osc.type = type || "square";
+        osc.frequency.value = freq;
+        g.gain.value = gain || 0.12;
+        g.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + dur);
+        osc.connect(g);
+        g.connect(audioCtx.destination);
+        osc.start(when || audioCtx.currentTime);
+        osc.stop((when || audioCtx.currentTime) + dur + 0.03);
+      } catch (e) {}
+    }
+
+    function playSound(name) {
+      if (!soundOn) { return; }
+      if (name === "correct") { beep(660, 0.12, "square"); }
+      else if (name === "wrong") { beep(180, 0.2, "sawtooth"); }
+      else if (name === "milestone") { beep(880, 0.1, "square"); }
+      else if (name === "end") { beep(392, 0.14, "square"); beep(523, 0.14, "square", audioCtx.currentTime + 0.14); beep(659, 0.2, "square", audioCtx.currentTime + 0.28); }
+    }
+
+    function triggerBurst() {
+      if (reducedMotion) { return; }
+      var card = $("ddQCard");
+      if (!card) { return; }
+      card.classList.remove("dd-strong");
+      void card.offsetWidth;
+      card.classList.add("dd-strong");
+    }
+
+    /* ---------- events ---------- */
+
+    function wireSettings() {
+      var groups = document.querySelectorAll("[data-setting-group]");
+      for (var i = 0; i < groups.length; i++) {
+        (function (group) {
+          var key = group.getAttribute("data-setting-group");
+          var btns = group.querySelectorAll("[data-setting]");
+          for (var j = 0; j < btns.length; j++) {
+            (function (btn) {
+              btn.addEventListener("click", function () {
+                settings[key] = key === "duration" ? parseInt(btn.getAttribute("data-value"), 10) : btn.getAttribute("data-value");
+                for (var k = 0; k < btns.length; k++) {
+                  var b = btns[k];
+                  var active = b === btn;
+                  b.classList.toggle("is-active", active);
+                  b.setAttribute("aria-pressed", active ? "true" : "false");
+                }
+                if (key === "mode") { renderHowCard(settings.mode); }
+              });
+            })(btns[j]);
+          }
+        })(groups[i]);
+      }
+    }
+
+    function wireEvents() {
+      wireSettings();
+
+      var startBtn = $("ddStartBtn");
+      if (startBtn) { startBtn.addEventListener("click", startGame); }
+
+      var playAgainBtn = $("ddPlayAgain");
+      if (playAgainBtn) { playAgainBtn.addEventListener("click", playAgain); }
+
+      var restartBtn = $("ddRestartBtn");
+      if (restartBtn) { restartBtn.addEventListener("click", restartGame); }
+
+      var numSubmit = $("ddNumSubmit");
+      if (numSubmit) {
+        numSubmit.addEventListener("click", function () {
+          if (!state || state.evaluating) { return; }
+          var input = $("ddNumInput");
+          if (!input) { return; }
+          var v = input.value;
+          if (v === "" || v === null || v === undefined) { return; }
+          submitAnswer(v);
+        });
+        var inputEl = $("ddNumInput");
+        if (inputEl) {
+          inputEl.addEventListener("keydown", function (ev) {
+            if (ev.key === "Enter") {
+              ev.preventDefault();
+              numSubmit.click();
+            }
+          });
+        }
+      }
+
+      var pauseBtn = $("ddPauseBtn");
+      if (pauseBtn) {
+        pauseBtn.addEventListener("click", function () {
+          if (!state) { return; }
+          if (state.phase === "playing") { pauseGame(); }
+          else if (state.phase === "paused") { resumeGame(); }
+        });
+      }
+
+      var pauseResume = $("ddPauseResume");
+      if (pauseResume) { pauseResume.addEventListener("click", resumeGame); }
+
+      var pauseRestart = $("ddPauseRestart");
+      if (pauseRestart) { pauseRestart.addEventListener("click", restartGame); }
+
+      var caseReport = $("ddCaseReport");
+      if (caseReport) { caseReport.addEventListener("click", caseSeeReport); }
+
+      var caseAgain = $("ddCaseAgain");
+      if (caseAgain) { caseAgain.addEventListener("click", caseNewCase); }
+
+      var soundBtn = $("ddSoundBtn");
+      if (soundBtn) {
+        soundBtn.addEventListener("click", function () {
+          ensureAudio();
+          soundOn = !soundOn;
+          soundBtn.textContent = soundOn ? "🔊 Sound On" : "🔇 Sound";
+          soundBtn.setAttribute("aria-pressed", soundOn ? "true" : "false");
+        });
+      }
+
+      try {
+        reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      } catch (e) { reducedMotion = false; }
+
+      renderHowCard(settings.mode);
+
+      if (typeof window !== "undefined" && window.__DD_TEST__) {
+        window.__DD__ = {
+          state: function () { return state; },
+          start: startGame,
+          submit: submitAnswer,
+          end: endGame,
+          endCase: endCase,
+          loadNext: loadNextQuestion,
+          pause: pauseGame,
+          resume: resumeGame,
+          restart: restartGame,
+          playAgain: playAgain,
+          caseReport: caseSeeReport,
+          caseNewCase: caseNewCase,
+          readPb: readPb,
+          renderPersonalBest: renderPersonalBest,
+          setSettings: function (o) {
+            for (var k in o) { if (Object.prototype.hasOwnProperty.call(o, k)) { settings[k] = o[k]; } }
+          },
+          setRng: setRng,
+          tick: function () {
+            if (state && state.phase === "playing") {
+              state.timeLeft = Math.max(0, state.timeLeft - 1);
+              renderHud();
+              if (state.timeLeft <= 0) { endGame(); }
+            }
+          },
+          meanv: meanv,
+          medianv: medianv,
+          modeInfo: modeInfo,
+          sumArr: sumArr,
+          pctRounded: pctRounded,
+          angleRounded: angleRounded,
+          fmtNum: fmtNum,
+          fracStr: fracStr,
+          gcd: gcd,
+          isNumericAnswer: isNumericAnswer,
+          buildMcq: buildMcq,
+          optNumbers: optNumbers,
+          generateQuestion: generateQuestion,
+          generateUltimateQuestion: generateUltimateQuestion,
+          barChartSVG: barChartSVG,
+          pieSVG: pieSVG,
+          tableHTML: tableHTML,
+          pointsFor: pointsFor,
+          checkAchievements: checkAchievements,
+          effectiveDifficulty: effectiveDifficulty
+        };
+      }
+    }
+
+    /* ---------- init ---------- */
+
+    renderPersonalBest();
+    wireEvents();
+    if (typeof window !== "undefined" && window.__DD_TEST__) {
+      var tState = newState({ mode: "chart", diff: "easy", duration: 60 });
+      tState.trackQuestionDomain = function (q) { state.modesSeen[domainForQuestion(q)] = true; };
+      state = tState;
+      state.phase = "playing";
+      loadNextQuestion();
+    }
+  })();
+  </script>
+</body>
+</html>
