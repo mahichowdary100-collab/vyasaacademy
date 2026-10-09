@@ -1,0 +1,2371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Probability Challenge | Maths Games | Vyasa Academy</title>
+  <meta name="description" content="Learn probability through interactive coin flips, dice rolls, spinning wheels, card experiments, and fun mathematics challenges." />
+  <link rel="canonical" href="https://www.vyasaacademy.in/maths-games/probability-challenge/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vyasa Academy" />
+  <meta property="og:title" content="Probability Challenge | Maths Games | Vyasa Academy" />
+  <meta property="og:description" content="Learn probability through interactive coin flips, dice rolls, spinning wheels, card experiments, and fun mathematics challenges." />
+  <meta property="og:url" content="https://www.vyasaacademy.in/maths-games/probability-challenge/" />
+  <meta property="og:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Probability Challenge | Maths Games | Vyasa Academy" />
+  <meta name="twitter:description" content="Learn probability through interactive coin flips, dice rolls, spinning wheels, card experiments, and fun mathematics challenges." />
+  <meta name="twitter:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.vyasaacademy.in/" },
+      { "@type": "ListItem", "position": 2, "name": "Vyasa Maths Games", "item": "https://www.vyasaacademy.in/maths-games/" },
+      { "@type": "ListItem", "position": 3, "name": "Probability Challenge", "item": "https://www.vyasaacademy.in/maths-games/probability-challenge/" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Probability Challenge | Maths Games | Vyasa Academy",
+    "applicationCategory": "GameApplication",
+    "url": "https://www.vyasaacademy.in/maths-games/probability-challenge/",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "description": "Learn probability through interactive coin flips, dice rolls, spinning wheels, card experiments, and fun mathematics challenges.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+    "publisher": { "@type": "Organization", "name": "Vyasa Academy", "url": "https://vyasaacademy.in/" }
+  }
+  </script>
+  <style>
+    /* ===== VYASA PROBABILITY CHALLENGE (page-scoped) ===== */
+    .pc-hero {
+      position: relative;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, var(--primary-dark) 100%);
+      color: var(--white);
+      overflow: hidden;
+      padding: 110px 0 84px;
+      text-align: center;
+    }
+    .pc-hero-bg { position: absolute; inset: 0; pointer-events: none; }
+    .pc-symbol {
+      position: absolute;
+      font-weight: 800;
+      color: var(--accent-light);
+      opacity: 0.13;
+      user-select: none;
+      animation: pc-float 9s ease-in-out infinite;
+    }
+    @keyframes pc-float {
+      0%, 100% { transform: translateY(0) rotate(-6deg); }
+      50% { transform: translateY(-16px) rotate(6deg); }
+    }
+    .pc-symbol-1 { top: 10%; left: 7%; font-size: 2.6rem; }
+    .pc-symbol-2 { top: 18%; right: 9%; font-size: 3rem; animation-delay: 1.2s; }
+    .pc-symbol-3 { bottom: 16%; left: 13%; font-size: 2.4rem; animation-delay: 2s; }
+    .pc-symbol-4 { bottom: 28%; right: 15%; font-size: 2.6rem; animation-delay: 0.6s; }
+    .pc-symbol-5 { top: 46%; left: 3.5%; font-size: 2rem; animation-delay: 1.6s; }
+    .pc-symbol-6 { top: 56%; right: 3.5%; font-size: 2rem; animation-delay: 2.4s; }
+
+    .pc-hero-content { position: relative; z-index: 1; max-width: 820px; margin: 0 auto; }
+    .pc-crumbs {
+      position: relative;
+      z-index: 1;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 18px;
+    }
+    .pc-crumbs a { color: rgba(255,255,255,0.85); text-decoration: underline; text-underline-offset: 3px; }
+    .pc-crumbs a:hover { color: var(--accent-light); }
+    .pc-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,213,79,0.4);
+      color: var(--accent-light);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      padding: 7px 18px;
+      border-radius: 50px;
+      margin-bottom: 20px;
+    }
+    .pc-hero h1 { font-size: 3.2rem; font-weight: 800; line-height: 1.12; margin-bottom: 12px; }
+    .pc-tagline { font-size: 1.4rem; font-weight: 600; color: var(--accent-light); margin-bottom: 10px; }
+    .pc-hero-sub { font-size: 1.05rem; opacity: 0.88; max-width: 640px; margin: 0 auto; line-height: 1.7; }
+
+    .pc-section { padding: 76px 0; }
+    .pc-section-alt { background: var(--white); }
+
+    .pc-layout {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 28px;
+      align-items: start;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .pc-panel {
+      background: var(--white);
+      border: 1px solid rgba(26,35,126,0.06);
+      border-radius: 20px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+    }
+
+    .pc-mode-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .pc-mode-opt {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      background: var(--white);
+      border: 1.5px solid rgba(26,35,126,0.18);
+      color: var(--primary);
+      padding: 13px 10px;
+      border-radius: 14px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: inherit;
+      text-align: center;
+    }
+    .pc-mode-opt .pc-mode-ico { font-size: 1.7rem; line-height: 1; }
+    .pc-mode-opt:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .pc-mode-opt.is-active { background: var(--primary); border-color: var(--primary); color: var(--white); }
+
+    .pc-how {
+      margin-top: 20px;
+      background: linear-gradient(135deg, rgba(26,35,126,0.04), rgba(249,168,37,0.10));
+      border: 1px solid rgba(26,35,126,0.08);
+      border-radius: 16px;
+      padding: 18px 20px;
+    }
+    .pc-how-title { font-weight: 800; color: var(--primary); font-size: 0.98rem; margin-bottom: 8px; }
+    .pc-how-title i { color: var(--accent-dark); }
+    .pc-how-text { font-size: 0.95rem; color: var(--gray-dark, #455a64); line-height: 1.65; margin: 6px 0 0; }
+    .pc-how-chip {
+      display: inline-block;
+      margin-top: 10px;
+      background: rgba(26,35,126,0.06);
+      border: 1px solid rgba(26,35,126,0.12);
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 7px 14px;
+      border-radius: 50px;
+    }
+
+    .pc-group { margin-bottom: 24px; }
+    .pc-group:last-child { margin-bottom: 0; }
+    .pc-group-title { display: flex; align-items: center; gap: 8px; font-size: 0.98rem; font-weight: 700; color: var(--primary); margin-bottom: 12px; }
+    .pc-group-title i { color: var(--accent-dark); }
+    .pc-opts { display: flex; flex-wrap: wrap; gap: 10px; }
+    .pc-opt {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--white);
+      border: 1.5px solid rgba(26,35,126,0.18);
+      color: var(--primary);
+      padding: 11px 18px;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: inherit;
+    }
+    .pc-opt:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .pc-opt.is-active { background: var(--primary); border-color: var(--primary); color: var(--white); }
+
+    .pc-start-row { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-top: 6px; }
+    .pc-start { padding: 16px 46px; font-size: 1.05rem; }
+    .pc-end-link {
+      color: var(--gray);
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: var(--transition);
+    }
+    .pc-end-link:hover { color: var(--primary); border-bottom-color: var(--accent); }
+
+    .pc-pb { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: var(--white); border-radius: 20px; padding: 30px; box-shadow: var(--shadow-lg); }
+    .pc-pb h3 { font-size: 1.15rem; margin-bottom: 4px; }
+    .pc-pb-note { font-size: 0.9rem; color: rgba(255,255,255,0.8); margin-bottom: 20px; }
+    .pc-pb-none { font-size: 0.95rem; color: var(--accent-light); font-weight: 600; margin-bottom: 18px; }
+    .pc-pb-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .pc-pb-cell { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 14px; padding: 14px 8px; text-align: center; }
+    .pc-pb-num { display: block; font-size: 1.3rem; font-weight: 800; color: var(--accent-light); line-height: 1.1; }
+    .pc-pb-lbl { display: block; font-size: 0.66rem; color: rgba(255,255,255,0.78); text-transform: uppercase; letter-spacing: 0.6px; margin-top: 5px; }
+
+    /* arena */
+    .pc-arena-wrap { max-width: 960px; margin: 0 auto; }
+    .pc-arena {
+      position: relative;
+      background: linear-gradient(150deg, #1a237e 0%, #283593 55%, #1b1f38 100%);
+      color: var(--white);
+      border-radius: 24px;
+      padding: 26px 26px 30px;
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+    }
+    .pc-arena::before {
+      content: "";
+      position: absolute;
+      top: -120px;
+      right: -120px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(249,168,37,0.14), transparent 70%);
+      pointer-events: none;
+    }
+    .pc-hud-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
+    .pc-hud-brand { font-weight: 800; letter-spacing: 1.4px; font-size: 0.86rem; color: var(--accent-light); }
+    .pc-hud-brand i { margin-right: 6px; }
+    .pc-hud-pills { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .pc-pill {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 50px;
+      padding: 6px 14px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .pc-pill.is-acc { color: var(--accent-light); border-color: rgba(255,213,79,0.4); }
+    .pc-hud-actions { display: flex; gap: 8px; }
+    .pc-hud-btn {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.22);
+      color: var(--white);
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 8px 13px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .pc-hud-btn:hover { background: rgba(255,255,255,0.18); transform: translateY(-1px); }
+
+    .pc-hud { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; margin-bottom: 16px; }
+    .pc-stat {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 14px;
+      padding: 12px 6px;
+      text-align: center;
+    }
+    .pc-stat-num { display: block; font-size: 1.3rem; font-weight: 800; color: var(--white); line-height: 1.15; }
+    .pc-stat-lbl { display: block; font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.6px; color: rgba(255,255,255,0.72); margin-top: 5px; }
+    .pc-stat.pc-stat-time.is-warning .pc-stat-num { color: var(--accent-light); animation: pc-pulse 1s infinite; }
+    @keyframes pc-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.55; } }
+
+    .pc-streak-line {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--accent-light);
+      margin-bottom: 14px;
+      min-height: 22px;
+    }
+    .pc-streak-line.pc-strong { animation: pc-flash 0.6s; }
+    @keyframes pc-flash { 0% { transform: scale(1.35); } 100% { transform: scale(1); } }
+    .pc-qcard.pc-strong { animation: pc-bump 0.45s ease; }
+    @keyframes pc-bump { 0% { transform: translateY(0); } 40% { transform: translateY(-6px); } 100% { transform: translateY(0); } }
+
+    .pc-qcard {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 20px;
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+    .pc-qkind { font-size: 0.72rem; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: var(--accent-light); margin-bottom: 8px; }
+    .pc-qtext { font-size: 1.5rem; font-weight: 800; line-height: 1.4; margin-bottom: 18px; color: var(--white); }
+
+    .pc-choices { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; }
+    .pc-choice {
+      background: var(--white);
+      color: var(--primary);
+      border: 2px solid transparent;
+      border-radius: 14px;
+      padding: 14px 10px;
+      font-size: 1.05rem;
+      font-weight: 800;
+      font-family: inherit;
+      cursor: pointer;
+      transition: var(--transition);
+      min-height: 46px;
+    }
+    .pc-choice:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+    .pc-choice:focus-visible { outline: 3px solid var(--accent-light); outline-offset: 2px; }
+    .pc-choice.is-selected { border-color: var(--accent); background: var(--accent-light); }
+
+    .pc-reveal { margin-top: 16px; min-height: 0; }
+    .pc-reveal-inner {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255,255,255,0.09);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 16px;
+      padding: 14px 16px;
+      font-weight: 800;
+      font-size: 1.05rem;
+    }
+    .pc-reveal-ico { font-size: 1.9rem; line-height: 1; }
+    .pc-reveal-note { font-weight: 600; font-size: 0.85rem; color: rgba(255,255,255,0.75); margin-top: 6px; }
+    .pc-reveal.pc-reveal-anim .pc-reveal-inner { animation: pc-pop 0.45s ease; }
+    @keyframes pc-pop { 0% { transform: scale(0.6); opacity: 0.3; } 60% { transform: scale(1.08); } 100% { transform: scale(1); opacity: 1; } }
+
+    .pc-feedback { margin-top: 14px; font-size: 1.05rem; font-weight: 800; min-height: 24px; }
+    .pc-feedback.is-good { color: #a5d6a7; }
+    .pc-feedback.is-bad { color: #ef9a9a; }
+    .pc-explain { margin-top: 6px; font-size: 0.92rem; line-height: 1.65; color: rgba(255,255,255,0.82); }
+    .pc-theory {
+      display: inline-block;
+      margin-top: 8px;
+      background: rgba(255,213,79,0.12);
+      border: 1px solid rgba(255,213,79,0.35);
+      color: var(--accent-light);
+      font-weight: 700;
+      border-radius: 50px;
+      padding: 5px 12px;
+      font-size: 0.8rem;
+    }
+
+    /* experiment widgets */
+    .pc-widget { text-align: center; margin: 6px 0 4px; }
+    .pc-coin {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #ffd54f, #f9a825 60%, #c57f0a);
+      border: 4px dashed #8a5a00;
+      color: #4e342e;
+      font-size: 2.4rem;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+    }
+    .pc-coin.pc-flip { animation: pc-flip 0.5s ease; }
+    @keyframes pc-flip { 0% { transform: rotateY(0); } 100% { transform: rotateY(360deg); } }
+    .pc-die {
+      width: 84px;
+      height: 84px;
+      border-radius: 16px;
+      background: var(--white);
+      color: var(--primary);
+      font-size: 2.6rem;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+    }
+    .pc-die.pc-roll { animation: pc-rollshake 0.5s ease; }
+    @keyframes pc-rollshake { 0% { transform: rotate(0deg) translateY(0); } 30% { transform: rotate(-14deg) translateY(-10px); } 70% { transform: rotate(12deg) translateY(-4px); } 100% { transform: rotate(0deg) translateY(0); } }
+    .pc-wheel-wrap { position: relative; display: inline-block; }
+    .pc-wheel { width: 180px; height: 180px; border-radius: 50%; box-shadow: 0 10px 24px rgba(0,0,0,0.35); }
+    .pc-wheel.pc-spin { animation: pc-wheelspin 0.7s ease; }
+    @keyframes pc-wheelspin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    .pc-wheel-ptr {
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-top: 20px solid var(--accent-light);
+      filter: drop-shadow(0 2px 3px rgba(0,0,0,0.4));
+    }
+    .pc-card {
+      display: inline-block;
+      background: var(--white);
+      color: #1b1b1b;
+      border-radius: 14px;
+      padding: 20px 24px;
+      font-size: 1.3rem;
+      font-weight: 800;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+      min-width: 150px;
+    }
+    .pc-card.is-red { color: #c62828; }
+    .pc-card.is-black { color: #1b1b1b; }
+    .pc-card.pc-draw { animation: pc-drawin 0.45s ease; }
+    @keyframes pc-drawin { 0% { transform: translateY(-16px); opacity: 0.2; } 100% { transform: translateY(0); opacity: 1; } }
+
+    /* pause overlay */
+    .pc-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 20;
+      background: rgba(13,18,44,0.9);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      border-radius: 24px;
+      text-align: center;
+      padding: 24px;
+    }
+    .pc-overlay.pc-hidden { display: none; }
+    .pc-overlay-title { font-size: 1.7rem; font-weight: 800; }
+    .pc-overlay-sub { font-size: 0.95rem; color: rgba(255,255,255,0.8); }
+    .pc-overlay-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+
+    /* dashboard */
+    .pc-dash {
+      margin-top: 18px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 18px;
+      padding: 20px;
+    }
+    .pc-dash-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+    .pc-dash-title { font-size: 1.02rem; font-weight: 800; }
+    .pc-dash-title i { color: var(--accent-light); margin-right: 6px; }
+    .pc-dash-trials { font-size: 0.85rem; color: rgba(255,255,255,0.75); font-weight: 700; }
+    .pc-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+    .pc-tab {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      color: var(--white);
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 7px 13px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .pc-tab:hover { background: rgba(255,255,255,0.14); }
+    .pc-tab.is-active { background: var(--accent); border-color: var(--accent); color: var(--primary); }
+    .pc-table-wrap { overflow-x: auto; margin-bottom: 14px; }
+    .pc-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .pc-table th, .pc-table td { padding: 8px 10px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.12); }
+    .pc-table th { color: var(--accent-light); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.6px; }
+    .pc-chart-wrap svg { width: 100%; height: auto; display: block; }
+    .pc-chart-svg { width: 100%; }
+    .pc-legend { display: flex; gap: 18px; justify-content: center; margin-top: 10px; font-size: 0.82rem; font-weight: 700; color: rgba(255,255,255,0.85); flex-wrap: wrap; }
+    .pc-legend-chip { display: inline-flex; align-items: center; gap: 6px; }
+    .pc-ls { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+    .pc-ls-obs { background: #64b5f6; }
+    .pc-ls-theo { background: transparent; border: 2px solid var(--accent); }
+    .pc-dash-note { font-size: 0.84rem; color: rgba(255,255,255,0.72); line-height: 1.6; margin-top: 12px; }
+
+    /* results */
+    .pc-results { max-width: 760px; margin: 0 auto; background: var(--white); border: 1px solid rgba(26,35,126,0.08); border-radius: 24px; padding: 44px 36px; text-align: center; box-shadow: var(--shadow); }
+    .pc-results h2 { font-size: 2rem; }
+    .pc-results-sub { color: var(--gray); margin-bottom: 18px; }
+    .pc-newbest {
+      display: inline-block;
+      background: linear-gradient(135deg, #ffe082, #ffd54f);
+      color: #5d4037;
+      font-weight: 800;
+      border-radius: 50px;
+      padding: 8px 18px;
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+    }
+    .pc-res-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-bottom: 20px; }
+    .pc-res-cell { background: rgba(26,35,126,0.05); border: 1px solid rgba(26,35,126,0.08); border-radius: 14px; padding: 16px 8px; }
+    .pc-res-cell.is-primary { background: var(--primary); border-color: var(--primary); color: var(--white); }
+    .pc-res-cell .pc-res-num { display: block; font-size: 1.35rem; font-weight: 800; }
+    .pc-res-cell .pc-res-lbl { display: block; font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.6px; color: var(--gray); margin-top: 5px; }
+    .pc-res-cell.is-primary .pc-res-lbl { color: rgba(255,255,255,0.8); }
+    .pc-ach-wrap { text-align: left; margin: 22px 0; }
+    .pc-ach-title { font-weight: 800; color: var(--primary); margin-bottom: 12px; font-size: 1.02rem; }
+    .pc-ach-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .pc-ach { display: flex; align-items: center; gap: 10px; background: rgba(26,35,126,0.04); border: 1px solid rgba(26,35,126,0.1); border-radius: 12px; padding: 12px 14px; }
+    .pc-ach-ico { font-size: 1.4rem; }
+    .pc-ach-name { font-weight: 800; color: var(--primary); font-size: 0.92rem; }
+    .pc-ach-desc { font-size: 0.8rem; color: var(--gray); }
+    .pc-fbmsg { margin-top: 8px; color: var(--gray); font-size: 1rem; font-weight: 600; }
+    .pc-res-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 22px; }
+
+    /* seo */
+    .pc-seo-content { max-width: 860px; margin: 0 auto; font-size: 1rem; line-height: 1.85; color: #37474f; }
+    .pc-seo-content h3 { color: var(--primary); margin-top: 26px; font-size: 1.25rem; }
+    .pc-seo-content p { margin-top: 10px; }
+    .pc-seo-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+    .pc-seo-chip {
+      display: inline-block;
+      background: rgba(26,35,126,0.06);
+      border: 1px solid rgba(26,35,126,0.14);
+      color: var(--primary);
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 9px 16px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    .pc-seo-chip:hover { background: var(--primary); color: var(--white); border-color: var(--primary); }
+
+    @media (max-width: 900px) {
+      .pc-layout { grid-template-columns: 1fr; }
+      .pc-mode-grid { grid-template-columns: repeat(2, 1fr); }
+      .pc-hud { grid-template-columns: repeat(4, 1fr); }
+      .pc-res-grid { grid-template-columns: repeat(3, 1fr); }
+      .pc-ach-list { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 620px) {
+      .pc-hero h1 { font-size: 2.3rem; }
+      .pc-qtext { font-size: 1.2rem; }
+      .pc-hud { grid-template-columns: repeat(2, 1fr); }
+      .pc-res-grid { grid-template-columns: repeat(2, 1fr); }
+      .pc-results { padding: 32px 18px; }
+      .pc-pb-grid { grid-template-columns: repeat(2, 1fr); }
+      .pc-arena { padding: 18px 14px 22px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .pc-symbol { animation: none; }
+      .pc-coin.pc-flip, .pc-die.pc-roll, .pc-wheel.pc-spin, .pc-card.pc-draw, .pc-reveal.pc-reveal-anim { animation: none; }
+      .pc-stat.pc-stat-time.is-warning .pc-stat-num { animation: none; }
+      .pc-streak-line.pc-strong { animation: none; }
+      .pc-qcard.pc-strong { animation: none; }
+      .pc-choice:hover, .pc-mode-opt:hover, .pc-opt:hover, .pc-hud-btn:hover { transform: none; }
+      .pc-arena { overflow-x: hidden; }
+    }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="/" class="logo"><i class="fas fa-graduation-cap"></i> Vyasa Academy</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#courses">Courses</a></li>
+      <li><a href="/#papers">Practice Papers</a></li>
+      <li><a href="/cbse-study-material/">Study Material</a></li>
+      <li><a href="/maths-games/" class="active" aria-current="page">🎮 Maths Games</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- START SCREEN -->
+  <section class="pc-hero" id="pcStartScreen">
+    <div class="pc-hero-bg" aria-hidden="true">
+      <span class="pc-symbol pc-symbol-1">🎲</span>
+      <span class="pc-symbol pc-symbol-2">🪙</span>
+      <span class="pc-symbol pc-symbol-3">🎡</span>
+      <span class="pc-symbol pc-symbol-4">🃏</span>
+      <span class="pc-symbol pc-symbol-5">½</span>
+      <span class="pc-symbol pc-symbol-6">¾</span>
+    </div>
+    <div class="container pc-hero-content">
+      <nav class="pc-crumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a> / <a href="/maths-games/">Maths Games</a> / <span aria-current="page">Probability Challenge</span>
+      </nav>
+      <span class="pc-badge">Experiments &middot; Quiz &middot; Streaks &middot; Achievements</span>
+      <h1>🎲 Probability Challenge</h1>
+      <p class="pc-tagline">Predict the Odds. Test Your Luck. Master Probability!</p>
+      <p class="pc-hero-sub">Flip coins, roll dice, spin wheels and draw cards to explore why chance follows the rules of Mathematics — then prove it in the Probability Quiz.</p>
+    </div>
+  </section>
+
+  <section class="pc-section pc-section-alt">
+    <div class="container">
+      <div class="pc-layout">
+
+        <div class="pc-panel" id="pcSettingsPanel">
+          <div class="section-header" style="padding:0 0 22px;">
+            <span class="section-tag">Set Up</span>
+            <h2>Choose Your Lab</h2>
+            <p>Pick an activity, difficulty and timer. No login needed.</p>
+          </div>
+
+          <div class="pc-group" role="group" aria-label="Choose lab activity">
+            <span class="pc-group-title"><i class="fas fa-flask" aria-hidden="true"></i>Lab Activity</span>
+            <div class="pc-mode-grid" data-setting-group="mode">
+              <button type="button" class="pc-mode-opt is-active" data-setting="mode" data-value="coin" aria-pressed="true">
+                <span class="pc-mode-ico" aria-hidden="true">🪙</span>Coin Flip Lab
+              </button>
+              <button type="button" class="pc-mode-opt" data-setting="mode" data-value="dice" aria-pressed="false">
+                <span class="pc-mode-ico" aria-hidden="true">🎲</span>Dice Master
+              </button>
+              <button type="button" class="pc-mode-opt" data-setting="mode" data-value="spinner" aria-pressed="false">
+                <span class="pc-mode-ico" aria-hidden="true">🎡</span>Lucky Spinner
+              </button>
+              <button type="button" class="pc-mode-opt" data-setting="mode" data-value="card" aria-pressed="false">
+                <span class="pc-mode-ico" aria-hidden="true">🃏</span>Card Probability
+              </button>
+              <button type="button" class="pc-mode-opt" data-setting="mode" data-value="quiz" aria-pressed="false">
+                <span class="pc-mode-ico" aria-hidden="true">🧠</span>Probability Quiz
+              </button>
+              <button type="button" class="pc-mode-opt" data-setting="mode" data-value="mixed" aria-pressed="false">
+                <span class="pc-mode-ico" aria-hidden="true">⚡</span>Mixed Challenge
+              </button>
+            </div>
+            <div class="pc-how" id="pcHowCard">
+              <p class="pc-how-title" id="pcHowTitle"><i class="fas fa-lightbulb" aria-hidden="true"></i> How to play Coin Flip Lab</p>
+              <p class="pc-how-text" id="pcHowText">Predict HEADS or TAILS before each flip. Flip the coin, check your prediction and watch the experimental frequency creep closer to the theoretical probability of 1/2. Decode the pattern of chance — then climb the streak ladder.</p>
+              <span class="pc-how-chip" id="pcHowChip">P(Heads) = 1/2 &middot; P(Tails) = 1/2</span>
+            </div>
+          </div>
+
+          <div class="pc-group" role="group" aria-label="Choose difficulty">
+            <span class="pc-group-title"><i class="fas fa-signal" aria-hidden="true"></i>Difficulty</span>
+            <div class="pc-opts" data-setting-group="diff">
+              <button type="button" class="pc-opt is-active" data-setting="diff" data-value="easy" aria-pressed="true">Easy</button>
+              <button type="button" class="pc-opt" data-setting="diff" data-value="medium" aria-pressed="false">Medium</button>
+              <button type="button" class="pc-opt" data-setting="diff" data-value="hard" aria-pressed="false">Hard</button>
+            </div>
+          </div>
+
+          <div class="pc-group" role="group" aria-label="Choose game duration">
+            <span class="pc-group-title"><i class="fas fa-stopwatch" aria-hidden="true"></i>Game Duration</span>
+            <div class="pc-opts" data-setting-group="duration">
+              <button type="button" class="pc-opt is-active" data-setting="duration" data-value="60" aria-pressed="true">60 seconds</button>
+              <button type="button" class="pc-opt" data-setting="duration" data-value="90" aria-pressed="false">90 seconds</button>
+              <button type="button" class="pc-opt" data-setting="duration" data-value="120" aria-pressed="false">120 seconds</button>
+            </div>
+          </div>
+
+          <div class="pc-start-row">
+            <button type="button" class="btn btn-primary pc-start" id="pcStartBtn">⚡ START EXPERIMENT</button>
+            <a href="/maths-games/" class="pc-end-link"><i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Maths Games</a>
+          </div>
+        </div>
+
+        <aside class="pc-pb" id="pcPbPanel">
+          <h3><i class="fas fa-trophy" aria-hidden="true"></i> Your Personal Best</h3>
+          <p class="pc-pb-note">Stored privately on this device. No account needed.</p>
+          <div id="pcPbNone" class="pc-pb-none">No experiments yet &mdash; your first prediction awaits!</div>
+          <div class="pc-pb-grid" id="pcPbGrid" hidden></div>
+
+          <div class="pc-how" aria-hidden="true" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.16);">
+            <p class="pc-how-title" style="color:var(--accent-light);"><i class="fas fa-balance-scale" aria-hidden="true"></i> The golden formula</p>
+            <p class="pc-how-text" style="color:rgba(255,255,255,0.85);">Probability = favourable outcomes &divide; total equally likely outcomes. Every fraction is reduced to its simplest form, impossible events score 0 and certain events score 1.</p>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GAME SCREEN -->
+  <section class="pc-section" id="pcGameScreen" hidden>
+    <div class="container">
+      <div class="pc-arena-wrap">
+        <div class="pc-arena" id="pcArena">
+
+          <div class="pc-hud-top">
+            <span class="pc-hud-brand"><i class="fas fa-dice" aria-hidden="true"></i> THE PROBABILITY LAB</span>
+            <div class="pc-hud-pills">
+              <span class="pc-pill is-acc" id="pcModePill">🪙 Coin Flip Lab</span>
+              <span class="pc-pill" id="pcDiffPill">Easy</span>
+            </div>
+            <div class="pc-hud-actions">
+              <button type="button" class="pc-hud-btn" id="pcRestartBtn" title="Restart the round" aria-label="Restart the round">↻ Restart</button>
+              <button type="button" class="pc-hud-btn" id="pcPauseBtn" aria-label="Pause the game">⏸ Pause</button>
+              <button type="button" class="pc-hud-btn" id="pcSoundBtn" aria-pressed="false" aria-label="Toggle sound">🔇 Sound</button>
+            </div>
+          </div>
+
+          <div class="pc-hud">
+            <div class="pc-stat pc-stat-time" id="pcStatTime">
+              <span class="pc-stat-num" id="pcTimeVal">60</span>
+              <span class="pc-stat-lbl">Time</span>
+            </div>
+            <div class="pc-stat">
+              <span class="pc-stat-num" id="pcScoreVal">0</span>
+              <span class="pc-stat-lbl">Score</span>
+            </div>
+            <div class="pc-stat">
+              <span class="pc-stat-num" id="pcAttemptedVal">0</span>
+              <span class="pc-stat-lbl">Attempted</span>
+            </div>
+            <div class="pc-stat">
+              <span class="pc-stat-num" id="pcCorrectVal">0</span>
+              <span class="pc-stat-lbl">Correct</span>
+            </div>
+            <div class="pc-stat">
+              <span class="pc-stat-num" id="pcAccuracyVal">0%</span>
+              <span class="pc-stat-lbl">Accuracy</span>
+            </div>
+            <div class="pc-stat">
+              <span class="pc-stat-num" id="pcStreakVal">0</span>
+              <span class="pc-stat-lbl">Streak</span>
+            </div>
+            <div class="pc-stat">
+              <span class="pc-stat-num" id="pcBestVal">0</span>
+              <span class="pc-stat-lbl">Best Streak</span>
+            </div>
+          </div>
+
+          <div class="pc-streak-line" id="pcStreakLine" role="status" aria-live="polite">🔥 Build a streak to earn bonus points (3, 5, 10 in a row).</div>
+
+          <div class="pc-qcard" id="pcQCard">
+            <p class="pc-qkind" id="pcQKind">Coin Flip Lab &middot; Prediction</p>
+            <p class="pc-qtext" id="pcQuestionText">Will the next flip land on HEADS or TAILS?</p>
+
+            <div class="pc-choices" id="pcChoices" role="group" aria-label="Choose your prediction"></div>
+
+            <div class="pc-reveal" id="pcReveal" hidden></div>
+            <p class="pc-feedback" id="pcFeedback" role="status" aria-live="polite"></p>
+            <p class="pc-explain" id="pcExplain"></p>
+            <span class="pc-theory" id="pcTheory"></span>
+          </div>
+
+          <div class="pc-dash" id="pcDash" hidden>
+            <div class="pc-dash-head">
+              <span class="pc-dash-title"><i class="fas fa-chart-bar" aria-hidden="true"></i> Experiments Dashboard</span>
+              <span class="pc-dash-trials" id="pcTrialsVal">Trials: 0</span>
+            </div>
+            <div class="pc-tabs" role="group" aria-label="Experiment type" id="pcTabs">
+              <button type="button" class="pc-tab is-active" data-pc-tab="coin">🪙 Coin</button>
+              <button type="button" class="pc-tab" data-pc-tab="dice">🎲 Die</button>
+              <button type="button" class="pc-tab" data-pc-tab="spinner">🎡 Spinner</button>
+              <button type="button" class="pc-tab" data-pc-tab="card">🃏 Cards</button>
+            </div>
+            <div class="pc-table-wrap">
+              <table class="pc-table" id="pcExpTable" aria-describedby="pcDashNote">
+                <caption class="sr-only" style="position:absolute;left:-9999px;">Observed outcomes, experimental frequency and theoretical probability</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Outcome</th>
+                    <th scope="col">Trials</th>
+                    <th scope="col">Experimental Frequency</th>
+                    <th scope="col">Theoretical Probability</th>
+                  </tr>
+                </thead>
+                <tbody id="pcExpBody"></tbody>
+              </table>
+            </div>
+            <div class="pc-chart-wrap" id="pcChartWrap"></div>
+            <div class="pc-legend" aria-hidden="true">
+              <span class="pc-legend-chip"><span class="pc-ls pc-ls-obs"></span> Experimental frequency</span>
+              <span class="pc-legend-chip"><span class="pc-ls pc-ls-theo"></span> Theoretical probability</span>
+            </div>
+            <p class="pc-dash-note" id="pcDashNote">These are experimental frequencies from your trials. They may differ from the theoretical probability with a small number of trials — the more you run, the closer they come.</p>
+          </div>
+
+          <div class="pc-overlay pc-hidden" id="pcPausedOverlay">
+            <span class="pc-overlay-title">⏸ Paused</span>
+            <span class="pc-overlay-sub">The clock is frozen. Take a breath, then get back to the lab.</span>
+            <div class="pc-overlay-actions">
+              <button type="button" class="btn btn-primary" id="pcPauseResume">▶ Resume</button>
+              <button type="button" class="btn" style="color:var(--primary);border:2px solid var(--primary);background:var(--white);" id="pcPauseRestart">↻ Restart</button>
+              <a href="/maths-games/" class="btn" style="color:var(--primary);border:2px solid var(--primary);background:var(--white);">🎮 Exit to Games</a>
+            </div>
+          </div>
+        </div>
+
+        <p style="text-align:center;margin-top:16px;"><a href="/maths-games/" class="pc-end-link"><i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Maths Games</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS SCREEN -->
+  <section class="pc-section" id="pcEndScreen" hidden>
+    <div class="container">
+      <div class="pc-results">
+        <h2>🏆 Experiment Complete!</h2>
+        <p class="pc-results-sub">Time is up. Here is how your predictions went.</p>
+        <span class="pc-newbest" id="pcNewBest" hidden><i class="fas fa-trophy" aria-hidden="true"></i> New Personal Best Score!</span>
+        <div class="pc-res-grid">
+          <div class="pc-res-cell is-primary"><span class="pc-res-num" id="pcResScore">0</span><span class="pc-res-lbl">Score</span></div>
+          <div class="pc-res-cell"><span class="pc-res-num" id="pcResAttempted">0</span><span class="pc-res-lbl">Attempted</span></div>
+          <div class="pc-res-cell"><span class="pc-res-num" id="pcResCorrect">0</span><span class="pc-res-lbl">Correct</span></div>
+          <div class="pc-res-cell"><span class="pc-res-num" id="pcResWrong">0</span><span class="pc-res-lbl">Incorrect</span></div>
+          <div class="pc-res-cell"><span class="pc-res-num" id="pcResAccuracy">0%</span><span class="pc-res-lbl">Accuracy</span></div>
+          <div class="pc-res-cell"><span class="pc-res-num" id="pcResBest">0</span><span class="pc-res-lbl">Best Streak</span></div>
+        </div>
+        <div class="pc-ach-wrap">
+          <p class="pc-ach-title"><i class="fas fa-medal" aria-hidden="true"></i> Achievements Earned</p>
+          <div class="pc-ach-list" id="pcAchList"></div>
+        </div>
+        <p class="pc-fbmsg" id="pcFbMsg" role="status" aria-live="polite"></p>
+        <div class="pc-res-actions">
+          <button type="button" class="btn btn-primary" id="pcPlayAgain">⚡ PLAY AGAIN</button>
+          <a href="/maths-games/" class="btn btn-secondary" style="background:var(--primary);border-color:var(--primary);">🎮 More Maths Games</a>
+          <a href="/cbse-study-material/class-6/mathematics/" class="btn" style="color:var(--primary);border:2px solid var(--primary);background:var(--white);">📚 Practise Maths</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO CONTENT -->
+  <section class="pc-section pc-section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Why It Helps</span>
+        <h2>Understand Probability by Running Experiments</h2>
+        <p>School students explore chance hands-on before they touch a single textbook formula.</p>
+      </div>
+      <div class="pc-seo-content">
+        <p>The <strong>Probability Challenge</strong> is a colourful, interactive way to understand the mathematics of chance. Every mode follows one rule: <em>probability = favourable outcomes &divide; total equally likely outcomes</em>. Fractions are always reduced, impossible events equal 0, certain events equal 1, and a balanced coin, die, spinner or card deck is always presented honestly.</p>
+        <h3>Six labs, one idea</h3>
+        <p>In the <strong>Coin Flip Lab</strong> students predict each flip, in <strong>Dice Master</strong> they chase events like even numbers (3/6 = 1/2), numbers greater than 4 (2/6 = 1/3) and prime numbers (3/6 = 1/2), the <strong>Lucky Spinner</strong> keeps four equal sectors so P(each) = 1/4, and <strong>Card Probability</strong> works with a real 52-card model (26 red, 26 black, 4 aces, 12 face cards) where every card is returned to the deck, so the theoretical probability never changes. The <strong>Probability Quiz</strong> covers impossible, unlikely, equally likely, likely and certain events, and the <strong>Mixed Challenge</strong> combines everything and grows harder as your score climbs.</p>
+        <h3>Experiments, not luck</h3>
+        <p>The live Experiments Dashboard records every coin flip, dice roll, spin and card draw. It shows observed counts, experimental frequency, theoretical probability and a bar chart that updates after every trial — making it clear that small samples can wander from theory, while large samples converge to it. Streak bonuses, difficulty bonuses and achievements such as <em>First Prediction</em>, <em>Five Correct</em>, <em>Probability Pro</em> and <em>Experiment Master</em> keep every session motivating.</p>
+        <p>Probability is introduced in the <a href="/cbse-study-material/class-8/mathematics/">Class 8 Maths</a> and deepened in <a href="/cbse-study-material/class-9/mathematics/">Class 9 Maths</a> and <a href="/cbse-study-material/class-10/mathematics/">Class 10 Maths</a> curriculum areas. Pair the game with our free <a href="/cbse-study-material/">CBSE study material</a> or explore the other <a href="/maths-games/">Maths games</a> we have built for students.</p>
+        <div class="pc-seo-links">
+          <a class="pc-seo-chip" href="/maths-games/">🎮 All Maths Games</a>
+          <a class="pc-seo-chip" href="/maths-games/speed-challenge/">⚡ Maths Speed Challenge</a>
+          <a class="pc-seo-chip" href="/maths-games/equation-hunter/">🎯 Equation Hunter</a>
+          <a class="pc-seo-chip" href="/maths-games/coordinate-shooter/">📍 Coordinate Shooter</a>
+          <a class="pc-seo-chip" href="/maths-games/factor-detective/">🧩 Factor Detective</a>
+          <a class="pc-seo-chip" href="/maths-games/geometry-builder/">📐 Geometry Builder</a>
+          <a class="pc-seo-chip" href="/maths-games/number-ninja/">🔢 Number Ninja</a>
+          <a class="pc-seo-chip" href="/cbse-study-material/class-8/mathematics/">📊 Class 8 Maths</a>
+          <a class="pc-seo-chip" href="/cbse-study-material/class-9/mathematics/">🧠 Class 9 Maths</a>
+          <a class="pc-seo-chip" href="/cbse-study-material/class-10/mathematics/">🎓 Class 10 Maths</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-about">
+      <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+      <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#faculty">Faculty</a></li>
+        <li><a href="/#courses">Courses</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/cbse-study-material/">Study Material</a></li>
+        <li><a href="/maths-games/">🎮 Maths Games</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Popular Searches</h4>
+      <ul>
+        <li><a href="/best-tuition-centre-hulimavu/">Best Tuition Centre in Hulimavu</a></li>
+        <li><a href="/best-coaching-centre-hulimavu/">Best Coaching Centre in Hulimavu</a></li>
+        <li><a href="/cbse-tuition-hulimavu/">CBSE Tuition in Hulimavu</a></li>
+        <li><a href="/maths-tuition-hulimavu/">Maths Tuition in Hulimavu</a></li>
+        <li><a href="/science-tuition-hulimavu/">Science Tuition in Hulimavu</a></li>
+        <li><a href="/kcet-coaching-hulimavu/">KCET Coaching in Hulimavu</a></li>
+        <li><a href="/class-10-tuition-hulimavu/">Class 10 Tuition Hulimavu</a></li>
+        <li><a href="/icse-tuition-hulimavu/">ICSE Tuition Hulimavu</a></li>
+        <li><a href="/tuition-classes-near-bannerghatta-road/">Tuition near Bannerghatta Road</a></li>
+        <li><a href="/cbse-tuition-bangalore/">CBSE Tuition Bangalore</a></li>
+        <li><a href="/tuition-centre-bangalore/">Best Tuition Centre in Bangalore</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ============================================================
+     Pure probability logic (exported when run under Node for tests)
+     ============================================================ */
+
+  var BASE_POINTS = 10;      // points for every correct answer
+  var FEEDBACK_MS = 1200;    // how long feedback stays before the next question
+  var DURATIONS = [60, 90, 120];
+
+  var DIFFS = {
+    easy:   { key: "easy",   label: "Easy",   bonus: 0 },
+    medium: { key: "medium", label: "Medium", bonus: 2 },
+    hard:   { key: "hard",   label: "Hard",   bonus: 4 }
+  };
+
+  var MODES = {
+    coin:    { key: "coin",    label: "Coin Flip Lab",       icon: "🪙", experiment: true  },
+    dice:    { key: "dice",    label: "Dice Master",         icon: "🎲", experiment: true  },
+    spinner: { key: "spinner", label: "Lucky Spinner",       icon: "🎡", experiment: true  },
+    card:    { key: "card",    label: "Card Probability",    icon: "🃏", experiment: true  },
+    quiz:    { key: "quiz",    label: "Probability Quiz",    icon: "🧠", experiment: false },
+    mixed:   { key: "mixed",   label: "Mixed Challenge",     icon: "⚡", experiment: false }
+  };
+
+  var STREAK_MILESTONES = [
+    { streak: 3,  label: "COMBO x3!",    bonus: 5  },
+    { streak: 5,  label: "HOT STREAK!",  bonus: 10 },
+    { streak: 10, label: "ON FIRE!",     bonus: 20 }
+  ];
+
+  var MODE_HOW = {
+    coin: { title: "How to play Coin Flip Lab", text: "Predict HEADS or TAILS before each flip. Flip the coin, check your prediction and watch the experimental frequency creep closer to the theoretical probability of 1/2. Decode the pattern of chance, then climb the streak ladder.", chip: "P(Heads) = 1/2 · P(Tails) = 1/2" },
+    dice: { title: "How to play Dice Master", text: "Predict the exact face, or predict a category such as EVEN, ODD, PRIME, or > 4. After every roll the explanation shows the favourable outcomes out of 6 and the reduced fraction, e.g. P(even) = 3/6 = 1/2.", chip: "P(each face) = 1/6" },
+    spinner: { title: "How to play Lucky Spinner", text: "Four equal sectors (red, blue, green, yellow) mean each sector has P = 1/4. Predict the exact sector or ask whether the result will belong to a chosen category, then spin to test it.", chip: "P(each sector) = 1/4" },
+    card: { title: "How to play Card Probability", text: "Predict RED or BLACK, the suit, or a face/ace question on a real 52-card deck. Every card is returned before the next draw, so the theoretical probability never changes.", chip: "26 red · 26 black · 4 aces · 12 face cards" },
+    quiz: { title: "How to play Probability Quiz", text: "Answer multiple-choice questions that get progressively harder. Cover impossible, unlikely, equally likely, likely and certain events, then read the worked explanation with favourable and total outcomes after every answer.", chip: "P = favourable ÷ total" },
+    mixed: { title: "How to play Mixed Challenge", text: "One question at a time from every lab — coins, dice, spinner, cards and the quiz — all mixed together. The math gets harder as your score climbs, and points keep flowing for every correct prediction or answer.", chip: "Everything, combined" }
+  };
+
+  /* ---------- fraction maths ---------- */
+
+  function gcd(a, b) {
+    a = Math.abs(a);
+    b = Math.abs(b);
+    while (b) {
+      var t = a % b;
+      a = b;
+      b = t;
+    }
+    return a;
+  }
+
+  function frac(n, d) {
+    if (typeof n !== "number" || !isFinite(n)) { n = 0; }
+    if (typeof d !== "number" || !isFinite(d) || d === 0) { d = 1; }
+    var g = gcd(n, d);
+    return { n: n / g, d: d / g };
+  }
+
+  function fracStr(n, d) {
+    var f = frac(n, d);
+    if (f.n === 0) { return "0"; }
+    if (f.d === 1) { return String(f.n); }
+    return f.n + "/" + f.d;
+  }
+
+  function pct(n, d) {
+    var f = frac(n, d);
+    return Math.round(10000 * f.n / f.d) / 100;
+  }
+
+  /* ---------- rng (seedable for tests) ---------- */
+
+  var rng = function () { return Math.random(); };
+  function setRng(fn) {
+    rng = (typeof fn === "function") ? fn : function () { return Math.random(); };
+  }
+  function ri(min, max) {
+    return min + Math.floor(rng() * (max - min + 1));
+  }
+  function pick(arr) {
+    return arr[Math.floor(rng() * arr.length)];
+  }
+  function shuffle(arr) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(rng() * (i + 1));
+      var tmp = a[i];
+      a[i] = a[j];
+      a[j] = tmp;
+    }
+    return a;
+  }
+
+  /* ---------- card model (standard 52-card deck) ---------- */
+
+  var SUITS = ["hearts", "diamonds", "clubs", "spades"];
+  var SUIT_LABELS = { hearts: "Hearts", diamonds: "Diamonds", clubs: "Clubs", spades: "Spades" };
+  var RANKS = ["Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"];
+  var RED = 26;
+  var BLACK = 26;
+  var ACES = 4;
+  var FACES = 12;
+  var SUIT_SIZE = 13;
+
+  function isRedSuit(suit) {
+    return suit === "hearts" || suit === "diamonds";
+  }
+  function drawCard() {
+    var idx = ri(0, 51);
+    var suit = SUITS[Math.floor(idx / SUIT_SIZE)];
+    var rank = RANKS[idx % SUIT_SIZE];
+    return {
+      suit: suit,
+      rank: rank,
+      red: isRedSuit(suit),
+      face: rank === "Jack" || rank === "Queen" || rank === "King",
+      ace: rank === "Ace",
+      display: rank + " of " + SUIT_LABELS[suit]
+    };
+  }
+
+  /* ---------- experiment outcome generators ---------- */
+
+  function flipCoin() {
+    return rng() < 0.5 ? "heads" : "tails";
+  }
+  function rollDie() {
+    return ri(1, 6);
+  }
+  var SECTORS = ["red", "blue", "green", "yellow"];
+  function spinSector() {
+    return pick(SECTORS);
+  }
+  function diceEvent(face, ev) {
+    if (ev === "even") { return face % 2 === 0; }
+    if (ev === "odd") { return face % 2 === 1; }
+    if (ev === "prime") { return face === 2 || face === 3 || face === 5; }
+    if (ev === "gt4") { return face > 4; }
+    if (ev === "lt4") { return face < 4; }
+    return true;
+  }
+  function diceEventTheory(ev) {
+    if (ev === "even") { return "P(even) = 3/6 = 1/2"; }
+    if (ev === "odd") { return "P(odd) = 3/6 = 1/2"; }
+    if (ev === "prime") { return "P(prime) = 3/6 = 1/2"; }
+    if (ev === "gt4") { return "P(&gt;4) = 2/6 = 1/3"; }
+    if (ev === "lt4") { return "P(&lt;4) = 3/6 = 1/2"; }
+    return "";
+  }
+
+  /* ---------- quiz question factories ---------- */
+
+  function buildMcq(q, correct, distractors, explain, tag) {
+    var opts = shuffle([correct].concat(distractors));
+    return {
+      q: q,
+      options: opts,
+      answer: opts.indexOf(correct),
+      explain: explain,
+      tag: tag
+    };
+  }
+
+  function quizCoin(diff) {
+    var heads = rng() < 0.5;
+    var q = heads
+      ? "You flip a fair coin. What is the probability of getting HEADS?"
+      : "You flip a fair coin. What is the probability of getting TAILS?";
+    return buildMcq(q, "1/2", ["1/4", "1", "0"],
+      "Favourable outcomes: 1 (" + (heads ? "heads" : "tails") + "). Total outcomes: 2. P = 1/2 = 50%.", "coin");
+  }
+
+  function quizDieEvent(diff) {
+    var kind = pick(["even", "odd", "prime", "gt4", "lt4"]);
+    var labels = {
+      even: "even number",
+      odd: "odd number",
+      prime: "prime number (2, 3, 5)",
+      gt4: "number greater than 4",
+      lt4: "number less than 4"
+    };
+    var q = "You roll a fair 6-sided die. What is P(rolling " + labels[kind] + ")?";
+    if (kind === "even") {
+      return buildMcq(q, "1/2", ["1/6", "1/3", "2/3"], "Favourable: 3 (2, 4, 6). Total: 6. P(even) = 3/6 = 1/2 = 50%.", "die");
+    }
+    if (kind === "odd") {
+      return buildMcq(q, "1/2", ["1/6", "1/3", "5/6"], "Favourable: 3 (1, 3, 5). Total: 6. P(odd) = 3/6 = 1/2 = 50%.", "die");
+    }
+    if (kind === "prime") {
+      return buildMcq(q, "1/2", ["1/6", "1/3", "2/3"], "Favourable: 3 (2, 3, 5). Total: 6. P(prime) = 3/6 = 1/2 = 50%.", "die");
+    }
+    if (kind === "gt4") {
+      return buildMcq(q, "1/3", ["1/2", "1/6", "2/3"], "Favourable: 2 (5, 6). Total: 6. P(&gt;4) = 2/6 = 1/3 ≈ 33%.", "die");
+    }
+    return buildMcq(q, "1/2", ["1/3", "1/6", "2/3"], "Favourable: 3 (1, 2, 3). Total: 6. P(&lt;4) = 3/6 = 1/2 = 50%.", "die");
+  }
+
+  function quizDieFace(diff) {
+    var face = ri(1, 6);
+    var q = "You roll a fair 6-sided die. What is the probability of rolling a " + face + "?";
+    return buildMcq(q, "1/6", ["1/3", "1/2", "1/4"],
+      "Favourable: 1 (the face " + face + "). Total: 6 faces. P = 1/6 ≈ 17%.", "die");
+  }
+
+  function quizCard(diff) {
+    var kind = pick(["red", "black", "ace", "heart", "face"]);
+    if (kind === "red") {
+      return buildMcq("You draw one card from a standard 52-card deck. What is P(red)?", "1/2", ["1/4", "1/13", "3/4"], "Favourable: 26 red cards. Total: 52. P(red) = 26/52 = 1/2 = 50%.", "cards");
+    }
+    if (kind === "black") {
+      return buildMcq("You draw one card from a standard 52-card deck. What is P(black)?", "1/2", ["1/4", "1/13", "3/4"], "Favourable: 26 black cards. Total: 52. P(black) = 26/52 = 1/2 = 50%.", "cards");
+    }
+    if (kind === "ace") {
+      return buildMcq("You draw one card from a standard 52-card deck. What is P(an ace)?", "1/13", ["1/4", "1/2", "1/52"], "Favourable: 4 aces. Total: 52. P(ace) = 4/52 = 1/13 ≈ 8%.", "cards");
+    }
+    if (kind === "heart") {
+      return buildMcq("You draw one card from a standard 52-card deck. What is P(a heart)?", "1/4", ["1/13", "1/52", "1/2"], "Favourable: 13 hearts. Total: 52. P(heart) = 13/52 = 1/4 = 25%.", "cards");
+    }
+    return buildMcq("You draw one card from a standard 52-card deck. What is P(a face card)?", "3/13", ["1/4", "1/13", "3/52"], "Favourable: 12 face cards (J, Q, K across 4 suits). Total: 52. P(face) = 12/52 = 3/13 ≈ 23%.", "cards");
+  }
+
+  function quizBag(diff) {
+    var pairs = [[3, 2], [2, 3], [4, 4], [5, 3], [6, 2]];
+    var pr = pick(pairs);
+    var askRed = rng() < 0.5;
+    var n = askRed ? pr[0] : pr[1];
+    var total = pr[0] + pr[1];
+    var correct = fracStr(n, total);
+    var other = fracStr(total - n, total);
+    var colour = askRed ? "red" : "blue";
+    var q = "A bag has " + pr[0] + " red and " + pr[1] + " blue marbles. One marble is picked at random. What is P(" + colour + ")?";
+    var distractors = [];
+    var candidates = ["1/2", "1/3", "1/4", "2/3", "3/4", other];
+    for (var i = 0; i < candidates.length && distractors.length < 3; i++) {
+      if (candidates[i] !== correct && distractors.indexOf(candidates[i]) === -1) {
+        distractors.push(candidates[i]);
+      }
+    }
+    return buildMcq(q, correct, distractors,
+      "Favourable: " + n + " " + colour + " marbles. Total: " + total + ". P(" + colour + ") = " + n + "/" + total + " = " + correct + " ≈ " + pct(n, total) + "%.", "bag");
+  }
+
+  function quizSpinner(diff) {
+    var notRed = rng() < 0.5;
+    if (notRed) {
+      return buildMcq("A spinner has 4 equal sectors: red, blue, green, yellow. What is P(not red)?", "3/4", ["1/4", "1/2", "1/3"], "Favourable: 3 sectors (blue, green, yellow). Total: 4. P(not red) = 3/4 = 75%.", "spinner");
+    }
+    return buildMcq("A spinner has 4 equal sectors: red, blue, green, yellow. What is P(red)?", "1/4", ["1/2", "1/3", "0"], "Favourable: 1 red sector. Total: 4 equal sectors. P(red) = 1/4 = 25%.", "spinner");
+  }
+
+  function quizWords(diff) {
+    var kind = pick(["impossible", "certain", "likely", "equal"]);
+    if (kind === "impossible") {
+      return buildMcq("The probability of an event that can never happen is…", "0", ["1", "1/2", "1/3"], "An event with no favourable outcomes has probability 0 — it is impossible.", "words");
+    }
+    if (kind === "certain") {
+      return buildMcq("The probability of an event that must always happen is…", "1", ["0", "1/2", "3/4"], "When every outcome is favourable, P = 1 — the event is certain.", "words");
+    }
+    if (kind === "likely") {
+      return buildMcq("If the probability of rain today is 0.9, then rain today is…", "Likely", ["Impossible", "Unlikely", "Equally likely"], "0.9 is close to 1, so rain is likely — probable but not certain.", "words");
+    }
+    return buildMcq("A fair coin gives heads and tails with equal probability. The two outcomes are described as…", "Equally likely", ["Impossible", "Certain", "Unlikely"], "Both outcomes have P = 1/2, so heads and tails are equally likely.", "words");
+  }
+
+  function quizMedium(diff) {
+    switch (ri(0, 7)) {
+      case 0:
+        return buildMcq("You toss two fair coins. What is P(both show heads)?", "1/4", ["1/2", "1/3", "1"], "Outcomes: HH, HT, TH, TT. Favourable: HH. P = 1/4 = 25%.", "coins");
+      case 1:
+        return buildMcq("You toss two fair coins. What is P(at least one head)?", "3/4", ["1/4", "1/2", "1/3"], "Outcomes: HH, HT, TH, TT. Favourable: HH, HT, TH. P = 3/4 = 75%.", "coins");
+      case 2:
+        return buildMcq("You roll a fair die. What is P(NOT rolling a 6)?", "5/6", ["1/6", "1/2", "2/3"], "P(not 6) = 1 − P(6) = 1 − 1/6 = 5/6, or 5 favourable faces out of 6.", "die");
+      case 3:
+        return buildMcq("You draw one card from a full deck. What is P(NOT an ace)?", "12/13", ["1/13", "1/3", "3/4"], "Favourable: 48 non-aces. Total: 52. P = 48/52 = 12/13 ≈ 92%.", "cards");
+      case 4:
+        return buildMcq("You roll a fair die. What is the probability of rolling an odd number?", "1/2", ["1/6", "1/3", "2/3"], "Favourable: 3 (1, 3, 5). Total: 6. P(odd) = 3/6 = 1/2 = 50%.", "die");
+      case 5:
+        return buildMcq("A die was rolled 60 times and the number 6 appeared 12 times. What is the experimental probability of rolling a 6 from this experiment?", "1/5", ["1/6", "1/3", "1/2"], "Experimental P = 12/60 = 1/5 = 20%. This is what happened, not the theoretical 1/6.", "experiment");
+      case 6:
+        return buildMcq("A coin was flipped 100 times and showed heads 48 times. What is the experimental probability of heads from this experiment?", "12/25", ["1/2", "24/25", "8/25"], "Experimental P = 48/100 = 12/25 = 48%. Theoretical is 1/2 = 50% — small differences are normal.", "experiment");
+      default:
+        return buildMcq("A spinner has 6 equal sectors numbered 1 to 6. What is P(spinning a number less than 3)?", "1/3", ["1/2", "1/6", "2/3"], "Favourable: 1 and 2. Total: 6. P = 2/6 = 1/3 ≈ 33%.", "spinner");
+    }
+  }
+
+  function quizHard(diff) {
+    switch (ri(0, 7)) {
+      case 0:
+        return buildMcq("You roll two fair dice and add the numbers. What is P(sum = 7)?", "1/6", ["1/12", "1/36", "1/4"], "Favourable: 6 pairs (1+6, 2+5, 3+4, 4+3, 5+2, 6+1). Total: 36. P = 6/36 = 1/6 ≈ 17%.", "dice2");
+      case 1:
+        return buildMcq("You roll two fair dice and add the numbers. What is P(sum = 2)?", "1/36", ["1/6", "1/18", "1/2"], "Only the pair (1, 1) works. P = 1/36 ≈ 3%.", "dice2");
+      case 2:
+        return buildMcq("You toss three fair coins. What is P(exactly 2 heads)?", "3/8", ["1/2", "1/4", "1/8"], "Total outcomes: 8. Favourable: HHT, HTH, THH. P = 3/8 = 37.5%.", "coins");
+      case 3:
+        return buildMcq("You draw one card from a full deck. What is P(red face card)?", "3/26", ["1/4", "3/13", "1/13"], "Favourable: 6 red face cards (J, Q, K of hearts and diamonds). Total: 52. P = 6/52 = 3/26 ≈ 12%.", "cards");
+      case 4:
+        return buildMcq("A bag has 5 red, 4 blue and 3 green marbles. One is picked at random. What is P(not red)?", "7/12", ["5/12", "1/3", "1/2"], "Total marbles: 12. Not red: 4 + 3 = 7. P(not red) = 7/12 ≈ 58%.", "bag");
+      case 5:
+        return buildMcq("A spinner with 4 equal sectors was spun 200 times and landed on red 150 times. What is the experimental probability of red?", "3/4", ["1/2", "1/4", "5/8"], "Experimental P = 150/200 = 3/4 = 75%. Remember the theoretical P(red) is only 1/4 for a 4-sector spinner.", "experiment");
+      case 6:
+        return buildMcq("A spinner has 4 equal sectors (red, blue, green, yellow). You spin it twice. What is P(at least one red)?", "7/16", ["1/4", "1/2", "3/8"], "P(no red in one spin) = 3/4, so P(no red in two spins) = (3/4)² = 9/16. P(at least one red) = 1 − 9/16 = 7/16 ≈ 44%.", "spinner");
+      default:
+        return buildMcq("You draw one card from a full deck. What is P(a heart or a spade)?", "1/2", ["1/4", "1/13", "3/4"], "Favourable: 13 hearts + 13 spades = 26. Total: 52. P = 26/52 = 1/2 = 50%.", "cards");
+    }
+  }
+
+  var EASY_GENERATORS = [quizCoin, quizDieEvent, quizDieFace, quizCard, quizBag, quizSpinner, quizWords];
+  var MEDIUM_GENERATORS = [quizCoin, quizDieEvent, quizDieFace, quizCard, quizBag, quizSpinner, quizWords, quizMedium];
+  var HARD_GENERATORS = [quizCoin, quizDieEvent, quizDieFace, quizCard, quizBag, quizSpinner, quizWords, quizMedium, quizHard];
+
+  function pickGenerator(diff) {
+    var pool = diff === "hard" ? HARD_GENERATORS : (diff === "medium" ? MEDIUM_GENERATORS : EASY_GENERATORS);
+    // avoid repeating the same factory twice in a row for variety
+    var g = pick(pool);
+    if (lastQuizFactory === g && pool.length > 1) {
+      g = pick(pool);
+    }
+    lastQuizFactory = g;
+    return g;
+  }
+  var lastQuizFactory = null;
+
+  function generateQuizQuestion(diff) {
+    var gen = pickGenerator(diff);
+    var m = gen(diff);
+    return {
+      mode: "quiz",
+      isExperiment: false,
+      kindLabel: "Probability Quiz",
+      prompt: m.q,
+      options: m.options,
+      answer: m.answer,
+      choices: null,
+      theoryText: null,
+      explain: m.explain
+    };
+  }
+
+  /* ---------- experiment prompt builders ---------- */
+
+  function buildCoinQuestion() {
+    return {
+      mode: "coin",
+      isExperiment: true,
+      kindLabel: "Coin Flip Lab · Prediction",
+      prompt: "Will the next flip land on HEADS or TAILS?",
+      choices: [{ key: "heads", label: "🪙 HEADS" }, { key: "tails", label: "👑 TAILS" }],
+      options: null,
+      answer: null,
+      theoryText: "P(Heads) = 1/2 · P(Tails) = 1/2"
+    };
+  }
+
+  function buildDiceQuestion() {
+    var face = rng() < 0.5;
+    if (face) {
+      return {
+        mode: "dice",
+        isExperiment: true,
+        kindLabel: "Dice Master · Face Prediction",
+        prompt: "Predict the very next roll: choose a number from 1 to 6.",
+        choices: [{ key: "1", label: "1" }, { key: "2", label: "2" }, { key: "3", label: "3" }, { key: "4", label: "4" }, { key: "5", label: "5" }, { key: "6", label: "6" }],
+        options: null,
+        answer: null,
+        event: null,
+        theoryText: "P(each face) = 1/6"
+      };
+    }
+    var ev = pick(["even", "odd", "prime", "gt4", "lt4"]);
+    var labels = {
+      even: "EVEN",
+      odd: "ODD",
+      prime: "a PRIME number (2, 3, 5)",
+      gt4: "GREATER THAN 4 (5 or 6)",
+      lt4: "LESS THAN 4 (1, 2 or 3)"
+    };
+    return {
+      mode: "dice",
+      isExperiment: true,
+      kindLabel: "Dice Master · Category Prediction",
+      prompt: "Will the next roll be " + labels[ev] + "?",
+      choices: [{ key: "Yes", label: "✅ Yes" }, { key: "No", label: "❌ No" }],
+      options: null,
+      answer: null,
+      event: ev,
+      theoryText: diceEventTheory(ev)
+    };
+  }
+
+  function buildSpinnerQuestion() {
+    var cat = rng() < 0.5;
+    if (cat) {
+      var group = rng() < 0.5 ? ["red", "blue"] : ["green", "yellow"];
+      var names = group.slice();
+      names[0] = names[0].charAt(0).toUpperCase() + names[0].slice(1);
+      names[1] = names[1].charAt(0).toUpperCase() + names[1].slice(1);
+      return {
+        mode: "spinner",
+        isExperiment: true,
+        kindLabel: "Lucky Spinner · Category Prediction",
+        prompt: "Will the next spin land in " + names[0] + " or " + names[1] + "?",
+        choices: [{ key: "Yes", label: "✅ Yes" }, { key: "No", label: "❌ No" }],
+        options: null,
+        answer: null,
+        category: group,
+        theoryText: "P(" + names[0] + " or " + names[1] + ") = 2/4 = 1/2"
+      };
+    }
+    return {
+      mode: "spinner",
+      isExperiment: true,
+      kindLabel: "Lucky Spinner · Sector Prediction",
+      prompt: "Predict the next sector: which colour?",
+      choices: [{ key: "red", label: "🔴 Red" }, { key: "blue", label: "🔵 Blue" }, { key: "green", label: "🟢 Green" }, { key: "yellow", label: "🟡 Yellow" }],
+      options: null,
+      answer: null,
+      theoryText: "P(each sector) = 1/4"
+    };
+  }
+
+  function buildCardQuestion() {
+    var kind = pick(["rb", "rb", "suit", "face", "ace"]);
+    if (kind === "rb") {
+      return {
+        mode: "card",
+        isExperiment: true,
+        kindLabel: "Card Probability · Colour Prediction",
+        prompt: "Predict the next card: RED or BLACK? (Every card is returned to the deck after each draw.)",
+        choices: [{ key: "red", label: "♥ RED" }, { key: "black", label: "♠ BLACK" }],
+        options: null,
+        answer: null,
+        predType: "rb",
+        theoryText: "P(red) = 26/52 = 1/2 · P(black) = 26/52 = 1/2"
+      };
+    }
+    if (kind === "suit") {
+      return {
+        mode: "card",
+        isExperiment: true,
+        kindLabel: "Card Probability · Suit Prediction",
+        prompt: "Predict the SUIT of the next card: Hearts, Diamonds, Clubs or Spades?",
+        choices: [{ key: "hearts", label: "♥ Hearts" }, { key: "diamonds", label: "♦ Diamonds" }, { key: "clubs", label: "♣ Clubs" }, { key: "spades", label: "♠ Spades" }],
+        options: null,
+        answer: null,
+        predType: "suit",
+        theoryText: "P(each suit) = 13/52 = 1/4"
+      };
+    }
+    if (kind === "face") {
+      return {
+        mode: "card",
+        isExperiment: true,
+        kindLabel: "Card Probability · Face Prediction",
+        prompt: "Will the next card be a FACE card (Jack, Queen or King)?",
+        choices: [{ key: "Yes", label: "✅ Yes" }, { key: "No", label: "❌ No" }],
+        options: null,
+        answer: null,
+        predType: "face",
+        theoryText: "P(face card) = 12/52 = 3/13"
+      };
+    }
+    return {
+      mode: "card",
+      isExperiment: true,
+      kindLabel: "Card Probability · Ace Prediction",
+      prompt: "Will the next card be an ACE?",
+      choices: [{ key: "Yes", label: "✅ Yes" }, { key: "No", label: "❌ No" }],
+      options: null,
+      answer: null,
+      predType: "ace",
+      theoryText: "P(ace) = 4/52 = 1/13"
+    };
+  }
+
+  function makeExperimentQuestion(mode) {
+    if (mode === "coin") { return buildCoinQuestion(); }
+    if (mode === "dice") { return buildDiceQuestion(); }
+    if (mode === "spinner") { return buildSpinnerQuestion(); }
+    if (mode === "card") { return buildCardQuestion(); }
+    return buildCoinQuestion();
+  }
+
+  /* ---------- mixed challenge ---------- */
+
+  function mixedPick() {
+    var pool = ["coin", "dice", "spinner", "card", "quiz", "coin", "quiz", "dice", "spinner", "card"];
+    return pick(pool);
+  }
+
+  function effectiveQuizDiff(userDiff, score) {
+    var order = ["easy", "medium", "hard"];
+    var base = order.indexOf(userDiff);
+    return order[Math.max(base, score >= 120 ? 2 : score >= 60 ? 1 : 0)];
+  }
+
+  /* ---------- scoring ---------- */
+
+  function milestoneForStreak(streak) {
+    for (var i = 0; i < STREAK_MILESTONES.length; i++) {
+      if (STREAK_MILESTONES[i].streak === streak) { return STREAK_MILESTONES[i]; }
+    }
+    return null;
+  }
+
+  function pointsFor(diff, streakAtAward) {
+    var pts = BASE_POINTS + (DIFFS[diff] ? DIFFS[diff].bonus : 0);
+    var m = milestoneForStreak(streakAtAward);
+    if (m) { pts += m.bonus; }
+    return pts;
+  }
+
+  function accuracyFor(s) {
+    if (!s || !s.attempted) { return 0; }
+    return Math.round((s.correct / s.attempted) * 100);
+  }
+
+  function experimentTrialsFor(s) {
+    if (!s) { return 0; }
+    var e = s.experiments;
+    return e.coin.trials + e.dice.trials + e.spinner.trials + e.card.trials;
+  }
+
+  /* ---------- outcome evaluation ---------- */
+
+  function generateOutcome(q) {
+    if (q.mode === "coin") { return { value: flipCoin() }; }
+    if (q.mode === "dice") { return rollDie(); }
+    if (q.mode === "spinner") { return spinSector(); }
+    if (q.mode === "card") { return drawCard(); }
+    return null;
+  }
+
+  function predictionMatches(q, outcome, predKey) {
+    if (q.mode === "coin") { return predKey === outcome.value; }
+    if (q.mode === "dice") {
+      if (q.event) { return predKey === (diceEvent(outcome, q.event) ? "Yes" : "No"); }
+      return String(predKey) === String(outcome);
+    }
+    if (q.mode === "spinner") {
+      if (q.category) { return predKey === (q.category.indexOf(outcome) !== -1 ? "Yes" : "No"); }
+      return predKey === outcome;
+    }
+    if (q.mode === "card") {
+      if (q.predType === "suit") { return predKey === outcome.suit; }
+      if (q.predType === "face") { return predKey === (outcome.face ? "Yes" : "No"); }
+      if (q.predType === "ace") { return predKey === (outcome.ace ? "Yes" : "No"); }
+      return predKey === (outcome.red ? "red" : "black");
+    }
+    return false;
+  }
+
+  function recordExperiment(s, q, outcome) {
+    var e = s.experiments;
+    if (q.mode === "coin") {
+      e.coin.trials += 1;
+      e.coin.counts[outcome.value] = (e.coin.counts[outcome.value] || 0) + 1;
+    } else if (q.mode === "dice") {
+      e.dice.trials += 1;
+      var k = String(outcome);
+      e.dice.counts[k] = (e.dice.counts[k] || 0) + 1;
+    } else if (q.mode === "spinner") {
+      e.spinner.trials += 1;
+      e.spinner.counts[outcome] = (e.spinner.counts[outcome] || 0) + 1;
+    } else if (q.mode === "card") {
+      e.card.trials += 1;
+      e.card.counts[outcome.red ? "red" : "black"] = (e.card.counts[outcome.red ? "red" : "black"] || 0) + 1;
+      e.card.counts[outcome.suit] = (e.card.counts[outcome.suit] || 0) + 1;
+      if (outcome.face) { e.card.counts.face = (e.card.counts.face || 0) + 1; }
+      if (outcome.ace) { e.card.counts.ace = (e.card.counts.ace || 0) + 1; }
+    }
+    return e;
+  }
+
+  function experimentExplain(q, outcome, ok, s, predLabel) {
+    var trials = 0;
+    var observedKey = "";
+    var theoretical = "";
+    if (q.mode === "coin") {
+      trials = s.experiments.coin.trials;
+      observedKey = outcome.value;
+      theoretical = "P(" + observedKey + ") = 1/2";
+    } else if (q.mode === "dice") {
+      trials = s.experiments.dice.trials;
+      observedKey = String(outcome);
+      theoretical = q.event ? diceEventTheory(q.event) : "P(" + outcome + ") = 1/6";
+    } else if (q.mode === "spinner") {
+      trials = s.experiments.spinner.trials;
+      observedKey = outcome;
+      theoretical = "P(" + outcome + ") = 1/4";
+    } else if (q.mode === "card") {
+      trials = s.experiments.card.trials;
+      theoretical = q.theoryText || "";
+      observedKey = outcome.display;
+    }
+    var count = s.experiments[q.mode].counts[observedKey] || 0;
+    var seen = trials > 0 ? (count + " in " + trials + " trial" + (trials === 1 ? "" : "s")) : "no trials yet";
+    var freq = trials > 0 ? (Math.round(10000 * count / trials) / 100) + "%" : "n/a";
+    return {
+      note: "You now have " + seen + ". Experimental frequency of " + observedKey + " is " + freq + " against a theoretical probability of " + theoretical + ". More trials bring the two closer together."
+    };
+  }
+
+  /* ---------- achievements ---------- */
+
+  var ACHIEVEMENTS = [
+    { id: "first",     name: "First Prediction",   desc: "Get your first answer correct.",         icon: "🌱", check: function (s) { return s.correct >= 1; } },
+    { id: "five",      name: "Five Correct",       desc: "Get 5 answers correct.",                  icon: "✋", check: function (s) { return s.correct >= 5; } },
+    { id: "streak",    name: "Hot Streak",         desc: "Get 5 answers right in a row.",           icon: "🔥", check: function (s) { return s.bestStreak >= 5; } },
+    { id: "pro",       name: "Probability Pro",    desc: "Reach a streak of 10.",                   icon: "🎓", check: function (s) { return s.bestStreak >= 10; } },
+    { id: "experiment", name: "Experiment Master", desc: "Complete 10 experiment trials.",          icon: "🧪", check: function (s) { return experimentTrialsFor(s) >= 10; } }
+  ];
+
+  function checkAchievements(s) {
+    for (var i = 0; i < ACHIEVEMENTS.length; i++) {
+      var a = ACHIEVEMENTS[i];
+      if (!s.achievements[a.id] && a.check(s)) {
+        s.achievements[a.id] = true;
+        s.achievementsEarned.push(a.id);
+      }
+    }
+  }
+
+  /* ============================================================
+     State
+     ============================================================ */
+
+  function defaultPb() {
+    return { bestScore: 0, bestAccuracy: 0, bestStreak: 0, achievementsEarned: [], gamesPlayed: 0, totalCorrect: 0 };
+  }
+
+  function newExperimentBlock() {
+    return {
+      coin:    { trials: 0, counts: { heads: 0, tails: 0 } },
+      dice:    { trials: 0, counts: { "1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0 } },
+      spinner: { trials: 0, counts: { red: 0, blue: 0, green: 0, yellow: 0 } },
+      card:    { trials: 0, counts: { red: 0, black: 0, hearts: 0, diamonds: 0, clubs: 0, spades: 0, face: 0, ace: 0 } }
+    };
+  }
+
+  function newState(cfg) {
+    return {
+      phase: "playing",
+      mode: cfg.mode || "coin",
+      diff: cfg.diff || "easy",
+      duration: cfg.duration || 60,
+      timeLeft: cfg.duration || 60,
+      timerId: null,
+      score: 0,
+      streak: 0,
+      bestStreak: 0,
+      attempted: 0,
+      correct: 0,
+      wrong: 0,
+      evaluating: false,
+      question: null,
+      lastOutcome: null,
+      achievements: {},
+      achievementsEarned: [],
+      experiments: newExperimentBlock(),
+      dashKey: "coin"
+    };
+  }
+
+  /* ============================================================
+     Browser wiring
+     ============================================================ */
+
+  var LS_KEY = "vyasa_probability_challenge_stats";
+
+  function storageGet(key) {
+    try { return window.localStorage.getItem(key); } catch (e) { return null; }
+  }
+  function storageSet(key, value) {
+    try { window.localStorage.setItem(key, value); } catch (e) { /* ignore */ }
+  }
+
+  function readPb() {
+    try {
+      var raw = storageGet(LS_KEY);
+      if (!raw) { return null; }
+      var d = JSON.parse(raw);
+      if (!d || typeof d !== "object") { return null; }
+      var base = defaultPb();
+      var ach = Array.isArray(d.achievementsEarned) ? d.achievementsEarned.slice(0, ACHIEVEMENTS.length) : [];
+      return {
+        bestScore: typeof d.bestScore === "number" ? d.bestScore : base.bestScore,
+        bestAccuracy: typeof d.bestAccuracy === "number" ? d.bestAccuracy : base.bestAccuracy,
+        bestStreak: typeof d.bestStreak === "number" ? d.bestStreak : base.bestStreak,
+        achievementsEarned: ach,
+        gamesPlayed: typeof d.gamesPlayed === "number" ? d.gamesPlayed : base.gamesPlayed,
+        totalCorrect: typeof d.totalCorrect === "number" ? d.totalCorrect : base.totalCorrect
+      };
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function writePb(d) {
+    storageSet(LS_KEY, JSON.stringify(d));
+  }
+
+  var state = null;
+  var els = {};
+  var soundOn = false;
+  var audioCtx = null;
+
+  var reducedMotion = typeof window !== "undefined" &&
+    window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function $(id) {
+    if (!els[id]) {
+      els[id] = document.getElementById(id);
+    }
+    return els[id];
+  }
+
+  /* ---------- settings ---------- */
+
+  var settings = { mode: "coin", diff: "easy", duration: 60 };
+
+  function wireSettings() {
+    var groups = document.querySelectorAll("[data-setting-group]");
+    for (var i = 0; i < groups.length; i++) {
+      (function (group) {
+        var key = group.getAttribute("data-setting-group");
+        var btns = group.querySelectorAll("[data-setting]");
+        for (var j = 0; j < btns.length; j++) {
+          (function (btn) {
+            btn.addEventListener("click", function () {
+              settings[key] = key === "duration" ? parseInt(btn.getAttribute("data-value"), 10) : btn.getAttribute("data-value");
+              for (var k = 0; k < btns.length; k++) {
+                var b = btns[k];
+                var active = b === btn;
+                b.classList.toggle("is-active", active);
+                b.setAttribute("aria-pressed", active ? "true" : "false");
+              }
+              if (key === "mode") { renderHowCard(settings.mode); }
+            });
+          })(btns[j]);
+        }
+      })(groups[i]);
+    }
+  }
+
+  function readSettingsFromUi() {
+    return settings;
+  }
+
+  /* ---------- how-to card ---------- */
+
+  function renderHowCard(mode) {
+    var h = MODE_HOW[mode] || MODE_HOW.coin;
+    var t = $("pcHowTitle");
+    var x = $("pcHowText");
+    var c = $("pcHowChip");
+    if (t) { t.textContent = h.title; }
+    if (x) { x.textContent = h.text; }
+    if (c) { c.textContent = h.chip; }
+  }
+
+  /* ---------- personal best ---------- */
+
+  function renderPersonalBest() {
+    var pb = readPb() || defaultPb();
+    var none = $("pcPbNone");
+    var grid = $("pcPbGrid");
+    if (!pb.gamesPlayed) {
+      if (none) { none.style.display = ""; }
+      if (grid) { grid.hidden = true; }
+      return;
+    }
+    if (none) { none.style.display = "none"; }
+    if (!grid) { return; }
+    var cells = [
+      { num: pb.bestScore, lbl: "Best Score" },
+      { num: pb.bestAccuracy + "%", lbl: "Best Accuracy" },
+      { num: pb.bestStreak, lbl: "Best Streak" },
+      { num: pb.achievementsEarned.length, lbl: "Achievements" },
+      { num: pb.gamesPlayed, lbl: "Games" },
+      { num: pb.totalCorrect, lbl: "Correct" }
+    ];
+    var html = "";
+    for (var i = 0; i < cells.length; i++) {
+      html += '<div class="pc-pb-cell"><span class="pc-pb-num">' + cells[i].num + '</span><span class="pc-pb-lbl">' + cells[i].lbl + '</span></div>';
+    }
+    grid.innerHTML = html;
+    grid.hidden = false;
+  }
+
+  /* ---------- rendering helpers ---------- */
+
+  function showScreen(which) {
+    var startS = $("pcStartScreen");
+    var gameS = $("pcGameScreen");
+    var endS = $("pcEndScreen");
+    if (startS) { startS.hidden = which !== "start"; }
+    if (gameS) { gameS.hidden = which !== "game"; }
+    if (endS) { endS.hidden = which !== "end"; }
+  }
+
+  function renderHud() {
+    var t = $("pcTimeVal");
+    var sc = $("pcScoreVal");
+    var at = $("pcAttemptedVal");
+    var co = $("pcCorrectVal");
+    var ac = $("pcAccuracyVal");
+    var st = $("pcStreakVal");
+    var bs = $("pcBestVal");
+    if (t) { t.textContent = state ? state.timeLeft : 0; }
+    if (sc) { sc.textContent = state ? state.score : 0; }
+    if (at) { at.textContent = state ? state.attempted : 0; }
+    if (co) { co.textContent = state ? state.correct : 0; }
+    if (ac) { ac.textContent = state ? accuracyFor(state) + "%" : "0%"; }
+    if (st) { st.textContent = state ? state.streak : 0; }
+    if (bs) { bs.textContent = state ? state.bestStreak : 0; }
+    var tm = $("pcStatTime");
+    if (tm && state) {
+      tm.classList.toggle("is-warning", state.timeLeft <= 10 && state.timeLeft > 0);
+    }
+    var m = $("pcModePill");
+    if (m && MODES[state.mode]) { m.textContent = MODES[state.mode].icon + " " + MODES[state.mode].label; }
+    var d = $("pcDiffPill");
+    if (d && DIFFS[state.diff]) { d.textContent = DIFFS[state.diff].label; }
+  }
+
+  function renderStreakLine() {
+    var el = $("pcStreakLine");
+    if (!el) { return; }
+    if (!state) { return; }
+    if (state.streak >= 3) {
+      el.textContent = "🔥 " + state.streak + " in a row!" + (state.streak >= 10 ? " ON FIRE!" : state.streak >= 5 ? " HOT STREAK!" : " COMBO x3!");
+      el.classList.remove("pc-strong");
+      void el.offsetWidth;
+      el.classList.add("pc-strong");
+      return;
+    }
+    el.textContent = "🔥 Build a streak to earn bonus points (3, 5, 10 in a row).";
+    el.classList.remove("pc-strong");
+  }
+
+  function renderQuestion() {
+    if (!state || !state.question) { return; }
+    var q = state.question;
+    var kind = $("pcQKind");
+    var txt = $("pcQuestionText");
+    if (kind) { kind.textContent = q.kindLabel; }
+    if (txt) { txt.textContent = q.prompt; }
+
+    var wrap = $("pcChoices");
+    if (wrap) {
+      wrap.innerHTML = "";
+      var items = q.choices || [];
+      for (var i = 0; i < items.length; i++) {
+        (function (item, idx) {
+          var b = document.createElement("button");
+          b.type = "button";
+          b.className = "pc-choice";
+          b.textContent = item.label;
+          b.setAttribute("data-choice", String(item.key));
+          b.addEventListener("click", function () {
+            if (state && state.evaluating) { return; }
+            submitAnswer(state.question.choices ? item.key : idx);
+          });
+          wrap.appendChild(b);
+        })(items[i], i);
+      }
+    }
+
+    var rev = $("pcReveal");
+    if (rev) { rev.hidden = true; rev.innerHTML = ""; rev.classList.remove("pc-reveal-anim"); }
+    var fb = $("pcFeedback");
+    if (fb) { fb.textContent = ""; fb.className = "pc-feedback"; }
+    var ex = $("pcExplain");
+    if (ex) { ex.textContent = ""; }
+    var th = $("pcTheory");
+    if (th) { th.textContent = ""; th.hidden = true; }
+
+    if (q.isExperiment) {
+      showDashboard();
+      if (q.mode !== "quiz") { selectDashboardTab(q.mode); }
+      var qd = $("pcDash");
+      if (qd) { qd.hidden = false; }
+    } else {
+      var qd2 = $("pcDash");
+      if (qd2) { qd2.hidden = q.mode === "quiz"; }
+    }
+  }
+
+  /* ---------- dashboard ---------- */
+
+  var DASH_LABELS = {
+    coin: { title: "🪙 Coin Flips", theo: 0.5 },
+    dice: { title: "🎲 Dice Rolls", theo: 1 / 6 },
+    spinner: { title: "🎡 Spinner Spins", theo: 0.25 },
+    card: { title: "🃏 Card Draws", theo: 0.5 }
+  };
+
+  function dashRows(key) {
+    if (!state) { return []; }
+    var e = state.experiments[key];
+    if (!e) { return []; }
+    if (key === "coin") {
+      return [
+        { key: "heads", label: "Heads", count: e.counts.heads || 0, theo: 0.5 },
+        { key: "tails", label: "Tails", count: e.counts.tails || 0, theo: 0.5 }
+      ];
+    }
+    if (key === "dice") {
+      var rows = [];
+      for (var i = 1; i <= 6; i++) {
+        rows.push({ key: String(i), label: String(i), count: e.counts[String(i)] || 0, theo: 1 / 6 });
+      }
+      return rows;
+    }
+    if (key === "spinner") {
+      return [
+        { key: "red", label: "Red", count: e.counts.red || 0, theo: 0.25 },
+        { key: "blue", label: "Blue", count: e.counts.blue || 0, theo: 0.25 },
+        { key: "green", label: "Green", count: e.counts.green || 0, theo: 0.25 },
+        { key: "yellow", label: "Yellow", count: e.counts.yellow || 0, theo: 0.25 }
+      ];
+    }
+    return [
+      { key: "red", label: "Red", count: e.counts.red || 0, theo: 0.5 },
+      { key: "black", label: "Black", count: e.counts.black || 0, theo: 0.5 }
+    ];
+  }
+
+  function renderDashboard() {
+    if (!state) { return; }
+    var key = state.dashKey || "coin";
+    var e = state.experiments[key];
+    if (!e) { return; }
+
+    var tv = $("pcTrialsVal");
+    if (tv) { tv.textContent = "Trials: " + e.trials; }
+
+    var rows = dashRows(key);
+    var body = $("pcExpBody");
+    if (body) {
+      var html = "";
+      for (var i = 0; i < rows.length; i++) {
+        var r = rows[i];
+        var freq = e.trials > 0 ? (Math.round(10000 * r.count / e.trials) / 100) + "%" : "—";
+        var theo = r.theo === 1 ? "1" : fracStr(Math.round(r.theo * rows.length), rows.length);
+        html += '<tr><td>' + r.label + '</td><td>' + r.count + '</td><td>' + freq +
+          '</td><td>' + theo + ' (' + Math.round(r.theo * 100) + '%)</td></tr>';
+      }
+      body.innerHTML = html;
+    }
+
+    var chartWrap = $("pcChartWrap");
+    if (chartWrap) {
+      chartWrap.innerHTML = buildChartSVG(key, rows, e.trials);
+    }
+  }
+
+  function buildChartSVG(key, rows, trials) {
+    var W = 360;
+    var H = 200;
+    var M = { t: 14, r: 12, b: 30, l: 40 };
+    var plotW = W - M.l - M.r;
+    var plotH = H - M.t - M.b;
+    var baseY = M.t + plotH;
+    var slot = plotW / rows.length;
+
+    var desc = key === "coin" ? "Coin flip" : key === "dice" ? "Dice roll" : key === "spinner" ? "Spinner spin" : "Card draw";
+    var aria = "Chart comparing experimental frequency and theoretical probability after " + trials + " " + desc + "s";
+    var out = '<svg class="pc-chart-svg" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + aria + '" xmlns="http://www.w3.org/2000/svg">';
+
+    out += '<g class="ct-axis"><line x1="' + M.l + '" y1="' + (M.t + plotH) + '" x2="' + (W - M.r) + '" y2="' + (M.t + plotH) + '" stroke="rgba(255,255,255,0.35)" stroke-width="1" />';
+    var gridVals = [0, 0.25, 0.5, 0.75, 1];
+    for (var gi = 0; gi < gridVals.length; gi++) {
+      var gy = baseY - gridVals[gi] * plotH;
+      if (gridVals[gi] === 0) {
+        out += '<line x1="' + M.l + '" y1="' + gy + '" x2="' + (W - M.r) + '" y2="' + gy + '" class="ct-zero" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" />';
+      } else {
+        out += '<line x1="' + M.l + '" y1="' + gy + '" x2="' + (W - M.r) + '" y2="' + gy + '" stroke="rgba(255,255,255,0.12)" stroke-width="1" stroke-dasharray="3 4" />';
+      }
+      out += '<text x="' + (M.l - 6) + '" y="' + (gy + 4) + '" text-anchor="end" class="ct-lab" font-size="10" fill="rgba(255,255,255,0.7)">' + Math.round(gridVals[gi] * 100) + '%</text>';
+    }
+    out += '</g>';
+
+    for (var i = 0; i < rows.length; i++) {
+      var r = rows[i];
+      var cx = M.l + slot * i + slot / 2;
+      var obsH = trials > 0 ? (r.count / Math.max(trials, 1)) * plotH : 0;
+      var theoH = r.theo * plotH;
+      var bw = slot * 0.34;
+      out += '<rect class="ct-curve" x="' + (cx - bw - 1) + '" y="' + (baseY - obsH) + '" width="' + bw + '" height="' + obsH + '" rx="2" fill="rgba(100,181,246,0.9)" />';
+      out += '<rect x="' + (cx + 1) + '" y="' + (baseY - theoH) + '" width="' + bw + '" height="' + theoH + '" rx="2" fill="none" stroke="var(--accent)" stroke-width="2" />';
+      out += '<text x="' + cx + '" y="' + (baseY + 16) + '" text-anchor="middle" class="ct-lab" font-size="11" fill="rgba(255,255,255,0.85)" font-weight="700">' + r.label + '</text>';
+    }
+
+    out += '</svg>';
+    return out;
+  }
+
+  function showDashboard() {
+    var qd = $("pcDash");
+    if (qd) { qd.hidden = false; }
+  }
+
+  function selectDashboardTab(key) {
+    if (!state) { return; }
+    state.dashKey = key;
+    var tabs = document.querySelectorAll("[data-pc-tab]");
+    for (var i = 0; i < tabs.length; i++) {
+      var active = tabs[i].getAttribute("data-pc-tab") === key;
+      tabs[i].classList.toggle("is-active", active);
+    }
+    renderDashboard();
+  }
+
+  /* ---------- experiment visuals ---------- */
+
+  function renderReveal(q, outcome, ok) {
+    var rev = $("pcReveal");
+    if (!rev) { return; }
+    rev.hidden = false;
+    rev.innerHTML = "";
+    rev.classList.remove("pc-reveal-anim");
+
+    var html = "";
+    if (q.mode === "coin") {
+      html = '<div class="pc-reveal-inner"><span class="pc-reveal-ico" aria-hidden="true">🪙</span><span>The coin landed: <b>' + (outcome.value === "heads" ? "HEADS" : "TAILS") + '</b></span></div>';
+    } else if (q.mode === "dice") {
+      html = '<div class="pc-reveal-inner"><span class="pc-reveal-ico" aria-hidden="true">🎲</span><span>The die shows: <b>' + outcome + '</b></span></div>';
+    } else if (q.mode === "spinner") {
+      var col = outcome;
+      var swatch = col === "red" ? "#ef5350" : col === "blue" ? "#42a5f5" : col === "green" ? "#66bb6a" : "#ffee58";
+      html = '<div class="pc-reveal-inner"><span class="pc-reveal-ico" aria-hidden="true">🎡</span><span>The spinner stopped on: <b style="color:' + swatch + '">' + col.charAt(0).toUpperCase() + col.slice(1) + '</b></span></div>';
+    } else if (q.mode === "card") {
+      html = '<div class="pc-reveal-inner"><span class="pc-reveal-ico" aria-hidden="true">🃏</span><span>You drew: <b class="' + (outcome.red ? "is-red" : "is-black") + '">' + outcome.display + '</b></span></div>';
+    }
+    if (html) {
+      rev.innerHTML = html;
+      if (!reducedMotion) {
+        void rev.offsetWidth;
+        rev.classList.add("pc-reveal-anim");
+      }
+    }
+  }
+
+  /* ---------- game flow ---------- */
+
+  function loadNextQuestion() {
+    if (!state) { return; }
+    var mode = state.mode;
+    var q = null;
+    if (mode === "mixed") {
+      var picked = mixedPick();
+      if (picked === "quiz") {
+        state.lastMixedQuiz = true;
+        q = generateQuizQuestion(effectiveQuizDiff(state.diff, state.score));
+      } else {
+        state.lastMixedQuiz = false;
+        q = makeExperimentQuestion(picked);
+        q.mixedOrigin = picked;
+      }
+    } else if (mode === "quiz") {
+      q = generateQuizQuestion(state.diff);
+    } else {
+      q = makeExperimentQuestion(mode);
+    }
+    state.question = q;
+    state.lastOutcome = null;
+    state.evaluating = false;
+    renderQuestion();
+  }
+
+  function startTimer() {
+    if (state.timerId !== null) {
+      winClearInterval(state.timerId);
+    }
+    state.timerId = winSetInterval(function () {
+      if (!state || state.phase !== "playing") { return; }
+      state.timeLeft = Math.max(0, state.timeLeft - 1);
+      renderHud();
+      if (state.timeLeft <= 0) {
+        endGame();
+      }
+    }, 1000);
+  }
+
+  function pauseGame() {
+    if (!state || state.phase !== "playing") { return; }
+    if (state.timerId !== null) {
+      winClearInterval(state.timerId);
+      state.timerId = null;
+    }
+    state.phase = "paused";
+    var overlay = $("pcPausedOverlay");
+    if (overlay) { overlay.classList.remove("pc-hidden"); }
+    var pb = $("pcPauseBtn");
+    if (pb) { pb.textContent = "▶ Resume"; }
+  }
+
+  function resumeGame() {
+    if (!state || state.phase !== "paused") { return; }
+    state.phase = "playing";
+    var overlay = $("pcPausedOverlay");
+    if (overlay) { overlay.classList.add("pc-hidden"); }
+    var pb = $("pcPauseBtn");
+    if (pb) { pb.textContent = "⏸ Pause"; }
+    startTimer();
+  }
+
+  var winSetInterval = function (fn, ms) { return window.setInterval(fn, ms); };
+  var winClearInterval = function (id) { window.clearInterval(id); };
+  var winSetTimeout = function (fn, ms) { return window.setTimeout(fn, ms); };
+
+  function submitAnswer(v) {
+    if (!state || state.phase !== "playing") { return; }
+    if (state.evaluating || !state.question) { return; }
+    var q = state.question;
+    state.evaluating = true;
+
+    var ok = false;
+    var outcome = null;
+    var explain = "";
+    var predLabel = "";
+
+    if (q.isExperiment) {
+      outcome = generateOutcome(q);
+      state.lastOutcome = outcome;
+      recordExperiment(state, q, outcome);
+      ok = predictionMatches(q, outcome, v);
+      var ch = null;
+      for (var i = 0; i < q.choices.length; i++) {
+        if (q.choices[i].key === v) { ch = q.choices[i]; }
+      }
+      predLabel = ch ? ch.label : String(v);
+
+      if (ok) {
+        awardCorrect(predLabel);
+      } else {
+        awardWrong(q, predLabel);
+      }
+      renderReveal(q, outcome, ok);
+      renderDashboard();
+
+      var ex = experimentExplain(q, outcome, ok, state, predLabel);
+      var exEl = $("pcExplain");
+      if (exEl) { exEl.textContent = ex.note; }
+      var tl = $("pcTheory");
+      if (tl) { tl.textContent = "Theoretical: " + (q.theoryText || ""); tl.hidden = false; }
+    } else {
+      ok = v === q.answer;
+      if (ok) {
+        awardCorrect(q.options[v]);
+      } else {
+        awardWrong(q, q.options[v]);
+      }
+      var el2 = $("pcExplain");
+      if (el2) { el2.textContent = q.explain; }
+    }
+    scheduleNext();
+  }
+
+  function awardCorrect(predLabel) {
+    state.streak += 1;
+    if (state.streak > state.bestStreak) { state.bestStreak = state.streak; }
+    state.attempted += 1;
+    state.correct += 1;
+    checkAchievements(state);
+
+    var m = milestoneForStreak(state.streak);
+    var pts = pointsFor(state.diff, state.streak);
+    state.score += pts;
+
+    var fb = $("pcFeedback");
+    if (fb) {
+      fb.textContent = "✅ Correct! +" + pts + (m ? " — " + m.label + " bonus!" : "");
+      fb.className = "pc-feedback is-good";
+    }
+    if (m) { triggerBurst(); playSound("milestone"); }
+    renderStreakLine();
+    renderHud();
+  }
+
+  function awardWrong(q, predLabel) {
+    state.attempted += 1;
+    state.wrong += 1;
+    state.streak = 0;
+    checkAchievements(state);
+
+    var fb = $("pcFeedback");
+    if (fb) {
+      var what = "";
+      if (state.lastOutcome && q.isExperiment) {
+        if (q.mode === "coin") {
+          what = state.lastOutcome.value === "heads" ? "HEADS" : "TAILS";
+        } else if (q.mode === "dice") {
+          what = String(state.lastOutcome);
+        } else if (q.mode === "spinner") {
+          var oo = state.lastOutcome;
+          what = oo.charAt(0).toUpperCase() + oo.slice(1);
+        } else if (q.mode === "card") {
+          what = state.lastOutcome.display;
+        }
+      }
+      fb.textContent = what ? "❌ It was " + what + " — you picked " + predLabel + "." : "❌ Not this time.";
+      fb.className = "pc-feedback is-bad";
+    }
+    playSound("wrong");
+    renderStreakLine();
+    renderHud();
+  }
+
+  function scheduleNext() {
+    winSetTimeout(function () {
+      if (!state || state.phase !== "playing") { return; }
+      if (state.timeLeft <= 0) { endGame(); return; }
+      loadNextQuestion();
+    }, FEEDBACK_MS);
+  }
+
+  function endGame() {
+    if (!state || state.phase === "over") { return; }
+    if (state.timerId !== null) { winClearInterval(state.timerId); state.timerId = null; }
+    state.phase = "over";
+    state.timeLeft = Math.max(0, state.timeLeft);
+    var overlay = $("pcPausedOverlay");
+    if (overlay) { overlay.classList.add("pc-hidden"); }
+
+    var acc = accuracyFor(state);
+    var pb = readPb() || defaultPb();
+    var newBest = state.score > pb.bestScore;
+    if (newBest) { pb.bestScore = state.score; }
+    if (acc > pb.bestAccuracy) { pb.bestAccuracy = acc; }
+    if (state.bestStreak > pb.bestStreak) { pb.bestStreak = state.bestStreak; }
+    var merged = pb.achievementsEarned.slice();
+    for (var i = 0; i < state.achievementsEarned.length; i++) {
+      if (merged.indexOf(state.achievementsEarned[i]) === -1) { merged.push(state.achievementsEarned[i]); }
+    }
+    pb.achievementsEarned = merged.slice(0, ACHIEVEMENTS.length);
+    pb.gamesPlayed = pb.gamesPlayed + 1;
+    pb.totalCorrect = pb.totalCorrect + state.correct;
+    writePb(pb);
+
+    var scoreEl = $("pcResScore"); if (scoreEl) { scoreEl.textContent = state.score; }
+    var atEl = $("pcResAttempted"); if (atEl) { atEl.textContent = state.attempted; }
+    var coEl = $("pcResCorrect"); if (coEl) { coEl.textContent = state.correct; }
+    var woEl = $("pcResWrong"); if (woEl) { woEl.textContent = state.wrong; }
+    var acEl = $("pcResAccuracy"); if (acEl) { acEl.textContent = acc + "%"; }
+    var beEl = $("pcResBest"); if (beEl) { beEl.textContent = state.bestStreak; }
+    var nbEl = $("pcNewBest"); if (nbEl) { nbEl.hidden = !newBest; }
+
+    var achEl = $("pcAchList");
+    if (achEl) {
+      if (state.achievementsEarned.length) {
+        var html = "";
+        for (var j = 0; j < state.achievementsEarned.length; j++) {
+          var ai = null;
+          for (var k = 0; k < ACHIEVEMENTS.length; k++) {
+            if (ACHIEVEMENTS[k].id === state.achievementsEarned[j]) { ai = ACHIEVEMENTS[k]; }
+          }
+          if (ai) {
+            html += '<div class="pc-ach"><span class="pc-ach-ico" aria-hidden="true">' + ai.icon + '</span><span><span class="pc-ach-name">' + ai.name + '</span><br /><span class="pc-ach-desc">' + ai.desc + '</span></span></div>';
+          }
+        }
+        achEl.innerHTML = html;
+      } else {
+        achEl.innerHTML = '<div class="pc-ach"><span class="pc-ach-ico" aria-hidden="true">🌱</span><span><span class="pc-ach-name">Keep going!</span><br /><span class="pc-ach-desc">No achievements yet this round — flip, roll and spin to earn your first.</span></span></div>';
+      }
+    }
+
+    var fbEl = $("pcFbMsg");
+    if (fbEl) {
+      var msg = "You answered " + state.correct + " correctly out of " + state.attempted + ". ";
+      msg += acc >= 80 ? "Outstanding predicting!" : acc >= 50 ? "Great work — keep experimenting!" : "Nice start — run a few more trials!";
+      fbEl.textContent = msg;
+    }
+
+    renderPersonalBest();
+    showScreen("end");
+    playSound("end");
+  }
+
+  function startGame() {
+    var s = readSettingsFromUi();
+    if (!s.mode || !s.diff || !s.duration) { s = settings; }
+    state = newState({ mode: s.mode, diff: s.diff, duration: s.duration });
+    state.phase = "playing";
+    showScreen("game");
+    renderHud();
+    renderStreakLine();
+    loadNextQuestion();
+    startTimer();
+  }
+
+  function restartGame() {
+    var s = { mode: state ? state.mode : settings.mode, diff: state ? state.diff : settings.diff, duration: state ? state.duration : settings.duration };
+    state = newState({ mode: s.mode, diff: s.diff, duration: s.duration });
+    state.phase = "playing";
+    var overlay = $("pcPausedOverlay");
+    if (overlay) { overlay.classList.add("pc-hidden"); }
+    var pb = $("pcPauseBtn");
+    if (pb) { pb.textContent = "⏸ Pause"; }
+    showScreen("game");
+    renderHud();
+    renderStreakLine();
+    renderPersonalBest();
+    loadNextQuestion();
+    startTimer();
+  }
+
+  function playAgain() {
+    startGame();
+  }
+
+  /* ---------- negligible sound (Web Audio, no external files) ---------- */
+
+  function ensureAudio() {
+    if (!audioCtx) {
+      var AC = window.AudioContext || window.webkitAudioContext;
+      if (AC) { audioCtx = new AC(); }
+    }
+    if (audioCtx && audioCtx.state === "suspended") {
+      audioCtx.resume();
+    }
+  }
+
+  function beep(freq, dur, type, when, gain) {
+    if (!soundOn || !audioCtx) { return; }
+    try {
+      var osc = audioCtx.createOscillator();
+      var g = audioCtx.createGain();
+      osc.type = type || "square";
+      osc.frequency.value = freq;
+      g.gain.value = gain || 0.12;
+      g.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + dur);
+      osc.connect(g);
+      g.connect(audioCtx.destination);
+      osc.start(when || audioCtx.currentTime);
+      osc.stop((when || audioCtx.currentTime) + dur + 0.03);
+    } catch (e) {
+      /* audio is optional */
+    }
+  }
+
+  function playSound(name) {
+    if (!soundOn) { return; }
+    if (name === "correct") { beep(660, 0.12, "square"); }
+    else if (name === "wrong") { beep(180, 0.2, "sawtooth"); }
+    else if (name === "milestone") { beep(880, 0.1, "square"); }
+    else if (name === "end") { beep(392, 0.14, "square"); beep(523, 0.14, "square", audioCtx.currentTime + 0.14); beep(659, 0.2, "square", audioCtx.currentTime + 0.28); }
+  }
+
+  /* ---------- lightweight burst (CSS shimmer on the question card) ---------- */
+
+  function triggerBurst() {
+    if (reducedMotion) { return; }
+    var card = $("pcQCard");
+    if (!card) { return; }
+    card.classList.remove("pc-strong");
+    void card.offsetWidth;
+    card.classList.add("pc-strong");
+  }
+
+  /* ---------- events ---------- */
+
+  function wireEvents() {
+    wireSettings();
+
+    var startBtn = $("pcStartBtn");
+    if (startBtn) { startBtn.addEventListener("click", startGame); }
+
+    var playAgainBtn = $("pcPlayAgain");
+    if (playAgainBtn) { playAgainBtn.addEventListener("click", playAgain); }
+
+    var restartBtn = $("pcRestartBtn");
+    if (restartBtn) { restartBtn.addEventListener("click", function () { restartGame(); }); }
+
+    var pauseBtn = $("pcPauseBtn");
+    if (pauseBtn) {
+      pauseBtn.addEventListener("click", function () {
+        if (!state) { return; }
+        if (state.phase === "playing") { pauseGame(); }
+        else if (state.phase === "paused") { resumeGame(); }
+      });
+    }
+
+    var pauseResume = $("pcPauseResume");
+    if (pauseResume) { pauseResume.addEventListener("click", resumeGame); }
+
+    var pauseRestart = $("pcPauseRestart");
+    if (pauseRestart) { pauseRestart.addEventListener("click", function () { restartGame(); }); }
+
+    var soundBtn = $("pcSoundBtn");
+    if (soundBtn) {
+      soundBtn.addEventListener("click", function () {
+        ensureAudio();
+        soundOn = !soundOn;
+        soundBtn.textContent = soundOn ? "🔊 Sound On" : "🔇 Sound";
+        soundBtn.setAttribute("aria-pressed", soundOn ? "true" : "false");
+        if (soundOn) { playSound("correct"); }
+      });
+    }
+
+    var tabs = document.querySelectorAll("[data-pc-tab]");
+    for (var i = 0; i < tabs.length; i++) {
+      (function (tab) {
+        tab.addEventListener("click", function () {
+          if (state) { selectDashboardTab(tab.getAttribute("data-pc-tab")); }
+        });
+      })(tabs[i]);
+    }
+
+    renderHowCard(settings.mode);
+
+    if (typeof window !== "undefined" && window.__PC_TEST__) {
+      window.__PC__ = {
+        state: function () { return state; },
+        start: startGame,
+        submit: submitAnswer,
+        end: endGame,
+        loadNext: loadNextQuestion,
+        pause: pauseGame,
+        resume: resumeGame,
+        restart: restartGame,
+        playAgain: playAgain,
+        readPb: readPb,
+        renderPersonalBest: renderPersonalBest,
+        renderDashboard: renderDashboard,
+        selectTab: selectDashboardTab,
+        setSettings: function (o) {
+          for (var k in o) { if (Object.prototype.hasOwnProperty.call(o, k)) { settings[k] = o[k]; } }
+        },
+        setRng: setRng,
+        tick: function () {
+          if (state && state.phase === "playing") {
+            state.timeLeft -= 1;
+            renderHud();
+            if (state.timeLeft <= 0) { endGame(); }
+          }
+        },
+        // pure logic exports for tests
+        fracStr: fracStr,
+        pct: pct,
+        gcd: gcd,
+        generateQuizQuestion: generateQuizQuestion,
+        makeExperimentQuestion: makeExperimentQuestion,
+        generateOutcome: generateOutcome,
+        predictionMatches: predictionMatches,
+        rollDie: rollDie,
+        flipCoin: flipCoin,
+        spinSector: spinSector,
+        drawCard: drawCard,
+        pointsFor: pointsFor,
+        checkAchievements: checkAchievements,
+        mixedPick: mixedPick,
+        effectiveQuizDiff: effectiveQuizDiff,
+        experimentExplain: experimentExplain,
+        dashRows: dashRows,
+        buildChartSVG: buildChartSVG,
+        diceEvent: diceEvent
+      };
+    }
+  }
+
+  /* ---------- init ---------- */
+
+  renderPersonalBest();
+  wireEvents();
+})();
+</script>
+</body>
+</html>
