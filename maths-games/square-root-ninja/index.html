@@ -1,0 +1,2013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Square &amp; Root Ninja | Maths Game | Vyasa Academy</title>
+  <meta name="description" content="Master perfect squares and square roots through timed challenges, number puzzles, and interactive maths games at Vyasa Academy." />
+  <link rel="canonical" href="https://www.vyasaacademy.in/maths-games/square-root-ninja/" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vyasa Academy" />
+  <meta property="og:title" content="Square &amp; Root Ninja | Maths Game | Vyasa Academy" />
+  <meta property="og:description" content="Master perfect squares and square roots through timed challenges, number puzzles, and interactive maths games at Vyasa Academy." />
+  <meta property="og:url" content="https://www.vyasaacademy.in/maths-games/square-root-ninja/" />
+  <meta property="og:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Square &amp; Root Ninja | Maths Game | Vyasa Academy" />
+  <meta name="twitter:description" content="Master perfect squares and square roots through timed challenges, number puzzles, and interactive maths games at Vyasa Academy." />
+  <meta name="twitter:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.vyasaacademy.in/" },
+      { "@type": "ListItem", "position": 2, "name": "Vyasa Maths Games", "item": "https://www.vyasaacademy.in/maths-games/" },
+      { "@type": "ListItem", "position": 3, "name": "Square &amp; Root Ninja", "item": "https://www.vyasaacademy.in/maths-games/square-root-ninja/" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Square & Root Ninja — Master the Squares. Conquer the Roots!",
+    "applicationCategory": "GameApplication",
+    "url": "https://www.vyasaacademy.in/maths-games/square-root-ninja/",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "description": "Free maths practice game covering perfect squares, square roots and square-number sequences for school students.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+    "publisher": { "@type": "Organization", "name": "Vyasa Academy", "url": "https://vyasaacademy.in/" }
+  }
+  </script>
+  <style>
+    /* ===== VYASA SQUARE & ROOT NINJA (page-scoped) ===== */
+    .sr-hero {
+      position: relative;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, var(--primary-dark) 100%);
+      color: var(--white);
+      overflow: hidden;
+      padding: 110px 0 84px;
+      text-align: center;
+    }
+    .sr-hero-bg { position: absolute; inset: 0; pointer-events: none; }
+    .sr-symbol {
+      position: absolute;
+      font-weight: 800;
+      font-family: 'Playfair Display', serif;
+      color: var(--accent-light);
+      opacity: 0.12;
+      user-select: none;
+      animation: sr-float 9s ease-in-out infinite;
+    }
+    @keyframes sr-float {
+      0%, 100% { transform: translateY(0) rotate(-4deg); }
+      50% { transform: translateY(-16px) rotate(4deg); }
+    }
+    .sr-symbol-1 { top: 10%; left: 7%; font-size: 3rem; }
+    .sr-symbol-2 { top: 18%; right: 9%; font-size: 2.4rem; animation-delay: 1.2s; }
+    .sr-symbol-3 { bottom: 16%; left: 13%; font-size: 2.8rem; animation-delay: 2s; }
+    .sr-symbol-4 { bottom: 28%; right: 15%; font-size: 2rem; animation-delay: 0.6s; }
+    .sr-symbol-5 { top: 46%; left: 3.5%; font-size: 1.9rem; animation-delay: 1.6s; }
+    .sr-symbol-6 { top: 56%; right: 3.5%; font-size: 1.9rem; animation-delay: 2.4s; }
+
+    .sr-hero-content { position: relative; z-index: 1; max-width: 820px; margin: 0 auto; }
+    .sr-crumbs {
+      position: relative;
+      z-index: 1;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 18px;
+    }
+    .sr-crumbs a { color: rgba(255,255,255,0.85); text-decoration: underline; text-underline-offset: 3px; }
+    .sr-crumbs a:hover { color: var(--accent-light); }
+    .sr-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,213,79,0.4);
+      color: var(--accent-light);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      padding: 7px 18px;
+      border-radius: 50px;
+      margin-bottom: 20px;
+    }
+    .sr-hero h1 { font-size: 3.2rem; font-weight: 800; line-height: 1.12; margin: 0 0 12px; color: var(--white); }
+    .sr-tagline { font-size: 1.3rem; font-weight: 600; color: var(--accent-light); margin-bottom: 10px; }
+    .sr-hero-sub { font-size: 1.05rem; opacity: 0.9; max-width: 640px; margin: 0 auto; line-height: 1.7; }
+
+    .sr-hero-results { border-radius: 20px; padding: 44px 24px; margin-bottom: 28px; }
+    .sr-hero-results .sr-h2 { color: var(--white); font-size: 1.8rem; justify-content: center; margin: 0 0 8px; }
+    .sr-hero-results .sr-tagline { color: rgba(255,255,255,0.92); font-size: 1.02rem; font-weight: 500; margin: 0; }
+
+    .sr-section { padding: 76px 0; }
+    .sr-section-alt { background: var(--white); }
+
+    .sr-layout {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 28px;
+      align-items: start;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .sr-panel {
+      background: var(--white);
+      border: 1px solid rgba(26,35,126,0.06);
+      border-radius: 20px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+    }
+    .sr-h2 { font-size: 1.1rem; margin: 0 0 10px; display: flex; align-items: center; gap: 8px; color: var(--primary); }
+    .sr-h2 i { color: var(--accent-dark); }
+    .sr-mute { color: var(--gray); }
+    .sr-sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+    .sr-how {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: var(--white);
+      border-radius: 16px;
+      padding: 18px 20px;
+      margin-bottom: 22px;
+      box-shadow: var(--shadow);
+    }
+    .sr-how small { text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-light); font-weight: 700; }
+    .sr-how h2 { font-size: 1.05rem; margin: 4px 0 6px; color: var(--white); }
+    .sr-how p { margin: 0; color: rgba(255,255,255,0.88); font-size: 0.95rem; }
+
+    .sr-group { margin-bottom: 26px; }
+    .sr-group:last-child { margin-bottom: 0; }
+    .sr-group-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+    .sr-group-title i { color: var(--accent-dark); }
+    .sr-opts { display: flex; flex-wrap: wrap; gap: 10px; }
+    .sr-opt {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--white);
+      border: 1.5px solid rgba(26,35,126,0.18);
+      color: var(--primary);
+      padding: 11px 18px;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: inherit;
+    }
+    .sr-opt:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .sr-opt:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .sr-opt.is-active { background: var(--primary); border-color: var(--primary); color: var(--white); }
+    .sr-mode-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+    .sr-mode-card {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-align: left;
+      background: var(--white);
+      border: 1.5px solid rgba(26,35,126,0.15);
+      color: var(--dark);
+      border-radius: 12px;
+      padding: 12px 14px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      font-weight: 600;
+      font-family: inherit;
+      transition: var(--transition);
+    }
+    .sr-mode-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .sr-mode-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .sr-mode-card.is-active { background: var(--primary); border-color: var(--primary); color: var(--white); }
+    .sr-mode-card .sr-mi { font-size: 1.3rem; }
+    .sr-mode-card small { display: block; color: var(--gray); font-size: 0.78rem; font-weight: 500; }
+    .sr-mode-card.is-active small { color: rgba(255,255,255,0.85); }
+    .sr-settings-label {
+      display: block;
+      font-weight: 700;
+      margin: 16px 0 8px;
+      color: var(--primary);
+      font-size: 0.95rem;
+    }
+
+    .sr-start-row { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-top: 6px; }
+    .sr-start { padding: 16px 46px; font-size: 1.05rem; }
+    .sr-end-link {
+      color: var(--gray);
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: var(--transition);
+    }
+    .sr-end-link:hover { color: var(--primary); border-bottom-color: var(--accent); }
+
+    .sr-pb-aside {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: var(--white);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: var(--shadow-lg);
+    }
+    .sr-pb-aside h3 { font-size: 1.15rem; margin: 0 0 4px; color: var(--white); }
+    .sr-pb-aside h3 i { color: var(--accent-light); }
+    .sr-pb-note { font-size: 0.9rem; color: rgba(255,255,255,0.8); margin-bottom: 20px; }
+    .sr-pb-none { font-size: 0.95rem; color: var(--accent-light); font-weight: 600; margin-bottom: 18px; }
+    .sr-pb { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; }
+    .sr-pb-cell { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 14px; padding: 14px 8px; text-align: center; }
+    .sr-pb-num { display: block; font-size: 1.35rem; font-weight: 800; color: var(--accent-light); line-height: 1.1; }
+    .sr-pb-lbl { display: block; font-size: 0.66rem; color: rgba(255,255,255,0.78); text-transform: uppercase; letter-spacing: 0.6px; margin-top: 5px; }
+
+    .sr-btn {
+      display: inline-block;
+      background: var(--primary);
+      border: none;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1rem;
+      border-radius: 12px;
+      padding: 13px 26px;
+      cursor: pointer;
+      font-family: inherit;
+      text-decoration: none;
+      transition: var(--transition);
+      box-shadow: var(--shadow);
+    }
+    .sr-btn:hover { background: var(--primary-light); transform: translateY(-2px); }
+    .sr-btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+    .sr-btn-dark {
+      background: var(--white);
+      border: 1.5px solid rgba(26,35,126,0.25);
+      color: var(--primary);
+      box-shadow: none;
+    }
+    .sr-btn-dark:hover { background: var(--light); border-color: var(--accent); color: var(--primary); }
+    .sr-btn-row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 16px; }
+
+    /* ---------- game arena ---------- */
+    .sr-arena-wrap { max-width: 1080px; margin: 0 auto; }
+    .sr-arena {
+      background: radial-gradient(ellipse at top, #27328f 0%, #1a237e 45%, #0d1452 100%);
+      border-radius: 24px;
+      padding: 30px 34px 36px;
+      border: 1px solid rgba(255,213,79,0.25);
+      box-shadow: var(--shadow-lg);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+    .sr-arena::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 18% 12%, rgba(249,168,37,0.10) 0%, transparent 45%);
+      pointer-events: none;
+    }
+    .sr-arena ::selection { background: var(--accent); color: var(--primary-dark); }
+
+    .sr-hud-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .sr-hud-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.12rem; }
+    .sr-hud-brand i { color: var(--accent-light); }
+    .sr-btn-sound {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,213,79,0.45);
+      color: var(--white);
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 8px 14px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-family: inherit;
+      transition: var(--transition);
+    }
+    .sr-btn-sound:hover { background: rgba(255,255,255,0.2); }
+    .sr-btn-sound:focus-visible { outline: 2px solid var(--accent-light); outline-offset: 2px; }
+
+    .sr-hud { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 12px; position: relative; z-index: 1; }
+    .sr-stat {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 12px;
+      padding: 8px 14px;
+      text-align: center;
+      min-width: 82px;
+      flex: 1 1 auto;
+    }
+    .sr-stat b { display: block; font-size: 1.2rem; color: var(--white); }
+    .sr-stat span { font-size: 0.72rem; color: rgba(255,255,255,0.72); text-transform: uppercase; letter-spacing: 0.6px; }
+    .sr-stat.is-warning b { color: #ff8a80; }
+    .sr-pills { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; font-size: 0.82rem; }
+    .sr-pill {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,213,79,0.45);
+      color: var(--accent-light);
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-weight: 700;
+    }
+
+    .sr-progress-wrap { margin-bottom: 14px; position: relative; z-index: 1; }
+    .sr-progress-track { height: 8px; border-radius: 999px; background: rgba(255,255,255,0.15); overflow: hidden; }
+    .sr-progress-fill { height: 100%; width: 100%; background: linear-gradient(90deg, var(--accent), var(--accent-light)); border-radius: 999px; transition: width 0.35s ease; }
+
+    .sr-dossier {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 16px;
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .sr-qkind { color: var(--accent-light); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+    .sr-q { font-size: 1.1rem; font-weight: 700; color: var(--white); margin: 6px 0 12px; }
+    .sr-square-left { font-size: 0.88rem; color: rgba(255,255,255,0.8); margin: 0 0 10px; }
+    .sr-square-left b { color: var(--accent-light); }
+    .sr-tile-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 12px 0; }
+    .sr-tile {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: var(--white);
+      border-radius: 12px;
+      padding: 16px 8px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: inherit;
+      transition: var(--transition);
+    }
+    .sr-tile:focus-visible { outline: 2px solid var(--accent-light); outline-offset: 2px; }
+    .sr-tile:not(:disabled):hover { background: rgba(255,255,255,0.12); }
+    .sr-tile.is-found { background: rgba(67,209,124,0.22); border-color: #43d17c; color: #b6f7d0; }
+    .sr-tile.is-wrong { background: rgba(255,92,108,0.22); border-color: #ff5c6c; color: #ffd9dd; }
+    .sr-tile.is-dim { opacity: 0.45; }
+    .sr-tile:disabled { cursor: default; text-decoration: line-through; }
+    .sr-seq-show { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 12px 0 14px; }
+    .sr-seq-chip {
+      background: #17428a;
+      color: #e8f1ff;
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .sr-seq-blank { background: rgba(255,213,79,0.16); border: 1px dashed var(--accent); color: var(--accent-light); min-width: 40px; text-align: center; }
+    .sr-seq-sep { color: rgba(255,255,255,0.5); font-weight: 700; }
+    .sr-choices { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+    .sr-choice {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: var(--white);
+      border-radius: 12px;
+      padding: 14px 12px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-family: inherit;
+      transition: var(--transition);
+    }
+    .sr-choice:focus-visible { outline: 2px solid var(--accent-light); outline-offset: 2px; }
+    .sr-choice:hover { background: rgba(255,255,255,0.12); }
+    .sr-choice.is-selected.is-correct { background: rgba(67,209,124,0.22); border-color: #43d17c; color: #b6f7d0; }
+    .sr-choice.is-selected.is-wrong { background: rgba(255,92,108,0.22); border-color: #ff5c6c; color: #ffd9dd; }
+    .sr-choice:disabled { opacity: 0.55; cursor: default; }
+    .sr-choice:not(:disabled):hover { background: rgba(255,255,255,0.12); }
+    .sr-num-row { display: flex; gap: 10px; max-width: 340px; }
+    .sr-num {
+      flex: 1;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 12px;
+      color: var(--white);
+      font-size: 1.1rem;
+      padding: 12px 14px;
+      font-family: inherit;
+    }
+    .sr-num::placeholder { color: rgba(255,255,255,0.45); }
+    .sr-num:focus-visible { outline: 2px solid var(--accent-light); outline-offset: 2px; }
+    .sr-feedback { font-weight: 700; margin-top: 14px; min-height: 24px; }
+    .sr-feedback.is-good { color: #43d17c; }
+    .sr-feedback.is-bad { color: #ff5c6c; }
+    .sr-expln { margin: 8px 0 0; color: rgba(255,255,255,0.75); font-size: 0.95rem; }
+    .sr-theory {
+      margin: 8px 0 0;
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: rgba(66,165,245,0.12);
+      border: 1px solid rgba(66,165,245,0.35);
+      color: #cddff5;
+      font-size: 0.9rem;
+    }
+    .sr-final-banner {
+      margin: 12px 0 0;
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: rgba(255,165,0,0.14);
+      border: 1px solid rgba(255,213,79,0.55);
+      color: #ffe2a8;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-align: center;
+    }
+    .sr-game-controls { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; position: relative; z-index: 1; }
+
+    .sr-paused {
+      position: fixed;
+      inset: 0;
+      background: rgba(13, 20, 54, 0.72);
+      z-index: 60;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .sr-hidden { display: none !important; }
+    [hidden] { display: none !important; }
+    .sr-overlay-card {
+      background: var(--white);
+      border: 1px solid rgba(26,35,126,0.1);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      max-width: 420px;
+      width: 100%;
+      box-shadow: var(--shadow-lg);
+    }
+    .sr-overlay-card h2 { margin: 0 0 6px; color: var(--primary); }
+    .sr-overlay-card p { color: var(--gray); margin: 0 0 18px; }
+
+    .sr-ach {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      background: var(--light);
+      border: 1px solid rgba(26,35,126,0.08);
+      border-radius: 10px;
+      padding: 10px 12px;
+      margin: 6px 0;
+    }
+    .sr-ach-ico { font-size: 1.4rem; }
+    .sr-ach-name { font-weight: 700; color: var(--primary); }
+    .sr-ach-desc { color: var(--gray); font-size: 0.85rem; }
+    .sr-results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; margin: 12px 0; }
+    .sr-res-cell {
+      background: var(--light);
+      border: 1px solid rgba(26,35,126,0.1);
+      border-radius: 12px;
+      padding: 12px 8px;
+      text-align: center;
+    }
+    .sr-res-num { display: block; font-size: 1.35rem; font-weight: 800; color: var(--accent-dark); line-height: 1.1; }
+    .sr-res-lbl { display: block; font-size: 0.7rem; color: var(--gray); text-transform: uppercase; letter-spacing: 0.6px; margin-top: 4px; }
+    .sr-newbest { color: var(--accent-dark); font-weight: 700; margin-bottom: 0; }
+
+    .sr-seo { margin: 0 auto; max-width: 900px; }
+    .sr-seo h2 { color: var(--dark); }
+    .sr-seo h3 { color: var(--primary); }
+    .sr-seo p, .sr-seo li { color: var(--gray); font-size: 0.95rem; }
+    .sr-seo-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .sr-seo-chip {
+      background: var(--white);
+      border: 1px solid rgba(26,35,126,0.15);
+      color: var(--primary);
+      border-radius: 999px;
+      padding: 7px 13px;
+      font-size: 0.88rem;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    .sr-seo-chip:hover { color: var(--primary); border-color: var(--accent); }
+
+    .sr-strong { animation: srPop 0.45s ease; }
+    .sr-screen[hidden] { display: none !important; }
+    @media (prefers-reduced-motion: reduce) {
+      .sr-strong { animation: none !important; }
+      .sr-progress-fill { transition: none; }
+      .sr-symbol { animation: none; }
+      html { scroll-behavior: auto; }
+    }
+    @keyframes srPop {
+      0% { transform: scale(0.985); }
+      40% { transform: scale(1.01); }
+      100% { transform: scale(1); }
+    }
+    @media (max-width: 900px) {
+      .sr-layout { grid-template-columns: 1fr; }
+      .sr-hero { padding: 90px 0 60px; }
+      .sr-hero h1 { font-size: 2.4rem; }
+    }
+    @media (max-width: 520px) {
+      .sr-stat { min-width: 68px; padding: 6px 8px; }
+      .sr-choice { padding: 12px 8px; font-size: 0.95rem; }
+      .sr-arena { padding: 22px 16px 26px; }
+    }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="/" class="logo"><i class="fas fa-graduation-cap"></i> Vyasa Academy</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#courses">Courses</a></li>
+      <li><a href="/#papers">Practice Papers</a></li>
+      <li><a href="/cbse-study-material/">Study Material</a></li>
+      <li><a href="/maths-games/" class="active" aria-current="page">🎮 Maths Games</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- START SCREEN -->
+  <section class="sr-screen" id="srStartScreen">
+    <div class="sr-hero">
+      <div class="sr-hero-bg" aria-hidden="true">
+        <span class="sr-symbol sr-symbol-1">√</span>
+        <span class="sr-symbol sr-symbol-2">x²</span>
+        <span class="sr-symbol sr-symbol-3">4</span>
+        <span class="sr-symbol sr-symbol-4">16</span>
+        <span class="sr-symbol sr-symbol-5">25</span>
+        <span class="sr-symbol sr-symbol-6">9</span>
+      </div>
+      <div class="container sr-hero-content">
+        <nav class="sr-crumbs" aria-label="Breadcrumb">
+          <a href="/">Home</a> / <a href="/maths-games/">Maths Games</a> / <span aria-current="page">Square &amp; Root Ninja</span>
+        </nav>
+        <span class="sr-badge">Squares &middot; Roots &middot; Sequences &middot; Timed Challenges</span>
+        <h1>🔢 Square &amp; Root Ninja</h1>
+        <p class="sr-tagline">Master the Squares. Conquer the Roots!</p>
+        <p class="sr-hero-sub">Hunt perfect squares, crack square roots and decode square-number sequences — all under the clock. Free to play, no login needed.</p>
+      </div>
+    </div>
+
+    <div class="sr-section">
+      <div class="container">
+        <div class="sr-layout">
+          <div class="sr-panel">
+            <div class="section-header" style="padding:0 0 22px;">
+              <span class="section-tag">Set Up</span>
+              <h2>Choose Your Training</h2>
+              <p>Pick a mode, difficulty and timer, then start your session. No login needed.</p>
+            </div>
+            <div class="sr-how" aria-live="polite">
+              <small>Your Mission</small>
+              <h2 id="srHowTitle">Perfect Square Hunter</h2>
+              <p id="srHowText">A grid of numbers appears. Tap every perfect square before the timer runs out. Wrong taps cost points, and the grid clears only when every square is caught.</p>
+              <p class="sr-mute" id="srHowChip"></p>
+            </div>
+            <div class="sr-group">
+              <span class="sr-group-title"><i class="fas fa-bolt" aria-hidden="true"></i>Choose Your Mode</span>
+              <div class="sr-mode-grid" data-setting-group="mode" role="group" aria-label="Game mode">
+                <button type="button" class="sr-mode-card is-active" data-setting="mode" data-value="perfect" aria-pressed="true"><span class="sr-mi" aria-hidden="true">🎯</span><span>Perfect Square Hunter<small>Tap the squares on a grid</small></span></button>
+                <button type="button" class="sr-mode-card" data-setting="mode" data-value="root" aria-pressed="false"><span class="sr-mi" aria-hidden="true">🧮</span><span>Root Master<small>Solve √n fast</small></span></button>
+                <button type="button" class="sr-mode-card" data-setting="mode" data-value="missing" aria-pressed="false"><span class="sr-mi" aria-hidden="true">🔍</span><span>Missing Number Mystery<small>Complete the patterns</small></span></button>
+                <button type="button" class="sr-mode-card" data-setting="mode" data-value="ultimate" aria-pressed="false"><span class="sr-mi" aria-hidden="true">👑</span><span>Ultimate Root Battle<small>All modes + Final Round</small></span></button>
+              </div>
+            </div>
+            <div class="sr-group">
+              <span class="sr-group-title"><i class="fas fa-signal" aria-hidden="true"></i>Difficulty</span>
+              <div class="sr-opts" data-setting-group="diff" role="group" aria-label="Difficulty">
+                <button type="button" class="sr-opt is-active" data-setting="diff" data-value="easy" aria-pressed="true">Easy (to 15²)</button>
+                <button type="button" class="sr-opt" data-setting="diff" data-value="medium" aria-pressed="false">Medium (to 30²)</button>
+                <button type="button" class="sr-opt" data-setting="diff" data-value="hard" aria-pressed="false">Hard (to 50²)</button>
+              </div>
+              <label class="sr-settings-label" for="srDuration">
+                ⏱️ Training Window: how long do you have?
+              </label>
+              <div class="sr-opts" id="srDuration" data-setting-group="duration" role="group" aria-label="Session duration">
+                <button type="button" class="sr-opt is-active" data-setting="duration" data-value="60" aria-pressed="true">60s</button>
+                <button type="button" class="sr-opt" data-setting="duration" data-value="90" aria-pressed="false">90s</button>
+                <button type="button" class="sr-opt" data-setting="duration" data-value="120" aria-pressed="false">120s</button>
+              </div>
+            </div>
+            <div class="sr-start-row">
+              <button type="button" class="sr-btn sr-start" id="srStartBtn">⚔️ Start Training</button>
+              <a href="/maths-games/" class="sr-end-link"><i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Maths Games</a>
+            </div>
+          </div>
+
+          <aside class="sr-pb-aside">
+            <h3><i class="fas fa-trophy" aria-hidden="true"></i> Your Record</h3>
+            <p class="sr-pb-note">Stored privately on this device. No account needed.</p>
+            <p class="sr-pb-none" id="srPbNone">No sessions yet &mdash; earn your first record!</p>
+            <div class="sr-pb" id="srPbGrid" hidden></div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAME SCREEN -->
+  <section class="sr-screen" id="srGameScreen" hidden>
+    <div class="sr-section">
+      <div class="container">
+        <div class="sr-arena-wrap">
+          <div class="sr-arena">
+            <div class="sr-hud-top">
+              <span class="sr-hud-brand"><i class="fas fa-divide" aria-hidden="true"></i> SQUARE &amp; ROOT NINJA</span>
+              <div class="sr-pills">
+                <span class="sr-pill" id="srModePill">🎯 Perfect Square Hunter</span>
+                <span class="sr-pill" id="srDiffPill">Easy</span>
+              </div>
+              <button type="button" class="sr-btn-sound" id="srSoundBtn" aria-pressed="false">🔇 Sound</button>
+            </div>
+
+            <div class="sr-hud">
+              <div class="sr-stat" id="srStatTime"><b id="srTimerVal">60</b><span>Seconds</span></div>
+              <div class="sr-stat"><b id="srScoreVal">0</b><span>Score</span></div>
+              <div class="sr-stat"><b id="srCorrectVal">0</b><span>Correct</span></div>
+              <div class="sr-stat"><b id="srWrongVal">0</b><span>Incorrect</span></div>
+              <div class="sr-stat"><b id="srAccuracyVal">0%</b><span>Accuracy</span></div>
+              <div class="sr-stat"><b id="srStreakVal">0</b><span>Streak</span></div>
+              <div class="sr-stat"><b id="srLevelVal">1</b><span>Level</span></div>
+            </div>
+
+            <div class="sr-progress-wrap">
+              <div class="sr-progress-track" role="progressbar" id="srProgressTrack" aria-valuemin="0" aria-valuemax="60" aria-valuenow="60" aria-label="Time remaining"><div class="sr-progress-fill" id="srProgressFill"></div></div>
+            </div>
+
+            <div class="sr-dossier" id="srQCard">
+              <span class="sr-qkind" id="srQKind">Team</span>
+              <p class="sr-q" id="srQPrompt">Grid pending…</p>
+              <p class="sr-square-left" id="srSquareLeft" hidden></p>
+              <div class="sr-tile-grid" id="srBoardWrap" hidden></div>
+              <div class="sr-seq-show" id="srSeqShow" hidden></div>
+              <div class="sr-choices" id="srChoices"></div>
+              <div class="sr-num-row" id="srNumWrap" hidden>
+                <label class="sr-sr-only" for="srNumInput">Type your answer</label>
+                <input class="sr-num" id="srNumInput" type="number" step="1" inputmode="numeric" autocomplete="off" placeholder="Type a whole number…" />
+                <button type="button" class="sr-btn" id="srNumSubmit">Submit</button>
+              </div>
+              <p class="sr-feedback" id="srFeedback" aria-live="polite"></p>
+              <p class="sr-expln" id="srExplain"></p>
+              <p class="sr-theory" id="srTheory" hidden></p>
+              <p class="sr-final-banner" id="srFinalBanner" hidden>🔥 FINAL ROUND ACTIVE — every correct answer earns bonus power!</p>
+            </div>
+
+            <div class="sr-game-controls">
+              <button type="button" class="sr-btn sr-btn-dark" id="srPauseBtn">⏸ Pause</button>
+              <button type="button" class="sr-btn sr-btn-dark" id="srRestartBtn">🔄 Restart</button>
+              <a class="sr-btn sr-btn-dark" href="/maths-games/">← Exit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAUSED OVERLAY -->
+  <div class="sr-paused sr-hidden" id="srPausedOverlay" hidden>
+    <div class="sr-overlay-card">
+      <span style="font-size:2rem" aria-hidden="true">⏸</span>
+      <h2>Training Paused</h2>
+      <p>The clock is frozen. Resume when you are ready.</p>
+      <div class="sr-btn-row" style="margin-top:0">
+        <button type="button" class="sr-btn" id="srPauseResume">▶ Resume</button>
+        <button type="button" class="sr-btn sr-btn-dark" id="srPauseRestart">🔄 Restart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESULTS SCREEN -->
+  <section class="sr-screen" id="srEndScreen" hidden>
+    <div class="sr-section">
+      <div class="container">
+        <div class="sr-hero sr-hero-results">
+          <h2 class="sr-h2">⚔️ Mission Report</h2>
+          <p class="sr-tagline" id="srFbMsg"></p>
+        </div>
+
+        <div class="sr-layout">
+          <div class="sr-panel">
+            <h2 class="sr-h2">📊 Mission Breakdown</h2>
+            <div class="sr-results-grid">
+              <div class="sr-res-cell"><span class="sr-res-num" id="srResScore">0</span><span class="sr-res-lbl">Score</span></div>
+              <div class="sr-res-cell"><span class="sr-res-num" id="srResCorrect">0</span><span class="sr-res-lbl">Correct</span></div>
+              <div class="sr-res-cell"><span class="sr-res-num" id="srResWrong">0</span><span class="sr-res-lbl">Incorrect</span></div>
+              <div class="sr-res-cell"><span class="sr-res-num" id="srResAccuracy">0%</span><span class="sr-res-lbl">Accuracy</span></div>
+              <div class="sr-res-cell"><span class="sr-res-num" id="srResStreak">0</span><span class="sr-res-lbl">Best Streak</span></div>
+              <div class="sr-res-cell"><span class="sr-res-num" id="srResBest">0</span><span class="sr-res-lbl">Best Score</span></div>
+            </div>
+            <p class="sr-mute" id="srResMeta"></p>
+          </div>
+
+          <aside class="sr-pb-aside">
+            <h3><i class="fas fa-trophy" aria-hidden="true"></i> Achievements</h3>
+            <div id="srAchList"></div>
+            <p class="sr-newbest" id="srNewBest" hidden>🎉 New personal best score!</p>
+          </aside>
+        </div>
+
+        <div class="sr-btn-row" style="margin-top:30px">
+          <button type="button" class="sr-btn" id="srPlayAgain">🔄 Train Again</button>
+          <a class="sr-btn sr-btn-dark" href="/maths-games/">← More Games</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO CONTENT -->
+  <section class="sr-section sr-section-alt">
+    <div class="container sr-seo">
+      <h2>Master perfect squares and square roots with Square &amp; Root Ninja</h2>
+      <p>Square &amp; Root Ninja turns classwork revision into a fast, friendly battleground. Hunt <strong>perfect squares</strong> on number grids, crack <strong>square roots</strong> like <strong>√144 = 12</strong>, and complete <strong>square-number sequences</strong> such as 1, 4, 9, 16, &hellip; — all with instant feedback and step-by-step explanations. Every grid, question and sequence is generated fresh, so no two training sessions repeat.</p>
+      <h3>Skills you will sharpen</h3>
+      <ul>
+        <li>A perfect square is n × n for a whole number n: 0, 1, 4, 9, 16, 25, 36, &hellip;</li>
+        <li>√n is the non-negative number whose square is n. For example, √625 = 25 because 25 × 25 = 625.</li>
+        <li>Distinguish √n (the principal square root) from the equation x² = n, which has two solutions: +√n and −√n.</li>
+        <li>Squares of consecutive whole numbers form clear patterns (1, 4, 9, 16, 25, &hellip;) that reveal a single missing term.</li>
+        <li>Three difficulties, four play modes and three timed lengths build speed for real exam conditions.</li>
+      </ul>
+      <p>Squares and square roots are core mental-maths skills across the school curriculum. Pair the game with our <a href="/cbse-study-material/">CBSE study material</a>, level up with <a href="/cbse-study-material/class-8/mathematics/">Class 8 Mathematics</a>, or explore the other <a href="/maths-games/">maths games</a> we have built for students.</p>
+      <div class="sr-seo-chips">
+        <a class="sr-seo-chip" href="/maths-games/speed-challenge/">⚡ Maths Speed Challenge</a>
+        <a class="sr-seo-chip" href="/maths-games/number-ninja/">🔢 Number Ninja</a>
+        <a class="sr-seo-chip" href="/maths-games/probability-challenge/">🎲 Probability Challenge</a>
+        <a class="sr-seo-chip" href="/maths-games/geometry-builder/">📐 Geometry Builder</a>
+        <a class="sr-seo-chip" href="/maths-games/factor-detective/">🧩 Factor Detective</a>
+        <a class="sr-seo-chip" href="/maths-games/coordinate-shooter/">📍 Coordinate Shooter</a>
+        <a class="sr-seo-chip" href="/maths-games/equation-hunter/">🎯 Equation Hunter</a>
+        <a class="sr-seo-chip" href="/maths-games/data-detective/">📊 Data Detective</a>
+        <a class="sr-seo-chip" href="/cbse-study-material/">📚 CBSE Study Material</a>
+        <a class="sr-seo-chip" href="/cbse-study-material/class-8/mathematics/">🧮 Class 8 Mathematics</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-about">
+      <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+      <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#faculty">Faculty</a></li>
+        <li><a href="/#courses">Courses</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/cbse-study-material/">Study Material</a></li>
+        <li><a href="/maths-games/">🎮 Maths Games</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Popular Searches</h4>
+      <ul>
+        <li><a href="/best-tuition-centre-hulimavu/">Best Tuition Centre in Hulimavu</a></li>
+        <li><a href="/best-coaching-centre-hulimavu/">Best Coaching Centre in Hulimavu</a></li>
+        <li><a href="/cbse-tuition-hulimavu/">CBSE Tuition in Hulimavu</a></li>
+        <li><a href="/maths-tuition-hulimavu/">Maths Tuition in Hulimavu</a></li>
+        <li><a href="/science-tuition-hulimavu/">Science Tuition in Hulimavu</a></li>
+        <li><a href="/kcet-coaching-hulimavu/">KCET Coaching in Hulimavu</a></li>
+        <li><a href="/class-10-tuition-hulimavu/">Class 10 Tuition Hulimavu</a></li>
+        <li><a href="/icse-tuition-hulimavu/">ICSE Tuition in Hulimavu</a></li>
+        <li><a href="/tuition-classes-near-bannerghatta-road/">Tuition near Bannerghatta Road</a></li>
+        <li><a href="/cbse-tuition-bangalore/">CBSE Tuition Bangalore</a></li>
+        <li><a href="/tuition-centre-bangalore/">Best Tuition Centre in Bangalore</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+  </div>
+</footer>
+
+  <script>
+  (function () {
+    'use strict';
+
+    /* ==========================================
+       SQUARE & ROOT NINJA — Master the Squares. Conquer the Roots!
+       ========================================== */
+
+    var LS_KEY = "vyasa_square_root_ninja_stats";
+    var BASE_POINTS = 10;
+    var WRONG_PENALTY = 4;
+    var FINAL_BONUS = 8;
+    var FINAL_TRIGGER_SECONDS = 10;
+    var FEEDBACK_MS = 1100;
+    var LEVEL_EVERY = 75;
+    var CHAMPION_POINTS = 300;
+    var ROOT_MASTER_NEED = 8;
+    var STREAK_ACH = 15;
+    var GRID_TARGETS = { easy: 5, medium: 6, hard: 7 };
+
+    var MODES = {
+      perfect: { icon: "🎯", label: "Perfect Square Hunter" },
+      root: { icon: "🧮", label: "Root Master" },
+      missing: { icon: "🔍", label: "Missing Number Mystery" },
+      ultimate: { icon: "👑", label: "Ultimate Root Battle" }
+    };
+
+    var DIFFS = { easy: { label: "Easy", maxRoot: 15, bonus: 0 }, medium: { label: "Medium", maxRoot: 30, bonus: 2 }, hard: { label: "Hard", maxRoot: 50, bonus: 4 } };
+
+    var STREAK_MILESTONES = [
+      { streak: 3, bonus: 5, label: "COMBO x3!" },
+      { streak: 5, bonus: 10, label: "HOT STREAK!" },
+      { streak: 10, bonus: 20, label: "ON FIRE!" },
+      { streak: 15, bonus: 40, label: "NINJA LEGEND!" }
+    ];
+
+    var ACHIEVEMENTS = [
+      { id: "scout", name: "Square Scout", desc: "Clear a Perfect Square board with zero mistakes.", icon: "🎯" },
+      { id: "rootmaster", name: "Root Master", desc: "Answer 8 square-root questions correctly in one round.", icon: "🧮" },
+      { id: "streak", name: "Perfect Streak", desc: "Reach a 15-answer streak.", icon: "🔥" },
+      { id: "champion", name: "Ninja Champion", desc: "Score 300 points in a single round.", icon: "👑" }
+    ];
+
+    var MODE_HOW = {
+      perfect: { title: "Perfect Square Hunter", chip: "A perfect square = n × n. 0, 1, 4, 9, 16…", text: "A grid of numbers appears. Tap every perfect square before the timer runs out. Wrong taps cost points, and the grid clears only when every square is caught." },
+      root: { title: "Root Master", chip: "√n is the number r where r × r = n.", text: "Sharpen your square roots. Work out √n for perfect squares, compute squares like 12², and hunt missing radicands — tapping or typing your answer before the clock ends." },
+      missing: { title: "Missing Number Mystery", chip: "Squares of consecutive numbers form a pattern.", text: "Number sequences built from perfect squares hide one term. Read the pattern, pick the missing square and keep the chain unbroken." },
+      ultimate: { title: "Ultimate Root Battle", chip: "Everything, everywhere, all at once — a Final Round awaits at the end.", text: "The gauntlet mixes grids, roots, squares and sequences into one timed battle. Survive to the last 10 seconds and the Final Round ignites with bonus power." }
+    };
+
+    var THEORY_ROOT = "The square root of a number n is the value r such that r × r = n. The principal (non-negative) square root is written √n. Every perfect square n has a whole-number square root.";
+    var THEORY_BOARD = "A perfect square is the product of a whole number with itself. Examples: 0, 1, 4, 9, 16, 25, 36, 49 and 64.";
+    var THEORY_SEQ = "Squares of consecutive whole numbers follow a clear pattern: 1, 4, 9, 16, 25 … A single missing term can always be rebuilt from its neighbours.";
+
+    /* ---------- randomness ---------- */
+
+    function makeRng(seed) {
+      var s = seed >>> 0;
+      return function () {
+        s = (s * 1664525 + 1013904223) >>> 0;
+        return s / 4294967296;
+      };
+    }
+
+    var rng = Math.random;
+    function setRng(f) { if (typeof f === "function") { rng = f; } }
+
+    function ri(min, max) { return min + Math.floor(rng() * (max - min + 1)); }
+    function pick(arr) { return arr[Math.floor(rng() * arr.length)]; }
+    function shuffle(arr) {
+      var a = arr.slice();
+      for (var i = a.length - 1; i > 0; i--) {
+        var j = Math.floor(rng() * (i + 1));
+        var t = a[i]; a[i] = a[j]; a[j] = t;
+      }
+      return a;
+    }
+    function pickIndex(weights) {
+      var total = 0;
+      for (var i = 0; i < weights.length; i++) { total += weights[i]; }
+      var r = rng() * total;
+      for (var j = 0; j < weights.length; j++) {
+        r -= weights[j];
+        if (r < 0) { return j; }
+      }
+      return weights.length - 1;
+    }
+
+    /* ---------- pure square/root helpers ---------- */
+
+    function isPerfectSquare(n) {
+      if (typeof n !== "number" || !isFinite(n) || n < 0 || n % 1 !== 0) { return false; }
+      var r = Math.round(Math.sqrt(n));
+      return r * r === n;
+    }
+
+    function getSquareRoot(n) {
+      if (typeof n !== "number" || !isFinite(n) || n < 0) { return null; }
+      var r = Math.round(Math.sqrt(n));
+      return r * r === n ? r : null;
+    }
+
+    function normalizeNumeric(v) {
+      if (typeof v === "number") {
+        return (isFinite(v) && v % 1 === 0) ? v : null;
+      }
+      if (typeof v === "string") {
+        var s = v.trim();
+        if (/^\+?\d+$/.test(s)) { return parseInt(s, 10); }
+      }
+      return null;
+    }
+
+    function validateAnswer(q, a) {
+      if (!q) { return false; }
+      if (q.type === "board") {
+        var idx = Number(a);
+        var targets = (q.board && q.board.targets) ? q.board.targets : [];
+        return (Number.isInteger ? Number.isInteger(idx) : (idx === Math.floor(idx))) && idx >= 0 && idx < targets.length && !!targets[idx];
+      }
+      var n = normalizeNumeric(a);
+      return n !== null && n === q.answer;
+    }
+
+    function buildMcqInts(correct) {
+      var opts = [correct];
+      var seeds = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15, 20, 25, 30, 40, 50, 60, 80, 100, 121, 144, 169, 196, 225];
+      var candidates = [];
+      for (var i = 0; i < seeds.length; i++) {
+        candidates.push(correct + seeds[i]);
+        if (correct - seeds[i] >= 0) { candidates.push(correct - seeds[i]); }
+      }
+      candidates = shuffle(candidates);
+      var guards = 0;
+      while (opts.length < 4 && guards < 200) {
+        guards++;
+        var cand = candidates[guards % candidates.length];
+        if (cand >= 0 && opts.indexOf(cand) === -1) { opts.push(cand); }
+      }
+      var extra = 0;
+      while (opts.length < 4 && extra < 40) {
+        extra++;
+        var c2 = correct + 100 + extra;
+        if (opts.indexOf(c2) === -1) { opts.push(c2); }
+      }
+      return shuffle(opts).map(function (v) { return { key: v, label: String(v) }; });
+    }
+
+    /* ---------- generators ---------- */
+
+    function maxRootFor(diff) {
+      return (DIFFS[diff] && DIFFS[diff].maxRoot) || 15;
+    }
+
+    function nonSquarePool(diff) {
+      var maxRoot = maxRootFor(diff);
+      var out = [];
+      for (var n = 0; n <= maxRoot * maxRoot; n++) {
+        if (!isPerfectSquare(n)) { out.push(n); }
+      }
+      return shuffle(out);
+    }
+
+    function generatePerfectSquareGrid(diff) {
+      var count = GRID_TARGETS[diff] || 5;
+      var maxRoot = maxRootFor(diff);
+      var roots = [];
+      for (var r = 0; r <= maxRoot; r++) { roots.push(r); }
+      var sqRoots = shuffle(roots).slice(0, count);
+      var squares = sqRoots.map(function (v) { return v * v; });
+      var nonSq = nonSquarePool(diff).slice(0, 16 - count);
+      var picked = shuffle(squares.concat(nonSq));
+      var targets = [];
+      for (var i = 0; i < picked.length; i++) { targets.push(squares.indexOf(picked[i]) !== -1); }
+      var sqList = picked.filter(function (v, i) { return targets[i]; });
+      return {
+        type: "board",
+        kind: "board",
+        kindLabel: "Perfect Square Grid",
+        prompt: "Tap every perfect square on the grid.",
+        board: { cells: picked, targets: targets, size: 16, targetCount: count },
+        answer: null,
+        options: null,
+        explain: "The perfect squares caught were " + sqList.sort(function (a, b) { return a - b; }).join(", ") + " — each one equals n × n for a whole number n.",
+        theory: THEORY_BOARD,
+        seq: null, seqNext: false, seqHidden: -1
+      };
+    }
+
+    function generateSquareQuestion(diff) {
+      var maxRoot = maxRootFor(diff);
+      var kind = pick(["root", "sqval", "radicand"]);
+      var r = ri(0, maxRoot);
+      if (rng() < 0.35 && maxRoot >= 4) {
+        r = Math.max(Math.floor(maxRoot * 0.6), ri(Math.floor(maxRoot * 0.6), maxRoot));
+      }
+      var n = r * r;
+      var q = {
+        type: "mcq", kind: kind, kindLabel: "", prompt: "",
+        answer: r, options: null, explain: "", theory: THEORY_ROOT,
+        board: null, seq: null, seqNext: false, seqHidden: -1
+      };
+      if (kind === "root") {
+        q.kindLabel = "Square Root";
+        q.prompt = "√" + n + " = ?";
+        q.answer = r;
+        q.explain = "√" + n + " = " + r + " because " + r + " × " + r + " = " + n + ".";
+      } else if (kind === "sqval") {
+        q.type = "num";
+        q.kindLabel = "Square Value";
+        q.prompt = r + "² = ?";
+        q.answer = n;
+        q.explain = r + "² = " + r + " × " + r + " = " + n + ".";
+      } else {
+        q.kindLabel = "Missing Radicand";
+        q.prompt = "√? = " + r;
+        q.answer = n;
+        q.explain = "√" + n + " = " + r + " because " + r + " × " + r + " = " + n + ".";
+      }
+      if (q.type === "mcq") { q.options = buildMcqInts(q.answer); }
+      return q;
+    }
+
+    function generateSquareSequence(diff) {
+      var maxRoot = maxRootFor(diff);
+      var step = pick([1, 2]);
+      var len = pick([4, 5]);
+      var desc = rng() < 0.3;
+      var isNext = rng() < 0.4;
+      var minStart = step * (len - 1);
+      var values;
+      var rootsArr;
+      var explain;
+      var answer;
+      var seq;
+      var seqHidden;
+      var seqNext = isNext;
+
+      if (desc && minStart <= maxRoot) {
+        var begin = Math.max(minStart, Math.floor(maxRoot * 0.5));
+        var rs = ri(begin, maxRoot);
+        var roots = [];
+        for (var i = 0; i < len; i++) { roots.push(rs - step * i); }
+        rootsArr = roots;
+        values = roots.map(function (v) { return v * v; });
+        var hiddenIdx = isNext ? -1 : ri(1, len - 2);
+        if (isNext) {
+          var nextRoot = rs - step * len;
+          if (nextRoot >= 0) {
+            answer = nextRoot * nextRoot;
+            seq = values.concat([]);
+            seqHidden = len;
+          } else {
+            isNext = false; seqNext = false;
+            hiddenIdx = ri(1, len - 2);
+            answer = values[hiddenIdx];
+            seq = values.concat([]);
+            seqHidden = hiddenIdx;
+          }
+        } else {
+          answer = values[hiddenIdx];
+          seq = values.concat([]);
+          seqHidden = hiddenIdx;
+        }
+        if (seqNext) {
+          explain = "Reading the squares from high to low: " + values.join(", ") + ", then ? . The pattern is the squares of consecutive whole numbers in reverse, so the next term is " + answer + ".";
+        } else {
+          explain = "The pattern is the squares of consecutive whole numbers in reverse: " + values.join(", ") + ". The missing term is the square hidden in the pattern, so it is " + answer + ".";
+        }
+      } else {
+        var maxStart = maxRoot - step * (len - 1);
+        var base = ri(0, Math.max(0, maxStart));
+        var roots2 = [];
+        for (var j = 0; j < len; j++) { roots2.push(base + step * j); }
+        rootsArr = roots2;
+        values = roots2.map(function (v) { return v * v; });
+        if (isNext) {
+          var nroot = base + step * len;
+          answer = nroot * nroot;
+          seq = values.concat([]);
+          seqHidden = len;
+          var pat = step === 1 ? "consecutive whole numbers" : "every second whole number";
+          explain = "The pattern is the squares of " + pat + ": " + roots2.join("², ") + "² = " + values.join(", ") + ", so the next term is " + answer + ".";
+        } else {
+          var hid = ri(1, len - 2);
+          answer = values[hid];
+          seq = values.concat([]);
+          seqHidden = hid;
+          var pat2 = step === 1 ? "consecutive whole numbers" : "every second whole number";
+          explain = "The pattern is the squares of " + pat2 + ": " + roots2.join("², ") + "² = " + values.join(", ") + ", so the missing term is " + answer + ".";
+        }
+      }
+
+      return {
+        type: "mcq",
+        kind: "seq",
+        kindLabel: "Number Sequence",
+        prompt: seqNext ? "What comes next in this pattern of perfect squares?" : "Which number completes this pattern of perfect squares?",
+        answer: answer,
+        options: buildMcqInts(answer),
+        explain: explain,
+        theory: THEORY_SEQ,
+        board: null,
+        seq: seq,
+        seqNext: seqNext,
+        seqHidden: seqHidden
+      };
+    }
+
+    function effectiveDiffFor(state) {
+      if (!state) { return "easy"; }
+      if (state.mode !== "ultimate") { return state.diff; }
+      if (state.finalRound) { return "hard"; }
+      if (state.correct >= 8) { return "hard"; }
+      if (state.correct >= 4) { return "medium"; }
+      return state.diff;
+    }
+
+    function ultimateQuestion(state) {
+      var eff = effectiveDiffFor(state);
+      var kinds = ["root", "missing", "board", "root"];
+      var kind = kinds[pickIndex([4, 3, 2, 2]) % 4];
+      if (state.finalRound) { kind = "root"; }
+      if (kind === "board") { return generatePerfectSquareGrid(eff); }
+      if (kind === "missing") { return generateSquareSequence(eff); }
+      return generateSquareQuestion(eff);
+    }
+
+    /* ---------- state ---------- */
+
+    var settings = { mode: "perfect", diff: "easy", duration: 60 };
+
+    function newState(cfg) {
+      return {
+        mode: cfg.mode, diff: cfg.diff, duration: cfg.duration,
+        timeLeft: cfg.duration, timerId: null, phase: "idle",
+        score: 0, correct: 0, wrong: 0,
+        streak: 0, bestStreak: 0,
+        question: null, evaluating: false,
+        boardFound: {}, boardWrong: {}, boardTargets: 0,
+        boardCleanCur: true, boardCleanDone: false,
+        rootsCorrect: 0, rootAnswered: 0,
+        finalRound: false, finalRoundTriggered: false,
+        achievementsEarned: []
+      };
+    }
+
+    var state = null;
+    var soundOn = false;
+    var audioCtx = null;
+    var reducedMotion = false;
+
+    function accuracyFor(s) {
+      if (!s) { return 0; }
+      var answered = s.correct + s.wrong;
+      if (!answered) { return 0; }
+      return Math.round((s.correct / answered) * 100);
+    }
+
+    function levelFor(score) {
+      return Math.floor(score / LEVEL_EVERY) + 1;
+    }
+
+    function milestoneForStreak(streak) {
+      for (var i = 0; i < STREAK_MILESTONES.length; i++) {
+        if (STREAK_MILESTONES[i].streak === streak) { return STREAK_MILESTONES[i]; }
+      }
+      return null;
+    }
+
+    function pointsFor(diff, streakAtAward, finalBonusActive) {
+      var pts = BASE_POINTS + (DIFFS[diff] ? DIFFS[diff].bonus : 0);
+      if (finalBonusActive) { pts += FINAL_BONUS; }
+      var m = milestoneForStreak(streakAtAward);
+      if (m) { pts += m.bonus; }
+      return pts;
+    }
+
+    function checkAchievements(s) {
+      if (!s) { return []; }
+      var out = [];
+      if (s.boardCleanDone && s.achievementsEarned.indexOf("scout") === -1) { out.push("scout"); }
+      if (s.rootsCorrect >= ROOT_MASTER_NEED && s.achievementsEarned.indexOf("rootmaster") === -1) { out.push("rootmaster"); }
+      if (s.bestStreak >= STREAK_ACH && s.achievementsEarned.indexOf("streak") === -1) { out.push("streak"); }
+      if (s.score >= CHAMPION_POINTS && s.achievementsEarned.indexOf("champion") === -1) { out.push("champion"); }
+      for (var i = 0; i < out.length; i++) {
+        if (s.achievementsEarned.indexOf(out[i]) === -1) { s.achievementsEarned.push(out[i]); }
+      }
+      return s.achievementsEarned;
+    }
+
+    /* ---------- localStorage ---------- */
+
+    function defaultPb() {
+      return { bestScore: 0, bestAccuracy: 0, bestStreak: 0, gamesPlayed: 0, totalAnswers: 0, totalCorrect: 0, achievementsEarned: [] };
+    }
+
+    function readPb() {
+      try {
+        var raw = window.localStorage.getItem(LS_KEY);
+        if (!raw) { return null; }
+        var d = JSON.parse(raw);
+        var pb = defaultPb();
+        if (typeof d.bestScore === "number") { pb.bestScore = d.bestScore; }
+        if (typeof d.bestAccuracy === "number") { pb.bestAccuracy = d.bestAccuracy; }
+        if (typeof d.bestStreak === "number") { pb.bestStreak = d.bestStreak; }
+        if (typeof d.gamesPlayed === "number") { pb.gamesPlayed = d.gamesPlayed; }
+        if (typeof d.totalAnswers === "number") { pb.totalAnswers = d.totalAnswers; }
+        if (typeof d.totalCorrect === "number") { pb.totalCorrect = d.totalCorrect; }
+        if (d.achievementsEarned && d.achievementsEarned.length) {
+          for (var i = 0; i < d.achievementsEarned.length; i++) {
+            if (pb.achievementsEarned.indexOf(d.achievementsEarned[i]) === -1) { pb.achievementsEarned.push(d.achievementsEarned[i]); }
+          }
+        }
+        return pb;
+      } catch (e) { return null; }
+    }
+
+    function writePb(pb) {
+      try { window.localStorage.setItem(LS_KEY, JSON.stringify(pb)); return true; }
+      catch (e) { return false; }
+    }
+
+    /* ---------- DOM helpers ---------- */
+
+    function $(id) { return document.getElementById(id); }
+
+    var winSetInterval = function (fn, ms) { return window.setInterval(fn, ms); };
+    var winClearInterval = function (id) { window.clearInterval(id); };
+    var winSetTimeout = function (fn, ms) { return window.setTimeout(fn, ms); };
+
+    function renderHowCard(mode) {
+      var h = MODE_HOW[mode] || MODE_HOW.perfect;
+      var t = $("srHowTitle");
+      var x = $("srHowText");
+      var c = $("srHowChip");
+      if (t) { t.textContent = h.title; }
+      if (x) { x.textContent = h.text; }
+      if (c) { c.textContent = h.chip; }
+    }
+
+    function renderPersonalBest() {
+      var pb = readPb() || defaultPb();
+      var none = $("srPbNone");
+      var grid = $("srPbGrid");
+      if (!pb.gamesPlayed) {
+        if (none) { none.style.display = ""; }
+        if (grid) { grid.hidden = true; }
+        return;
+      }
+      if (none) { none.style.display = "none"; }
+      if (!grid) { return; }
+      var cells = [
+        { num: pb.bestScore, lbl: "Best Score" },
+        { num: pb.bestAccuracy + "%", lbl: "Best Accuracy" },
+        { num: pb.bestStreak, lbl: "Best Streak" },
+        { num: pb.achievementsEarned.length, lbl: "Achievements" },
+        { num: pb.gamesPlayed, lbl: "Sessions" },
+        { num: pb.totalCorrect, lbl: "Correct" }
+      ];
+      var html = "";
+      for (var i = 0; i < cells.length; i++) {
+        html += '<div class="sr-pb-cell"><span class="sr-pb-num">' + cells[i].num + '</span><span class="sr-pb-lbl">' + cells[i].lbl + '</span></div>';
+      }
+      grid.innerHTML = html;
+      grid.hidden = false;
+    }
+
+    function showScreen(which) {
+      var startS = $("srStartScreen");
+      var gameS = $("srGameScreen");
+      var endS = $("srEndScreen");
+      if (startS) { startS.hidden = which !== "start"; }
+      if (gameS) { gameS.hidden = which !== "game"; }
+      if (endS) { endS.hidden = which !== "end"; }
+    }
+
+    function renderHud() {
+      var t = $("srTimerVal");
+      var sc = $("srScoreVal");
+      var co = $("srCorrectVal");
+      var wo = $("srWrongVal");
+      var ac = $("srAccuracyVal");
+      var st = $("srStreakVal");
+      var lv = $("srLevelVal");
+      if (t) { t.textContent = state ? state.timeLeft : 0; }
+      if (sc) { sc.textContent = state ? state.score : 0; }
+      if (co) { co.textContent = state ? state.correct : 0; }
+      if (wo) { wo.textContent = state ? state.wrong : 0; }
+      if (ac) { ac.textContent = state ? accuracyFor(state) + "%" : "0%"; }
+      if (st) { st.textContent = state ? state.streak : 0; }
+      if (lv) { lv.textContent = state ? String(levelFor(state.score)) : "1"; }
+      var tm = $("srStatTime");
+      if (tm && state) { tm.classList.toggle("is-warning", state.timeLeft <= 10 && state.phase === "playing"); }
+      var m = $("srModePill");
+      if (m && state) {
+        var base = (MODES[state.mode] ? MODES[state.mode].icon + " " + MODES[state.mode].label : state.mode);
+        m.textContent = state.finalRound ? base + " — FINAL ROUND!" : base;
+      }
+      var d = $("srDiffPill");
+      if (d && state && DIFFS[state.diff]) { d.textContent = DIFFS[state.diff].label; }
+      renderProgress();
+    }
+
+    function renderProgress() {
+      var fill = $("srProgressFill");
+      var track = $("srProgressTrack");
+      var total = (state && state.duration) ? state.duration : settings.duration;
+      var left = (state && state.timeLeft !== undefined) ? state.timeLeft : total;
+      var pct = Math.max(0, Math.min(100, (left / total) * 100));
+      if (fill) { fill.style.width = pct + "%"; }
+      if (track) {
+        track.setAttribute("aria-valuemax", String(total));
+        track.setAttribute("aria-valuenow", String(left));
+      }
+    }
+
+    function renderSquareLeft() {
+      var el = $("srSquareLeft");
+      if (!el) { return; }
+      var q = state && state.question;
+      if (!q || q.type !== "board") { el.hidden = true; return; }
+      var found = 0;
+      for (var k in state.boardFound) { if (Object.prototype.hasOwnProperty.call(state.boardFound, k)) { found++; } }
+      var remaining = Math.max(0, q.board.targetCount - found);
+      el.hidden = false;
+      el.textContent = "Squares still hidden: " + remaining + " of " + q.board.targetCount + ". Tap the perfect squares.";
+    }
+
+    function renderQuestion() {
+      if (!state || !state.question) { return; }
+      var q = state.question;
+      var kind = $("srQKind");
+      var txt = $("srQPrompt");
+      var boardEl = $("srBoardWrap");
+      var seqEl = $("srSeqShow");
+      var choicesEl = $("srChoices");
+      var numWrap = $("srNumWrap");
+      if (kind) { kind.textContent = q.kindLabel; }
+      if (txt) { txt.textContent = q.prompt; }
+      if (choicesEl) { choicesEl.innerHTML = ""; }
+      if (boardEl) { boardEl.innerHTML = ""; boardEl.hidden = true; }
+      if (seqEl) { seqEl.innerHTML = ""; seqEl.hidden = true; }
+      if (numWrap) { numWrap.hidden = true; }
+
+      if (q.type === "board") {
+        renderBoardTiles(q, boardEl);
+        state.boardFound = {};
+        state.boardWrong = {};
+        if (state.boardTargets === undefined) { state.boardTargets = q.board.targetCount; }
+      } else if (q.type === "num") {
+        if (numWrap) {
+          numWrap.hidden = false;
+          var input = $("srNumInput");
+          if (input) { input.value = ""; input.disabled = false; }
+          var submit = $("srNumSubmit");
+          if (submit) { submit.disabled = false; }
+        }
+      } else {
+        if (q.seq) { renderSeq(q, seqEl); }
+        renderChoices(q, choicesEl);
+      }
+
+      var fb = $("srFeedback"); if (fb) { fb.textContent = ""; fb.className = "sr-feedback"; }
+      var ex = $("srExplain"); if (ex) { ex.textContent = ""; }
+      var th = $("srTheory"); if (th) { th.hidden = true; th.textContent = ""; }
+      renderSquareLeft();
+    }
+
+    function renderChoices(q, wrap) {
+      var items = q.options || [];
+      for (var j = 0; j < items.length; j++) {
+        (function (item, idx) {
+          var b = document.createElement("button");
+          b.type = "button";
+          b.className = "sr-choice";
+          b.textContent = item.label;
+          b.setAttribute("data-choice", String(idx));
+          b.addEventListener("click", function () {
+            if (state && state.evaluating) { return; }
+            submitAnswer(idx);
+          });
+          wrap.appendChild(b);
+        })(items[j], j);
+      }
+    }
+
+    function renderSeq(q, wrap) {
+      wrap.hidden = false;
+      var vals = q.seq || [];
+      var chipCount = q.seqNext ? vals.length + 1 : vals.length;
+      for (var i = 0; i < chipCount; i++) {
+        if (i === q.seqHidden) {
+          var b = document.createElement("span");
+          b.className = "sr-seq-chip sr-seq-blank";
+          b.textContent = "?";
+          wrap.appendChild(b);
+        } else {
+          var c = document.createElement("span");
+          c.className = "sr-seq-chip";
+          c.textContent = String(vals[i]);
+          wrap.appendChild(c);
+        }
+        if (i < chipCount - 1) {
+          var sep = document.createElement("span");
+          sep.className = "sr-seq-sep";
+          sep.textContent = "→";
+          sep.setAttribute("aria-hidden", "true");
+          wrap.appendChild(sep);
+        }
+      }
+    }
+
+    function lookUpTile(el, attr) {
+      if (!el) { return -1; }
+      var v = el.getAttribute(attr);
+      return v === null ? -1 : Number(v);
+    }
+
+    function renderBoardTiles(q, wrap) {
+      if (!wrap) { wrap = $("srBoardWrap"); }
+      wrap.hidden = false;
+      var cells = q.board.cells;
+      for (var i = 0; i < cells.length; i++) {
+        (function (idx) {
+          var b = document.createElement("button");
+          b.type = "button";
+          b.className = "sr-tile";
+          b.textContent = String(cells[idx]);
+          b.setAttribute("data-index", String(idx));
+          b.setAttribute("aria-label", "Tap if " + cells[idx] + " is a perfect square");
+          b.addEventListener("click", function () {
+            if (state && !state.evaluating) { selectTile(idx); }
+          });
+          wrap.appendChild(b);
+        })(i);
+      }
+    }
+
+    function loadNextQuestion() {
+      if (!state) { return; }
+      var q;
+      if (state.mode === "ultimate") {
+        q = ultimateQuestion(state);
+      } else if (state.mode === "perfect") {
+        q = generatePerfectSquareGrid(state.diff);
+      } else if (state.mode === "missing") {
+        q = generateSquareSequence(state.diff);
+      } else {
+        q = generateSquareQuestion(state.diff);
+      }
+      state.question = q;
+      state.evaluating = false;
+      if (q.type === "board") {
+        state.boardFound = {};
+        state.boardWrong = {};
+        state.boardTargets = q.board.targetCount;
+        state.boardCleanCur = true;
+      }
+      renderQuestion();
+    }
+
+    /* ---------- scoring / answering ---------- */
+
+    function setFeedback(msg, good) {
+      var fb = $("srFeedback");
+      if (!fb) { return; }
+      fb.textContent = msg;
+      fb.className = good ? "sr-feedback is-good" : "sr-feedback is-bad";
+    }
+
+    function awardCorrect(q) {
+      state.streak += 1;
+      if (state.streak > state.bestStreak) { state.bestStreak = state.streak; }
+      state.correct += 1;
+      if (q.kind === "root" || q.kind === "radicand") { state.rootsCorrect += 1; }
+      var m = milestoneForStreak(state.streak);
+      var pts = pointsFor(state.diff, state.streak, state.finalRound);
+      state.score += pts;
+      checkAchievements(state);
+      setFeedback("✅ Correct! +" + pts + (m ? " — " + m.label + " bonus!" : ""), true);
+      if (m) { playSound("milestone"); }
+      renderHud();
+    }
+
+    function awardWrong(q, predLabel) {
+      state.wrong += 1;
+      state.streak = 0;
+      state.score = Math.max(0, state.score - WRONG_PENALTY);
+      checkAchievements(state);
+      setFeedback("❌ Not quite. The correct answer was " + predLabel + ".", false);
+      playSound("wrong");
+      renderHud();
+    }
+
+    function renderReveal(q, ok, v) {
+      if (q.type === "num") {
+        var input = $("srNumInput");
+        if (input) { input.disabled = true; }
+        var submit = $("srNumSubmit");
+        if (submit) { submit.disabled = true; }
+        return;
+      }
+      var wrap = $("srChoices");
+      if (!wrap) { return; }
+      var children = wrap.children;
+      for (var i = 0; i < children.length; i++) {
+        var b = children[i];
+        b.disabled = true;
+        var key = b.getAttribute("data-choice");
+        if (key !== null) {
+          var idx = Number(key);
+          if (q.options[idx] && q.options[idx].key === q.answer) { b.classList.add("is-correct"); }
+          if (idx === Number(v)) {
+            b.classList.add("is-selected");
+            if (!ok) { b.classList.add("is-wrong"); }
+          }
+        }
+      }
+    }
+
+    function submitAnswer(v) {
+      if (!state || state.phase !== "playing") { return; }
+      if (state.evaluating || !state.question) { return; }
+      var q = state.question;
+      if (q.type === "board") { return; }
+
+      var ok = false;
+      var predLabel = "";
+      if (q.type === "num") {
+        var n = normalizeNumeric(typeof v === "number" ? v : String(v));
+        if (n === null) {
+          setFeedback("Type a valid whole number to submit.", false);
+          return;
+        }
+        ok = n === q.answer;
+        predLabel = String(q.answer);
+      } else {
+        var idx = Number(v);
+        if (!q.options || !(idx === Math.floor(idx)) || idx < 0 || idx >= q.options.length) {
+          return;
+        }
+        var chosen = q.options[idx];
+        ok = chosen.key === q.answer;
+        predLabel = String(q.answer);
+      }
+      state.evaluating = true;
+
+      if (ok) {
+        awardCorrect(q);
+      } else {
+        awardWrong(q, predLabel);
+      }
+      renderReveal(q, ok, v);
+
+      var ex = $("srExplain");
+      if (ex) { ex.textContent = q.explain; }
+      var th = $("srTheory");
+      if (th) { th.textContent = q.theory; th.hidden = false; }
+      renderHud();
+      scheduleNext();
+    }
+
+    function selectTile(idx) {
+      if (!state || state.phase !== "playing") { return; }
+      if (state.evaluating || !state.question || state.question.type !== "board") { return; }
+      var q = state.question;
+      var b = q.board;
+      if (idx < 0 || idx >= b.cells.length) { return; }
+      if (state.boardFound[idx] || state.boardWrong[idx]) { return; }
+      var isT = !!b.targets[idx];
+      var n = b.cells[idx];
+      if (isT) {
+        state.boardFound[idx] = true;
+        var m = milestoneForStreak(state.streak + 1);
+        state.streak += 1;
+        if (state.streak > state.bestStreak) { state.bestStreak = state.streak; }
+        state.correct += 1;
+        var pts = pointsFor(state.diff, state.streak, state.finalRound);
+        state.score += pts;
+        checkAchievements(state);
+        setFeedback("✅ " + n + " = " + getSquareRoot(n) + " × " + getSquareRoot(n) + " — perfect square! +" + pts + (m ? " — " + m.label + " bonus!" : ""), true);
+        if (m) { playSound("milestone"); }
+        var tileEl = tileByIndex(idx);
+        if (tileEl) { tileEl.classList.add("is-found"); tileEl.disabled = true; }
+        var foundCount = 0;
+        for (var k in state.boardFound) { if (Object.prototype.hasOwnProperty.call(state.boardFound, k)) { foundCount++; } }
+        if (foundCount >= q.board.targetCount) {
+          boardComplete(tileEl);
+          return;
+        }
+      } else {
+        state.boardWrong[idx] = true;
+        state.boardCleanCur = false;
+        var rr = getSquareRoot(n);
+        state.wrong += 1;
+        state.streak = 0;
+        state.score = Math.max(0, state.score - WRONG_PENALTY);
+        checkAchievements(state);
+        setFeedback("❌ " + n + " is not a perfect square" + (rr === null ? "." : " (√" + n + " = " + rr + " is not a whole number)."), false);
+        playSound("wrong");
+        var tileEl2 = tileByIndex(idx);
+        if (tileEl2) { tileEl2.classList.add("is-wrong"); tileEl2.disabled = true; }
+      }
+      renderSquareLeft();
+      renderHud();
+    }
+
+    function tileByIndex(idx) {
+      var wrap = $("srBoardWrap");
+      if (!wrap) { return null; }
+      var children = wrap.children;
+      for (var i = 0; i < children.length; i++) {
+        var b = children[i];
+        if (lookUpTile(b, "data-index") === idx) { return b; }
+      }
+      return null;
+    }
+
+    function boardComplete(lastTile) {
+      state.evaluating = true;
+      if (state.boardCleanCur) { state.boardCleanDone = true; }
+      checkAchievements(state);
+      var q = state.question;
+      setFeedback("✅ Board cleared! All " + q.board.targetCount + " perfect squares found.", true);
+      var ex = $("srExplain");
+      if (ex) { ex.textContent = q.explain; }
+      var th = $("srTheory");
+      if (th) { th.textContent = q.theory; th.hidden = false; }
+      var wrap = $("srBoardWrap");
+      if (wrap) {
+        var children = wrap.children;
+        for (var i = 0; i < children.length; i++) {
+          var b = children[i];
+          b.disabled = true;
+          var idx = lookUpTile(b, "data-index");
+          if (idx >= 0 && q.board.targets[idx]) { b.classList.add("is-found"); }
+          else { b.classList.add("is-dim"); }
+        }
+      }
+      playSound("end");
+      renderHud();
+      scheduleNext();
+    }
+
+    function scheduleNext() {
+      winSetTimeout(function () {
+        if (!state || state.phase !== "playing") { return; }
+        if (state.timeLeft <= 0) { endGame(); return; }
+        loadNextQuestion();
+      }, FEEDBACK_MS);
+    }
+
+    /* ---------- flow ---------- */
+
+    function checkFinalRound() {
+      if (!state || state.mode !== "ultimate" || state.finalRoundTriggered) { return; }
+      if (state.timeLeft <= FINAL_TRIGGER_SECONDS) {
+        state.finalRoundTriggered = true;
+        state.finalRound = true;
+        var b = $("srFinalBanner");
+        if (b) { b.hidden = false; }
+        playSound("milestone");
+      }
+    }
+
+    function startTimer() {
+      if (state.timerId !== null) { winClearInterval(state.timerId); }
+      state.timerId = winSetInterval(function () {
+        if (!state || state.phase !== "playing") { return; }
+        state.timeLeft = Math.max(0, state.timeLeft - 1);
+        checkFinalRound();
+        renderHud();
+        if (state.timeLeft <= 0) { endGame(); }
+      }, 1000);
+    }
+
+    function endGame() {
+      if (!state || state.phase === "over") { return; }
+      if (state.timerId !== null) { winClearInterval(state.timerId); state.timerId = null; }
+      state.phase = "over";
+      var acc = accuracyFor(state);
+      var pb = readPb() || defaultPb();
+      var newBest = state.score > pb.bestScore;
+      if (newBest) { pb.bestScore = state.score; }
+      if (acc > pb.bestAccuracy) { pb.bestAccuracy = acc; }
+      if (state.bestStreak > pb.bestStreak) { pb.bestStreak = state.bestStreak; }
+      var merged = pb.achievementsEarned.slice();
+      for (var i = 0; i < state.achievementsEarned.length; i++) {
+        if (merged.indexOf(state.achievementsEarned[i]) === -1) { merged.push(state.achievementsEarned[i]); }
+      }
+      pb.achievementsEarned = merged.slice(0, ACHIEVEMENTS.length);
+      pb.gamesPlayed += 1;
+      pb.totalAnswers += state.correct + state.wrong;
+      pb.totalCorrect += state.correct;
+      writePb(pb);
+
+      var scoreEl = $("srResScore"); if (scoreEl) { scoreEl.textContent = state.score; }
+      var coEl = $("srResCorrect"); if (coEl) { coEl.textContent = state.correct; }
+      var woEl = $("srResWrong"); if (woEl) { woEl.textContent = state.wrong; }
+      var acEl = $("srResAccuracy"); if (acEl) { acEl.textContent = acc + "%"; }
+      var stEl = $("srResStreak"); if (stEl) { stEl.textContent = state.bestStreak; }
+      var beEl = $("srResBest"); if (beEl) { beEl.textContent = pb.bestScore; }
+      var nbEl = $("srNewBest"); if (nbEl) { nbEl.hidden = !newBest; }
+
+      var metaEl = $("srResMeta");
+      if (metaEl) {
+        var modeLbl = MODES[state.mode] ? MODES[state.mode].icon + " " + MODES[state.mode].label : state.mode;
+        var diffLbl = DIFFS[state.diff] ? DIFFS[state.diff].label : state.diff;
+        metaEl.textContent = "Mode: " + modeLbl + " · Difficulty: " + diffLbl + " · Duration: " + state.duration + "s";
+      }
+
+      var achEl = $("srAchList");
+      if (achEl) {
+        if (state.achievementsEarned.length) {
+          var html = "";
+          for (var j = 0; j < state.achievementsEarned.length; j++) {
+            var ai = null;
+            for (var k = 0; k < ACHIEVEMENTS.length; k++) {
+              if (ACHIEVEMENTS[k].id === state.achievementsEarned[j]) { ai = ACHIEVEMENTS[k]; }
+            }
+            if (ai) {
+              html += '<div class="sr-ach"><span class="sr-ach-ico">' + ai.icon + '</span><span><span class="sr-ach-name">' + ai.name + '</span><br /><span class="sr-ach-desc">' + ai.desc + '</span></span></div>';
+            }
+          }
+          achEl.innerHTML = html;
+        } else {
+          achEl.innerHTML = '<div class="sr-ach"><span class="sr-ach-ico">⚔️</span><span><span class="sr-ach-name">Keep training!</span><br /><span class="sr-ach-desc">No achievements yet this round — catch squares, crack roots and chase streaks to unlock them.</span></span></div>';
+        }
+      }
+
+      var fbEl = $("srFbMsg");
+      if (fbEl) {
+        var msg = "You caught " + state.correct + " correct answers out of " + (state.correct + state.wrong) + ". ";
+        msg += acc >= 80 ? "Outstanding ninja work!" : acc >= 50 ? "Strong strikes — keep sharpening!" : "Every square and root builds your skills. Try again!";
+        fbEl.textContent = msg;
+      }
+
+      renderPersonalBest();
+      showScreen("end");
+      playSound("end");
+    }
+
+    function pauseGame() {
+      if (!state || state.phase !== "playing") { return; }
+      if (state.timerId !== null) { winClearInterval(state.timerId); state.timerId = null; }
+      state.phase = "paused";
+      var overlay = $("srPausedOverlay");
+      if (overlay) { overlay.classList.remove("sr-hidden"); overlay.hidden = false; }
+      var pb = $("srPauseBtn");
+      if (pb) { pb.textContent = "▶ Resume"; }
+    }
+
+    function resumeGame() {
+      if (!state || state.phase !== "paused") { return; }
+      state.phase = "playing";
+      var overlay = $("srPausedOverlay");
+      if (overlay) { overlay.classList.add("sr-hidden"); overlay.hidden = true; }
+      var pb = $("srPauseBtn");
+      if (pb) { pb.textContent = "⏸ Pause"; }
+      startTimer();
+    }
+
+    function startGame() {
+      state = newState(settings);
+      state.phase = "playing";
+      showScreen("game");
+      loadNextQuestion();
+      startTimer();
+      renderHud();
+    }
+
+    function restartGame() {
+      var s = { mode: state ? state.mode : settings.mode, diff: state ? state.diff : settings.diff, duration: state ? state.duration : settings.duration };
+      state = newState(s);
+      state.phase = "playing";
+      var overlay = $("srPausedOverlay");
+      if (overlay) { overlay.classList.add("sr-hidden"); overlay.hidden = true; }
+      var fb = $("srFinalBanner");
+      if (fb) { fb.hidden = true; }
+      var pb = $("srPauseBtn");
+      if (pb) { pb.textContent = "⏸ Pause"; }
+      showScreen("game");
+      loadNextQuestion();
+      startTimer();
+      renderHud();
+    }
+
+    function playAgain() {
+      startGame();
+    }
+
+    /* ---------- negligible sound (Web Audio) ---------- */
+
+    function ensureAudio() {
+      try {
+        if (typeof window.AudioContext === "undefined") { return null; }
+        if (!audioCtx) { audioCtx = new window.AudioContext(); }
+        return audioCtx;
+      } catch (e) { return null; }
+    }
+
+    function playSound(kind) {
+      if (!soundOn) { return; }
+      var ctx = ensureAudio();
+      if (!ctx) { return; }
+      try {
+        var osc = ctx.createOscillator();
+        var gain = ctx.createGain();
+        var f = kind === "wrong" ? 180 : kind === "milestone" ? 660 : kind === "end" ? 520 : 440;
+        var t0 = ctx.currentTime;
+        osc.frequency.setValueAtTime(f, t0);
+        gain.gain.setValueAtTime(0.0001, t0);
+        gain.gain.exponentialRampToValueAtTime(0.18, t0 + 0.015);
+        gain.gain.exponentialRampToValueAtTime(0.0001, t0 + 0.25);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(t0);
+        osc.stop(t0 + 0.3);
+      } catch (e) { /* ignore */ }
+    }
+
+    /* ---------- wiring ---------- */
+
+    function syncSettings() {
+      var groups = document.querySelectorAll("[data-setting-group]");
+      for (var i = 0; i < groups.length; i++) {
+        var g = groups[i];
+        var key = g.getAttribute("data-setting-group") || g.key;
+        var btns = g.querySelectorAll("[data-setting]");
+        for (var j = 0; j < btns.length; j++) {
+          var b = btns[j];
+          var val = b.getAttribute("data-value");
+          var active = settings[key] === val;
+          b.classList.toggle("is-active", active);
+          if (val === "60" || val === "90" || val === "120") {
+            b.setAttribute("aria-pressed", String(active));
+          } else {
+            b.setAttribute("aria-pressed", String(active));
+          }
+        }
+      }
+    }
+
+    function wireEvents() {
+      var groups = document.querySelectorAll("[data-setting-group]");
+      for (var i = 0; i < groups.length; i++) {
+        var g = groups[i];
+        var key = g.getAttribute("data-setting-group") || g.key;
+        (function (grp, grpKey) {
+          var btns = grp.querySelectorAll("[data-setting]");
+          for (var j = 0; j < btns.length; j++) {
+            (function (b) {
+              b.addEventListener("click", function () {
+                settings[grpKey] = b.getAttribute("data-value");
+                syncSettings();
+                if (grpKey === "mode") { renderHowCard(settings.mode); }
+              });
+            })(btns[j]);
+          }
+        })(g, key);
+      }
+
+      var startBtn = $("srStartBtn");
+      if (startBtn) { startBtn.addEventListener("click", startGame); }
+      var playAgainBtn = $("srPlayAgain");
+      if (playAgainBtn) { playAgainBtn.addEventListener("click", playAgain); }
+
+      var pauseBtn = $("srPauseBtn");
+      if (pauseBtn) {
+        pauseBtn.addEventListener("click", function () {
+          if (!state) { return; }
+          if (state.phase === "playing") { pauseGame(); }
+          else if (state.phase === "paused") { resumeGame(); }
+        });
+      }
+      var pauseResume = $("srPauseResume");
+      if (pauseResume) { pauseResume.addEventListener("click", resumeGame); }
+      var pauseRestart = $("srPauseRestart");
+      if (pauseRestart) { pauseRestart.addEventListener("click", restartGame); }
+
+      var restartBtn = $("srRestartBtn");
+      if (restartBtn) { restartBtn.addEventListener("click", restartGame); }
+
+      var soundBtn = $("srSoundBtn");
+      if (soundBtn) {
+        soundBtn.addEventListener("click", function () {
+          ensureAudio();
+          soundOn = !soundOn;
+          soundBtn.textContent = soundOn ? "🔊 Sound On" : "🔇 Sound";
+          soundBtn.setAttribute("aria-pressed", soundOn ? "true" : "false");
+        });
+      }
+
+      var numSubmit = $("srNumSubmit");
+      if (numSubmit) {
+        numSubmit.addEventListener("click", function () {
+          if (!state) { return; }
+          var input = $("srNumInput");
+          if (!input) { return; }
+          submitAnswer(input.value);
+        });
+        var inputEl = $("srNumInput");
+        if (inputEl) {
+          inputEl.addEventListener("keydown", function (ev) {
+            if (ev.key === "Enter") {
+              ev.preventDefault();
+              numSubmit.click();
+            }
+          });
+        }
+      }
+
+      try {
+        reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      } catch (e) { reducedMotion = false; }
+
+      renderHowCard(settings.mode);
+      syncSettings();
+      renderPersonalBest();
+
+      if (typeof window !== "undefined" && window.__SR_TEST__) {
+        window.__SR__ = {
+          state: function () { return state; },
+          start: startGame,
+          submit: submitAnswer,
+          selectTile: selectTile,
+          end: endGame,
+          pause: pauseGame,
+          resume: resumeGame,
+          restart: restartGame,
+          playAgain: playAgain,
+          loadNext: loadNextQuestion,
+          setQuestion: function (q) {
+            if (!state) { state = newState(settings); state.phase = "playing"; }
+            state.question = q;
+            state.evaluating = false;
+            if (q.type === "board") {
+              state.boardFound = {};
+              state.boardWrong = {};
+              state.boardTargets = q.board.targetCount;
+              state.boardCleanCur = true;
+            }
+            renderQuestion();
+          },
+          readPb: readPb,
+          renderPersonalBest: renderPersonalBest,
+          setSettings: function (o) {
+            for (var k in o) { if (Object.prototype.hasOwnProperty.call(o, k)) { settings[k] = o[k]; } }
+          },
+          setRng: setRng,
+          setTimeLeft: function (n) {
+            if (!state) { return; }
+            state.timeLeft = Math.max(0, n);
+            checkFinalRound();
+            renderHud();
+          },
+          tick: function () {
+            if (state && state.phase === "playing") {
+              state.timeLeft = Math.max(0, state.timeLeft - 1);
+              checkFinalRound();
+              renderHud();
+              if (state.timeLeft <= 0) { endGame(); }
+            }
+          },
+          isPerfectSquare: isPerfectSquare,
+          getSquareRoot: getSquareRoot,
+          validateAnswer: validateAnswer,
+          generateSquareQuestion: generateSquareQuestion,
+          generatePerfectSquareGrid: generatePerfectSquareGrid,
+          generateSquareSequence: generateSquareSequence,
+          buildMcqInts: buildMcqInts,
+          pointsFor: pointsFor,
+          levelFor: levelFor,
+          accuracyFor: accuracyFor,
+          milestoneForStreak: milestoneForStreak,
+          checkAchievements: checkAchievements,
+          effectiveDiffFor: effectiveDiffFor
+        };
+      }
+    }
+
+    /* ---------- init ---------- */
+
+    renderHowCard(settings.mode);
+    syncSettings();
+    renderPersonalBest();
+    wireEvents();
+    if (typeof window !== "undefined" && window.__SR_TEST__) {
+      var tState = newState({ mode: "perfect", diff: "easy", duration: 60 });
+      tState.phase = "playing";
+      state = tState;
+      loadNextQuestion();
+    }
+  })();
+  </script>
+</body>
+</html>
