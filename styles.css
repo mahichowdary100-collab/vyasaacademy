@@ -2068,6 +2068,71 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
 .sm-crumbs a { color: var(--primary); font-weight: 500; }
 .sm-crumbs a:hover { color: var(--accent-dark); }
 
+/* Board selector (CBSE / ICSE) */
+.sm-boards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 20px 0 4px;
+}
+
+.sm-board {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border: 2px solid rgba(26,35,126,0.12);
+  border-radius: var(--radius);
+  background: var(--white);
+  transition: var(--transition);
+}
+
+.sm-board:hover { border-color: rgba(26,35,126,0.35); box-shadow: var(--shadow); }
+
+.sm-board.is-active {
+  border-color: var(--primary);
+  background: rgba(26,35,126,0.05);
+  box-shadow: var(--shadow);
+}
+
+.sm-board-abbr {
+  flex: 0 0 auto;
+  min-width: 62px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  font-size: 0.95rem;
+  color: var(--white);
+  background: var(--primary);
+  padding: 9px 12px;
+  border-radius: 12px;
+}
+
+.sm-board:not(.is-active) .sm-board-abbr { background: rgba(26,35,126,0.55); }
+
+.sm-board-text { display: flex; flex-direction: column; line-height: 1.35; }
+.sm-board-text strong { color: var(--dark); font-size: 0.98rem; }
+.sm-board-text small { color: var(--gray); font-size: 0.8rem; }
+.sm-board.is-active .sm-board-text strong { color: var(--primary); }
+
+.sm-board:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
+
+.sm-board-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 18px 0 0;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: #fff7e6;
+  border: 1px solid #f6d99b;
+  color: #8a5a00;
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+.sm-board-note i { margin-top: 2px; }
+
 .sm-hero { text-align: center; padding: 40px 0 12px; }
 
 .sm-eyebrow {
@@ -2412,6 +2477,7 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
 
 @media (max-width: 640px) {
   .sm-page { padding-top: 80px; }
+  .sm-boards { grid-template-columns: 1fr; }
   .sm-hero h1 { font-size: 1.8rem; }
   .sm-hero-slim h1 { font-size: 1.6rem; }
   .sm-grid { grid-template-columns: 1fr; }

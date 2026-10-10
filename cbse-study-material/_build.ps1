@@ -206,7 +206,21 @@ foreach ($c in $data.classes) {
 }
 $relatedMain = Get-RelatedHtml $main.related
 
-$mainBody = "<main class=""sm-page"">$nl  <div class=""container sm-container"">$nl    $(Get-SmCrumbs $crumbMain)$nl    <section class=""sm-hero"">$nl      <p class=""sm-eyebrow"">Vyasa Academy Study Material</p>$nl      <h1>CBSE Study Material - Classes 6 to 12</h1>$nl      <p>$($main.heroSub)</p>$nl      <div class=""sm-search"">$nl        <i class=""fas fa-search""></i>$nl        <input type=""text"" id=""smSearch"" placeholder=""Search by class, e.g. class 10..."" aria-label=""Search study material"" />$nl      </div>$nl    </section>$nl    <p class=""sm-empty"" id=""smEmpty"" hidden>No matching class found.</p>$nl    <div class=""sm-grid"" id=""smGrid"">$nl$($classCards -join "$nl$nl")$nl    </div>$nl    $relatedMain$nl  </div>$nl</main>"
+# Board selector shared across both study-material landing pages.
+$boardNavCbse = @'
+<nav class="sm-boards" aria-label="Select curriculum board">
+      <a class="sm-board is-active" href="/cbse-study-material/" aria-current="page">
+        <span class="sm-board-abbr">CBSE</span>
+        <span class="sm-board-text"><strong>CBSE Study Material</strong><small>Classes 6&ndash;12 &middot; NCERT</small></span>
+      </a>
+      <a class="sm-board" href="/icse-study-material/">
+        <span class="sm-board-abbr">ICSE</span>
+        <span class="sm-board-text"><strong>ICSE Study Material</strong><small>Classes 6&ndash;10 &middot; CISCE</small></span>
+      </a>
+    </nav>
+'@
+
+$mainBody = "<main class=""sm-page"">$nl  <div class=""container sm-container"">$nl    $(Get-SmCrumbs $crumbMain)$nl    $boardNavCbse$nl    <section class=""sm-hero"">$nl      <p class=""sm-eyebrow"">Vyasa Academy Study Material</p>$nl      <h1>CBSE Study Material - Classes 6 to 12</h1>$nl      <p>$($main.heroSub)</p>$nl      <div class=""sm-search"">$nl        <i class=""fas fa-search""></i>$nl        <input type=""text"" id=""smSearch"" placeholder=""Search by class, e.g. class 10..."" aria-label=""Search study material"" />$nl      </div>$nl    </section>$nl    <p class=""sm-empty"" id=""smEmpty"" hidden>No matching class found.</p>$nl    <div class=""sm-grid"" id=""smGrid"">$nl$($classCards -join "$nl$nl")$nl    </div>$nl    $relatedMain$nl  </div>$nl</main>"
 
 $mainPage = "$headMain$nl<body>$nl$navHtml$nl$mainBody$nl$footerHtml$nl<script src=""/cbse-study-material/sm.js""></script>$nl$authScripts$nl<script src=""/chatbot/chatbot-loader.js"" defer></script>$nl</body>$nl</html>"
 New-Item -ItemType Directory -Path (Join-Path $smDir '.') -Force | Out-Null

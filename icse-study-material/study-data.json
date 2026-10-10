@@ -1,0 +1,444 @@
+{
+  "main": {
+    "title": "ICSE Study Material for Classes 6-10 | Vyasa Academy",
+    "description": "Structured ICSE study material for Classes 6 to 10 - Mathematics, Physics, Chemistry and Biology with notes, worksheets, quizzes and chapter tests for CISCE students, by Vyasa Academy, Bangalore.",
+    "heroSub": "Topic-wise Mathematics, Physics, Chemistry and Biology study material for ICSE Classes 6 to 10 - notes, worksheets, quizzes and chapter tests. Content is being added chapter by chapter.",
+    "related": [
+      { "href": "/icse-tuition-hulimavu/", "label": "ICSE Tuition in Hulimavu" },
+      { "href": "/blog/study-tips/", "label": "Study Tips & Exam Preparation" },
+      { "href": "/blog/mathematics/", "label": "Mathematics Study Guides" },
+      { "href": "/blog/science/", "label": "Science Study Guides" },
+      { "href": "/maths-tuition-hulimavu/", "label": "Maths Tuition in Hulimavu" },
+      { "href": "/science-tuition-hulimavu/", "label": "Science Tuition in Hulimavu" },
+      { "href": "/class-10-tuition-hulimavu/", "label": "Class 10 Tuition in Hulimavu" }
+    ]
+  },
+  "resources": [
+    { "slug": "notes", "label": "Chapter Notes", "icon": "fa-book-open", "blurb": "Concise, exam-focused notes for this topic." },
+    { "slug": "concepts", "label": "Key Concepts & Definitions", "icon": "fa-lightbulb", "blurb": "Important concepts and definitions explained clearly." },
+    { "slug": "practice-paper", "label": "Worksheets & Practice", "icon": "fa-file-lines", "blurb": "Practice questions and worksheets to build confidence." },
+    { "slug": "quiz", "label": "Quiz (MCQs)", "icon": "fa-bullseye", "blurb": "A short interactive quiz with instant scoring." },
+    { "slug": "test", "label": "Chapter Test", "icon": "fa-clipboard-check", "blurb": "A timed chapter test with results and answers." }
+  ],
+  "subjectResources": [
+    { "slug": "revision", "label": "Revision Notes", "icon": "fa-bookmark", "blurb": "Quick revision notes for the whole subject before the exam." },
+    { "slug": "sample-paper", "label": "Sample Paper", "icon": "fa-file-pdf", "blurb": "A sample paper modelled on the ICSE paper pattern." }
+  ],
+  "classes": [
+    {
+      "number": 6,
+      "label": "Class 6",
+      "title": "ICSE Class 6 Study Material | Maths & Science | Vyasa Academy",
+      "description": "ICSE Class 6 study material at Vyasa Academy - Mathematics and Science (Physics, Chemistry, Biology) topic-wise notes, worksheets, quizzes and chapter tests aligned to the CISCE syllabus.",
+      "heroSub": "Pick a subject to explore topic-wise ICSE Class 6 study material, aligned to the CISCE syllabus.",
+      "classNote": "In the ICSE middle school (Classes 6-8), Physics, Chemistry and Biology are taught as one integrated Science subject. They are shown separately here so you can navigate to each strand.",
+      "subjects": [
+        {
+          "slug": "mathematics",
+          "label": "Mathematics",
+          "icon": "fa-square-root-variable",
+          "title": "ICSE Class 6 Mathematics Study Material | Vyasa Academy",
+          "description": "ICSE Class 6 Mathematics study material - topic-wise notes, worksheets, quizzes and chapter tests at Vyasa Academy, aligned to the CISCE syllabus.",
+          "heroSub": "Explore ICSE Class 6 Mathematics topic by topic.",
+          "chapters": [
+            { "slug": "number-system", "label": "Number System", "desc": "Place value, the four operations, factors, multiples, HCF and LCM." },
+            { "slug": "integers", "label": "Integers", "desc": "Positive and negative numbers and operations on the number line." },
+            { "slug": "fractions", "label": "Fractions", "desc": "Equivalent fractions, comparison and the four operations on fractions." },
+            { "slug": "decimals", "label": "Decimals", "desc": "Decimal place value and addition, subtraction, multiplication and division." },
+            { "slug": "sets", "label": "Sets", "desc": "Notation, roster and set-builder form, subsets and Venn diagrams." },
+            { "slug": "ratio-and-proportion", "label": "Ratio and Proportion", "desc": "Comparing quantities and solving proportion problems." },
+            { "slug": "percentage", "label": "Percentage", "desc": "Converting between fractions, decimals and percentages." },
+            { "slug": "algebra", "label": "Algebra: Basic Concepts", "desc": "Variables, expressions and simple linear equations." },
+            { "slug": "geometry", "label": "Geometry: Lines, Angles and Triangles", "desc": "Basic geometrical ideas, types of angles and properties of triangles." },
+            { "slug": "mensuration", "label": "Mensuration: Perimeter and Area", "desc": "Perimeter and area of squares, rectangles, triangles and circles." },
+            { "slug": "data-handling", "label": "Data Handling", "desc": "Collecting, organising and reading data with bar graphs." }
+          ]
+        },
+        {
+          "slug": "physics",
+          "label": "Physics",
+          "icon": "fa-atom",
+          "title": "ICSE Class 6 Physics Study Material | Vyasa Academy",
+          "description": "ICSE Class 6 Physics (Science) study material - topic-wise notes, worksheets, quizzes and chapter tests at Vyasa Academy, aligned to the CISCE syllabus.",
+          "heroSub": "Explore the Physics strand of ICSE Class 6 Science.",
+          "chapters": [
+            { "slug": "matter-and-its-states", "label": "Matter and Its States", "desc": "Solids, liquids and gases and their characteristic properties." },
+            { "slug": "measurement", "label": "Measurement", "desc": "Measuring length, mass and time and choosing suitable units." },
+            { "slug": "force-and-simple-machines", "label": "Force and Simple Machines", "desc": "What force does and everyday examples of simple machines." },
+            { "slug": "light", "label": "Light", "desc": "Sources of light, shadows and how light travels." },
+            { "slug": "magnetism", "label": "Magnetism", "desc": "Magnets, magnetic materials and the poles of a magnet." },
+            { "slug": "sound", "label": "Sound", "desc": "How sound is produced and how it travels to our ears." }
+          ]
+        },
+        {
+          "slug": "chemistry",
+          "label": "Chemistry",
+          "icon": "fa-flask-vial",
+          "title": "ICSE Class 6 Chemistry Study Material | Vyasa Academy",
+          "description": "ICSE Class 6 Chemistry (Science) study material - topic-wise notes, worksheets, quizzes and chapter tests at Vyasa Academy, aligned to the CISCE syllabus.",
+          "heroSub": "Explore the Chemistry strand of ICSE Class 6 Science.",
+          "chapters": [
+            { "slug": "water", "label": "Water", "desc": "Sources of water, its uses and the need to conserve it." },
+            { "slug": "air", "label": "Air", "desc": "The composition of air and the importance of its components." },
+            { "slug": "separation-of-mixtures", "label": "Separation of Mixtures", "desc": "Common methods used to separate the components of a mixture." },
+            { "slug": "physical-and-chemical-changes", "label": "Physical and Chemical Changes", "desc": "Telling apart physical changes from chemical changes." },
+            { "slug": "rocks-and-minerals", "label": "Rocks and Minerals", "desc": "Types of rocks and the minerals we obtain from them." }
+          ]
+        },
+        {
+          "slug": "biology",
+          "label": "Biology",
+          "icon": "fa-dna",
+          "title": "ICSE Class 6 Biology Study Material | Vyasa Academy",
+          "description": "ICSE Class 6 Biology (Science) study material - topic-wise notes, worksheets, quizzes and chapter tests at Vyasa Academy, aligned to the CISCE syllabus.",
+          "heroSub": "Explore the Biology strand of ICSE Class 6 Science.",
+          "chapters": [
+            { "slug": "plant-life", "label": "Plant Life", "desc": "Parts of a plant and their functions." },
+            { "slug": "digestive-system", "label": "The Human Body: Digestive System", "desc": "The journey of food through the human body." },
+            { "slug": "respiratory-system", "label": "The Human Body: Respiratory System", "desc": "How we breathe and exchange gases." },
+            { "slug": "living-organisms-and-surroundings", "label": "Living Organisms and Their Surroundings", "desc": "Habitats and how living things adapt to them." },
+            { "slug": "food-and-nutrition", "label": "Food and Nutrition", "desc": "Components of food and a balanced diet." }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "label": "Class 7",
+      "title": "ICSE Class 7 Study Material | Maths & Science | Vyasa Academy",
+      "description": "ICSE Class 7 study material at Vyasa Academy - Mathematics and Science (Physics, Chemistry, Biology) topic-wise notes, worksheets, quizzes and chapter tests aligned to the CISCE syllabus.",
+      "heroSub": "Pick a subject to explore topic-wise ICSE Class 7 study material, aligned to the CISCE syllabus.",
+      "classNote": "In the ICSE middle school (Classes 6-8), Physics, Chemistry and Biology are taught as one integrated Science subject. They are shown separately here so you can navigate to each strand.",
+      "subjects": [
+        {
+          "slug": "mathematics",
+          "label": "Mathematics",
+          "icon": "fa-square-root-variable",
+          "title": "ICSE Class 7 Mathematics Study Material | Vyasa Academy",
+          "description": "ICSE Class 7 Mathematics study material - topic-wise notes, worksheets, quizzes and chapter tests at Vyasa Academy, aligned to the CISCE syllabus.",
+          "heroSub": "Explore ICSE Class 7 Mathematics topic by topic.",
+          "chapters": [
+            { "slug": "number-system", "label": "Number System: Rational Numbers", "desc": "Rational numbers and operations on them." },
+            { "slug": "exponents-and-powers", "label": "Exponents and Powers", "desc": "Laws of exponents and their applications." },
+            { "slug": "sets", "label": "Sets", "desc": "Set operations, subsets and Venn diagrams." },
+            { "slug": "ratio-and-proportion", "label": "Ratio and Proportion", "desc": "Equivalent ratios, unitary method and proportion." },
+            { "slug": "percentage-profit-and-loss", "label": "Percentage, Profit and Loss", "desc": "Percentage, profit, loss and discount calculations." },
+            { "slug": "simple-interest", "label": "Simple Interest", "desc": "Computing simple interest and related word problems." },
+            { "slug": "algebra", "label": "Algebra: Expressions and Equations", "desc": "Simplifying expressions and solving linear equations." },
+            { "slug": "lines-and-angles", "label": "Geometry: Lines and Angles", "desc": "Pairs of angles and properties of parallel lines." },
+            { "slug": "triangles-and-congruence", "label": "Triangles and Congruence", "desc": "Properties of triangles and congruence rules." },
+            { "slug": "mensuration", "label": "Mensuration: Perimeter and Area", "desc": "Perimeter and area of common plane figures." },
+            { "slug": "data-handling", "label": "Data Handling", "desc": "Mean, median, mode and reading graphs." },
+            { "slug": "probability", "label": "Introduction to Probability", "desc": "Chance, outcomes and simple probability." }
+          ]
+        },
+        {
+          "slug": "physics",
+          "label": "Physics",
+          "icon": "fa-atom",
+          "title": "ICSE Class 7 Physics Study Material | Vyasa Academy",
+          "description": "ICSE Class 7 Physics (Science) study material - topic-wise notes, worksheets, quizzes and chapter tests at Vyasa Academy, aligned to the CISCE syllabus.",
+          "heroSub": "Explore the Physics strand of ICSE Class 7 Science.",
+          "chapters": [
+            { "slug": "physical-quantities-and-measurement", "label": "Physical Quantities and Measurement", "desc": "Measurement, units and measuring instruments." },
+            { "slug": "force-and-motion", "label": "Force and Motion", "desc": "Force, motion and the effects of force." },
+            { "slug": "energy", "label": "Energy: Forms and Transformation", "desc": "Forms of energy and how energy changes form." },
+            { "slug": "light-reflection", "label": "Light: Reflection", "desc": "Reflection of light and images formed by mirrors." },
+            { "slug": "heat", "label": "Heat", "desc": "Temperature, heat transfer and its effects." },
+            { "slug": "sound-and-electricity", "label": "Sound and Electricity", "desc": "Sound, electric current and simple circuits." }
+          ]
+        },
+        {
+          "slug": "chemistry",
+          "label": "Chemistry",
+          "icon": "fa-flask-vial",
+          "title": "ICSE Class 7 Chemistry Study Material | Vyasa Academy",
+          "description": "ICSE Class 7 Chemistry (Science) study material - topic-wise notes, worksheets, quizzes and chapter tests at Vyasa Academy, aligned to the CISCE syllabus.",
+          "heroSub": "Explore the Chemistry strand of ICSE Class 7 Science.",
+          "chapters": [
+            { "slug": "matter-and-classification", "label": "Matter and Its Classification", "desc": "Classifying matter into elements, compounds and mixtures." },
+            { "slug": "physical-and-chemical-changes", "label": "Physical and Chemical Changes", "desc": "Distinguishing physical changes from chemical reactions." },
+            { "slug": "elements-compounds-mixtures", "label": "Elements, Compounds and Mixtures", "desc": "Properties and differences with everyday examples." },
+            { "slug": "air-water-and-atmosphere", "label": "Air, Water and the Atmosphere", "desc": "Composition and importance of air and water." },
+            { "slug": "acids-bases-and-salts", "label": "Acids, Bases and Salts", "desc": "Common acids and bases, indicators and neutralisation." }
+          ]
+        },
+        {
+          "slug": "biology",
+          "label": "Biology",
+          "icon": "fa-dna",
+          "title": "ICSE Class 7 Biology Study Material | Vyasa Academy",
+          "description": "ICSE Class 7 Biology (Science) study material - topic-wise notes, worksheets, quizzes and chapter tests at Vyasa Academy, aligned to the CISCE syllabus.",
+          "heroSub": "Explore the Biology strand of ICSE Class 7 Science.",
+          "chapters": [
+            { "slug": "nutrition-in-plants", "label": "Nutrition in Plants", "desc": "Photosynthesis and other modes of nutrition in plants." },
+            { "slug": "nutrition-in-animals", "label": "Nutrition in Animals", "desc": "Different feeding types and the human digestive system." },
+            { "slug": "respiration-and-excretion", "label": "Respiration and Excretion", "desc": "Breathing, respiration and removal of waste products." },
+            { "slug": "transport-in-plants-and-animals", "label": "Transport in Plants and Animals", "desc": "How water, food and gases move in living things." },
+            { "slug": "reproduction-in-plants", "label": "Reproduction in Plants", "desc": "Asexual and sexual reproduction in flowering plants." },
+            { "slug": "health-and-hygiene", "label": "Health and Hygiene", "desc": "Personal health, hygiene and common diseases." }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "label": "Class 8",
+      "title": "ICSE Class 8 Study Material | Maths & Science | Vyasa Academy",
+      "description": "ICSE Class 8 study material at Vyasa Academy - Mathematics and Science (Physics, Chemistry, Biology) topic-wise notes, worksheets, quizzes and chapter tests aligned to the CISCE syllabus.",
+      "heroSub": "Pick a subject to explore topic-wise ICSE Class 8 study material, aligned to the CISCE syllabus.",
+      "classNote": "In the ICSE middle school (Classes 6-8), Physics, Chemistry and Biology are taught as one integrated Science subject. They are shown separately here so you can navigate to each strand.",
+      "subjects": [
+        {
+          "slug": "mathematics",
+          "label": "Mathematics",
+          "icon": "fa-square-root-variable",
+          "title": "ICSE Class 8 Mathematics Study Material | Vyasa Academy",
+          "description": "ICSE Class 8 Mathematics study material - topic-wise notes, worksheets, quizzes and chapter tests at Vyasa Academy, aligned to the CISCE syllabus.",
+          "heroSub": "Explore ICSE Class 8 Mathematics topic by topic.",
+          "chapters": [
+            { "slug": "rational-numbers", "label": "Rational Numbers", "desc": "Operations on rational numbers and their properties." },
+            { "slug": "squares-cubes-and-roots", "label": "Squares, Square Roots, Cubes and Cube Roots", "desc": "Finding squares, cubes and their roots." },
+            { "slug": "exponents-and-powers", "label": "Exponents and Powers", "desc": "Laws of exponents with positive and negative powers." },
+            { "slug": "percentage", "label": "Percentage and Its Applications", "desc": "Percentage, profit, loss and discount problems." },
+            { "slug": "simple-and-compound-interest", "label": "Simple and Compound Interest", "desc": "Calculating simple and compound interest." },
+            { "slug": "direct-and-inverse-variation", "label": "Direct and Inverse Variation", "desc": "Identifying and solving variation problems." },
+            { "slug": "algebraic-expressions-and-identities", "label": "Algebraic Expressions and Identities", "desc": "Expansion and factorisation using standard identities." },
+            { "slug": "linear-equations", "label": "Linear Equations in One Variable", "desc": "Solving linear equations and word problems." },
+            { "slug": "quadrilaterals", "label": "Geometry: Quadrilaterals", "desc": "Properties of quadrilaterals and parallelograms." },
+            { "slug": "constructions", "label": "Constructions", "desc": "Constructing triangles and quadrilaterals with ruler and compass." },
+            { "slug": "mensuration", "label": "Mensuration: Surface Area and Volume", "desc": "Surface area and volume of cubes, cuboids and cylinders." },
+            { "slug": "data-handling", "label": "Data Handling and Graphs", "desc": "Organising data with pie charts and histograms." },
+            { "slug": "probability", "label": "Introduction to Probability", "desc": "Chance, outcomes and simple probability." }
+          ]
+        },
+        {
+          "slug": "physics",
+          "label": "Physics",
+          "icon": "fa-atom",
+          "title": "ICSE Class 8 Physics Study Material | Vyasa Academy",
+          "description": "ICSE Class 8 Physics (Science) study material - topic-wise notes, worksheets, quizzes and chapter tests at Vyasa Academy, aligned to the CISCE syllabus.",
+          "heroSub": "Explore the Physics strand of ICSE Class 8 Science.",
+          "chapters": [
+            { "slug": "matter-and-its-structure", "label": "Matter and Its Structure", "desc": "Particles of matter, states and interconversion." },
+            { "slug": "physical-quantities-and-measurement", "label": "Physical Quantities and Measurement", "desc": "Units, density and measuring instruments." },
+            { "slug": "force-and-pressure", "label": "Force and Pressure", "desc": "Force, pressure and their everyday effects." },
+            { "slug": "motion", "label": "Motion", "desc": "Speed, velocity and simple motion graphs." },
+            { "slug": "energy", "label": "Energy and Its Forms", "desc": "Forms of energy and the law of conservation." },
+            { "slug": "light-and-vision", "label": "Light and Vision", "desc": "Reflection, refraction and the human eye." },
+            { "slug": "electricity-and-magnetism", "label": "Electricity and Magnetism", "desc": "Electric circuits, magnetic effects and electromagnets." }
+          ]
+        },
+        {
+          "slug": "chemistry",
+          "label": "Chemistry",
+          "icon": "fa-flask-vial",
+          "title": "ICSE Class 8 Chemistry Study Material | Vyasa Academy",
+          "description": "ICSE Class 8 Chemistry (Science) study material - topic-wise notes, worksheets, quizzes and chapter tests at Vyasa Academy, aligned to the CISCE syllabus.",
+          "heroSub": "Explore the Chemistry strand of ICSE Class 8 Science.",
+          "chapters": [
+            { "slug": "matter-and-its-constituents", "label": "Matter and Its Constituents", "desc": "Atoms, molecules and the particle nature of matter." },
+            { "slug": "atoms-molecules-and-reactions", "label": "Atoms, Molecules and Chemical Reactions", "desc": "Chemical formulae and writing balanced equations." },
+            { "slug": "elements-compounds-mixtures", "label": "Elements, Compounds and Mixtures", "desc": "Differences and methods of separation." },
+            { "slug": "air-water-and-soil", "label": "Air, Water and Soil", "desc": "Composition, uses and conservation of natural resources." },
+            { "slug": "carbon-and-its-compounds", "label": "Carbon and Its Compounds", "desc": "Forms of carbon and common carbon compounds." }
+          ]
+        },
+        {
+          "slug": "biology",
+          "label": "Biology",
+          "icon": "fa-dna",
+          "title": "ICSE Class 8 Biology Study Material | Vyasa Academy",
+          "description": "ICSE Class 8 Biology (Science) study material - topic-wise notes, worksheets, quizzes and chapter tests at Vyasa Academy, aligned to the CISCE syllabus.",
+          "heroSub": "Explore the Biology strand of ICSE Class 8 Science.",
+          "chapters": [
+            { "slug": "transport-in-plants-and-animals", "label": "Transport of Materials in Plants and Animals", "desc": "Xylem, phloem and the human circulatory system." },
+            { "slug": "nervous-system", "label": "The Human Body: Nervous System", "desc": "Neurons, the brain and reflex actions." },
+            { "slug": "endocrine-system", "label": "The Human Body: Endocrine System", "desc": "Hormones and the glands that produce them." },
+            { "slug": "reproduction-in-animals", "label": "Reproduction in Animals", "desc": "Asexual and sexual reproduction in animals." },
+            { "slug": "ecosystem-and-food-chains", "label": "Ecosystem and Food Chains", "desc": "Producers, consumers and the flow of energy." },
+            { "slug": "health-and-diseases", "label": "Health and Diseases", "desc": "Communicable diseases, immunity and hygiene." }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "label": "Class 9",
+      "title": "ICSE Class 9 Study Material | Maths, Physics, Chemistry & Biology | Vyasa Academy",
+      "description": "ICSE Class 9 study material at Vyasa Academy - Mathematics, Physics, Chemistry and Biology topic-wise notes, worksheets, quizzes and chapter tests aligned to the CISCE syllabus.",
+      "heroSub": "Pick a subject to explore topic-wise ICSE Class 9 study material, aligned to the CISCE syllabus.",
+      "subjects": [
+        {
+          "slug": "mathematics",
+          "label": "Mathematics",
+          "icon": "fa-square-root-variable",
+          "title": "ICSE Class 9 Mathematics Study Material | Vyasa Academy",
+          "description": "ICSE Class 9 Mathematics study material - topic-wise notes, worksheets, quizzes and chapter tests at Vyasa Academy, aligned to the CISCE syllabus.",
+          "heroSub": "Explore ICSE Class 9 Mathematics topic by topic.",
+          "chapters": [
+            { "slug": "rational-and-irrational-numbers", "label": "Pure Arithmetic: Rational and Irrational Numbers", "desc": "Ordering real numbers and surds." },
+            { "slug": "commercial-mathematics", "label": "Commercial Mathematics", "desc": "Compound interest, profit and loss, and taxation basics." },
+            { "slug": "algebra-expansions-and-factorisation", "label": "Algebra: Expansions and Factorisation", "desc": "Standard expansions and factorising expressions." },
+            { "slug": "simultaneous-linear-equations", "label": "Simultaneous Linear Equations", "desc": "Solving pairs of equations by graphical and algebraic methods." },
+            { "slug": "indices", "label": "Indices", "desc": "Laws of indices and solving index equations." },
+            { "slug": "geometry-triangles-and-midpoint", "label": "Geometry: Triangles and the Midpoint Theorem", "desc": "Triangle properties, congruency and the midpoint theorem." },
+            { "slug": "coordinate-geometry", "label": "Coordinate Geometry", "desc": "Plotting points and finding distance and midpoints." },
+            { "slug": "mensuration", "label": "Mensuration", "desc": "Area and perimeter of plane figures and solids." },
+            { "slug": "trigonometry", "label": "Trigonometry: Basic Ratios", "desc": "Trigonometric ratios of acute angles." },
+            { "slug": "statistics", "label": "Statistics", "desc": "Mean, median, mode and graphical representation." },
+            { "slug": "probability", "label": "Probability", "desc": "Simple probability using equally likely outcomes." }
+          ]
+        },
+        {
+          "slug": "physics",
+          "label": "Physics",
+          "icon": "fa-atom",
+          "title": "ICSE Class 9 Physics Study Material | Vyasa Academy",
+          "description": "ICSE Class 9 Physics study material - topic-wise notes, worksheets, quizzes and chapter tests at Vyasa Academy, aligned to the CISCE syllabus.",
+          "heroSub": "Explore ICSE Class 9 Physics topic by topic.",
+          "chapters": [
+            { "slug": "measurements-and-experimentation", "label": "Measurements and Experimentation", "desc": "Units, measuring instruments and measuring density." },
+            { "slug": "motion-in-one-dimension", "label": "Motion in One Dimension", "desc": "Distance, displacement, speed, velocity and acceleration." },
+            { "slug": "laws-of-motion", "label": "Laws of Motion", "desc": "Newton's laws and the idea of inertia and momentum." },
+            { "slug": "pressure-in-fluids", "label": "Pressure in Fluids and Atmospheric Pressure", "desc": "Pressure in liquids, Pascal's law and atmospheric pressure." },
+            { "slug": "upthrust-and-archimedes-principle", "label": "Upthrust, Archimedes' Principle and Floatation", "desc": "Buoyancy, Archimedes' principle and the principle of floatation." },
+            { "slug": "heat-and-energy", "label": "Heat and Energy", "desc": "Temperature, specific heat capacity and heat transfer." },
+            { "slug": "reflection-of-light", "label": "Reflection of Light", "desc": "Laws of reflection and images formed by mirrors." },
+            { "slug": "refraction-of-light", "label": "Refraction of Light", "desc": "Refraction through media and total internal reflection." },
+            { "slug": "sound", "label": "Sound", "desc": "Nature, speed and reflection of sound waves." },
+            { "slug": "electricity-and-magnetism", "label": "Electricity and Magnetism", "desc": "Current, circuits and the magnetic effect of current." }
+          ]
+        },
+        {
+          "slug": "chemistry",
+          "label": "Chemistry",
+          "icon": "fa-flask-vial",
+          "title": "ICSE Class 9 Chemistry Study Material | Vyasa Academy",
+          "description": "ICSE Class 9 Chemistry study material - topic-wise notes, worksheets, quizzes and chapter tests at Vyasa Academy, aligned to the CISCE syllabus.",
+          "heroSub": "Explore ICSE Class 9 Chemistry topic by topic.",
+          "chapters": [
+            { "slug": "matter-and-its-composition", "label": "Matter and Its Composition", "desc": "Kinetic theory, states of matter and change of state." },
+            { "slug": "study-of-gas-laws", "label": "Study of Gas Laws", "desc": "Boyle's law, Charles' law and the gas equation." },
+            { "slug": "elements-compounds-and-mixtures", "label": "Elements, Compounds and Mixtures", "desc": "Classification of matter and separation techniques." },
+            { "slug": "language-of-chemistry", "label": "The Language of Chemistry", "desc": "Symbols, formulae and chemical equations." },
+            { "slug": "chemical-reactions", "label": "Chemical Reactions", "desc": "Types of reactions and the conditions that drive them." },
+            { "slug": "water", "label": "Water", "desc": "Water as a solvent, solutions and water of crystallisation." },
+            { "slug": "atomic-structure", "label": "Atomic Structure", "desc": "Atomic models, subatomic particles and electron configuration." },
+            { "slug": "periodic-table", "label": "The Periodic Table", "desc": "Periodic trends and the arrangement of elements." },
+            { "slug": "study-of-hydrogen", "label": "Study of the First Element: Hydrogen", "desc": "Preparation, properties and uses of hydrogen." }
+          ]
+        },
+        {
+          "slug": "biology",
+          "label": "Biology",
+          "icon": "fa-dna",
+          "title": "ICSE Class 9 Biology Study Material | Vyasa Academy",
+          "description": "ICSE Class 9 Biology study material - topic-wise notes, worksheets, quizzes and chapter tests at Vyasa Academy, aligned to the CISCE syllabus.",
+          "heroSub": "Explore ICSE Class 9 Biology topic by topic.",
+          "chapters": [
+            { "slug": "cell-the-unit-of-life", "label": "Cell: The Unit of Life", "desc": "Cell structure, organelles and cell theory." },
+            { "slug": "tissues", "label": "Tissues", "desc": "Plant and animal tissues and their functions." },
+            { "slug": "the-flower", "label": "The Flower", "desc": "Parts of a flower and their role in reproduction." },
+            { "slug": "pollination-and-fertilisation", "label": "Pollination and Fertilisation", "desc": "Types of pollination, fertilisation and seed formation." },
+            { "slug": "nutrition-in-plants-and-animals", "label": "Nutrition in Plants and Animals", "desc": "Photosynthesis and the human digestive system." },
+            { "slug": "digestive-system", "label": "The Digestive System", "desc": "Organs, enzymes and absorption of nutrients." },
+            { "slug": "respiration-and-excretion", "label": "Respiration and Excretion", "desc": "Aerobic and anaerobic respiration and the urinary system." },
+            { "slug": "movement-and-locomotion", "label": "Movement and Locomotion", "desc": "Bones, joints, muscles and the skeleton." },
+            { "slug": "nervous-system", "label": "The Nervous System", "desc": "Neurons, the brain, spinal cord and reflex actions." },
+            { "slug": "health-and-diseases", "label": "Health, Hygiene and Diseases", "desc": "Causes, spread and prevention of common diseases." }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "label": "Class 10",
+      "title": "ICSE Class 10 Study Material | Maths, Physics, Chemistry & Biology | Vyasa Academy",
+      "description": "ICSE Class 10 study material for board exam preparation - Mathematics, Physics, Chemistry and Biology topic-wise notes, worksheets, quizzes and chapter tests at Vyasa Academy.",
+      "heroSub": "Pick a subject to explore topic-wise ICSE Class 10 study material for board exam preparation.",
+      "subjects": [
+        {
+          "slug": "mathematics",
+          "label": "Mathematics",
+          "icon": "fa-square-root-variable",
+          "title": "ICSE Class 10 Mathematics Study Material | Vyasa Academy",
+          "description": "ICSE Class 10 Mathematics study material for board exam preparation - topic-wise notes, worksheets, quizzes and chapter tests at Vyasa Academy.",
+          "heroSub": "Explore ICSE Class 10 Mathematics topic by topic.",
+          "chapters": [
+            { "slug": "commercial-mathematics", "label": "Commercial Mathematics: GST and Banking", "desc": "Goods and Services Tax, banking and recurring deposits." },
+            { "slug": "algebra", "label": "Algebra: Factorisation and Quadratic Equations", "desc": "Remainder and factor theorem and solving quadratics." },
+            { "slug": "arithmetic-and-geometric-progressions", "label": "Arithmetic and Geometric Progressions", "desc": "nth terms and sums of AP and GP." },
+            { "slug": "coordinate-geometry", "label": "Coordinate Geometry", "desc": "Distance, section and midpoint formulae and the equation of a line." },
+            { "slug": "geometry", "label": "Geometry: Similarity and Circles", "desc": "Similar triangles and circle theorems." },
+            { "slug": "mensuration", "label": "Mensuration", "desc": "Surface area and volume of cylinders, cones and spheres." },
+            { "slug": "trigonometry", "label": "Trigonometry and Heights and Distances", "desc": "Trigonometric identities and angle-of-elevation problems." },
+            { "slug": "statistics", "label": "Statistics", "desc": "Mean, median, mode and ogives." },
+            { "slug": "probability", "label": "Probability", "desc": "Simple probability and its applications." }
+          ]
+        },
+        {
+          "slug": "physics",
+          "label": "Physics",
+          "icon": "fa-atom",
+          "title": "ICSE Class 10 Physics Study Material | Vyasa Academy",
+          "description": "ICSE Class 10 Physics study material for board exam preparation - topic-wise notes, worksheets, quizzes and chapter tests at Vyasa Academy.",
+          "heroSub": "Explore ICSE Class 10 Physics topic by topic.",
+          "chapters": [
+            { "slug": "force-motion-and-work", "label": "Force, Motion and Work", "desc": "Turning forces, centre of gravity and equilibrium." },
+            { "slug": "work-energy-and-power", "label": "Work, Energy and Power", "desc": "Work, energy, power and their numerical problems." },
+            { "slug": "machines", "label": "Machines", "desc": "Levers, pulleys and the principle of moments." },
+            { "slug": "refraction-at-plane-surfaces", "label": "Refraction of Light at Plane Surfaces", "desc": "Refraction, refractive index and total internal reflection." },
+            { "slug": "refraction-through-a-lens", "label": "Refraction Through a Lens", "desc": "Lenses, ray diagrams and the lens formula." },
+            { "slug": "spectrum", "label": "Spectrum", "desc": "Dispersion of light and the electromagnetic spectrum." },
+            { "slug": "sound", "label": "Sound", "desc": "Production, propagation, echo and resonance." },
+            { "slug": "electricity", "label": "Electricity", "desc": "Current, Ohm's law, resistance and electrical power." },
+            { "slug": "magnetism-and-electromagnetism", "label": "Magnetism and Electromagnetism", "desc": "Magnetic fields, electromagnets and induction." },
+            { "slug": "calorimetry", "label": "Heat: Calorimetry", "desc": "Specific heat capacity, latent heat and numericals." }
+          ]
+        },
+        {
+          "slug": "chemistry",
+          "label": "Chemistry",
+          "icon": "fa-flask-vial",
+          "title": "ICSE Class 10 Chemistry Study Material | Vyasa Academy",
+          "description": "ICSE Class 10 Chemistry study material for board exam preparation - topic-wise notes, worksheets, quizzes and chapter tests at Vyasa Academy.",
+          "heroSub": "Explore ICSE Class 10 Chemistry topic by topic.",
+          "chapters": [
+            { "slug": "periodic-table-and-periodicity", "label": "Periodic Table and Periodicity", "desc": "Periodic properties and trends across the table." },
+            { "slug": "chemical-bonding", "label": "Chemical Bonding", "desc": "Ionic and covalent bonding and their properties." },
+            { "slug": "acids-bases-and-salts", "label": "Acids, Bases and Salts", "desc": "pH, strength of acids and bases, and salt preparation." },
+            { "slug": "mole-concept-and-stoichiometry", "label": "Mole Concept and Stoichiometry", "desc": "The mole, empirical formulae and calculation from equations." },
+            { "slug": "electrolysis", "label": "Electrolysis", "desc": "Electrolysis of compounds and its applications." },
+            { "slug": "metallurgy", "label": "Metallurgy", "desc": "Extraction of metals from their ores." },
+            { "slug": "study-of-compounds", "label": "Study of Compounds", "desc": "Hydrogen chloride, ammonia, nitric acid and sulphuric acid." },
+            { "slug": "organic-chemistry", "label": "Organic Chemistry", "desc": "Hydrocarbons and alcohols." }
+          ]
+        },
+        {
+          "slug": "biology",
+          "label": "Biology",
+          "icon": "fa-dna",
+          "title": "ICSE Class 10 Biology Study Material | Vyasa Academy",
+          "description": "ICSE Class 10 Biology study material for board exam preparation - topic-wise notes, worksheets, quizzes and chapter tests at Vyasa Academy.",
+          "heroSub": "Explore ICSE Class 10 Biology topic by topic.",
+          "chapters": [
+            { "slug": "cell-cycle-and-cell-division", "label": "Cell Cycle, Cell Division and Chromosomes", "desc": "Mitosis, meiosis and the structure of chromosomes." },
+            { "slug": "genetics", "label": "Genetics: Some Basic Fundamentals", "desc": "Mendel's laws, monohybrid and dihybrid crosses." },
+            { "slug": "absorption-by-roots", "label": "Absorption by Roots", "desc": "Root structure and active and passive absorption." },
+            { "slug": "transpiration", "label": "Transpiration", "desc": "Transpiration, its types and factors affecting it." },
+            { "slug": "photosynthesis", "label": "Photosynthesis", "desc": "The process, pigments and factors that affect it." },
+            { "slug": "chemical-coordination-in-plants", "label": "Chemical Coordination in Plants", "desc": "Plant hormones and their effects." },
+            { "slug": "circulatory-system", "label": "The Circulatory System", "desc": "The heart, blood vessels, blood and circulation." },
+            { "slug": "excretory-system", "label": "The Excretory System", "desc": "The urinary system and the formation of urine." },
+            { "slug": "nervous-system-and-sense-organs", "label": "The Nervous System and Sense Organs", "desc": "Nervous system, the eye and the ear." },
+            { "slug": "endocrine-system", "label": "The Endocrine System", "desc": "Glands, hormones and their functions." },
+            { "slug": "reproductive-system", "label": "The Reproductive System", "desc": "Human reproductive organs and reproduction." },
+            { "slug": "human-evolution", "label": "Human Evolution", "desc": "Evidence for and stages of human evolution." },
+            { "slug": "population-and-health", "label": "Population and Health", "desc": "Population growth, pollution and health concerns." }
+          ]
+        }
+      ]
+    }
+  ]
+}
