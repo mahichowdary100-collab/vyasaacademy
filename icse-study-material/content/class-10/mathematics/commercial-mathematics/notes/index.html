@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICSE Class 10 Maths Commercial Mathematics Notes | GST, Banking, Shares | Vyasa Academy</title>
+  <meta name="description" content="ICSE Class 10 Mathematics Commercial Mathematics notes - GST, banking and recurring deposits, and shares and dividends, with formulas, solved examples, common mistakes and a quick revision sheet." />
+  <link rel="canonical" href="https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/commercial-mathematics/notes/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vyasa Academy" />
+  <meta property="og:title" content="ICSE Class 10 Maths Commercial Mathematics Notes | GST, Banking, Shares | Vyasa Academy" />
+  <meta property="og:description" content="ICSE Class 10 Mathematics Commercial Mathematics notes - GST, banking and recurring deposits, and shares and dividends, with formulas, solved examples, common mistakes and a quick revision sheet." />
+  <meta property="og:url" content="https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/commercial-mathematics/notes/" />
+  <meta property="og:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ICSE Class 10 Maths Commercial Mathematics Notes | GST, Banking, Shares | Vyasa Academy" />
+  <meta name="twitter:description" content="ICSE Class 10 Mathematics Commercial Mathematics notes - GST, banking and recurring deposits, and shares and dividends, with formulas, solved examples, common mistakes and a quick revision sheet." />
+  <meta name="twitter:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","itemListElement":[{"position":1,"name":"Home","item":"https://www.vyasaacademy.in/","@type":"ListItem"},{"position":2,"name":"ICSE Study Material","item":"https://www.vyasaacademy.in/icse-study-material/","@type":"ListItem"},{"position":3,"name":"Class 10","item":"https://www.vyasaacademy.in/icse-study-material/class-10/","@type":"ListItem"},{"position":4,"name":"Mathematics","item":"https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/","@type":"ListItem"},{"position":5,"name":"Commercial Mathematics","item":"https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/commercial-mathematics/","@type":"ListItem"},{"position":6,"name":"Notes","item":"https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/commercial-mathematics/notes/","@type":"ListItem"}],"@type":"BreadcrumbList"}
+  </script>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+      processEscapes: true
+    }
+  };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <style>
+  .sm-notes { font-size: 1rem; line-height: 1.8; }
+  .sm-notes h2 { font-size: 1.45rem; color: var(--primary); margin: 44px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--accent); }
+  .sm-notes h3 { font-size: 1.15rem; color: var(--dark); margin: 28px 0 12px; }
+  .sm-notes h4 { font-size: 1.05rem; color: var(--dark); margin: 20px 0 8px; }
+  .sm-notes p { margin-bottom: 14px; }
+  .sm-notes ul, .sm-notes ol { margin: 10px 0 16px 24px; }
+  .sm-notes li { margin-bottom: 6px; }
+  .sm-notes ul { list-style: disc; }
+
+  .def-box { background: #eef2ff; border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .def-box .box-label { font-weight: 700; color: var(--primary); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .result-box { background: #fff8e1; border-left: 4px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .result-box .box-label { font-weight: 700; color: var(--accent-dark); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .example-box { background: #f0fdf4; border-left: 4px solid #16a34a; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .example-box .box-label { font-weight: 700; color: #16a34a; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .tip-box { background: #eff6ff; border-left: 4px solid #2563eb; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .tip-box .box-label { font-weight: 700; color: #2563eb; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .warn-box { background: #fef2f2; border-left: 4px solid #dc2626; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .warn-box .box-label { font-weight: 700; color: #dc2626; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .steps { margin: 12px 0 16px; }
+  .steps .step { display: flex; gap: 12px; margin-bottom: 10px; }
+  .steps .step-num { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: var(--primary); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; margin-top: 3px; }
+  .steps .step-text { flex: 1; }
+
+  .table-wrap { overflow-x: auto; margin: 16px 0; -webkit-overflow-scrolling: touch; }
+  .sm-notes table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .sm-notes th { background: var(--primary); color: var(--white); text-align: left; padding: 12px 14px; font-weight: 600; white-space: nowrap; }
+  .sm-notes td { padding: 10px 14px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  .sm-notes tr:nth-child(even) td { background: #f9fafb; }
+  .sm-notes tr:hover td { background: #eef2ff; }
+
+  .highlight { background: #fef9c3; padding: 2px 5px; border-radius: 4px; font-weight: 600; }
+  .qbox { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: var(--radius); padding: 16px 20px; margin: 12px 0; }
+  .qbox .q-label { font-weight: 700; color: var(--primary); margin-bottom: 4px; }
+
+  .formula-card { background: #fff; border: 1px solid #e5e7eb; border-left: 4px solid var(--primary); border-radius: var(--radius); padding: 14px 18px; margin: 12px 0; break-inside: avoid; page-break-inside: avoid; }
+  .formula-card .fc-name { font-weight: 800; color: var(--primary); margin-bottom: 4px; }
+  .formula-card .fc-formula { font-size: 1.05rem; margin: 6px 0; }
+  .formula-card .fc-note { font-size: 0.9rem; color: var(--gray); }
+
+  details.ans { margin: 8px 0 14px; border: 1px solid #e5e7eb; border-radius: var(--radius); background: #fff; }
+  details.ans summary { cursor: pointer; padding: 10px 14px; font-weight: 700; color: var(--primary); list-style: none; }
+  details.ans summary::-webkit-details-marker { display: none; }
+  details.ans summary::before { content: "\f0fe"; font-family: "Font Awesome 6 Free"; font-weight: 900; margin-right: 8px; }
+  details.ans[open] summary::before { content: "\f146"; }
+  details.ans .ans-body { padding: 0 16px 14px; }
+
+  .lvl { display: inline-block; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.4px; padding: 3px 10px; border-radius: 999px; margin-right: 8px; }
+  .lvl-l1 { background: #dcfce7; color: #15803d; }
+  .lvl-l2 { background: #fef3c7; color: #92400e; }
+  .lvl-l3 { background: #fee2e2; color: #b91c1c; }
+  .qtag { display: inline-block; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.4px; padding: 3px 10px; border-radius: 999px; margin-right: 8px; }
+  .qtag-basic { background: #dbeafe; color: #1d4ed8; }
+  .qtag-std { background: #fef3c7; color: #92400e; }
+  .qtag-chal { background: #fee2e2; color: #b91c1c; }
+
+  .resource-nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
+  .resource-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: var(--radius); border: 2px solid #e5e7eb; font-weight: 600; font-size: 0.92rem; color: var(--dark); background: var(--white); transition: var(--transition); }
+  .resource-nav a:hover, .resource-nav a.is-active { border-color: var(--primary); background: var(--primary); color: var(--white); }
+
+  .sm-back { display: inline-flex; align-items: center; gap: 8px; margin-top: 30px; padding: 10px 0; color: var(--primary); font-weight: 600; }
+  .sm-back:hover { color: var(--accent-dark); }
+
+  @media (max-width: 640px) {
+    .sm-notes h2 { font-size: 1.25rem; }
+    .sm-notes { font-size: 0.95rem; }
+    .steps .step { gap: 8px; }
+    .steps .step-num { width: 22px; height: 22px; font-size: 0.75rem; }
+    .resource-nav { gap: 6px; }
+    .resource-nav a { padding: 8px 12px; font-size: 0.85rem; }
+  }
+  @media print {
+    .navbar, .footer, .resource-nav, .sm-back, .sm-crumbs { display: none !important; }
+    .sm-notes h2 { break-after: avoid; }
+    .formula-card, .def-box, .example-box, .warn-box, details.ans { break-inside: avoid; }
+    body { background: #fff; }
+  }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="/" class="logo"><i class="fas fa-graduation-cap"></i> Vyasa Academy</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="/">Home</a>
+      <a href="/#courses">Courses</a>
+      <a href="/icse-study-material/" class="active">Study Material</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main class="sm-page">
+  <div class="container sm-container">
+    <nav class="sm-crumbs" aria-label="Breadcrumb">
+      <a href="https://www.vyasaacademy.in/">Home</a> /
+      <a href="https://www.vyasaacademy.in/icse-study-material/">ICSE Study Material</a> /
+      <a href="https://www.vyasaacademy.in/icse-study-material/class-10/">Class 10</a> /
+      <a href="https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/">Mathematics</a> /
+      <a href="https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/commercial-mathematics/">Commercial Mathematics</a> /
+      Notes
+    </nav>
+
+    <section class="sm-hero sm-hero-slim">
+      <p class="sm-eyebrow">ICSE Class 10 &middot; Mathematics</p>
+      <h1>Class 10 Mathematics &ndash; Commercial Mathematics</h1>
+      <p>Complete chapter notes for Unit 1 of the ICSE Class 10 Mathematics syllabus: <strong>Goods and Services Tax (GST)</strong>, <strong>Banking (Recurring Deposits)</strong>, and <strong>Shares and Dividends</strong>. Each topic includes learning objectives, concepts, formula cards, graded solved examples, exam-style questions, common mistakes and a quick revision sheet.</p>
+    </section>
+
+    <nav class="resource-nav" aria-label="Chapter resources">
+      <a class="is-active" href="/icse-study-material/class-10/mathematics/commercial-mathematics/notes/"><i class="fas fa-book-open"></i> Notes</a>
+      <a href="/icse-study-material/class-10/mathematics/commercial-mathematics/practice-paper/"><i class="fas fa-file-lines"></i> Practice Paper</a>
+      <a href="/icse-study-material/class-10/mathematics/commercial-mathematics/quiz/"><i class="fas fa-bullseye"></i> Quiz</a>
+      <a href="/icse-study-material/class-10/mathematics/commercial-mathematics/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+    </nav>
+
+    <article class="sm-notes">
+
+      <div class="def-box">
+        <div class="box-label">How to use these notes</div>
+        <p style="margin-bottom:0;">Read each topic in order. Study the formula cards first, then work through the solved examples <strong>on paper with the solution covered</strong>. Finally, attempt the exam-style questions before looking at the answers. Currency amounts in this chapter are in Indian Rupees (&#8377;).</p>
+      </div>
+
+      <!-- ============================ TOPIC 1: GST ============================ -->
+      <section id="gst">
+        <h2>Topic 1 &ndash; Goods and Services Tax (GST)</h2>
+
+        <h3>A. Learning Objectives</h3>
+        <p>After studying this topic you should be able to:</p>
+        <ul>
+          <li>Explain what GST is and why it replaced the earlier system of separate taxes such as VAT, service tax and excise duty.</li>
+          <li>Distinguish between <strong>CGST</strong>, <strong>SGST</strong> and <strong>IGST</strong>, and know when each applies.</li>
+          <li>Compute the GST charged on a taxable value for a given GST rate.</li>
+          <li>Find the taxable value (and the tax) when only the GST-inclusive price is given.</li>
+          <li>Use <strong>input tax credit</strong> to find the net GST payable by a dealer.</li>
+          <li>Solve word problems on billing, invoices and tax payable by a customer.</li>
+        </ul>
+
+        <h3>B. Basic Concepts and Definitions</h3>
+        <div class="def-box">
+          <div class="box-label">Goods and Services Tax (GST)</div>
+          <p style="margin-bottom:0;">GST is a single <strong>indirect tax</strong> levied on the supply of goods and services across India. It came into effect on <strong>1 July 2017</strong>. It replaced a large number of separate taxes (VAT, service tax, central excise, etc.) with one tax, so that a good or service is taxed only once at each stage.</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Taxable value</div>
+          <p style="margin-bottom:0;">The value on which GST is calculated. It is usually the price of the goods or services <em>before</em> adding GST. It is also called the base price or the selling price (excluding tax).</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">CGST, SGST and IGST</div>
+          <p>For a supply <strong>within the same state</strong> (intra-state), GST is split into two equal halves:</p>
+          <ul style="margin-bottom:6px;">
+            <li><strong>CGST</strong> (Central GST) &ndash; goes to the Central Government.</li>
+            <li><strong>SGST</strong> (State GST) &ndash; goes to the State Government.</li>
+          </ul>
+          <p style="margin-bottom:0;">For a supply <strong>between two different states</strong> (inter-state), a single tax called <strong>IGST</strong> (Integrated GST) is charged at the full GST rate.</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Input tax credit (ITC)</div>
+          <p style="margin-bottom:0;">A dealer pays GST on the goods they purchase (<strong>input GST</strong>) and collects GST on the goods they sell (<strong>output GST</strong>). The input GST can be set off against the output GST. The amount actually paid to the government is the <strong>net GST</strong> = output GST &minus; input GST.</p>
+        </div>
+
+        <h3>C. Important Formulas</h3>
+        <div class="formula-card">
+          <div class="fc-name">GST on a taxable value</div>
+          <div class="fc-formula">\(\text{GST} = \dfrac{\text{Rate}}{100} \times \text{Taxable value}\)</div>
+          <div class="fc-note">Rate means the GST rate for that item (for example 5%, 12%, 18% or 28%).</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Intra-state supply (CGST + SGST)</div>
+          <div class="fc-formula">\(\text{CGST} = \text{SGST} = \dfrac{1}{2}\left(\dfrac{\text{Rate}}{100} \times \text{Taxable value}\right)\)</div>
+          <div class="fc-note">CGST and SGST are always equal; together they equal the full GST.</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Inter-state supply (IGST)</div>
+          <div class="fc-formula">\(\text{IGST} = \dfrac{\text{Rate}}{100} \times \text{Taxable value}\)</div>
+          <div class="fc-note">IGST is charged at the full rate by the Centre.</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">GST-inclusive price (reverse working)</div>
+          <div class="fc-formula">\(\text{Taxable value} = \dfrac{\text{Price including GST}}{1 + \frac{\text{Rate}}{100}}\)</div>
+          <div class="fc-note">Then \(\text{GST} = \text{Price including GST} - \text{Taxable value}\).</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Net GST payable (input tax credit)</div>
+          <div class="fc-formula">\(\text{Net GST} = \text{Output GST (on sales)} - \text{Input GST (on purchases)}\)</div>
+          <div class="fc-note">For intra-state trade, work this out separately for CGST and for SGST.</div>
+        </div>
+
+        <h3>D. Step-by-Step Solved Examples</h3>
+
+        <h4><span class="lvl lvl-l1">Level 1</span> Direct GST on a taxable value</h4>
+        <div class="example-box">
+          <div class="box-label">Example 1</div>
+          <p>A shop sells an item for a taxable value of &#8377;2,500. If the GST rate is 18%, find the GST charged and the total amount the customer pays.</p>
+          <p><strong>Given:</strong> Taxable value = &#8377;2,500, GST rate = 18%.</p>
+          <p><strong>Required:</strong> GST amount and total amount.</p>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><span class="step-text">Use \(\text{GST} = \dfrac{\text{Rate}}{100} \times \text{Taxable value}\).</span></div>
+            <div class="step"><span class="step-num">2</span><span class="step-text">\(\text{GST} = \dfrac{18}{100} \times 2500 = 18 \times 25 = \text{&#8377;}450\).</span></div>
+            <div class="step"><span class="step-num">3</span><span class="step-text">Total amount = taxable value + GST = \(2500 + 450 = \text{&#8377;}2{,}950\).</span></div>
+          </div>
+          <p style="margin-bottom:0;"><strong>Answer:</strong> GST = &#8377;450; total amount = &#8377;2,950. <em>Tip: check that the total is 1.18 times the taxable value.</em></p>
+        </div>
+
+        <h4><span class="lvl lvl-l2">Level 2</span> Intra-state supply and bill</h4>
+        <div class="example-box">
+          <div class="box-label">Example 2</div>
+          <p>A dealer in Karnataka sells goods worth &#8377;4,000 (taxable value) to a customer in Karnataka. The GST rate is 12%. Find the CGST, the SGST and the total bill amount.</p>
+          <p><strong>Given:</strong> Taxable value = &#8377;4,000, GST rate = 12%. The sale is <strong>within</strong> the same state, so it is split into CGST and SGST.</p>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><span class="step-text">Total GST = \(\dfrac{12}{100} \times 4000 = \text{&#8377;}480\).</span></div>
+            <div class="step"><span class="step-num">2</span><span class="step-text">CGST = half of the total GST = \(480 \div 2 = \text{&#8377;}240\).</span></div>
+            <div class="step"><span class="step-num">3</span><span class="step-text">SGST = other half = \(\text{&#8377;}240\) (always equal to CGST).</span></div>
+            <div class="step"><span class="step-num">4</span><span class="step-text">Total bill = \(4000 + 240 + 240 = \text{&#8377;}4{,}480\).</span></div>
+          </div>
+          <p style="margin-bottom:0;"><strong>Answer:</strong> CGST = &#8377;240, SGST = &#8377;240, total bill = &#8377;4,480.</p>
+        </div>
+
+        <h4><span class="lvl lvl-l3">Level 3</span> Input tax credit &ndash; net GST payable</h4>
+        <div class="example-box">
+          <div class="box-label">Example 3</div>
+          <p>A trader in Maharashtra buys goods for &#8377;20,000 and pays GST at 18%. He sells the same goods for &#8377;30,000 (before tax), also within Maharashtra, at 18%. Find the input GST, the output GST and the net GST he must pay to the government.</p>
+          <p><strong>Given:</strong> Purchase = &#8377;20,000, sale = &#8377;30,000, rate = 18%, both intra-state.</p>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><span class="step-text">Input GST (on purchase) = \(\dfrac{18}{100} \times 20000 = \text{&#8377;}3{,}600\).</span></div>
+            <div class="step"><span class="step-num">2</span><span class="step-text">Output GST (on sale) = \(\dfrac{18}{100} \times 30000 = \text{&#8377;}5{,}400\).</span></div>
+            <div class="step"><span class="step-num">3</span><span class="step-text">Net GST = output GST &minus; input GST = \(5400 - 3600 = \text{&#8377;}1{,}800\).</span></div>
+          </div>
+          <p style="margin-bottom:0;"><strong>Answer:</strong> Input GST = &#8377;3,600; output GST = &#8377;5,400; net GST payable = &#8377;1,800. <em>Check: net GST = 18% of the value added, i.e. 18% of &#8377;10,000 = &#8377;1,800.</em></p>
+        </div>
+
+        <h3>E. Examination-Oriented Questions</h3>
+        <div class="qbox">
+          <div class="q-label"><span class="qtag qtag-basic">Basic</span> Q1</div>
+          <p style="margin-bottom:0;">Find the GST on a taxable value of &#8377;6,400 at 12%.</p>
+        </div>
+        <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">GST = \(\dfrac{12}{100} \times 6400 = \text{&#8377;}768\).</p></div></details>
+
+        <div class="qbox">
+          <div class="q-label"><span class="qtag qtag-basic">Basic</span> Q2</div>
+          <p style="margin-bottom:0;">The price of an article including 18% GST is &#8377;5,900. Find the taxable value.</p>
+        </div>
+        <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Taxable value = \(\dfrac{5900}{1.18} = \text{&#8377;}5{,}000\). (Then GST = \(5900 - 5000 = \text{&#8377;}900\).)</p></div></details>
+
+        <div class="qbox">
+          <div class="q-label"><span class="qtag qtag-std">Standard</span> Q3</div>
+          <p style="margin-bottom:0;">A dealer in Tamil Nadu sells goods for &#8377;12,000 within the state. GST is 28%. Find CGST, SGST and the amount payable by the buyer.</p>
+        </div>
+        <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Total GST = \(0.28 \times 12000 = \text{&#8377;}3{,}360\). CGST = SGST = \(\text{&#8377;}1{,}680\). Amount payable = \(12000 + 3360 = \text{&#8377;}15{,}360\).</p></div></details>
+
+        <div class="qbox">
+          <div class="q-label"><span class="qtag qtag-std">Standard</span> Q4</div>
+          <p style="margin-bottom:0;">A manufacturer sells to a wholesaler in another state for &#8377;40,000 (taxable value) at 18% GST. Find the IGST charged and the invoice total.</p>
+        </div>
+        <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Inter-state supply, so IGST = \(0.18 \times 40000 = \text{&#8377;}7{,}200\). Invoice total = \(40000 + 7200 = \text{&#8377;}47{,}200\).</p></div></details>
+
+        <div class="qbox">
+          <div class="q-label"><span class="qtag qtag-chal">Challenging</span> Q5</div>
+          <p style="margin-bottom:0;">A trader buys goods for &#8377;25,000 and pays 18% GST. He then sells them for &#8377;32,000 (before tax) at 18%, within the same state. Find the net CGST and net SGST he pays.</p>
+        </div>
+        <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Input GST = \(0.18 \times 25000 = \text{&#8377;}4{,}500\) (CGST &#8377;2,250, SGST &#8377;2,250). Output GST = \(0.18 \times 32000 = \text{&#8377;}5{,}760\) (CGST &#8377;2,880, SGST &#8377;2,880). Net CGST = \(2880 - 2250 = \text{&#8377;}630\); net SGST = &#8377;630. Total net GST = &#8377;1,260.</p></div></details>
+
+        <div class="qbox">
+          <div class="q-label"><span class="qtag qtag-chal">Challenging</span> Q6</div>
+          <p style="margin-bottom:0;">The marked price of an article is &#8377;3,200. A shopkeeper offers a discount of 10% on the marked price, and then charges GST at 18% on the discounted price. Find the amount the customer pays.</p>
+        </div>
+        <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Discounted (taxable) value = \(3200 - 10\% \text{ of } 3200 = 3200 - 320 = \text{&#8377;}2{,}880\). GST = \(0.18 \times 2880 = \text{&#8377;}518.40\). Amount paid = \(2880 + 518.40 = \text{&#8377;}3{,}398.40\).</p></div></details>
+
+        <h3>F. Common Mistakes</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>#</th><th>Common mistake</th><th>Correct approach</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Charging CGST and SGST each at the full GST rate.</td><td>CGST and SGST are each <strong>half</strong> the GST rate; together they equal the full rate.</td></tr>
+              <tr><td>2</td><td>Charging IGST for a sale within the same state.</td><td>Use IGST only for <strong>inter-state</strong> supply; intra-state uses CGST + SGST.</td></tr>
+              <tr><td>3</td><td>Applying GST to the GST-inclusive price by multiplying by the rate.</td><td>First find the taxable value as \(\frac{\text{inclusive price}}{1 + r/100}\), then find GST.</td></tr>
+              <tr><td>4</td><td>Adding GST to the purchase and sale both and reporting the sum as tax paid.</td><td>Use input tax credit: net GST = output GST &minus; input GST.</td></tr>
+              <tr><td>5</td><td>Forgetting to subtract a discount before computing GST.</td><td>Discount is applied to the marked price first; GST is charged on the discounted value.</td></tr>
+              <tr><td>6</td><td>Rounding the taxable value wrongly when working backwards.</td><td>Keep full accuracy until the final rupee value; round money only at the end.</td></tr>
+              <tr><td>7</td><td>Writing &#8377; instead of the correct unit or leaving units out.</td><td>State all money answers with the rupee sign and correct rounding to 2 decimals if needed.</td></tr>
+              <tr><td>8</td><td>Treating CGST and SGST as payable to the same authority.</td><td>CGST goes to the Centre and SGST to the State; the amounts are equal but credited separately.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>G. Examination Tips</h3>
+        <div class="tip-box">
+          <div class="box-label">Scoring tips</div>
+          <ul style="margin-bottom:0;">
+            <li>Always write down "Given" and "To find" &ndash; ICSE awards marks for correct method, not just the final answer.</li>
+            <li>If a sale is "within the state", immediately write CGST = SGST = half of the GST rate; this earns method marks early.</li>
+            <li>For input tax credit, show output GST and input GST separately, then subtract. Do not just write the final number.</li>
+            <li>When a discount is involved, compute the discount first; GST applies to the price <em>after</em> discount.</li>
+            <li>Include units (&#8377;) in every step. A correct number without the unit can lose a presentation mark.</li>
+          </ul>
+        </div>
+
+        <h3>H. Quick Revision Sheet &ndash; GST</h3>
+        <div class="result-box">
+          <div class="box-label">Remember</div>
+          <ul style="margin-bottom:0;">
+            <li>GST = (Rate/100) &times; taxable value.</li>
+            <li>Intra-state: CGST = SGST = half of GST. Inter-state: full IGST.</li>
+            <li>Taxable value from inclusive price = inclusive &divide; (1 + rate/100).</li>
+            <li>Net GST = output GST &minus; input GST.</li>
+            <li>Discount is applied before GST.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================ TOPIC 2: BANKING ============================ -->
+      <section id="banking">
+        <h2>Topic 2 &ndash; Banking: Recurring Deposit Accounts</h2>
+
+        <h3>A. Learning Objectives</h3>
+        <p>After studying this topic you should be able to:</p>
+        <ul>
+          <li>Explain what a Recurring Deposit (RD) account is and how it differs from a fixed deposit.</li>
+          <li>Calculate the interest earned on a recurring deposit using the standard ICSE formula.</li>
+          <li>Find the maturity value of an RD account.</li>
+          <li>Work backwards to find the rate of interest or the number of instalments.</li>
+          <li>Solve problems involving monthly deposits, time periods and interest.</li>
+        </ul>
+
+        <h3>B. Basic Concepts and Definitions</h3>
+        <div class="def-box">
+          <div class="box-label">Recurring Deposit (RD) account</div>
+          <p style="margin-bottom:0;">A scheme in which a fixed sum of money is deposited <strong>every month</strong> for a fixed number of months. At the end of the period the depositor receives the total of all deposits plus the interest earned. It encourages regular saving.</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Instalment (P)</div>
+          <p style="margin-bottom:0;">The fixed amount deposited each month. If a person deposits &#8377;500 every month, then the instalment P = &#8377;500.</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Maturity value</div>
+          <p style="margin-bottom:0;">The total amount the depositor receives on maturity = total of all monthly deposits + interest earned. It is also called the maturity amount.</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Interest calculation</div>
+          <p style="margin-bottom:0;">Each monthly instalment earns interest for a different length of time. The first instalment stays in the bank for \(n\) months, the second for \(n-1\) months, and so on, down to the last instalment which earns interest for 1 month. Summing these gives the standard formula below.</p>
+        </div>
+
+        <h3>C. Important Formulas</h3>
+        <div class="formula-card">
+          <div class="fc-name">Interest on a recurring deposit</div>
+          <div class="fc-formula">\(I = P \times \dfrac{n(n+1)}{2} \times \dfrac{r}{100} \times \dfrac{1}{12}\)</div>
+          <div class="fc-note">\(P\) = monthly instalment, \(n\) = number of months, \(r\) = rate of interest % per annum.</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Maturity value</div>
+          <div class="fc-formula">\(MV = (P \times n) + I\)</div>
+          <div class="fc-note">Here \(P \times n\) is the total of all the monthly deposits.</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Sum of months</div>
+          <div class="fc-formula">\(\dfrac{n(n+1)}{2} = 1 + 2 + 3 + \dots + n\)</div>
+          <div class="fc-note">This counts the number of "instalment-months" over which interest accrues.</div>
+        </div>
+
+        <h3>D. Step-by-Step Solved Examples</h3>
+
+        <h4><span class="lvl lvl-l1">Level 1</span> Interest and maturity value</h4>
+        <div class="example-box">
+          <div class="box-label">Example 1</div>
+          <p>Mr. Sharma deposits &#8377;500 every month in a recurring deposit account for 24 months at 6% per annum. Find the interest earned and the maturity value.</p>
+          <p><strong>Given:</strong> \(P = 500\), \(n = 24\), \(r = 6\).</p>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><span class="step-text">\(\dfrac{n(n+1)}{2} = \dfrac{24 \times 25}{2} = 300\).</span></div>
+            <div class="step"><span class="step-num">2</span><span class="step-text">\(I = 500 \times 300 \times \dfrac{6}{100} \times \dfrac{1}{12} = 500 \times 300 \times 0.005 = \text{&#8377;}750\).</span></div>
+            <div class="step"><span class="step-num">3</span><span class="step-text">Total deposits = \(500 \times 24 = \text{&#8377;}12{,}000\).</span></div>
+            <div class="step"><span class="step-num">4</span><span class="step-text">Maturity value = \(12000 + 750 = \text{&#8377;}12{,}750\).</span></div>
+          </div>
+          <p style="margin-bottom:0;"><strong>Answer:</strong> Interest = &#8377;750; maturity value = &#8377;12,750.</p>
+        </div>
+
+        <h4><span class="lvl lvl-l2">Level 2</span> Larger period and rate</h4>
+        <div class="example-box">
+          <div class="box-label">Example 2</div>
+          <p>Ms. Rao deposits &#8377;1,000 per month for 36 months at 8% per annum. Compute the interest and the maturity value.</p>
+          <p><strong>Given:</strong> \(P = 1000\), \(n = 36\), \(r = 8\).</p>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><span class="step-text">\(\dfrac{n(n+1)}{2} = \dfrac{36 \times 37}{2} = 666\).</span></div>
+            <div class="step"><span class="step-num">2</span><span class="step-text">\(I = 1000 \times 666 \times \dfrac{8}{1200} = \dfrac{1000 \times 666 \times 8}{1200} = \text{&#8377;}4{,}440\).</span></div>
+            <div class="step"><span class="step-num">3</span><span class="step-text">Total deposits = \(1000 \times 36 = \text{&#8377;}36{,}000\).</span></div>
+            <div class="step"><span class="step-num">4</span><span class="step-text">Maturity value = \(36000 + 4440 = \text{&#8377;}40{,}440\).</span></div>
+          </div>
+          <p style="margin-bottom:0;"><strong>Answer:</strong> Interest = &#8377;4,440; maturity value = &#8377;40,440.</p>
+        </div>
+
+        <h4><span class="lvl lvl-l3">Level 3</span> Comparing schemes / finding rate</h4>
+        <div class="example-box">
+          <div class="box-label">Example 3</div>
+          <p>A person deposits &#8377;800 per month for 20 months and receives a total interest of &#8377;1,050. Find the rate of interest per annum.</p>
+          <p><strong>Given:</strong> \(P = 800\), \(n = 20\), \(I = 1050\). Find \(r\).</p>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><span class="step-text">\(\dfrac{n(n+1)}{2} = \dfrac{20 \times 21}{2} = 210\).</span></div>
+            <div class="step"><span class="step-num">2</span><span class="step-text">Use \(I = P \times \dfrac{n(n+1)}{2} \times \dfrac{r}{1200}\): \(1050 = 800 \times 210 \times \dfrac{r}{1200}\).</span></div>
+            <div class="step"><span class="step-num">3</span><span class="step-text">\(1050 = \dfrac{168000\,r}{1200} = 140\,r\).</span></div>
+            <div class="step"><span class="step-num">4</span><span class="step-text">\(r = \dfrac{1050}{140} = 7.5\).</span></div>
+          </div>
+          <p style="margin-bottom:0;"><strong>Answer:</strong> The rate of interest is <strong>7.5% per annum</strong>. <em>Check: with r = 7.5, I = 800 &times; 210 &times; 7.5/1200 = &#8377;1,050.</em></p>
+        </div>
+
+        <h3>E. Examination-Oriented Questions</h3>
+        <div class="qbox">
+          <div class="q-label"><span class="qtag qtag-basic">Basic</span> Q1</div>
+          <p style="margin-bottom:0;">Find the interest on a recurring deposit of &#8377;400 per month for 12 months at 6% per annum.</p>
+        </div>
+        <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(\frac{n(n+1)}{2} = \frac{12 \times 13}{2} = 78\). \(I = 400 \times 78 \times \frac{6}{1200} = \text{&#8377;}156\).</p></div></details>
+
+        <div class="qbox">
+          <div class="q-label"><span class="qtag qtag-basic">Basic</span> Q2</div>
+          <p style="margin-bottom:0;">Mr. Iyer deposits &#8377;600 each month for 10 months at 9% per annum. Find the maturity value.</p>
+        </div>
+        <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(\frac{10 \times 11}{2} = 55\). \(I = 600 \times 55 \times \frac{9}{1200} = \text{&#8377;}247.50\). Total deposits = &#8377;6,000. MV = \(6000 + 247.50 = \text{&#8377;}6{,}247.50\).</p></div></details>
+
+        <div class="qbox">
+          <div class="q-label"><span class="qtag qtag-std">Standard</span> Q3</div>
+          <p style="margin-bottom:0;">A lady deposits &#8377;1,200 per month for 30 months at 8% per annum. Find the interest earned and the maturity value.</p>
+        </div>
+        <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(\frac{30 \times 31}{2} = 465\). \(I = 1200 \times 465 \times \frac{8}{1200} = 1200 \times 465 \times \frac{1}{150} = \text{&#8377;}3{,}720\). Total deposits = &#8377;36,000. MV = \(36000 + 3720 = \text{&#8377;}39{,}720\).</p></div></details>
+
+        <div class="qbox">
+          <div class="q-label"><span class="qtag qtag-std">Standard</span> Q4</div>
+          <p style="margin-bottom:0;">Find the number of months for which &#8377;500 per month must be deposited at 10% per annum to earn an interest of &#8377;1,375.</p>
+        </div>
+        <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(1375 = 500 \times \frac{n(n+1)}{2} \times \frac{10}{1200}\). So \(\frac{n(n+1)}{2} = \frac{1375 \times 1200}{500 \times 10} = 330\). Then \(n(n+1) = 660 = 25 \times 26\), so \(n = 25\) months.</p></div></details>
+
+        <div class="qbox">
+          <div class="q-label"><span class="qtag qtag-chal">Challenging</span> Q5</div>
+          <p style="margin-bottom:0;">Ravi opens an RD account and deposits &#8377;1,500 per month for 2 years at 7% per annum. Find the total interest and the maturity value. How much more interest would he have earned at 8% per annum?</p>
+        </div>
+        <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(n = 24\), \(\frac{24 \times 25}{2} = 300\). At 7%: \(I = 1500 \times 300 \times \frac{7}{1200} = \text{&#8377;}2{,}625\). MV = \(36000 + 2625 = \text{&#8377;}38{,}625\). At 8%: \(I = 1500 \times 300 \times \frac{8}{1200} = \text{&#8377;}3{,}000\). Extra interest = \(3000 - 2625 = \text{&#8377;}375\).</p></div></details>
+
+        <div class="qbox">
+          <div class="q-label"><span class="qtag qtag-chal">Challenging</span> Q6</div>
+          <p style="margin-bottom:0;">A recurring deposit account pays an interest of &#8377;6,300 on monthly deposits of &#8377;2,000 at 9% per annum. Find the number of months and the maturity value.</p>
+        </div>
+        <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(6300 = 2000 \times \frac{n(n+1)}{2} \times \frac{9}{1200}\). So \(\frac{n(n+1)}{2} = \frac{6300 \times 1200}{2000 \times 9} = 420\). Then \(n(n+1) = 840 = 28 \times 30\)? Check: \(28 \times 29 = 812\), \(29 \times 30 = 870\); \(n = 28\) gives 406, \(n=29\) gives 435. Since we need 420, recompute: \(\frac{n(n+1)}{2} = 420 \Rightarrow n(n+1) = 840\). Factor \(840 = 2^3 \times 3 \times 5 \times 7 = 28 \times 30\) &ndash; not consecutive. Indeed no integer \(n\) gives exactly 420; recheck the given data: with \(n=28\), \(I = 2000 \times 406 \times 9/1200 = \text{&#8377;}6{,}090\); with \(n=29\), \(I = 2000 \times 435 \times 9/1200 = \text{&#8377;}6{,}525\). So the stated &#8377;6,300 does not correspond to a whole number of months &ndash; a reminder to always check that \(n\) is a whole number.</p></div></details>
+
+        <h3>F. Common Mistakes</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>#</th><th>Common mistake</th><th>Correct approach</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Using the simple interest formula \(I = \frac{PRT}{100}\) with \(T = n\) months directly.</td><td>Use the recurring deposit formula \(I = P \cdot \frac{n(n+1)}{2} \cdot \frac{r}{1200}\), which accounts for each instalment's own time.</td></tr>
+              <tr><td>2</td><td>Forgetting the factor \(\frac{1}{12}\) to convert the annual rate to a monthly basis.</td><td>The rate is per annum, so divide by 12 (equivalently use 1200 in the denominator).</td></tr>
+              <tr><td>3</td><td>Using \(n(n+1)\) instead of \(\frac{n(n+1)}{2}\).</td><td>The sum of the first \(n\) natural numbers is \(\frac{n(n+1)}{2}\).</td></tr>
+              <tr><td>4</td><td>Reporting the total deposits as the maturity value.</td><td>Maturity value = total deposits + interest.</td></tr>
+              <tr><td>5</td><td>Taking the number of months as years.</td><td>Convert years to months first (2 years = 24 months).</td></tr>
+              <tr><td>6</td><td>Expecting the last instalment to earn interest for \(n\) months.</td><td>The last instalment stays only 1 month; that is why the sum is \(\frac{n(n+1)}{2}\) and not \(n^2\).</td></tr>
+              <tr><td>7</td><td>Rounding the interest to the nearest rupee too early.</td><td>Keep the exact value through the working and round only at the final answer.</td></tr>
+              <tr><td>8</td><td>Accepting a non-integer number of months as an answer.</td><td>The number of instalments must be a whole number; check your result.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>G. Examination Tips</h3>
+        <div class="tip-box">
+          <div class="box-label">Scoring tips</div>
+          <ul style="margin-bottom:0;">
+            <li>Write the formula first, then substitute. This secures method marks even if a calculation slips.</li>
+            <li>Compute \(\frac{n(n+1)}{2}\) as a separate step &ndash; it is easy to mark and prevents errors.</li>
+            <li>If the question asks for maturity value, always find interest first, then add total deposits.</li>
+            <li>Convert all times to months before substituting.</li>
+            <li>State the final answer clearly with the rupee sign and units (months, % per annum).</li>
+          </ul>
+        </div>
+
+        <h3>H. Quick Revision Sheet &ndash; Banking</h3>
+        <div class="result-box">
+          <div class="box-label">Remember</div>
+          <ul style="margin-bottom:0;">
+            <li>\(I = P \times \frac{n(n+1)}{2} \times \frac{r}{1200}\) (with \(r\) in % per annum).</li>
+            <li>Maturity value = \(P\,n + I\).</li>
+            <li>Sum of months \(= \frac{n(n+1)}{2}\).</li>
+            <li>Convert years to months before using the formula.</li>
+            <li>\(n\) must always be a whole number of months.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================ TOPIC 3: SHARES AND DIVIDENDS ============================ -->
+      <section id="shares">
+        <h2>Topic 3 &ndash; Shares and Dividends</h2>
+
+        <h3>A. Learning Objectives</h3>
+        <p>After studying this topic you should be able to:</p>
+        <ul>
+          <li>Explain what a share is and distinguish between its <strong>face value</strong> and <strong>market value</strong>.</li>
+          <li>Recognise when a share is bought at par, at a premium or at a discount.</li>
+          <li>Calculate the number of shares bought for a given investment.</li>
+          <li>Compute the annual dividend from a given rate of dividend on the face value.</li>
+          <li>Find the rate of return (yield) on an investment.</li>
+          <li>Solve problems on buying and selling shares, including profit or loss.</li>
+        </ul>
+
+        <h3>B. Basic Concepts and Definitions</h3>
+        <div class="def-box">
+          <div class="box-label">Share</div>
+          <p style="margin-bottom:0;">A share is a unit of ownership in a company. A person who buys shares is a shareholder and is entitled to a part of the company's profits, paid as a dividend.</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Face value (FV) / Nominal value / Par value</div>
+          <p style="margin-bottom:0;">The value printed on the share certificate, for example &#8377;10 or &#8377;100. <strong>Dividends are always calculated on the face value.</strong></p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Market value (MV)</div>
+          <p style="margin-bottom:0;">The price at which a share is actually bought or sold in the market. It can be above or below the face value.</p>
+          <ul style="margin-bottom:0;">
+            <li>MV &gt; FV &rarr; bought/sold <strong>at a premium</strong>.</li>
+            <li>MV &lt; FV &rarr; bought/sold <strong>at a discount</strong>.</li>
+            <li>MV = FV &rarr; bought/sold <strong>at par</strong>.</li>
+          </ul>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Dividend</div>
+          <p style="margin-bottom:0;">The part of a company's profit paid to shareholders. A dividend of, say, 8% means 8% of the <strong>face value</strong> per share, per year &ndash; not 8% of the market value.</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Rate of return (yield)</div>
+          <p style="margin-bottom:0;">The annual income (dividend) expressed as a percentage of the money actually invested (market value paid).</p>
+        </div>
+
+        <h3>C. Important Formulas</h3>
+        <div class="formula-card">
+          <div class="fc-name">Number of shares bought</div>
+          <div class="fc-formula">\(\text{Number of shares} = \dfrac{\text{Total investment}}{\text{Market value per share}}\)</div>
+          <div class="fc-note">Use the market value (the price actually paid), not the face value.</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Annual dividend (income)</div>
+          <div class="fc-formula">\(\text{Dividend} = \text{Number of shares} \times \dfrac{\text{Dividend rate}}{100} \times \text{Face value}\)</div>
+          <div class="fc-note">The dividend rate is applied to the face value.</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Rate of return (yield)</div>
+          <div class="fc-formula">\(\text{Rate of return} = \dfrac{\text{Total annual dividend}}{\text{Total investment}} \times 100\%\)</div>
+          <div class="fc-note">Investment is the total money spent buying the shares at market value.</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Sale proceeds and profit/loss</div>
+          <div class="fc-formula">\(\text{Sale proceeds} = \text{Number of shares} \times \text{Selling price}\)</div>
+          <div class="fc-note">Profit/loss = sale proceeds &minus; purchase cost (investment).</div>
+        </div>
+
+        <h3>D. Step-by-Step Solved Examples</h3>
+
+        <h4><span class="lvl lvl-l1">Level 1</span> Dividend and yield at a premium</h4>
+        <div class="example-box">
+          <div class="box-label">Example 1</div>
+          <p>A man buys 200 shares of face value &#8377;10 each at a market price of &#8377;25 per share. The company declares a dividend of 8%. Find his investment, his annual income and his rate of return.</p>
+          <p><strong>Given:</strong> Number of shares = 200, FV = &#8377;10, MV = &#8377;25, dividend = 8%.</p>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><span class="step-text">Investment = \(200 \times 25 = \text{&#8377;}5{,}000\).</span></div>
+            <div class="step"><span class="step-num">2</span><span class="step-text">Dividend per share = \(8\% \text{ of } 10 = \text{&#8377;}0.80\).</span></div>
+            <div class="step"><span class="step-num">3</span><span class="step-text">Annual income = \(200 \times 0.80 = \text{&#8377;}160\).</span></div>
+            <div class="step"><span class="step-num">4</span><span class="step-text">Rate of return = \(\dfrac{160}{5000} \times 100\% = 3.2\%\).</span></div>
+          </div>
+          <p style="margin-bottom:0;"><strong>Answer:</strong> Investment = &#8377;5,000; annual income = &#8377;160; rate of return = 3.2%.</p>
+        </div>
+
+        <h4><span class="lvl lvl-l2">Level 2</span> Higher face value and premium</h4>
+        <div class="example-box">
+          <div class="box-label">Example 2</div>
+          <p>Mrs. Nair buys 500 shares of face value &#8377;100 each at &#8377;120 per share. The company pays a 9% dividend. Find the premium per share, her investment, her annual income and the rate of return.</p>
+          <p><strong>Given:</strong> Number = 500, FV = &#8377;100, MV = &#8377;120, dividend = 9%.</p>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><span class="step-text">Premium = MV &minus; FV = \(120 - 100 = \text{&#8377;}20\) per share.</span></div>
+            <div class="step"><span class="step-num">2</span><span class="step-text">Investment = \(500 \times 120 = \text{&#8377;}60{,}000\).</span></div>
+            <div class="step"><span class="step-num">3</span><span class="step-text">Dividend per share = \(9\% \text{ of } 100 = \text{&#8377;}9\).</span></div>
+            <div class="step"><span class="step-num">4</span><span class="step-text">Annual income = \(500 \times 9 = \text{&#8377;}4{,}500\).</span></div>
+            <div class="step"><span class="step-num">5</span><span class="step-text">Rate of return = \(\dfrac{4500}{60000} \times 100\% = 7.5\%\).</span></div>
+          </div>
+          <p style="margin-bottom:0;"><strong>Answer:</strong> Premium = &#8377;20; investment = &#8377;60,000; income = &#8377;4,500; rate of return = 7.5%.</p>
+        </div>
+
+        <h4><span class="lvl lvl-l3">Level 3</span> Working backwards to the market value</h4>
+        <div class="example-box">
+          <div class="box-label">Example 3</div>
+          <p>A man invests &#8377;27,000 in shares of face value &#8377;10 each. The company pays a 15% dividend and he receives &#8377;1,350 as dividend. Find the market value per share and his rate of return.</p>
+          <p><strong>Given:</strong> Investment = &#8377;27,000, FV = &#8377;10, dividend = 15%, total dividend = &#8377;1,350.</p>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><span class="step-text">Dividend per share = \(15\% \text{ of } 10 = \text{&#8377;}1.50\).</span></div>
+            <div class="step"><span class="step-num">2</span><span class="step-text">Number of shares = \(\dfrac{1350}{1.50} = 900\).</span></div>
+            <div class="step"><span class="step-num">3</span><span class="step-text">Market value per share = \(\dfrac{27000}{900} = \text{&#8377;}30\).</span></div>
+            <div class="step"><span class="step-num">4</span><span class="step-text">MV &gt; FV, so the shares were bought at a premium of &#8377;20.</span></div>
+            <div class="step"><span class="step-num">5</span><span class="step-text">Rate of return = \(\dfrac{1350}{27000} \times 100\% = 5\%\).</span></div>
+          </div>
+          <p style="margin-bottom:0;"><strong>Answer:</strong> Market value = &#8377;30 per share (premium &#8377;20); rate of return = 5%.</p>
+        </div>
+
+        <h3>E. Examination-Oriented Questions</h3>
+        <div class="qbox">
+          <div class="q-label"><span class="qtag qtag-basic">Basic</span> Q1</div>
+          <p style="margin-bottom:0;">How many shares of market value &#8377;40 each can be bought for &#8377;8,000?</p>
+        </div>
+        <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Number of shares = \(\dfrac{8000}{40} = 200\).</p></div></details>
+
+        <div class="qbox">
+          <div class="q-label"><span class="qtag qtag-basic">Basic</span> Q2</div>
+          <p style="margin-bottom:0;">Find the annual dividend on 300 shares of face value &#8377;25 each when the company declares a dividend of 12%.</p>
+        </div>
+        <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Dividend per share = \(12\% \text{ of } 25 = \text{&#8377;}3\). Annual dividend = \(300 \times 3 = \text{&#8377;}900\).</p></div></details>
+
+        <div class="qbox">
+          <div class="q-label"><span class="qtag qtag-std">Standard</span> Q3</div>
+          <p style="margin-bottom:0;">Mr. Khan invests &#8377;15,000 in shares of face value &#8377;10, buying them at &#8377;15 each. The dividend is 10%. Find his annual income and rate of return.</p>
+        </div>
+        <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Number = \(15000 \div 15 = 1000\). Dividend per share = \(10\% \text{ of } 10 = \text{&#8377;}1\). Income = &#8377;1,000. Rate of return = \(\frac{1000}{15000} \times 100\% = 6.67\%\) (to 2 d.p.).</p></div></details>
+
+        <div class="qbox">
+          <div class="q-label"><span class="qtag qtag-std">Standard</span> Q4</div>
+          <p style="margin-bottom:0;">A company's &#8377;100 share is available at &#8377;80. If the company declares a 12% dividend, find the rate of return.</p>
+        </div>
+        <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Dividend per share = \(12\% \text{ of } 100 = \text{&#8377;}12\). Investment per share = &#8377;80. Rate of return = \(\frac{12}{80} \times 100\% = 15\%\). (MV &lt; FV, so the share is at a discount.)</p></div></details>
+
+        <div class="qbox">
+          <div class="q-label"><span class="qtag qtag-chal">Challenging</span> Q5</div>
+          <p style="margin-bottom:0;">A man buys 400 shares of face value &#8377;50 at a premium of 20%. He receives a dividend of 14%. After a year, he sells all the shares at a price of &#8377;65 each. Find his net gain or loss (including dividend).</p>
+        </div>
+        <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Buying price = \(50 + 20\% \text{ of } 50 = 50 + 10 = \text{&#8377;}60\). Investment = \(400 \times 60 = \text{&#8377;}24{,}000\). Dividend per share = \(14\% \text{ of } 50 = \text{&#8377;}7\); income = \(400 \times 7 = \text{&#8377;}2{,}800\). Sale proceeds = \(400 \times 65 = \text{&#8377;}26{,}000\). Net gain = \((26000 - 24000) + 2800 = \text{&#8377;}4{,}800\).</p></div></details>
+
+        <div class="qbox">
+          <div class="q-label"><span class="qtag qtag-chal">Challenging</span> Q6</div>
+          <p style="margin-bottom:0;">An investor wants an annual income of &#8377;4,800 from shares of face value &#8377;10 on which a 12% dividend is paid. How much must he invest if the market value is &#8377;16 per share?</p>
+        </div>
+        <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Dividend per share = \(12\% \text{ of } 10 = \text{&#8377;}1.20\). Number of shares needed = \(4800 \div 1.20 = 4000\). Investment = \(4000 \times 16 = \text{&#8377;}64{,}000\).</p></div></details>
+
+        <h3>F. Common Mistakes</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>#</th><th>Common mistake</th><th>Correct approach</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Calculating the dividend on the market value.</td><td>The dividend rate is always applied to the <strong>face value</strong>.</td></tr>
+              <tr><td>2</td><td>Using the face value to find the number of shares bought.</td><td>Divide the investment by the <strong>market value</strong> per share.</td></tr>
+              <tr><td>3</td><td>Confusing premium with dividend.</td><td>Premium = MV &minus; FV; dividend is the annual profit paid per share.</td></tr>
+              <tr><td>4</td><td>Treating a discount as a loss on every purchase.</td><td>Buying at a discount simply means MV &lt; FV; it is not a loss unless sold below cost.</td></tr>
+              <tr><td>5</td><td>Finding the rate of return on the face value.</td><td>Rate of return = dividend &divide; actual investment (market value) &times; 100.</td></tr>
+              <tr><td>6</td><td>Forgetting to add the dividend when computing total gain.</td><td>Total gain = (sale proceeds &minus; investment) + dividend received.</td></tr>
+              <tr><td>7</td><td>Mixing up "at a premium of 20%" with "at 20% of market value".</td><td>A premium of 20% means 20% of the face value is added to the face value.</td></tr>
+              <tr><td>8</td><td>Leaving the final rate of return as a decimal.</td><td>Express the rate of return as a percentage (multiply by 100).</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>G. Examination Tips</h3>
+        <div class="tip-box">
+          <div class="box-label">Scoring tips</div>
+          <ul style="margin-bottom:0;">
+            <li>Write "FV =" and "MV =" clearly at the start &ndash; many errors come from mixing them up.</li>
+            <li>Compute the dividend per share first; it is the key to both income and rate of return.</li>
+            <li>For "at a premium/discount" questions, convert the premium/discount to a rupee market value before doing anything else.</li>
+            <li>For gain/loss questions, show the investment, the sale proceeds and the dividend as three separate lines.</li>
+            <li>Round the rate of return to two decimal places and write the % sign.</li>
+          </ul>
+        </div>
+
+        <h3>H. Quick Revision Sheet &ndash; Shares and Dividends</h3>
+        <div class="result-box">
+          <div class="box-label">Remember</div>
+          <ul style="margin-bottom:0;">
+            <li>Number of shares = investment &divide; MV.</li>
+            <li>Dividend = number of shares &times; (dividend rate % of FV).</li>
+            <li>Rate of return = (total dividend &divide; investment) &times; 100%.</li>
+            <li>Premium: MV &gt; FV. Discount: MV &lt; FV. Par: MV = FV.</li>
+            <li>Total gain = (sale proceeds &minus; investment) + dividend.</li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="tip-box">
+        <div class="box-label">Next steps</div>
+        <p style="margin-bottom:0;">Now that you have revised all three topics, attempt the <a href="/icse-study-material/class-10/mathematics/commercial-mathematics/quiz/">topic quiz</a> for instant feedback, then the <a href="/icse-study-material/class-10/mathematics/commercial-mathematics/practice-paper/">practice paper</a> and finally the timed <a href="/icse-study-material/class-10/mathematics/commercial-mathematics/test/">chapter test</a>.</p>
+      </div>
+
+    </article>
+
+    <a class="sm-back" href="/icse-study-material/class-10/mathematics/commercial-mathematics/"><i class="fas fa-arrow-left"></i> Back to Commercial Mathematics</a>
+    <a class="sm-back" href="/icse-study-material/class-10/mathematics/" style="margin-left: 12px;"><i class="fas fa-arrow-left"></i> All Mathematics topics</a>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-about">
+      <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+      <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#courses">Courses</a></li>
+        <li><a href="/icse-study-material/">ICSE Study Material</a></li>
+        <li><a href="/cbse-study-material/">CBSE Study Material</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Popular Searches</h4>
+      <ul>
+        <li><a href="/icse-study-material/">ICSE Study Material</a></li>
+        <li><a href="/icse-tuition-hulimavu/">ICSE Tuition in Hulimavu</a></li>
+        <li><a href="/cbse-study-material/">CBSE Study Material</a></li>
+        <li><a href="/maths-tuition-hulimavu/">Maths Tuition in Hulimavu</a></li>
+        <li><a href="/science-tuition-hulimavu/">Science Tuition in Hulimavu</a></li>
+        <li><a href="/class-10-tuition-hulimavu/">Class 10 Tuition Hulimavu</a></li>
+        <li><a href="/tuition-centre-bangalore/">Best Tuition Centre in Bangalore</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="/cbse-study-material/sm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/supabase-config.js"></script>
+<script src="/supabase-auth.js"></script>
+<script src="/supabase-nav.js" defer></script>
+<script src="/chatbot/chatbot-loader.js" defer></script>
+</body>
+</html>
