@@ -349,6 +349,12 @@ foreach ($c in $data.classes) {
         @{ name = $s.label; url = $subUrl },
         @{ name = $ch.label; url = $chUrl }
       )
+      $chOverridePath = Join-Path $smDir "content\class-$($c.number)\$($s.slug)\$($ch.slug)\index.html"
+      if (Test-Path -LiteralPath $chOverridePath) {
+        Set-ContentUtf8 -Path (Join-Path $chDir 'index.html') -Value (Get-Content -LiteralPath $chOverridePath -Raw -Encoding UTF8)
+        $indexableUrls += $chUrl
+        Write-Host "Generated /icse-study-material/class-$($c.number)/$($s.slug)/$($ch.slug)/index.html (chapter landing override)"
+      } else {
       $headCh = Build-Head $chTitle $chDesc $chUrl $false @((Get-BreadcrumbLd $crumbCh))
 
       $chKicker = ''
@@ -356,15 +362,22 @@ foreach ($c in $data.classes) {
 
       $resCards = @()
       foreach ($r in $chapterResources) {
+        $overridePath = Get-ContentOverride $c.number $s.slug $ch.slug $r.slug
+        $pendingChip = if ($overridePath) {
+          "<span class=""sm-card-go"">View <i class=""fas fa-arrow-right""></i></span>"
+        } else {
+          "<span class=""sm-coming-chip""><i class=""fas fa-hourglass-half""></i> Coming soon</span>"
+        }
         $resCards += "<a class=""sm-card sm-resource-card sm-res-$($r.slug)"" href=""$($r.slug)/"">$nl" +
           "  <span class=""sm-card-icon""><i class=""fas $($r.icon)""></i></span>$nl" +
-          "  <div class=""sm-card-body"">$nl    <h3>$($r.label)</h3>$nl    <p>$($r.blurb)</p>$nl    <span class=""sm-coming-chip""><i class=""fas fa-hourglass-half""></i> Coming soon</span>$nl  </div>$nl</a>"
+          "  <div class=""sm-card-body"">$nl    <h3>$($r.label)</h3>$nl    <p>$($r.blurb)</p>$nl    $pendingChip$nl  </div>$nl</a>"
       }
 
       $chBody = "<main class=""sm-page"">$nl  <div class=""container sm-container"">$nl    $(Get-SmCrumbs $crumbCh)$nl    <section class=""sm-hero sm-hero-slim"">$nl      <p class=""sm-eyebrow"">ICSE Class $($c.number) &middot; $($s.label)</p>$nl      <h1>$($ch.label)</h1>$nl      <p>${chKicker}Choose a resource for this topic. Notes, worksheets, quiz and chapter test will be published here shortly.</p>$nl    </section>$nl    <div class=""sm-grid sm-grid-2 sm-grid-4"" id=""smGrid"">$nl$($resCards -join "$nl$nl")$nl    </div>$nl    <a class=""sm-back"" href=""/icse-study-material/class-$($c.number)/$($s.slug)/""><i class=""fas fa-arrow-left""></i> All $($s.label) topics</a>$nl  </div>$nl</main>"
       $chPage = "$headCh$nl<body>$nl$navHtml$nl$chBody$nl$footerHtml$nl<script src=""/cbse-study-material/sm.js""></script>$nl$authScripts$nl<script src=""/chatbot/chatbot-loader.js"" defer></script>$nl</body>$nl</html>"
       Set-ContentUtf8 -Path (Join-Path $chDir 'index.html') -Value $chPage
       Write-Host "Generated /icse-study-material/class-$($c.number)/$($s.slug)/$($ch.slug)/index.html"
+      }
 
       foreach ($r in $chapterResources) {
         Add-TreeLine 4 $r.label
