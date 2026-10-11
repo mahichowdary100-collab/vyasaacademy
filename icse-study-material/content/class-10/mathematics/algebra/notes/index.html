@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICSE Class 10 Maths Unit 2 Algebra Notes | All 7 Topics | Vyasa Academy</title>
+  <meta name="description" content="ICSE Class 10 Mathematics Unit 2: Algebra notes - linear inequations, quadratic equations, ratio and proportion, factorisation, matrices, arithmetic and geometric progression, with formulas, solved examples, common mistakes and quick revision sheets." />
+  <link rel="canonical" href="https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/algebra/notes/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vyasa Academy" />
+  <meta property="og:title" content="ICSE Class 10 Maths Unit 2 Algebra Notes | All 7 Topics | Vyasa Academy" />
+  <meta property="og:description" content="ICSE Class 10 Mathematics Unit 2: Algebra notes - all seven topics with formulas, solved examples, common mistakes and quick revision sheets." />
+  <meta property="og:url" content="https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/algebra/notes/" />
+  <meta property="og:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ICSE Class 10 Maths Unit 2 Algebra Notes | All 7 Topics | Vyasa Academy" />
+  <meta name="twitter:description" content="ICSE Class 10 Mathematics Unit 2: Algebra notes - all seven topics with formulas, solved examples, common mistakes and quick revision sheets." />
+  <meta name="twitter:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","itemListElement":[{"position":1,"name":"Home","item":"https://www.vyasaacademy.in/","@type":"ListItem"},{"position":2,"name":"ICSE Study Material","item":"https://www.vyasaacademy.in/icse-study-material/","@type":"ListItem"},{"position":3,"name":"Class 10","item":"https://www.vyasaacademy.in/icse-study-material/class-10/","@type":"ListItem"},{"position":4,"name":"Mathematics","item":"https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/","@type":"ListItem"},{"position":5,"name":"Algebra (Unit 2)","item":"https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/algebra/","@type":"ListItem"},{"position":6,"name":"Notes","item":"https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/algebra/notes/","@type":"ListItem"}],"@type":"BreadcrumbList"}
+  </script>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+      processEscapes: true
+    }
+  };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <style>
+  .sm-notes { font-size: 1rem; line-height: 1.8; }
+  .sm-notes h2 { font-size: 1.45rem; color: var(--primary); margin: 44px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--accent); }
+  .sm-notes h3 { font-size: 1.15rem; color: var(--dark); margin: 28px 0 12px; }
+  .sm-notes h4 { font-size: 1.05rem; color: var(--dark); margin: 20px 0 8px; }
+  .sm-notes p { margin-bottom: 14px; }
+  .sm-notes ul, .sm-notes ol { margin: 10px 0 16px 24px; }
+  .sm-notes li { margin-bottom: 6px; }
+  .sm-notes ul { list-style: disc; }
+
+  nav.toc { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: var(--radius); padding: 18px 22px; margin: 18px 0; }
+  nav.toc .toc-label { font-weight: 800; color: var(--primary); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 8px; }
+  nav.toc ul { margin: 0; padding: 0; list-style: none; }
+  nav.toc li { margin: 6px 0; }
+  nav.toc a { color: var(--primary); font-weight: 600; }
+
+  .def-box { background: #eef2ff; border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .def-box .box-label { font-weight: 700; color: var(--primary); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .result-box { background: #fff8e1; border-left: 4px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .result-box .box-label { font-weight: 700; color: var(--accent-dark); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .example-box { background: #f0fdf4; border-left: 4px solid #16a34a; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .example-box .box-label { font-weight: 700; color: #16a34a; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .tip-box { background: #eff6ff; border-left: 4px solid #2563eb; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .tip-box .box-label { font-weight: 700; color: #2563eb; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .warn-box { background: #fef2f2; border-left: 4px solid #dc2626; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .warn-box .box-label { font-weight: 700; color: #dc2626; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .steps { margin: 12px 0 16px; }
+  .steps .step { display: flex; gap: 12px; margin-bottom: 10px; }
+  .steps .step-num { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: var(--primary); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; margin-top: 3px; }
+  .steps .step-text { flex: 1; }
+
+  .table-wrap { overflow-x: auto; margin: 16px 0; -webkit-overflow-scrolling: touch; }
+  .sm-notes table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .sm-notes th { background: var(--primary); color: var(--white); text-align: left; padding: 12px 14px; font-weight: 600; white-space: nowrap; }
+  .sm-notes td { padding: 10px 14px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  .sm-notes tr:nth-child(even) td { background: #f9fafb; }
+  .sm-notes tr:hover td { background: #eef2ff; }
+
+  .highlight { background: #fef9c3; padding: 2px 5px; border-radius: 4px; font-weight: 600; }
+  .qbox { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: var(--radius); padding: 16px 20px; margin: 12px 0; }
+  .qbox .q-label { font-weight: 700; color: var(--primary); margin-bottom: 4px; }
+
+  .formula-card { background: #fff; border: 1px solid #e5e7eb; border-left: 4px solid var(--primary); border-radius: var(--radius); padding: 14px 18px; margin: 12px 0; break-inside: avoid; page-break-inside: avoid; }
+  .formula-card .fc-name { font-weight: 800; color: var(--primary); margin-bottom: 4px; }
+  .formula-card .fc-formula { font-size: 1.05rem; margin: 6px 0; }
+  .formula-card .fc-note { font-size: 0.9rem; color: var(--gray); }
+
+  details.ans { margin: 8px 0 14px; border: 1px solid #e5e7eb; border-radius: var(--radius); background: #fff; }
+  details.ans summary { cursor: pointer; padding: 10px 14px; font-weight: 700; color: var(--primary); list-style: none; }
+  details.ans summary::-webkit-details-marker { display: none; }
+  details.ans summary::before { content: "\f0fe"; font-family: "Font Awesome 6 Free"; font-weight: 900; margin-right: 8px; }
+  details.ans[open] summary::before { content: "\f146"; }
+  details.ans .ans-body { padding: 0 16px 14px; }
+
+  .lvl { display: inline-block; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.4px; padding: 3px 10px; border-radius: 999px; margin-right: 8px; }
+  .lvl-l1 { background: #dcfce7; color: #15803d; }
+  .lvl-l2 { background: #fef3c7; color: #92400e; }
+  .lvl-l3 { background: #fee2e2; color: #b91c1c; }
+  .qtag { display: inline-block; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.4px; padding: 3px 10px; border-radius: 999px; margin-right: 8px; }
+  .qtag-basic { background: #dbeafe; color: #1d4ed8; }
+  .qtag-std { background: #fef3c7; color: #92400e; }
+  .qtag-chal { background: #fee2e2; color: #b91c1c; }
+
+  .resource-nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
+  .resource-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: var(--radius); border: 2px solid #e5e7eb; font-weight: 600; font-size: 0.92rem; color: var(--dark); background: var(--white); transition: var(--transition); }
+  .resource-nav a:hover, .resource-nav a.is-active { border-color: var(--primary); background: var(--primary); color: var(--white); }
+
+  .sm-back { display: inline-flex; align-items: center; gap: 8px; margin-top: 30px; padding: 10px 0; color: var(--primary); font-weight: 600; }
+  .sm-back:hover { color: var(--accent-dark); }
+
+  @media (max-width: 640px) {
+    .sm-notes h2 { font-size: 1.25rem; }
+    .sm-notes { font-size: 0.95rem; }
+    .steps .step { gap: 8px; }
+    .steps .step-num { width: 22px; height: 22px; font-size: 0.75rem; }
+    .resource-nav { gap: 6px; }
+    .resource-nav a { padding: 8px 12px; font-size: 0.85rem; }
+  }
+  @media print {
+    .navbar, .footer, .resource-nav, .sm-back, .sm-crumbs { display: none !important; }
+    .sm-notes h2 { break-after: avoid; }
+    .formula-card, .def-box, .example-box, .warn-box, details.ans { break-inside: avoid; }
+    body { background: #fff; }
+  }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="/" class="logo"><i class="fas fa-graduation-cap"></i> Vyasa Academy</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="/">Home</a>
+      <a href="/#courses">Courses</a>
+      <a href="/icse-study-material/" class="active">Study Material</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main class="sm-page">
+  <div class="container sm-container">
+    <nav class="sm-crumbs" aria-label="Breadcrumb">
+      <a href="https://www.vyasaacademy.in/">Home</a> /
+      <a href="https://www.vyasaacademy.in/icse-study-material/">ICSE Study Material</a> /
+      <a href="https://www.vyasaacademy.in/icse-study-material/class-10/">Class 10</a> /
+      <a href="https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/">Mathematics</a> /
+      <a href="https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/algebra/">Algebra (Unit 2)</a> /
+      Notes
+    </nav>
+
+    <section class="sm-hero sm-hero-slim">
+      <p class="sm-eyebrow">ICSE Class 10 &middot; Mathematics &middot; Unit 2</p>
+      <h1>Class 10 Mathematics &ndash; Algebra (Unit 2) Notes</h1>
+      <p>Complete chapter notes for Unit 2 of the ICSE Class 10 Mathematics syllabus: <strong>Linear Inequations</strong>, <strong>Quadratic Equations</strong>, <strong>Ratio and Proportion</strong>, <strong>Factorisation of Polynomials</strong>, <strong>Matrices</strong>, <strong>Arithmetic Progression</strong> and <strong>Geometric Progression</strong>. Each topic includes learning objectives, concepts, formula cards, graded solved examples, exam-style questions (including verified ICSE board questions), common mistakes and a quick revision sheet.</p>
+    </section>
+
+    <nav class="resource-nav" aria-label="Chapter resources">
+      <a class="is-active" href="/icse-study-material/class-10/mathematics/algebra/notes/"><i class="fas fa-book-open"></i> Notes</a>
+      <a href="/icse-study-material/class-10/mathematics/algebra/practice-paper/"><i class="fas fa-file-lines"></i> Practice Paper</a>
+      <a href="/icse-study-material/class-10/mathematics/algebra/quiz/"><i class="fas fa-bullseye"></i> Quiz</a>
+      <a href="/icse-study-material/class-10/mathematics/algebra/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+    </nav>
+
+    <article class="sm-notes">
+
+      <div class="def-box">
+        <div class="box-label">How to use these notes</div>
+        <p style="margin-bottom:0;">Read each topic in order. Study the formula cards first, then work through the solved examples <strong>on paper with the solution covered</strong>. Finally, attempt the exam-style questions before looking at the answers. Questions marked <span class="qtag qtag-std">ICSE Board</span> are verified questions from CISCE board papers and are reused here exactly for practice.</p>
+      </div>
+
+      <nav class="toc" aria-labelledby="toc-title">
+        <div class="toc-label" id="toc-title">Table of contents</div>
+        <ul>
+          <li><a href="#linear-inequations">Topic 1 &ndash; Linear Inequations</a></li>
+          <li><a href="#quadratic-equations">Topic 2 &ndash; Quadratic Equations</a></li>
+          <li><a href="#ratio-and-proportion">Topic 3 &ndash; Ratio and Proportion</a></li>
+          <li><a href="#factorisation">Topic 4 &ndash; Factorisation of Polynomials</a></li>
+          <li><a href="#matrices">Topic 5 &ndash; Matrices</a></li>
+          <li><a href="#arithmetic-progression">Topic 6 &ndash; Arithmetic Progression</a></li>
+          <li><a href="#geometric-progression">Topic 7 &ndash; Geometric Progression</a></li>
+        </ul>
+      </nav>
+
+      <!-- ============================ TOPIC 1: LINEAR INEQUATIONS ============================ -->
+      <section id="linear-inequations">
+        <h2>Topic 1 &ndash; Linear Inequations</h2>
+
+        <h3>A. Learning Objectives</h3>
+        <p>After studying this topic you should be able to:</p>
+        <ul>
+          <li>Distinguish between a <strong>linear equation</strong> and a <strong>linear inequation</strong> (inequality).</li>
+          <li>Understand the <strong>replacement set</strong> and find the <strong>solution set</strong> of an inequation.</li>
+          <li>Apply the four rules for solving inequations, including <strong>reversing the sign when multiplying or dividing by a negative number</strong>.</li>
+          <li>Represent solution sets on the <strong>real number line</strong> using closed and open dots.</li>
+          <li>Solve a <strong>chain (compound) inequation</strong> such as \(a &lt; bx + c \le d\).</li>
+        </ul>
+
+        <h3>B. Basic Concepts and Definitions</h3>
+        <div class="def-box">
+          <div class="box-label">Inequation (inequality)</div>
+          <p style="margin-bottom:0;">A statement that relates two algebraic expressions using one of the symbols \(\le\) (less than or equal to), \(\ge\) (greater than or equal to), &lt; (less than) or &gt; (greater than). Unlike an equation, it almost always has a <strong>set of solutions</strong>, not just one value.</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Replacement set and solution set</div>
+          <p>The <strong>replacement set</strong> is the set from which the variable can be chosen &ndash; typically \(x \in \mathbb{W}\) (whole numbers), \(x \in \mathbb{N}\), \(x \in \mathbb{I}\) (integers) or \(x \in \mathbb{R}\) (real numbers). The <strong>solution set</strong> is the set of all values from the replacement set that actually satisfy the inequation.</p>
+          <p style="margin-bottom:0;">Example: for \(2x + 4 \le 14\) with \(x \in \mathbb{W}\), the solution set is \(\{0, 1, 2, 3, 4, 5\}\). With \(x \in \mathbb{R}\) the same inequation has infinitely many solutions: \(x \le 5\).</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Rules for solving inequations</div>
+          <ul style="margin-bottom:6px;">
+            <li>The same number can be <strong>added to or subtracted from</strong> both sides.</li>
+            <li>Both sides can be <strong>multiplied or divided by the same positive number</strong> &ndash; the sign stays the same.</li>
+            <li>Both sides can be <strong>multiplied or divided by the same negative number</strong> &ndash; the sign must be <strong>reversed</strong>.</li>
+          </ul>
+          <p style="margin-bottom:0;">Also: you may not multiply or divide by zero, and you may not multiply or divide by an <em>unknown</em> whose sign you do not know.</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Number-line representation</div>
+          <p style="margin-bottom:0;">Use a <strong>closed (filled) dot</strong> for \(\le\) or \(\ge\) (the endpoint is included) and an <strong>open (hollow) dot</strong> for &lt; or &gt; (the endpoint is excluded). Shade the line in the direction of the solution set.</p>
+        </div>
+
+        <h3>C. Important Formulas</h3>
+        <div class="formula-card">
+          <div class="fc-name">Reversal rule (key!)</div>
+          <div class="fc-formula">\(a &lt; b \;\Rightarrow\; -a &gt; -b\)</div>
+          <div class="fc-note">Multiplying (or dividing) both sides by a negative reverses the inequality; never forget this when the coefficient of \(x\) is made negative.</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Solving a linear inequation</div>
+          <div class="fc-formula">\(ax + b \le c \;\Rightarrow\; x \le \dfrac{c - b}{a} \;\text{(if } a &gt; 0\text{)}\)</div>
+          <div class="fc-note">Isolate the variable exactly as in an equation, applying the reversal rule whenever you multiply or divide by a negative coefficient.</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Chain (compound) inequation</div>
+          <div class="fc-formula">\(a &lt; bx + c \le d\)</div>
+          <div class="fc-note">Split into \(a &lt; bx + c\) <strong>and</strong> \(bx + c \le d\), solve each, then take the common (AND) region.</div>
+        </div>
+
+        <h3>D. Step-by-Step Solved Examples</h3>
+
+        <h4><span class="lvl lvl-l1">Level 1</span> Inequation with whole-number replacement set</h4>
+        <div class="example-box">
+          <div class="box-label">Example 1</div>
+          <p>Solve \(7x - 3 \ge 11\) where \(x \in \mathbb{W}\). Write down the solution set and show it on a number line.</p>
+          <p><strong>Required:</strong> solution set of the inequation.</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">Add 3 to both sides: \(7x \ge 14\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">Divide by the positive number 7 (no sign change): \(x \ge 2\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">Since \(x \in \mathbb{W} = \{0, 1, 2, 3, \dots\}\), the solution set is \(\{2, 3, 4, \dots\}\).</div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-text">On the number line place a <strong>closed dot</strong> at 2 and shade to the right.</div></div>
+          </div>
+        </div>
+
+        <h4><span class="lvl lvl-l2">Level 2</span> Real-number solution and half-open chain</h4>
+        <div class="example-box">
+          <div class="box-label">Example 2</div>
+          <p>Solve \(-3 &lt; 2x + 1 \le 9\) where \(x \in \mathbb{R}\). Represent the solution on the real number line.</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">Split into two parts: \(-3 &lt; 2x + 1\) and \(2x + 1 \le 9\), then work both together.</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">Subtract 1 throughout: \(-4 &lt; 2x \le 8\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">Divide throughout by \(2 &gt; 0\): \(-2 &lt; x \le 4\).</div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-text">On the number line use an <strong>open dot</strong> at \(-2\) (strict) and a <strong>closed dot</strong> at 4, shading between them.</div></div>
+          </div>
+        </div>
+
+        <h4><span class="lvl lvl-l3">Level 3</span> Chain with a negative coefficient (verified ICSE board question)</h4>
+        <div class="example-box">
+          <div class="box-label">Example 3 &ndash; ICSE 2023 (Section B)</div>
+          <p>Solve the inequation \(-5(x - 9) \ge 17 - 9x &gt; x + 2, \; x \in \mathbb{R}\). Write down the solution set and represent it on the real number line.</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">Left part: \(-5(x - 9) \ge 17 - 9x\). Expand: \(-5x + 45 \ge 17 - 9x\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">Add \(9x\) to both sides: \(4x + 45 \ge 17\), so \(4x \ge -28\) and \(x \ge -7\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">Right part: \(17 - 9x &gt; x + 2\). Add \(9x\): \(17 &gt; 10x + 2\), so \(15 &gt; 10x\) and \(x &lt; \frac{3}{2}\).</div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-text">Both must hold: \(-7 \le x &lt; \frac{3}{2}\).</div></div>
+            <div class="step"><div class="step-num">5</div><div class="step-text">Solution set: \(\{x : x \in \mathbb{R},\; -7 \le x &lt; \frac{3}{2}\}\). Number line: closed dot at \(-7\), open dot at \(\frac{3}{2}\), shade between.</div></div>
+          </div>
+        </div>
+
+        <h3>E. Exam-Style Questions</h3>
+        <div class="qbox">
+          <div class="q-label">Question E1 <span class="qtag qtag-std">ICSE Board 2023</span></div>
+          <p>Solve the inequation \(2x + 4 \le 14\) where \(x \in \mathbb{W}\) (whole numbers). Write down the solution set.</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(2x \le 10\) so \(x \le 5\). Solution set = \(\{0, 1, 2, 3, 4, 5\}\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E2 <span class="qtag qtag-basic">Original</span></div>
+          <p>Solve \(3x + 2 \ge 2x + 9\) where \(x \in \mathbb{I}\) (integers).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(3x - 2x \ge 9 - 2\), so \(x \ge 7\). Solution set = \(\{7, 8, 9, \dots\}\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E3 <span class="qtag qtag-basic">Original</span></div>
+          <p>Solve \(-2 \le 3x - 1 &lt; 8\) where \(x \in \mathbb{R}\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Add 1: \(-1 \le 3x &lt; 9\), divide by 3: \(-\frac{1}{3} \le x &lt; 3\). Solution set = \(\{x : x \in \mathbb{R},\; -\frac{1}{3} \le x &lt; 3\}\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E4 <span class="qtag qtag-basic">Original</span></div>
+          <p>If \(x \in \mathbb{N}\), solve \(4x - 7 \le 13\) and state how many solutions there are.</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(4x \le 20\) so \(x \le 5\). Since \(x \in \mathbb{N} = \{1, 2, 3, 4, 5\}\), the solution set is \(\{1, 2, 3, 4, 5\}\) &ndash; five solutions.</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E5 <span class="qtag qtag-std">Original</span></div>
+          <p>Solve \(\dfrac{2x - 1}{3} &gt; 3\) for \(x \in \mathbb{R}\) and show the solution on a number line.</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Multiply by 3: \(2x - 1 &gt; 9\), so \(2x &gt; 10\) and \(x &gt; 5\). Open dot at 5, shade right.</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E6 <span class="qtag qtag-chal">Original</span></div>
+          <p>A solution of a linear inequation is every real number strictly between \(-4\) and 1, inclusive of \(-4\). Write the inequation chain and its solution set.</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Chain: \(-4 \le x &lt; 1\). Solution set = \(\{x : x \in \mathbb{R},\; -4 \le x &lt; 1\}\).</p></div></details>
+        </div>
+
+        <h3>F. Common Mistakes</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Common mistake</th><th>Correct approach</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Multiplying or dividing by a negative without reversing the inequality sign.</td><td>Whenever you multiply or divide both sides by a negative number, reverse the symbol (\(\le \leftrightarrow \ge\) and &lt; \(\leftrightarrow\) &gt;).</td></tr>
+              <tr><td>Giving a finite set of solutions when \(x \in \mathbb{R}\).</td><td>For \(x \in \mathbb{R}\), write the set-builder form such as \(\{x : x \in \mathbb{R},\; x &gt; 5\}\) and show it on a number line.</td></tr>
+              <tr><td>Using an open dot for \(\le\) (or \(\ge\)).</td><td>Use a closed (filled) dot when the endpoint is included; an open dot only for strict &lt; or &gt;.</td></tr>
+              <tr><td>Cross-multiplying or cancelling an unknown factor in an inequation.</td><td>Never multiply or divide by a quantity whose sign you do not know &ndash; it may reverse the inequality.</td></tr>
+              <tr><td>Splitting a chain inequation but treating it as OR.</td><td>A chain like \(a &lt; bx + c \le d\) means <strong>both</strong> parts (AND); take the overlapping interval.</td></tr>
+              <tr><td>Stopping before dividing, leaving \(2x \ge 10\) as the final answer.</td><td>Always isolate \(x\) completely: divide to get \(x \ge 5\).</td></tr>
+              <tr><td>Including values outside the replacement set in the solution set.</td><td>Filter the solved inequality using the replacement set: for \(x \in \mathbb{W}\), keep only whole numbers that satisfy it.</td></tr>
+              <tr><td>Writing the solution set with wrong notation, e.g. \(\{x &lt; 5\}\) or \((5, \infty]\) but excluding the endpoint wrongly.</td><td>Use proper set-builder notation \(\{x : x \in \mathbb{R},\; x \le 5\}\); endpoint 5 included &#8594; closed, \((5, \infty)\) would wrongly exclude 5.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>G. Exam Tips</h3>
+        <div class="tip-box">
+          <div class="box-label">Scoring tips</div>
+          <ul style="margin-bottom:0;">
+            <li>Isolate the variable exactly as in an equation; the only extra step is the sign reversal rule.</li>
+            <li>Always state the replacement set in your final answer &ndash; ICSE marks are awarded for it.</li>
+            <li>For number-line questions, draw dots first, then shade; a small open/closed dot error loses marks.</li>
+            <li>If the variable disappears (e.g. \(0 \ge -5\)), state whether the statement is true for all reals or false for all reals.</li>
+            <li>In chain inequations write \(x\) alone in the middle (e.g. \(-2 &lt; x \le 4\)) in the final step.</li>
+          </ul>
+        </div>
+
+        <h3>H. Quick Revision Sheet &ndash; Linear Inequations</h3>
+        <div class="result-box">
+          <div class="box-label">Remember</div>
+          <ul style="margin-bottom:0;">
+            <li>\(\ge, \le, &gt;, &lt;\) &ndash; solution is usually a set, not a single value.</li>
+            <li>Adding/subtracting: sign unchanged. Multiply/divide by positive: sign unchanged. Multiply/divide by negative: <strong>reverse sign</strong>.</li>
+            <li>Closed dot \(\bullet\) for included; open dot \(\circ\) for excluded.</li>
+            <li>Chain \(a &lt; bx + c \le d\) &#8594; split and take the common part.</li>
+            <li>Filter the final inequality using the replacement set.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================ TOPIC 2: QUADRATIC EQUATIONS ============================ -->
+      <section id="quadratic-equations">
+        <h2>Topic 2 &ndash; Quadratic Equations</h2>
+
+        <h3>A. Learning Objectives</h3>
+        <p>After studying this topic you should be able to:</p>
+        <ul>
+          <li>Identify a quadratic equation in one variable and write it in the <strong>standard form</strong> \(ax^2 + bx + c = 0\).</li>
+          <li>Solve quadratic equations by <strong>factorisation</strong> and by the <strong>quadratic formula</strong>.</li>
+          <li>Use the <strong>discriminant</strong> \(b^2 - 4ac\) to determine the nature of the roots.</li>
+          <li>Give roots to a stated degree of accuracy (one decimal place, two, or three significant figures) as required by the question.</li>
+          <li>Solve word problems that reduce to quadratic equations.</li>
+        </ul>
+
+        <h3>B. Basic Concepts and Definitions</h3>
+        <div class="def-box">
+          <div class="box-label">Quadratic equation</div>
+          <p style="margin-bottom:0;">An equation of the form \(ax^2 + bx + c = 0\) where \(a \ne 0\). The values of \(x\) that satisfy it are called its <strong>roots</strong> (or solutions). A quadratic equation has <strong>at most two real roots</strong>.</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Solving by factorisation</div>
+          <p style="margin-bottom:0;">Express \(ax^2 + bx + c\) as a product of two linear factors. If the product is zero, then one of the factors must be zero (the zero-product rule). For example \(x^2 - 5x + 6 = (x - 2)(x - 3) = 0\) gives \(x = 2\) or \(x = 3\).</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Roots of the equation \(px^2 - qx + r = 0\)</div>
+          <p style="margin-bottom:0;">For the equation \(px^2 - qx + r = 0\) (here \(a = p\), \(b = -q\), \(c = r\)), the roots are real and equal <strong>if and only if</strong> the discriminant is zero: \[b^2 - 4ac = (-q)^2 - 4pr = q^2 - 4pr = 0 \;\Rightarrow\; q^2 = 4pr.\]</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Discriminant and nature of roots</div>
+          <p>For \(ax^2 + bx + c = 0\), the discriminant is \(D = b^2 - 4ac\):</p>
+          <ul style="margin-bottom:6px;">
+            <li>\(D &gt; 0\) &ndash; two distinct real roots;</li>
+            <li>\(D = 0\) &ndash; real and equal roots;</li>
+            <li>\(D &lt; 0\) &ndash; no real roots.</li>
+          </ul>
+          <p style="margin-bottom:0;">If the roots are required "correct to one decimal place" or "to 3 significant figures", use the quadratic formula and round <strong>only at the end</strong>.</p>
+        </div>
+
+        <h3>C. Important Formulas</h3>
+        <div class="formula-card">
+          <div class="fc-name">Quadratic formula</div>
+          <div class="fc-formula">\(x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}\)</div>
+          <div class="fc-note">Works for any quadratic \(ax^2 + bx + c = 0\), including those that do not factorise.</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Discriminant</div>
+          <div class="fc-formula">\(D = b^2 - 4ac\)</div>
+          <div class="fc-note">\(D &gt; 0\): two distinct real roots; \(D = 0\): real and equal; \(D &lt; 0\): no real roots.</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Sum and product of roots</div>
+          <div class="fc-formula">\(\text{Sum} = -\dfrac{b}{a}, \qquad \text{Product} = \dfrac{c}{a}\)</div>
+          <div class="fc-note">Useful for checking answers and for framing equations from given roots.</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Equation from given roots \(\alpha, \beta\)</div>
+          <div class="fc-formula">\(x^2 - (\alpha + \beta)x + \alpha\beta = 0\)</div>
+          <div class="fc-note">When the leading coefficient is 1 in the standard form \(x^2 - Sx + P = 0\).</div>
+        </div>
+
+        <h3>D. Step-by-Step Solved Examples</h3>
+
+        <h4><span class="lvl lvl-l1">Level 1</span> Solving by factorisation</h4>
+        <div class="example-box">
+          <div class="box-label">Example 1</div>
+          <p>Solve \(x^2 - 5x + 6 = 0\).</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">Find two numbers whose product is \(+6\) and whose sum is \(-5\): they are \(-2\) and \(-3\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">Factorise: \((x - 2)(x - 3) = 0\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">Apply the zero-product rule: \(x - 2 = 0\) or \(x - 3 = 0\).</div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-text">Roots: \(x = 2\) or \(x = 3\).</div></div>
+          </div>
+        </div>
+
+        <h4><span class="lvl lvl-l2">Level 2</span> Quadratic formula to 3 significant figures (verified ICSE board question)</h4>
+        <div class="example-box">
+          <div class="box-label">Example 2 &ndash; ICSE 2024 (Section B)</div>
+          <p>Solve the equation \(2x^2 - 10x + 5 = 0\), giving the roots correct to 3 significant figures.</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">Identify \(a = 2,\; b = -10,\; c = 5\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">Discriminant: \(D = (-10)^2 - 4(2)(5) = 100 - 40 = 60\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">Formula: \(x = \dfrac{10 \pm \sqrt{60}}{2(2)} = \dfrac{10 \pm \sqrt{60}}{4}\).</div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-text">\(\sqrt{60} \approx 7.7460\), so \(x = \dfrac{17.7460}{4} = 4.4365\) or \(x = \dfrac{2.2540}{4} = 0.5635\).</div></div>
+            <div class="step"><div class="step-num">5</div><div class="step-text">Correct to 3 significant figures: \(x = 4.44\) or \(x = 0.564\).</div></div>
+          </div>
+        </div>
+
+        <h4><span class="lvl lvl-l3">Level 3</span> Quadratic formula to one decimal place (verified ICSE board question)</h4>
+        <div class="example-box">
+          <div class="box-label">Example 3 &ndash; ICSE 2023 (Section A)</div>
+          <p>Solve the quadratic equation \(x^2 + 4x - 8 = 0\), correct to one decimal place.</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">Here \(a = 1,\; b = 4,\; c = -8\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">Discriminant: \(D = 16 + 32 = 48\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">Formula: \(x = \dfrac{-4 \pm \sqrt{48}}{2} = -2 \pm \sqrt{12}\), i.e. \(-2 \pm 2\sqrt{3}\).</div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-text">\(2\sqrt{3} \approx 3.4641\), so \(x = 1.4641\) or \(x = -5.4641\).</div></div>
+            <div class="step"><div class="step-num">5</div><div class="step-text">Correct to one decimal place: \(x = 1.5\) or \(x = -5.5\).</div></div>
+          </div>
+        </div>
+
+        <h3>E. Exam-Style Questions</h3>
+        <div class="qbox">
+          <div class="q-label">Question E1 <span class="qtag qtag-std">ICSE Board 2023</span></div>
+          <p>If 3 is a root of the quadratic equation \(x^2 - px + 3 = 0\), find the value of \(p\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Substitute \(x = 3\): \(9 - 3p + 3 = 0\) &rarr; \(12 - 3p = 0\) &rarr; \(p = 4\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E2 <span class="qtag qtag-std">ICSE Board 2024</span></div>
+          <p>The roots of the quadratic equation \(px^2 - qx + r = 0\) are real and equal. Show that \(q^2 = 4pr\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Real and equal roots require discriminant \(= 0\). Here \(a = p,\; b = -q,\; c = r\), so \(b^2 - 4ac = q^2 - 4pr = 0\), giving \(q^2 = 4pr\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E3 <span class="qtag qtag-basic">Original</span></div>
+          <p>Solve \(x^2 - 8x + 15 = 0\) by factorisation.</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\((x - 3)(x - 5) = 0\), so \(x = 3\) or \(x = 5\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E4 <span class="qtag qtag-basic">Original</span></div>
+          <p>Without solving, state the nature of the roots of \(2x^2 - 4x + 3 = 0\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(D = (-4)^2 - 4(2)(3) = 16 - 24 = -8 &lt; 0\). The equation has <strong>no real roots</strong>.</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E5 <span class="qtag qtag-std">Original</span></div>
+          <p>Solve \(x(x - 6) = 7\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(x^2 - 6x - 7 = 0\) &rarr; \((x - 7)(x + 1) = 0\) &rarr; \(x = 7\) or \(x = -1\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E6 <span class="qtag qtag-chal">Original</span></div>
+          <p>The product of two consecutive positive integers is 420. Find the integers.</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Let the integers be \(x\) and \(x + 1\). Then \(x(x + 1) = 420\) &rarr; \(x^2 + x - 420 = 0\) &rarr; \((x + 21)(x - 20) = 0\) &rarr; \(x = 20\) (positive). Integers are 20 and 21.</p></div></details>
+        </div>
+
+        <h3>F. Common Mistakes</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Common mistake</th><th>Correct approach</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Writing the quadratic formula with a wrong sign, e.g. \(x = -b \pm \sqrt{b^2 - 4ac}\).</td><td>The minus in front of \(b\) comes from the formula itself: \(x = \dfrac{-b \pm \sqrt{D}}{2a}\); keep \(-b\) over the denominator.</td></tr>
+              <tr><td>Forgetting the denominator \(2a\) and dividing by 2 only.</td><td>Put the whole numerator over \(2a\); when \(a \ne 1\), the denominator is not 2.</td></tr>
+              <tr><td>Rounding intermediate values while using the formula.</td><td>Keep the exact surd form as long as possible; round only the final answer to the asked accuracy.</td></tr>
+              <tr><td>Cancelling a factor of \(x\) from both sides (e.g. \(x^2 = x \Rightarrow x = 1\)).</td><td>Bring all terms to one side and factorise: \(x^2 - x = 0 \Rightarrow x(x - 1) = 0 \Rightarrow x = 0\) or \(x = 1\).</td></tr>
+              <tr><td>Discarding a negative root even when nothing in the question rules it out.</td><td>Discard a root only if it is impossible in the context (e.g. a negative length or time).</td></tr>
+              <tr><td>Confusing the roles of \(a, b, c\) when the equation is written as \(px^2 - qx + r = 0\).</td><td>First write the equation in standard form \(ax^2 + bx + c = 0\); then \(b = -q\), not \(q\).</td></tr>
+              <tr><td>Saying "no solution" for a negative discriminant in a word problem.</td><td>State "no real roots" &ndash; the equation still has complex roots, but for the ICSE syllabus you conclude no real solution.</td></tr>
+              <tr><td>Not checking roots are the answer the question wanted (e.g. giving both roots when only positive length is needed).</td><td>Re-read the question; for applied problems, write the meaningful value with its units.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>G. Exam Tips</h3>
+        <div class="tip-box">
+          <div class="box-label">Scoring tips</div>
+          <ul style="margin-bottom:0;">
+            <li>Try factorisation mentally for simple equations; if the middle term is awkward, go straight to the formula.</li>
+            <li>Show \(a = \ldots,\; b = \ldots,\; c = \ldots\) and the discriminant before the answer &ndash; partial marks are awarded.</li>
+            <li>When roots are asked "correct to one decimal place" or "to 3 significant figures", write the exact surd form first and round at the end.</li>
+            <li>For nature-of-roots questions, quote the rule (\(D &gt; 0\), \(D = 0\), \(D &lt; 0\)) after computing \(D\).</li>
+            <li>Verify by substituting the roots back into the original equation.</li>
+          </ul>
+        </div>
+
+        <h3>H. Quick Revision Sheet &ndash; Quadratic Equations</h3>
+        <div class="result-box">
+          <div class="box-label">Remember</div>
+          <ul style="margin-bottom:0;">
+            <li>Standard form: \(ax^2 + bx + c = 0\), \(a \ne 0\).</li>
+            <li>Factorise &rarr; zero-product rule; otherwise quadratic formula \(x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}\).</li>
+            <li>\(D = b^2 - 4ac\): &gt;0 two roots, =0 equal roots, &lt;0 no real roots.</li>
+            <li>Sum of roots \(= -b/a\); product of roots \(= c/a\).</li>
+            <li>Round to the asked accuracy only at the final step.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================ TOPIC 3: RATIO AND PROPORTION ============================ -->
+      <section id="ratio-and-proportion">
+        <h2>Topic 3 &ndash; Ratio and Proportion</h2>
+
+        <h3>A. Learning Objectives</h3>
+        <p>After studying this topic you should be able to:</p>
+        <ul>
+          <li>Express a ratio and write equivalent ratios in simplest form.</li>
+          <li>Check whether four quantities are <strong>in proportion</strong> and find the missing term.</li>
+          <li>Find the <strong>mean proportional</strong>, <strong>third proportional</strong> and <strong>fourth proportional</strong>.</li>
+          <li>Apply the properties \(a : b = c : d \Leftrightarrow ad = bc\).</li>
+          <li>Apply <strong>componendo and dividendo</strong> to solve problems and equations.</li>
+        </ul>
+
+        <h3>B. Basic Concepts and Definitions</h3>
+        <div class="def-box">
+          <div class="box-label">Ratio</div>
+          <p style="margin-bottom:0;">The ratio \(a : b\) is the comparison of two quantities of the same kind, written as a fraction \(\frac{a}{b}\) in its lowest terms. Example: the ratio 12 : 8 equals 3 : 2.</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Proportion</div>
+          <p>Four numbers \(a, b, c, d\) are in proportion when \(a : b = c : d\), written \(a : b :: c : d\). The key property is the <strong>cross product</strong>:</p>
+          <p style="margin-bottom:0;">\[a : b = c : d \quad \Leftrightarrow \quad ad = bc.\]</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Mean, third and fourth proportional</div>
+          <ul style="margin-bottom:6px;">
+            <li><strong>Mean proportional</strong> between \(a\) and \(b\): a number \(x\) such that \(a : x = x : b\), i.e. \(x^2 = ab\), so \(x = \sqrt{ab}\).</li>
+            <li><strong>Third proportional</strong> to \(a\) and \(b\): a number \(x\) such that \(a : b = b : x\), so \(x = \frac{b^2}{a}\).</li>
+            <li><strong>Fourth proportional</strong> to \(a, b, c\): a number \(x\) such that \(a : b = c : x\), so \(x = \frac{bc}{a}\).</li>
+          </ul>
+          <p style="margin-bottom:0;">If \(a, b, c\) are in continued proportion, then \(b^2 = ac\).</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Componendo and dividendo</div>
+          <p style="margin-bottom:0;">If \(\dfrac{a}{b} = \dfrac{c}{d}\), then \(\dfrac{a + b}{a - b} = \dfrac{c + d}{c - d}\). This rule lets you "compose" and "divide" numerators and denominators together and is very useful for solving equations with surds.</p>
+        </div>
+
+        <h3>C. Important Formulas</h3>
+        <div class="formula-card">
+          <div class="fc-name">Cross-product property</div>
+          <div class="fc-formula">\(a : b = c : d \;\Leftrightarrow\; ad = bc\)</div>
+          <div class="fc-note">The product of the extremes equals the product of the means.</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Mean proportional</div>
+          <div class="fc-formula">\(\text{Mean proportional of } a, b = \sqrt{ab}\)</div>
+          <div class="fc-note">Between 4 and 9: \(\sqrt{4 \times 9} = 6\).</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Third / fourth proportional</div>
+          <div class="fc-formula">\(\text{3rd proportional to } a, b : \dfrac{b^2}{a} \qquad \text{4th proportional to } a, b, c : \dfrac{bc}{a}\)</div>
+          <div class="fc-note">From \(a : b = b : x\) and \(a : b = c : x\) respectively.</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Componendo and dividendo</div>
+          <div class="fc-formula">\(\dfrac{a}{b} = \dfrac{c}{d} \;\Rightarrow\; \dfrac{a + b}{a - b} = \dfrac{c + d}{c - d}\)</div>
+          <div class="fc-note">Add and subtract the numerator and denominator of each side.</div>
+        </div>
+
+        <h3>D. Step-by-Step Solved Examples</h3>
+
+        <h4><span class="lvl lvl-l1">Level 1</span> Mean proportional (verified ICSE board question)</h4>
+        <div class="example-box">
+          <div class="box-label">Example 1 &ndash; ICSE 2023 (Section A)</div>
+          <p>Find the mean proportional between 4 and 9.</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">Mean proportional \(x\) satisfies \(4 : x = x : 9\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">So \(x^2 = 4 \times 9 = 36\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">\(x = \sqrt{36} = 6\).</div></div>
+          </div>
+        </div>
+
+        <h4><span class="lvl lvl-l2">Level 2</span> Ratio from a cube ratio (verified ICSE board question)</h4>
+        <div class="example-box">
+          <div class="box-label">Example 2 &ndash; ICSE 2024 (Section B)</div>
+          <p>If \(\dfrac{(a + b)^3}{(a - b)^3} = \dfrac{64}{27}\), find the ratio \(a : b\).</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">Take the cube root of both sides: \(\dfrac{a + b}{a - b} = \dfrac{\sqrt[3]{64}}{\sqrt[3]{27}} = \dfrac{4}{3}\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">Cross-multiply: \(3(a + b) = 4(a - b)\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">Expand: \(3a + 3b = 4a - 4b\), so \(7b = a\).</div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-text">Therefore \(a : b = 7 : 1\).</div></div>
+          </div>
+        </div>
+
+        <h4><span class="lvl lvl-l3">Level 3</span> Componendo and dividendo (verified ICSE board question)</h4>
+        <div class="example-box">
+          <div class="box-label">Example 3 &ndash; ICSE 2023 (Section B)</div>
+          <p>Using componendo and dividendo, solve for \(x\): \[\frac{\sqrt{2x + 2} + \sqrt{2x - 1}}{\sqrt{2x + 2} - \sqrt{2x - 1}} = 3.\]</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">Let \(A = \sqrt{2x + 2}\) and \(B = \sqrt{2x - 1}\). Given \(\dfrac{A + B}{A - B} = \dfrac{3}{1}\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">Apply componendo and dividendo: \(\dfrac{(A + B) + (A - B)}{(A + B) - (A - B)} = \dfrac{3 + 1}{3 - 1}\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">Simplify: \(\dfrac{2A}{2B} = \dfrac{4}{2}\), so \(\dfrac{A}{B} = 2\).</div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-text">Thus \(\sqrt{2x + 2} = 2\sqrt{2x - 1}\). Squaring: \(2x + 2 = 4(2x - 1)\).</div></div>
+            <div class="step"><div class="step-num">5</div><div class="step-text">Solve: \(2x + 2 = 8x - 4\), so \(6 = 6x\), giving \(x = 1\).</div></div>
+          </div>
+        </div>
+
+        <h3>E. Exam-Style Questions</h3>
+        <div class="qbox">
+          <div class="q-label">Question E1 <span class="qtag qtag-basic">Original</span></div>
+          <p>Find the fourth proportional to 5, 8 and 15.</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(5 : 8 = 15 : x\) &rarr; \(5x = 120\) &rarr; \(x = 24\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E2 <span class="qtag qtag-basic">Original</span></div>
+          <p>If \(a : b = 3 : 4\) and \(b : c = 2 : 5\), find \(a : c\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Make \(b\) the same in both ratios: \(b : c = 2 : 5 = 4 : 10\). So \(a : b : c = 3 : 4 : 10\), hence \(a : c = 3 : 10\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E3 <span class="qtag qtag-std">Original</span></div>
+          <p>Find the mean proportional between 2 and 18.</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(x^2 = 2 \times 18 = 36\), so \(x = 6\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E4 <span class="qtag qtag-std">Original</span></div>
+          <p>If 2, \(x\) and 18 are in continued proportion, find \(x\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Continued proportion: \(2 : x = x : 18\) &rarr; \(x^2 = 36\) &rarr; \(x = 6\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E5 <span class="qtag qtag-chal">Original</span></div>
+          <p>If \(\dfrac{x}{y} = \dfrac{7}{9}\), find the value of \(\dfrac{x + y}{x - y}\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">By componendo and dividendo: \(\dfrac{x + y}{x - y} = \dfrac{7 + 9}{7 - 9} = \dfrac{16}{-2} = -8\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E6 <span class="qtag qtag-chal">Original</span></div>
+          <p>Find the third proportional to 4 and 8.</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(4 : 8 = 8 : x\) &rarr; \(4x = 64\) &rarr; \(x = 16\).</p></div></details>
+        </div>
+
+        <h3>F. Common Mistakes</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Common mistake</th><th>Correct approach</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Comparing quantities of different units in a ratio.</td><td>Convert to the same unit first (e.g. 1 kg : 500 g becomes 1000 : 500 = 2 : 1).</td></tr>
+              <tr><td>Taking only the positive or negative mean proportional without context.</td><td>Mean proportional \(= \pm\sqrt{ab}\) in general; for lengths/positive quantities take the positive value.</td></tr>
+              <tr><td>Writing \(a : b = c : d\) as \(ac = bd\).</td><td>The correct identity is \(ad = bc\) (extremes &times; extremes = means &times; means).</td></tr>
+              <tr><td>Confusing third, fourth and mean proportional definitions.</td><td>Mean: \(a : x = x : b\). Third: \(a : b = b : x\). Fourth: \(a : b = c : x\). Memorise the three patterns.</td></tr>
+              <tr><td>In componendo and dividendo, applying it when the ratio is not in the form \(\frac{a}{b} = \frac{c}{d}\).</td><td>The rule applies only to equal ratios; if the RHS is a plain number \(k\), write it as \(\frac{k}{1}\) first.</td></tr>
+              <tr><td>Forgetting to reduce a ratio to lowest terms.</td><td>Always write the final ratio in simplest form, e.g. 12 : 8 = 3 : 2.</td></tr>
+              <tr><td>Assuming \(a : b = 3 : 4\) means \(a = 3\) and \(b = 4\).</td><td>Write \(a = 3k, b = 4k\); then apply the other given condition to find \(k\).</td></tr>
+              <tr><td>Squaring a surd equation and not checking for extraneous roots.</td><td>After squaring, substitute the value back into the original equation and discard any root that does not satisfy it.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>G. Exam Tips</h3>
+        <div class="tip-box">
+          <div class="box-label">Scoring tips</div>
+          <ul style="margin-bottom:0;">
+            <li>State the cross product step \(ad = bc\) explicitly &ndash; it is a mark-bearing step.</li>
+            <li>For "continued proportion", always write \(a : x = x : b\) before squaring.</li>
+            <li>With componendo and dividendo, show the two fractions \((\text{sum}, \text{difference})\) explicitly.</li>
+            <li>Check whether the answer needs to be positive (lengths, ages, money).</li>
+            <li>In ratio problems introduce \(k\): \(a : b = p : q \Rightarrow a = pk, b = qk\).</li>
+          </ul>
+        </div>
+
+        <h3>H. Quick Revision Sheet &ndash; Ratio and Proportion</h3>
+        <div class="result-box">
+          <div class="box-label">Remember</div>
+          <ul style="margin-bottom:0;">
+            <li>\(a : b = c : d \Leftrightarrow ad = bc\).</li>
+            <li>Mean proportional \(= \sqrt{ab}\); third \(= \frac{b^2}{a}\); fourth \(= \frac{bc}{a}\).</li>
+            <li>Continued proportion: \(b^2 = ac\).</li>
+            <li>Componendo and dividendo: \(\frac{a}{b} = \frac{c}{d} \Rightarrow \frac{a+b}{a-b} = \frac{c+d}{c-d}\).</li>
+            <li>Use \(k\) for ratios: \(a : b = p : q \Rightarrow a = pk, b = qk\).</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================ TOPIC 4: FACTORISATION ============================ -->
+      <section id="factorisation">
+        <h2>Topic 4 &ndash; Factorisation of Polynomials</h2>
+
+        <h3>A. Learning Objectives</h3>
+        <p>After studying this topic you should be able to:</p>
+        <ul>
+          <li>State and apply the <strong>remainder theorem</strong> to find remainders without long division.</li>
+          <li>State and apply the <strong>factor theorem</strong> to test whether a linear expression is a factor.</li>
+          <li>Find an unknown coefficient when a given linear expression is a factor.</li>
+          <li>Factorise a cubic polynomial <strong>completely</strong> using the factor theorem and polynomial division.</li>
+        </ul>
+
+        <h3>B. Basic Concepts and Definitions</h3>
+        <div class="def-box">
+          <div class="box-label">Remainder theorem</div>
+          <p style="margin-bottom:0;">If a polynomial \(P(x)\) is divided by \(x - a\), the remainder is \(P(a)\). You never need to divide: just substitute \(x = a\) into the polynomial.</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Factor theorem</div>
+          <p style="margin-bottom:0;">\(x - a\) is a factor of \(P(x)\) <strong>if and only if</strong> \(P(a) = 0\). This follows from the remainder theorem when the remainder is zero.</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Finding an unknown coefficient</div>
+          <p style="margin-bottom:0;">If \(x - a\) is a factor of a polynomial \(P(x)\) that contains an unknown coefficient \(k\), substitute \(x = a\), set \(P(a) = 0\), and solve the resulting linear equation for \(k\).</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Factorising a cubic completely</div>
+          <p style="margin-bottom:0;">Test small integer values (\(x = \pm 1, \pm 2, \pm 3, \ldots\)) to find one linear factor. Divide to obtain a quadratic, then factorise the quadratic (or use the quadratic formula) to get all three factors.</p>
+        </div>
+
+        <h3>C. Important Formulas</h3>
+        <div class="formula-card">
+          <div class="fc-name">Remainder theorem</div>
+          <div class="fc-formula">\(\text{Remainder when } P(x) \text{ is divided by } x - a = P(a)\)</div>
+          <div class="fc-note">For divisor \(ax + b\), use \(x = -\frac{b}{a}\) and the remainder is \(P\big(-\frac{b}{a}\big)\).</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Factor theorem</div>
+          <div class="fc-formula">\(x - a \text{ is a factor of } P(x) \;\Leftrightarrow\; P(a) = 0\)</div>
+          <div class="fc-note">The familiar test: substituting the root must give zero.</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Cubic factorisation pattern</div>
+          <div class="fc-formula">\(P(x) = (x - a)(px^2 + qx + r)\)</div>
+          <div class="fc-note">Once one linear factor is found, divide to get the quadratic factor and continue.</div>
+        </div>
+
+        <h3>D. Step-by-Step Solved Examples</h3>
+
+        <h4><span class="lvl lvl-l1">Level 1</span> Unknown coefficient (verified ICSE board question)</h4>
+        <div class="example-box">
+          <div class="box-label">Example 1 &ndash; ICSE 2023 (Section A)</div>
+          <p>Find the value of \(a\) if \(x - a\) is a factor of \(3x^3 + x^2 - ax - 81\).</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">Since \(x - a\) is a factor, \(P(a) = 0\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">Substitute \(x = a\): \(P(a) = 3a^3 + a^2 - a(a) - 81 = 3a^3 + a^2 - a^2 - 81\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">So \(3a^3 - 81 = 0\), giving \(a^3 = 27\).</div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-text">Therefore \(a = 3\).</div></div>
+          </div>
+        </div>
+
+        <h4><span class="lvl lvl-l2">Level 2</span> Find the coefficient, then factorise completely (verified ICSE board question)</h4>
+        <div class="example-box">
+          <div class="box-label">Example 2 &ndash; ICSE 2024 (Section B)</div>
+          <p>Find the value of \(k\) if \(3x^3 + 8x^2 - 15x + k\) has a factor \((x - 1)\). Hence factorise the polynomial completely.</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">Factor step: \(P(1) = 3(1)^3 + 8(1)^2 - 15(1) + k = 3 + 8 - 15 + k = -4 + k\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">Set to zero: \(-4 + k = 0\), so \(k = 4\). The polynomial is \(3x^3 + 8x^2 - 15x + 4\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">Divide by \((x - 1)\): quotient \(3x^2 + 11x - 4\).</div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-text">Factorise the quadratic: \(3x^2 + 11x - 4 = (3x - 1)(x + 4)\).</div></div>
+            <div class="step"><div class="step-num">5</div><div class="step-text">Complete factorisation: \((x - 1)(3x - 1)(x + 4)\).</div></div>
+          </div>
+        </div>
+
+        <h4><span class="lvl lvl-l3">Level 3</span> Factorise a cubic completely (verified ICSE board question)</h4>
+        <div class="example-box">
+          <div class="box-label">Example 3 &ndash; ICSE 2023 (Section B)</div>
+          <p>Using factor theorem, factorise completely: \(2x^3 - x^2 - 13x - 6\).</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">Test \(x = 3\): \(2(27) - 9 - 39 - 6 = 54 - 54 = 0\). So \((x - 3)\) is a factor.</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">Divide \(2x^3 - x^2 - 13x - 6\) by \((x - 3)\): quotient \(2x^2 + 5x + 2\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">Factorise \(2x^2 + 5x + 2 = (2x + 1)(x + 2)\).</div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-text">Complete factorisation: \((x - 3)(2x + 1)(x + 2)\).</div></div>
+          </div>
+        </div>
+
+        <h3>E. Exam-Style Questions</h3>
+        <div class="qbox">
+          <div class="q-label">Question E1 <span class="qtag qtag-std">ICSE Board 2023</span></div>
+          <p>If \(x - 2\) is a factor of \(x^3 - kx - 12\), find the value of \(k\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(P(2) = 8 - 2k - 12 = -4 - 2k = 0\) &rarr; \(k = -2\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E2 <span class="qtag qtag-basic">Original</span></div>
+          <p>Find the remainder when \(x^3 - 2x^2 + x + 5\) is divided by \(x - 1\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Remainder \(= P(1) = 1 - 2 + 1 + 5 = 5\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E3 <span class="qtag qtag-basic">Original</span></div>
+          <p>Show that \(x + 1\) is a factor of \(x^3 + 2x^2 - 1\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(x + 1 = x - (-1)\), so test \(P(-1) = -1 + 2 - 1 = 0\). Since the value is zero, \(x + 1\) is a factor.</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E4 <span class="qtag qtag-std">Original</span></div>
+          <p>Find the value of \(b\) if \(x - 2\) is a factor of \(2x^3 - 3x^2 + bx - 6\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(P(2) = 16 - 12 + 2b - 6 = -2 + 2b = 0\) &rarr; \(b = 1\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E5 <span class="qtag qtag-chal">Original</span></div>
+          <p>Factorise completely: \(x^3 - 7x + 6\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(P(1) = 1 - 7 + 6 = 0\), so \((x - 1)\) is a factor. Quotient = \(x^2 + x - 6 = (x + 3)(x - 2)\). Complete factorisation: \((x - 1)(x - 2)(x + 3)\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E6 <span class="qtag qtag-chal">Original</span></div>
+          <p>Find \(p\) if the polynomial \(px^3 + x^2 - 11x - 6\) leaves a remainder of 4 when divided by \(x + 1\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Remainder \(= P(-1) = -p + 1 + 11 - 6 = -p + 6 = 4\), so \(p = 2\).</p></div></details>
+        </div>
+
+        <h3>F. Common Mistakes</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Common mistake</th><th>Correct approach</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Using the divisor value instead of its root, e.g. substituting \(x = a\) for divisor \(x + a\).</td><td>For \(x + a = x - (-a)\), substitute \(x = -a\). Remember the divisor is \(x - (\text{root})\).</td></tr>
+              <tr><td>Substituting the root but forgetting the sign, e.g. \((x - 2)\) then testing \(x = +2\) as \(P(-2)\).</td><td>For \(x - 2\), test \(x = +2\); for \(x + 3\), test \(x = -3\).</td></tr>
+              <tr><td>Stopping after finding one factor of a cubic.</td><td>Continue to divide and factorise the quadratic &ndash; a complete factorisation has three linear factors where possible.</td></tr>
+              <tr><td>Adding instead of subtracting when setting \(P(\text{root}) = 0\).</td><td>Factor means remainder zero: compute \(P(\text{root})\), set explicitly equal to 0, solve.</td></tr>
+              <tr><td>Forgetting that the remainder theorem works for linear divisors only.</td><td>The theorem applies when dividing by a linear expression \((x - a)\); it is not for quadratic divisors.</td></tr>
+              <tr><td>Division errors in the cubic step (wrong quotient).</td><td>Synthetic or long division carefully; verify by multiplying the quotient back by the divisor.</td></tr>
+              <tr><td>Not testing enough candidate roots for a cubic.</td><td>Test \(\pm 1, \pm 2, \pm 3, \ldots\); for the factor to exist, one of these small integer values normally works.</td></tr>
+              <tr><td>Writing the quotient factors with wrong signs, e.g. \((2x - 1)\) instead of \((2x + 1)\).</td><td>Expand your final factorisation to check it returns the original polynomial.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>G. Exam Tips</h3>
+        <div class="tip-box">
+          <div class="box-label">Scoring tips</div>
+          <ul style="margin-bottom:0;">
+            <li>Write \(P(x) = \ldots\) and then \(P(\text{root}) = \ldots\) in full &ndash; examiners award marks at each substitution.</li>
+            <li>Set the bracket for the divisor from the sign in \(x - a\): \(x - 2\) means root 2; \(x + 1\) means root \(-1\).</li>
+            <li>"Factorise completely" needs three linear factors for a cubic; always finish the quadratic.</li>
+            <li>Check your final factorisation by expanding and matching coefficients.</li>
+            <li>Remainder-theorem questions never require doing the long division &ndash; substitute only.</li>
+          </ul>
+        </div>
+
+        <h3>H. Quick Revision Sheet &ndash; Factorisation</h3>
+        <div class="result-box">
+          <div class="box-label">Remember</div>
+          <ul style="margin-bottom:0;">
+            <li>Remainder when \(P(x) \div (x - a)\) is \(P(a)\).</li>
+            <li>\(x - a\) is a factor \(\Leftrightarrow P(a) = 0\).</li>
+            <li>For divisor \(x + a\), use root \(x = -a\).</li>
+            <li>Cubic: find one linear factor, divide, then factorise the quadratic.</li>
+            <li>Always verify by expanding the final factors.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================ TOPIC 5: MATRICES ============================ -->
+      <section id="matrices">
+        <h2>Topic 5 &ndash; Matrices</h2>
+
+        <h3>A. Learning Objectives</h3>
+        <p>After studying this topic you should be able to:</p>
+        <ul>
+          <li>State the <strong>order</strong> of a matrix and write individual elements.</li>
+          <li>Use <strong>matrix equality</strong> to find unknown elements.</li>
+          <li>Add, subtract and multiply a matrix by a scalar.</li>
+          <li>Multiply two matrices where the orders allow it.</li>
+          <li>Use the <strong>identity matrix</strong> \(I\) and the algebra \(A(B + C) = AB + AC\).</li>
+        </ul>
+
+        <h3>B. Basic Concepts and Definitions</h3>
+        <div class="def-box">
+          <div class="box-label">Matrix and its order</div>
+          <p style="margin-bottom:0;">A matrix is a rectangular arrangement of numbers in rows and columns. Its <strong>order</strong> is \(m \times n\) (read "\(m\) by \(n\)"), where \(m\) = number of rows and \(n\) = number of columns. A matrix with one column is a column matrix; with one row, a row matrix.</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Equality of matrices</div>
+          <p style="margin-bottom:0;">Two matrices are equal when they have the <strong>same order</strong> and every corresponding element is equal. This allows you to compare entries and solve for unknowns. Note that \(\begin{bmatrix}1 & 2\end{bmatrix} \ne \begin{bmatrix}1 \\ 2\end{bmatrix}\) because the orders differ.</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Addition, subtraction and scalar multiplication</div>
+          <p style="margin-bottom:0;">Matrices of the same order are added (or subtracted) element by element. In scalar multiplication, every element is multiplied by the scalar: \(k\begin{bmatrix}a & b \\ c & d\end{bmatrix} = \begin{bmatrix}ka & kb \\ kc & kd\end{bmatrix}\).</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Multiplication of matrices</div>
+          <p style="margin-bottom:0;">\(AB\) exists only when the number of columns of \(A\) equals the number of rows of \(B\). If \(A\) is \(m \times q\) and \(B\) is \(q \times n\), then \(AB\) is \(m \times n\), with each entry the "row &#215; column" dot product. Matrix multiplication is <strong>not commutative</strong> in general.</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Identity matrix \(I\)</div>
+          <p style="margin-bottom:0;">The identity matrix is a square matrix with 1 on the main diagonal and 0 elsewhere, e.g. \(I = \begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix}\). For any compatible matrix \(A\), \(AI = IA = A\).</p>
+        </div>
+
+        <h3>C. Important Formulas</h3>
+        <div class="formula-card">
+          <div class="fc-name">Element of a product</div>
+          <div class="fc-formula">\((AB)_{ij} = \sum_k a_{ik}b_{kj}\)</div>
+          <div class="fc-note">Entry in row \(i\), column \(j\) of \(AB\) = sum of products of row \(i\) of \(A\) with column \(j\) of \(B\).</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Compatibility rule</div>
+          <div class="fc-formula">\((m \times q) \cdot (q \times n) = (m \times n)\)</div>
+          <div class="fc-note">Inner dimensions must match; the result takes the outer dimensions.</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Identity property</div>
+          <div class="fc-formula">\(AI = IA = A, \qquad I = \begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix}\)</div>
+          <div class="fc-note">Multiplying by the identity leaves a matrix unchanged.</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Distributive laws</div>
+          <div class="fc-formula">\(A(B + C) = AB + AC, \qquad (A + B)C = AC + BC\)</div>
+          <div class="fc-note">Same shape rules as real numbers, but order matters: \(AB \ne BA\) usually.</div>
+        </div>
+
+        <h3>D. Step-by-Step Solved Examples</h3>
+
+        <h4><span class="lvl lvl-l1">Level 1</span> Solving a matrix equation (verified ICSE board question)</h4>
+        <div class="example-box">
+          <div class="box-label">Example 1 &ndash; ICSE 2023 (Section A)</div>
+          <p>If \(\begin{bmatrix}2 & 0 \\ 0 & 4\end{bmatrix}\begin{bmatrix}x \\ y\end{bmatrix} = \begin{bmatrix}2 \\ -8\end{bmatrix}\), find the values of \(x\) and \(y\).</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">Multiply the left-hand matrices: \(\begin{bmatrix}2x \\ 4y\end{bmatrix} = \begin{bmatrix}2 \\ -8\end{bmatrix}\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">Equate elements: \(2x = 2\) and \(4y = -8\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">Hence \(x = 1\) and \(y = -2\).</div></div>
+          </div>
+        </div>
+
+        <h4><span class="lvl lvl-l2">Level 2</span> Squaring a matrix (verified ICSE board question)</h4>
+        <div class="example-box">
+          <div class="box-label">Example 2 &ndash; ICSE 2024 (Section A)</div>
+          <p>If \(A = \begin{bmatrix}2 & 2 \\ 0 & 2\end{bmatrix}\) and \(A^2 = \begin{bmatrix}4 & x \\ 0 & 4\end{bmatrix}\), find the value of \(x\).</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">Compute \(A^2 = A \cdot A = \begin{bmatrix}2 & 2 \\ 0 & 2\end{bmatrix}\begin{bmatrix}2 & 2 \\ 0 & 2\end{bmatrix}\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">Entry (1,1): \(2 \cdot 2 + 2 \cdot 0 = 4\). Entry (1,2): \(2 \cdot 2 + 2 \cdot 2 = 8\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">Entry (2,1): \(0 \cdot 2 + 2 \cdot 0 = 0\). Entry (2,2): \(0 \cdot 2 + 2 \cdot 2 = 4\).</div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-text">So \(A^2 = \begin{bmatrix}4 & 8 \\ 0 & 4\end{bmatrix}\), hence \(x = 8\).</div></div>
+          </div>
+        </div>
+
+        <h4><span class="lvl lvl-l3">Level 3</span> Matrix product with identity (verified ICSE board question)</h4>
+        <div class="example-box">
+          <div class="box-label">Example 3 &ndash; ICSE 2023 (Section B)</div>
+          <p>Given \(A = \begin{bmatrix}1 & 3 \\ 2 & 4\end{bmatrix}\), \(B = \begin{bmatrix}1 & 2 \\ 2 & 4\end{bmatrix}\), \(C = \begin{bmatrix}4 & 1 \\ 1 & 5\end{bmatrix}\) and \(I = \begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix}\), find \(A(B + C) - 14I\).</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">Add: \(B + C = \begin{bmatrix}5 & 3 \\ 3 & 9\end{bmatrix}\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">Multiply by \(A\): \(A(B + C) = \begin{bmatrix}1 & 3 \\ 2 & 4\end{bmatrix}\begin{bmatrix}5 & 3 \\ 3 & 9\end{bmatrix}\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">Entry (1,1) \(= 1\cdot5 + 3\cdot3 = 14\); (1,2) \(= 1\cdot3 + 3\cdot9 = 30\); (2,1) \(= 2\cdot5 + 4\cdot3 = 22\); (2,2) \(= 2\cdot3 + 4\cdot9 = 42\). So \(A(B + C) = \begin{bmatrix}14 & 30 \\ 22 & 42\end{bmatrix}\).</div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-text">Subtract \(14I = \begin{bmatrix}14 & 0 \\ 0 & 14\end{bmatrix}\): result \(\begin{bmatrix}0 & 30 \\ 22 & 28\end{bmatrix}\).</div></div>
+          </div>
+        </div>
+
+        <h3>E. Exam-Style Questions</h3>
+        <div class="qbox">
+          <div class="q-label">Question E1 <span class="qtag qtag-basic">Original</span></div>
+          <p>State the order of the matrix \(\begin{bmatrix}1 & 2 & 3 \\ 4 & 5 & 6\end{bmatrix}\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">It has 2 rows and 3 columns, so its order is \(2 \times 3\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E2 <span class="qtag qtag-std">Original</span></div>
+          <p>If \(\begin{bmatrix}x + 2 & 3 \\ 4 & 2y\end{bmatrix} = \begin{bmatrix}5 & 3 \\ 4 & 10\end{bmatrix}\), find \(x\) and \(y\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(x + 2 = 5\) &rarr; \(x = 3\). \(2y = 10\) &rarr; \(y = 5\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E3 <span class="qtag qtag-std">Original</span></div>
+          <p>If \(A = \begin{bmatrix}2 & 3 \\ 4 & 5\end{bmatrix}\), find \(2A - 3I\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(2A = \begin{bmatrix}4 & 6 \\ 8 & 10\end{bmatrix}\), \(3I = \begin{bmatrix}3 & 0 \\ 0 & 3\end{bmatrix}\). \(2A - 3I = \begin{bmatrix}1 & 6 \\ 8 & 7\end{bmatrix}\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E4 <span class="qtag qtag-chal">Original</span></div>
+          <p>If \(A = \begin{bmatrix}1 & 2 \\ 0 & 1\end{bmatrix}\), find \(A^2\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(A^2 = \begin{bmatrix}1 & 2 \\ 0 & 1\end{bmatrix}\begin{bmatrix}1 & 2 \\ 0 & 1\end{bmatrix} = \begin{bmatrix}1 & 4 \\ 0 & 1\end{bmatrix}\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E5 <span class="qtag qtag-basic">Original</span></div>
+          <p>If \(A = \begin{bmatrix}0 & 1 \\ 0 & 0\end{bmatrix}\), find \(A^2\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(A^2 = \begin{bmatrix}0 & 1 \\ 0 & 0\end{bmatrix}\begin{bmatrix}0 & 1 \\ 0 & 0\end{bmatrix}\). Entry (1,2) \(= 0\cdot1 + 1\cdot0 = 0\), so \(A^2 = \begin{bmatrix}0 & 0 \\ 0 & 0\end{bmatrix}\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E6 <span class="qtag qtag-chal">Original</span></div>
+          <p>Find \(x\) such that \(\begin{bmatrix}1 & x \\ 0 & 1\end{bmatrix}\begin{bmatrix}1 & 2 \\ 0 & 1\end{bmatrix} = \begin{bmatrix}1 & 4 \\ 0 & 1\end{bmatrix}\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">LHS entry (1,2) \(= 1\cdot2 + x\cdot1 = 2 + x\). Equate to 4: \(x = 2\).</p></div></details>
+        </div>
+
+        <h3>F. Common Mistakes</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Common mistake</th><th>Correct approach</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Multiplying matrices whose orders are incompatible.</td><td>Check that columns of the first = rows of the second; only then define the product.</td></tr>
+              <tr><td>Swapping the order of multiplication \(AB\) and \(BA\).</td><td>Matrix multiplication is not commutative; always multiply in the order given. For identity: \(AI = IA = A\).</td></tr>
+              <tr><td>Treating a scalar times a matrix as multiplying only one row.</td><td>Scalar multiplication multiplies <strong>every</strong> element.</td></tr>
+              <tr><td>Confusing the order when reading \(m \times n\).</td><td>Rows &#215; columns: \(2 \times 3\) means 2 rows, 3 columns \(-\) write \(m \times n\) with rows first and columns second.</td></tr>
+              <tr><td>Equating elements of matrices with different orders.</td><td>Equality requires identical order first; only then compare entries position by position.</td></tr>
+              <tr><td>Computing a row &#215; row instead of row &#215; column in a product.</td><td>Dot the row of the first matrix against a <strong>column</strong> of the second (sum of paired products).</td></tr>
+              <tr><td>Forgetting to subtract element-by-element in \(A(B + C) - 14I\).</td><td>Handle each matrix operation separately and write the resulting matrices before combining.</td></tr>
+              <tr><td>Thinking \((A + B)^2 = A^2 + 2AB + B^2\).</td><td>Since \(AB \ne BA\), \((A + B)^2 = A^2 + AB + BA + B^2\). Avoid the binomial shortcut in matrix work.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>G. Exam Tips</h3>
+        <div class="tip-box">
+          <div class="box-label">Scoring tips</div>
+          <ul style="margin-bottom:0;">
+            <li>Write the order compatibility check as a one-line statement before multiplying.</li>
+            <li>Show at least one computed entry of a product so the examiner can see your row &#215; column method.</li>
+            <li>For matrix equations, always spell out the multiplied matrices before equating elements.</li>
+            <li>Write \(I\) explicitly when used; it is \(2 \times 2\) for 2&#215;2 matrices.</li>
+            <li>Verify \(AI = A\) on small examples to confirm your multiplication.</li>
+          </ul>
+        </div>
+
+        <h3>H. Quick Revision Sheet &ndash; Matrices</h3>
+        <div class="result-box">
+          <div class="box-label">Remember</div>
+          <ul style="margin-bottom:0;">
+            <li>Order = rows &#215; columns; equality requires same order and matching entries.</li>
+            <li>Add/subtract element-wise; scalar multiplies every element.</li>
+            <li>\(AB\) exists iff columns(\(A\)) = rows(\(B\)); result order is rows(\(A\)) &#215; columns(\(B\)).</li>
+            <li>Row of \(A\) &#215; column of \(B\): sum of pairwise products.</li>
+            <li>\(AB \ne BA\) in general; \(A(B + C) = AB + AC\); \(AI = IA = A\).</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================ TOPIC 6: ARITHMETIC PROGRESSION ============================ -->
+      <section id="arithmetic-progression">
+        <h2>Topic 6 &ndash; Arithmetic Progression (AP)</h2>
+
+        <h3>A. Learning Objectives</h3>
+        <p>After studying this topic you should be able to:</p>
+        <ul>
+          <li>Recognise an arithmetic progression and find its <strong>common difference</strong>.</li>
+          <li>Write the <strong>nth term</strong> \(T_n = a + (n-1)d\).</li>
+          <li>Find the first term, common difference or term number when other information is given.</li>
+          <li>Use the <strong>sum of n terms</strong> formula, including the last-term form \(S_n = \frac{n}{2}(a + l)\).</li>
+          <li>Solve problems that give two terms and require \(a\), \(d\) and a sum.</li>
+        </ul>
+
+        <h3>B. Basic Concepts and Definitions</h3>
+        <div class="def-box">
+          <div class="box-label">Arithmetic progression</div>
+          <p style="margin-bottom:0;">A sequence in which each term after the first differs from the previous term by a fixed number called the <strong>common difference</strong> \(d\). Example: \(15, 30, 45, 60, \ldots\) is an AP with \(a = 15\) and \(d = 15\).</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">nth term</div>
+          <p style="margin-bottom:0;">\(T_n = a + (n-1)d\), where \(a\) is the first term and \(d\) is the common difference. To find a middle term given two other terms, set up equations in \(a\) and \(d\).</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Sum of the first n terms</div>
+          <p style="margin-bottom:0;">\(S_n = \dfrac{n}{2}\big[2a + (n-1)d\big]\), or \(S_n = \dfrac{n}{2}(a + l)\) where \(l = T_n\) is the last term. Both give the same total; use the second form when the last term is known.</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Three consecutive terms</div>
+          <p style="margin-bottom:0;">If \(a, b, c\) are in AP, then \(2b = a + c\) (the middle term is the average of its neighbours). This is a quick checking tool.</p>
+        </div>
+
+        <h3>C. Important Formulas</h3>
+        <div class="formula-card">
+          <div class="fc-name">nth term</div>
+          <div class="fc-formula">\(T_n = a + (n-1)d\)</div>
+          <div class="fc-note">\(a\) = first term, \(d\) = common difference, \(n\) = term number.</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Sum of n terms</div>
+          <div class="fc-formula">\(S_n = \dfrac{n}{2}\big[2a + (n-1)d\big]\)</div>
+          <div class="fc-note">Use when \(a\) and \(d\) are known.</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Sum using the last term \(l\)</div>
+          <div class="fc-formula">\(S_n = \dfrac{n}{2}(a + l)\)</div>
+          <div class="fc-note">Useful when the last term is given or easy to find.</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Triplets in AP</div>
+          <div class="fc-formula">\(a, b, c \text{ in AP } \Rightarrow 2b = a + c\)</div>
+          <div class="fc-note">Middle = average of neighbours.</div>
+        </div>
+
+        <h3>D. Step-by-Step Solved Examples</h3>
+
+        <h4><span class="lvl lvl-l1">Level 1</span> Term directly from the nth term (verified ICSE board question)</h4>
+        <div class="example-box">
+          <div class="box-label">Example 1 &ndash; ICSE 2023 (Section A)</div>
+          <p>The nth term of an AP is \(2n + 5\). Find its 10th term (and the common difference).</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">10th term: put \(n = 10\). \(T_{10} = 2(10) + 5 = 25\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">First term: \(T_1 = 2(1) + 5 = 7\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">Common difference: \(T_2 - T_1 = (4 + 5) - 7 = 9 - 7 = 2\).</div></div>
+          </div>
+        </div>
+
+        <h4><span class="lvl lvl-l2">Level 2</span> First term and common difference from two terms (verified ICSE board question)</h4>
+        <div class="example-box">
+          <div class="box-label">Example 2 &ndash; ICSE 2023 (Section B)</div>
+          <p>The 5th and 9th terms of an AP are 4 and \(-12\). Find (a) the first term, (b) the common difference, (c) the sum of the first 16 terms.</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">Set up: \(a + 4d = 4\) and \(a + 8d = -12\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">Subtract the first from the second: \(4d = -16\), so \(d = -4\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">Back-substitute: \(a + 4(-4) = 4\) &rarr; \(a = 20\).</div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-text">Sum: \(S_{16} = \frac{16}{2}\big[2(20) + 15(-4)\big] = 8(40 - 60) = -160\).</div></div>
+          </div>
+        </div>
+
+        <h4><span class="lvl lvl-l3">Level 3</span> Term number and sum (verified ICSE board question)</h4>
+        <div class="example-box">
+          <div class="box-label">Example 3 &ndash; ICSE 2023 (Section B)</div>
+          <p>Which term of the AP \(15, 30, 45, 60, \ldots\) is 300? Hence find the sum of all the terms from the first term up to this term.</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">Here \(a = 15\), \(d = 15\). \(T_n = 15 + (n-1)15 = 15n\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">Set \(15n = 300\), so \(n = 20\). 300 is the 20th term.</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">Sum: \(S_{20} = \frac{20}{2}(15 + 300) = 10 \times 315 = 3150\).</div></div>
+          </div>
+        </div>
+
+        <h3>E. Exam-Style Questions</h3>
+        <div class="qbox">
+          <div class="q-label">Question E1 <span class="qtag qtag-std">ICSE Board 2024</span></div>
+          <p>The nth term of an AP is given by \(\dfrac{1}{a},\; \dfrac{1}{a} + 1,\; \dfrac{1}{a} + 2, \ldots\) Write the 7th term.</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">First term \(= \frac{1}{a}\), \(d = 1\). \(T_7 = \frac{1}{a} + 6\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E2 <span class="qtag qtag-std">ICSE Board 2024</span></div>
+          <p>The nth term of an AP is \(T_n = 6(7 - n)\). Find the first term \(a\), the common difference \(d\), and the sum of the first 25 terms.</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(a = T_1 = 6(6) = 36\); \(T_2 = 6(5) = 30\) so \(d = -6\). \(S_{25} = \frac{25}{2}\big[2(36) + 24(-6)\big] = \frac{25}{2}(72 - 144) = \frac{25}{2}(-72) = -900\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E3 <span class="qtag qtag-basic">Original</span></div>
+          <p>Find the 20th term of the AP \(5, 9, 13, \ldots\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(a = 5\), \(d = 4\). \(T_{20} = 5 + 19(4) = 81\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E4 <span class="qtag qtag-basic">Original</span></div>
+          <p>Find the sum \(1 + 2 + 3 + \cdots + 50\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(S = \frac{50}{2}(1 + 50) = 25 \times 51 = 1275\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E5 <span class="qtag qtag-std">Original</span></div>
+          <p>If the nth term of an AP is \(2n + 1\), find the sum of its first 10 terms.</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(a = 3\), \(d = 2\). \(S_{10} = \frac{10}{2}\big[2(3) + 9(2)\big] = 5(6 + 18) = 120\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E6 <span class="qtag qtag-basic">Original</span></div>
+          <p>Find the sum of the first 15 terms of an AP whose first term is 5 and common difference is 7.</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(S_{15} = \frac{15}{2}\big[2(5) + 14(7)\big] = \frac{15}{2}(10 + 98) = \frac{15}{2} \times 108 = 810\).</p></div></details>
+        </div>
+
+        <h3>F. Common Mistakes</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Common mistake</th><th>Correct approach</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Using \(a + nd\) instead of \(a + (n-1)d\).</td><td>The first term already accounts for \(d = 0\) at \(n = 1\); always write \((n - 1)\).</td></tr>
+              <tr><td>Computing the common difference from the first two terms incorrectly, e.g. \(T_1 - T_2\).</td><td>\(d = T_{k+1} - T_k\), e.g. \(T_2 - T_1\) (later minus earlier).</td></tr>
+              <tr><td>Writing the sum formula without halving: \(n(2a + (n-1)d)\).</td><td>The sum is \(\frac{n}{2}[2a + (n-1)d]\); the \(\frac{n}{2}\) factor is essential.</td></tr>
+              <tr><td>Using \(\frac{n}{2}(a + l)\) but with the wrong last term.</td><td>\(l\) must be the actual last term included in the sum, e.g. the 20th term for \(S_{20}\).</td></tr>
+              <tr><td>Mixing up two given terms: 5th term means \(a + 4d\), not \(a + 5d\).</td><td>Term \(k\) has \(k - 1\) differences; write \(T_5 = a + 4d\) carefully.</td></tr>
+              <tr><td>Forgetting the sign when \(d\) is negative.</td><td>Keep brackets: \(2a + (n-1)d\) with \(d = -4\) becomes \(2a - 4(n-1)\).</td></tr>
+              <tr><td>Not checking the arithmetic of long sums (e.g. \(\frac{25}{2} \times (-72)\)).</td><td>Split: \(25 \times (-36) = -900\); verify stepwise.</td></tr>
+              <tr><td>Reading "sum of all terms" but only giving the last term or term number.</td><td>The question asks for the sum \(S_n\) &ndash; compute it after finding \(n\).</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>G. Exam Tips</h3>
+        <div class="tip-box">
+          <div class="box-label">Scoring tips</div>
+          <ul style="margin-bottom:0;">
+            <li>When two terms are given, always write out both equations in \(a\) and \(d\) before solving.</li>
+            <li>For \(S_n\), substitute the values immediately: \(\frac{n}{2}\) then the bracket.</li>
+            <li>State \(a = \ldots,\; d = \ldots\) explicitly &ndash; the examiner checks these first.</li>
+            <li>Use \(\frac{n}{2}(a + l)\) whenever the last term is known or easy to get.</li>
+            <li>Check totals: an AP with negative \(d\) gives a sum that eventually decreases.</li>
+          </ul>
+        </div>
+
+        <h3>H. Quick Revision Sheet &ndash; Arithmetic Progression</h3>
+        <div class="result-box">
+          <div class="box-label">Remember</div>
+          <ul style="margin-bottom:0;">
+            <li>\(d = T_{k+1} - T_k\).</li>
+            <li>\(T_n = a + (n-1)d\).</li>
+            <li>\(S_n = \frac{n}{2}[2a + (n-1)d] = \frac{n}{2}(a + l)\).</li>
+            <li>\(a, b, c\) in AP \(\Rightarrow 2b = a + c\).</li>
+            <li>Term \(k\) uses \(k - 1\) differences in its formula.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================ TOPIC 7: GEOMETRIC PROGRESSION ============================ -->
+      <section id="geometric-progression">
+        <h2>Topic 7 &ndash; Geometric Progression (GP)</h2>
+
+        <h3>A. Learning Objectives</h3>
+        <p>After studying this topic you should be able to:</p>
+        <ul>
+          <li>Recognise a geometric progression and find its <strong>common ratio</strong> \(r\).</li>
+          <li>Write the nth term \(T_n = ar^{n-1}\).</li>
+          <li>Use the <strong>sum of n terms</strong> formula for a GP.</li>
+          <li>Find a term number from a given term value (using powers).</li>
+          <li>Distinguish AP situations from GP situations in problems.</li>
+        </ul>
+
+        <h3>B. Basic Concepts and Definitions</h3>
+        <div class="def-box">
+          <div class="box-label">Geometric progression</div>
+          <p style="margin-bottom:0;">A sequence in which each term after the first is obtained by multiplying the previous term by a fixed number called the <strong>common ratio</strong> \(r\). Example: \(15, 30, 60, 120, \ldots\) is a GP with \(a = 15\), \(r = 2\).</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">nth term</div>
+          <p style="margin-bottom:0;">\(T_n = ar^{n-1}\). The common ratio \(r = \frac{T_{k+1}}{T_k}\). A ratio \(r\) may be negative or fractional (e.g. \(1, -\frac12, \frac14, \ldots\)).</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Sum of the first n terms</div>
+          <p style="margin-bottom:0;">\(S_n = \dfrac{a(r^n - 1)}{r - 1}\). For \(|r| &lt; 1\) the same formula is often written \(S_n = \dfrac{a(1 - r^n)}{1 - r}\), which keeps the denominator positive. Both are identical.</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Three consecutive terms</div>
+          <p style="margin-bottom:0;">\(a, b, c\) are in GP if and only if \(b^2 = ac\) (the middle term squared equals the product of its neighbours).</p>
+        </div>
+
+        <h3>C. Important Formulas</h3>
+        <div class="formula-card">
+          <div class="fc-name">nth term</div>
+          <div class="fc-formula">\(T_n = ar^{n-1}\)</div>
+          <div class="fc-note">\(a\) = first term, \(r\) = common ratio.</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Sum of n terms</div>
+          <div class="fc-formula">\(S_n = \dfrac{a(r^n - 1)}{r - 1}\)</div>
+          <div class="fc-note">For \(r &gt; 1\) this form is convenient; for \(|r| &lt; 1\) use \(\dfrac{a(1 - r^n)}{1 - r}\).</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Common ratio</div>
+          <div class="fc-formula">\(r = \dfrac{T_{k+1}}{T_k}\)</div>
+          <div class="fc-note">Later term divided by the earlier term.</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Triplets in GP</div>
+          <div class="fc-formula">\(a, b, c \text{ in GP } \Rightarrow b^2 = ac\)</div>
+          <div class="fc-note">Use this to test or find a missing middle term.</div>
+        </div>
+
+        <h3>D. Step-by-Step Solved Examples</h3>
+
+        <h4><span class="lvl lvl-l1">Level 1</span> Finding a specific term</h4>
+        <div class="example-box">
+          <div class="box-label">Example 1</div>
+          <p>Find the 5th term of the GP \(3, 6, 12, \ldots\).</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">First term \(a = 3\); common ratio \(r = 6 \div 3 = 2\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">\(T_5 = ar^{4} = 3 \times 2^4 = 3 \times 16 = 48\).</div></div>
+          </div>
+        </div>
+
+        <h4><span class="lvl lvl-l2">Level 2</span> nth term and term count from a sum (verified ICSE board question)</h4>
+        <div class="example-box">
+          <div class="box-label">Example 2 &ndash; ICSE 2024 (Section B)</div>
+          <p>The first four terms of a GP are \(15, 30, 60, 120, \ldots\) (a) Write the nth term. (b) Find the value of \(n\) for which the sum of the first \(n\) terms is 945.</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">\(a = 15\), \(r = 30 \div 15 = 2\), so \(T_n = 15 \times 2^{n-1}\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">Sum: \(S_n = \dfrac{15(2^n - 1)}{2 - 1} = 15(2^n - 1)\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">Set equal to 945: \(15(2^n - 1) = 945\) &rarr; \(2^n - 1 = 63\) &rarr; \(2^n = 64\).</div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-text">Since \(64 = 2^6\), \(n = 6\).</div></div>
+          </div>
+        </div>
+
+        <h4><span class="lvl lvl-l3">Level 3</span> Sum with a fractional ratio</h4>
+        <div class="example-box">
+          <div class="box-label">Example 3 (Original)</div>
+          <p>Find the sum of the first 6 terms of the GP \(1, \frac12, \frac14, \ldots\).</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">\(a = 1\), \(r = \frac12\), \(n = 6\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">Use the \(|r| &lt; 1\) form: \(S_6 = \dfrac{1\left(1 - \left(\frac12\right)^6\right)}{1 - \frac12}\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">\(\left(\frac12\right)^6 = \frac{1}{64}\), so \(S_6 = \dfrac{1 - \frac{1}{64}}{\frac12} = \dfrac{63}{64} \times 2 = \dfrac{63}{32}\).</div></div>
+          </div>
+        </div>
+
+        <h3>E. Exam-Style Questions</h3>
+        <div class="qbox">
+          <div class="q-label">Question E1 <span class="qtag qtag-std">Original</span></div>
+          <p>Which term of the GP \(2, 4, 8, \ldots\) is 512?</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(a = 2\), \(r = 2\). \(T_n = 2 \times 2^{n-1} = 2^n = 512 = 2^9\), so \(n = 9\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E2 <span class="qtag qtag-std">Original</span></div>
+          <p>Find the 6th term of the GP \(81, 27, 9, \ldots\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(a = 81\), \(r = \frac13\). \(T_6 = 81 \times (\frac13)^5 = 81 \times \frac{1}{243} = \frac13\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E3 <span class="qtag qtag-basic">Original</span></div>
+          <p>Find the sum \(1 + 2 + 4 + 8 + 16\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(a=1\), \(r=2\), \(n=5\): \(S = \frac{1(2^5 - 1)}{2 - 1} = \frac{32 - 1}{1} = 31\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E4 <span class="qtag qtag-basic">Original</span></div>
+          <p>Show that \(5, 10, 20\) are in GP, and write the common ratio.</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(b^2 = 10^2 = 100\) and \(a \cdot c = 5 \cdot 20 = 100\); since \(b^2 = ac\), they are in GP with \(r = 2\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E5 <span class="qtag qtag-std">Original</span></div>
+          <p>The product of the first three terms of a GP with \(a = 2\) and \(r = 3\) equals the product of which three numbers?</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Terms are \(2, 6, 18\); product \(= 2 \times 6 \times 18 = 216\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E6 <span class="qtag qtag-chal">Original</span></div>
+          <p>Find the sum of the GP \(3 + 6 + 12 + \cdots + 192\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(a = 3\), \(r = 2\). Last term \(192 = 3 \times 2^{n-1}\) &rarr; \(2^{n-1} = 64\) &rarr; \(n = 7\). \(S_7 = \frac{3(2^7 - 1)}{2 - 1} = 3 \times 127 = 381\).</p></div></details>
+        </div>
+
+        <h3>F. Common Mistakes</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Common mistake</th><th>Correct approach</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Using an AP formula for a GP problem (adding instead of multiplying).</td><td>AP adds a common difference; GP multiplies by a common ratio. Decide first which one is being described.</td></tr>
+              <tr><td>Writing the exponent as \(n\) instead of \(n - 1\) in \(T_n\).</td><td>The first term is \(ar^0\), so the \(n\)th term uses \(n - 1\) multiplications by \(r\).</td></tr>
+              <tr><td>Computing \(r\) backwards: \(r = \frac{T_k}{T_{k+1}}\).</td><td>\(r = \frac{T_{k+1}}{T_k}\), i.e. later term divided by earlier term.</td></tr>
+              <tr><td>Using \(S_n = \frac{a(r^n - 1)}{r - 1}\) with a fractional \(r &lt; 1\) and getting a wrong sign.</td><td>For \(|r| &lt; 1\) use \(\frac{a(1 - r^n)}{1 - r}\) so the denominator is positive.</td></tr>
+              <tr><td>Forgetting the term \(a\) multiplies the whole bracket in \(S_n\).</td><td>\(S_n = a \cdot \frac{r^n - 1}{r - 1}\); the leading \(a\) multiplies the entire fraction.</td></tr>
+              <tr><td>Treating negative \(r\) with an even power carelessly (sign errors).</td><td>With \(r = -2\), powers alternate sign: \(r^3 = -8\), \(r^4 = 16\). Decide the sign first.</td></tr>
+              <tr><td>Not recognising \(2^n = 64\) for \(n = 6\) and guessing.</td><td>Learn powers of 2 up to \(2^{10}\) and other common powers; then the term-number step is instant.</td></tr>
+              <tr><td>Misreading \(1 + \frac12 + \frac14 + \cdots\) as an AP.</td><td>The ratio \(\frac12\) (multiply) means it is a GP with \(|r| &lt; 1\) &ndash; use the fraction form of the sum.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>G. Exam Tips</h3>
+        <div class="tip-box">
+          <div class="box-label">Scoring tips</div>
+          <ul style="margin-bottom:0;">
+            <li>Write \(a = \ldots,\; r = \ldots\) at the top; they are the first two marks.</li>
+            <li>For the sum, show \(S_n = a\frac{r^n - 1}{r - 1}\) and substitute in one neat line.</li>
+            <li>When a term value is given, work with powers: \(T_n = 512 \Rightarrow 2^{n-1} \times 2 = 2^n\).</li>
+            <li>For \(|r| &lt; 1\) choose the form with \(1 - r\) in the denominator to avoid negative signs.</li>
+            <li>Practise the powers \(2^1\) to \(2^{10}\) and \(3^1\) to \(3^5\) for fast term-count work.</li>
+          </ul>
+        </div>
+
+        <h3>H. Quick Revision Sheet &ndash; Geometric Progression</h3>
+        <div class="result-box">
+          <div class="box-label">Remember</div>
+          <ul style="margin-bottom:0;">
+            <li>\(r = \frac{T_{k+1}}{T_k}\); GP multiplies by \(r\), AP adds by \(d\).</li>
+            <li>\(T_n = ar^{n-1}\).</li>
+            <li>\(S_n = \frac{a(r^n - 1)}{r - 1}\) (use \(\frac{a(1 - r^n)}{1 - r}\) for \(|r| &lt; 1\)).</li>
+            <li>\(a, b, c\) in GP \(\Rightarrow b^2 = ac\).</li>
+            <li>Match powers to find the term number \(n\).</li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="tip-box">
+        <div class="box-label">Next steps</div>
+        <p style="margin-bottom:0;">Now that you have revised all seven topics, attempt the <a href="/icse-study-material/class-10/mathematics/algebra/quiz/">topic quiz</a> for instant feedback, then the <a href="/icse-study-material/class-10/mathematics/algebra/practice-paper/">practice paper</a> and finally the timed <a href="/icse-study-material/class-10/mathematics/algebra/test/">chapter test</a>.</p>
+      </div>
+
+    </article>
+
+    <a class="sm-back" href="/icse-study-material/class-10/mathematics/algebra/"><i class="fas fa-arrow-left"></i> Back to Algebra (Unit 2)</a>
+    <a class="sm-back" href="/icse-study-material/class-10/mathematics/" style="margin-left: 12px;"><i class="fas fa-arrow-left"></i> All Mathematics topics</a>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-about">
+      <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+      <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#courses">Courses</a></li>
+        <li><a href="/icse-study-material/">ICSE Study Material</a></li>
+        <li><a href="/cbse-study-material/">CBSE Study Material</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Popular Searches</h4>
+      <ul>
+        <li><a href="/icse-study-material/">ICSE Study Material</a></li>
+        <li><a href="/icse-tuition-hulimavu/">ICSE Tuition in Hulimavu</a></li>
+        <li><a href="/cbse-study-material/">CBSE Study Material</a></li>
+        <li><a href="/maths-tuition-hulimavu/">Maths Tuition in Hulimavu</a></li>
+        <li><a href="/science-tuition-hulimavu/">Science Tuition in Hulimavu</a></li>
+        <li><a href="/class-10-tuition-hulimavu/">Class 10 Tuition Hulimavu</a></li>
+        <li><a href="/tuition-centre-bangalore/">Best Tuition Centre in Bangalore</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="/cbse-study-material/sm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/supabase-config.js"></script>
+<script src="/supabase-auth.js"></script>
+<script src="/supabase-nav.js" defer></script>
+<script src="/chatbot/chatbot-loader.js" defer></script>
+</body>
+</html>

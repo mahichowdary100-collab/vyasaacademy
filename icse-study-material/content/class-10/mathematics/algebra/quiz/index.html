@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICSE Class 10 Maths Algebra (Unit 2) Quiz | Vyasa Academy</title>
+  <meta name="description" content="Test your ICSE Class 10 Mathematics Algebra (Unit 2) knowledge with an interactive 20-question quiz on linear inequations, quadratic equations, ratio and proportion, factorisation, matrices, AP and GP." />
+  <link rel="canonical" href="https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/algebra/quiz/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vyasa Academy" />
+  <meta property="og:title" content="ICSE Class 10 Maths Algebra (Unit 2) Quiz | Vyasa Academy" />
+  <meta property="og:description" content="Test your ICSE Class 10 Mathematics Algebra (Unit 2) knowledge with an interactive 20-question quiz on linear inequations, quadratic equations, ratio and proportion, factorisation, matrices, AP and GP." />
+  <meta property="og:url" content="https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/algebra/quiz/" />
+  <meta property="og:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ICSE Class 10 Maths Algebra (Unit 2) Quiz | Vyasa Academy" />
+  <meta name="twitter:description" content="Test your ICSE Class 10 Mathematics Algebra (Unit 2) knowledge with an interactive 20-question quiz on linear inequations, quadratic equations, ratio and proportion, factorisation, matrices, AP and GP." />
+  <meta name="twitter:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","itemListElement":[{"position":1,"name":"Home","item":"https://www.vyasaacademy.in/","@type":"ListItem"},{"position":2,"name":"ICSE Study Material","item":"https://www.vyasaacademy.in/icse-study-material/","@type":"ListItem"},{"position":3,"name":"Class 10","item":"https://www.vyasaacademy.in/icse-study-material/class-10/","@type":"ListItem"},{"position":4,"name":"Mathematics","item":"https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/","@type":"ListItem"},{"position":5,"name":"Algebra (Unit 2)","item":"https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/algebra/","@type":"ListItem"},{"position":6,"name":"Quiz","item":"https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/algebra/quiz/","@type":"ListItem"}],"@type":"BreadcrumbList"}
+  </script>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+      processEscapes: true
+    }
+  };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <style>
+  .quiz-app { }
+  .quiz-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin: 6px 0 14px; }
+  .quiz-progress-wrap { flex: 1 1 100%; }
+  .quiz-counter { font-weight: 800; color: var(--primary); }
+  .quiz-timer { display: inline-flex; align-items: center; gap: 8px; background: #eff6ff; border: 1px solid #bfdbfe; color: #1d4ed8; border-radius: 999px; padding: 6px 14px; font-weight: 700; }
+  .quiz-timer.warn { background: #fef2f2; border-color: #fecaca; color: #b91c1c; }
+  .progress-track { height: 12px; background: #e5e7eb; border-radius: 999px; overflow: hidden; }
+  .progress-fill { height: 100%; width: 5%; background: var(--primary); border-radius: 999px; transition: width 0.25s ease; }
+
+  .quiz-q { display: none; border: 1px solid #e5e7eb; border-radius: var(--radius); padding: 20px 22px; margin: 0 0 18px; }
+  .quiz-q.is-active { display: block; }
+  .quiz-q legend, .q-num { font-weight: 800; color: var(--primary); }
+  .quiz-q .q-diff { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; color: var(--gray); margin-left: 8px; }
+  .quiz-q .q-src { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; color: #4338ca; background: #eef2ff; padding: 2px 8px; border-radius: 999px; margin-left: 8px; }
+  .quiz-q .q-src.src-new { color: #6b7280; background: #f3f4f6; }
+  .quiz-q .q-text { font-size: 1.06rem; font-weight: 600; margin: 8px 0 14px; color: var(--dark); }
+
+  .opt { display: flex; align-items: flex-start; gap: 10px; border: 1px solid #e5e7eb; border-radius: 10px; padding: 12px 14px; margin: 8px 0; cursor: pointer; transition: var(--transition); background: #fff; }
+  .opt:hover { border-color: var(--primary); background: #eef2ff; }
+  .opt input { position: absolute; opacity: 0; pointer-events: none; }
+  .opt .opt-radio { flex-shrink: 0; width: 20px; height: 20px; margin-top: 2px; border: 2px solid #9ca3af; border-radius: 50%; position: relative; }
+  .opt input:focus-visible + .opt-radio { outline: 3px solid #fbbf24; outline-offset: 2px; }
+  .opt input:checked + .opt-radio { border-color: var(--primary); }
+  .opt input:checked + .opt-radio::after { content: ""; position: absolute; inset: 3px; background: var(--primary); border-radius: 50%; }
+  .opt .opt-key { flex-shrink: 0; font-weight: 800; color: var(--primary); width: 22px; }
+  .opt .opt-val { flex: 1; }
+
+  .quiz-ok .opts-ok .opt.answered-correct, .opt.answered-correct { border-color: #16a34a; background: #f0fdf4; }
+  .opt.answered-wrong { border-color: #dc2626; background: #fef2f2; }
+
+  .quiz-controls { display: flex; flex-wrap: wrap; gap: 10px; margin: 8px 0 4px; }
+  .quiz-controls button, .quiz-actions button { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 22px; border-radius: var(--radius); border: 2px solid var(--primary); background: var(--primary); color: #fff; font-family: inherit; font-weight: 700; font-size: 0.97rem; cursor: pointer; transition: var(--transition); }
+  .quiz-controls button.secondary, .quiz-actions button.secondary { background: #fff; color: var(--primary); }
+  .quiz-controls button:disabled { opacity: 0.45; cursor: not-allowed; }
+  .quiz-controls button:focus-visible, .quiz-actions button:focus-visible { outline: 3px solid #fbbf24; outline-offset: 2px; }
+
+  .quiz-panel { display: none; }
+  .quiz-panel.is-active { display: block; }
+
+  .result-card { text-align: center; background: #fff; border: 1px solid #e5e7eb; border-radius: var(--radius); padding: 30px 24px; margin: 10px 0 20px; }
+  .result-card .score-big { font-size: 2.8rem; font-weight: 800; color: var(--primary); }
+  .result-card .pct-big { font-size: 1.4rem; font-weight: 800; color: var(--accent-dark); margin: 6px 0 14px; }
+  .result-card .msg { font-size: 1.05rem; color: var(--dark); max-width: 480px; margin: 0 auto; }
+
+  .result-summary { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 20px 0; }
+  .rs-chip { min-width: 130px; border: 1px solid #e5e7eb; border-radius: 10px; padding: 12px; background: #fff; }
+  .rs-chip .rs-n { font-size: 1.6rem; font-weight: 800; color: var(--dark); }
+  .rs-chip .rs-l { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; color: var(--gray); }
+  .rs-chip.good .rs-n { color: #16a34a; }
+  .rs-chip.warn .rs-n { color: #b91c1c; }
+
+  .topic-stats { margin: 8px 0 20px; }
+  .topic-stats h3 { font-size: 1.05rem; margin: 0 0 10px; color: var(--dark); }
+  .topic-table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #e5e7eb; border-radius: var(--radius); overflow: hidden; }
+  .topic-table th, .topic-table td { border: 1px solid #e5e7eb; padding: 9px 12px; text-align: left; font-size: 0.92rem; }
+  .topic-table th { background: #f9fafb; font-weight: 800; color: var(--dark); }
+  .topic-table td.num { text-align: center; font-weight: 700; }
+
+  .explanations { margin: 24px 0 10px; }
+  .exp-card { border: 1px solid #e5e7eb; border-radius: var(--radius); margin: 12px 0; padding: 16px 18px; background: #fff; }
+  .exp-card .exp-head { font-weight: 800; color: var(--dark); margin-bottom: 8px; }
+  .exp-card .exp-head .exp-state { margin-left: 8px; font-size: 0.82rem; padding: 2px 10px; border-radius: 999px; font-weight: 700; }
+  .exp-state.ok { background: #dcfce7; color: #15803d; }
+  .exp-state.no { background: #fee2e2; color: #b91c1c; }
+  .exp-card .exp-row { margin: 4px 0; }
+  .exp-card .exp-row .exp-label { font-weight: 700; color: var(--gray); }
+  .exp-card .exp-note { margin-top: 8px; padding-top: 8px; border-top: 1px dashed #e5e7eb; color: var(--dark); }
+
+  .quiz-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0; }
+
+  dialog { border: none; border-radius: var(--radius); padding: 0; box-shadow: 0 20px 60px rgba(0,0,0,0.25); max-width: 440px; width: 92%; }
+  dialog::backdrop { background: rgba(0,0,0,0.45); }
+  .modal-body { padding: 22px 24px; }
+  .modal-body h3 { margin: 0 0 10px; font-size: 1.15rem; }
+  .modal-actions { display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
+  .modal-actions button { min-height: 44px; padding: 10px 18px; border-radius: var(--radius); border: 2px solid var(--primary); background: var(--primary); color: #fff; font-family: inherit; font-weight: 700; cursor: pointer; }
+  .modal-actions button.secondary { background: #fff; color: var(--primary); }
+
+  .timed-note { background: #eef2ff; border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 12px 16px; margin: 4px 0 16px; font-size: 0.95rem; }
+  .source-note { background: #f0fdf4; border-left: 4px solid #16a34a; border-radius: 0 var(--radius) var(--radius) 0; padding: 10px 16px; margin: 0 0 16px; font-size: 0.92rem; }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+  .resource-nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
+  .resource-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: var(--radius); border: 2px solid #e5e7eb; font-weight: 600; font-size: 0.92rem; color: var(--dark); background: var(--white); transition: var(--transition); }
+  .resource-nav a:hover, .resource-nav a.is-active { border-color: var(--primary); background: var(--primary); color: var(--white); }
+
+  .sm-back { display: inline-flex; align-items: center; gap: 8px; margin-top: 30px; padding: 10px 0; color: var(--primary); font-weight: 600; }
+  .sm-back:hover { color: var(--accent-dark); }
+
+  @media (max-width: 640px) {
+    .quiz-q { padding: 16px 14px; }
+    .quiz-q .q-text { font-size: 1rem; }
+    .opt { padding: 10px 12px; }
+    .result-card .score-big { font-size: 2.2rem; }
+    .quiz-controls button, .quiz-actions button { flex: 1 1 100%; }
+  }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="/" class="logo"><i class="fas fa-graduation-cap"></i> Vyasa Academy</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="/">Home</a>
+      <a href="/#courses">Courses</a>
+      <a href="/icse-study-material/" class="active">Study Material</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main class="sm-page">
+  <div class="container sm-container">
+    <nav class="sm-crumbs" aria-label="Breadcrumb">
+      <a href="https://www.vyasaacademy.in/">Home</a> /
+      <a href="https://www.vyasaacademy.in/icse-study-material/">ICSE Study Material</a> /
+      <a href="https://www.vyasaacademy.in/icse-study-material/class-10/">Class 10</a> /
+      <a href="https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/">Mathematics</a> /
+      <a href="https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/algebra/">Algebra (Unit 2)</a> /
+      Quiz
+    </nav>
+
+    <section class="sm-hero sm-hero-slim">
+      <p class="sm-eyebrow">ICSE Class 10 &middot; Mathematics &middot; Algebra (Unit 2)</p>
+      <h1>Class 10 Mathematics &ndash; Algebra (Unit 2) Quiz</h1>
+      <p>Test your understanding of linear inequations, quadratic equations, ratio and proportion, factorisation of polynomials, matrices, arithmetic progression and geometric progression with this 20-question interactive quiz.</p>
+    </section>
+
+    <nav class="resource-nav" aria-label="Chapter resources">
+      <a href="/icse-study-material/class-10/mathematics/algebra/notes/"><i class="fas fa-book-open"></i> Notes</a>
+      <a href="/icse-study-material/class-10/mathematics/algebra/practice-paper/"><i class="fas fa-file-lines"></i> Practice Paper</a>
+      <a class="is-active" href="/icse-study-material/class-10/mathematics/algebra/quiz/"><i class="fas fa-bullseye"></i> Quiz</a>
+      <a href="/icse-study-material/class-10/mathematics/algebra/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+    </nav>
+
+    <section class="quiz-app" id="quizApp" aria-label="Algebra interactive quiz">
+      <p class="timed-note"><i class="fas fa-stopwatch"></i> This quiz is <strong>timed</strong>. You have <strong>15 minutes</strong> to answer all 20 questions. When the time is up, the quiz submits automatically.</p>
+      <p class="source-note"><i class="fas fa-circle-check"></i> <strong>Question sourcing:</strong> 8 of the 20 questions are verified ICSE board questions from the 2023 and 2024 papers, tagged <strong>ICSE Board</strong>. The remaining 12 are original exam-style questions created by Vyasa Academy. In the quiz, options appear in a shuffled order, so the letter labels are not the same as any printed source.</p>
+
+      <noscript>
+        <div class="notice-box" role="alert">This interactive quiz requires JavaScript. You can use the chapter <a href="/icse-study-material/class-10/mathematics/algebra/practice-paper/">practice paper</a> instead.</div>
+      </noscript>
+
+      <div id="quizView">
+        <div class="quiz-top">
+          <span class="quiz-counter" id="quizCounter" aria-live="polite">Question 1 of 20</span>
+          <span class="quiz-timer" id="quizTimer" aria-live="off"><i class="fas fa-stopwatch" aria-hidden="true"></i><span id="quizTimerText">Time Remaining: 15:00</span><span class="visually-hidden" id="timerLive" aria-live="polite"></span></span>
+        </div>
+        <div class="quiz-progress-wrap">
+          <div class="progress-track" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="20" aria-valuenow="1" id="progressBar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <span class="visually-hidden" id="progressText">At question 1 of 20</span>
+        </div>
+
+        <form id="quizForm" novalidate>
+          <fieldset class="quiz-q" id="q1" aria-labelledby="q1label">
+            <legend id="q1label"><span class="q-num">Question 1</span><span class="q-diff">Easy</span><span class="q-src">ICSE Board 2023</span></legend>
+            <p class="q-text">Solve the inequation \(2x + 4 \le 14\), where \(x \in \mathbb{W}\) (whole numbers). The solution set is:</p>
+            <label class="opt"><input type="radio" name="q1" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(\{0, 1, 2, 3, 4, 5\}\)</span></label>
+            <label class="opt"><input type="radio" name="q1" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(\{0, 1, 2, 3, 4\}\)</span></label>
+            <label class="opt"><input type="radio" name="q1" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(\{1, 2, 3, 4, 5\}\)</span></label>
+            <label class="opt"><input type="radio" name="q1" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(\{0, 1, 2, 3, 4, 5, 6\}\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q2" aria-labelledby="q2label">
+            <legend id="q2label"><span class="q-num">Question 2</span><span class="q-diff">Easy</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">Solve the inequation \(3x + 2 \ge 2x + 9\), where \(x \in \mathbb{I}\) (integers). The solution set is:</p>
+            <label class="opt"><input type="radio" name="q2" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(\{7, 8, 9, \ldots\}\)</span></label>
+            <label class="opt"><input type="radio" name="q2" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(\{x : x \ge 7,\ x \in \mathbb{R}\}\)</span></label>
+            <label class="opt"><input type="radio" name="q2" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(\{6, 7, 8, \ldots\}\)</span></label>
+            <label class="opt"><input type="radio" name="q2" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(\{x : x \le 7,\ x \in \mathbb{I}\}\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q3" aria-labelledby="q3label">
+            <legend id="q3label"><span class="q-num">Question 3</span><span class="q-diff">Moderate</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">Solve the inequation \(-2 \le 3x - 1 &lt; 8\), where \(x \in \mathbb{R}\). The solution set is:</p>
+            <label class="opt"><input type="radio" name="q3" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(\{x : x \in \mathbb{R},\; -\dfrac{1}{3} &lt; x \le 3\}\)</span></label>
+            <label class="opt"><input type="radio" name="q3" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(\{x : x \in \mathbb{R},\; -\dfrac{1}{3} \le x &lt; 3\}\)</span></label>
+            <label class="opt"><input type="radio" name="q3" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(\{x : x \in \mathbb{R},\; -1 \le x &lt; 3\}\)</span></label>
+            <label class="opt"><input type="radio" name="q3" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(\{x : x \in \mathbb{R},\; -\dfrac{2}{3} \le x &lt; 8\}\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q4" aria-labelledby="q4label">
+            <legend id="q4label"><span class="q-num">Question 4</span><span class="q-diff">Easy</span><span class="q-src">ICSE Board 2023</span></legend>
+            <p class="q-text">If 3 is a root of the quadratic equation \(x^2 - px + 3 = 0\), the value of \(p\) is:</p>
+            <label class="opt"><input type="radio" name="q4" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(4\)</span></label>
+            <label class="opt"><input type="radio" name="q4" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(-4\)</span></label>
+            <label class="opt"><input type="radio" name="q4" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(6\)</span></label>
+            <label class="opt"><input type="radio" name="q4" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(2\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q5" aria-labelledby="q5label">
+            <legend id="q5label"><span class="q-num">Question 5</span><span class="q-diff">Moderate</span><span class="q-src">ICSE Board 2024</span></legend>
+            <p class="q-text">The roots of the quadratic equation \(px^2 - qx + r = 0\) are real and equal. Which statement is true?</p>
+            <label class="opt"><input type="radio" name="q5" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(q^2 &gt; 4pr\)</span></label>
+            <label class="opt"><input type="radio" name="q5" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(q^2 &lt; 4pr\)</span></label>
+            <label class="opt"><input type="radio" name="q5" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(q^2 = -4pr\)</span></label>
+            <label class="opt"><input type="radio" name="q5" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(q^2 = 4pr\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q6" aria-labelledby="q6label">
+            <legend id="q6label"><span class="q-num">Question 6</span><span class="q-diff">Easy</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">Solve the quadratic equation \(x^2 - 8x + 15 = 0\) by factorisation.</p>
+            <label class="opt"><input type="radio" name="q6" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(x = -3\) or \(x = 5\)</span></label>
+            <label class="opt"><input type="radio" name="q6" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(x = 3\) or \(x = -5\)</span></label>
+            <label class="opt"><input type="radio" name="q6" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(x = 3\) or \(x = 5\)</span></label>
+            <label class="opt"><input type="radio" name="q6" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(x = 15\) or \(x = 1\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q7" aria-labelledby="q7label">
+            <legend id="q7label"><span class="q-num">Question 7</span><span class="q-diff">Easy</span><span class="q-src">ICSE Board 2023</span></legend>
+            <p class="q-text">The mean proportional between 4 and 9 is:</p>
+            <label class="opt"><input type="radio" name="q7" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(36\)</span></label>
+            <label class="opt"><input type="radio" name="q7" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(6\)</span></label>
+            <label class="opt"><input type="radio" name="q7" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(6.5\)</span></label>
+            <label class="opt"><input type="radio" name="q7" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(13\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q8" aria-labelledby="q8label">
+            <legend id="q8label"><span class="q-num">Question 8</span><span class="q-diff">Moderate</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">If \(a : b = 3 : 4\) and \(b : c = 8 : 9\), find the ratio \(a : c\).</p>
+            <label class="opt"><input type="radio" name="q8" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(2 : 3\)</span></label>
+            <label class="opt"><input type="radio" name="q8" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(3 : 4\)</span></label>
+            <label class="opt"><input type="radio" name="q8" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(3 : 2\)</span></label>
+            <label class="opt"><input type="radio" name="q8" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(4 : 3\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q9" aria-labelledby="q9label">
+            <legend id="q9label"><span class="q-num">Question 9</span><span class="q-diff">Easy</span><span class="q-src">ICSE Board 2023</span></legend>
+            <p class="q-text">If \(x - 2\) is a factor of \(x^3 - kx - 12\), the value of \(k\) is:</p>
+            <label class="opt"><input type="radio" name="q9" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(2\)</span></label>
+            <label class="opt"><input type="radio" name="q9" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(1\)</span></label>
+            <label class="opt"><input type="radio" name="q9" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(-4\)</span></label>
+            <label class="opt"><input type="radio" name="q9" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(-2\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q10" aria-labelledby="q10label">
+            <legend id="q10label"><span class="q-num">Question 10</span><span class="q-diff">Easy</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">Factorise \(x^2 + 5x + 6\).</p>
+            <label class="opt"><input type="radio" name="q10" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\((x - 2)(x + 3)\)</span></label>
+            <label class="opt"><input type="radio" name="q10" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\((x + 2)(x + 3)\)</span></label>
+            <label class="opt"><input type="radio" name="q10" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\((x + 2)(x - 3)\)</span></label>
+            <label class="opt"><input type="radio" name="q10" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\((x + 1)(x + 6)\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q11" aria-labelledby="q11label">
+            <legend id="q11label"><span class="q-num">Question 11</span><span class="q-diff">Moderate</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">The remainder when \(x^3 - 2x^2 + x + 5\) is divided by \(x - 1\) is:</p>
+            <label class="opt"><input type="radio" name="q11" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(5\)</span></label>
+            <label class="opt"><input type="radio" name="q11" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(3\)</span></label>
+            <label class="opt"><input type="radio" name="q11" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(7\)</span></label>
+            <label class="opt"><input type="radio" name="q11" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(0\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q12" aria-labelledby="q12label">
+            <legend id="q12label"><span class="q-num">Question 12</span><span class="q-diff">Moderate</span><span class="q-src">ICSE Board 2024</span></legend>
+            <p class="q-text">If \(A = \begin{bmatrix}2 &amp; 2 \\ 0 &amp; 2\end{bmatrix}\) and \(A^2 = \begin{bmatrix}4 &amp; x \\ 0 &amp; 4\end{bmatrix}\), the value of \(x\) is:</p>
+            <label class="opt"><input type="radio" name="q12" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(4\)</span></label>
+            <label class="opt"><input type="radio" name="q12" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(6\)</span></label>
+            <label class="opt"><input type="radio" name="q12" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(8\)</span></label>
+            <label class="opt"><input type="radio" name="q12" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(2\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q13" aria-labelledby="q13label">
+            <legend id="q13label"><span class="q-num">Question 13</span><span class="q-diff">Easy</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">The order of the matrix \(\begin{bmatrix}1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6\end{bmatrix}\) is:</p>
+            <label class="opt"><input type="radio" name="q13" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(2 \times 3\)</span></label>
+            <label class="opt"><input type="radio" name="q13" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(3 \times 2\)</span></label>
+            <label class="opt"><input type="radio" name="q13" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(2 \times 2\)</span></label>
+            <label class="opt"><input type="radio" name="q13" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(1 \times 6\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q14" aria-labelledby="q14label">
+            <legend id="q14label"><span class="q-num">Question 14</span><span class="q-diff">Moderate</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">If \(\begin{bmatrix}x + 2 &amp; 3 \\ 4 &amp; 2y\end{bmatrix} = \begin{bmatrix}5 &amp; 3 \\ 4 &amp; 10\end{bmatrix}\), then \(x\) and \(y\) are:</p>
+            <label class="opt"><input type="radio" name="q14" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(x = 3,\ y = 10\)</span></label>
+            <label class="opt"><input type="radio" name="q14" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(x = 5,\ y = 5\)</span></label>
+            <label class="opt"><input type="radio" name="q14" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(x = 2,\ y = 8\)</span></label>
+            <label class="opt"><input type="radio" name="q14" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(x = 3,\ y = 5\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q15" aria-labelledby="q15label">
+            <legend id="q15label"><span class="q-num">Question 15</span><span class="q-diff">Easy</span><span class="q-src">ICSE Board 2023</span></legend>
+            <p class="q-text">The \(n\)th term of an AP is \(2n + 5\). Its 10th term is:</p>
+            <label class="opt"><input type="radio" name="q15" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(24\)</span></label>
+            <label class="opt"><input type="radio" name="q15" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(25\)</span></label>
+            <label class="opt"><input type="radio" name="q15" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(26\)</span></label>
+            <label class="opt"><input type="radio" name="q15" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(15\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q16" aria-labelledby="q16label">
+            <legend id="q16label"><span class="q-num">Question 16</span><span class="q-diff">Moderate</span><span class="q-src">ICSE Board 2024</span></legend>
+            <p class="q-text">The first three terms of an AP are \(\dfrac{1}{a},\; \dfrac{1}{a} + 1,\; \dfrac{1}{a} + 2, \ldots\) Its 7th term is:</p>
+            <label class="opt"><input type="radio" name="q16" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(\dfrac{1}{a} + 6\)</span></label>
+            <label class="opt"><input type="radio" name="q16" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(\dfrac{1}{a} + 7\)</span></label>
+            <label class="opt"><input type="radio" name="q16" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(\dfrac{1}{a} + 5\)</span></label>
+            <label class="opt"><input type="radio" name="q16" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(\dfrac{7}{a}\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q17" aria-labelledby="q17label">
+            <legend id="q17label"><span class="q-num">Question 17</span><span class="q-diff">Easy</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">The 20th term of the AP \(5, 9, 13, \ldots\) is:</p>
+            <label class="opt"><input type="radio" name="q17" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(80\)</span></label>
+            <label class="opt"><input type="radio" name="q17" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(85\)</span></label>
+            <label class="opt"><input type="radio" name="q17" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(81\)</span></label>
+            <label class="opt"><input type="radio" name="q17" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(77\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q18" aria-labelledby="q18label">
+            <legend id="q18label"><span class="q-num">Question 18</span><span class="q-diff">Easy</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">The sum \(1 + 2 + 3 + \cdots + 50\) equals:</p>
+            <label class="opt"><input type="radio" name="q18" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(1275\)</span></label>
+            <label class="opt"><input type="radio" name="q18" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(1270\)</span></label>
+            <label class="opt"><input type="radio" name="q18" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(2550\)</span></label>
+            <label class="opt"><input type="radio" name="q18" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(1250\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q19" aria-labelledby="q19label">
+            <legend id="q19label"><span class="q-num">Question 19</span><span class="q-diff">Moderate</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">The common ratio of the GP \(\dfrac{1}{3},\; -\dfrac{1}{9},\; \dfrac{1}{27}, \ldots\) is:</p>
+            <label class="opt"><input type="radio" name="q19" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(\dfrac{1}{3}\)</span></label>
+            <label class="opt"><input type="radio" name="q19" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(-\dfrac{1}{3}\)</span></label>
+            <label class="opt"><input type="radio" name="q19" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(\dfrac{1}{9}\)</span></label>
+            <label class="opt"><input type="radio" name="q19" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(-3\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q20" aria-labelledby="q20label">
+            <legend id="q20label"><span class="q-num">Question 20</span><span class="q-diff">Easy</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">The 4th term of a GP whose first term is 2 and common ratio is 3 is:</p>
+            <label class="opt"><input type="radio" name="q20" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(48\)</span></label>
+            <label class="opt"><input type="radio" name="q20" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(162\)</span></label>
+            <label class="opt"><input type="radio" name="q20" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(24\)</span></label>
+            <label class="opt"><input type="radio" name="q20" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(54\)</span></label>
+          </fieldset>
+
+          <div class="quiz-controls">
+            <button type="button" class="secondary" id="btnPrev"><i class="fas fa-arrow-left" aria-hidden="true"></i> Previous</button>
+            <button type="button" id="btnNext">Next <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+            <button type="button" id="btnSubmit"><i class="fas fa-flag-checkered" aria-hidden="true"></i> Submit Quiz</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="quiz-panel" id="resultView">
+        <div class="result-card">
+          <h2 style="margin-top:0;"><i class="fas fa-trophy" aria-hidden="true"></i> Quiz Result</h2>
+          <div class="score-big" id="resScore">0 / 20</div>
+          <div class="pct-big" id="resPct">0%</div>
+          <p class="msg" id="resMsg"></p>
+        </div>
+        <div class="result-summary">
+          <div class="rs-chip"><div class="rs-n" id="resTotal">0</div><div class="rs-l">Total Questions</div></div>
+          <div class="rs-chip good"><div class="rs-n" id="resCorrect">0</div><div class="rs-l">Correct</div></div>
+          <div class="rs-chip warn"><div class="rs-n" id="resIncorrect">0</div><div class="rs-l">Incorrect</div></div>
+          <div class="rs-chip warn"><div class="rs-n" id="resUnanswered">0</div><div class="rs-l">Unanswered</div></div>
+        </div>
+        <div class="topic-stats" id="topicStats" aria-label="Topic-wise performance"></div>
+        <div class="quiz-actions">
+          <button type="button" id="btnRetry"><i class="fas fa-redo" aria-hidden="true"></i> Retry Quiz</button>
+          <button type="button" class="secondary" id="btnReview"><i class="fas fa-list-check" aria-hidden="true"></i> Review Answers</button>
+        </div>
+      </div>
+
+      <div class="quiz-panel" id="reviewView">
+        <h2><i class="fas fa-list-check" aria-hidden="true"></i> Review Answers</h2>
+        <p>For each question, your answer and the correct answer are shown, with a short explanation. Questions tagged <strong>ICSE Board</strong> are verified CISCE board questions.</p>
+        <div class="explanations" id="explanations"></div>
+        <div class="quiz-actions">
+          <button type="button" id="btnBackResult"><i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Result</button>
+          <button type="button" class="secondary" id="btnRetry2"><i class="fas fa-redo" aria-hidden="true"></i> Retry Quiz</button>
+        </div>
+      </div>
+
+      <nav class="resource-nav" aria-label="Chapter resources">
+        <a href="/icse-study-material/class-10/mathematics/algebra/notes/"><i class="fas fa-book-open"></i> Notes</a>
+        <a href="/icse-study-material/class-10/mathematics/algebra/practice-paper/"><i class="fas fa-file-lines"></i> Practice Paper</a>
+        <a href="/icse-study-material/class-10/mathematics/algebra/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+      </nav>
+    </section>
+
+    <a class="sm-back" href="/icse-study-material/class-10/mathematics/algebra/"><i class="fas fa-arrow-left"></i> Back to Algebra (Unit 2)</a>
+    <a class="sm-back" href="/icse-study-material/class-10/mathematics/" style="margin-left: 12px;"><i class="fas fa-arrow-left"></i> All Mathematics topics</a>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-about">
+      <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+      <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#courses">Courses</a></li>
+        <li><a href="/icse-study-material/">ICSE Study Material</a></li>
+        <li><a href="/cbse-study-material/">CBSE Study Material</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Popular Searches</h4>
+      <ul>
+        <li><a href="/icse-study-material/">ICSE Study Material</a></li>
+        <li><a href="/icse-tuition-hulimavu/">ICSE Tuition in Hulimavu</a></li>
+        <li><a href="/cbse-study-material/">CBSE Study Material</a></li>
+        <li><a href="/maths-tuition-hulimavu/">Maths Tuition in Hulimavu</a></li>
+        <li><a href="/science-tuition-hulimavu/">Science Tuition in Hulimavu</a></li>
+        <li><a href="/class-10-tuition-hulimavu/">Class 10 Tuition Hulimavu</a></li>
+        <li><a href="/tuition-centre-bangalore/">Best Tuition Centre in Bangalore</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="/cbse-study-material/sm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/supabase-config.js"></script>
+<script src="/supabase-auth.js"></script>
+<script src="/supabase-nav.js" defer></script>
+<script src="/chatbot/chatbot-loader.js" defer></script><script>
+(function () {
+  "use strict";
+
+  var TOTAL = 20;
+  var TIME_LIMIT = 900;
+
+  var QUESTIONS = [
+    { id: "q1",  topic: "inequation", difficulty: "Easy", sourceType: "ICSE PYQ", sourceYear: "2023", sourceExam: "ICSE Board Paper 2023 (Mathematics, Paper 511), Section A", correct: "a" },
+    { id: "q2",  topic: "inequation", difficulty: "Easy", sourceType: "Original", sourceYear: null, sourceExam: null, correct: "a" },
+    { id: "q3",  topic: "inequation", difficulty: "Moderate", sourceType: "Original", sourceYear: null, sourceExam: null, correct: "b" },
+    { id: "q4",  topic: "quadratic", difficulty: "Easy", sourceType: "ICSE PYQ", sourceYear: "2023", sourceExam: "ICSE Board Paper 2023 (Mathematics, Paper 511), Section A", correct: "a" },
+    { id: "q5",  topic: "quadratic", difficulty: "Moderate", sourceType: "ICSE PYQ", sourceYear: "2024", sourceExam: "ICSE Board Paper 2024 (Mathematics), Section A", correct: "d" },
+    { id: "q6",  topic: "quadratic", difficulty: "Easy", sourceType: "Original", sourceYear: null, sourceExam: null, correct: "c" },
+    { id: "q7",  topic: "ratio", difficulty: "Easy", sourceType: "ICSE PYQ", sourceYear: "2023", sourceExam: "ICSE Board Paper 2023 (Mathematics, Paper 511), Section A", correct: "b" },
+    { id: "q8",  topic: "ratio", difficulty: "Moderate", sourceType: "Original", sourceYear: null, sourceExam: null, correct: "a" },
+    { id: "q9",  topic: "factor", difficulty: "Easy", sourceType: "ICSE PYQ", sourceYear: "2023", sourceExam: "ICSE Board Paper 2023 (Mathematics, Paper 511), Section A", correct: "d" },
+    { id: "q10", topic: "factor", difficulty: "Easy", sourceType: "Original", sourceYear: null, sourceExam: null, correct: "b" },
+    { id: "q11", topic: "factor", difficulty: "Moderate", sourceType: "Original", sourceYear: null, sourceExam: null, correct: "a" },
+    { id: "q12", topic: "matrices", difficulty: "Moderate", sourceType: "ICSE PYQ", sourceYear: "2024", sourceExam: "ICSE Board Paper 2024 (Mathematics), Section A", correct: "c" },
+    { id: "q13", topic: "matrices", difficulty: "Easy", sourceType: "Original", sourceYear: null, sourceExam: null, correct: "a" },
+    { id: "q14", topic: "matrices", difficulty: "Moderate", sourceType: "Original", sourceYear: null, sourceExam: null, correct: "d" },
+    { id: "q15", topic: "ap", difficulty: "Easy", sourceType: "ICSE PYQ", sourceYear: "2023", sourceExam: "ICSE Board Paper 2023 (Mathematics, Paper 511), Section A", correct: "b" },
+    { id: "q16", topic: "ap", difficulty: "Moderate", sourceType: "ICSE PYQ", sourceYear: "2024", sourceExam: "ICSE Board Paper 2024 (Mathematics), Section A", correct: "a" },
+    { id: "q17", topic: "ap", difficulty: "Easy", sourceType: "Original", sourceYear: null, sourceExam: null, correct: "c" },
+    { id: "q18", topic: "ap", difficulty: "Easy", sourceType: "Original", sourceYear: null, sourceExam: null, correct: "a" },
+    { id: "q19", topic: "gp", difficulty: "Moderate", sourceType: "Original", sourceYear: null, sourceExam: null, correct: "b" },
+    { id: "q20", topic: "gp", difficulty: "Easy", sourceType: "Original", sourceYear: null, sourceExam: null, correct: "d" }
+  ];
+
+  var EXPLANATIONS = {
+    q1:  "2x + 4 \u2264 14 gives 2x \u2264 10, so x \u2264 5. The whole numbers in this range are {0, 1, 2, 3, 4, 5}. Source: ICSE Board Paper 2023 (Mathematics, Paper 511), Section A.",
+    q2:  "3x + 2 \u2265 2x + 9 gives 3x \u2212 2x \u2265 9 \u2212 2, so x \u2265 7. The integer solutions are {7, 8, 9, ...}.",
+    q3:  "Add 1 throughout: \u22121 \u2264 3x < 9. Divide by 3: \u22121/3 \u2264 x < 3.",
+    q4:  "Substitute x = 3: 9 \u2212 3p + 3 = 0, so 12 \u2212 3p = 0 and p = 4. Source: ICSE Board Paper 2023 (Mathematics, Paper 511), Section A.",
+    q5:  "Real and equal roots require the discriminant to be zero: b\u00b2 \u2212 4ac = 0. Here a = p, b = \u2212q and c = r, so q\u00b2 \u2212 4pr = 0, giving q\u00b2 = 4pr. Source: ICSE Board Paper 2024 (Mathematics), Section A.",
+    q6:  "(x \u2212 3)(x \u2212 5) = 0, so x = 3 or x = 5.",
+    q7:  "The mean proportional x satisfies 4 : x = x : 9, so x\u00b2 = 36 and x = 6. Source: ICSE Board Paper 2023 (Mathematics, Paper 511), Section A.",
+    q8:  "a/c = (a/b) \u00d7 (b/c) = (3/4) \u00d7 (8/9) = 24/36 = 2/3, so a : c = 2 : 3.",
+    q9:  "By the factor theorem, P(2) = 0. P(2) = 8 \u2212 2k \u2212 12 = \u22124 \u2212 2k, so \u22124 \u2212 2k = 0 and k = \u22122. Source: ICSE Board Paper 2023 (Mathematics, Paper 511), Section A.",
+    q10: "Two numbers that sum to 5 and multiply to 6 are 2 and 3, so x\u00b2 + 5x + 6 = (x + 2)(x + 3).",
+    q11: "By the remainder theorem, the remainder is P(1) = 1 \u2212 2 + 1 + 5 = 5.",
+    q12: "A\u00b2 = A \u00b7 A = [[2, 2], [0, 2]] \u00d7 [[2, 2], [0, 2]]. The (1,2) entry is 2 \u00d7 2 + 2 \u00d7 2 = 8, so x = 8. Source: ICSE Board Paper 2024 (Mathematics), Section A.",
+    q13: "The matrix has 2 rows and 3 columns, so its order is 2 \u00d7 3.",
+    q14: "Equal matrices have equal corresponding entries: x + 2 = 5 gives x = 3, and 2y = 10 gives y = 5.",
+    q15: "Put n = 10 in T\u2099 = 2n + 5: T\u2081\u2080 = 20 + 5 = 25. Source: ICSE Board Paper 2023 (Mathematics, Paper 511), Section A.",
+    q16: "First term = 1/a and common difference d = 1. T\u2087 = 1/a + 6(1) = 1/a + 6. Source: ICSE Board Paper 2024 (Mathematics), Section A.",
+    q17: "a = 5 and d = 4. T\u2082\u2080 = 5 + 19(4) = 81.",
+    q18: "S = (50/2)(1 + 50) = 25 \u00d7 51 = 1275.",
+    q19: "r = (\u22121/9) \u00f7 (1/3) = \u22121/3.",
+    q20: "T\u2084 = a \u00d7 r\u00b3 = 2 \u00d7 27 = 54."
+  };
+
+  var TOPIC_LABELS = {
+    inequation: "Linear Inequations",
+    quadratic: "Quadratic Equations",
+    ratio: "Ratio and Proportion",
+    factor: "Factorisation",
+    matrices: "Matrices",
+    ap: "Arithmetic Progression",
+    gp: "Geometric Progression"
+  };
+  var TOPIC_ORDER = ["inequation", "quadratic", "ratio", "factor", "matrices", "ap", "gp"];
+
+  var form = document.getElementById("quizForm");
+  var quizView = document.getElementById("quizView");
+  var resultView = document.getElementById("resultView");
+  var reviewView = document.getElementById("reviewView");
+  var counterEl = document.getElementById("quizCounter");
+  var timerEl = document.getElementById("quizTimer");
+  var timerText = document.getElementById("quizTimerText");
+  var timerLive = document.getElementById("timerLive");
+  var progressFill = document.getElementById("progressFill");
+  var progressBar = document.getElementById("progressBar");
+  var progressText = document.getElementById("progressText");
+  var explanations = document.getElementById("explanations");
+  var confirmDialog = document.createElement("dialog");
+  confirmDialog.id = "confirmDialog";
+  confirmDialog.innerHTML =
+    '<div class="modal-body">' +
+      '<h3>Unanswered questions</h3>' +
+      '<p id="confirmMsg">Some questions are unanswered. Do you want to submit the quiz?</p>' +
+      '<div class="modal-actions">' +
+        '<button type="button" class="secondary" id="confirmContinue">Continue Quiz</button>' +
+        '<button type="button" id="confirmSubmit">Submit Quiz</button>' +
+      '</div>' +
+    '</div>';
+  document.body.appendChild(confirmDialog);
+
+  var cards = [];
+  for (var i = 0; i < TOTAL; i++) {
+    cards.push(document.getElementById(QUESTIONS[i].id));
+  }
+
+  var timeLeft = TIME_LIMIT;
+  var timerId = null;
+  var submitted = false;
+  var currentIndex = 0;
+
+  function shuffle(arr) {
+    for (var i = arr.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = arr[i]; arr[i] = arr[j]; arr[j] = t;
+    }
+    return arr;
+  }
+
+  function letter(idx) { return "ABCD".charAt(idx); }
+
+  function orderQuestions() {
+    var ordered = shuffle(cards.slice());
+    ordered.forEach(function (card) { form.appendChild(card); });
+    ordered.forEach(function (card, idx) {
+      var num = card.querySelector(".q-num");
+      if (num) num.textContent = "Question " + (idx + 1);
+    });
+  }
+
+  function shuffleOptions(card) {
+    var opts = Array.prototype.slice.call(card.querySelectorAll(".opt"));
+    shuffle(opts);
+    opts.forEach(function (el) { card.appendChild(el); });
+    opts.forEach(function (el, idx) {
+      var key = el.querySelector(".opt-key");
+      if (key) key.textContent = letter(idx);
+    });
+  }
+
+  function resetAnswers() {
+    var radios = form.querySelectorAll('input[type="radio"]');
+    for (var i = 0; i < radios.length; i++) radios[i].checked = false;
+  }
+
+  function showCard(idx) {
+    cards.forEach(function (c, i) { c.classList.toggle("is-active", i === idx); });
+    currentIndex = idx;
+    counterEl.textContent = "Question " + (idx + 1) + " of " + TOTAL;
+    progressFill.style.width = ((idx) / TOTAL * 100) + "%";
+    progressBar.setAttribute("aria-valuenow", String(idx + 1));
+    progressText.textContent = "At question " + (idx + 1) + " of " + TOTAL;
+  }
+
+  function updateTimerDisplay() {
+    var m = Math.floor(timeLeft / 60);
+    var s = timeLeft % 60;
+    timerText.textContent = "Time Remaining: " + String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0");
+    if (timeLeft === 60) timerLive.textContent = "Less than one minute remaining.";
+    if (timeLeft <= 60) timerEl.classList.add("warn");
+  }
+
+  function startTimer() {
+    if (timerId) clearInterval(timerId);
+    timeLeft = TIME_LIMIT;
+    updateTimerDisplay();
+    timerId = setInterval(function () {
+      timeLeft--;
+      updateTimerDisplay();
+      if (timeLeft <= 0) {
+        clearInterval(timerId);
+        submitQuiz(true);
+      }
+    }, 1000);
+  }
+
+  function gatherResults() {
+    var correct = 0, incorrect = 0, unanswered = 0;
+    QUESTIONS.forEach(function (q) {
+      var checked = form.querySelector('input[name="' + q.id + '"]:checked');
+      if (!checked) unanswered++;
+      else if (checked.value === q.correct) correct++;
+      else incorrect++;
+    });
+    return { correct: correct, incorrect: incorrect, unanswered: unanswered };
+  }
+
+  function messageFor(pct) {
+    if (pct >= 90) return "Excellent! You have a strong grasp of Algebra (Unit 2).";
+    if (pct >= 75) return "Very good! Review a few concepts and keep practising.";
+    if (pct >= 50) return "Good attempt. Revise the important concepts and try again.";
+    return "Review the chapter notes and attempt the quiz again.";
+  }
+
+  function fillTopicStats() {
+    var map = {};
+    TOPIC_ORDER.forEach(function (t) {
+      map[t] = { correct: 0, total: 0 };
+    });
+    QUESTIONS.forEach(function (q) {
+      if (!map[q.topic]) map[q.topic] = { correct: 0, total: 0 };
+      map[q.topic].total++;
+      var checked = form.querySelector('input[name="' + q.id + '"]:checked');
+      if (checked && checked.value === q.correct) map[q.topic].correct++;
+    });
+    var rows = TOPIC_ORDER.map(function (t) {
+      return '<tr><td>' + (TOPIC_LABELS[t] || t) + '</td><td class="num">' + map[t].correct + ' / ' + map[t].total + '</td></tr>';
+    }).join("");
+    document.getElementById("topicStats").innerHTML =
+      '<h3><i class="fas fa-chart-pie" aria-hidden="true"></i> Topic-wise performance</h3>' +
+      '<table class="topic-table"><thead><tr><th>Topic</th><th style="text-align:center;">Correct / Attempted</th></tr></thead><tbody>' +
+      rows + '</tbody></table>';
+  }
+
+  function showResult() {
+    var r = gatherResults();
+    var score = r.correct;
+    var pct = Math.round((score / TOTAL) * 100);
+    document.getElementById("resScore").textContent = score + " / " + TOTAL;
+    document.getElementById("resPct").textContent = pct + "%";
+    document.getElementById("resMsg").textContent = messageFor(pct);
+    document.getElementById("resTotal").textContent = TOTAL;
+    document.getElementById("resCorrect").textContent = r.correct;
+    document.getElementById("resIncorrect").textContent = r.incorrect;
+    document.getElementById("resUnanswered").textContent = r.unanswered;
+    fillTopicStats();
+    quizView.classList.remove("is-active");
+    reviewView.classList.remove("is-active");
+    resultView.classList.add("is-active");
+    quizView.style.display = "none";
+    resultView.style.display = "block";
+    reviewView.style.display = "none";
+    quizView.closest(".sm-page").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function buildReview() {
+    explanations.innerHTML = "";
+    cards.forEach(function (card) {
+      var q = questionById(card.id);
+      var checked = card.querySelector('input[type="radio"]:checked');
+      var yourVal = checked ? checked.value : null;
+      var isCorrect = yourVal === q.correct;
+      var yourLetter = yourVal ? optionLetter(card, yourVal) : "Not answered";
+      var correctLetter = optionLetter(card, q.correct);
+
+      var wrap = document.createElement("div");
+      wrap.className = "exp-card";
+
+      var head = document.createElement("div");
+      head.className = "exp-head";
+      head.textContent = "Question " + card.dataset.number;
+
+      var state = document.createElement("span");
+      state.className = "exp-state " + (isCorrect ? "ok" : "no");
+      state.textContent = isCorrect ? "\u2713 Correct" : (yourVal === null ? "\u2013 Not answered" : "\u2717 Incorrect");
+      state.setAttribute("aria-label", isCorrect ? "Correct" : (yourVal === null ? "Not answered" : "Incorrect"));
+      head.appendChild(state);
+
+      var qtext = document.createElement("div");
+      qtext.className = "exp-row";
+      var qlabel = document.createElement("span");
+      qlabel.className = "exp-label";
+      qlabel.textContent = "Question: ";
+      qtext.appendChild(qlabel);
+      qtext.appendChild(card.querySelector(".q-text").cloneNode(true));
+
+      var yrow = document.createElement("div");
+      yrow.className = "exp-row";
+      var ylabel = document.createElement("span");
+      ylabel.className = "exp-label";
+      ylabel.textContent = "Your Answer: ";
+      yrow.appendChild(ylabel);
+      yrow.appendChild(document.createTextNode(yourLetter));
+
+      var crow = document.createElement("div");
+      crow.className = "exp-row";
+      var clabel = document.createElement("span");
+      clabel.className = "exp-label";
+      clabel.textContent = "Correct Answer: ";
+      crow.appendChild(clabel);
+      crow.appendChild(document.createTextNode(correctLetter));
+
+      var note = document.createElement("div");
+      note.className = "exp-note";
+      var nlabel = document.createElement("span");
+      nlabel.className = "exp-label";
+      nlabel.textContent = "Explanation: ";
+      note.appendChild(nlabel);
+      note.appendChild(document.createTextNode(EXPLANATIONS[q.id] || ""));
+
+      wrap.appendChild(head);
+      wrap.appendChild(qtext);
+      wrap.appendChild(yrow);
+      wrap.appendChild(crow);
+      wrap.appendChild(note);
+      explanations.appendChild(wrap);
+
+      var correctEl = card.querySelector('.opt input[value="' + q.correct + '"]');
+      if (correctEl && correctEl.parentNode) correctEl.parentNode.classList.add("answered-correct");
+      if (checked && checked.value !== q.correct) {
+        checked.parentNode.classList.add("answered-wrong");
+      }
+    });
+    quizView.style.display = "none";
+    resultView.style.display = "none";
+    reviewView.style.display = "block";
+    document.getElementById("quizApp").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function questionById(id) {
+    for (var i = 0; i < QUESTIONS.length; i++) {
+      if (QUESTIONS[i].id === id) return QUESTIONS[i];
+    }
+    return null;
+  }
+
+  function optionLetter(card, value) {
+    var opts = Array.prototype.slice.call(card.querySelectorAll(".opt"));
+    for (var i = 0; i < opts.length; i++) {
+      if (opts[i].querySelector("input").value === value) return "ABCD".charAt(i);
+    }
+    return "";
+  }
+
+  function requestSubmit() {
+    var r = gatherResults();
+    if (r.unanswered > 0) {
+      document.getElementById("confirmMsg").textContent =
+        r.unanswered + " question(s) are unanswered. Do you want to submit the quiz?";
+      confirmDialog.showModal();
+    } else {
+      submitQuiz(false);
+    }
+  }
+
+  function submitQuiz(auto) {
+    if (submitted) return;
+    submitted = true;
+    if (timerId) clearInterval(timerId);
+    showResult();
+  }
+
+  function retry() {
+    submitted = false;
+    resetAnswers();
+    cards.forEach(function (card) {
+      card.querySelectorAll(".opt").forEach(function (o) {
+        o.classList.remove("answered-correct", "answered-wrong");
+        o.querySelector("input").disabled = false;
+      });
+    });
+    orderQuestions();
+    cards.forEach(shuffleOptions);
+    quizView.style.display = "block";
+    resultView.style.display = "none";
+    reviewView.style.display = "none";
+    showCard(0);
+    startTimer();
+    document.getElementById("quizApp").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  document.getElementById("btnPrev").addEventListener("click", function () {
+    if (currentIndex > 0) showCard(currentIndex - 1);
+  });
+
+  document.getElementById("btnNext").addEventListener("click", function () {
+    if (currentIndex < TOTAL - 1) showCard(currentIndex + 1);
+  });
+
+  document.getElementById("btnSubmit").addEventListener("click", requestSubmit);
+  document.getElementById("confirmContinue").addEventListener("click", function () { confirmDialog.close(); });
+  document.getElementById("confirmSubmit").addEventListener("click", function () { confirmDialog.close(); submitQuiz(false); });
+  document.getElementById("btnRetry").addEventListener("click", retry);
+  document.getElementById("btnRetry2").addEventListener("click", retry);
+  document.getElementById("btnReview").addEventListener("click", buildReview);
+  document.getElementById("btnBackResult").addEventListener("click", function () {
+    reviewView.style.display = "none";
+    resultView.style.display = "block";
+  });
+
+  cards.forEach(function (card, idx) {
+    card.setAttribute("data-number", String(idx + 1));
+  });
+
+  orderQuestions();
+  cards.forEach(shuffleOptions);
+  showCard(0);
+  startTimer();
+})();
+</script>
+</body>
+</html>
