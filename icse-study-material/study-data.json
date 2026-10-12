@@ -370,7 +370,7 @@
             { "slug": "algebra", "label": "Algebra (Unit 2)", "desc": "Linear inequations, quadratic equations, ratio and proportion, factorisation and matrices." },
             { "slug": "arithmetic-and-geometric-progressions", "label": "Arithmetic and Geometric Progressions", "desc": "nth terms and sums of AP and GP." },
             { "slug": "coordinate-geometry", "label": "Coordinate Geometry", "desc": "Distance, section and midpoint formulae and the equation of a line." },
-            { "slug": "geometry", "label": "Geometry: Similarity and Circles", "desc": "Similar triangles and circle theorems." },
+            { "slug": "geometry", "label": "Geometry (Unit 3)", "desc": "Similarity, loci, circles, tangents and intersecting chords, and constructions." },
             { "slug": "mensuration", "label": "Mensuration", "desc": "Surface area and volume of cylinders, cones and spheres." },
             { "slug": "trigonometry", "label": "Trigonometry and Heights and Distances", "desc": "Trigonometric identities and angle-of-elevation problems." },
             { "slug": "statistics", "label": "Statistics", "desc": "Mean, median, mode and ogives." },

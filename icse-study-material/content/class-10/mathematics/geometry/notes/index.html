@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICSE Class 10 Maths Unit 3 Geometry Notes | All 5 Topics | Vyasa Academy</title>
+  <meta name="description" content="ICSE Class 10 Mathematics Unit 3: Geometry notes - similarity, loci, circles, tangents and intersecting chords, and constructions, with theorems, formulas, solved examples, common mistakes and quick revision sheets." />
+  <link rel="canonical" href="https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/geometry/notes/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vyasa Academy" />
+  <meta property="og:title" content="ICSE Class 10 Maths Unit 3 Geometry Notes | All 5 Topics | Vyasa Academy" />
+  <meta property="og:description" content="ICSE Class 10 Mathematics Unit 3: Geometry notes - all five topics with theorems, formulas, solved examples, common mistakes and quick revision sheets." />
+  <meta property="og:url" content="https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/geometry/notes/" />
+  <meta property="og:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ICSE Class 10 Maths Unit 3 Geometry Notes | All 5 Topics | Vyasa Academy" />
+  <meta name="twitter:description" content="ICSE Class 10 Mathematics Unit 3: Geometry notes - all five topics with theorems, formulas, solved examples, common mistakes and quick revision sheets." />
+  <meta name="twitter:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","itemListElement":[{"position":1,"name":"Home","item":"https://www.vyasaacademy.in/","@type":"ListItem"},{"position":2,"name":"ICSE Study Material","item":"https://www.vyasaacademy.in/icse-study-material/","@type":"ListItem"},{"position":3,"name":"Class 10","item":"https://www.vyasaacademy.in/icse-study-material/class-10/","@type":"ListItem"},{"position":4,"name":"Mathematics","item":"https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/","@type":"ListItem"},{"position":5,"name":"Geometry (Unit 3)","item":"https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/geometry/","@type":"ListItem"},{"position":6,"name":"Notes","item":"https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/geometry/notes/","@type":"ListItem"}],"@type":"BreadcrumbList"}
+  </script>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+      processEscapes: true
+    }
+  };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <style>
+  .sm-notes { font-size: 1rem; line-height: 1.8; }
+  .sm-notes h2 { font-size: 1.45rem; color: var(--primary); margin: 44px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--accent); }
+  .sm-notes h3 { font-size: 1.15rem; color: var(--dark); margin: 28px 0 12px; }
+  .sm-notes h4 { font-size: 1.05rem; color: var(--dark); margin: 20px 0 8px; }
+  .sm-notes p { margin-bottom: 14px; }
+  .sm-notes ul, .sm-notes ol { margin: 10px 0 16px 24px; }
+  .sm-notes li { margin-bottom: 6px; }
+  .sm-notes ul { list-style: disc; }
+
+  nav.toc { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: var(--radius); padding: 18px 22px; margin: 18px 0; }
+  nav.toc .toc-label { font-weight: 800; color: var(--primary); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 8px; }
+  nav.toc ul { margin: 0; padding: 0; list-style: none; }
+  nav.toc li { margin: 6px 0; }
+  nav.toc a { color: var(--primary); font-weight: 600; }
+
+  .def-box { background: #eef2ff; border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .def-box .box-label { font-weight: 700; color: var(--primary); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .result-box { background: #fff8e1; border-left: 4px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .result-box .box-label { font-weight: 700; color: var(--accent-dark); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .example-box { background: #f0fdf4; border-left: 4px solid #16a34a; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .example-box .box-label { font-weight: 700; color: #16a34a; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .tip-box { background: #eff6ff; border-left: 4px solid #2563eb; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .tip-box .box-label { font-weight: 700; color: #2563eb; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .warn-box { background: #fef2f2; border-left: 4px solid #dc2626; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .warn-box .box-label { font-weight: 700; color: #dc2626; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .steps { margin: 12px 0 16px; }
+  .steps .step { display: flex; gap: 12px; margin-bottom: 10px; }
+  .steps .step-num { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: var(--primary); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; margin-top: 3px; }
+  .steps .step-text { flex: 1; }
+
+  .table-wrap { overflow-x: auto; margin: 16px 0; -webkit-overflow-scrolling: touch; }
+  .sm-notes table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .sm-notes th { background: var(--primary); color: var(--white); text-align: left; padding: 12px 14px; font-weight: 600; white-space: nowrap; }
+  .sm-notes td { padding: 10px 14px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  .sm-notes tr:nth-child(even) td { background: #f9fafb; }
+  .sm-notes tr:hover td { background: #eef2ff; }
+
+  .highlight { background: #fef9c3; padding: 2px 5px; border-radius: 4px; font-weight: 600; }
+  .qbox { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: var(--radius); padding: 16px 20px; margin: 12px 0; }
+  .qbox .q-label { font-weight: 700; color: var(--primary); margin-bottom: 4px; }
+
+  .formula-card { background: #fff; border: 1px solid #e5e7eb; border-left: 4px solid var(--primary); border-radius: var(--radius); padding: 14px 18px; margin: 12px 0; break-inside: avoid; page-break-inside: avoid; }
+  .formula-card .fc-name { font-weight: 800; color: var(--primary); margin-bottom: 4px; }
+  .formula-card .fc-formula { font-size: 1.05rem; margin: 6px 0; }
+  .formula-card .fc-note { font-size: 0.9rem; color: var(--gray); }
+
+  details.ans { margin: 8px 0 14px; border: 1px solid #e5e7eb; border-radius: var(--radius); background: #fff; }
+  details.ans summary { cursor: pointer; padding: 10px 14px; font-weight: 700; color: var(--primary); list-style: none; }
+  details.ans summary::-webkit-details-marker { display: none; }
+  details.ans summary::before { content: "\f0fe"; font-family: "Font Awesome 6 Free"; font-weight: 900; margin-right: 8px; }
+  details.ans[open] summary::before { content: "\f146"; }
+  details.ans .ans-body { padding: 0 16px 14px; }
+
+  .lvl { display: inline-block; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.4px; padding: 3px 10px; border-radius: 999px; margin-right: 8px; }
+  .lvl-l1 { background: #dcfce7; color: #15803d; }
+  .lvl-l2 { background: #fef3c7; color: #92400e; }
+  .lvl-l3 { background: #fee2e2; color: #b91c1c; }
+  .qtag { display: inline-block; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.4px; padding: 3px 10px; border-radius: 999px; margin-right: 8px; }
+  .qtag-basic { background: #dbeafe; color: #1d4ed8; }
+  .qtag-std { background: #fef3c7; color: #92400e; }
+  .qtag-chal { background: #fee2e2; color: #b91c1c; }
+
+  .resource-nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
+  .resource-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: var(--radius); border: 2px solid #e5e7eb; font-weight: 600; font-size: 0.92rem; color: var(--dark); background: var(--white); transition: var(--transition); }
+  .resource-nav a:hover, .resource-nav a.is-active { border-color: var(--primary); background: var(--primary); color: var(--white); }
+
+  .sm-back { display: inline-flex; align-items: center; gap: 8px; margin-top: 30px; padding: 10px 0; color: var(--primary); font-weight: 600; }
+  .sm-back:hover { color: var(--accent-dark); }
+
+  @media (max-width: 640px) {
+    .sm-notes h2 { font-size: 1.25rem; }
+    .sm-notes { font-size: 0.95rem; }
+    .steps .step { gap: 8px; }
+    .steps .step-num { width: 22px; height: 22px; font-size: 0.75rem; }
+    .resource-nav { gap: 6px; }
+    .resource-nav a { padding: 8px 12px; font-size: 0.85rem; }
+  }
+  @media print {
+    .navbar, .footer, .resource-nav, .sm-back, .sm-crumbs { display: none !important; }
+    .sm-notes h2 { break-after: avoid; }
+    .formula-card, .def-box, .example-box, .warn-box, details.ans { break-inside: avoid; }
+    body { background: #fff; }
+  }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="/" class="logo"><i class="fas fa-graduation-cap"></i> Vyasa Academy</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="/">Home</a>
+      <a href="/#courses">Courses</a>
+      <a href="/icse-study-material/" class="active">Study Material</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main class="sm-page">
+  <div class="container sm-container">
+    <nav class="sm-crumbs" aria-label="Breadcrumb">
+      <a href="https://www.vyasaacademy.in/">Home</a> /
+      <a href="https://www.vyasaacademy.in/icse-study-material/">ICSE Study Material</a> /
+      <a href="https://www.vyasaacademy.in/icse-study-material/class-10/">Class 10</a> /
+      <a href="https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/">Mathematics</a> /
+      <a href="https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/geometry/">Geometry (Unit 3)</a> /
+      Notes
+    </nav>
+
+    <section class="sm-hero sm-hero-slim">
+      <p class="sm-eyebrow">ICSE Class 10 &middot; Mathematics &middot; Unit 3</p>
+      <h1>Class 10 Mathematics &ndash; Geometry (Unit 3) Notes</h1>
+      <p>Complete chapter notes for Unit 3 of the ICSE Class 10 Mathematics syllabus: <strong>Similarity</strong>, <strong>Loci</strong>, <strong>Circles</strong>, <strong>Tangents and Intersecting Chords</strong> and <strong>Constructions</strong>. Each topic includes learning objectives, concepts, theorem cards, graded solved examples, exam-style questions (including verified ICSE board questions), common mistakes and a quick revision sheet.</p>
+    </section>
+
+    <nav class="resource-nav" aria-label="Chapter resources">
+      <a class="is-active" href="/icse-study-material/class-10/mathematics/geometry/notes/"><i class="fas fa-book-open"></i> Notes</a>
+      <a href="/icse-study-material/class-10/mathematics/geometry/practice-paper/"><i class="fas fa-file-lines"></i> Practice Paper</a>
+      <a href="/icse-study-material/class-10/mathematics/geometry/quiz/"><i class="fas fa-bullseye"></i> Quiz</a>
+      <a href="/icse-study-material/class-10/mathematics/geometry/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+    </nav>
+
+    <article class="sm-notes">
+
+      <div class="def-box">
+        <div class="box-label">How to use these notes</div>
+        <p style="margin-bottom:0;">Read each topic in order. Study the theorem cards and the standard figures first, then work through the solved examples <strong>on paper with the solution covered</strong>. Geometry is best learned by drawing: make a free-hand sketch before writing the proof. Finally, attempt the exam-style questions before looking at the answers. Questions marked <span class="qtag qtag-std">ICSE Board</span> are verified questions from CISCE board papers and are reused here exactly for practice.</p>
+      </div>
+
+      <nav class="toc" aria-labelledby="toc-title">
+        <div class="toc-label" id="toc-title">Table of contents</div>
+        <ul>
+          <li><a href="#similarity">Topic 1 &ndash; Similarity</a></li>
+          <li><a href="#loci">Topic 2 &ndash; Loci</a></li>
+          <li><a href="#circles">Topic 3 &ndash; Circles</a></li>
+          <li><a href="#tangents-and-intersecting-chords">Topic 4 &ndash; Tangents and Intersecting Chords</a></li>
+          <li><a href="#constructions">Topic 5 &ndash; Constructions</a></li>
+        </ul>
+      </nav>
+
+      <!-- ============================ TOPIC 1: SIMILARITY ============================ -->
+      <section id="similarity">
+        <h2>Topic 1 &ndash; Similarity</h2>
+
+        <h3>A. Learning Objectives</h3>
+        <p>After studying this topic you should be able to:</p>
+        <ul>
+          <li>State the meaning of <strong>similar figures</strong> and the conditions for two triangles to be similar.</li>
+          <li>Use the <strong>AA, SSS and SAS</strong> similarity criteria to prove two triangles similar.</li>
+          <li>Write correct <strong>correspondence</strong> and use the fact that corresponding sides of similar triangles are proportional.</li>
+          <li>Apply the result that the <strong>ratio of the areas of two similar triangles</strong> equals the square of the ratio of corresponding sides.</li>
+          <li>State and apply the <strong>Basic Proportionality Theorem</strong> (Thales&rsquo; theorem) and its converse.</li>
+          <li>Use the <strong>angle-bisector theorem</strong> for a triangle.</li>
+        </ul>
+
+        <h3>B. Basic Concepts and Definitions</h3>
+        <div class="def-box">
+          <div class="box-label">Similar figures</div>
+          <p style="margin-bottom:0;">Two figures are <strong>similar</strong> if they have the same shape but not necessarily the same size. One is an exact scaled copy of the other. In similar polygons, corresponding angles are equal and corresponding sides are in the same ratio.</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Similar triangles &ndash; conditions</div>
+          <p>Two triangles are similar if any one of the following holds:</p>
+          <ul style="margin-bottom:6px;">
+            <li><strong>AA (or AAA):</strong> two pairs of corresponding angles are equal.</li>
+            <li><strong>SSS:</strong> the three pairs of corresponding sides are in the same ratio.</li>
+            <li><strong>SAS:</strong> one pair of corresponding angles is equal and the two pairs of sides including them are in the same ratio.</li>
+          </ul>
+          <p style="margin-bottom:0;">We write \(\triangle ABC \sim \triangle PQR\), where the order of letters shows the correspondence: \(\angle A = \angle P\), \(\angle B = \angle Q\), \(\angle C = \angle R\).</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Basic Proportionality Theorem (Thales&rsquo; theorem)</div>
+          <p style="margin-bottom:0;">If a line is drawn parallel to one side of a triangle and cuts the other two sides, then it divides those two sides in the same ratio. In \(\triangle ABC\), if \(DE \parallel BC\) with \(D\) on \(AB\) and \(E\) on \(AC\), then \(\dfrac{AD}{DB} = \dfrac{AE}{EC}\). The converse is also true.</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Angle-bisector theorem</div>
+          <p style="margin-bottom:0;">The internal bisector of an angle of a triangle divides the opposite side internally in the ratio of the sides containing the angle. In \(\triangle ABC\), if \(AD\) bisects \(\angle A\) and meets \(BC\) at \(D\), then \(\dfrac{BD}{DC} = \dfrac{AB}{AC}\).</p>
+        </div>
+
+        <h3>C. Important Formulas and Theorems</h3>
+        <div class="formula-card">
+          <div class="fc-name">Similar triangles &ndash; sides proportional</div>
+          <div class="fc-formula">\(\triangle ABC \sim \triangle PQR \;\Rightarrow\; \dfrac{AB}{PQ} = \dfrac{BC}{QR} = \dfrac{CA}{RP} = k\)</div>
+          <div class="fc-note">The constant \(k\) is the scale factor. Ratio of perimeters of similar triangles \(= \dfrac{\text{corresponding sides}}{1}\).</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Ratio of areas of similar triangles</div>
+          <div class="fc-formula">\(\dfrac{\text{Area}(\triangle ABC)}{\text{Area}(\triangle PQR)} = \left(\dfrac{AB}{PQ}\right)^2 = k^2\)</div>
+          <div class="fc-note">The area ratio is the square of the ratio of any pair of corresponding sides (or altitudes, medians, perimeters).</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Basic Proportionality Theorem</div>
+          <div class="fc-formula">\(DE \parallel BC \;\Rightarrow\; \dfrac{AD}{DB} = \dfrac{AE}{EC}\)</div>
+          <div class="fc-note">Also true: \(\dfrac{AD}{AB} = \dfrac{AE}{AC} = \dfrac{DE}{BC}\).</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Angle-bisector theorem</div>
+          <div class="fc-formula">\(AD\) bisects \(\angle A \;\Rightarrow\; \dfrac{BD}{DC} = \dfrac{AB}{AC}\)</div>
+          <div class="fc-note">Use with the proportional-sides idea; the side opposite the angle is split in the ratio of the adjacent sides.</div>
+        </div>
+
+        <h3>D. Step-by-Step Solved Examples</h3>
+
+        <h4><span class="lvl lvl-l1">Level 1</span> Using the Basic Proportionality Theorem</h4>
+        <div class="example-box">
+          <div class="box-label">Example 1</div>
+          <p>In \(\triangle ABC\), \(DE \parallel BC\), with \(AD = 3\text{ cm}\), \(DB = 5\text{ cm}\) and \(AE = 4\text{ cm}\). Find \(EC\).</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">Since \(DE \parallel BC\), by the Basic Proportionality Theorem \(\dfrac{AD}{DB} = \dfrac{AE}{EC}\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">Substitute: \(\dfrac{3}{5} = \dfrac{4}{EC}\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">Cross-multiply: \(3 \times EC = 20\), so \(EC = \dfrac{20}{3} \approx 6.67\text{ cm}\).</div></div>
+          </div>
+        </div>
+
+        <h4><span class="lvl lvl-l2">Level 2</span> Ratio of areas of similar triangles</h4>
+        <div class="example-box">
+          <div class="box-label">Example 2</div>
+          <p>Two similar triangles have corresponding sides in the ratio \(2 : 3\). If the area of the smaller triangle is \(24\text{ cm}^2\), find the area of the larger triangle.</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">For similar triangles, \(\dfrac{\text{Area}_1}{\text{Area}_2} = \left(\dfrac{2}{3}\right)^2 = \dfrac{4}{9}\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">Let the larger area be \(A\). Then \(\dfrac{24}{A} = \dfrac{4}{9}\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">So \(4A = 216\) and \(A = 54\text{ cm}^2\).</div></div>
+          </div>
+        </div>
+
+        <h4><span class="lvl lvl-l3">Level 3</span> Basic Proportionality with an unknown</h4>
+        <div class="example-box">
+          <div class="box-label">Example 3</div>
+          <p>In \(\triangle ABC\), \(DE \parallel BC\) with \(AD = x\), \(DB = x - 2\), \(AE = x + 2\) and \(EC = x - 1\). Find \(x\).</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">By the Basic Proportionality Theorem, \(\dfrac{x}{x - 2} = \dfrac{x + 2}{x - 1}\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">Cross-multiply: \(x(x - 1) = (x - 2)(x + 2)\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">Expand: \(x^2 - x = x^2 - 4\), so \(-x = -4\).</div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-text">Hence \(x = 4\). (Check: \(AD = 4, DB = 2, AE = 6, EC = 3\), and \(\frac{4}{2} = \frac{6}{3}\).)</div></div>
+          </div>
+        </div>
+
+        <h3>E. Exam-Style Questions</h3>
+        <div class="qbox">
+          <div class="q-label">Question E1 <span class="qtag qtag-std">ICSE Board 2024</span></div>
+          <p>In \(\triangle ABC\) and \(\triangle PQR\), \(AD\) and \(PS\) are the bisectors of \(\angle A\) and \(\angle P\) respectively. If \(\triangle ABC \sim \triangle PQR\), then \(\triangle ABD\) is similar to which triangle?</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Since the triangles are similar, \(\angle A = \angle P\), so \(\angle BAD = \angle QPS\). Also \(\angle B = \angle Q\). By AA, \(\triangle ABD \sim \triangle PQS\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E2 <span class="qtag qtag-basic">Original</span></div>
+          <p>Two similar triangles have areas \(49\text{ cm}^2\) and \(81\text{ cm}^2\). Find the ratio of their corresponding sides.</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Ratio of sides \(= \sqrt{\dfrac{49}{81}} = \dfrac{7}{9}\). So the corresponding sides are in the ratio \(7 : 9\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E3 <span class="qtag qtag-basic">Original</span></div>
+          <p>In \(\triangle ABC\), \(AB = 8\text{ cm}\), \(AC = 6\text{ cm}\) and \(AD\) bisects \(\angle A\), meeting \(BC\) at \(D\). If \(BD = 4\text{ cm}\), find \(DC\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">By the angle-bisector theorem, \(\dfrac{BD}{DC} = \dfrac{AB}{AC}\): \(\dfrac{4}{DC} = \dfrac{8}{6} = \dfrac{4}{3}\), so \(DC = 3\text{ cm}\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E4 <span class="qtag qtag-basic">Original</span></div>
+          <p>In \(\triangle ABC\), a line \(DE\) parallel to \(BC\) cuts \(AB\) at \(D\) and \(AC\) at \(E\). If \(AD = 4\text{ cm}\), \(AB = 10\text{ cm}\) and \(AE = 6\text{ cm}\), find \(AC\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(\dfrac{AD}{AB} = \dfrac{AE}{AC}\): \(\dfrac{4}{10} = \dfrac{6}{AC}\), so \(4 \times AC = 60\) and \(AC = 15\text{ cm}\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E5 <span class="qtag qtag-chal">Original</span></div>
+          <p>In \(\triangle ABC\), \(D\) lies on \(AB\) and \(E\) on \(AC\) such that \(\dfrac{AD}{DB} = \dfrac{AE}{EC}\). Prove that \(DE \parallel BC\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Given \(\frac{AD}{DB} = \frac{AE}{EC}\). By the converse of the Basic Proportionality Theorem, the line joining \(D\) and \(E\) that divides the two sides in the same ratio is parallel to the third side, so \(DE \parallel BC\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E6 <span class="qtag qtag-chal">Original</span></div>
+          <p>\(\triangle ABC \sim \triangle DEF\). If \(AB = 6\text{ cm}\), \(DE = 9\text{ cm}\) and the area of \(\triangle ABC = 20\text{ cm}^2\), find the area of \(\triangle DEF\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(\dfrac{\text{Area}(ABC)}{\text{Area}(DEF)} = \left(\dfrac{6}{9}\right)^2 = \dfrac{4}{9}\). So \(\dfrac{20}{\text{Area}(DEF)} = \dfrac{4}{9}\), giving \(\text{Area}(DEF) = \dfrac{20 \times 9}{4} = 45\text{ cm}^2\).</p></div></details>
+        </div>
+
+        <h3>F. Common Mistakes</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Common mistake</th><th>Correct approach</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Writing triangles in the wrong order, e.g. \(\triangle ABC \sim \triangle QRP\).</td><td>Always match corresponding vertices: if \(\angle A = \angle P\), write \(\triangle ABC \sim \triangle PQR\) so the letters line up.</td></tr>
+              <tr><td>Equating non-corresponding sides in a proportion.</td><td>Proportional sides must be the pair that lie between the equal angles. Use the order of the letters in the similarity statement.</td></tr>
+              <tr><td>Using the ratio of sides directly for the ratio of areas.</td><td>The area ratio is the <strong>square</strong> of the side ratio: \(\frac{A_1}{A_2} = \left(\frac{s_1}{s_2}\right)^2\).</td></tr>
+              <tr><td>Applying the Basic Proportionality Theorem without first stating \(DE \parallel BC\).</td><td>The theorem needs the line to be parallel to a side; quote the parallel condition (or its converse) explicitly.</td></tr>
+              <tr><td>Mixing up the angle-bisector ratio: using \(\frac{BD}{DC} = \frac{AC}{AB}\).</td><td>The correct result is \(\frac{BD}{DC} = \frac{AB}{AC}\) (side opposite the angle is split in the ratio of the sides forming the angle).</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>G. Exam Tips</h3>
+        <div class="tip-box">
+          <div class="box-label">Scoring tips</div>
+          <ul style="margin-bottom:0;">
+            <li>Draw a clear, labelled figure first &ndash; nearly every similarity proof earns method marks for the correct diagram and correspondence.</li>
+            <li>State the criterion you are using (AA, SSS or SAS) in words before writing the conclusion.</li>
+            <li>In ratio-of-area questions, write the square of the side ratio before substituting numbers.</li>
+            <li>For BPT problems with unknowns, form the proportion first and cross-multiply carefully.</li>
+          </ul>
+        </div>
+
+        <h3>H. Quick Revision Sheet &ndash; Similarity</h3>
+        <div class="result-box">
+          <div class="box-label">Remember</div>
+          <ul style="margin-bottom:0;">
+            <li>Similar triangles: equal angles, proportional sides; criteria AA, SSS, SAS.</li>
+            <li>\(\dfrac{\text{Area}_1}{\text{Area}_2} = \left(\dfrac{\text{corresponding sides}}{}\right)^2 = k^2\).</li>
+            <li>BPT: \(DE \parallel BC \Rightarrow \dfrac{AD}{DB} = \dfrac{AE}{EC}\); the converse is also true.</li>
+            <li>Angle-bisector theorem: \(\dfrac{BD}{DC} = \dfrac{AB}{AC}\).</li>
+            <li>Ratio of perimeters of similar triangles \(=\) ratio of corresponding sides.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================ TOPIC 2: LOCI ============================ -->
+      <section id="loci">
+        <h2>Topic 2 &ndash; Loci</h2>
+
+        <h3>A. Learning Objectives</h3>
+        <p>After studying this topic you should be able to:</p>
+        <ul>
+          <li>Explain what a <strong>locus</strong> is (the path traced by a point moving under a given condition).</li>
+          <li>Recall the <strong>standard loci</strong> for a point, a line, two points, two intersecting lines and two parallel lines.</li>
+          <li>Construct loci accurately using a <strong>ruler and compasses only</strong>.</li>
+          <li>Find the intersection of two loci to locate a point satisfying two conditions at once.</li>
+        </ul>
+
+        <h3>B. Basic Concepts and Definitions</h3>
+        <div class="def-box">
+          <div class="box-label">Locus</div>
+          <p style="margin-bottom:0;">A <strong>locus</strong> is the set of all points that satisfy a given geometrical condition. It is the complete path traced by a point moving so that the condition always holds. Every point on the locus satisfies the condition, and every point satisfying the condition lies on the locus.</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Standard loci (must be memorised)</div>
+          <ul style="margin-bottom:6px;">
+            <li>The locus of a point at a fixed distance \(r\) from a fixed point \(O\) is a <strong>circle</strong> with centre \(O\) and radius \(r\).</li>
+            <li>The locus of a point at a fixed distance \(d\) from a fixed line is a pair of <strong>parallel lines</strong>, one on each side of the line, at distance \(d\).</li>
+            <li>The locus of a point <strong>equidistant from two fixed points</strong> \(A\) and \(B\) is the <strong>perpendicular bisector</strong> of \(AB\).</li>
+            <li>The locus of a point <strong>equidistant from two intersecting lines</strong> is the pair of <strong>angle bisectors</strong> of the angles formed.</li>
+            <li>The locus of a point <strong>equidistant from two parallel lines</strong> is a single line parallel to and midway between them.</li>
+            <li>The locus of a point equidistant from the two arms of an angle is the <strong>bisector of that angle</strong>.</li>
+          </ul>
+          <p style="margin-bottom:0;">Note: the locus of a point at a fixed distance from a <em>line segment</em> (as opposed to a full line) is the pair of parallel segments together with two semicircles at the ends.</p>
+        </div>
+
+        <h3>C. Important Constructions (Loci)</h3>
+        <div class="formula-card">
+          <div class="fc-name">Perpendicular bisector of a segment</div>
+          <div class="fc-note">With centres \(A\) and \(B\) and equal radii (more than half of \(AB\)), draw arcs on both sides; join the two intersection points. This line is the locus of points equidistant from \(A\) and \(B\).</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Angle bisector</div>
+          <div class="fc-note">With the vertex as centre, mark equal arcs on the two arms; from those points draw equal arcs to intersect; join the vertex to the intersection. This is the locus of points equidistant from the two arms.</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Circle of given radius</div>
+          <div class="fc-note">Use compasses set to the radius; the full circle is the locus of points at that fixed distance from the centre.</div>
+        </div>
+
+        <h3>D. Step-by-Step Solved Examples</h3>
+
+        <h4><span class="lvl lvl-l1">Level 1</span> Locus at a fixed distance</h4>
+        <div class="example-box">
+          <div class="box-label">Example 1</div>
+          <p>Describe the locus of a point \(P\) that is always \(3\text{ cm}\) from a fixed point \(O\).</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">The distance from \(P\) to the fixed point \(O\) is constant at \(3\text{ cm}\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">A point at a fixed distance from a fixed point traces a circle.</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">So the locus is the circle with centre \(O\) and radius \(3\text{ cm}\).</div></div>
+          </div>
+        </div>
+
+        <h4><span class="lvl lvl-l2">Level 2</span> Combining two loci</h4>
+        <div class="example-box">
+          <div class="box-label">Example 2</div>
+          <p>Find the point \(P\) that is equidistant from two fixed points \(A\) and \(B\), and also \(4\text{ cm}\) from \(A\).</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">Locus 1 (equidistant from \(A\) and \(B\)): the perpendicular bisector of \(AB\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">Locus 2 (\(4\text{ cm}\) from \(A\)): the circle with centre \(A\) and radius \(4\text{ cm}\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">The required points are where the two loci intersect &ndash; the two intersection points of the perpendicular bisector with the circle.</div></div>
+          </div>
+        </div>
+
+        <h4><span class="lvl lvl-l3">Level 3</span> Locus equidistant from two lines</h4>
+        <div class="example-box">
+          <div class="box-label">Example 3</div>
+          <p>Two straight lines intersect at \(O\), forming an angle. Describe the locus of a point inside the angle that is equidistant from both lines.</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">A point equidistant from two intersecting lines lies on an angle bisector.</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">For the angle between the two lines, there are two bisectors: the internal and the external angle bisectors.</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">Since the point is <strong>inside</strong> the angle, the locus is the <strong>internal angle bisector</strong> (the bisector of that particular angle).</div></div>
+          </div>
+        </div>
+
+        <h3>E. Exam-Style Questions</h3>
+        <div class="qbox">
+          <div class="q-label">Question E1 <span class="qtag qtag-std">Original</span></div>
+          <p>The locus of a point at a fixed distance from a given straight line is:</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">A pair of straight lines parallel to the given line, one on each side, at that fixed distance.</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E2 <span class="qtag qtag-basic">Original</span></div>
+          <p>Describe the locus of a point equidistant from the two ends of a line segment \(AB\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">The perpendicular bisector of \(AB\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E3 <span class="qtag qtag-std">Original</span></div>
+          <p>A point \(P\) moves so that it is always \(2\text{ cm}\) from a fixed line \(l\). Sketch the locus.</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Two lines parallel to \(l\), one on each side, each \(2\text{ cm}\) from \(l\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E4 <span class="qtag qtag-chal">Original</span></div>
+          <p>Construct the locus of a point that is equidistant from \(A(0,0)\) and \(B(6,0)\), and also \(5\text{ cm}\) from \(A\). How many such points are there?</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">The perpendicular bisector of \(AB\) is the vertical line \(x = 3\). The circle centre \(A\) radius \(5\) meets it where \(3^2 + y^2 = 25\), i.e. \(y = \pm 4\). So there are two points: \((3,4)\) and \((3,-4)\).</p></div></details>
+        </div>
+
+        <h3>F. Common Mistakes</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Common mistake</th><th>Correct approach</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Describing the locus at a fixed distance from a line as a single line.</td><td>It is <strong>two</strong> lines, one on each side of the given line.</td></tr>
+              <tr><td>Confusing &ldquo;equidistant from two points&rdquo; with &ldquo;equidistant from two lines&rdquo;.</td><td>Two points &#8594; perpendicular bisector of the joining segment; two lines &#8594; angle bisector(s).</td></tr>
+              <tr><td>Forgetting the two angle bisectors for two intersecting lines.</td><td>Two intersecting lines form four angles; their bisectors form two straight lines (internal and external).</td></tr>
+              <tr><td>Giving a sketch instead of a construction.</td><td>Use ruler and compasses and leave the construction arcs; loci questions are marked for accurate construction.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>G. Exam Tips</h3>
+        <div class="tip-box">
+          <div class="box-label">Scoring tips</div>
+          <ul style="margin-bottom:0;">
+            <li>Learn the six standard loci by heart &ndash; they cover almost every exam question.</li>
+            <li>When a question has two conditions, draw <strong>both</strong> loci and mark their intersections.</li>
+            <li>State whether a fixed distance is from a point, a line or a segment, as the locus changes accordingly.</li>
+          </ul>
+        </div>
+
+        <h3>H. Quick Revision Sheet &ndash; Loci</h3>
+        <div class="result-box">
+          <div class="box-label">Remember</div>
+          <ul style="margin-bottom:0;">
+            <li>Fixed distance from a point &#8594; circle.</li>
+            <li>Fixed distance from a line &#8594; pair of parallel lines.</li>
+            <li>Equidistant from two points &#8594; perpendicular bisector.</li>
+            <li>Equidistant from two intersecting lines &#8594; the angle bisectors.</li>
+            <li>Equidistant from two parallel lines &#8594; the mid-line.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================ TOPIC 3: CIRCLES ============================ -->
+      <section id="circles">
+        <h2>Topic 3 &ndash; Circles</h2>
+
+        <h3>A. Learning Objectives</h3>
+        <p>After studying this topic you should be able to:</p>
+        <ul>
+          <li>Recall the parts of a circle: centre, radius, diameter, chord, arc, sector, segment, semicircle.</li>
+          <li>Use the theorem: the angle subtended by an arc at the centre is <strong>double</strong> the angle at any point on the remaining part.</li>
+          <li>Use the results: angles in the same segment are equal, and the angle in a semicircle is a right angle.</li>
+          <li>Apply the <strong>cyclic quadrilateral</strong> property (opposite angles sum to \(180^\circ\)) and its exterior-angle form.</li>
+          <li>Use the perpendicular-from-the-centre result and the relation between equal chords and equal arcs.</li>
+        </ul>
+
+        <h3>B. Basic Concepts and Definitions</h3>
+        <div class="def-box">
+          <div class="box-label">Parts of a circle</div>
+          <ul style="margin-bottom:6px;">
+            <li><strong>Chord:</strong> a segment joining two points on the circle.</li>
+            <li><strong>Arc:</strong> a part of the circle; a <em>minor</em> arc is shorter, a <em>major</em> arc longer.</li>
+            <li><strong>Diameter:</strong> the longest chord, passing through the centre.</li>
+            <li><strong>Sector:</strong> region between two radii and an arc. <strong>Segment:</strong> region between a chord and an arc.</li>
+          </ul>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Angle properties at the centre and circumference</div>
+          <ul style="margin-bottom:6px;">
+            <li>The angle subtended by an arc at the centre is <strong>twice</strong> the angle it subtends at any point on the remaining part of the circle.</li>
+            <li>Angles in the <strong>same segment</strong> are equal.</li>
+            <li>The angle in a <strong>semicircle</strong> is a right angle; conversely, if a chord subtends \(90^\circ\) at a point on the circle, it is a diameter.</li>
+          </ul>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Cyclic quadrilateral</div>
+          <p style="margin-bottom:0;">A quadrilateral whose four vertices lie on a circle. Its <strong>opposite angles are supplementary</strong> (\(\angle A + \angle C = 180^\circ\), \(\angle B + \angle D = 180^\circ\)). Also, an exterior angle equals the interior opposite angle.</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Chords and the centre</div>
+          <p style="margin-bottom:0;">The perpendicular from the centre to a chord bisects the chord. Equal chords are equidistant from the centre, and chords equidistant from the centre are equal. Equal chords subtend equal angles at the centre (and cut off equal arcs).</p>
+        </div>
+
+        <h3>C. Important Theorems</h3>
+        <div class="formula-card">
+          <div class="fc-name">Angle at the centre</div>
+          <div class="fc-formula">\(\angle AOB = 2\,\angle APB\)</div>
+          <div class="fc-note">\(O\) is the centre and \(P\) is any point on the remaining part of the circle (on the major arc if the arc is minor).</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Angles in the same segment</div>
+          <div class="fc-formula">\(\angle APB = \angle AQB\)</div>
+          <div class="fc-note">\(P\) and \(Q\) on the same arc/segment of the circle, subtending the same chord \(AB\).</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Angle in a semicircle</div>
+          <div class="fc-formula">\(\angle APB = 90^\circ\) (angle subtended by a diameter)</div>
+          <div class="fc-note">The converse is a common test: a \(90^\circ\) angle at the circumference means the chord is a diameter.</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Cyclic quadrilateral</div>
+          <div class="fc-formula">\(\angle A + \angle C = 180^\circ,\quad \angle B + \angle D = 180^\circ\)</div>
+          <div class="fc-note">Exterior angle of a cyclic quadrilateral equals the interior opposite angle.</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Perpendicular from the centre</div>
+          <div class="fc-formula">\(OM \perp AB \;\Rightarrow\; AM = MB\)</div>
+          <div class="fc-note">Converse also holds: the line from the centre that bisects a chord is perpendicular to it.</div>
+        </div>
+
+        <h3>D. Step-by-Step Solved Examples</h3>
+
+        <h4><span class="lvl lvl-l1">Level 1</span> Centre and circumference angles</h4>
+        <div class="example-box">
+          <div class="box-label">Example 1</div>
+          <p>In a circle with centre \(O\), the angle subtended by a chord \(AB\) at the centre is \(120^\circ\). Find the angle subtended by \(AB\) at a point on the major arc.</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">The angle at the centre is twice the angle at the circumference (major arc): \(\angle AOB = 2\angle APB\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">So \(120^\circ = 2\angle APB\), giving \(\angle APB = 60^\circ\).</div></div>
+          </div>
+        </div>
+
+        <h4><span class="lvl lvl-l2">Level 2</span> Cyclic quadrilateral</h4>
+        <div class="example-box">
+          <div class="box-label">Example 2</div>
+          <p>\(ABCD\) is a cyclic quadrilateral. If \(\angle A = 75^\circ\), find \(\angle C\).</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">In a cyclic quadrilateral, opposite angles are supplementary.</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">\(\angle A + \angle C = 180^\circ\), so \(75^\circ + \angle C = 180^\circ\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">Hence \(\angle C = 105^\circ\).</div></div>
+          </div>
+        </div>
+
+        <h4><span class="lvl lvl-l3">Level 3</span> Combining two circle theorems</h4>
+        <div class="example-box">
+          <div class="box-label">Example 3</div>
+          <p>\(AB\) is a diameter of a circle. \(C\) is a point on the circle such that \(\angle ABC = 35^\circ\). Find \(\angle BAC\).</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">The angle in a semicircle is a right angle, so \(\angle ACB = 90^\circ\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">In \(\triangle ABC\): \(\angle BAC + \angle ABC + \angle ACB = 180^\circ\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">\(\angle BAC + 35^\circ + 90^\circ = 180^\circ\), so \(\angle BAC = 55^\circ\).</div></div>
+          </div>
+        </div>
+
+        <h3>E. Exam-Style Questions</h3>
+        <div class="qbox">
+          <div class="q-label">Question E1 <span class="qtag qtag-basic">Original</span></div>
+          <p>In a circle with centre \(O\), \(\angle AOB = 80^\circ\). Find the angle subtended by \(AB\) at a point on the major arc.</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Angle at circumference \(= \dfrac{80^\circ}{2} = 40^\circ\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E2 <span class="qtag qtag-basic">Original</span></div>
+          <p>\(P\), \(Q\), \(R\) are points on a circle such that \(\angle PRQ = 50^\circ\). Find \(\angle POQ\), where \(O\) is the centre and \(P\), \(Q\) subtend the same arc.</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Angle at centre \(= 2 \times\) angle at circumference \(= 100^\circ\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E3 <span class="qtag qtag-std">Original</span></div>
+          <p>\(ABCD\) is a cyclic quadrilateral with \(\angle B = 3x\) and \(\angle D = 2x\). Find \(x\) and the two angles.</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(\angle B + \angle D = 180^\circ\), so \(5x = 180^\circ\) and \(x = 36^\circ\). Hence \(\angle B = 108^\circ\) and \(\angle D = 72^\circ\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E4 <span class="qtag qtag-chal">Original</span></div>
+          <p>In a circle, \(AB\) is a chord of length \(16\text{ cm}\) and the radius is \(10\text{ cm}\). Find the distance of \(AB\) from the centre.</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">The perpendicular from the centre \(O\) bisects \(AB\), so \(AM = 8\text{ cm}\). In right \(\triangle OMA\): \(OM^2 = OA^2 - AM^2 = 100 - 64 = 36\), so \(OM = 6\text{ cm}\).</p></div></details>
+        </div>
+
+        <h3>F. Common Mistakes</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Common mistake</th><th>Correct approach</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Halving the angle at the centre instead of doubling the angle at the circumference.</td><td>Centre angle \(= 2 \times\) circumference angle. Rearrange carefully depending on which is given.</td></tr>
+              <tr><td>Using the minor-arc angle when the point is on the minor arc.</td><td>The centre angle \(2\angle APB\) refers to the arc <em>not</em> containing \(P\). Check which arc the point lies on.</td></tr>
+              <tr><td>Adding the wrong pair of angles in a cyclic quadrilateral.</td><td>It is the <strong>opposite</strong> angles that are supplementary, not adjacent ones.</td></tr>
+              <tr><td>Assuming a chord is a diameter without justification.</td><td>A chord is a diameter only if the angle subtended at the circumference is \(90^\circ\) (or it passes through the centre).</td></tr>
+              <tr><td>Forgetting that the perpendicular from the centre bisects the chord.</td><td>Use it to set up equal half-chords before applying Pythagoras.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>G. Exam Tips</h3>
+        <div class="tip-box">
+          <div class="box-label">Scoring tips</div>
+          <ul style="margin-bottom:0;">
+            <li>Mark the centre and join it to relevant points; radii help form isosceles triangles.</li>
+            <li>Write the theorem you are using by name before the calculation.</li>
+            <li>For chord-distance problems, drop the perpendicular from the centre and use Pythagoras with the half-chord.</li>
+            <li>Check which arc or segment a given point lies on before choosing the angle relationship.</li>
+          </ul>
+        </div>
+
+        <h3>H. Quick Revision Sheet &ndash; Circles</h3>
+        <div class="result-box">
+          <div class="box-label">Remember</div>
+          <ul style="margin-bottom:0;">
+            <li>\(\angle\) at centre \(= 2 \times \angle\) at circumference (same arc).</li>
+            <li>Angles in the same segment are equal; angle in a semicircle is \(90^\circ\).</li>
+            <li>Cyclic quadrilateral: opposite angles sum to \(180^\circ\).</li>
+            <li>Perpendicular from the centre bisects the chord.</li>
+            <li>Equal chords are equidistant from the centre and subtend equal angles at the centre.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================ TOPIC 4: TANGENTS AND INTERSECTING CHORDS ============================ -->
+      <section id="tangents-and-intersecting-chords">
+        <h2>Topic 4 &ndash; Tangents and Intersecting Chords</h2>
+
+        <h3>A. Learning Objectives</h3>
+        <p>After studying this topic you should be able to:</p>
+        <ul>
+          <li>Define a <strong>tangent</strong> and use the result that the tangent is perpendicular to the radius at the point of contact.</li>
+          <li>Use the fact that <strong>tangents from an external point are equal</strong> in length.</li>
+          <li>Apply the <strong>alternate segment theorem</strong> (tangent&ndash;chord angle).</li>
+          <li>Use the <strong>intersecting chords</strong> result \(PA \cdot PB = PC \cdot PD\).</li>
+          <li>Use the tangent&ndash;secant (power of a point) result \(PT^2 = PA \cdot PB\).</li>
+        </ul>
+
+        <h3>B. Basic Concepts and Definitions</h3>
+        <div class="def-box">
+          <div class="box-label">Tangent</div>
+          <p style="margin-bottom:0;">A straight line that touches the circle at exactly one point, called the <strong>point of contact</strong>. At the point of contact, the tangent is perpendicular to the radius drawn to that point.</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Tangents from an external point</div>
+          <p style="margin-bottom:0;">From a point outside a circle, exactly two tangents can be drawn. They are <strong>equal in length</strong>. The line joining the external point to the centre bisects the angle between the two tangents, and the two tangents subtend equal angles at the centre.</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Alternate segment theorem</div>
+          <p style="margin-bottom:0;">The angle between a tangent and a chord through the point of contact is equal to the angle made by that chord in the <strong>alternate segment</strong> (the segment on the other side of the chord).</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Intersecting chords and secants</div>
+          <p style="margin-bottom:0;">If two chords \(AB\) and \(CD\) intersect inside the circle at \(P\), then \(PA \cdot PB = PC \cdot PD\). If two secants \(PAB\) and \(PCD\) are drawn from an external point \(P\), then \(PA \cdot PB = PC \cdot PD\). If a tangent \(PT\) and a secant \(PAB\) are drawn from \(P\), then \(PT^2 = PA \cdot PB\).</p>
+        </div>
+
+        <h3>C. Important Formulas and Theorems</h3>
+        <div class="formula-card">
+          <div class="fc-name">Tangent perpendicular to radius</div>
+          <div class="fc-formula">\(OT \perp \text{tangent at } T\)</div>
+          <div class="fc-note">Used to form right-angled triangles, e.g. using Pythagoras in \(\triangle OTP\).</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Equal tangents from an external point</div>
+          <div class="fc-formula">\(PA = PB\)</div>
+          <div class="fc-note">\(A\) and \(B\) are the points of contact from external point \(P\). Also \(\angle APO = \angle BPO\).</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Alternate segment theorem</div>
+          <div class="fc-formula">\(\angle (\text{tangent}, \text{chord}) = \angle \text{ in the alternate segment}\)</div>
+          <div class="fc-note">The angle in the alternate segment is made by the same chord at a point on the opposite arc.</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Intersecting chords (internal)</div>
+          <div class="fc-formula">\(PA \cdot PB = PC \cdot PD\)</div>
+          <div class="fc-note">\(P\) is inside the circle; segments are measured from \(P\) to each endpoint.</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Tangent&ndash;secant (power of a point)</div>
+          <div class="fc-formula">\(PT^2 = PA \cdot PB\)</div>
+          <div class="fc-note">\(PT\) is the tangent and \(PAB\) is a secant from the external point \(P\).</div>
+        </div>
+
+        <h3>D. Step-by-Step Solved Examples</h3>
+
+        <h4><span class="lvl lvl-l1">Level 1</span> Intersecting chords</h4>
+        <div class="example-box">
+          <div class="box-label">Example 1</div>
+          <p>Two chords \(AB\) and \(CD\) intersect inside a circle at \(P\). If \(PA = 4\text{ cm}\), \(PB = 6\text{ cm}\) and \(PC = 3\text{ cm}\), find \(PD\).</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">For intersecting chords, \(PA \cdot PB = PC \cdot PD\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">\(4 \times 6 = 3 \times PD\), so \(24 = 3\,PD\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">Hence \(PD = 8\text{ cm}\).</div></div>
+          </div>
+        </div>
+
+        <h4><span class="lvl lvl-l2">Level 2</span> Tangent&ndash;secant</h4>
+        <div class="example-box">
+          <div class="box-label">Example 2</div>
+          <p>From an external point \(P\), a tangent \(PT\) touches the circle at \(T\). A secant from \(P\) meets the circle at \(A\) (nearer) and \(B\) (farther). If \(PA = 4\text{ cm}\) and \(AB = 12\text{ cm}\), find \(PT\).</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">The whole secant to the far point is \(PB = PA + AB = 4 + 12 = 16\text{ cm}\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">\(PT^2 = PA \cdot PB = 4 \times 16 = 64\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">So \(PT = 8\text{ cm}\).</div></div>
+          </div>
+        </div>
+
+        <h4><span class="lvl lvl-l3">Level 3</span> Two tangents from a point</h4>
+        <div class="example-box">
+          <div class="box-label">Example 3</div>
+          <p>From an external point \(P\), tangents \(PA\) and \(PB\) touch a circle with centre \(O\) at \(A\) and \(B\). If \(\angle APB = 60^\circ\), find \(\angle AOB\).</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">The radii are perpendicular to the tangents, so \(\angle OAP = \angle OBP = 90^\circ\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">In quadrilateral \(OAPB\): \(\angle AOB + \angle OAP + \angle APB + \angle OBP = 360^\circ\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">\(\angle AOB + 90^\circ + 60^\circ + 90^\circ = 360^\circ\), so \(\angle AOB = 120^\circ\).</div></div>
+          </div>
+        </div>
+
+        <h3>E. Exam-Style Questions</h3>
+        <div class="qbox">
+          <div class="q-label">Question E1 <span class="qtag qtag-std">ICSE Board 2023</span></div>
+          <p>In the given circle, \(RT\) is a tangent touching the circle at \(S\). If \(\angle PST = 30^\circ\) and \(\angle SPQ = 60^\circ\), find \(\angle PSQ\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">By the alternate segment theorem, \(\angle PQS = \angle PST = 30^\circ\). In \(\triangle PQS\), \(\angle PSQ = 180^\circ - 60^\circ - 30^\circ = 90^\circ\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E2 <span class="qtag qtag-basic">Original</span></div>
+          <p>Two chords \(AB\) and \(CD\) intersect at \(P\) inside a circle. If \(PA = 9\text{ cm}\), \(PB = 4\text{ cm}\) and \(PC = 6\text{ cm}\), find \(PD\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(PA \cdot PB = PC \cdot PD\): \(9 \times 4 = 6 \times PD\), so \(36 = 6\,PD\) and \(PD = 6\text{ cm}\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E3 <span class="qtag qtag-basic">Original</span></div>
+          <p>The length of a tangent from an external point \(P\) to a circle is \(12\text{ cm}\). A secant from \(P\) cuts the circle at \(A\) and \(B\) with \(PA = 6\text{ cm}\). Find \(AB\).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(PT^2 = PA \cdot PB\): \(144 = 6 \times PB\), so \(PB = 24\text{ cm}\). Thus \(AB = PB - PA = 24 - 6 = 18\text{ cm}\).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E4 <span class="qtag qtag-chal">Original</span></div>
+          <p>From an external point \(P\), two tangents \(PA\) and \(PB\) are drawn to a circle with centre \(O\) and radius \(5\text{ cm}\). If \(OP = 13\text{ cm}\), find the length of each tangent.</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">\(OA \perp PA\), so in right \(\triangle OAP\): \(PA^2 = OP^2 - OA^2 = 169 - 25 = 144\). Hence \(PA = PB = 12\text{ cm}\).</p></div></details>
+        </div>
+
+        <h3>F. Common Mistakes</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Common mistake</th><th>Correct approach</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Using the tangent&ndash;secant formula with only the near part of the secant.</td><td>Use the whole secant: \(PT^2 = PA \cdot PB\), where \(PB\) is the distance to the <strong>far</strong> point.</td></tr>
+              <tr><td>Confusing the intersecting-chords rule with a difference rather than a product.</td><td>It is a product of the two segments of each chord: \(PA \cdot PB = PC \cdot PD\).</td></tr>
+              <tr><td>Applying the alternate segment theorem to the wrong segment.</td><td>The angles are in the segment on the opposite side of the chord from the tangent.</td></tr>
+              <tr><td>Forgetting that the radius is perpendicular to the tangent.</td><td>Always mark the right angle at the point of contact before using Pythagoras.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>G. Exam Tips</h3>
+        <div class="tip-box">
+          <div class="box-label">Scoring tips</div>
+          <ul style="margin-bottom:0;">
+            <li>Identify the type of configuration first: two chords, a tangent and a secant, or two tangents.</li>
+            <li>For tangent problems, join the point of contact to the centre to create a right angle.</li>
+            <li>Write the relevant product relation before substituting, to avoid mixing up segments.</li>
+          </ul>
+        </div>
+
+        <h3>H. Quick Revision Sheet &ndash; Tangents and Intersecting Chords</h3>
+        <div class="result-box">
+          <div class="box-label">Remember</div>
+          <ul style="margin-bottom:0;">
+            <li>Tangent \(\perp\) radius at the point of contact.</li>
+            <li>Tangents from an external point are equal: \(PA = PB\).</li>
+            <li>Alternate segment theorem: tangent&ndash;chord angle \(=\) angle in the alternate segment.</li>
+            <li>Intersecting chords: \(PA \cdot PB = PC \cdot PD\).</li>
+            <li>Tangent&ndash;secant: \(PT^2 = PA \cdot PB\).</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================ TOPIC 5: CONSTRUCTIONS ============================ -->
+      <section id="constructions">
+        <h2>Topic 5 &ndash; Constructions</h2>
+
+        <h3>A. Learning Objectives</h3>
+        <p>After studying this topic you should be able to:</p>
+        <ul>
+          <li>Construct the <strong>circumcircle</strong> of a triangle using the perpendicular bisectors of the sides.</li>
+          <li>Construct the <strong>incircle</strong> of a triangle using the angle bisectors.</li>
+          <li>Construct <strong>tangents to a circle from an external point</strong>.</li>
+          <li>Construct a triangle <strong>similar to a given triangle</strong> with a given scale factor.</li>
+          <li>Use only a ruler and compasses, and leave all construction arcs in place.</li>
+        </ul>
+
+        <h3>B. Basic Concepts and Definitions</h3>
+        <div class="def-box">
+          <div class="box-label">Circumcircle and circumcentre</div>
+          <p style="margin-bottom:0;">The circle passing through all three vertices of a triangle is the <strong>circumcircle</strong>. Its centre, the <strong>circumcentre</strong>, is the point of intersection of the perpendicular bisectors of the sides, and is equidistant from the three vertices.</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Incircle and incentre</div>
+          <p style="margin-bottom:0;">The circle touching all three sides of a triangle is the <strong>incircle</strong>. Its centre, the <strong>incentre</strong>, is the point of intersection of the angle bisectors, and is equidistant from the three sides.</p>
+        </div>
+        <div class="def-box">
+          <div class="box-label">Tangents from an external point</div>
+          <p style="margin-bottom:0;">To construct the tangents from an external point \(P\) to a circle with centre \(O\): join \(OP\), draw the perpendicular bisector of \(OP\) to get its midpoint \(M\), then draw the circle with centre \(M\) and radius \(MO\). Where this circle meets the given circle are the points of contact; join \(P\) to those points.</p>
+        </div>
+
+        <h3>C. Standard Construction Steps</h3>
+        <div class="formula-card">
+          <div class="fc-name">Circumcircle of \(\triangle ABC\)</div>
+          <div class="fc-note">Construct the perpendicular bisectors of two sides; their intersection is the circumcentre \(O\). With centre \(O\) and radius \(OA\), draw the circle. It passes through \(B\) and \(C\) too.</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Incircle of \(\triangle ABC\)</div>
+          <div class="fc-note">Bisect two angles; their intersection is the incentre \(I\). Drop a perpendicular from \(I\) to any side to get the inradius \(r\), then draw the circle with centre \(I\) and radius \(r\).</div>
+        </div>
+        <div class="formula-card">
+          <div class="fc-name">Similar triangle with scale factor \(\frac{m}{n}\)</div>
+          <div class="fc-note">On a ray from a vertex, mark \(n\) equal divisions; on a second ray mark \(m\) equal divisions; join the \(n\)th point to the opposite vertex and draw a parallel through the \(m\)th point to obtain the required similar triangle.</div>
+        </div>
+
+        <h3>D. Step-by-Step Solved Examples</h3>
+
+        <h4><span class="lvl lvl-l1">Level 1</span> Circumcircle</h4>
+        <div class="example-box">
+          <div class="box-label">Example 1</div>
+          <p>Construct a triangle \(ABC\) with \(AB = 5\text{ cm}\), \(BC = 6\text{ cm}\) and \(CA = 7\text{ cm}\), and draw its circumcircle.</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">Draw \(BC = 6\text{ cm}\). With centre \(B\) and radius \(5\text{ cm}\), and centre \(C\) and radius \(7\text{ cm}\), draw arcs to intersect at \(A\). Join \(AB\) and \(AC\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">Construct the perpendicular bisector of \(BC\) and of \(CA\). Let them meet at \(O\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">With centre \(O\) and radius \(OA\), draw the circle. This is the circumcircle.</div></div>
+          </div>
+        </div>
+
+        <h4><span class="lvl lvl-l2">Level 2</span> Tangent from an external point</h4>
+        <div class="example-box">
+          <div class="box-label">Example 2</div>
+          <p>Draw a circle of radius \(3\text{ cm}\). From a point \(P\), \(5\text{ cm}\) from the centre \(O\), construct the two tangents to the circle.</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">Draw the circle with centre \(O\) and radius \(3\text{ cm}\). Mark \(P\) so that \(OP = 5\text{ cm}\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">Draw the perpendicular bisector of \(OP\); let its midpoint be \(M\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">With centre \(M\) and radius \(MO\), draw a circle cutting the given circle at \(A\) and \(B\).</div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-text">Join \(PA\) and \(PB\). These are the two tangents (each of length \(\sqrt{5^2 - 3^2} = 4\text{ cm}\)).</div></div>
+          </div>
+        </div>
+
+        <h4><span class="lvl lvl-l3">Level 3</span> Similar triangle with a given scale factor</h4>
+        <div class="example-box">
+          <div class="box-label">Example 3</div>
+          <p>Construct a triangle similar to a given \(\triangle ABC\) with scale factor \(\dfrac{2}{3}\) (the new triangle is smaller).</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-text">Draw a ray \(BX\) below \(BC\) making an acute angle with \(BC\).</div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-text">Along \(BX\), mark three equal divisions \(B_1, B_2, B_3\). Join \(B_3\) to \(C\).</div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-text">Through \(B_2\), draw a line parallel to \(B_3C\), meeting \(BC\) at \(C'\).</div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-text">Through \(C'\), draw a line parallel to \(CA\), meeting \(BA\) at \(A'\). Then \(\triangle A'BC'\) is the required triangle with scale factor \(\frac{2}{3}\).</div></div>
+          </div>
+        </div>
+
+        <h3>E. Exam-Style Questions</h3>
+        <div class="qbox">
+          <div class="q-label">Question E1 <span class="qtag qtag-basic">Original</span></div>
+          <p>Draw a triangle \(ABC\) with sides \(AB = 4\text{ cm}\), \(BC = 5\text{ cm}\) and \(CA = 6\text{ cm}\). Construct its circumcircle and measure the radius.</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Construct the triangle as described, then draw the perpendicular bisectors of two sides. Their intersection is the circumcentre \(O\); with radius \(OA\) draw the circumcircle. Measuring \(OA\) gives the circumradius (about \(3.0\text{ cm}\) for these sides).</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E2 <span class="qtag qtag-basic">Original</span></div>
+          <p>Draw a circle of radius \(4\text{ cm}\). Draw two tangents to the circle from a point \(10\text{ cm}\) from its centre.</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Mark centre \(O\), draw the circle of radius \(4\text{ cm}\), and mark \(P\) with \(OP = 10\text{ cm}\). Draw the perpendicular bisector of \(OP\) to get its midpoint \(M\). With centre \(M\) and radius \(MO\), draw a circle cutting the given circle at \(A\) and \(B\). Join \(PA\) and \(PB\), the required tangents.</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E3 <span class="qtag qtag-basic">Original</span></div>
+          <p>Construct the incircle of a triangle \(ABC\) with \(AB = BC = CA = 6\text{ cm}\), and state the incentre&rsquo;s position.</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Construct the equilateral triangle. Bisect any two angles; their intersection \(I\) is the incentre, which is also the centroid and circumcentre for an equilateral triangle. Drop a perpendicular from \(I\) to a side to set the inradius, then draw the incircle.</p></div></details>
+        </div>
+        <div class="qbox">
+          <div class="q-label">Question E4 <span class="qtag qtag-chal">Original</span></div>
+          <p>Construct a triangle similar to a given triangle \(ABC\) with scale factor \(\dfrac{5}{3}\) (the new triangle is larger).</p>
+          <details class="ans"><summary>Show answer</summary><div class="ans-body"><p style="margin-bottom:0;">Draw a ray through a vertex and mark 5 equal divisions; join the 3rd point to the opposite vertex, then draw a parallel through the 5th point. The triangle formed is similar to \(ABC\) with the required scale factor.</p></div></details>
+        </div>
+
+        <h3>F. Common Mistakes</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Common mistake</th><th>Correct approach</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Using angle bisectors to find the circumcentre.</td><td>Circumcentre uses <strong>perpendicular bisectors</strong>; incentre uses angle bisectors.</td></tr>
+              <tr><td>Not leaving the construction arcs.</td><td>Keep all arcs visible; marks are awarded for correct construction lines.</td></tr>
+              <tr><td>Choosing the wrong number of divisions for a similar triangle.</td><td>For scale factor \(\frac{m}{n}\), mark \(n\) divisions on the ray and draw the parallel through the \(m\)th point.</td></tr>
+              <tr><td>Free-hand drawing instead of using compasses.</td><td>Use ruled lines and compasses throughout; measurements must be accurate.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>G. Exam Tips</h3>
+        <div class="tip-box">
+          <div class="box-label">Scoring tips</div>
+          <ul style="margin-bottom:0;">
+            <li>Write down the construction steps briefly before drawing; this earns method marks.</li>
+            <li>For the circumcircle, two perpendicular bisectors are enough; the third is a check.</li>
+            <li>For tangents from an external point, the auxiliary circle on the diameter \(OP\) is the key step.</li>
+            <li>Keep your compass setting unchanged within a step to avoid inaccuracy.</li>
+          </ul>
+        </div>
+
+        <h3>H. Quick Revision Sheet &ndash; Constructions</h3>
+        <div class="result-box">
+          <div class="box-label">Remember</div>
+          <ul style="margin-bottom:0;">
+            <li>Circumcircle: perpendicular bisectors meet at the circumcentre.</li>
+            <li>Incircle: angle bisectors meet at the incentre.</li>
+            <li>Tangents from an external point: circle on \(OP\) as diameter locates the points of contact.</li>
+            <li>Similar triangle with scale factor \(\frac{m}{n}\): use \(n\) divisions and draw a parallel through the \(m\)th.</li>
+            <li>Leave all arcs; use ruler and compasses only.</li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="tip-box">
+        <div class="box-label">Next steps</div>
+        <p style="margin-bottom:0;">Now that you have revised all five topics, attempt the <a href="/icse-study-material/class-10/mathematics/geometry/quiz/">topic quiz</a> for instant feedback, then the <a href="/icse-study-material/class-10/mathematics/geometry/practice-paper/">practice paper</a> and finally the timed <a href="/icse-study-material/class-10/mathematics/geometry/test/">chapter test</a>.</p>
+      </div>
+
+    </article>
+
+    <a class="sm-back" href="/icse-study-material/class-10/mathematics/geometry/"><i class="fas fa-arrow-left"></i> Back to Geometry (Unit 3)</a>
+    <a class="sm-back" href="/icse-study-material/class-10/mathematics/" style="margin-left: 12px;"><i class="fas fa-arrow-left"></i> All Mathematics topics</a>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-about">
+      <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+      <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#courses">Courses</a></li>
+        <li><a href="/icse-study-material/">ICSE Study Material</a></li>
+        <li><a href="/cbse-study-material/">CBSE Study Material</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Popular Searches</h4>
+      <ul>
+        <li><a href="/icse-study-material/">ICSE Study Material</a></li>
+        <li><a href="/icse-tuition-hulimavu/">ICSE Tuition in Hulimavu</a></li>
+        <li><a href="/cbse-study-material/">CBSE Study Material</a></li>
+        <li><a href="/maths-tuition-hulimavu/">Maths Tuition in Hulimavu</a></li>
+        <li><a href="/science-tuition-hulimavu/">Science Tuition in Hulimavu</a></li>
+        <li><a href="/class-10-tuition-hulimavu/">Class 10 Tuition Hulimavu</a></li>
+        <li><a href="/tuition-centre-bangalore/">Best Tuition Centre in Bangalore</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="/cbse-study-material/sm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/supabase-config.js"></script>
+<script src="/supabase-auth.js"></script>
+<script src="/supabase-nav.js" defer></script>
+<script src="/chatbot/chatbot-loader.js" defer></script>
+</body>
+</html>

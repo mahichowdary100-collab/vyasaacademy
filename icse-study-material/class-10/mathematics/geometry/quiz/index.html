@@ -3,28 +3,137 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Quiz (MCQs) - Geometry: Similarity and Circles | ICSE Class 10 Mathematics | Vyasa Academy</title>
-  <meta name="description" content="Quiz (MCQs) for Geometry: Similarity and Circles of ICSE Class 10 Mathematics. Content is being prepared and will appear here shortly." />
+  <title>ICSE Class 10 Maths Geometry (Unit 3) Quiz | Vyasa Academy</title>
+  <meta name="description" content="Test your ICSE Class 10 Mathematics Geometry (Unit 3) knowledge with an interactive 30-question quiz on similarity, loci, circles, tangents and intersecting chords, and constructions." />
   <link rel="canonical" href="https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/geometry/quiz/" />
-  <meta name="robots" content="noindex, nofollow" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Vyasa Academy" />
-  <meta property="og:title" content="Quiz (MCQs) - Geometry: Similarity and Circles | ICSE Class 10 Mathematics | Vyasa Academy" />
-  <meta property="og:description" content="Quiz (MCQs) for Geometry: Similarity and Circles of ICSE Class 10 Mathematics. Content is being prepared and will appear here shortly." />
+  <meta property="og:title" content="ICSE Class 10 Maths Geometry (Unit 3) Quiz | Vyasa Academy" />
+  <meta property="og:description" content="Test your ICSE Class 10 Mathematics Geometry (Unit 3) knowledge with an interactive 30-question quiz on similarity, loci, circles, tangents and intersecting chords, and constructions." />
   <meta property="og:url" content="https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/geometry/quiz/" />
   <meta property="og:image" content="https://www.vyasaacademy.in/images/classroom.png" />
   <meta property="og:locale" content="en_IN" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Quiz (MCQs) - Geometry: Similarity and Circles | ICSE Class 10 Mathematics | Vyasa Academy" />
-  <meta name="twitter:description" content="Quiz (MCQs) for Geometry: Similarity and Circles of ICSE Class 10 Mathematics. Content is being prepared and will appear here shortly." />
+  <meta name="twitter:title" content="ICSE Class 10 Maths Geometry (Unit 3) Quiz | Vyasa Academy" />
+  <meta name="twitter:description" content="Test your ICSE Class 10 Mathematics Geometry (Unit 3) knowledge with an interactive 30-question quiz on similarity, loci, circles, tangents and intersecting chords, and constructions." />
   <meta name="twitter:image" content="https://www.vyasaacademy.in/images/classroom.png" />
   <link rel="stylesheet" href="/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <script type="application/ld+json">
-{"@context":"https://schema.org","itemListElement":[{"position":1,"name":"Home","item":"https://www.vyasaacademy.in/","@type":"ListItem"},{"position":2,"name":"ICSE Study Material","item":"https://www.vyasaacademy.in/icse-study-material/","@type":"ListItem"},{"position":3,"name":"Class 10","item":"https://www.vyasaacademy.in/icse-study-material/class-10/","@type":"ListItem"},{"position":4,"name":"Mathematics","item":"https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/","@type":"ListItem"},{"position":5,"name":"Geometry: Similarity and Circles","item":"https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/geometry/","@type":"ListItem"},{"position":6,"name":"Quiz (MCQs)","item":"https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/geometry/quiz/","@type":"ListItem"}],"@type":"BreadcrumbList"}
+  {"@context":"https://schema.org","itemListElement":[{"position":1,"name":"Home","item":"https://www.vyasaacademy.in/","@type":"ListItem"},{"position":2,"name":"ICSE Study Material","item":"https://www.vyasaacademy.in/icse-study-material/","@type":"ListItem"},{"position":3,"name":"Class 10","item":"https://www.vyasaacademy.in/icse-study-material/class-10/","@type":"ListItem"},{"position":4,"name":"Mathematics","item":"https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/","@type":"ListItem"},{"position":5,"name":"Geometry (Unit 3)","item":"https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/geometry/","@type":"ListItem"},{"position":6,"name":"Quiz","item":"https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/geometry/quiz/","@type":"ListItem"}],"@type":"BreadcrumbList"}
   </script>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+      processEscapes: true
+    }
+  };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <style>
+  .quiz-app { }
+  .quiz-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin: 6px 0 14px; }
+  .quiz-progress-wrap { flex: 1 1 100%; }
+  .quiz-counter { font-weight: 800; color: var(--primary); }
+  .quiz-timer { display: inline-flex; align-items: center; gap: 8px; background: #eff6ff; border: 1px solid #bfdbfe; color: #1d4ed8; border-radius: 999px; padding: 6px 14px; font-weight: 700; }
+  .quiz-timer.warn { background: #fef2f2; border-color: #fecaca; color: #b91c1c; }
+  .progress-track { height: 12px; background: #e5e7eb; border-radius: 999px; overflow: hidden; }
+  .progress-fill { height: 100%; width: 5%; background: var(--primary); border-radius: 999px; transition: width 0.25s ease; }
+
+  .quiz-q { display: none; border: 1px solid #e5e7eb; border-radius: var(--radius); padding: 20px 22px; margin: 0 0 18px; }
+  .quiz-q.is-active { display: block; }
+  .quiz-q legend, .q-num { font-weight: 800; color: var(--primary); }
+  .quiz-q .q-diff { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; color: var(--gray); margin-left: 8px; }
+  .quiz-q .q-src { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; color: #4338ca; background: #eef2ff; padding: 2px 8px; border-radius: 999px; margin-left: 8px; }
+  .quiz-q .q-src.src-new { color: #6b7280; background: #f3f4f6; }
+  .quiz-q .q-text { font-size: 1.06rem; font-weight: 600; margin: 8px 0 14px; color: var(--dark); }
+
+  .opt { display: flex; align-items: flex-start; gap: 10px; border: 1px solid #e5e7eb; border-radius: 10px; padding: 12px 14px; margin: 8px 0; cursor: pointer; transition: var(--transition); background: #fff; }
+  .opt:hover { border-color: var(--primary); background: #eef2ff; }
+  .opt input { position: absolute; opacity: 0; pointer-events: none; }
+  .opt .opt-radio { flex-shrink: 0; width: 20px; height: 20px; margin-top: 2px; border: 2px solid #9ca3af; border-radius: 50%; position: relative; }
+  .opt input:focus-visible + .opt-radio { outline: 3px solid #fbbf24; outline-offset: 2px; }
+  .opt input:checked + .opt-radio { border-color: var(--primary); }
+  .opt input:checked + .opt-radio::after { content: ""; position: absolute; inset: 3px; background: var(--primary); border-radius: 50%; }
+  .opt .opt-key { flex-shrink: 0; font-weight: 800; color: var(--primary); width: 22px; }
+  .opt .opt-val { flex: 1; }
+
+  .quiz-ok .opts-ok .opt.answered-correct, .opt.answered-correct { border-color: #16a34a; background: #f0fdf4; }
+  .opt.answered-wrong { border-color: #dc2626; background: #fef2f2; }
+
+  .quiz-controls { display: flex; flex-wrap: wrap; gap: 10px; margin: 8px 0 4px; }
+  .quiz-controls button, .quiz-actions button { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 22px; border-radius: var(--radius); border: 2px solid var(--primary); background: var(--primary); color: #fff; font-family: inherit; font-weight: 700; font-size: 0.97rem; cursor: pointer; transition: var(--transition); }
+  .quiz-controls button.secondary, .quiz-actions button.secondary { background: #fff; color: var(--primary); }
+  .quiz-controls button:disabled { opacity: 0.45; cursor: not-allowed; }
+  .quiz-controls button:focus-visible, .quiz-actions button:focus-visible { outline: 3px solid #fbbf24; outline-offset: 2px; }
+
+  .quiz-panel { display: none; }
+  .quiz-panel.is-active { display: block; }
+
+  .result-card { text-align: center; background: #fff; border: 1px solid #e5e7eb; border-radius: var(--radius); padding: 30px 24px; margin: 10px 0 20px; }
+  .result-card .score-big { font-size: 2.8rem; font-weight: 800; color: var(--primary); }
+  .result-card .pct-big { font-size: 1.4rem; font-weight: 800; color: var(--accent-dark); margin: 6px 0 14px; }
+  .result-card .msg { font-size: 1.05rem; color: var(--dark); max-width: 480px; margin: 0 auto; }
+
+  .result-summary { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 20px 0; }
+  .rs-chip { min-width: 130px; border: 1px solid #e5e7eb; border-radius: 10px; padding: 12px; background: #fff; }
+  .rs-chip .rs-n { font-size: 1.6rem; font-weight: 800; color: var(--dark); }
+  .rs-chip .rs-l { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; color: var(--gray); }
+  .rs-chip.good .rs-n { color: #16a34a; }
+  .rs-chip.warn .rs-n { color: #b91c1c; }
+
+  .topic-stats { margin: 8px 0 20px; }
+  .topic-stats h3 { font-size: 1.05rem; margin: 0 0 10px; color: var(--dark); }
+  .topic-table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #e5e7eb; border-radius: var(--radius); overflow: hidden; }
+  .topic-table th, .topic-table td { border: 1px solid #e5e7eb; padding: 9px 12px; text-align: left; font-size: 0.92rem; }
+  .topic-table th { background: #f9fafb; font-weight: 800; color: var(--dark); }
+  .topic-table td.num { text-align: center; font-weight: 700; }
+
+  .explanations { margin: 24px 0 10px; }
+  .exp-card { border: 1px solid #e5e7eb; border-radius: var(--radius); margin: 12px 0; padding: 16px 18px; background: #fff; }
+  .exp-card .exp-head { font-weight: 800; color: var(--dark); margin-bottom: 8px; }
+  .exp-card .exp-head .exp-state { margin-left: 8px; font-size: 0.82rem; padding: 2px 10px; border-radius: 999px; font-weight: 700; }
+  .exp-state.ok { background: #dcfce7; color: #15803d; }
+  .exp-state.no { background: #fee2e2; color: #b91c1c; }
+  .exp-card .exp-row { margin: 4px 0; }
+  .exp-card .exp-row .exp-label { font-weight: 700; color: var(--gray); }
+  .exp-card .exp-note { margin-top: 8px; padding-top: 8px; border-top: 1px dashed #e5e7eb; color: var(--dark); }
+
+  .quiz-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0; }
+
+  dialog { border: none; border-radius: var(--radius); padding: 0; box-shadow: 0 20px 60px rgba(0,0,0,0.25); max-width: 440px; width: 92%; }
+  dialog::backdrop { background: rgba(0,0,0,0.45); }
+  .modal-body { padding: 22px 24px; }
+  .modal-body h3 { margin: 0 0 10px; font-size: 1.15rem; }
+  .modal-actions { display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
+  .modal-actions button { min-height: 44px; padding: 10px 18px; border-radius: var(--radius); border: 2px solid var(--primary); background: var(--primary); color: #fff; font-family: inherit; font-weight: 700; cursor: pointer; }
+  .modal-actions button.secondary { background: #fff; color: var(--primary); }
+
+  .timed-note { background: #eef2ff; border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 12px 16px; margin: 4px 0 16px; font-size: 0.95rem; }
+  .source-note { background: #f0fdf4; border-left: 4px solid #16a34a; border-radius: 0 var(--radius) var(--radius) 0; padding: 10px 16px; margin: 0 0 12px; font-size: 0.92rem; }
+  .draft-note { background: #fff7ed; border-left: 4px solid #ea580c; border-radius: 0 var(--radius) var(--radius) 0; padding: 12px 16px; margin: 0 0 16px; font-size: 0.92rem; }
+  .draft-note strong { color: #c2410c; }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+  .resource-nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
+  .resource-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: var(--radius); border: 2px solid #e5e7eb; font-weight: 600; font-size: 0.92rem; color: var(--dark); background: var(--white); transition: var(--transition); }
+  .resource-nav a:hover, .resource-nav a.is-active { border-color: var(--primary); background: var(--primary); color: var(--white); }
+
+  .sm-back { display: inline-flex; align-items: center; gap: 8px; margin-top: 30px; padding: 10px 0; color: var(--primary); font-weight: 600; }
+  .sm-back:hover { color: var(--accent-dark); }
+
+  @media (max-width: 640px) {
+    .quiz-q { padding: 16px 14px; }
+    .quiz-q .q-text { font-size: 1rem; }
+    .opt { padding: 10px 12px; }
+    .result-card .score-big { font-size: 2.2rem; }
+    .quiz-controls button, .quiz-actions button { flex: 1 1 100%; }
+  }
+  </style>
 </head>
 <body>
 <header class="navbar" id="navbar">
@@ -40,27 +149,374 @@
     <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
   </div>
 </header>
+
 <main class="sm-page">
   <div class="container sm-container">
-    <nav class="sm-crumbs" aria-label="Breadcrumb"><a href="https://www.vyasaacademy.in/">Home</a> / <a href="https://www.vyasaacademy.in/icse-study-material/">ICSE Study Material</a> / <a href="https://www.vyasaacademy.in/icse-study-material/class-10/">Class 10</a> / <a href="https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/">Mathematics</a> / <a href="https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/geometry/">Geometry: Similarity and Circles</a> / <a href="https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/geometry/quiz/">Quiz (MCQs)</a></nav>
-    <section class="sm-placeholder">
-      <span class="sm-ph-icon"><i class="fas fa-bullseye"></i></span>
-      <h1>Quiz (MCQs)</h1>
-      <p class="sm-ph-sub">ICSE Class 10 Mathematics &middot; Geometry: Similarity and Circles</p>
-      <p class="sm-ph-note"><i class="fas fa-hourglass-half"></i> Content coming soon.</p>
-      <div class="sm-ph-actions">
-        <a class="btn btn-secondary" href="../"><i class="fas fa-arrow-left"></i> Back to Geometry: Similarity and Circles</a>
-      </div>
-    </section>
-    <nav class="sm-chips" aria-label="Topic resources">
-<a class="sm-chip-link" href="../notes/">Chapter Notes</a>
-<a class="sm-chip-link" href="../concepts/">Key Concepts & Definitions</a>
-<a class="sm-chip-link" href="../practice-paper/">Worksheets & Practice</a>
-<a class="sm-chip-link is-active" href="../quiz/">Quiz (MCQs)</a>
-<a class="sm-chip-link" href="../test/">Chapter Test</a>
+    <nav class="sm-crumbs" aria-label="Breadcrumb">
+      <a href="https://www.vyasaacademy.in/">Home</a> /
+      <a href="https://www.vyasaacademy.in/icse-study-material/">ICSE Study Material</a> /
+      <a href="https://www.vyasaacademy.in/icse-study-material/class-10/">Class 10</a> /
+      <a href="https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/">Mathematics</a> /
+      <a href="https://www.vyasaacademy.in/icse-study-material/class-10/mathematics/geometry/">Geometry (Unit 3)</a> /
+      Quiz
     </nav>
+
+    <section class="sm-hero sm-hero-slim">
+      <p class="sm-eyebrow">ICSE Class 10 &middot; Mathematics &middot; Geometry (Unit 3)</p>
+      <h1>Class 10 Mathematics &ndash; Geometry (Unit 3) Quiz</h1>
+      <p>Test your understanding of similarity, loci, circles, tangents and intersecting chords, and constructions with this 30-question interactive quiz.</p>
+    </section>
+
+    <nav class="resource-nav" aria-label="Chapter resources">
+      <a href="/icse-study-material/class-10/mathematics/geometry/notes/"><i class="fas fa-book-open"></i> Notes</a>
+      <a href="/icse-study-material/class-10/mathematics/geometry/practice-paper/"><i class="fas fa-file-lines"></i> Practice Paper</a>
+      <a class="is-active" href="/icse-study-material/class-10/mathematics/geometry/quiz/"><i class="fas fa-bullseye"></i> Quiz</a>
+      <a href="/icse-study-material/class-10/mathematics/geometry/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+    </nav>
+
+    <section class="quiz-app" id="quizApp" aria-label="Geometry interactive quiz">
+      <p class="timed-note"><i class="fas fa-stopwatch"></i> This quiz is <strong>timed</strong>. You have <strong>30 minutes</strong> to answer all 30 questions. When the time is up, the quiz submits automatically.</p>
+      <p class="draft-note"><i class="fas fa-triangle-exclamation"></i> <strong>Draft &ndash; PYQ quota not met.</strong> This quiz currently includes <strong>4 verified ICSE board questions</strong>, fewer than the 12-question target. It is published as a draft; further verified board questions will be added once their year and paper code are confirmed. Only questions whose board source is verified are tagged <strong>ICSE Board</strong>.</p>
+      <p class="source-note"><i class="fas fa-circle-check"></i> <strong>Question sourcing:</strong> 4 of the 30 questions are verified ICSE board questions from the 2023 and 2024 papers, tagged <strong>ICSE Board</strong>. The remaining 26 are original exam-style questions created by Vyasa Academy. In the quiz, options appear in a shuffled order, so the letter labels are not the same as any printed source.</p>
+
+      <noscript>
+        <div class="notice-box" role="alert">This interactive quiz requires JavaScript. You can use the chapter <a href="/icse-study-material/class-10/mathematics/geometry/practice-paper/">practice paper</a> instead.</div>
+      </noscript>
+
+      <div id="quizView">
+        <div class="quiz-top">
+          <span class="quiz-counter" id="quizCounter" aria-live="polite">Question 1 of 30</span>
+          <span class="quiz-timer" id="quizTimer" aria-live="off"><i class="fas fa-stopwatch" aria-hidden="true"></i><span id="quizTimerText">Time Remaining: 30:00</span><span class="visually-hidden" id="timerLive" aria-live="polite"></span></span>
+        </div>
+        <div class="quiz-progress-wrap">
+          <div class="progress-track" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="30" aria-valuenow="1" id="progressBar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <span class="visually-hidden" id="progressText">At question 1 of 30</span>
+        </div>
+
+        <form id="quizForm" novalidate>
+          <fieldset class="quiz-q" id="q1" aria-labelledby="q1label">
+            <legend id="q1label"><span class="q-num">Question 1</span><span class="q-diff">Easy</span><span class="q-src">ICSE Board 2024</span></legend>
+            <p class="q-text">In the given diagram, \(\triangle ABC \sim \triangle PQR\). If \(AD\) and \(PS\) are the bisectors of \(\angle BAC\) and \(\angle QPR\) respectively, then:</p>
+            <label class="opt"><input type="radio" name="q1" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(\triangle ABC \sim \triangle PQS\)</span></label>
+            <label class="opt"><input type="radio" name="q1" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(\triangle ABD \sim \triangle PQS\)</span></label>
+            <label class="opt"><input type="radio" name="q1" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(\triangle ABD \sim \triangle PSR\)</span></label>
+            <label class="opt"><input type="radio" name="q1" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(\triangle ABC \sim \triangle PSR\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q2" aria-labelledby="q2label">
+            <legend id="q2label"><span class="q-num">Question 2</span><span class="q-diff">Easy</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">The areas of two similar triangles are in the ratio \(4 : 9\). The ratio of their corresponding sides is:</p>
+            <label class="opt"><input type="radio" name="q2" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(2 : 3\)</span></label>
+            <label class="opt"><input type="radio" name="q2" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(4 : 9\)</span></label>
+            <label class="opt"><input type="radio" name="q2" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(16 : 81\)</span></label>
+            <label class="opt"><input type="radio" name="q2" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(3 : 2\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q3" aria-labelledby="q3label">
+            <legend id="q3label"><span class="q-num">Question 3</span><span class="q-diff">Easy</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">In \(\triangle ABC\), \(DE \parallel BC\) with \(AD = 2.5\text{ cm}\), \(DB = 5\text{ cm}\) and \(AE = 3\text{ cm}\). Then \(EC\) equals:</p>
+            <label class="opt"><input type="radio" name="q3" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(1.5\text{ cm}\)</span></label>
+            <label class="opt"><input type="radio" name="q3" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(5\text{ cm}\)</span></label>
+            <label class="opt"><input type="radio" name="q3" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(6\text{ cm}\)</span></label>
+            <label class="opt"><input type="radio" name="q3" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(7.5\text{ cm}\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q4" aria-labelledby="q4label">
+            <legend id="q4label"><span class="q-num">Question 4</span><span class="q-diff">Moderate</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">In \(\triangle ABC\), \(DE \parallel BC\). If \(AD = 4\text{ cm}\), \(DB = 6\text{ cm}\) and \(AE = 5\text{ cm}\), then \(EC\) is:</p>
+            <label class="opt"><input type="radio" name="q4" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(6\text{ cm}\)</span></label>
+            <label class="opt"><input type="radio" name="q4" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(7.5\text{ cm}\)</span></label>
+            <label class="opt"><input type="radio" name="q4" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(9\text{ cm}\)</span></label>
+            <label class="opt"><input type="radio" name="q4" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(3\text{ cm}\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q5" aria-labelledby="q5label">
+            <legend id="q5label"><span class="q-num">Question 5</span><span class="q-diff">Moderate</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">\(\triangle ABC \sim \triangle DEF\) with \(AB = 6\text{ cm}\) and \(DE = 4\text{ cm}\). If the area of \(\triangle DEF\) is \(20\text{ cm}^2\), the area of \(\triangle ABC\) is:</p>
+            <label class="opt"><input type="radio" name="q5" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(30\text{ cm}^2\)</span></label>
+            <label class="opt"><input type="radio" name="q5" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(45\text{ cm}^2\)</span></label>
+            <label class="opt"><input type="radio" name="q5" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(80\text{ cm}^2\)</span></label>
+            <label class="opt"><input type="radio" name="q5" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(60\text{ cm}^2\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q6" aria-labelledby="q6label">
+            <legend id="q6label"><span class="q-num">Question 6</span><span class="q-diff">Moderate</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">A vertical pole \(6\text{ m}\) high casts a shadow \(4\text{ m}\) long. At the same time, a tower casts a shadow \(20\text{ m}\) long. The height of the tower is:</p>
+            <label class="opt"><input type="radio" name="q6" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(24\text{ m}\)</span></label>
+            <label class="opt"><input type="radio" name="q6" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(30\text{ m}\)</span></label>
+            <label class="opt"><input type="radio" name="q6" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(36\text{ m}\)</span></label>
+            <label class="opt"><input type="radio" name="q6" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(40\text{ m}\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q7" aria-labelledby="q7label">
+            <legend id="q7label"><span class="q-num">Question 7</span><span class="q-diff">Easy</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">The locus of a point equidistant from two given points \(A\) and \(B\) is:</p>
+            <label class="opt"><input type="radio" name="q7" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">the perpendicular bisector of \(AB\)</span></label>
+            <label class="opt"><input type="radio" name="q7" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">the line \(AB\)</span></label>
+            <label class="opt"><input type="radio" name="q7" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">a circle with centre \(A\)</span></label>
+            <label class="opt"><input type="radio" name="q7" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">a line parallel to \(AB\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q8" aria-labelledby="q8label">
+            <legend id="q8label"><span class="q-num">Question 8</span><span class="q-diff">Easy</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">The locus of a point at a fixed distance of \(3\text{ cm}\) from a fixed point \(O\) is:</p>
+            <label class="opt"><input type="radio" name="q8" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">two parallel lines</span></label>
+            <label class="opt"><input type="radio" name="q8" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">a circle of radius \(3\text{ cm}\) with centre \(O\)</span></label>
+            <label class="opt"><input type="radio" name="q8" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">a straight line through \(O\)</span></label>
+            <label class="opt"><input type="radio" name="q8" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">the perpendicular bisector of a segment</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q9" aria-labelledby="q9label">
+            <legend id="q9label"><span class="q-num">Question 9</span><span class="q-diff">Moderate</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">The locus of a point equidistant from two intersecting straight lines is:</p>
+            <label class="opt"><input type="radio" name="q9" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">a single line parallel to both lines</span></label>
+            <label class="opt"><input type="radio" name="q9" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">a circle</span></label>
+            <label class="opt"><input type="radio" name="q9" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">the two angle bisectors of the angles formed</span></label>
+            <label class="opt"><input type="radio" name="q9" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">the point of intersection of the lines</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q10" aria-labelledby="q10label">
+            <legend id="q10label"><span class="q-num">Question 10</span><span class="q-diff">Moderate</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">The locus of the centre of a circle of radius \(2\text{ cm}\) which touches a given line \(l\) is:</p>
+            <label class="opt"><input type="radio" name="q10" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">the line \(l\) itself</span></label>
+            <label class="opt"><input type="radio" name="q10" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">one line parallel to \(l\) at a distance \(4\text{ cm}\)</span></label>
+            <label class="opt"><input type="radio" name="q10" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">a circle of radius \(2\text{ cm}\)</span></label>
+            <label class="opt"><input type="radio" name="q10" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">two lines parallel to \(l\), at a distance \(2\text{ cm}\) on either side of it</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q11" aria-labelledby="q11label">
+            <legend id="q11label"><span class="q-num">Question 11</span><span class="q-diff">Easy</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">The locus of a point that is equidistant from the two arms of a given angle is:</p>
+            <label class="opt"><input type="radio" name="q11" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">a line parallel to one arm</span></label>
+            <label class="opt"><input type="radio" name="q11" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">the angle bisector of the angle</span></label>
+            <label class="opt"><input type="radio" name="q11" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">a circle with the vertex as centre</span></label>
+            <label class="opt"><input type="radio" name="q11" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">a perpendicular to one arm</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q12" aria-labelledby="q12label">
+            <legend id="q12label"><span class="q-num">Question 12</span><span class="q-diff">Moderate</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">The locus of a point equidistant from two given parallel lines is:</p>
+            <label class="opt"><input type="radio" name="q12" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">a single line parallel to both, midway between them</span></label>
+            <label class="opt"><input type="radio" name="q12" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">the two angle bisectors</span></label>
+            <label class="opt"><input type="radio" name="q12" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">a circle</span></label>
+            <label class="opt"><input type="radio" name="q12" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">a line perpendicular to both</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q13" aria-labelledby="q13label">
+            <legend id="q13label"><span class="q-num">Question 13</span><span class="q-diff">Easy</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">In a circle with centre \(O\), the angle subtended by a chord \(AB\) at the centre is \(110^\circ\). The angle subtended by \(AB\) at a point on the major arc is:</p>
+            <label class="opt"><input type="radio" name="q13" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(110^\circ\)</span></label>
+            <label class="opt"><input type="radio" name="q13" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(55^\circ\)</span></label>
+            <label class="opt"><input type="radio" name="q13" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(220^\circ\)</span></label>
+            <label class="opt"><input type="radio" name="q13" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(125^\circ\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q14" aria-labelledby="q14label">
+            <legend id="q14label"><span class="q-num">Question 14</span><span class="q-diff">Easy</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">\(ABCD\) is a cyclic quadrilateral with \(\angle A = 68^\circ\). Then \(\angle C\) equals:</p>
+            <label class="opt"><input type="radio" name="q14" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(68^\circ\)</span></label>
+            <label class="opt"><input type="radio" name="q14" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(22^\circ\)</span></label>
+            <label class="opt"><input type="radio" name="q14" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(112^\circ\)</span></label>
+            <label class="opt"><input type="radio" name="q14" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(90^\circ\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q15" aria-labelledby="q15label">
+            <legend id="q15label"><span class="q-num">Question 15</span><span class="q-diff">Moderate</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">\(AB\) is a diameter of a circle and \(C\) is a point on the circle with \(\angle ABC = 35^\circ\). Then \(\angle BAC\) equals:</p>
+            <label class="opt"><input type="radio" name="q15" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(35^\circ\)</span></label>
+            <label class="opt"><input type="radio" name="q15" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(90^\circ\)</span></label>
+            <label class="opt"><input type="radio" name="q15" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(55^\circ\)</span></label>
+            <label class="opt"><input type="radio" name="q15" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(145^\circ\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q16" aria-labelledby="q16label">
+            <legend id="q16label"><span class="q-num">Question 16</span><span class="q-diff">Moderate</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">In a circle with centre \(O\), chord \(AB\) subtends \(\angle AOB = 80^\circ\) at the centre. The angle subtended by \(AB\) at a point \(C\) on the major arc is:</p>
+            <label class="opt"><input type="radio" name="q16" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(80^\circ\)</span></label>
+            <label class="opt"><input type="radio" name="q16" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(100^\circ\)</span></label>
+            <label class="opt"><input type="radio" name="q16" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(160^\circ\)</span></label>
+            <label class="opt"><input type="radio" name="q16" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(40^\circ\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q17" aria-labelledby="q17label">
+            <legend id="q17label"><span class="q-num">Question 17</span><span class="q-diff">Moderate</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">A chord of length \(24\text{ cm}\) is drawn in a circle of radius \(13\text{ cm}\). The perpendicular distance of the chord from the centre is:</p>
+            <label class="opt"><input type="radio" name="q17" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(5\text{ cm}\)</span></label>
+            <label class="opt"><input type="radio" name="q17" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(12\text{ cm}\)</span></label>
+            <label class="opt"><input type="radio" name="q17" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(6\text{ cm}\)</span></label>
+            <label class="opt"><input type="radio" name="q17" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(25\text{ cm}\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q18" aria-labelledby="q18label">
+            <legend id="q18label"><span class="q-num">Question 18</span><span class="q-diff">Easy</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">In a cyclic quadrilateral \(ABCD\), \(\angle B = 110^\circ\). Then \(\angle D\) equals:</p>
+            <label class="opt"><input type="radio" name="q18" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(110^\circ\)</span></label>
+            <label class="opt"><input type="radio" name="q18" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(70^\circ\)</span></label>
+            <label class="opt"><input type="radio" name="q18" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(55^\circ\)</span></label>
+            <label class="opt"><input type="radio" name="q18" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(90^\circ\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q19" aria-labelledby="q19label">
+            <legend id="q19label"><span class="q-num">Question 19</span><span class="q-diff">Moderate</span><span class="q-src">ICSE Board 2024</span></legend>
+            <p class="q-text">In the given diagram, \(PS\) and \(PT\) are tangents to the circle. \(SQ \parallel PT\) and \(\angle SPT = 80^\circ\). The value of \(\angle QST\) is:</p>
+            <label class="opt"><input type="radio" name="q19" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(140^\circ\)</span></label>
+            <label class="opt"><input type="radio" name="q19" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(90^\circ\)</span></label>
+            <label class="opt"><input type="radio" name="q19" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(80^\circ\)</span></label>
+            <label class="opt"><input type="radio" name="q19" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(50^\circ\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q20" aria-labelledby="q20label">
+            <legend id="q20label"><span class="q-num">Question 20</span><span class="q-diff">Moderate</span><span class="q-src">ICSE Board 2023</span></legend>
+            <p class="q-text">In the given diagram, \(RT\) is a tangent touching the circle at \(S\). If \(\angle PST = 30^\circ\) and \(\angle SPQ = 60^\circ\), then \(\angle PSQ\) equals:</p>
+            <label class="opt"><input type="radio" name="q20" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(40^\circ\)</span></label>
+            <label class="opt"><input type="radio" name="q20" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(30^\circ\)</span></label>
+            <label class="opt"><input type="radio" name="q20" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(60^\circ\)</span></label>
+            <label class="opt"><input type="radio" name="q20" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(90^\circ\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q21" aria-labelledby="q21label">
+            <legend id="q21label"><span class="q-num">Question 21</span><span class="q-diff">Easy</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">A tangent at a point on a circle makes an angle of \(30^\circ\) with a chord through the point of contact. The angle made by the chord in the alternate segment is:</p>
+            <label class="opt"><input type="radio" name="q21" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(30^\circ\)</span></label>
+            <label class="opt"><input type="radio" name="q21" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(60^\circ\)</span></label>
+            <label class="opt"><input type="radio" name="q21" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(150^\circ\)</span></label>
+            <label class="opt"><input type="radio" name="q21" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(15^\circ\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q22" aria-labelledby="q22label">
+            <legend id="q22label"><span class="q-num">Question 22</span><span class="q-diff">Moderate</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">From an external point \(P\), a tangent \(PT\) of length \(12\text{ cm}\) is drawn, and a secant \(PAB\) cuts the circle with \(PA = 8\text{ cm}\). The length of \(PB\) is:</p>
+            <label class="opt"><input type="radio" name="q22" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(16\text{ cm}\)</span></label>
+            <label class="opt"><input type="radio" name="q22" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(18\text{ cm}\)</span></label>
+            <label class="opt"><input type="radio" name="q22" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(24\text{ cm}\)</span></label>
+            <label class="opt"><input type="radio" name="q22" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(12\text{ cm}\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q23" aria-labelledby="q23label">
+            <legend id="q23label"><span class="q-num">Question 23</span><span class="q-diff">Moderate</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">Two chords \(AB\) and \(CD\) of a circle intersect at a point \(P\) inside the circle. If \(PA = 6\text{ cm}\), \(PB = 8\text{ cm}\) and \(PC = 4\text{ cm}\), then \(PD\) equals:</p>
+            <label class="opt"><input type="radio" name="q23" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(12\text{ cm}\)</span></label>
+            <label class="opt"><input type="radio" name="q23" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(3\text{ cm}\)</span></label>
+            <label class="opt"><input type="radio" name="q23" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(10\text{ cm}\)</span></label>
+            <label class="opt"><input type="radio" name="q23" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(48\text{ cm}\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q24" aria-labelledby="q24label">
+            <legend id="q24label"><span class="q-num">Question 24</span><span class="q-diff">Challenging</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">Two chords \(AB\) and \(CD\) of a circle intersect at a point \(P\) inside the circle. If \(PA = 4\text{ cm}\), \(PB = 12\text{ cm}\) and \(PC = 6\text{ cm}\), then \(PD\) equals:</p>
+            <label class="opt"><input type="radio" name="q24" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">\(6\text{ cm}\)</span></label>
+            <label class="opt"><input type="radio" name="q24" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">\(10\text{ cm}\)</span></label>
+            <label class="opt"><input type="radio" name="q24" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">\(8\text{ cm}\)</span></label>
+            <label class="opt"><input type="radio" name="q24" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">\(12\text{ cm}\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q25" aria-labelledby="q25label">
+            <legend id="q25label"><span class="q-num">Question 25</span><span class="q-diff">Easy</span><span class="q-src">ICSE Board 2024</span></legend>
+            <p class="q-text">The circumcentre of a triangle is the point which is:</p>
+            <label class="opt"><input type="radio" name="q25" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">at equal distance from the three sides of the triangle</span></label>
+            <label class="opt"><input type="radio" name="q25" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">at equal distance from the three vertices of the triangle</span></label>
+            <label class="opt"><input type="radio" name="q25" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">the point of intersection of the three medians</span></label>
+            <label class="opt"><input type="radio" name="q25" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">the point of intersection of the three altitudes</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q26" aria-labelledby="q26label">
+            <legend id="q26label"><span class="q-num">Question 26</span><span class="q-diff">Easy</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">To construct the circumcircle of a triangle, you draw the:</p>
+            <label class="opt"><input type="radio" name="q26" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">perpendicular bisectors of two sides</span></label>
+            <label class="opt"><input type="radio" name="q26" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">angle bisectors of two angles</span></label>
+            <label class="opt"><input type="radio" name="q26" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">medians</span></label>
+            <label class="opt"><input type="radio" name="q26" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">altitudes</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q27" aria-labelledby="q27label">
+            <legend id="q27label"><span class="q-num">Question 27</span><span class="q-diff">Easy</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">To construct the incircle of a triangle, you draw the:</p>
+            <label class="opt"><input type="radio" name="q27" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">perpendicular bisectors of two sides</span></label>
+            <label class="opt"><input type="radio" name="q27" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">angle bisectors of two angles</span></label>
+            <label class="opt"><input type="radio" name="q27" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">medians</span></label>
+            <label class="opt"><input type="radio" name="q27" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">altitudes</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q28" aria-labelledby="q28label">
+            <legend id="q28label"><span class="q-num">Question 28</span><span class="q-diff">Moderate</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">To locate a point that is equidistant from two fixed points \(A\) and \(B\) during a construction, you draw the:</p>
+            <label class="opt"><input type="radio" name="q28" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">line \(AB\)</span></label>
+            <label class="opt"><input type="radio" name="q28" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">perpendicular bisector of \(AB\)</span></label>
+            <label class="opt"><input type="radio" name="q28" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">circle with centre \(A\)</span></label>
+            <label class="opt"><input type="radio" name="q28" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">angle bisector of \(\angle A\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q29" aria-labelledby="q29label">
+            <legend id="q29label"><span class="q-num">Question 29</span><span class="q-diff">Challenging</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">To construct a triangle given its base \(BC\), the base angle \(\angle B\) and the sum \(AB + AC\), the first step is to:</p>
+            <label class="opt"><input type="radio" name="q29" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">draw \(BD = AB + AC\) along the ray making \(\angle B\)</span></label>
+            <label class="opt"><input type="radio" name="q29" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">draw the circumcircle of \(BC\)</span></label>
+            <label class="opt"><input type="radio" name="q29" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">draw a circle with centre \(B\) and radius \(BC\)</span></label>
+            <label class="opt"><input type="radio" name="q29" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">construct an equilateral triangle on \(BC\)</span></label>
+          </fieldset>
+
+          <fieldset class="quiz-q" id="q30" aria-labelledby="q30label">
+            <legend id="q30label"><span class="q-num">Question 30</span><span class="q-diff">Moderate</span><span class="q-src src-new">Original</span></legend>
+            <p class="q-text">The point of intersection of the perpendicular bisectors of the sides of a triangle is the:</p>
+            <label class="opt"><input type="radio" name="q30" value="a"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">A</span><span class="opt-val">centroid</span></label>
+            <label class="opt"><input type="radio" name="q30" value="b"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">B</span><span class="opt-val">circumcentre</span></label>
+            <label class="opt"><input type="radio" name="q30" value="c"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">C</span><span class="opt-val">incentre</span></label>
+            <label class="opt"><input type="radio" name="q30" value="d"><span class="opt-radio" aria-hidden="true"></span><span class="opt-key">D</span><span class="opt-val">orthocentre</span></label>
+          </fieldset>
+
+          <div class="quiz-controls">
+            <button type="button" class="secondary" id="btnPrev"><i class="fas fa-arrow-left" aria-hidden="true"></i> Previous</button>
+            <button type="button" id="btnNext">Next <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+            <button type="button" id="btnSubmit"><i class="fas fa-flag-checkered" aria-hidden="true"></i> Submit Quiz</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="quiz-panel" id="resultView">
+        <div class="result-card">
+          <h2 style="margin-top:0;"><i class="fas fa-trophy" aria-hidden="true"></i> Quiz Result</h2>
+          <div class="score-big" id="resScore">0 / 30</div>
+          <div class="pct-big" id="resPct">0%</div>
+          <p class="msg" id="resMsg"></p>
+        </div>
+        <div class="result-summary">
+          <div class="rs-chip"><div class="rs-n" id="resTotal">0</div><div class="rs-l">Total Questions</div></div>
+          <div class="rs-chip good"><div class="rs-n" id="resCorrect">0</div><div class="rs-l">Correct</div></div>
+          <div class="rs-chip warn"><div class="rs-n" id="resIncorrect">0</div><div class="rs-l">Incorrect</div></div>
+          <div class="rs-chip warn"><div class="rs-n" id="resUnanswered">0</div><div class="rs-l">Unanswered</div></div>
+        </div>
+        <div class="topic-stats" id="topicStats" aria-label="Topic-wise performance"></div>
+        <div class="quiz-actions">
+          <button type="button" id="btnRetry"><i class="fas fa-redo" aria-hidden="true"></i> Retry Quiz</button>
+          <button type="button" class="secondary" id="btnReview"><i class="fas fa-list-check" aria-hidden="true"></i> Review Answers</button>
+        </div>
+      </div>
+
+      <div class="quiz-panel" id="reviewView">
+        <h2><i class="fas fa-list-check" aria-hidden="true"></i> Review Answers</h2>
+        <p>For each question, your answer and the correct answer are shown, with a short explanation. Questions tagged <strong>ICSE Board</strong> are verified CISCE board questions.</p>
+        <div class="explanations" id="explanations"></div>
+        <div class="quiz-actions">
+          <button type="button" id="btnBackResult"><i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Result</button>
+          <button type="button" class="secondary" id="btnRetry2"><i class="fas fa-redo" aria-hidden="true"></i> Retry Quiz</button>
+        </div>
+      </div>
+
+      <nav class="resource-nav" aria-label="Chapter resources">
+        <a href="/icse-study-material/class-10/mathematics/geometry/notes/"><i class="fas fa-book-open"></i> Notes</a>
+        <a href="/icse-study-material/class-10/mathematics/geometry/practice-paper/"><i class="fas fa-file-lines"></i> Practice Paper</a>
+        <a href="/icse-study-material/class-10/mathematics/geometry/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+      </nav>
+    </section>
+
+    <a class="sm-back" href="/icse-study-material/class-10/mathematics/geometry/"><i class="fas fa-arrow-left"></i> Back to Geometry (Unit 3)</a>
+    <a class="sm-back" href="/icse-study-material/class-10/mathematics/" style="margin-left: 12px;"><i class="fas fa-arrow-left"></i> All Mathematics topics</a>
+
   </div>
 </main>
+
 <footer class="footer">
   <div class="container footer-content">
     <div class="footer-about">
@@ -71,11 +527,9 @@
       <h4>Quick Links</h4>
       <ul>
         <li><a href="/">Home</a></li>
-
-        <li><a href="/#faculty">Faculty</a></li>
         <li><a href="/#courses">Courses</a></li>
-        <li><a href="/cbse-study-material/">CBSE Study Material</a></li>
         <li><a href="/icse-study-material/">ICSE Study Material</a></li>
+        <li><a href="/cbse-study-material/">CBSE Study Material</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><a href="/#papers">Practice Papers</a></li>
         <li><a href="/#contact">Contact</a></li>
@@ -108,8 +562,407 @@
     <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
   </div>
 </footer>
+
 <script src="/cbse-study-material/sm.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="/supabase-config.js"></script><script src="/supabase-auth.js"></script><script src="/supabase-nav.js" defer></script>
-<script src="/chatbot/chatbot-loader.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/supabase-config.js"></script>
+<script src="/supabase-auth.js"></script>
+<script src="/supabase-nav.js" defer></script>
+<script src="/chatbot/chatbot-loader.js" defer></script><script>
+(function () {
+  "use strict";
+
+  var TOTAL = 30;
+  var TIME_LIMIT = 1800;
+
+  var QUESTIONS = [
+    { id: "q1",  topic: "similarity",    difficulty: "Easy",        sourceType: "ICSE PYQ", sourceYear: "2024", sourceExam: "ICSE Board Paper 2024 (Mathematics, Paper 511), Section A", sourceClassification: "verified_pyq", sourceDoc: "ICSE Board Paper 2024 (Mathematics, Paper 511)", sourceUrl: "https://www.icseboard.org/pdf/class-10/papers/mathematics/2024/icse-class-10-mathematics-t24-511-2024.pdf", verified: true,  correct: "b" },
+    { id: "q2",  topic: "similarity",    difficulty: "Easy",        sourceType: "Original", sourceYear: null, sourceExam: null, sourceClassification: "original", sourceDoc: null, sourceUrl: null, verified: false, correct: "a" },
+    { id: "q3",  topic: "similarity",    difficulty: "Easy",        sourceType: "Original", sourceYear: null, sourceExam: null, sourceClassification: "original", sourceDoc: null, sourceUrl: null, verified: false, correct: "c" },
+    { id: "q4",  topic: "similarity",    difficulty: "Moderate",    sourceType: "Original", sourceYear: null, sourceExam: null, sourceClassification: "original", sourceDoc: null, sourceUrl: null, verified: false, correct: "b" },
+    { id: "q5",  topic: "similarity",    difficulty: "Moderate",    sourceType: "Original", sourceYear: null, sourceExam: null, sourceClassification: "original", sourceDoc: null, sourceUrl: null, verified: false, correct: "b" },
+    { id: "q6",  topic: "similarity",    difficulty: "Moderate",    sourceType: "Original", sourceYear: null, sourceExam: null, sourceClassification: "original", sourceDoc: null, sourceUrl: null, verified: false, correct: "b" },
+    { id: "q7",  topic: "loci",          difficulty: "Easy",        sourceType: "Original", sourceYear: null, sourceExam: null, sourceClassification: "original", sourceDoc: null, sourceUrl: null, verified: false, correct: "a" },
+    { id: "q8",  topic: "loci",          difficulty: "Easy",        sourceType: "Original", sourceYear: null, sourceExam: null, sourceClassification: "original", sourceDoc: null, sourceUrl: null, verified: false, correct: "b" },
+    { id: "q9",  topic: "loci",          difficulty: "Moderate",    sourceType: "Original", sourceYear: null, sourceExam: null, sourceClassification: "original", sourceDoc: null, sourceUrl: null, verified: false, correct: "c" },
+    { id: "q10", topic: "loci",          difficulty: "Moderate",    sourceType: "Original", sourceYear: null, sourceExam: null, sourceClassification: "original", sourceDoc: null, sourceUrl: null, verified: false, correct: "d" },
+    { id: "q11", topic: "loci",          difficulty: "Easy",        sourceType: "Original", sourceYear: null, sourceExam: null, sourceClassification: "original", sourceDoc: null, sourceUrl: null, verified: false, correct: "b" },
+    { id: "q12", topic: "loci",          difficulty: "Moderate",    sourceType: "Original", sourceYear: null, sourceExam: null, sourceClassification: "original", sourceDoc: null, sourceUrl: null, verified: false, correct: "a" },
+    { id: "q13", topic: "circles",       difficulty: "Easy",        sourceType: "Original", sourceYear: null, sourceExam: null, sourceClassification: "original", sourceDoc: null, sourceUrl: null, verified: false, correct: "b" },
+    { id: "q14", topic: "circles",       difficulty: "Easy",        sourceType: "Original", sourceYear: null, sourceExam: null, sourceClassification: "original", sourceDoc: null, sourceUrl: null, verified: false, correct: "c" },
+    { id: "q15", topic: "circles",       difficulty: "Moderate",    sourceType: "Original", sourceYear: null, sourceExam: null, sourceClassification: "original", sourceDoc: null, sourceUrl: null, verified: false, correct: "c" },
+    { id: "q16", topic: "circles",       difficulty: "Moderate",    sourceType: "Original", sourceYear: null, sourceExam: null, sourceClassification: "original", sourceDoc: null, sourceUrl: null, verified: false, correct: "d" },
+    { id: "q17", topic: "circles",       difficulty: "Moderate",    sourceType: "Original", sourceYear: null, sourceExam: null, sourceClassification: "original", sourceDoc: null, sourceUrl: null, verified: false, correct: "a" },
+    { id: "q18", topic: "circles",       difficulty: "Easy",        sourceType: "Original", sourceYear: null, sourceExam: null, sourceClassification: "original", sourceDoc: null, sourceUrl: null, verified: false, correct: "b" },
+    { id: "q19", topic: "tangents",      difficulty: "Moderate",    sourceType: "ICSE PYQ", sourceYear: "2024", sourceExam: "ICSE Board Paper 2024 (Mathematics, Paper 511), Section A", sourceClassification: "verified_pyq", sourceDoc: "ICSE Board Paper 2024 (Mathematics, Paper 511)", sourceUrl: "https://www.icseboard.org/pdf/class-10/papers/mathematics/2024/icse-class-10-mathematics-t24-511-2024.pdf", verified: true,  correct: "d" },
+    { id: "q20", topic: "tangents",      difficulty: "Moderate",    sourceType: "ICSE PYQ", sourceYear: "2023", sourceExam: "ICSE Board Paper 2023 (Mathematics, Paper 511), Section A", sourceClassification: "verified_pyq", sourceDoc: "ICSE Board Paper 2023 (Mathematics, Paper 511)", sourceUrl: "https://www.icseboard.org/pdf/class-10/papers/mathematics/2023/icse-class-10-mathematics-t23-511-2023.pdf", verified: true,  correct: "d" },
+    { id: "q21", topic: "tangents",      difficulty: "Easy",        sourceType: "Original", sourceYear: null, sourceExam: null, sourceClassification: "original", sourceDoc: null, sourceUrl: null, verified: false, correct: "a" },
+    { id: "q22", topic: "tangents",      difficulty: "Moderate",    sourceType: "Original", sourceYear: null, sourceExam: null, sourceClassification: "original", sourceDoc: null, sourceUrl: null, verified: false, correct: "b" },
+    { id: "q23", topic: "tangents",      difficulty: "Moderate",    sourceType: "Original", sourceYear: null, sourceExam: null, sourceClassification: "original", sourceDoc: null, sourceUrl: null, verified: false, correct: "a" },
+    { id: "q24", topic: "tangents",      difficulty: "Challenging", sourceType: "Original", sourceYear: null, sourceExam: null, sourceClassification: "original", sourceDoc: null, sourceUrl: null, verified: false, correct: "c" },
+    { id: "q25", topic: "constructions", difficulty: "Easy",        sourceType: "ICSE PYQ", sourceYear: "2024", sourceExam: "ICSE Board Paper 2024 (Mathematics, Paper 511), Section A", sourceClassification: "verified_pyq", sourceDoc: "ICSE Board Paper 2024 (Mathematics, Paper 511)", sourceUrl: "https://www.icseboard.org/pdf/class-10/papers/mathematics/2024/icse-class-10-mathematics-t24-511-2024.pdf", verified: true,  correct: "b" },
+    { id: "q26", topic: "constructions", difficulty: "Easy",        sourceType: "Original", sourceYear: null, sourceExam: null, sourceClassification: "original", sourceDoc: null, sourceUrl: null, verified: false, correct: "a" },
+    { id: "q27", topic: "constructions", difficulty: "Easy",        sourceType: "Original", sourceYear: null, sourceExam: null, sourceClassification: "original", sourceDoc: null, sourceUrl: null, verified: false, correct: "b" },
+    { id: "q28", topic: "constructions", difficulty: "Moderate",    sourceType: "Original", sourceYear: null, sourceExam: null, sourceClassification: "original", sourceDoc: null, sourceUrl: null, verified: false, correct: "b" },
+    { id: "q29", topic: "constructions", difficulty: "Challenging", sourceType: "Original", sourceYear: null, sourceExam: null, sourceClassification: "original", sourceDoc: null, sourceUrl: null, verified: false, correct: "a" },
+    { id: "q30", topic: "constructions", difficulty: "Moderate",    sourceType: "Original", sourceYear: null, sourceExam: null, sourceClassification: "original", sourceDoc: null, sourceUrl: null, verified: false, correct: "b" }
+  ];
+
+  var EXPLANATIONS = {
+    q1:  "\u25B3ABC ~ \u25B3PQR gives \u2220B = \u2220Q and \u2220A = \u2220P. Since AD and PS bisect equal angles, \u2220BAD = \u2220QPS, so by AA similarity \u25B3ABD ~ \u25B3PQS. Source: ICSE Board Paper 2024 (Mathematics, Paper 511), Section A.",
+    q2:  "For similar triangles, the ratio of areas equals the square of the ratio of corresponding sides. Since (4/9) = (2/3)\u00B2, the sides are in the ratio 2 : 3.",
+    q3:  "By the basic proportionality theorem, AD/DB = AE/EC, so 2.5/5 = 3/EC. Hence EC = (5 \u00D7 3)/2.5 = 6 cm.",
+    q4:  "AD/DB = AE/EC gives 4/6 = 5/EC, so EC = (6 \u00D7 5)/4 = 7.5 cm.",
+    q5:  "Ratio of areas = (AB/DE)\u00B2 = (6/4)\u00B2 = 9/4. So area(ABC) = 20 \u00D7 9/4 = 45 cm\u00B2.",
+    q6:  "The pole and its shadow, and the tower and its shadow, form similar triangles: 6/4 = h/20, so h = 30 m.",
+    q7:  "A point equidistant from A and B lies on the perpendicular bisector of segment AB.",
+    q8:  "A point at a fixed distance from a fixed point traces a circle whose centre is the fixed point. Radius = 3 cm.",
+    q9:  "A point equidistant from two intersecting lines lies on one of the two angle bisectors of the angles formed.",
+    q10: "The centre must be 2 cm from line l. The set of such points is two lines parallel to l, 2 cm away on either side.",
+    q11: "A point equidistant from the two arms of an angle lies on the angle bisector.",
+    q12: "The locus of a point equidistant from two parallel lines is the single line parallel to both and midway between them.",
+    q13: "The angle at the centre is twice the angle at the circumference on the same arc, so the angle at the major arc is 110\u00B0/2 = 55\u00B0.",
+    q14: "Opposite angles of a cyclic quadrilateral are supplementary: \u2220C = 180\u00B0 \u2212 68\u00B0 = 112\u00B0.",
+    q15: "AB is a diameter, so \u2220ACB = 90\u00B0 (angle in a semicircle). Hence \u2220BAC = 180\u00B0 \u2212 90\u00B0 \u2212 35\u00B0 = 55\u00B0.",
+    q16: "The angle at the centre is twice the angle at the circumference: 80\u00B0/2 = 40\u00B0 at the major arc.",
+    q17: "The perpendicular from the centre bisects the chord, so half-chord = 12 cm. Then d = \u221A(13\u00B2 \u2212 12\u00B2) = \u221A25 = 5 cm.",
+    q18: "Opposite angles of a cyclic quadrilateral are supplementary: \u2220D = 180\u00B0 \u2212 110\u00B0 = 70\u00B0.",
+    q19: "Tangents from P are equal, so PS = PT and \u2220PST = \u2220PTS. In \u25B3PST, 2\u2220PTS = 100\u00B0, so \u2220PTS = 50\u00B0. Since SQ \u2225 PT, alternate angles give \u2220QST = \u2220PTS = 50\u00B0. Source: ICSE Board Paper 2024 (Mathematics, Paper 511), Section A.",
+    q20: "By the alternate segment theorem, \u2220PQS = \u2220PST = 30\u00B0. In \u25B3PQS, \u2220PSQ = 180\u00B0 \u2212 60\u00B0 \u2212 30\u00B0 = 90\u00B0. Source: ICSE Board Paper 2023 (Mathematics, Paper 511), Section A.",
+    q21: "By the alternate segment theorem, the angle between the tangent and the chord equals the angle in the alternate segment, so it is 30\u00B0.",
+    q22: "By the tangent\u2013secant theorem, PT\u00B2 = PA \u00D7 PB. So 144 = 8 \u00D7 PB, giving PB = 18 cm.",
+    q23: "For two chords intersecting inside a circle, PA \u00D7 PB = PC \u00D7 PD. So 6 \u00D7 8 = 4 \u00D7 PD, giving PD = 12 cm.",
+    q24: "PA \u00D7 PB = PC \u00D7 PD, so 4 \u00D7 12 = 6 \u00D7 PD, giving PD = 48/6 = 8 cm.",
+    q25: "The circumcentre is the centre of the circumcircle and is equidistant from the three vertices. Source: ICSE Board Paper 2024 (Mathematics, Paper 511), Section A.",
+    q26: "The circumcentre is the intersection of the perpendicular bisectors of the sides, so the circumcircle is drawn from that centre.",
+    q27: "The incentre is the intersection of the angle bisectors, so the incircle is drawn from that centre.",
+    q28: "The locus equidistant from A and B is the perpendicular bisector of AB.",
+    q29: "Draw BC, construct \u2220B, and cut BD = AB + AC on that ray; this is the standard first step for base + base angle + sum of sides.",
+    q30: "The perpendicular bisectors of the sides meet at the circumcentre, the centre of the circumcircle."
+  };
+
+  var TOPIC_LABELS = {
+    similarity: "Similarity",
+    loci: "Loci",
+    circles: "Circles",
+    tangents: "Tangents and Intersecting Chords",
+    constructions: "Constructions"
+  };
+  var TOPIC_ORDER = ["similarity", "loci", "circles", "tangents", "constructions"];
+
+  var form = document.getElementById("quizForm");
+  var quizView = document.getElementById("quizView");
+  var resultView = document.getElementById("resultView");
+  var reviewView = document.getElementById("reviewView");
+  var counterEl = document.getElementById("quizCounter");
+  var timerEl = document.getElementById("quizTimer");
+  var timerText = document.getElementById("quizTimerText");
+  var timerLive = document.getElementById("timerLive");
+  var progressFill = document.getElementById("progressFill");
+  var progressBar = document.getElementById("progressBar");
+  var progressText = document.getElementById("progressText");
+  var explanations = document.getElementById("explanations");
+  var confirmDialog = document.createElement("dialog");
+  confirmDialog.id = "confirmDialog";
+  confirmDialog.innerHTML =
+    '<div class="modal-body">' +
+      '<h3>Unanswered questions</h3>' +
+      '<p id="confirmMsg">Some questions are unanswered. Do you want to submit the quiz?</p>' +
+      '<div class="modal-actions">' +
+        '<button type="button" class="secondary" id="confirmContinue">Continue Quiz</button>' +
+        '<button type="button" id="confirmSubmit">Submit Quiz</button>' +
+      '</div>' +
+    '</div>';
+  document.body.appendChild(confirmDialog);
+
+  var cards = [];
+  for (var i = 0; i < TOTAL; i++) {
+    cards.push(document.getElementById(QUESTIONS[i].id));
+  }
+
+  var timeLeft = TIME_LIMIT;
+  var timerId = null;
+  var submitted = false;
+  var currentIndex = 0;
+
+  function shuffle(arr) {
+    for (var i = arr.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = arr[i]; arr[i] = arr[j]; arr[j] = t;
+    }
+    return arr;
+  }
+
+  function letter(idx) { return "ABCD".charAt(idx); }
+
+  function orderQuestions() {
+    var ordered = shuffle(cards.slice());
+    ordered.forEach(function (card) { form.appendChild(card); });
+    ordered.forEach(function (card, idx) {
+      var num = card.querySelector(".q-num");
+      if (num) num.textContent = "Question " + (idx + 1);
+    });
+  }
+
+  function shuffleOptions(card) {
+    var opts = Array.prototype.slice.call(card.querySelectorAll(".opt"));
+    shuffle(opts);
+    opts.forEach(function (el) { card.appendChild(el); });
+    opts.forEach(function (el, idx) {
+      var key = el.querySelector(".opt-key");
+      if (key) key.textContent = letter(idx);
+    });
+  }
+
+  function resetAnswers() {
+    var radios = form.querySelectorAll('input[type="radio"]');
+    for (var i = 0; i < radios.length; i++) radios[i].checked = false;
+  }
+
+  function showCard(idx) {
+    cards.forEach(function (c, i) { c.classList.toggle("is-active", i === idx); });
+    currentIndex = idx;
+    counterEl.textContent = "Question " + (idx + 1) + " of " + TOTAL;
+    progressFill.style.width = ((idx) / TOTAL * 100) + "%";
+    progressBar.setAttribute("aria-valuenow", String(idx + 1));
+    progressText.textContent = "At question " + (idx + 1) + " of " + TOTAL;
+  }
+
+  function updateTimerDisplay() {
+    var m = Math.floor(timeLeft / 60);
+    var s = timeLeft % 60;
+    timerText.textContent = "Time Remaining: " + String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0");
+    if (timeLeft === 60) timerLive.textContent = "Less than one minute remaining.";
+    if (timeLeft <= 60) timerEl.classList.add("warn");
+  }
+
+  function startTimer() {
+    if (timerId) clearInterval(timerId);
+    timeLeft = TIME_LIMIT;
+    updateTimerDisplay();
+    timerId = setInterval(function () {
+      timeLeft--;
+      updateTimerDisplay();
+      if (timeLeft <= 0) {
+        clearInterval(timerId);
+        submitQuiz(true);
+      }
+    }, 1000);
+  }
+
+  function gatherResults() {
+    var correct = 0, incorrect = 0, unanswered = 0;
+    QUESTIONS.forEach(function (q) {
+      var checked = form.querySelector('input[name="' + q.id + '"]:checked');
+      if (!checked) unanswered++;
+      else if (checked.value === q.correct) correct++;
+      else incorrect++;
+    });
+    return { correct: correct, incorrect: incorrect, unanswered: unanswered };
+  }
+
+  function messageFor(pct) {
+    if (pct >= 90) return "Excellent! You have a strong grasp of Geometry (Unit 3).";
+    if (pct >= 75) return "Very good! Review a few concepts and keep practising.";
+    if (pct >= 50) return "Good attempt. Revise the important concepts and try again.";
+    return "Review the chapter notes and attempt the quiz again.";
+  }
+
+  function fillTopicStats() {
+    var map = {};
+    TOPIC_ORDER.forEach(function (t) {
+      map[t] = { correct: 0, total: 0 };
+    });
+    QUESTIONS.forEach(function (q) {
+      if (!map[q.topic]) map[q.topic] = { correct: 0, total: 0 };
+      map[q.topic].total++;
+      var checked = form.querySelector('input[name="' + q.id + '"]:checked');
+      if (checked && checked.value === q.correct) map[q.topic].correct++;
+    });
+    var rows = TOPIC_ORDER.map(function (t) {
+      return '<tr><td>' + (TOPIC_LABELS[t] || t) + '</td><td class="num">' + map[t].correct + ' / ' + map[t].total + '</td></tr>';
+    }).join("");
+    document.getElementById("topicStats").innerHTML =
+      '<h3><i class="fas fa-chart-pie" aria-hidden="true"></i> Topic-wise performance</h3>' +
+      '<table class="topic-table"><thead><tr><th>Topic</th><th style="text-align:center;">Correct / Attempted</th></tr></thead><tbody>' +
+      rows + '</tbody></table>';
+  }
+
+  function showResult() {
+    var r = gatherResults();
+    var score = r.correct;
+    var pct = Math.round((score / TOTAL) * 100);
+    document.getElementById("resScore").textContent = score + " / " + TOTAL;
+    document.getElementById("resPct").textContent = pct + "%";
+    document.getElementById("resMsg").textContent = messageFor(pct);
+    document.getElementById("resTotal").textContent = TOTAL;
+    document.getElementById("resCorrect").textContent = r.correct;
+    document.getElementById("resIncorrect").textContent = r.incorrect;
+    document.getElementById("resUnanswered").textContent = r.unanswered;
+    fillTopicStats();
+    quizView.classList.remove("is-active");
+    reviewView.classList.remove("is-active");
+    resultView.classList.add("is-active");
+    quizView.style.display = "none";
+    resultView.style.display = "block";
+    reviewView.style.display = "none";
+    quizView.closest(".sm-page").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function buildReview() {
+    explanations.innerHTML = "";
+    cards.forEach(function (card) {
+      var q = questionById(card.id);
+      var checked = card.querySelector('input[type="radio"]:checked');
+      var yourVal = checked ? checked.value : null;
+      var isCorrect = yourVal === q.correct;
+      var yourLetter = yourVal ? optionLetter(card, yourVal) : "Not answered";
+      var correctLetter = optionLetter(card, q.correct);
+
+      var wrap = document.createElement("div");
+      wrap.className = "exp-card";
+
+      var head = document.createElement("div");
+      head.className = "exp-head";
+      head.textContent = "Question " + card.dataset.number;
+
+      var state = document.createElement("span");
+      state.className = "exp-state " + (isCorrect ? "ok" : "no");
+      state.textContent = isCorrect ? "\u2713 Correct" : (yourVal === null ? "\u2013 Not answered" : "\u2717 Incorrect");
+      state.setAttribute("aria-label", isCorrect ? "Correct" : (yourVal === null ? "Not answered" : "Incorrect"));
+      head.appendChild(state);
+
+      var qtext = document.createElement("div");
+      qtext.className = "exp-row";
+      var qlabel = document.createElement("span");
+      qlabel.className = "exp-label";
+      qlabel.textContent = "Question: ";
+      qtext.appendChild(qlabel);
+      qtext.appendChild(card.querySelector(".q-text").cloneNode(true));
+
+      var yrow = document.createElement("div");
+      yrow.className = "exp-row";
+      var ylabel = document.createElement("span");
+      ylabel.className = "exp-label";
+      ylabel.textContent = "Your Answer: ";
+      yrow.appendChild(ylabel);
+      yrow.appendChild(document.createTextNode(yourLetter));
+
+      var crow = document.createElement("div");
+      crow.className = "exp-row";
+      var clabel = document.createElement("span");
+      clabel.className = "exp-label";
+      clabel.textContent = "Correct Answer: ";
+      crow.appendChild(clabel);
+      crow.appendChild(document.createTextNode(correctLetter));
+
+      var note = document.createElement("div");
+      note.className = "exp-note";
+      var nlabel = document.createElement("span");
+      nlabel.className = "exp-label";
+      nlabel.textContent = "Explanation: ";
+      note.appendChild(nlabel);
+      note.appendChild(document.createTextNode(EXPLANATIONS[q.id] || ""));
+
+      wrap.appendChild(head);
+      wrap.appendChild(qtext);
+      wrap.appendChild(yrow);
+      wrap.appendChild(crow);
+      wrap.appendChild(note);
+      explanations.appendChild(wrap);
+
+      var correctEl = card.querySelector('.opt input[value="' + q.correct + '"]');
+      if (correctEl && correctEl.parentNode) correctEl.parentNode.classList.add("answered-correct");
+      if (checked && checked.value !== q.correct) {
+        checked.parentNode.classList.add("answered-wrong");
+      }
+    });
+    quizView.style.display = "none";
+    resultView.style.display = "none";
+    reviewView.style.display = "block";
+    document.getElementById("quizApp").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function questionById(id) {
+    for (var i = 0; i < QUESTIONS.length; i++) {
+      if (QUESTIONS[i].id === id) return QUESTIONS[i];
+    }
+    return null;
+  }
+
+  function optionLetter(card, value) {
+    var opts = Array.prototype.slice.call(card.querySelectorAll(".opt"));
+    for (var i = 0; i < opts.length; i++) {
+      if (opts[i].querySelector("input").value === value) return "ABCD".charAt(i);
+    }
+    return "";
+  }
+
+  function requestSubmit() {
+    var r = gatherResults();
+    if (r.unanswered > 0) {
+      document.getElementById("confirmMsg").textContent =
+        r.unanswered + " question(s) are unanswered. Do you want to submit the quiz?";
+      confirmDialog.showModal();
+    } else {
+      submitQuiz(false);
+    }
+  }
+
+  function submitQuiz(auto) {
+    if (submitted) return;
+    submitted = true;
+    if (timerId) clearInterval(timerId);
+    showResult();
+  }
+
+  function retry() {
+    submitted = false;
+    resetAnswers();
+    cards.forEach(function (card) {
+      card.querySelectorAll(".opt").forEach(function (o) {
+        o.classList.remove("answered-correct", "answered-wrong");
+        o.querySelector("input").disabled = false;
+      });
+    });
+    orderQuestions();
+    cards.forEach(shuffleOptions);
+    quizView.style.display = "block";
+    resultView.style.display = "none";
+    reviewView.style.display = "none";
+    showCard(0);
+    startTimer();
+    document.getElementById("quizApp").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  document.getElementById("btnPrev").addEventListener("click", function () {
+    if (currentIndex > 0) showCard(currentIndex - 1);
+  });
+
+  document.getElementById("btnNext").addEventListener("click", function () {
+    if (currentIndex < TOTAL - 1) showCard(currentIndex + 1);
+  });
+
+  document.getElementById("btnSubmit").addEventListener("click", requestSubmit);
+  document.getElementById("confirmContinue").addEventListener("click", function () { confirmDialog.close(); });
+  document.getElementById("confirmSubmit").addEventListener("click", function () { confirmDialog.close(); submitQuiz(false); });
+  document.getElementById("btnRetry").addEventListener("click", retry);
+  document.getElementById("btnRetry2").addEventListener("click", retry);
+  document.getElementById("btnReview").addEventListener("click", buildReview);
+  document.getElementById("btnBackResult").addEventListener("click", function () {
+    reviewView.style.display = "none";
+    resultView.style.display = "block";
+  });
+
+  cards.forEach(function (card, idx) {
+    card.setAttribute("data-number", String(idx + 1));
+  });
+
+  orderQuestions();
+  cards.forEach(shuffleOptions);
+  showCard(0);
+  startTimer();
+})();
+</script>
 </body>
 </html>
