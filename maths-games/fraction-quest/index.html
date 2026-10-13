@@ -1,0 +1,1829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fraction Quest | Fractions Maths Game for Classes 6-10 | Vyasa Academy</title>
+  <meta name="description" content="Fraction Quest is a free interactive maths game for CBSE and ICSE classes 6 to 10. Build fraction towers, escape the fraction rooms, beat the Fraction Bot, race the Blitz timer and play Fraction Match." />
+  <link rel="canonical" href="https://www.vyasaacademy.in/maths-games/fraction-quest/" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vyasa Academy" />
+  <meta property="og:title" content="Fraction Quest | Fractions Maths Game for Classes 6-10 | Vyasa Academy" />
+  <meta property="og:description" content="Master fractions through five interactive game modes: Build, Escape, Bot Battle, Blitz and Match. Free to play, no login needed." />
+  <meta property="og:url" content="https://www.vyasaacademy.in/maths-games/fraction-quest/" />
+  <meta property="og:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fraction Quest | Fractions Maths Game | Vyasa Academy" />
+  <meta name="twitter:description" content="Build, escape, battle, blitz and match your way to fraction mastery. Free to play, no login needed." />
+  <meta name="twitter:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.vyasaacademy.in/" },
+      { "@type": "ListItem", "position": 2, "name": "Vyasa Maths Games", "item": "https://www.vyasaacademy.in/maths-games/" },
+      { "@type": "ListItem", "position": 3, "name": "Fraction Quest", "item": "https://www.vyasaacademy.in/maths-games/fraction-quest/" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Fraction Quest - The 3D Fraction Adventure",
+    "applicationCategory": "GameApplication",
+    "url": "https://www.vyasaacademy.in/maths-games/fraction-quest/",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "description": "Free interactive maths game covering fractions for CBSE and ICSE classes 6 to 10: fraction building, equivalence, simplification, comparison, operations, mixed numbers, decimals and percentages, with an escape room, a bot battle, a timed blitz and a matching arena.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+    "publisher": { "@type": "Organization", "name": "Vyasa Academy", "url": "https://vyasaacademy.in/" }
+  }
+  </script>
+  <style>
+    /* ===== FRACTION QUEST - warm fraction lab (page scoped) ===== */
+    .fq-app {
+      --fq-bg: #150f0b;
+      --fq-bg2: #201510;
+      --fq-panel: rgba(46, 30, 20, 0.88);
+      --fq-line: rgba(255, 196, 94, 0.22);
+      --fq-gold: #ffc45e;
+      --fq-amber: #ff9f43;
+      --fq-ember: #ff6b57;
+      --fq-red: #ff6b8b;
+      --fq-green: #86e6a6;
+      --fq-teal: #5fd7d0;
+      --fq-text: #fff3df;
+      --fq-mute: #d4b68f;
+      position: relative;
+      background:
+        radial-gradient(1200px 520px at 12% -8%, rgba(255,159,67,0.20), transparent 60%),
+        radial-gradient(900px 460px at 92% 4%, rgba(255,107,87,0.16), transparent 60%),
+        radial-gradient(760px 600px at 50% 115%, rgba(95,215,208,0.10), transparent 60%),
+        linear-gradient(180deg, var(--fq-bg) 0%, var(--fq-bg2) 100%);
+      color: var(--fq-text);
+      min-height: 100vh;
+      padding: 34px 0 70px;
+      overflow: hidden;
+    }
+    .fq-app::before {
+      content: "";
+      position: absolute; inset: 0;
+      background-image:
+        radial-gradient(circle at 14px 14px, rgba(255,196,94,0.10) 1.5px, transparent 2.2px),
+        radial-gradient(circle at 60px 46px, rgba(255,196,94,0.07) 1.5px, transparent 2.2px);
+      background-size: 74px 64px;
+      mask-image: radial-gradient(circle at 50% 28%, #000 0%, transparent 78%);
+      pointer-events: none;
+    }
+    .fq-wrap { position: relative; z-index: 1; max-width: 1080px; margin: 0 auto; padding: 0 18px; }
+
+    .fq-crumbs { font-size: 0.82rem; color: var(--fq-mute); margin-bottom: 14px; }
+    .fq-crumbs a { color: var(--fq-gold); text-decoration: underline; text-underline-offset: 3px; }
+
+    /* ---- screens ---- */
+    .fq-screen[hidden] { display: none !important; }
+    .fq-screen { animation: fqFade 0.35s ease; }
+    @keyframes fqFade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+    /* ---- hero ---- */
+    .fq-hero { text-align: center; padding: 14px 0 6px; }
+    .fq-logo {
+      display: inline-flex; align-items: center; gap: 12px;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700; font-size: clamp(1.9rem, 5.6vw, 3.2rem);
+      background: linear-gradient(100deg, var(--fq-gold), var(--fq-amber) 50%, var(--fq-ember));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      letter-spacing: 0.5px;
+    }
+    .fq-subtitle { color: #ffe3b3; font-size: 1.05rem; margin: 8px 0 4px; font-weight: 700; }
+    .fq-lead { color: var(--fq-text); opacity: 0.88; max-width: 660px; margin: 4px auto 0; line-height: 1.65; }
+
+    .fq-cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin: 22px 0 8px; }
+    .fq-btn {
+      display: inline-flex; align-items: center; gap: 9px;
+      border: 1px solid var(--fq-line);
+      background: linear-gradient(180deg, rgba(255,196,94,0.16), rgba(255,196,94,0.04));
+      color: var(--fq-text); font-weight: 700; font-size: 0.96rem;
+      padding: 12px 22px; border-radius: 12px; cursor: pointer;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+      font-family: inherit;
+    }
+    .fq-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(255,159,67,0.22); }
+    .fq-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+    .fq-btn-primary {
+      background: linear-gradient(120deg, var(--fq-gold), var(--fq-ember));
+      color: #2a1504; border-color: transparent; box-shadow: 0 10px 30px rgba(255,159,67,0.35);
+    }
+    .fq-btn-primary:hover { box-shadow: 0 14px 38px rgba(255,159,67,0.5); }
+    .fq-btn-ghost { background: rgba(255,255,255,0.04); color: var(--fq-text); }
+    .fq-btn-danger { background: rgba(255,107,139,0.12); border-color: rgba(255,107,139,0.5); color: #ffc4d2; }
+    .fq-btn-sm { padding: 8px 14px; font-size: 0.85rem; border-radius: 10px; }
+    .fq-toggle-btn[aria-pressed="false"] { opacity: 0.65; }
+
+    /* ---- status bar ---- */
+    .fq-status { display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: center; margin: 22px 0 8px; background: var(--fq-panel); border: 1px solid var(--fq-line); border-radius: 16px; padding: 14px 18px; }
+    .fq-xp-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+    .fq-level-pill { font-weight: 800; color: var(--fq-gold); }
+    .fq-xp-bar { height: 12px; border-radius: 999px; background: rgba(255,255,255,0.08); overflow: hidden; margin-top: 8px; }
+    .fq-xp-fill { height: 100%; width: 0%; border-radius: 999px; background: linear-gradient(90deg, var(--fq-gold), var(--fq-teal)); transition: width 0.5s ease; }
+    .fq-mini-stats { display: flex; gap: 18px; flex-wrap: wrap; }
+    .fq-mini { text-align: center; min-width: 62px; }
+    .fq-mini b { display: block; font-size: 1.25rem; color: var(--fq-gold); font-variant-numeric: tabular-nums; }
+    .fq-mini span { font-size: 0.72rem; color: var(--fq-mute); text-transform: uppercase; letter-spacing: 0.6px; }
+
+    /* ---- section titles & modes ---- */
+    .fq-sec-title { margin: 30px 0 14px; font-size: 1.15rem; display: flex; align-items: center; gap: 9px; }
+    .fq-sec-title i { color: var(--fq-ember); }
+    .fq-modes { display: grid; grid-template-columns: repeat(auto-fill, minmax(228px, 1fr)); gap: 16px; }
+    .fq-mode {
+      text-align: left; background: var(--fq-panel); border: 1px solid var(--fq-line);
+      border-radius: 16px; padding: 20px; cursor: pointer; color: var(--fq-text);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      font-family: inherit;
+    }
+    .fq-mode:hover { transform: translateY(-4px); border-color: rgba(255,196,94,0.55); box-shadow: 0 14px 34px rgba(255,159,67,0.16); }
+    .fq-mode-ico { font-size: 1.9rem; display: block; margin-bottom: 10px; }
+    .fq-mode h3 { font-size: 1.08rem; margin-bottom: 6px; color: var(--fq-text); }
+    .fq-mode p { color: var(--fq-mute); font-size: 0.9rem; line-height: 1.5; }
+    .fq-mode-tag { display: inline-block; margin-top: 12px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: var(--fq-gold); }
+
+    /* ---- achievements ---- */
+    .fq-ach-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(158px, 1fr)); gap: 12px; }
+    .fq-ach { display: flex; gap: 10px; align-items: flex-start; background: var(--fq-panel); border: 1px solid var(--fq-line); border-radius: 12px; padding: 12px; opacity: 0.45; }
+    .fq-ach.earned { opacity: 1; border-color: rgba(134,230,166,0.55); box-shadow: 0 0 0 1px rgba(134,230,166,0.18) inset; }
+    .fq-ach-ico { font-size: 1.4rem; }
+    .fq-ach b { display: block; font-size: 0.9rem; color: var(--fq-text); }
+    .fq-ach span { font-size: 0.78rem; color: var(--fq-mute); }
+
+    /* ---- how to play ---- */
+    .fq-how { background: var(--fq-panel); border: 1px solid var(--fq-line); border-radius: 16px; padding: 18px 20px; }
+    .fq-how ol { margin: 8px 0 0 18px; color: var(--fq-mute); line-height: 1.7; }
+    .fq-how code { background: rgba(255,255,255,0.08); border-radius: 6px; padding: 1px 6px; color: var(--fq-gold); font-family: inherit; }
+    .fq-kbd { display: inline-block; border: 1px solid var(--fq-line); border-bottom-width: 2px; border-radius: 6px; padding: 0 7px; font-size: 0.8rem; background: rgba(255,255,255,0.06); }
+
+    /* ---- generic panels ---- */
+    .fq-panel { background: var(--fq-panel); border: 1px solid var(--fq-line); border-radius: 16px; padding: 20px; }
+    .fq-panel + .fq-panel { margin-top: 16px; }
+    .fq-topline { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+    .fq-mode-name { font-weight: 800; font-size: 1.15rem; display: flex; align-items: center; gap: 9px; }
+    .fq-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+    .fq-pill { font-size: 0.78rem; font-weight: 700; border: 1px solid var(--fq-line); border-radius: 999px; padding: 5px 12px; color: var(--fq-mute); background: transparent; cursor: pointer; font-family: inherit; }
+    .fq-pill.on { color: #2a1504; background: var(--fq-gold); border-color: transparent; }
+    .fq-pill:hover { border-color: rgba(255,196,94,0.6); }
+
+    .fq-hud { display: grid; grid-template-columns: repeat(auto-fit, minmax(88px, 1fr)); gap: 10px; margin: 4px 0 16px; }
+    .fq-stat { background: rgba(255,255,255,0.04); border: 1px solid var(--fq-line); border-radius: 12px; padding: 10px 8px; text-align: center; }
+    .fq-stat b { display: block; font-size: 1.25rem; color: var(--fq-gold); font-variant-numeric: tabular-nums; }
+    .fq-stat span { font-size: 0.68rem; color: var(--fq-mute); text-transform: uppercase; letter-spacing: 0.5px; }
+    .fq-stat.warn b { color: var(--fq-red); }
+    .fq-stat.good b { color: var(--fq-green); }
+
+    .fq-progress { height: 8px; border-radius: 999px; background: rgba(255,255,255,0.08); overflow: hidden; margin-bottom: 14px; }
+    .fq-progress i { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--fq-gold), var(--fq-ember)); transition: width 0.4s linear; }
+
+    /* ---- question card ---- */
+    .fq-q { background: linear-gradient(180deg, rgba(255,196,94,0.09), rgba(255,196,94,0.01)); border: 1px solid var(--fq-line); border-radius: 14px; padding: 18px; }
+    .fq-q-topic { font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.8px; color: var(--fq-ember); font-weight: 700; }
+    .fq-q-text { font-size: clamp(1.05rem, 2.6vw, 1.35rem); margin: 8px 0 4px; line-height: 1.55; }
+    .fq-q-text .m { color: var(--fq-gold); font-variant-numeric: tabular-nums; }
+    .fq-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(118px, 1fr)); gap: 10px; margin-top: 14px; }
+    .fq-option {
+      border: 1.5px solid var(--fq-line); background: rgba(255,255,255,0.03); color: var(--fq-text);
+      border-radius: 12px; padding: 13px 12px; font-size: 1.05rem; font-weight: 700; cursor: pointer;
+      transition: transform 0.14s ease, border-color 0.14s ease, background 0.14s ease;
+      font-variant-numeric: tabular-nums; font-family: inherit;
+    }
+    .fq-option:hover:not(:disabled) { transform: translateY(-2px); border-color: rgba(255,196,94,0.55); }
+    .fq-option.correct { background: rgba(134,230,166,0.16); border-color: var(--fq-green); color: #d8ffe6; }
+    .fq-option.wrong { background: rgba(255,107,139,0.14); border-color: var(--fq-red); color: #ffd9e1; }
+    .fq-option:disabled { cursor: default; }
+
+    .fq-answer-row { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
+    .fq-input {
+      flex: 1; min-width: 170px; background: rgba(255,255,255,0.05); border: 1.5px solid var(--fq-line);
+      color: var(--fq-text); border-radius: 12px; padding: 12px 14px; font-size: 1.05rem; font-variant-numeric: tabular-nums;
+      font-family: inherit;
+    }
+    .fq-input::placeholder { color: var(--fq-mute); opacity: 0.7; }
+    .fq-input:focus { outline: 3px solid rgba(255,196,94,0.45); border-color: var(--fq-gold); }
+    .fq-feedback { margin-top: 14px; border-radius: 12px; padding: 12px 14px; font-size: 0.95rem; line-height: 1.6; display: none; }
+    .fq-feedback.show { display: block; }
+    .fq-feedback.ok { background: rgba(134,230,166,0.12); border: 1px solid rgba(134,230,166,0.45); }
+    .fq-feedback.bad { background: rgba(255,107,139,0.1); border: 1px solid rgba(255,107,139,0.45); }
+    .fq-feedback b { color: var(--fq-text); }
+    .fq-hint-line { margin-top: 10px; font-size: 0.9rem; color: var(--fq-gold); }
+    .fq-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; align-items: center; }
+    .fq-flex-spacer { flex: 1; }
+
+    /* ---- fraction models (2D bar, circle, 3D tower) ---- */
+    .fq-model-box { display: flex; flex-direction: column; gap: 6px; align-items: center; margin: 10px 0; }
+    .fq-frac-label { font-size: 0.9rem; color: var(--fq-mute); font-variant-numeric: tabular-nums; }
+    .fq-bar-cell { flex: 1; height: 44px; border-radius: 4px; border: 1px solid var(--fq-line); background: rgba(255,255,255,0.04); }
+    .fq-bar-cell.shade { background: linear-gradient(160deg, rgba(255,196,94,0.9), rgba(255,107,87,0.85)); border-color: var(--fq-gold); }
+    .fq-bar { display: flex; gap: 3px; width: min(520px, 100%); }
+    .fq-cellbtn {
+      border: 1.5px solid var(--fq-line); background: rgba(255,255,255,0.04); border-radius: 6px;
+      cursor: pointer; min-width: 30px; min-height: 44px; color: var(--fq-mute); font-family: inherit;
+      font-size: 0.82rem; font-weight: 700; transition: transform 0.12s ease, background 0.12s ease;
+    }
+    .fq-cellbtn:hover { transform: scale(1.05); border-color: rgba(255,196,94,0.6); }
+    .fq-cellbtn.filled { background: linear-gradient(160deg, rgba(255,196,94,0.9), rgba(255,107,87,0.85)); border-color: var(--fq-gold); color: #2a1504; }
+    .fq-cellbtn.done { background: rgba(134,230,166,0.9); border-color: var(--fq-green); color: #06210e; }
+    .fq-tower { display: flex; flex-direction: column; gap: 4px; width: min(150px, 60%); }
+    .fq-block {
+      height: 30px; border-radius: 5px; border: 1px solid var(--fq-line); background: rgba(255,255,255,0.05);
+      position: relative; transition: background 0.15s ease;
+    }
+    .fq-block::before {
+      content: ""; position: absolute; left: -7px; top: 4px; width: 7px; height: 22px;
+      border-left: 1px solid var(--fq-line); border-radius: 3px 0 0 3px; background: rgba(255,255,255,0.03);
+    }
+    .fq-block::after {
+      content: ""; position: absolute; left: -7px; top: -7px; width: 78px; height: 7px;
+      transform: skewX(-45deg); border-top: 1px solid var(--fq-line); border-radius: 3px 0 0; background: rgba(255,255,255,0.04);
+    }
+    .fq-block.shade { background: linear-gradient(160deg, rgba(255,196,94,0.88), rgba(255,107,87,0.8)); border-color: var(--fq-gold); }
+    .fq-block.shade::before, .fq-block.shade::after { background: rgba(255,180,90,0.55); border-color: rgba(255,196,94,0.55); }
+    .fq-block.clickable { cursor: pointer; }
+    .fq-circle { width: min(150px, 55%); aspect-ratio: 1 / 1; border-radius: 50%; border: 1px solid var(--fq-gold); position: relative; overflow: hidden; }
+    .fq-circle-in { position: absolute; inset: 0; border-radius: 50%; }
+
+    /* ---- matching ---- */
+    .fq-match-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: start; }
+    .fq-match-col h4 { color: var(--fq-mute); text-transform: uppercase; letter-spacing: 0.7px; font-size: 0.78rem; margin-bottom: 10px; }
+    .fq-match-board { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; }
+    .fq-card {
+      min-height: 68px; border-radius: 12px; border: 1.5px solid var(--fq-line);
+      background: rgba(255,255,255,0.04); color: var(--fq-text); cursor: pointer;
+      display: flex; align-items: center; justify-content: center; text-align: center;
+      font-weight: 700; font-size: 1.05rem; padding: 10px; font-variant-numeric: tabular-nums;
+      transition: transform 0.14s ease, border-color 0.14s ease, background 0.14s ease;
+      font-family: inherit;
+    }
+    .fq-card:hover { transform: translateY(-3px); }
+    .fq-card.selected { border-color: var(--fq-gold); background: rgba(255,196,94,0.16); }
+    .fq-card.matched { border-color: var(--fq-green); background: rgba(134,230,166,0.14); cursor: default; opacity: 0.9; }
+    .fq-card.flash-bad { border-color: var(--fq-red); background: rgba(255,107,139,0.2); }
+
+    /* ---- escape ---- */
+    .fq-room-head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+    .fq-room-ico { font-size: 2rem; }
+    .fq-lock-list { display: grid; gap: 14px; margin-top: 12px; }
+    .fq-lock { background: rgba(255,255,255,0.03); border: 1px solid var(--fq-line); border-radius: 14px; padding: 14px 16px; }
+    .fq-lock.solved { border-color: rgba(134,230,166,0.55); background: rgba(134,230,166,0.08); }
+    .fq-lock-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-weight: 700; }
+    .fq-lock-head .st { margin-left: auto; font-size: 0.78rem; color: var(--fq-mute); }
+    .fq-lock.solved .st { color: var(--fq-green); }
+    .fq-door { margin-top: 18px; background: linear-gradient(180deg, rgba(255,107,87,0.12), rgba(255,159,67,0.05)); border: 1px dashed rgba(255,196,94,0.6); border-radius: 16px; padding: 16px 18px; }
+
+    /* ---- battle ---- */
+    .fq-arena { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; align-items: center; margin-bottom: 14px; }
+    .fq-fighter { text-align: center; }
+    .fq-avatar { font-size: 2.6rem; display: block; filter: drop-shadow(0 6px 14px rgba(255,159,67,0.35)); }
+    .fq-fighter.bot .fq-avatar { filter: drop-shadow(0 6px 14px rgba(255,107,139,0.4)); }
+    .fq-hp { height: 12px; border-radius: 999px; background: rgba(255,255,255,0.08); overflow: hidden; margin: 8px 0 4px; }
+    .fq-hp i { display: block; height: 100%; width: 100%; border-radius: 999px; transition: width 0.4s ease; }
+    .fq-fighter.player .fq-hp i { background: linear-gradient(90deg, var(--fq-gold), var(--fq-green)); }
+    .fq-fighter.bot .fq-hp i { background: linear-gradient(90deg, var(--fq-ember), var(--fq-red)); }
+    .fq-vs { font-weight: 800; color: var(--fq-amber); font-size: 1.1rem; }
+    .fq-battle-log { display: flex; flex-direction: column; gap: 6px; margin-top: 10px; max-height: 130px; overflow: auto; font-size: 0.86rem; }
+    .fq-battle-log div { color: var(--fq-mute); }
+    .fq-battle-log b { color: var(--fq-text); }
+
+    /* ---- toast + result ---- */
+    .fq-toast-wrap { position: fixed; z-index: 60; left: 50%; bottom: 22px; transform: translateX(-50%); display: flex; flex-direction: column; gap: 8px; align-items: center; pointer-events: none; width: min(92vw, 460px); }
+    .fq-toast { background: rgba(30,20,14,0.96); border: 1px solid var(--fq-line); color: var(--fq-text); border-radius: 12px; padding: 11px 16px; font-size: 0.9rem; box-shadow: 0 12px 32px rgba(0,0,0,0.4); }
+    .fq-toast.ok { border-color: rgba(134,230,166,0.6); }
+    .fq-toast.bad { border-color: rgba(255,107,139,0.6); }
+    .fq-toast.ach { border-color: var(--fq-gold); color: #fff3cd; }
+
+    .fq-result { text-align: center; padding: 8px 0; }
+    .fq-result h3 { font-size: 1.5rem; margin-bottom: 6px; }
+    .fq-result-stats { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin: 16px 0; }
+    .fq-result-stats .fq-stat { min-width: 100px; }
+    .fq-big-emoji { font-size: 3rem; display: block; animation: fqPop 0.6s ease; }
+    @keyframes fqPop { from { transform: scale(0.4); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+    .fq-hidden { display: none !important; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+    /* ---- focus ---- */
+    .fq-app a:focus-visible, .fq-app button:focus-visible, .fq-app input:focus-visible,
+    .fq-card:focus-visible, .fq-cellbtn:focus-visible, .fq-option:focus-visible, .fq-mode:focus-visible {
+      outline: 3px solid rgba(255,196,94,0.8); outline-offset: 2px;
+    }
+
+    @media (max-width: 820px) {
+      .fq-status { grid-template-columns: 1fr; }
+      .fq-mini-stats { justify-content: space-between; }
+    }
+    @media (max-width: 560px) {
+      .fq-answer-row { flex-direction: column; }
+      .fq-match-cols { grid-template-columns: 1fr; gap: 20px; }
+      .fq-hud { grid-template-columns: repeat(3, 1fr); }
+      .fq-arena { grid-template-columns: 1fr 1fr; }
+      .fq-vs { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .fq-screen { animation: none; }
+      .fq-mode:hover, .fq-btn:hover, .fq-card:hover, .fq-cellbtn:hover, .fq-option:hover { transform: none; }
+      .fq-big-emoji { animation: none; }
+      .fq-xp-fill, .fq-progress i, .fq-hp i { transition: none; }
+    }
+    .fq-app.fq-reduce .fq-screen, .fq-app.fq-reduce .fq-big-emoji { animation: none !important; transition: none !important; }
+    .fq-app.fq-reduce .fq-mode:hover, .fq-app.fq-reduce .fq-btn:hover, .fq-app.fq-reduce .fq-card:hover,
+    .fq-app.fq-reduce .fq-cellbtn:hover, .fq-app.fq-reduce .fq-option:hover { transform: none !important; }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="/" class="logo"><i class="fas fa-graduation-cap"></i> Vyasa Academy</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#courses">Courses</a></li>
+      <li><a href="/#papers">Practice Papers</a></li>
+      <li><a href="/cbse-study-material/">Study Material</a></li>
+      <li><a href="/maths-games/" class="active" aria-current="page">🎮 Maths Games</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main" class="fq-app">
+  <a href="#fqHome" class="sr-only">Skip to game controls</a>
+  <div class="fq-wrap">
+    <nav class="fq-crumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a> / <a href="/maths-games/">Maths Games</a> / <span aria-current="page">Fraction Quest</span>
+    </nav>
+
+    <!-- ================= HOME ================= -->
+    <section class="fq-screen" id="fqHome" tabindex="-1">
+      <div class="fq-hero">
+        <h1 class="fq-logo"><span aria-hidden="true">🍕</span> Fraction Quest</h1>
+        <p class="fq-subtitle">The 3D Fraction Adventure — build, escape, battle, blitz &amp; match</p>
+        <p class="fq-lead">Five hands-on game modes for CBSE and ICSE Classes 6 to 10 — build fraction towers, balance equivalent fractions, simplify to simplest form, compare by cross-multiplication, compute, convert and race the clock. All answers are checked with exact fraction arithmetic.</p>
+        <div class="fq-cta-row">
+          <button type="button" class="fq-btn fq-btn-primary" id="fqPlayBtn">▶ Play Now</button>
+          <button type="button" class="fq-btn fq-btn-ghost" id="fqHowBtn">❓ How to Play</button>
+          <button type="button" class="fq-btn fq-btn-ghost fq-toggle-btn" id="fqSoundBtn" aria-pressed="false" title="Toggle sound">🔇 Sound: Off</button>
+          <button type="button" class="fq-btn fq-btn-ghost" id="fqReduceBtn" aria-pressed="false" title="Toggle reduced motion">🎞️ Motion: Full</button>
+        </div>
+      </div>
+
+      <div class="fq-status" aria-live="polite">
+        <div>
+          <div class="fq-xp-head">
+            <span class="fq-level-pill" id="fqLevelPill">Level 1</span>
+            <span class="fq-mute" id="fqXpText" style="color:var(--fq-mute);font-size:0.86rem;">0 / 100 XP</span>
+          </div>
+          <div class="fq-xp-bar"><div class="fq-xp-fill" id="fqXpFill"></div></div>
+        </div>
+        <div class="fq-mini-stats">
+          <div class="fq-mini"><b id="fqStatAnswered">0</b><span>Answered</span></div>
+          <div class="fq-mini"><b id="fqStatAcc">0%</b><span>Accuracy</span></div>
+          <div class="fq-mini"><b id="fqStatStreak">0</b><span>Best streak</span></div>
+          <div class="fq-mini"><b id="fqStatDaily">0/20</b><span>Today</span></div>
+        </div>
+      </div>
+
+      <h2 class="fq-sec-title"><i class="fas fa-gamepad" aria-hidden="true"></i>Choose a Mode</h2>
+      <div class="fq-modes" id="fqModes">
+        <button type="button" class="fq-mode" data-mode="builder">
+          <span class="fq-mode-ico" aria-hidden="true">🏗️</span>
+          <h3>Fraction Builder</h3>
+          <p>Build a fraction tower, label its parts, pick an equivalent form and reduce it to simplest.</p>
+          <span class="fq-mode-tag">Build &amp; explore</span>
+        </button>
+        <button type="button" class="fq-mode" data-mode="escape">
+          <span class="fq-mode-ico" aria-hidden="true">🔐</span>
+          <h3>Fraction Escape Room</h3>
+          <p>Five locked chambers: parts, equivalence, simplest form, operations and the final vault.</p>
+          <span class="fq-mode-tag">Puzzle adventure</span>
+        </button>
+        <button type="button" class="fq-mode" data-mode="battle">
+          <span class="fq-mode-ico" aria-hidden="true">🤖</span>
+          <h3>Beat the Fraction Bot</h3>
+          <p>Answer the same questions as Rookie, Pro, Master or the Final Fraction Boss. First to 4 wins.</p>
+          <span class="fq-mode-tag">Head to head</span>
+        </button>
+        <button type="button" class="fq-mode" data-mode="blitz">
+          <span class="fq-mode-ico" aria-hidden="true">⚡</span>
+          <h3>Fraction Blitz</h3>
+          <p>30, 60 or 120 seconds of rapid-fire fraction questions. Accuracy beats speed.</p>
+          <span class="fq-mode-tag">Beat the clock</span>
+        </button>
+        <button type="button" class="fq-mode" data-mode="match">
+          <span class="fq-mode-ico" aria-hidden="true">🧩</span>
+          <h3>Fraction Match Arena</h3>
+          <p>Pair each fraction with its equivalent, model, decimal, percent, simplest or mixed form.</p>
+          <span class="fq-mode-tag">Tap the pair</span>
+        </button>
+      </div>
+
+      <h2 class="fq-sec-title"><i class="fas fa-medal" aria-hidden="true"></i>Achievements</h2>
+      <div class="fq-ach-grid" id="fqAchievements"></div>
+
+      <h2 class="fq-sec-title" id="fqHow"><i class="fas fa-circle-info" aria-hidden="true"></i>How to Play</h2>
+      <div class="fq-how">
+        <ol>
+          <li><b>Fraction Builder</b> — choose a level (Class 6-7 up to Class 9-10). Tap cells, layers or symbols to construct, label, match and simplify fractions. Explanations follow every answer.</li>
+          <li><b>Fraction Escape Room</b> — each chamber has three locks with exact integer answers, then an exit code that is the sum of the three lock answers. Use a hint when stuck and read the worked explanation after any wrong attempt.</li>
+          <li><b>Beat the Fraction Bot</b> — you and the bot get the same question each round; the bot answers instantly. First to four correct answers wins. Defeat the Final Fraction Boss for a special achievement.</li>
+          <li><b>Fraction Blitz</b> — pick 30, 60 or 120 seconds. Type answers like <code>3/4</code>, <code>1 3/4</code>, <code>0.75</code> or <code>75%</code> and press <span class="fq-kbd">Enter</span>. Press <span class="fq-kbd">P</span> to pause. Streaks boost your points.</li>
+          <li><b>Fraction Match Arena</b> — tap one fraction card, then its matching partner on the right. Correct pairs lock in green; a wrong guess is counted but the board stays up.</li>
+        </ol>
+        <p style="margin-top:10px;color:var(--fq-mute);font-size:0.9rem;">Press <span class="fq-kbd">Esc</span> to return home; press <span class="fq-kbd">1</span>–<span class="fq-kbd">4</span> to answer multiple-choice quickly. Progress and XP are stored privately on this device. <button type="button" class="fq-btn fq-btn-danger fq-btn-sm" id="fqResetBtn" style="margin-left:6px;">Reset progress</button></p>
+      </div>
+    </section>
+
+    <!-- ================= BUILDER ================= -->
+    <section class="fq-screen fq-hidden" id="fqBuilder" tabindex="-1" aria-label="Fraction Builder"></section>
+
+    <!-- ================= ESCAPE ================= -->
+    <section class="fq-screen fq-hidden" id="fqEscape" tabindex="-1" aria-label="Fraction Escape Room"></section>
+
+    <!-- ================= BATTLE ================= -->
+    <section class="fq-screen fq-hidden" id="fqBattle" tabindex="-1" aria-label="Beat the Fraction Bot"></section>
+
+    <!-- ================= BLITZ ================= -->
+    <section class="fq-screen fq-hidden" id="fqBlitz" tabindex="-1" aria-label="Fraction Blitz"></section>
+
+    <!-- ================= MATCH ================= -->
+    <section class="fq-screen fq-hidden" id="fqMatch" tabindex="-1" aria-label="Fraction Match Arena"></section>
+  </div>
+
+  <div class="fq-toast-wrap" id="fqToasts" aria-live="polite" aria-atomic="false"></div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-about">
+      <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+      <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#faculty">Faculty</a></li>
+        <li><a href="/#courses">Courses</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/cbse-study-material/">Study Material</a></li>
+        <li><a href="/maths-games/">🎮 Maths Games</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>More Maths Games</h4>
+      <ul>
+        <li><a href="/maths-games/speed-challenge/">Maths Speed Challenge</a></li>
+        <li><a href="/maths-games/equation-hunter/">Equation Hunter</a></li>
+        <li><a href="/maths-games/square-root-ninja/">Square &amp; Root Ninja</a></li>
+        <li><a href="/maths-games/number-ninja/">Number Ninja</a></li>
+        <li><a href="/maths-games/geometry-builder/">Geometry Builder</a></li>
+        <li><a href="/maths-games/cube-quest/">Cube Quest</a></li>
+        <li><a href="/maths-games/fraction-quest/">Fraction Quest</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="/maths-games/fraction-quest/fraction-math.js"></script>
+<script>
+/* =====================================================================
+ * FRACTION QUEST - application shell
+ * Modules: utils, sound, store, progression, models, questionCard,
+ * builder, escape, battle, blitz, match, router.
+ * All timers/listeners are torn down on screen change to avoid leaks.
+ * ===================================================================== */
+(function () {
+  "use strict";
+  var FM = window.FractionMath;
+  if (!FM) { return; }
+
+  var reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------------- utils ---------------- */
+  function $(id) { return document.getElementById(id); }
+  function el(tag, cls, html) { var n = document.createElement(tag); if (cls) { n.className = cls; } if (html != null) { n.innerHTML = html; } return n; }
+  function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+  function clamp(v, lo, hi) { return v < lo ? lo : (v > hi ? hi : v); }
+
+  var toastWrap = $("fqToasts");
+  function toast(msg, kind, ms) {
+    var t = el("div", "fq-toast" + (kind ? " " + kind : ""), msg);
+    toastWrap.appendChild(t);
+    setTimeout(function () { t.style.opacity = "0"; t.style.transition = "opacity .3s"; }, (ms || 2600) - 300);
+    setTimeout(function () { if (t.parentNode) { t.parentNode.removeChild(t); } }, ms || 2600);
+  }
+
+  /* ---------------- sound (WebAudio, toggleable) ---------------- */
+  var Sound = (function () {
+    var ctx = null, on = false;
+    function ensure() {
+      if (!ctx) {
+        var AC = window.AudioContext || window.webkitAudioContext;
+        if (AC) { ctx = new AC(); }
+      }
+      return ctx;
+    }
+    function tone(freq, dur, type, gain) {
+      if (!on) { return; }
+      var c = ensure(); if (!c) { return; }
+      var o = c.createOscillator(), g = c.createGain();
+      o.type = type || "sine"; o.frequency.value = freq;
+      g.gain.value = 0.0001;
+      o.connect(g); g.connect(c.destination);
+      var t = c.currentTime;
+      g.gain.exponentialRampToValueAtTime(gain || 0.12, t + 0.01);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+      o.start(t); o.stop(t + dur + 0.02);
+    }
+    return {
+      toggle: function () { on = !on; if (on) { ensure(); } return on; },
+      isOn: function () { return on; },
+      correct: function () { tone(660, 0.14, "triangle", 0.1); setTimeout(function () { tone(990, 0.16, "triangle", 0.1); }, 110); },
+      wrong: function () { tone(200, 0.22, "sawtooth", 0.08); },
+      lock: function () { tone(520, 0.1, "square", 0.07); },
+      win: function () { [523, 659, 784, 1046].forEach(function (f, i) { setTimeout(function () { tone(f, 0.16, "triangle", 0.1); }, i * 120); }); },
+      lose: function () { [392, 330, 262].forEach(function (f, i) { setTimeout(function () { tone(f, 0.2, "sine", 0.09); }, i * 140); }); }
+    };
+  })();
+
+  /* ---------------- store / persistence ---------------- */
+  var LS_KEY = "vyasa_fraction_quest_v1";
+  var Store = (function () {
+    function blank() { return FM.blankStats(); }
+    function load() {
+      try {
+        var raw = window.localStorage.getItem(LS_KEY);
+        if (!raw) { return blank(); }
+        var d = JSON.parse(raw);
+        var s = blank();
+        s.xp = +d.xp || 0;
+        s.answered = +d.answered || 0;
+        s.correct = +d.correct || 0;
+        s.bestStreak = +d.bestStreak || 0;
+        s.bestAccuracy = +d.bestAccuracy || 0;
+        s.bestAccuracyN = +d.bestAccuracyN || 0;
+        s.topicCorrect = (d.topicCorrect && typeof d.topicCorrect === "object") ? d.topicCorrect : {};
+        s.roomsEscape = +d.roomsEscape || 0;
+        s.botsBeaten = +d.botsBeaten || 0;
+        s.bossBeaten = !!d.bossBeaten;
+        s.blitzBest = +d.blitzBest || 0;
+        s.matchPerfect = +d.matchPerfect || 0;
+        s.perModeBest = (d.perModeBest && typeof d.perModeBest === "object") ? d.perModeBest : {};
+        s.daily = (d.daily && d.daily.date) ? { date: d.daily.date, count: +d.daily.count || 0 } : { date: null, count: 0 };
+        s.history = Array.isArray(d.history) ? d.history.slice(0, 12) : [];
+        return s;
+      } catch (e) { return blank(); }
+    }
+    function save(s) {
+      try { window.localStorage.setItem(LS_KEY, JSON.stringify(s)); } catch (e) {}
+    }
+    function clear() {
+      try { window.localStorage.removeItem(LS_KEY); } catch (e) {}
+    }
+    return { blank: blank, load: load, save: save, clear: clear };
+  })();
+
+  var stats = Store.load();
+  var profileId = localStorage && (function () { try { return localStorage.getItem("vyasa_fq_profile") || "foundation"; } catch (e) { return "foundation"; } })();
+
+  /* ---------------- progression ---------------- */
+  var streak = 0;
+  var activeTimers = [];
+  function clearTimers() {
+    activeTimers.forEach(function (t) { clearTimeout(t); clearInterval(t); });
+    activeTimers = [];
+  }
+  function later(fn, ms) { var t = setTimeout(fn, ms); activeTimers.push(t); return t; }
+
+  function todayKey() {
+    var d = new Date();
+    return d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
+  }
+  function grant(q, correct, timeRatio) {
+    var pts = FM.scoreAnswer(correct, q.marks || 15, timeRatio || 0.4, streak + 1);
+    stats.answered += 1;
+    var today = todayKey();
+    if (stats.daily.date === today) { stats.daily.count += 1; } else { stats.daily.date = today; stats.daily.count = 1; }
+    if (correct) {
+      streak += 1;
+      stats.correct += 1;
+      stats.xp += pts;
+      if (streak > stats.bestStreak) { stats.bestStreak = streak; }
+      var t = stats.topicCorrect[q.kind] || 0;
+      stats.topicCorrect[q.kind] = t + 1;
+    } else {
+      streak = 0;
+    }
+    Store.save(stats);
+    return pts;
+  }
+  function recordMode(mode, score, acc, n) {
+    stats.history = stats.history || [];
+    stats.history.unshift({ mode: mode, score: score || 0, acc: acc || 0, n: n || 0, ts: Date.now() });
+    stats.history = stats.history.slice(0, 12);
+    if (acc != null && (n || 0) >= 10 && acc > (stats.bestAccuracy || 0)) {
+      stats.bestAccuracy = acc; stats.bestAccuracyN = n;
+    }
+    if (mode && score != null) {
+      var prev = stats.perModeBest[mode] || 0;
+      if (score > prev) { stats.perModeBest[mode] = score; }
+    }
+    Store.save(stats);
+  }
+  var reportedAch = {};
+  function checkAchievements() {
+    var earned = {};
+    FM.achievementStatus(stats).forEach(function (a) { if (a.earned) { earned[a.id] = true; } });
+    var fresh = [];
+    FM.ACHIEVEMENTS.forEach(function (a) {
+      if (earned[a.id] && !reportedAch[a.id]) {
+        fresh.push(a);
+        reportedAch[a.id] = true;
+      }
+    });
+    if (fresh.length) {
+      fresh.forEach(function (a) { toast(esc(a.icon) + " " + esc(a.name) + " unlocked!", "ach", 3600); });
+      Sound.win();
+    }
+  }
+
+  /* ---------------- HUD & home ---------------- */
+  function renderHUD() {
+    var lvl = FM.levelFromXp(stats.xp);
+    $("fqLevelPill").textContent = "Level " + lvl.level;
+    $("fqXpText").textContent = (stats.xp - lvl.into) + " / " + lvl.span + " XP";
+    $("fqXpFill").style.width = clamp(lvl.pct, 0, 100) + "%";
+    $("fqStatAnswered").textContent = stats.answered;
+    $("fqStatAcc").textContent = (stats.answered ? Math.round((stats.correct / stats.answered) * 100) : 0) + "%";
+    $("fqStatStreak").textContent = stats.bestStreak;
+    var today = todayKey();
+    var count = stats.daily.date === today ? stats.daily.count : 0;
+    $("fqStatDaily").textContent = count + "/20";
+  }
+  function renderAchievements() {
+    var box = $("fqAchievements");
+    box.innerHTML = "";
+    FM.achievementStatus(stats).forEach(function (a) {
+      var card = el("div", "fq-ach" + (a.earned ? " earned" : ""));
+      card.setAttribute("role", "img");
+      card.setAttribute("aria-label", (a.earned ? "Earned: " : "Locked: ") + a.name + ". " + a.desc);
+      card.innerHTML = '<span class="fq-ach-ico" aria-hidden="true">' + esc(a.icon) + '</span><div><b>' + esc(a.name) + "</b><span>" + esc(a.desc) + "</span></div>";
+      box.appendChild(card);
+    });
+  }
+
+  /* ---------------- screen router ---------------- */
+  var SCREENS = ["fqHome", "fqBuilder", "fqEscape", "fqBattle", "fqBlitz", "fqMatch"];
+  var current = "fqHome";
+  function showScreen(id, renderFn) {
+    clearTimers();
+    if (renderFn) { renderFn(); }
+    SCREENS.forEach(function (s) {
+      var node = $(s);
+      if (node) { node.hidden = (s !== id); }
+    });
+    current = id;
+    renderHUD();
+    var n = $(id);
+    if (n) { n.focus(); }
+  }
+  function goHome() {
+    showScreen("fqHome", renderHome);
+  }
+
+  /* ==================================================================
+   * QUESTION CARD (shared by builder/battle/blitz)
+   * q: an engine question; onAnswered(ok, value) -> next or finish
+   * ================================================================== */
+  var QCard = {
+    wrap: null,
+    render: function (root, q, opts) {
+      opts = opts || {};
+      root.appendChild(el("div", "fq-q-topic", esc(FM.kindLabel(q.kind)) + " · " + esc(q.skill || "")));
+      var text = el("p", "fq-q-text");
+      text.innerHTML = mjText(q.prompt);
+      root.appendChild(text);
+      if (q.type === "mcq") {
+        this.renderMcq(root, q, opts);
+      } else {
+        this.renderNumeric(root, q, opts);
+      }
+      if (!opts.noHint && q.hint) {
+        var hintBtn = el("button", "fq-btn fq-btn-sm fq-btn-ghost", "💡 Hint");
+        hintBtn.type = "button";
+        var hintBox = el("div", "fq-hint-line fq-hidden");
+        hintBox.textContent = q.hint;
+        var box = el("div", "fq-actions");
+        box.appendChild(hintBtn);
+        var spacer = el("span", "fq-flex-spacer");
+        box.appendChild(spacer);
+        root.appendChild(box);
+        hintBtn.addEventListener("click", function () {
+          hintBox.classList.toggle("fq-hidden");
+          hintBtn.textContent = hintBox.classList.contains("fq-hidden") ? "💡 Hint" : "🙈 Hide hint";
+        });
+        root.appendChild(hintBox);
+      }
+    },
+    renderMcq: function (root, q, opts) {
+      var box = el("div", "fq-options");
+      q.options.forEach(function (o, i) {
+        var b = el("button", "fq-option", mjText(o));
+        b.type = "button";
+        b.setAttribute("data-idx", String(i));
+        b.addEventListener("click", function () { opts.onAnswer(o, i); });
+        box.appendChild(b);
+      });
+      root.appendChild(box);
+      this.curOptions = box;
+    },
+    renderNumeric: function (root, q, opts) {
+      var row = el("div", "fq-answer-row");
+      var input = el("input", "fq-input");
+      input.type = "text";
+      input.inputMode = "text";
+      input.autocomplete = "off";
+      input.placeholder = 'e.g. 3/4, 1 3/4, 0.75 or 75%';
+      input.setAttribute("aria-label", "Your answer");
+      var btn = el("button", "fq-btn fq-btn-primary", "Submit");
+      btn.type = "button";
+      row.appendChild(input);
+      row.appendChild(btn);
+      root.appendChild(row);
+      this.curInput = input;
+      function submit() {
+        var val = input.value.trim();
+        if (!val) { toast("Type an answer first.", "bad", 2000); return; }
+        opts.onAnswer(val);
+      }
+      btn.addEventListener("click", submit);
+      input.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") { submit(); }
+        e.stopPropagation();
+      });
+      later(function () { input.focus(); }, 60);
+    },
+    reveal: function (root, q, ok, your) {
+      var fb = el("div", "fq-feedback " + (ok ? "ok" : "bad"));
+      var head = ok ? "✅ Correct" : "❌ Not quite";
+      var explain = esc(q.explanation || "");
+      if (q.type === "numeric") {
+        fb.innerHTML = "<b>" + head + "</b> — " + explain;
+      } else {
+        fb.innerHTML = "<b>" + head + "</b> — " + explain;
+      }
+      root.appendChild(fb);
+      fb.classList.add("show");
+      if (root.classList) { root.classList.add("answered"); }
+    },
+    markOptions: function (q, ok, chosenIdx) {
+      if (!q.options) { return; }
+      var opts = this.curOptions;
+      if (!opts) { return; }
+      var btns = opts.querySelectorAll(".fq-option");
+      btns[q.answer].disabled = true;
+      btns[q.answer].classList.add("correct");
+      btns[q.answer].setAttribute("aria-pressed", "true");
+      if (!ok && chosenIdx != null && chosenIdx !== q.answer) {
+        btns[chosenIdx].classList.add("wrong");
+      }
+      Array.prototype.forEach.call(btns, function (b) { b.disabled = true; });
+    }
+  };
+
+  function mjText(s) {
+    return esc(String(s));
+  }
+
+  /* ---------------- fraction models ---------------- */
+  function barModel(d, filled, selectable, onToggle) {
+    var box = el("div", "fq-model-box");
+    var bar = el("div", "fq-bar");
+    for (var i = 0; i < d; i++) {
+      if (selectable) {
+        var b = el("button", "fq-cellbtn" + (i < filled ? " filled" : ""));
+        b.type = "button";
+        b.textContent = String(i + 1);
+        b.setAttribute("aria-label", "Part " + (i + 1) + " of " + d);
+        b.setAttribute("data-part", String(i + 1));
+        (function (idx) {
+          b.addEventListener("click", function () { onToggle(idx); });
+        })(i);
+        bar.appendChild(b);
+      } else {
+        var c = el("div", "fq-bar-cell" + (i < filled ? " shade" : ""));
+        bar.appendChild(c);
+      }
+    }
+    box.appendChild(bar);
+    box.appendChild(el("div", "fq-frac-label", filled + " of " + d + " parts"));
+    return box;
+  }
+  function towerModel(d, filled, selectable, onToggle) {
+    var box = el("div", "fq-model-box");
+    var tower = el("div", "fq-tower");
+    tower.setAttribute("role", "group");
+    tower.setAttribute("aria-label", "Tower of " + d + " layers, " + filled + " shaded");
+    for (var layer = 1; layer <= d; layer++) {
+      var bl = el("div", "fq-block" + (layer <= filled ? " shade" : "") + (selectable ? " clickable" : ""));
+      if (selectable) {
+        bl.setAttribute("role", "button");
+        bl.tabIndex = 0;
+        bl.setAttribute("aria-label", "Layer " + layer + " of " + d + (layer <= filled ? ", filled" : ", empty"));
+        bl.setAttribute("data-layer", String(layer));
+        (function (idx) {
+          function toggle() { onToggle(idx); }
+          bl.addEventListener("click", toggle);
+          bl.addEventListener("keydown", function (e) {
+            if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); }
+          });
+        })(layer - 1);
+      }
+      tower.appendChild(bl);
+    }
+    box.appendChild(tower);
+    box.appendChild(el("div", "fq-frac-label", filled + " of " + d + " layers shaded"));
+    return box;
+  }
+
+  /* ==================================================================
+   * BUILDER MODE
+   * ================================================================== */
+  var Builder = (function () {
+    var state = null;
+    var startedAt = 0;
+    var total = 0;
+    var correctTotal = 0;
+
+    function profilePills() {
+      var p = el("div", "fq-pills");
+      FM.PROFILES.forEach(function (prof) {
+        var b = el("button", "fq-pill" + (profileId === prof.id ? " on" : ""), prof.label);
+        b.type = "button";
+        b.setAttribute("aria-pressed", profileId === prof.id ? "true" : "false");
+        b.title = prof.classes + " · " + prof.kinds.length + " question types";
+        b.addEventListener("click", function () {
+          profileId = prof.id;
+          try { localStorage.setItem("vyasa_fq_profile", profileId); } catch (e) {}
+          start();
+        });
+        p.appendChild(b);
+      });
+      return p;
+    }
+
+    function start() {
+      state = { done: 0, won: 0, index: 0, rounds: 8 };
+      startedAt = Date.now();
+      correctTotal = stats.correct;
+      next();
+    }
+
+    function next() {
+      var root = $("fqBuilder");
+      root.innerHTML = "";
+      root.appendChild(panelTop("Fraction Builder", profilePills()));
+      state.index += 1;
+      var qPanel = el("div", "fq-panel");
+      var topic = el("div", "fq-q-topic", esc(FM.profileMeta(profileId).label) + " · Challenge " + state.index + " of " + state.rounds);
+      qPanel.appendChild(topic);
+      var prog = el("div", "fq-progress");
+      prog.appendChild(el("i"));
+      prog.firstChild.style.width = ((state.done) / state.rounds) * 100 + "%";
+      qPanel.appendChild(prog);
+      var ch = FM.builderChallenge(profileId, FM.seededRng(Math.floor(Math.random() * 1e9)));
+      renderChallenge(qPanel, ch);
+      root.appendChild(qPanel);
+      qPanel.scrollIntoView({ block: "nearest" });
+    }
+
+    function renderChallenge(panel, ch) {
+      ch.hint = ch.hint || "";
+      ch.explanation = ch.explanation || "";
+      var lead = el("p", "fq-q-text");
+      lead.innerHTML = mjText(ch.prompt);
+      panel.appendChild(lead);
+
+      if (ch.kind === "construct") {
+        var filled = 0;
+        var picked = new Array(ch.target.d).fill(false);
+        var modelWrap = el("div", "");
+        function draw() {
+          modelWrap.innerHTML = "";
+          if (ch.model === "tower") {
+            modelWrap.appendChild(towerModel(ch.target.d, filled, true, onToggle));
+          } else {
+            modelWrap.appendChild(barModel(ch.target.d, filled, true, onToggle));
+          }
+          var pr = selectedCount();
+          modelWrap.appendChild(el("div", "fq-count", "Shaded: <b>" + pr + "</b> of " + ch.target.d + " (need " + ch.target.n + ")"));
+        }
+        function onToggle(idx) {
+          picked[idx] = !picked[idx];
+          filled = selectedCount();
+          draw();
+        }
+        function selectedCount() {
+          var c = 0;
+          for (var i = 0; i < picked.length; i++) { if (picked[i]) { c++; } }
+          return c;
+        }
+        panel.appendChild(modelWrap);
+        draw();
+        var btn = el("button", "fq-btn fq-btn-primary", "Check");
+        btn.type = "button";
+        var act = el("div", "fq-actions");
+        act.appendChild(btn);
+        btn.addEventListener("click", function () {
+          if (selectedCount() === ch.target.n) {
+            ch.correct = true;
+            applyResult(panel, ch, true, null);
+          } else {
+            applyResult(panel, ch, false, null);
+          }
+        });
+        panel.appendChild(act);
+        return;
+      }
+
+      if (ch.options && ch.options.length) {
+        var box = el("div", "fq-options");
+        ch.options.forEach(function (o, i) {
+          var b = el("button", "fq-option", mjText(o));
+          b.type = "button";
+          b.addEventListener("click", function () {
+            var ok = (i === ch.answer);
+            b.disabled = true;
+            box.querySelectorAll(".fq-option").forEach(function (x) { x.disabled = true; });
+            box.children[ch.answer].classList.add("correct");
+            if (!ok) { b.classList.add("wrong"); }
+            applyResult(panel, ch, ok, i);
+          });
+          box.appendChild(b);
+        });
+        panel.appendChild(box);
+        return;
+      }
+
+      if (ch.type === "numeric" && ch.canonical) {
+        var row = el("div", "fq-answer-row");
+        var input = el("input", "fq-input");
+        input.type = "text"; input.placeholder = 'e.g. 3/4, 1 3/4, 0.75 or 75%';
+        input.setAttribute("aria-label", "Your answer");
+        var btn = el("button", "fq-btn fq-btn-primary", "Submit");
+        btn.type = "button";
+        row.appendChild(input); row.appendChild(btn);
+        panel.appendChild(row);
+        function sub() {
+          var ok = FM.checkAnswer({ type: "numeric", canonical: ch.canonical }, input.value.trim());
+          applyResult(panel, ch, ok, null);
+        }
+        btn.addEventListener("click", sub);
+        input.addEventListener("keydown", function (e) { if (e.key === "Enter") { sub(); } e.stopPropagation(); });
+        return;
+      }
+
+      panel.appendChild(el("div", "fq-feedback bad show", "<b>Unknown challenge.</b>"));
+    }
+
+    // Some builder challenges (construct) carry no engine question object;
+    // rewards are granted via an equivalent pseudo-question.
+    function chQuestion(ch) {
+      return {
+        kind: "builder-" + ch.kind,
+        marks: FM.profileMeta(profileId).marks,
+        type: "mcq"
+      };
+    }
+
+    function applyResult(panel, ch, ok, chosenIdx) {
+      state.done += 1;
+      if (ok) { state.won += 1; Sound.correct(); } else { Sound.wrong(); }
+      grant(chQuestion(ch), ok, 0.3);
+      var fb = el("div", "fq-feedback " + (ok ? "ok" : "bad"));
+      fb.innerHTML = "<b>" + (ok ? "✅ Correct" : "❌ Not quite") + "</b> — " + mjText(ch.explanation || "");
+      fb.classList.add("show");
+      panel.appendChild(fb);
+      var pi = panel.querySelector(".fq-progress i");
+      if (pi) { pi.style.width = Math.min(100, (state.done / state.rounds) * 100) + "%"; }
+      var go = el("button", "fq-btn fq-btn-primary", state.done >= state.rounds ? "See results" : "Next challenge");
+      go.type = "button";
+      var act = el("div", "fq-actions"); act.appendChild(go);
+      panel.appendChild(act);
+      go.focus();
+      go.addEventListener("click", function () {
+        if (state.done >= state.rounds) { finish(); } else { next(); }
+      });
+    }
+
+    function finish() {
+      var took = Math.round((Date.now() - startedAt) / 1000);
+      var acc = Math.round((state.won / state.rounds) * 100);
+      recordMode("builder", state.won, acc, state.rounds);
+      showResult("builder", state.won, state.rounds, acc, took, "🏗️");
+    }
+
+    function panelTop(name, extraRight) {
+      var panel = el("div", "fq-panel");
+      var top = el("div", "fq-topline");
+      var nameEl = el("div", "fq-mode-name", "🏗️ " + name);
+      top.appendChild(nameEl);
+      var right = el("div", "fq-pills");
+      var back = el("button", "fq-pill", "← Home");
+      back.type = "button";
+      back.addEventListener("click", goHome);
+      right.appendChild(back);
+      if (extraRight) {
+        if (extraRight.className === "fq-pills") {
+          Array.prototype.forEach.call(extraRight.children, function (b) { right.appendChild(b); });
+        } else {
+          right.appendChild(extraRight);
+        }
+      }
+      top.appendChild(right);
+      panel.appendChild(top);
+      return panel;
+    }
+    function showResult(mode, won, totalR, acc, took, icon) {
+      var root = $("fq" + mode.charAt(0).toUpperCase() + mode.slice(1));
+      if (!root) { root = $("fqBuilder"); }
+      root.innerHTML = "";
+      root.appendChild(panelTop(modeName(mode)));
+      var r = el("div", "fq-result");
+      r.appendChild(el("span", "fq-big-emoji", icon));
+      r.appendChild(el("h3", "", acc >= 90 ? "Excellent work!" : (acc >= 60 ? "Good run!" : "Keep practising.")));
+      var statsRow = el("div", "fq-result-stats");
+      statsRow.appendChild(statBox(String(won) + "/" + totalR, "Correct"));
+      statsRow.appendChild(statBox(acc + "%", "Accuracy"));
+      statsRow.appendChild(statBox(took + "s", "Time"));
+      r.appendChild(statsRow);
+      var again = el("button", "fq-btn fq-btn-primary", "Play again");
+      again.type = "button";
+      again.addEventListener("click", function () { if (mode === "builder") { Builder.start(); } });
+      var home = el("button", "fq-btn fq-btn-ghost", "Home");
+      home.type = "button"; home.addEventListener("click", goHome);
+      var act = el("div", "fq-actions"); act.appendChild(again); act.appendChild(home); act.classList.add("fq-result");
+      r.appendChild(act);
+      root.appendChild(r);
+    }
+    function modeName(m) { return { builder: "Fraction Builder", escape: "Escape Room", battle: "Bot Battle", blitz: "Fraction Blitz", match: "Match Arena" }[m] || m; }
+    function statBox(v, label) {
+      var s = el("div", "fq-stat"); s.appendChild(el("b", "", v)); s.appendChild(el("span", "", label)); return s;
+    }
+
+    return {
+      start: function () { showScreen("fqBuilder", function () { start(); }); },
+      fromHome: function () { showScreen("fqBuilder", function () { start(); }); }
+    };
+  })();
+
+  /* ==================================================================
+   * ESCAPE MODE
+   * ================================================================== */
+  var Escape = (function () {
+    var roomState = null;
+
+    function roomsGrid() {
+      var grid = el("div", "fq-modes");
+      FM.ROOMS.forEach(function (room) {
+        var done = stats.roomsDone && stats.roomsDone[room.id];
+        var unlocked = room.id === 1 || (stats.roomsDone && stats.roomsDone[room.id - 1]);
+        var b = el("button", "fq-mode" + (done ? "" : ""));
+        b.type = "button";
+        b.innerHTML = '<span class="fq-mode-ico" aria-hidden="true">' + esc(room.icon) + '</span><h3>Room ' + room.id + ": " + esc(room.name) + '</h3><p>' + esc(room.brief) + "</p><span class='fq-mode-tag'>" + (done ? "✓ Cleared" : (unlocked ? "Open" : "Locked")) + "</span>";
+        b.disabled = !unlocked;
+        if (unlocked) { b.addEventListener("click", function () { openRoom(room.id); }); }
+        grid.appendChild(b);
+      });
+      return grid;
+    }
+
+    function renderLobby() {
+      var root = $("fqEscape");
+      root.innerHTML = "";
+      root.appendChild(topWith("🔐 Fraction Escape Room"));
+      root.appendChild(el("p", "", "Solve the three locks in each chamber, then add them to open the exit door. Rooms unlock in order."));
+      root.appendChild(roomsGrid());
+    }
+    function topWith(name) {
+      var panel = el("div", "fq-panel");
+      var top = el("div", "fq-topline");
+      var n = el("div", "fq-mode-name", name);
+      top.appendChild(n);
+      var back = el("button", "fq-pill", "← Home");
+      back.type = "button"; back.addEventListener("click", goHome);
+      var right = el("div", "fq-pills"); right.appendChild(back);
+      top.appendChild(right); panel.appendChild(top);
+      return panel;
+    }
+    function blank() { return el("div", ""); }
+
+    function openRoom(id) {
+      var data = FM.escapeRoomPuzzles(id, FM.seededRng(Math.floor(Math.random() * 1e9)));
+      roomState = { room: data.room, locks: data.locks.map(function (l) { return { spec: l, solved: false, tries: 0, answer: l.answer }; }), door: data.door, done: false };
+      renderRoom(true);
+    }
+
+    function renderRoom(first) {
+      var root = $("fqEscape");
+      root.innerHTML = "";
+      root.appendChild(topWith("🔐 " + roomState.room.name));
+      var head = el("div", "fq-room-head");
+      head.appendChild(el("span", "fq-room-ico", roomState.room.icon));
+      head.appendChild(el("div", "", '<div style="font-weight:800">Room ' + roomState.room.id + ": " + esc(roomState.room.name) + '</div><div style="color:var(--fq-mute);font-size:0.9rem">' + esc(roomState.room.brief) + "</div>"));
+      var progWrap = el("div", "fq-progress");
+      progWrap.appendChild(el("i", ""));
+      head.appendChild(progWrap);
+      root.appendChild(head);
+
+      var list = el("div", "fq-lock-list");
+      var solvedCount = 0;
+      roomState.locks.forEach(function (lk, i) {
+        if (lk.solved) {
+          solvedCount += 1;
+          var doneRow = el("div", "fq-lock solved");
+          doneRow.innerHTML = '<div class="fq-lock-head">🔓 <span>' + esc(lk.spec.label) + "</span><span class='st'>✔ Solved</span></div><div style='font-size:0.9rem'>" + esc(lk.spec.explanation) + "</div>";
+          list.appendChild(doneRow);
+          return;
+        }
+        var row = el("div", "fq-lock");
+        var lh = el("div", "fq-lock-head");
+        lh.appendChild(el("span", "", "🔒 " + esc(lk.spec.label)));
+        lh.appendChild(el("span", "st", "Lock " + (i + 1) + "/3"));
+        row.appendChild(lh);
+        row.appendChild(el("p", "fq-q-text", mjText(lk.spec.prompt)));
+        var inp = el("input", "fq-input");
+        inp.type = "text"; inp.inputMode = "numeric";
+        inp.setAttribute("aria-label", lk.spec.label + " answer");
+        var btn = el("button", "fq-btn fq-btn-primary", "Unlock");
+        btn.type = "button";
+        var ar = el("div", "fq-answer-row"); ar.appendChild(inp); ar.appendChild(btn);
+        row.appendChild(ar);
+        var fb = el("div", "fq-feedback");
+        row.appendChild(fb);
+        function check() {
+          var v = parseInt(inp.value.trim(), 10);
+          if (!isFinite(v)) { toast("Enter a whole number.", "bad", 2000); return; }
+          lk.tries += 1;
+          if (v === lk.answer) {
+            fb.className = "fq-feedback ok show";
+            fb.innerHTML = "<b>🔓 Lock open.</b> " + esc(lk.spec.explanation);
+            lk.solved = true;
+            Sound.lock();
+            grant({ kind: "escape", marks: 10, type: "mcq" }, true, 0.4);
+            later(function () { renderRoom(false); }, 700);
+          } else {
+            Sound.wrong();
+            fb.className = "fq-feedback bad show";
+            fb.innerHTML = "<b>❌ Not the code.</b> Hint: " + esc(lk.spec.hint) + "<br>" + esc(lk.spec.explanation);
+          }
+        }
+        btn.addEventListener("click", check);
+        inp.addEventListener("keydown", function (e) { if (e.key === "Enter") { check(); } e.stopPropagation(); });
+        list.appendChild(row);
+      });
+      progWrap.firstChild.style.width = (solvedCount / 3) * 100 + "%";
+      root.appendChild(list);
+
+      if (solvedCount === 3 && !roomState.done) {
+        var door = el("div", "fq-door");
+        door.innerHTML = '<div class="fq-lock-head">🚪 <span>Exit door — enter the code: Lock A + Lock B + Lock C</span><span class="st">OPEN THE DOOR</span></div>' +
+          '<p style="color:var(--fq-mute);font-size:0.9rem">Each solved lock shows its answer. Add the three answers you found to open the exit.</p>';
+        var inp = el("input", "fq-input"); inp.type = "text"; inp.inputMode = "numeric"; inp.placeholder = "Door code"; inp.setAttribute("aria-label", "Door code");
+        var btn = el("button", "fq-btn fq-btn-primary", "Open door");
+        btn.type = "button";
+        var ar = el("div", "fq-answer-row"); ar.appendChild(inp); ar.appendChild(btn);
+        door.appendChild(ar);
+        var fb = el("div", "fq-feedback");
+        door.appendChild(fb);
+        function openDoor() {
+          var v = parseInt(inp.value.trim(), 10);
+          if (v === roomState.door.answer) {
+            fb.className = "fq-feedback ok show";
+            fb.innerHTML = "<b>🚪 ESCAPED ROOM " + roomState.room.id + "!</b> " + esc(roomState.door.explanation);
+            roomState.done = true;
+            Sound.win();
+            stats.roomsDone = stats.roomsDone || {};
+            if (!stats.roomsDone[roomState.room.id]) {
+              stats.roomsDone[roomState.room.id] = true;
+              stats.roomsEscape += 1;
+              Store.save(stats);
+            }
+            grant({ kind: "escape", marks: 15, type: "mcq" }, true, 0.4);
+            checkAchievements();
+            var nextBtn = el("button", "fq-btn fq-btn-primary", "Room list");
+            nextBtn.type = "button"; nextBtn.addEventListener("click", renderLobby);
+            door.appendChild(el("div", "fq-actions")).appendChild(nextBtn);
+          } else {
+            Sound.wrong();
+            fb.className = "fq-feedback bad show";
+            fb.innerHTML = "<b>❌ Wrong code.</b> " + esc(roomState.door.hint);
+          }
+        }
+        btn.addEventListener("click", openDoor);
+        inp.addEventListener("keydown", function (e) { if (e.key === "Enter") { openDoor(); } e.stopPropagation(); });
+        root.appendChild(door);
+      }
+    }
+
+    return {
+      start: function () { showScreen("fqEscape", renderLobby); }
+    };
+  })();
+
+  /* ==================================================================
+   * BATTLE MODE
+   * ================================================================== */
+  var Battle = (function () {
+    var bot = null;
+    var playerScore = 0;
+    var botScore = 0;
+    var round = 0;
+    var rounds = 0;
+
+    function picker() {
+      showScreen("fqBattle", function () {
+        var root = $("fqBattle");
+        root.innerHTML = "";
+        root.appendChild(top("🤖 Beat the Fraction Bot"));
+        root.appendChild(el("p", "", "You and the bot answer the <b>same question</b> every round. First to 4 correct answers wins."));
+        var grid = el("div", "fq-modes");
+        FM.BOTS.forEach(function (b) {
+          var card = el("button", "fq-mode");
+          card.type = "button";
+          card.innerHTML = '<span class="fq-mode-ico" aria-hidden="true">' + esc(b.icon) + '</span><h3>' + esc(b.name) + '</h3><p>' + esc(b.blurb) + "</p><span class='fq-mode-tag'>" + esc(b.profile) + " questions</span>";
+          card.addEventListener("click", function () { begin(b); });
+          grid.appendChild(card);
+        });
+        root.appendChild(grid);
+      });
+    }
+    function top(name) {
+      var panel = el("div", "fq-panel");
+      var t = el("div", "fq-topline");
+      var n = el("div", "fq-mode-name", name);
+      t.appendChild(n);
+      var back = el("button", "fq-pill", "← Home"); back.type = "button"; back.addEventListener("click", goHome);
+      var r = el("div", "fq-pills"); r.appendChild(back);
+      t.appendChild(r); panel.appendChild(t);
+      return panel;
+    }
+
+    function begin(b) {
+      bot = b;
+      playerScore = 0; botScore = 0; round = 0;
+      rounds = 7;
+      nextRound();
+    }
+
+    function nextRound() {
+      round += 1;
+      var root = $("fqBattle");
+      root.innerHTML = "";
+      root.appendChild(top("🤖 " + bot.name));
+      root.appendChild(arenaEl());
+      if (round > rounds || playerScore >= 4 || botScore >= 4) { end(); return; }
+      var q = FM.generateQuestion({ profile: bot.profile, rng: FM.seededRng(Math.floor(Math.random() * 1e9) + round) });
+      var qPanel = el("div", "fq-panel");
+      qPanel.appendChild(el("div", "fq-q-topic", "Round " + round + " of " + rounds + " — same question for both players"));
+      QCard.render(qPanel, q, {
+        noHint: true,
+        onAnswer: function (sub, idx) {
+          var won = FM.checkAnswer(q, (typeof sub === "string") ? sub : idx);
+          resolveRound(qPanel, q, won, sub, idx);
+        }
+      });
+      root.appendChild(qPanel);
+    }
+
+    function resolveRound(panel, q, won, sub, idx) {
+      var botu = FM.botResolve(q, bot, FM.seededRng(round * 31 + 7));
+      var mark = panel.querySelectorAll(".fq-option");
+      if (mark.length && q.type === "mcq") {
+        mark[q.answer].classList.add("correct");
+        if (!won && typeof idx === "number" && idx !== q.answer) { mark[idx].classList.add("wrong"); }
+        Array.prototype.forEach.call(mark, function (b) { b.disabled = true; });
+      }
+      var fb = el("div", "fq-feedback " + (won ? "ok" : "bad"));
+      var youTxt = won ? "🔺 You" : "🔻 You";
+      var botTxt = botu.correct ? "🔺 Bot" : "🔻 Bot";
+      fb.innerHTML = "<b>" + (won ? "You answered correctly" : "Your answer missed") + "</b> — " + esc(q.explanation) + "<br><span style='font-size:0.88rem'>" + (won ? "✅" : "❌") + youTxt + " · " + (botu.correct ? "✅" : "❌") + botTxt + "</span>";
+      panel.appendChild(fb);
+      if (won) { playerScore += 1; Sound.correct(); } else { Sound.wrong(); }
+      if (botu.correct) { botScore += 1; }
+      renderArena();
+      logLine(panel, "You " + (won ? "nailed" : "missed") + " this one" + (botu.correct ? " and so did the bot." : "; the bot slipped up."));
+      setTimeout(function () { nextRound(); }, won ? 900 : 1600);
+    }
+
+    function arenaEl() {
+      var a = el("div", "fq-arena");
+      a.dataset.fight = "1";
+      arenaHolder = a;
+      a.appendChild(fighter("You", "🧑‍🎓", playerScore, false));
+      a.appendChild(el("div", "fq-vs", "VS"));
+      a.appendChild(fighter(bot.name, bot.icon, botScore, true));
+      return a;
+    }
+    var arenaHolder = null;
+    function fighter(name, icon, score, isBot) {
+      var f = el("div", "fq-fighter" + (isBot ? " bot" : " player"));
+      f.innerHTML = '<span class="fq-avatar" aria-hidden="true">' + esc(icon) + '</span><div style="font-weight:800">' + esc(name) + '</div>' +
+        '<div class="fq-hp"><i style="width:' + (score / 4 * 100) + '%"></i></div>' +
+        '<div style="font-size:0.82rem;color:var(--fq-mute)">' + score + " correct</div>";
+      return f;
+    }
+    function renderArena() {
+      if (!arenaHolder) { return; }
+      arenaHolder.parentNode.replaceChild(arenaEl(), arenaHolder);
+    }
+    function logLine(panel, text) {
+      var lg = panel.querySelector(".fq-battle-log");
+      if (!lg) {
+        lg = el("div", "fq-battle-log");
+        panel.appendChild(lg);
+      }
+      lg.appendChild(el("div", "", esc(text)));
+      lg.scrollTop = lg.scrollHeight;
+    }
+
+    function end() {
+      var won = playerScore > botScore;
+      if (won) {
+        stats.botsBeaten += 1;
+        if (bot.id === "boss") { stats.bossBeaten = true; }
+        Store.save(stats);
+      }
+      recordMode("battle", playerScore, Math.round((playerScore / 7) * 100), 7);
+      checkAchievements();
+      var root = $("fqBattle");
+      root.innerHTML = "";
+      root.appendChild(top("⚔️ Battle over"));
+      var r = el("div", "fq-result");
+      r.appendChild(el("span", "fq-big-emoji", won ? "🏆" : "🤖"));
+      r.appendChild(el("h3", "", won ? "You defeated " + bot.name + "!" : bot.name + " wins this time."));
+      var row = el("div", "fq-result-stats");
+      row.appendChild(stat(val(playerScore), "Your score")); row.appendChild(stat(val(botScore), "Bot score"));
+      r.appendChild(row);
+      var again = el("button", "fq-btn fq-btn-primary", "Fight again"); again.type = "button"; again.addEventListener("click", picker);
+      var home = el("button", "fq-btn fq-btn-ghost", "Home"); home.type = "button"; home.addEventListener("click", goHome);
+      var act = el("div", "fq-actions"); act.style.justifyContent = "center"; act.appendChild(again); act.appendChild(home);
+      r.appendChild(act);
+      root.appendChild(r);
+      if (won) { Sound.win(); } else { Sound.lose(); }
+    }
+    function val(v) { return String(v); }
+    function stat(v, lbl) {
+      var s = el("div", "fq-stat"); s.appendChild(el("b", "", v)); s.appendChild(el("span", "", lbl)); return s;
+    }
+
+    return { start: picker };
+  })();
+
+  /* ==================================================================
+   * BLITZ MODE
+   * ================================================================== */
+  var Blitz = (function () {
+    var state = null;
+    var timerId = null;
+    var remaining = 0;
+    var paused = false;
+    var score = 0;
+    var n = 0;
+    var okN = 0;
+    var activeCleanup = null;
+
+    function setup() {
+      showScreen("fqBlitz", function () {
+        var root = $("fqBlitz");
+        root.innerHTML = "";
+        root.appendChild(top("⚡ Fraction Blitz"));
+        root.appendChild(el("p", "", "Pick your battle time, then answer as many fraction questions as you can."));
+        var grid = el("div", "fq-modes");
+        [30, 60, 120].forEach(function (sec) {
+          var b = el("button", "fq-mode");
+          b.type = "button";
+          b.innerHTML = '<span class="fq-mode-ico" aria-hidden="true">⏱️</span><h3>' + sec + " seconds</h3><p>" + (sec === 30 ? "Quick sprint." : sec === 60 ? "Classic round." : "Endurance grind.") + "</p><span class='fq-mode-tag'>" + FM.profileMeta(profileId).label + " questions</span>";
+          b.addEventListener("click", function () { begin(sec); });
+          grid.appendChild(b);
+        });
+        root.appendChild(grid);
+        var prof = el("div", "fq-pills", "");
+        FM.PROFILES.forEach(function (p) {
+          var pl = el("button", "fq-pill" + (profileId === p.id ? " on" : ""), p.label);
+          pl.type = "button";
+          pl.addEventListener("click", function () {
+            profileId = p.id;
+            try { localStorage.setItem("vyasa_fq_profile", profileId); } catch (e) {}
+            setup();
+          });
+          prof.appendChild(pl);
+        });
+        root.appendChild(el("div", "fq-sec-title", "Level")).appendChild(prof);
+      });
+    }
+    function top(name) {
+      var panel = el("div", "fq-panel");
+      var t = el("div", "fq-topline");
+      t.appendChild(el("div", "fq-mode-name", name));
+      var back = el("button", "fq-pill", "← Home"); back.type = "button"; back.addEventListener("click", goHome);
+      var r = el("div", "fq-pills"); r.appendChild(back);
+      t.appendChild(r); panel.appendChild(t);
+      return panel;
+    }
+
+    function begin(sec) {
+      remaining = sec; score = 0; n = 0; okN = 0; paused = false;
+      state = { end: false };
+      clearTimer();
+      timerId = setInterval(function () {
+        if (paused) { return; }
+        remaining -= 1;
+        renderTimer();
+        if (remaining <= 0) { end(); }
+      }, 1000);
+      nextQ();
+    }
+
+    function renderTimer() {
+      var elm = $("fqBlitzTimer");
+      if (elm) { elm.textContent = remaining + "s"; }
+    }
+
+    function nextQ() {
+      if (state.end) { return; }
+      activeCleanup = null;
+      var q = FM.generateQuestion({ profile: profileId, rng: FM.seededRng(Math.floor(Math.random() * 1e9)) });
+      var root = $("fqBlitz");
+      root.innerHTML = "";
+      root.appendChild(top("⚡ Fraction Blitz"));
+      var hud = el("div", "fq-hud");
+      hud.appendChild(statBlock("fqBlitzTimer", String(remaining) + "s", "Time"));
+      hud.appendChild(statBlock("fqBlitzScore", String(score), "Score"));
+      hud.appendChild(statBlock("fqBlitzStreak", String(streak), "Streak"));
+      root.appendChild(hud);
+      var status = el("div", "fq-topline");
+      status.appendChild(el("div", "fq-mode-name", FM.kindLabel(q.kind)));
+      var pauseBtn = el("button", "fq-pill", paused ? "▶ Resume (P)" : "⏸ Pause (P)");
+      pauseBtn.type = "button";
+      pauseBtn.addEventListener("click", togglePause);
+      status.appendChild(pauseBtn);
+      root.appendChild(status);
+      var qPanel = el("div", "fq-panel");
+      var answered = false;
+      QCard.render(qPanel, q, {
+        noHint: true,
+        onAnswer: function (sub, idx) {
+          if (answered) { return; }
+          answered = true;
+          var ok = FM.checkAnswer(q, (typeof sub === "string") ? sub : idx);
+          n += 1;
+          if (ok) { okN += 1; }
+          var pts = grant(q, ok, 0.25);
+          if (ok) { score += pts; renderTimer(); }
+          QCard.reveal(qPanel, q, ok, sub);
+          if (q.type === "mcq") { QCard.markOptions(q, ok, idx); }
+          activeCleanup = later(function () { nextQ(); }, ok ? 1000 : 2600);
+        }
+      });
+      root.appendChild(qPanel);
+    }
+
+    function togglePause() {
+      paused = !paused;
+      var btn = document.querySelector('#fqBlitz .fq-pill');
+      if (btn) { btn.textContent = paused ? "▶ Resume (P)" : "⏸ Pause (P)"; }
+      toast(paused ? "Paused. Press P to resume." : "Go!", "ok", 1200);
+    }
+
+    function end() {
+      if (state.end) { return; }
+      state.end = true;
+      clearTimer();
+      recordMode("blitz", score, n ? Math.round((okN / n) * 100) : 0, n);
+      if (score > (stats.blitzBest || 0)) { stats.blitzBest = score; Store.save(stats); }
+      checkAchievements();
+      var root = $("fqBlitz");
+      root.innerHTML = "";
+      root.appendChild(top("⚡ Blitz complete"));
+      var won = n >= 10 && okN / Math.max(1, n) >= 0.9;
+      var r = el("div", "fq-result");
+      r.appendChild(el("span", "fq-big-emoji", won ? "🏅" : "⚡"));
+      r.appendChild(el("h3", "", score + " points"));
+      var row = el("div", "fq-result-stats");
+      row.appendChild(stat(String(score), "Score"));
+      row.appendChild(stat(String(okN) + "/" + n, "Correct"));
+      row.appendChild(stat(String(Math.round((okN / Math.max(1, n)) * 100)) + "%", "Accuracy"));
+      r.appendChild(row);
+      var again = el("button", "fq-btn fq-btn-primary", "Play again"); again.type = "button"; again.addEventListener("click", setup);
+      var home = el("button", "fq-btn fq-btn-ghost", "Home"); home.type = "button"; home.addEventListener("click", goHome);
+      var act = el("div", "fq-actions"); act.style.justifyContent = "center"; act.appendChild(again); act.appendChild(home);
+      r.appendChild(act);
+      root.appendChild(r);
+      if (won) { Sound.win(); }
+    }
+    function clearTimer() { if (timerId) { clearInterval(timerId); } timerId = null; }
+    function stat(v, lbl) { var s = el("div", "fq-stat"); s.appendChild(el("b", "", v)); s.appendChild(el("span", "", lbl)); return s; }
+    function statBlock(id, v, lbl) { var s = el("div", "fq-stat"); s.id = id; s.appendChild(el("b", "", v)); s.appendChild(el("span", "", lbl)); return s; }
+
+    return {
+      start: setup,
+      togglePause: togglePause,
+      isActive: function () { return !state && false; }
+    };
+  })();
+
+  /* ==================================================================
+   * MATCH MODE
+   * ================================================================== */
+  var Match = (function () {
+    var type = null;
+    var pairs = null;
+    var first = null;
+    var mistakes = 0;
+    var matchedCount = 0;
+
+    function picker() {
+      showScreen("fqMatch", function () {
+        var root = $("fqMatch");
+        root.innerHTML = "";
+        root.appendChild(top("🧩 Fraction Match Arena"));
+        root.appendChild(el("p", "", "Choose what to match."));
+        var grid = el("div", "fq-modes");
+        FM.MATCH_TYPES.forEach(function (t) {
+          var b = el("button", "fq-mode");
+          b.type = "button";
+          b.innerHTML = '<span class="fq-mode-ico" aria-hidden="true">🧩</span><h3>' + esc(t.label) + '</h3><p>Tap a fraction card, then its matching partner.</p><span class="fq-mode-tag">Tap to play</span>';
+          b.addEventListener("click", function () { begin(t.id); });
+          grid.appendChild(b);
+        });
+        root.appendChild(grid);
+      });
+    }
+    function top(name) {
+      var panel = el("div", "fq-panel");
+      var t = el("div", "fq-topline");
+      t.appendChild(el("div", "fq-mode-name", name));
+      var back = el("button", "fq-pill", "← Home"); back.type = "button"; back.addEventListener("click", goHome);
+      var r = el("div", "fq-pills"); r.appendChild(back);
+      t.appendChild(r); panel.appendChild(t);
+      return panel;
+    }
+
+    function begin(t) {
+      type = t;
+      pairs = FM.matchPairs(t, 4, FM.seededRng(Math.floor(Math.random() * 1e9)));
+      first = null;
+      mistakes = 0;
+      matchedCount = 0;
+      render();
+    }
+
+    function render() {
+      var root = $("fqMatch");
+      root.innerHTML = "";
+      root.appendChild(top("🧩 " + pairLabel(type)));
+      var hud = el("div", "fq-hud");
+      hud.appendChild(el("div", "fq-stat", "<b>" + matchedCount + "/" + pairs.length + "</b><span>Matched</span>"));
+      hud.appendChild(el("div", "fq-stat " + (mistakes ? "warn" : "good"), "<b>" + mistakes + "</b><span>Mistakes</span>"));
+      root.appendChild(hud);
+
+      var cols = el("div", "fq-match-cols");
+      var leftCol = el("div", "fq-match-col");
+      leftCol.appendChild(el("h4", "", "1. Fractions"));
+      var rightCol = el("div", "fq-match-col");
+      rightCol.appendChild(el("h4", "", "2. Their match"));
+
+      var leftBoard = cardBoard("left", shuffleCards(pairs.map(function (p, i) { return { i: i, kind: "left", text: p.left.text, model: null, key: p.left.key }; })), onLeftTap);
+      var rightModels = pairs.map(function (p, i) { return { i: i, kind: "right", text: p.right.text, model: p.right.model || null, n: p.right.n, d: p.right.d, key: p.right.key }; });
+      var rightBoard = cardBoard("right", shuffleCards(rightModels), onRightTap);
+      leftCol.appendChild(leftBoard);
+      rightCol.appendChild(rightBoard);
+      cols.appendChild(leftCol);
+      cols.appendChild(rightCol);
+      root.appendChild(cols);
+    }
+
+    function shuffleCards(arr) { return FM.shuffle(FM.seededRng(Math.floor(Math.random() * 1e9)), arr); }
+
+    function cardBoard(side, cards, onTap) {
+      var board = el("div", "fq-match-board");
+      cards.forEach(function (card) {
+        var b = el("button", "fq-card");
+        b.type = "button";
+        b.dataset.side = side;
+        b.dataset.pair = String(card.i);
+        b.setAttribute("aria-label", side + " card " + (card.i + 1));
+        if (card.model) {
+          b.innerHTML = modelMini(card);
+        } else {
+          b.textContent = card.text;
+        }
+        b.addEventListener("click", function () { onTap(card.i, b); });
+        board.appendChild(b);
+      });
+      return board;
+    }
+    function modelMini(card) {
+      // compact text model instead of full svg; the card shows n/d + slice count
+      return "model " + card.n + "/" + card.d;
+    }
+
+    function onLeftTap(i, btn) {
+      if (btn.classList.contains("matched")) { return; }
+      document.querySelectorAll(".fq-card.selected").forEach(function (b) { b.classList.remove("selected"); });
+      first = { i: i, btn: btn };
+      btn.classList.add("selected");
+    }
+    function onRightTap(i, btn) {
+      if (!first) {
+        toast("Tap a fraction card first.", "bad", 1600);
+        return;
+      }
+      if (btn.classList.contains("matched")) { return; }
+      var leftBtn = first.btn;
+      var ok = (first.i === i);
+      if (ok) {
+        Sound.correct();
+        leftBtn.classList.remove("selected");
+        leftBtn.classList.add("matched");
+        btn.classList.add("matched");
+        matchedCount += 1;
+        grant({ kind: "match-" + type, marks: 10, type: "mcq" }, true, 0.3);
+        first = null;
+        if (matchedCount === pairs.length) {
+          recordMode("match", mistakes === 0 ? 100 : Math.max(0, 100 - mistakes * 20), mistakes === 0 ? 100 : Math.max(0, 100 - mistakes * 20), pairs.length);
+          if (mistakes === 0) { stats.matchPerfect += 1; Store.save(stats); }
+          checkAchievements();
+          later(finish, 600);
+        }
+      } else {
+        Sound.wrong();
+        mistakes += 1;
+        btn.classList.add("flash-bad");
+        leftBtn.classList.add("flash-bad");
+        later(function () {
+          btn.classList.remove("flash-bad");
+          leftBtn.classList.remove("flash-bad");
+          leftBtn.classList.remove("selected");
+          first = null;
+        }, 600);
+      }
+    }
+
+    function finish() {
+      var root = $("fqMatch");
+      root.innerHTML = "";
+      root.appendChild(top("🧩 Match complete"));
+      var r = el("div", "fq-result");
+      r.appendChild(el("span", "fq-big-emoji", mistakes === 0 ? "🎯" : "🧩"));
+      r.appendChild(el("h3", "", mistakes === 0 ? "Perfect round!" : "Round cleared with " + mistakes + " mistake" + (mistakes === 1 ? "" : "s") + "."));
+      var again = el("button", "fq-btn fq-btn-primary", "Play again"); again.type = "button"; again.addEventListener("click", picker);
+      var home = el("button", "fq-btn fq-btn-ghost", "Home"); home.type = "button"; home.addEventListener("click", goHome);
+      var act = el("div", "fq-actions"); act.style.justifyContent = "center"; act.appendChild(again); act.appendChild(home);
+      r.appendChild(act);
+      root.appendChild(r);
+      if (mistakes === 0) { Sound.win(); }
+    }
+    function pairLabel(t) {
+      var m = {};
+      FM.MATCH_TYPES.forEach(function (x) { m[x.id] = x.label; });
+      return m[t] || t;
+    }
+
+    return { start: picker };
+  })();
+
+  /* ---------------- home renderer ---------------- */
+  function renderHome() {
+    renderHUD();
+    renderAchievements();
+    ["fqModes"].forEach(function () {});
+    Array.prototype.forEach.call(document.querySelectorAll("#fqModes .fq-mode"), function (b) {
+      if (b.dataset.bound) { return; }
+      b.dataset.bound = "1";
+      b.addEventListener("click", function () {
+        var m = b.dataset.mode;
+        if (m === "builder") { Builder.start(); }
+        else if (m === "escape") { Escape.start(); }
+        else if (m === "battle") { Battle.start(); }
+        else if (m === "blitz") { Blitz.start(); }
+        else if (m === "match") { Match.start(); }
+      });
+    });
+  }
+
+  /* ---------------- shared top panel for mode screens ---------------- */
+  // (Builder defined its own; keep this global helper out of the way)
+
+  /* ---- global wiring ---- */
+  $("fqPlayBtn").addEventListener("click", function () {
+    document.getElementById("fqHow").scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "start" });
+  });
+  $("fqHowBtn").addEventListener("click", function () {
+    document.getElementById("fqHow").scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "start" });
+    setTimeout(function () { var t = document.getElementById("fqHow"); if (t) { t.focus(); } }, 400);
+  });
+
+  var soundBtn = $("fqSoundBtn");
+  soundBtn.addEventListener("click", function () {
+    var on = Sound.toggle();
+    soundBtn.setAttribute("aria-pressed", on ? "true" : "false");
+    soundBtn.textContent = on ? "🔊 Sound: On" : "🔇 Sound: Off";
+    if (on) { Sound.lock(); }
+  });
+
+  var reduceBtn = $("fqReduceBtn");
+  var appEl = document.querySelector(".fq-app");
+  function applyMotion() {
+    reduceBtn.setAttribute("aria-pressed", reducedMotion ? "true" : "false");
+    reduceBtn.textContent = reducedMotion ? "🎞️ Motion: Reduced" : "🎞️ Motion: Full";
+    document.documentElement.style.scrollBehavior = reducedMotion ? "auto" : "smooth";
+    if (appEl) { appEl.classList.toggle("fq-reduce", reducedMotion); }
+  }
+  applyMotion();
+  reduceBtn.addEventListener("click", function () {
+    reducedMotion = !reducedMotion;
+    applyMotion();
+  });
+
+  $("fqResetBtn").addEventListener("click", function () {
+    if (window.confirm("Reset all Fraction Quest progress on this device? This cannot be undone.")) {
+      Store.clear();
+      stats = Store.load();
+      streak = 0;
+      renderHome();
+      toast("Progress reset.", "ok");
+    }
+  });
+
+  // Global keyboard: Esc = home; 1-4 = quick MCQ; P = blitz pause.
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      var onHome = !$("fqHome").classList.contains("fq-hidden");
+      if (!onHome) {
+        if (current === "fqBlitz") { Blitz.togglePause(); }
+        goHome();
+      }
+    }
+    if (e.key === "p" || e.key === "P") {
+      if (current === "fqBlitz") { Blitz.togglePause(); }
+    }
+    if (/^[1-4]$/.test(e.key) && current !== "fqHome" && current !== "fqEscape" && current !== "fqMatch") {
+      var opts = document.querySelectorAll("#" + current + " .fq-options .fq-option:not(:disabled)");
+      var idx = Number(e.key) - 1;
+      if (opts[idx]) {
+        opts[idx].click();
+      }
+    }
+  });
+
+  // Navbar toggle (site convention).
+  (function () {
+    var h = $("hamburger"), n = $("navLinks");
+    function close() { if (h) { h.classList.remove("open"); } if (n) { n.classList.remove("show"); } }
+    if (h) { h.addEventListener("click", function () { h.classList.toggle("open"); if (n) { n.classList.toggle("show"); } }); }
+    if (n) { Array.prototype.forEach.call(n.querySelectorAll("a"), function (a) { a.addEventListener("click", close); }); }
+  })();
+
+  /* ---- init ---- */
+  renderHome();
+  // Deep-link: ?mode=builder|escape|battle|blitz|match
+  try {
+    var params = new URLSearchParams(window.location.search);
+    var mode = params.get("mode");
+    var btn = document.querySelector('.fq-mode[data-mode="' + mode + '"]');
+    if (btn) { btn.click(); }
+  } catch (err) {}
+})();
+</script>
+</body>
+</html>
