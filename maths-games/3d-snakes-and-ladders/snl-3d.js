@@ -122,6 +122,7 @@
     var positions = [];
     var indices = [];
     var normals = [];
+    var uvs = [];
     var i, j;
     for (i = 0; i <= tubularSegments; i++) {
       var t = i / tubularSegments;
@@ -137,6 +138,7 @@
         var pz = center.z + r * (nx * N.z + ny * B.z);
         positions.push(px, py, pz);
         normals.push(nx * N.x + ny * B.x, nx * N.y + ny * B.y, nx * N.z + ny * B.z);
+        uvs.push(j / radialSegments, t);
       }
     }
     for (i = 1; i <= tubularSegments; i++) {
@@ -152,8 +154,146 @@
     var g = new THREE.BufferGeometry();
     g.setAttribute("position", new THREE.Float32BufferAttribute(positions, 3));
     g.setAttribute("normal", new THREE.Float32BufferAttribute(normals, 3));
+    g.setAttribute("uv", new THREE.Float32BufferAttribute(uvs, 2));
     g.setIndex(indices);
     return { geometry: g, curve: curve };
+  }
+
+  function makeSnakeTextures(baseHex) {
+    var S = 256;
+    var R = (baseHex >> 16) & 255, G = (baseHex >> 8) & 255, B = baseHex & 255;
+    var cv = document.createElement("canvas");
+    cv.width = S; cv.height = S;
+    var ctx = cv.getContext("2d");
+    ctx.fillStyle = "rgb(" + R + "," + G + "," + B + ")";
+    ctx.fillRect(0, 0, S, S);
+    var gd = ctx.createLinearGradient(0, 0, S, 0);
+    gd.addColorStop(0, "rgba(0,0,0,0.32)");
+    gd.addColorStop(0.5, "rgba(255,255,255,0.10)");
+    gd.addColorStop(1, "rgba(0,0,0,0.32)");
+    ctx.fillStyle = gd;
+    ctx.fillRect(0, 0, S, S);
+    var bands = 4;
+    for (var bi = 0; bi < bands; bi++) {
+      var by = (bi + 0.5) * (S / bands);
+      ctx.fillStyle = "rgba(0,0,0,0.16)";
+      ctx.fillRect(0, by - S / (bands * 5), S, S / (bands * 2.6));
+      ctx.fillStyle = "rgba(255,255,255,0.08)";
+      ctx.fillRect(0, by + S / (bands * 4), S, S / (bands * 7));
+    }
+    var cols = 12, rows = 16;
+    var cw = S / cols, ch = S / rows;
+    for (var ry = 0; ry < rows; ry++) {
+      for (var cx = 0; cx < cols; cx++) {
+        var ox = (ry % 2) ? cw / 2 : 0;
+        var px = cx * cw + ox + cw / 2;
+        var py = ry * ch + ch / 2;
+        ctx.beginPath();
+        ctx.moveTo(px, py - ch * 0.5);
+        ctx.quadraticCurveTo(px + cw * 0.5, py, px, py + ch * 0.5);
+        ctx.quadraticCurveTo(px - cw * 0.5, py, px, py - ch * 0.5);
+        ctx.strokeStyle = "rgba(0,0,0,0.18)";
+        ctx.lineWidth = 1;
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(px - cw * 0.3, py - ch * 0.29);
+        ctx.quadraticCurveTo(px, py - ch * 0.02, px + cw * 0.3, py - ch * 0.29);
+        ctx.strokeStyle = "rgba(255,255,255,0.12)";
+        ctx.lineWidth = 0.7;
+        ctx.stroke();
+      }
+    }
+    var map = new THREE.CanvasTexture(cv);
+    map.encoding = THREE.sRGBEncoding;
+    map.wrapS = map.wrapT = THREE.RepeatWrapping;
+    map.repeat.set(2, 6);
+    map.anisotropy = 4;
+
+    var bv = document.createElement("canvas");
+    bv.width = S; bv.height = S;
+    var bx = bv.getContext("2d");
+    bx.fillStyle = "#707070";
+    bx.fillRect(0, 0, S, S);
+    for (var qy = 0; qy < rows; qy++) {
+      for (var qx = 0; qx < cols; qx++) {
+        var qox = (qy % 2) ? cw / 2 : 0;
+        var qpx = qx * cw + qox + cw / 2;
+        var qpy = qy * ch + ch / 2;
+        bx.beginPath();
+        bx.moveTo(qpx, qpy - ch * 0.5);
+        bx.quadraticCurveTo(qpx + cw * 0.5, qpy, qpx, qpy + ch * 0.5);
+        bx.quadraticCurveTo(qpx - cw * 0.5, qpy, qpx, qpy - ch * 0.5);
+        bx.fillStyle = "rgba(255,255,255,0.55)";
+        bx.fill();
+        bx.strokeStyle = "rgba(40,40,40,0.75)";
+        bx.lineWidth = 1;
+        bx.stroke();
+      }
+    }
+    var bump = new THREE.CanvasTexture(bv);
+    bump.wrapS = bump.wrapT = THREE.RepeatWrapping;
+    bump.repeat.set(2, 6);
+    return { map: map, bump: bump };
+  }
+
+  function makeWoodTextures() {
+    var S = 256;
+    var cv = document.createElement("canvas");
+    cv.width = S; cv.height = S;
+    var ctx = cv.getContext("2d");
+    ctx.fillStyle = "#c68a44";
+    ctx.fillRect(0, 0, S, S);
+    var i, y, x;
+    for (i = 0; i < 90; i++) {
+      var x0 = Math.random() * S;
+      var amp = 4 + Math.random() * 10;
+      var ph = Math.random() * Math.PI * 2;
+      ctx.strokeStyle = "rgba(" + ((90 + Math.random() * 40) | 0) + "," + ((55 + Math.random() * 30) | 0) + ",20," + (0.06 + Math.random() * 0.12).toFixed(3) + ")";
+      ctx.lineWidth = 0.5 + Math.random() * 1.4;
+      ctx.beginPath();
+      for (y = 0; y <= S; y += 6) {
+        x = x0 + Math.sin((y / S) * Math.PI * 2 * (1 + (i % 3)) + ph) * amp;
+        if (y === 0) { ctx.moveTo(x, y); } else { ctx.lineTo(x, y); }
+      }
+      ctx.stroke();
+    }
+    for (i = 0; i < 3; i++) {
+      var kx = Math.random() * S, ky = Math.random() * S;
+      var grd = ctx.createRadialGradient(kx, ky, 1, kx, ky, 20);
+      grd.addColorStop(0, "rgba(70,40,15,0.5)");
+      grd.addColorStop(0.5, "rgba(120,80,40,0.22)");
+      grd.addColorStop(1, "rgba(120,80,40,0)");
+      ctx.fillStyle = grd;
+      ctx.beginPath();
+      ctx.arc(kx, ky, 20, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    var map = new THREE.CanvasTexture(cv);
+    map.encoding = THREE.sRGBEncoding;
+    map.wrapS = map.wrapT = THREE.RepeatWrapping;
+    map.repeat.set(1, 3);
+    map.anisotropy = 4;
+
+    var bv = document.createElement("canvas");
+    bv.width = S; bv.height = S;
+    var bx = bv.getContext("2d");
+    bx.fillStyle = "#808080";
+    bx.fillRect(0, 0, S, S);
+    for (i = 0; i < 90; i++) {
+      var gx = Math.random() * S, ga = 4 + Math.random() * 10, gp = Math.random() * Math.PI * 2;
+      bx.strokeStyle = "rgba(60,60,60," + (0.12 + Math.random() * 0.2).toFixed(3) + ")";
+      bx.lineWidth = 0.5 + Math.random() * 1.4;
+      bx.beginPath();
+      for (y = 0; y <= S; y += 6) {
+        var xx = gx + Math.sin((y / S) * Math.PI * 2 * (1 + (i % 3)) + gp) * ga;
+        if (y === 0) { bx.moveTo(xx, y); } else { bx.lineTo(xx, y); }
+      }
+      bx.stroke();
+    }
+    var bump = new THREE.CanvasTexture(bv);
+    bump.wrapS = bump.wrapT = THREE.RepeatWrapping;
+    bump.repeat.set(1, 3);
+    return { map: map, bump: bump };
   }
 
   function create(opts) {
@@ -222,6 +362,10 @@
 
     var resources = [];
     function track(o) { resources.push(o); return o; }
+    function trackTexture(tex) {
+      resources.push({ material: { map: tex, dispose: function () {} }, geometry: null });
+      return tex;
+    }
 
     var ground = track(new THREE.Mesh(
       new THREE.PlaneGeometry(70, 70),
@@ -310,61 +454,107 @@
     SNL.snakeList().forEach(function (s, idx) {
       var a = cellCenter(s.from);
       var b = cellCenter(s.to);
-      var start = new THREE.Vector3(a.x, TILE_TOP + 0.16, a.z);
-      var end = new THREE.Vector3(b.x, TILE_TOP + 0.16, b.z);
+      var start = new THREE.Vector3(a.x, TILE_TOP + 0.12, a.z);
+      var end = new THREE.Vector3(b.x, TILE_TOP + 0.12, b.z);
       var dir = new THREE.Vector3().subVectors(end, start);
       var len = dir.length() || 1;
       var side = new THREE.Vector3(-dir.z, 0, dir.x).normalize();
       var pts = [];
-      var segs = 10;
+      var segs = 16;
       for (var i = 0; i <= segs; i++) {
         var t = i / segs;
         var p = new THREE.Vector3().lerpVectors(start, end, t);
-        p.addScaledVector(side, Math.sin(t * Math.PI * 3) * Math.min(0.5, len * 0.09));
-        p.y += Math.sin(t * Math.PI) * (0.35 + len * 0.03);
+        p.addScaledVector(side, Math.sin(t * Math.PI * 3) * Math.min(0.42, len * 0.085));
+        p.y += Math.sin(t * Math.PI) * (0.22 + len * 0.018);
+        p.y += Math.exp(-t * 5.5) * (0.38 + len * 0.02);
         pts.push(p);
       }
       var color = SNAKE_COLORS[idx % SNAKE_COLORS.length];
-      var tube = taperedTube(pts, 60, 12, 0.17, 0.05);
-      var bodyMat = track(new THREE.MeshStandardMaterial({ color: color, roughness: 0.45, metalness: 0.15 }));
-      var body = new THREE.Mesh(tube.geometry, bodyMat);
+      var skin = makeSnakeTextures(color);
+      trackTexture(skin.map);
+      trackTexture(skin.bump);
+      var bodyMat = track(new THREE.MeshStandardMaterial({
+        color: 0xffffff, map: skin.map, bumpMap: skin.bump, bumpScale: 0.016,
+        roughness: 0.42, metalness: 0.13
+      }));
+      var tube = taperedTube(pts, 96, 16, 0.15, 0.045);
       track(tube.geometry);
+      var body = new THREE.Mesh(tube.geometry, bodyMat);
       body.castShadow = true;
       body.receiveShadow = true;
 
       var grp = new THREE.Group();
       grp.add(body);
 
-      var headMat = track(new THREE.MeshStandardMaterial({ color: color, roughness: 0.35, metalness: 0.2 }));
-      var head = new THREE.Mesh(new THREE.SphereGeometry(0.22, 20, 16), headMat);
-      head.scale.set(1, 0.85, 1.25);
-      head.position.copy(pts[0]);
-      head.castShadow = true;
-      grp.add(head);
+      var headPos = pts[0];
+      var bodyDir = new THREE.Vector3().subVectors(pts[1], pts[0]).normalize();
+      var headGrp = new THREE.Group();
+      headGrp.position.copy(headPos);
+      headGrp.lookAt(headPos.clone().add(bodyDir.clone().negate()));
 
-      var whiteMat = track(new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 0.4 }));
-      var blackMat = track(new THREE.MeshStandardMaterial({ color: 0x101018, roughness: 0.3 }));
-      var eyeGeo = new THREE.SphereGeometry(0.07, 12, 10);
-      var pupilGeo = new THREE.SphereGeometry(0.035, 10, 8);
+      var skullMat = track(new THREE.MeshStandardMaterial({
+        color: 0xffffff, map: skin.map, bumpMap: skin.bump, bumpScale: 0.016,
+        roughness: 0.36, metalness: 0.16
+      }));
+      var skull = new THREE.Mesh(new THREE.SphereGeometry(0.2, 24, 18), skullMat);
+      skull.scale.set(1.0, 0.82, 1.45);
+      skull.position.z = -0.02;
+      skull.castShadow = true;
+      headGrp.add(skull);
+      var snout = new THREE.Mesh(new THREE.SphereGeometry(0.13, 20, 14), skullMat);
+      snout.scale.set(0.92, 0.72, 1.15);
+      snout.position.set(0, -0.02, -0.26);
+      snout.castShadow = true;
+      headGrp.add(snout);
+
+      var eyeMat = track(new THREE.MeshStandardMaterial({ color: 0xf6cf3a, roughness: 0.34, metalness: 0.25 }));
+      var pupilMat = track(new THREE.MeshStandardMaterial({ color: 0x0a0a12, roughness: 0.22 }));
+      var lidMat = track(new THREE.MeshStandardMaterial({ color: 0xffffff, map: skin.map, bumpMap: skin.bump, roughness: 0.44 }));
       [-1, 1].forEach(function (sd) {
-        var eye = new THREE.Mesh(eyeGeo, whiteMat);
-        eye.position.set(head.position.x + sd * 0.1, head.position.y + 0.12, head.position.z - 0.12);
-        grp.add(eye);
-        var pup = new THREE.Mesh(pupilGeo, blackMat);
-        pup.position.set(eye.position.x, eye.position.y + 0.01, eye.position.z - 0.05);
-        grp.add(pup);
+        var eye = new THREE.Mesh(new THREE.SphereGeometry(0.072, 14, 12), eyeMat);
+        eye.position.set(sd * 0.11, 0.085, -0.05);
+        eye.scale.set(1, 1, 1.25);
+        headGrp.add(eye);
+        var pup = new THREE.Mesh(new THREE.SphereGeometry(0.02, 8, 8), pupilMat);
+        pup.position.set(sd * 0.126, 0.085, -0.104);
+        pup.scale.set(0.6, 1, 1.4);
+        headGrp.add(pup);
+        var lid = new THREE.Mesh(new THREE.SphereGeometry(0.076, 12, 10), lidMat);
+        lid.position.set(sd * 0.11, 0.098, -0.046);
+        lid.scale.set(1, 0.68, 1.3);
+        headGrp.add(lid);
       });
 
-      var tongueMat = track(new THREE.MeshStandardMaterial({ color: 0xff3b6b, roughness: 0.5 }));
-      var tongue = new THREE.Mesh(new THREE.CylinderGeometry(0.015, 0.015, 0.22, 6), tongueMat);
-      tongue.position.set(head.position.x, head.position.y + 0.02, head.position.z - 0.26);
-      tongue.rotation.x = Math.PI / 2;
-      grp.add(tongue);
+      var nostrilMat = track(new THREE.MeshStandardMaterial({ color: 0x24242c, roughness: 0.4 }));
+      [-1, 1].forEach(function (sd) {
+        var no = new THREE.Mesh(new THREE.SphereGeometry(0.014, 8, 6), nostrilMat);
+        no.position.set(sd * 0.045, 0.01, -0.35);
+        headGrp.add(no);
+      });
 
-      var tailMat = track(new THREE.MeshStandardMaterial({ color: color, roughness: 0.5 }));
-      var tail = new THREE.Mesh(new THREE.ConeGeometry(0.06, 0.24, 10), tailMat);
+      var tongueMat = track(new THREE.MeshStandardMaterial({ color: 0xe8335f, roughness: 0.5 }));
+      var tongueStem = new THREE.Mesh(new THREE.CylinderGeometry(0.012, 0.016, 0.24, 8), tongueMat);
+      tongueStem.rotation.x = Math.PI / 2;
+      tongueStem.position.set(0, -0.035, -0.42);
+      headGrp.add(tongueStem);
+      [-1, 1].forEach(function (sd) {
+        var prong = new THREE.Mesh(new THREE.CylinderGeometry(0.006, 0.011, 0.14, 6), tongueMat);
+        prong.rotation.x = Math.PI / 2;
+        prong.rotation.z = sd * 0.4;
+        prong.position.set(sd * 0.032, -0.035, -0.6);
+        headGrp.add(prong);
+      });
+
+      grp.add(headGrp);
+
+      var tailMat = track(new THREE.MeshStandardMaterial({
+        color: 0xffffff, map: skin.map, bumpMap: skin.bump, roughness: 0.5
+      }));
+      var tail = new THREE.Mesh(new THREE.ConeGeometry(0.05, 0.26, 12), tailMat);
+      var tailDir = new THREE.Vector3().subVectors(pts[pts.length - 1], pts[pts.length - 2]).normalize();
       tail.position.copy(pts[pts.length - 1]);
-      tail.rotation.z = Math.PI / 2;
+      tail.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), tailDir);
+      tail.castShadow = true;
       grp.add(tail);
 
       grp.userData.phase = idx * 0.7;
@@ -373,29 +563,49 @@
       scene.add(grp);
     });
 
-    var ladderMat = track(new THREE.MeshStandardMaterial({ color: 0xc98a3b, roughness: 0.6, metalness: 0.1 }));
-    var rungMat = track(new THREE.MeshStandardMaterial({ color: 0xe0a85a, roughness: 0.55, metalness: 0.1 }));
+    var wood = makeWoodTextures();
+    trackTexture(wood.map);
+    trackTexture(wood.bump);
+    var railMat = track(new THREE.MeshStandardMaterial({
+      color: 0xffffff, map: wood.map, bumpMap: wood.bump, bumpScale: 0.02,
+      roughness: 0.62, metalness: 0.06
+    }));
+    var rungMat = track(new THREE.MeshStandardMaterial({
+      color: 0xf3ddb6, map: wood.map, bumpMap: wood.bump, bumpScale: 0.02,
+      roughness: 0.58, metalness: 0.08
+    }));
+    var capMat = track(new THREE.MeshStandardMaterial({ color: 0x6b4a25, roughness: 0.5, metalness: 0.35 }));
     SNL.ladderList().forEach(function (l) {
       var a = cellCenter(l.from);
       var b = cellCenter(l.to);
       var dx = b.x - a.x, dz = b.z - a.z;
       var L = Math.sqrt(dx * dx + dz * dz);
-      var railGap = 0.16;
-      var railGeo = track(new THREE.BoxGeometry(L, 0.07, 0.07));
+      var railGap = 0.15;
+      var railR = 0.045;
+      var railGeo = track(new THREE.CylinderGeometry(railR, railR, L, 14));
+      var rungGeo = track(new THREE.CylinderGeometry(0.03, 0.03, railGap * 2 + 0.04, 12));
+      var capGeo = track(new THREE.CylinderGeometry(railR + 0.012, railR + 0.012, 0.05, 14));
       var grp = new THREE.Group();
       [-railGap, railGap].forEach(function (off) {
-        var rail = new THREE.Mesh(railGeo, ladderMat);
+        var rail = new THREE.Mesh(railGeo, railMat);
+        rail.rotation.z = Math.PI / 2;
         rail.position.set(L / 2, 0, off);
         rail.castShadow = true;
         grp.add(rail);
+        [0.01, L - 0.01].forEach(function (ex) {
+          var cap = new THREE.Mesh(capGeo, capMat);
+          cap.rotation.z = Math.PI / 2;
+          cap.position.set(ex, 0, off);
+          cap.castShadow = true;
+          grp.add(cap);
+        });
       });
-      var rungCount = Math.max(3, Math.round(L / 0.55));
-      var rungGeo = track(new THREE.CylinderGeometry(0.035, 0.035, railGap * 2, 8));
+      var rungCount = Math.max(4, Math.round(L / 0.5));
       for (var i = 1; i < rungCount; i++) {
         var rx = (L / rungCount) * i;
         var rung = new THREE.Mesh(rungGeo, rungMat);
-        rung.position.set(rx, 0, 0);
         rung.rotation.x = Math.PI / 2;
+        rung.position.set(rx, 0, 0);
         rung.castShadow = true;
         grp.add(rung);
       }
@@ -596,11 +806,17 @@
     el.addEventListener("touchmove", onTouchMove, { passive: false });
 
     var sound = { enabled: false, ctx: null };
+    function ensureSoundCtx() {
+      if (!sound.ctx) {
+        try { sound.ctx = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { sound.ctx = null; }
+      }
+      return sound.ctx;
+    }
     function beep(freq, dur, type, gain, delay) {
       if (!sound.enabled) { return; }
+      var ctx = ensureSoundCtx();
+      if (!ctx) { return; }
       try {
-        if (!sound.ctx) { sound.ctx = new (window.AudioContext || window.webkitAudioContext)(); }
-        var ctx = sound.ctx;
         var osc = ctx.createOscillator();
         var g = ctx.createGain();
         osc.type = type || "sine";
@@ -615,6 +831,63 @@
         osc.stop(t0 + dur + 0.02);
       } catch (err) { /* audio optional */ }
     }
+    function noiseBurst(dur, gain, delay, f0, f1) {
+      if (!sound.enabled) { return; }
+      var ctx = ensureSoundCtx();
+      if (!ctx) { return; }
+      try {
+        var len = Math.max(1, Math.floor(ctx.sampleRate * (dur + 0.05)));
+        var buf = ctx.createBuffer(1, len, ctx.sampleRate);
+        var data = buf.getChannelData(0);
+        for (var i = 0; i < len; i++) { data[i] = Math.random() * 2 - 1; }
+        var src = ctx.createBufferSource();
+        src.buffer = buf;
+        var hp = ctx.createBiquadFilter();
+        hp.type = "highpass";
+        hp.frequency.value = f0 || 1000;
+        var g = ctx.createGain();
+        g.gain.value = 0;
+        var t0 = ctx.currentTime + (delay || 0);
+        g.gain.linearRampToValueAtTime(gain || 0.03, t0 + 0.025);
+        g.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+        if (f1 && hp.frequency.linearRampToValueAtTime) { hp.frequency.linearRampToValueAtTime(f1, t0 + dur); }
+        src.connect(hp); hp.connect(g); g.connect(ctx.destination);
+        src.start(t0); src.stop(t0 + dur + 0.06);
+      } catch (err) { /* audio optional */ }
+    }
+    function sfxDice() {
+      if (!sound.enabled) { return; }
+      for (var i = 0; i < 8; i++) {
+        beep(200 + Math.random() * 320, 0.035, "square", 0.032, i * 0.08);
+        if (i % 3 === 0) { noiseBurst(0.04, 0.02, i * 0.08, 3000, 6000); }
+      }
+    }
+    function sfxDiceLand() {
+      beep(440, 0.06, "triangle", 0.05, 0);
+      noiseBurst(0.05, 0.03, 0, 1500, 4000);
+    }
+    function sfxStep() {
+      beep(300, 0.04, "triangle", 0.028, 0);
+      noiseBurst(0.035, 0.016, 0, 2500, 5000);
+    }
+    function sfxSnake() {
+      noiseBurst(0.55, 0.06, 0, 1800, 5200);
+      beep(180, 0.5, "sawtooth", 0.03, 0.05);
+    }
+    function sfxLadder() {
+      [392, 466, 587, 698, 880].forEach(function (f, i) {
+        beep(f, 0.12, "triangle", 0.045, i * 0.09);
+      });
+    }
+    function sfxWin() {
+      [523, 659, 784, 1046].forEach(function (f, i) {
+        beep(f, 0.22, "triangle", 0.07, i * 0.14);
+      });
+      beep(523, 0.5, "sine", 0.05, 0.6);
+      beep(659, 0.5, "sine", 0.04, 0.6);
+      beep(784, 0.5, "sine", 0.04, 0.6);
+      noiseBurst(0.25, 0.02, 0.6, 4000, 8000);
+    }
 
     var reducedMotion = false;
     function speed(ms) { return reducedMotion ? Math.min(ms, 120) : ms; }
@@ -624,8 +897,9 @@
       domElement: renderer.domElement,
       setSound: function (on) {
         sound.enabled = !!on;
-        if (sound.enabled && !sound.ctx) {
-          try { sound.ctx = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) {}
+        if (sound.enabled) {
+          var ctx = ensureSoundCtx();
+          try { if (ctx && ctx.resume) { ctx.resume(); } } catch (e) {}
         }
       },
       setReducedMotion: function (on) { reducedMotion = !!on; },
@@ -655,7 +929,7 @@
         );
         var hop = 0.5 + Math.random() * 0.4;
         var dur = speed(0.95) / 1000;
-        beep(300, 0.08, "square", 0.05, 0);
+        sfxDice();
         addAnim(dur, function (k) {
           var e = easeOutCubic(k);
           dice.rotation.set(
@@ -713,9 +987,9 @@
           token.position.set(x, y, z);
           if (si !== lastSeg) {
             lastSeg = si;
-            if (w.special === "snake") { beep(320, 0.3, "sawtooth", 0.05, 0); }
-            else if (w.special === "ladder") { beep(660, 0.28, "triangle", 0.05, 0); }
-            else { beep(440, 0.05, "sine", 0.03, 0); }
+            if (w.special === "snake") { sfxSnake(); }
+            else if (w.special === "ladder") { sfxLadder(); }
+            else { sfxStep(); }
           }
         }, function () {
           positions[playerIndex] = plan.to;
@@ -726,10 +1000,7 @@
       celebrate: function (playerIndex) {
         var token = tokens[playerIndex];
         var baseY = TILE_TOP;
-        beep(523, 0.15, "triangle", 0.07, 0);
-        beep(659, 0.15, "triangle", 0.07, 0.15);
-        beep(784, 0.15, "triangle", 0.07, 0.3);
-        beep(1046, 0.3, "triangle", 0.08, 0.45);
+        sfxWin();
         addAnim(speed(1.6) / 1000, function (k) {
           token.position.y = baseY + Math.abs(Math.sin(k * Math.PI * 3)) * 0.6;
           token.rotation.y = k * Math.PI * 4;
@@ -789,6 +1060,6 @@
   window.SNL3D = {
     create: create,
     isWebGLAvailable: isWebGLAvailable,
-    VERSION: "1.0.0"
+    VERSION: "1.1.0"
   };
 })();
