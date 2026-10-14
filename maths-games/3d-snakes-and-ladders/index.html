@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vyasa 3D Snakes &amp; Ladders - Interactive 3D Board Game | Vyasa Academy</title>
+  <meta name="description" content="Play Vyasa 3D Snakes &amp; Ladders, a free interactive 3D board game. Roll the dice, climb ladders, avoid snakes and race to square 100 on a fully modelled three-dimensional board. Works on desktop, tablet and mobile. No login needed." />
+  <link rel="canonical" href="https://www.vyasaacademy.in/maths-games/3d-snakes-and-ladders/" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vyasa Academy" />
+  <meta property="og:title" content="Vyasa 3D Snakes &amp; Ladders | Interactive 3D Board Game" />
+  <meta property="og:description" content="A fully interactive 3D board, animated dice, modelled snakes and ladders, and two racing tokens. Free to play." />
+  <meta property="og:url" content="https://www.vyasaacademy.in/maths-games/3d-snakes-and-ladders/" />
+  <meta property="og:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vyasa 3D Snakes &amp; Ladders | Vyasa Academy" />
+  <meta name="twitter:description" content="Roll the dice, climb ladders, avoid snakes and race to square 100 in a real 3D board game." />
+  <meta name="twitter:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.vyasaacademy.in/" },
+      { "@type": "ListItem", "position": 2, "name": "Vyasa Maths Games", "item": "https://www.vyasaacademy.in/maths-games/" },
+      { "@type": "ListItem", "position": 3, "name": "Vyasa 3D Snakes & Ladders", "item": "https://www.vyasaacademy.in/maths-games/3d-snakes-and-ladders/" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Vyasa 3D Snakes & Ladders",
+    "applicationCategory": "GameApplication",
+    "url": "https://www.vyasaacademy.in/maths-games/3d-snakes-and-ladders/",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript and WebGL",
+    "description": "A fully interactive 3D Snakes and Ladders board game with a genuine 3D board, modelled snakes and ladders, an animated 3D dice and two racing player tokens.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+    "publisher": { "@type": "Organization", "name": "Vyasa Academy", "url": "https://vyasaacademy.in/" }
+  }
+  </script>
+  <style>
+    .snl-app {
+      --snl-bg: #0a1030;
+      --snl-bg2: #141c48;
+      --snl-panel: rgba(23, 31, 74, 0.92);
+      --snl-panel2: rgba(38, 50, 112, 0.6);
+      --snl-line: rgba(140, 165, 255, 0.22);
+      --snl-indigo: #6c8bff;
+      --snl-sky: #8fd7ff;
+      --snl-gold: #ffd54f;
+      --snl-gold-dark: #f9a825;
+      --snl-blue: #2f6bff;
+      --snl-red: #e8354f;
+      --snl-text: #eaf0ff;
+      --snl-mute: #a7b4e0;
+      position: relative;
+      background:
+        radial-gradient(1100px 520px at 6% -8%, rgba(108,139,255,0.26), transparent 60%),
+        radial-gradient(900px 480px at 96% 0%, rgba(255,213,79,0.14), transparent 60%),
+        linear-gradient(180deg, var(--snl-bg) 0%, var(--snl-bg2) 100%);
+      color: var(--snl-text);
+      min-height: 100vh;
+      padding: 30px 0 64px;
+    }
+    .snl-wrap { max-width: 1240px; margin: 0 auto; padding: 0 18px; }
+    .snl-crumbs { font-size: 0.82rem; color: var(--snl-mute); margin-bottom: 14px; }
+    .snl-crumbs a { color: var(--snl-sky); text-decoration: underline; text-underline-offset: 3px; }
+    .snl-hidden { display: none !important; }
+
+    .snl-hero { text-align: center; margin-bottom: 18px; }
+    .snl-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.7rem, 5vw, 2.8rem);
+      line-height: 1.15;
+      background: linear-gradient(100deg, var(--snl-sky), var(--snl-indigo) 55%, var(--snl-gold));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .snl-hero p { color: var(--snl-mute); max-width: 720px; margin: 8px auto 0; line-height: 1.6; }
+    .snl-back {
+      display: inline-flex; align-items: center; gap: 8px; margin-top: 12px;
+      color: var(--snl-sky); font-weight: 600; text-decoration: none; font-size: 0.9rem;
+    }
+    .snl-back:hover { text-decoration: underline; }
+
+    .snl-layout { display: grid; grid-template-columns: 1fr 340px; gap: 20px; align-items: start; }
+
+    .snl-stage {
+      position: relative; width: 100%; aspect-ratio: 1 / 1;
+      background: linear-gradient(180deg, #0c1440, #0a1030);
+      border: 1px solid var(--snl-line);
+      border-radius: 18px; overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+      min-height: 340px;
+      touch-action: none;
+    }
+    .snl-stage canvas { display: block; }
+
+    .snl-loading, .snl-fallback {
+      position: absolute; inset: 0; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 14px;
+      text-align: center; padding: 26px; background: rgba(10,16,48,0.92);
+    }
+    .snl-spinner {
+      width: 52px; height: 52px; border-radius: 50%;
+      border: 4px solid rgba(140,165,255,0.25);
+      border-top-color: var(--snl-gold);
+      animation: snlSpin 0.9s linear infinite;
+    }
+    @keyframes snlSpin { to { transform: rotate(360deg); } }
+    .snl-loading p, .snl-fallback p { color: var(--snl-mute); max-width: 380px; }
+    .snl-fallback h2 { font-size: 1.2rem; }
+    .snl-fallback { background: rgba(10,16,48,0.96); }
+
+    .snl-cam-hint {
+      position: absolute; left: 12px; bottom: 12px;
+      font-size: 0.74rem; color: var(--snl-mute);
+      background: rgba(8,12,40,0.72); padding: 6px 10px; border-radius: 10px;
+      border: 1px solid var(--snl-line); pointer-events: none;
+    }
+
+    .snl-panel { display: flex; flex-direction: column; gap: 14px; }
+    .snl-card {
+      background: var(--snl-panel); border: 1px solid var(--snl-line);
+      border-radius: 16px; padding: 16px; backdrop-filter: blur(6px);
+    }
+    .snl-turn { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.02rem; }
+    .snl-dot { width: 16px; height: 16px; border-radius: 50%; box-shadow: 0 0 0 3px rgba(255,255,255,0.12); flex: 0 0 auto; }
+    .dot-blue { background: var(--snl-blue); }
+    .dot-red { background: var(--snl-red); }
+    .snl-turn-sub { color: var(--snl-mute); font-size: 0.8rem; font-weight: 500; margin-top: 4px; }
+
+    .snl-player {
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 12px; border-radius: 12px; border: 1px solid transparent;
+      background: rgba(255,255,255,0.03); transition: border-color 0.2s ease, background 0.2s ease;
+    }
+    .snl-player.active { border-color: var(--snl-gold); background: rgba(255,213,79,0.08); }
+    .snl-name {
+      flex: 1; min-width: 0; background: transparent; border: none; color: var(--snl-text);
+      font: inherit; font-weight: 600; padding: 2px 0; border-bottom: 1px dashed transparent;
+    }
+    .snl-name:focus { outline: none; border-bottom-color: var(--snl-sky); }
+    .snl-pos { font-size: 0.8rem; font-weight: 700; color: var(--snl-gold); font-variant-numeric: tabular-nums; }
+
+    .snl-dice-row { display: flex; align-items: center; gap: 14px; }
+    .snl-dice-box {
+      width: 64px; height: 64px; flex: 0 0 auto; border-radius: 14px;
+      background: linear-gradient(160deg, #ffffff, #e6ebff); color: #1a237e;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 1.9rem; box-shadow: inset 0 -4px 10px rgba(0,0,0,0.12);
+    }
+    .snl-dice-meta { min-width: 0; }
+    .snl-dice-meta b { display: block; font-size: 0.78rem; color: var(--snl-mute); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+    .snl-dice-meta span { font-size: 0.95rem; font-weight: 600; }
+
+    .snl-btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      border: 1px solid var(--snl-line); background: rgba(255,255,255,0.05);
+      color: var(--snl-text); font-weight: 700; font-size: 0.92rem;
+      padding: 11px 16px; border-radius: 12px; cursor: pointer;
+      transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+    }
+    .snl-btn:hover { transform: translateY(-2px); }
+    .snl-btn:focus-visible { outline: 3px solid var(--snl-sky); outline-offset: 2px; }
+    .snl-btn:disabled { opacity: 0.45; cursor: not-allowed; transform: none; box-shadow: none; }
+    .snl-btn-primary {
+      background: linear-gradient(120deg, var(--snl-indigo), #4a63d8 55%, var(--snl-gold-dark));
+      color: #08102e; border-color: transparent; box-shadow: 0 10px 26px rgba(108,139,255,0.34);
+      font-size: 1.02rem; padding: 14px 16px;
+    }
+    .snl-btn-gold { background: linear-gradient(120deg, var(--snl-gold), var(--snl-gold-dark)); color: #3a2600; border-color: transparent; }
+    .snl-btn-block { width: 100%; }
+    .snl-btn-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .snl-toggle[aria-pressed="false"] { opacity: 0.68; }
+
+    .snl-help { list-style: none; display: flex; flex-direction: column; gap: 8px; margin: 0; padding: 0; }
+    .snl-help li { display: flex; gap: 9px; font-size: 0.86rem; color: var(--snl-mute); line-height: 1.45; }
+    .snl-help li i { color: var(--snl-gold); margin-top: 3px; }
+    .snl-sec-title { font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--snl-mute); font-weight: 700; margin-bottom: 10px; }
+
+    .snl-status { font-size: 0.86rem; color: var(--snl-sky); min-height: 1.2em; font-weight: 600; }
+
+    .snl-win {
+      position: fixed; inset: 0; z-index: 50; display: flex; align-items: center; justify-content: center;
+      background: rgba(5,8,26,0.78); backdrop-filter: blur(4px); padding: 20px;
+    }
+    .snl-win-inner {
+      max-width: 420px; width: 100%; text-align: center;
+      background: linear-gradient(180deg, #1a2358, #131a44);
+      border: 1px solid var(--snl-line); border-radius: 20px; padding: 30px 24px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.55); animation: snlPop 0.3s ease;
+    }
+    @keyframes snlPop { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    .snl-win-trophy { font-size: 3rem; }
+    .snl-win h2 { margin: 8px 0 6px; font-family: 'Playfair Display', serif; }
+    .snl-win p { color: var(--snl-mute); margin-bottom: 18px; }
+
+    @media (max-width: 900px) {
+      .snl-layout { grid-template-columns: 1fr; }
+      .snl-panel { order: 2; }
+      .snl-stage-col { order: 1; }
+      .snl-stage { aspect-ratio: 1 / 1; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .snl-spinner { animation-duration: 2s; }
+      .snl-win-inner { animation: none; }
+    }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+    }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="/" class="logo"><i class="fas fa-graduation-cap"></i> Vyasa Academy</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#courses">Courses</a></li>
+      <li><a href="/#papers">Practice Papers</a></li>
+      <li><a href="/cbse-study-material/">Study Material</a></li>
+      <li><a href="/maths-games/" class="active" aria-current="page">🎮 Maths Games</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main" class="snl-app">
+  <a href="#snlControls" class="sr-only">Skip to game controls</a>
+  <div class="snl-wrap">
+    <nav class="snl-crumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a> / <a href="/maths-games/">Maths Games</a> / <span aria-current="page">Vyasa 3D Snakes &amp; Ladders</span>
+    </nav>
+
+    <div class="snl-hero">
+      <h1><span aria-hidden="true">🎲</span> Vyasa 3D Snakes &amp; Ladders</h1>
+      <p>Roll the dice, climb the ladders, dodge the snakes and race to square 100 on a real three-dimensional board you can spin and zoom.</p>
+      <a class="snl-back" href="/maths-games/"><i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Maths Games</a>
+    </div>
+
+    <div class="snl-layout">
+      <div class="snl-stage-col">
+        <div class="snl-stage" id="snlStage">
+          <div class="snl-loading" id="snlLoading" role="status" aria-live="polite">
+            <div class="snl-spinner" aria-hidden="true"></div>
+            <p>Building the 3D board&hellip;</p>
+          </div>
+          <div class="snl-fallback snl-hidden" id="snlFallback" role="alert">
+            <h2>3D view unavailable</h2>
+            <p>Your browser or device could not start WebGL, so the 3D board cannot be shown. You can still play using the controls &mdash; positions and the dice result update on the panel.</p>
+          </div>
+          <div class="snl-cam-hint" aria-hidden="true">Drag to rotate &middot; scroll / pinch to zoom</div>
+        </div>
+      </div>
+
+      <aside class="snl-panel" id="snlControls" aria-label="Game controls">
+        <div class="snl-card">
+          <div class="snl-turn"><span class="snl-dot dot-blue" id="snlTurnDot" aria-hidden="true"></span><span id="snlTurnName">Player 1&rsquo;s turn</span></div>
+          <div class="snl-turn-sub" id="snlTurnSub">Turns played: 0</div>
+        </div>
+
+        <div class="snl-card">
+          <div class="snl-player active" id="snlP1Card">
+            <span class="snl-dot dot-blue" aria-hidden="true"></span>
+            <input class="snl-name" id="snlP1Name" value="Player 1" maxlength="14" aria-label="Player 1 name" />
+            <span class="snl-pos" id="snlP1Pos">Sq 1</span>
+          </div>
+          <div class="snl-player" id="snlP2Card" style="margin-top:8px;">
+            <span class="snl-dot dot-red" aria-hidden="true"></span>
+            <input class="snl-name" id="snlP2Name" value="Player 2" maxlength="14" aria-label="Player 2 name" />
+            <span class="snl-pos" id="snlP2Pos">Sq 1</span>
+          </div>
+        </div>
+
+        <div class="snl-card">
+          <div class="snl-dice-row">
+            <div class="snl-dice-box" id="snlDiceBox" aria-hidden="true">🎲</div>
+            <div class="snl-dice-meta">
+              <b>Dice</b>
+              <span id="snlDiceText">Not rolled yet</span>
+            </div>
+          </div>
+          <button type="button" class="snl-btn snl-btn-primary snl-btn-block" id="snlRollBtn" style="margin-top:14px;">▶ Roll Dice</button>
+          <p class="snl-status" id="snlStatus" aria-live="polite" style="margin-top:10px;"></p>
+        </div>
+
+        <div class="snl-card">
+          <div class="snl-btn-row">
+            <button type="button" class="snl-btn" id="snlNewBtn"><i class="fas fa-flag" aria-hidden="true"></i> New Game</button>
+            <button type="button" class="snl-btn" id="snlRestartBtn"><i class="fas fa-rotate-left" aria-hidden="true"></i> Restart</button>
+            <button type="button" class="snl-btn" id="snlCamBtn"><i class="fas fa-camera" aria-hidden="true"></i> Reset Camera</button>
+            <button type="button" class="snl-btn snl-toggle" id="snlSoundBtn" aria-pressed="false"><i class="fas fa-volume-xmark" aria-hidden="true"></i> Sound: Off</button>
+          </div>
+          <div class="snl-btn-row" style="margin-top:10px;">
+            <button type="button" class="snl-btn snl-toggle" id="snlMotionBtn" aria-pressed="false"><i class="fas fa-film" aria-hidden="true"></i> Motion: Full</button>
+            <button type="button" class="snl-btn" id="snlHelpBtn"><i class="fas fa-circle-question" aria-hidden="true"></i> How to Play</button>
+          </div>
+        </div>
+
+        <div class="snl-card" id="snlHelpCard">
+          <div class="snl-sec-title">How to Play</div>
+          <ul class="snl-help">
+            <li><i class="fas fa-dice" aria-hidden="true"></i><span>Players take turns rolling the dice and moving that many squares.</span></li>
+            <li><i class="fas fa-arrow-up" aria-hidden="true"></i><span>Land on the bottom of a ladder and climb to the top.</span></li>
+            <li><i class="fas fa-arrow-down" aria-hidden="true"></i><span>Land on a snake&rsquo;s head and slide down to its tail.</span></li>
+            <li><i class="fas fa-bullseye" aria-hidden="true"></i><span>You must roll the exact number to land on square 100 &mdash; an overshoot keeps you in place.</span></li>
+            <li><i class="fas fa-trophy" aria-hidden="true"></i><span>The first player to reach square 100 wins.</span></li>
+            <li><i class="fas fa-arrows-rotate" aria-hidden="true"></i><span>Drag the board to rotate and use scroll or pinch to zoom.</span></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <div class="snl-win snl-hidden" id="snlWin" role="dialog" aria-modal="true" aria-labelledby="snlWinTitle">
+    <div class="snl-win-inner">
+      <div class="snl-win-trophy" aria-hidden="true">🏆</div>
+      <h2 id="snlWinTitle">Player 1 wins!</h2>
+      <p id="snlWinText">Reached square 100.</p>
+      <button type="button" class="snl-btn snl-btn-gold snl-btn-block" id="snlWinAgain">Play Again</button>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-about">
+      <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+      <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#faculty">Faculty</a></li>
+        <li><a href="/#courses">Courses</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/cbse-study-material/">Study Material</a></li>
+        <li><a href="/maths-games/">🎮 Maths Games</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>More Maths Games</h4>
+      <ul>
+        <li><a href="/maths-games/speed-challenge/">Maths Speed Challenge</a></li>
+        <li><a href="/maths-games/equation-hunter/">Equation Hunter</a></li>
+        <li><a href="/maths-games/square-root-ninja/">Square &amp; Root Ninja</a></li>
+        <li><a href="/maths-games/geometry-builder/">Geometry Builder</a></li>
+        <li><a href="/maths-games/cube-quest/">Cube Quest</a></li>
+        <li><a href="/maths-games/fraction-quest/">Fraction Quest</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="/maths-games/3d-snakes-and-ladders/snl-engine.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  var game = new SNL.Game({ p1Name: "Player 1", p2Name: "Player 2" });
+  var controller = null;
+  var busy = false;
+  var forcedRoll = null;
+  var questionGate = null;
+
+  if (window.SNL) {
+    window.SNL.setQuestionGate = function (fn) { questionGate = fn; };
+  }
+
+  var el = {
+    loading: document.getElementById("snlLoading"),
+    fallback: document.getElementById("snlFallback"),
+    stage: document.getElementById("snlStage"),
+    turnDot: document.getElementById("snlTurnDot"),
+    turnName: document.getElementById("snlTurnName"),
+    turnSub: document.getElementById("snlTurnSub"),
+    p1Card: document.getElementById("snlP1Card"),
+    p2Card: document.getElementById("snlP2Card"),
+    p1Name: document.getElementById("snlP1Name"),
+    p2Name: document.getElementById("snlP2Name"),
+    p1Pos: document.getElementById("snlP1Pos"),
+    p2Pos: document.getElementById("snlP2Pos"),
+    diceBox: document.getElementById("snlDiceBox"),
+    diceText: document.getElementById("snlDiceText"),
+    rollBtn: document.getElementById("snlRollBtn"),
+    newBtn: document.getElementById("snlNewBtn"),
+    restartBtn: document.getElementById("snlRestartBtn"),
+    camBtn: document.getElementById("snlCamBtn"),
+    soundBtn: document.getElementById("snlSoundBtn"),
+    motionBtn: document.getElementById("snlMotionBtn"),
+    helpBtn: document.getElementById("snlHelpBtn"),
+    helpCard: document.getElementById("snlHelpCard"),
+    status: document.getElementById("snlStatus"),
+    win: document.getElementById("snlWin"),
+    winTitle: document.getElementById("snlWinTitle"),
+    winText: document.getElementById("snlWinText"),
+    winAgain: document.getElementById("snlWinAgain")
+  };
+
+  function loadScript(src) {
+    return new Promise(function (resolve, reject) {
+      var s = document.createElement("script");
+      s.src = src;
+      s.onload = resolve;
+      s.onerror = function () { reject(new Error("Failed to load " + src)); };
+      document.body.appendChild(s);
+    });
+  }
+
+  function setStatus(msg) { el.status.textContent = msg || ""; }
+
+  function playerName(i) {
+    var n = game.players[i].name && game.players[i].name.trim();
+    return n || ("Player " + (i + 1));
+  }
+
+  function updateHud() {
+    el.p1Pos.textContent = "Sq " + game.players[0].position;
+    el.p2Pos.textContent = "Sq " + game.players[1].position;
+    el.turnSub.textContent = "Turns played: " + game.turnCount;
+    if (game.isOver()) {
+      el.turnName.textContent = playerName(game.winner) + " wins!";
+    } else {
+      el.turnName.textContent = playerName(game.current) + "\u2019s turn";
+    }
+    el.turnDot.className = "snl-dot " + (game.current === 0 ? "dot-blue" : "dot-red");
+    el.p1Card.classList.toggle("active", game.current === 0 && !game.isOver());
+    el.p2Card.classList.toggle("active", game.current === 1 && !game.isOver());
+    if (controller) {
+      controller.sync([game.players[0].position, game.players[1].position]);
+      if (!game.isOver()) { controller.setTurn(game.current); } else { controller.hideTurn(); }
+    }
+  }
+
+  function setBusy(on) {
+    busy = on;
+    el.rollBtn.disabled = on || game.isOver();
+    el.newBtn.disabled = on;
+    el.restartBtn.disabled = on;
+  }
+
+  function afterTurn(plan) {
+    game.commit(plan);
+    setBusy(false);
+    updateHud();
+    if (plan.win) {
+      el.diceText.textContent = "Rolled " + plan.roll + " \u2192 100";
+      setStatus(playerName(plan.playerId) + " reached square 100!");
+      if (controller) { controller.celebrate(plan.playerId); }
+      el.winTitle.textContent = playerName(plan.playerId) + " wins!";
+      el.winText.textContent = "Reached square 100 in " + game.turnCount + " turns.";
+      el.win.classList.remove("snl-hidden");
+      el.winAgain.focus();
+      return;
+    }
+    if (plan.special === "snake") { setStatus("Snake! " + plan.specialFrom + " \u2192 " + plan.specialTo); }
+    else if (plan.special === "ladder") { setStatus("Ladder! " + plan.specialFrom + " \u2192 " + plan.specialTo); }
+    else if (plan.overshoot) { setStatus("Needs an exact roll to finish \u2014 stays on " + plan.to); }
+    else { setStatus("Moved to square " + plan.to); }
+  }
+
+  function doRoll() {
+    if (busy || game.isOver()) { return; }
+    var plan = game.roll(forcedRoll);
+    forcedRoll = null;
+    if (!plan) { return; }
+    setBusy(true);
+    el.diceBox.textContent = plan.roll;
+    el.diceText.textContent = "Rolling\u2026";
+    setStatus("");
+    var finish = function () {
+      el.diceText.textContent = "Rolled " + plan.roll;
+      if (controller) {
+        controller.animateMove(plan, plan.playerId, function () { afterTurn(plan); });
+      } else {
+        afterTurn(plan);
+      }
+    };
+    if (controller) {
+      controller.animateRoll(plan.roll, finish);
+    } else {
+      el.diceBox.textContent = plan.roll;
+      finish();
+    }
+  }
+
+  function requestRoll() {
+    if (busy || game.isOver()) { return; }
+    if (questionGate) {
+      Promise.resolve(questionGate()).then(doRoll);
+    } else {
+      doRoll();
+    }
+  }
+
+  function newGame() {
+    el.win.classList.add("snl-hidden");
+    game.reset({ p1Name: el.p1Name.value, p2Name: el.p2Name.value });
+    el.diceBox.textContent = "🎲";
+    el.diceText.textContent = "Not rolled yet";
+    setStatus("");
+    setBusy(false);
+    if (controller) { controller.reset(); }
+    updateHud();
+    el.rollBtn.focus();
+  }
+
+  function setToggle(btn, on, onText, offText, iconOn, iconOff) {
+    btn.setAttribute("aria-pressed", on ? "true" : "false");
+    btn.innerHTML = '<i class="fas ' + (on ? iconOn : iconOff) + '" aria-hidden="true"></i> ' + (on ? onText : offText);
+  }
+
+  el.rollBtn.addEventListener("click", requestRoll);
+  el.newBtn.addEventListener("click", newGame);
+  el.restartBtn.addEventListener("click", newGame);
+  el.camBtn.addEventListener("click", function () { if (controller) { controller.resetCamera(); } });
+  el.winAgain.addEventListener("click", newGame);
+  el.soundBtn.addEventListener("click", function () {
+    var on = el.soundBtn.getAttribute("aria-pressed") !== "true";
+    setToggle(el.soundBtn, on, "Sound: On", "Sound: Off", "fa-volume-high", "fa-volume-xmark");
+    if (controller) { controller.setSound(on); }
+  });
+  el.motionBtn.addEventListener("click", function () {
+    var reduced = el.motionBtn.getAttribute("aria-pressed") !== "true";
+    setToggle(el.motionBtn, reduced, "Motion: Reduced", "Motion: Full", "fa-film", "fa-person-running");
+    if (controller) { controller.setReducedMotion(reduced); }
+  });
+  el.helpBtn.addEventListener("click", function () {
+    el.helpCard.classList.toggle("snl-hidden");
+  });
+  el.p1Name.addEventListener("input", function () { game.players[0].name = el.p1Name.value; updateHud(); });
+  el.p2Name.addEventListener("input", function () { game.players[1].name = el.p2Name.value; updateHud(); });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") { el.win.classList.add("snl-hidden"); }
+    if ((e.key === " " || e.key === "Enter") && e.target === document.body) {
+      e.preventDefault(); requestRoll();
+    }
+  });
+
+  var prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  window.SNLGame = {
+    snapshot: function () { return game.snapshot(); },
+    setPosition: function (i, n) { game.players[i].position = n; updateHud(); },
+    setForcedRoll: function (v) { forcedRoll = v; },
+    roll: requestRoll,
+    isBusy: function () { return busy; }
+  };
+
+  updateHud();
+  setBusy(true);
+
+  loadScript("vendor/three.min.js")
+    .then(function () { return loadScript("snl-3d.js"); })
+    .then(function () {
+      controller = SNL3D.create({
+        container: el.stage,
+        onError: function () { showFallback(); },
+        onReady: function (ctrl) {
+          controller = ctrl;
+          el.loading.classList.add("snl-hidden");
+          controller.setReducedMotion(prefersReduced);
+          if (prefersReduced) {
+            setToggle(el.motionBtn, true, "Motion: Reduced", "Motion: Full", "fa-film", "fa-person-running");
+            el.motionBtn.setAttribute("aria-pressed", "true");
+          }
+          controller.sync([game.players[0].position, game.players[1].position]);
+          controller.setTurn(game.current);
+          setBusy(false);
+          el.rollBtn.focus();
+        }
+      });
+      if (!controller) { showFallback(); }
+    })
+    .catch(function () { showFallback(); });
+
+  function showFallback() {
+    el.loading.classList.add("snl-hidden");
+    el.fallback.classList.remove("snl-hidden");
+    setBusy(false);
+  }
+})();
+</script>
+</body>
+</html>
