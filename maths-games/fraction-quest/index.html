@@ -708,7 +708,11 @@
     if (renderFn) { renderFn(); }
     SCREENS.forEach(function (s) {
       var node = $(s);
-      if (node) { node.hidden = (s !== id); }
+      if (node) {
+        var off = (s !== id);
+        node.hidden = off;
+        node.classList.toggle("fq-hidden", off);
+      }
     });
     current = id;
     renderHUD();
@@ -947,6 +951,7 @@
           modelWrap.appendChild(el("div", "fq-count", "Shaded: <b>" + pr + "</b> of " + ch.target.d + " (need " + ch.target.n + ")"));
         }
         function onToggle(idx) {
+          if (panel.dataset.answered) { return; }
           picked[idx] = !picked[idx];
           filled = selectedCount();
           draw();
@@ -1025,9 +1030,12 @@
     }
 
     function applyResult(panel, ch, ok, chosenIdx) {
+      if (panel.dataset.answered) { return; }
+      panel.dataset.answered = "1";
       state.done += 1;
       if (ok) { state.won += 1; Sound.correct(); } else { Sound.wrong(); }
       grant(chQuestion(ch), ok, 0.3);
+      Array.prototype.forEach.call(panel.querySelectorAll(".fq-btn-primary, .fq-input, .fq-option, .fq-cellbtn"), function (x) { x.disabled = true; });
       var fb = el("div", "fq-feedback " + (ok ? "ok" : "bad"));
       fb.innerHTML = "<b>" + (ok ? "✅ Correct" : "❌ Not quite") + "</b> — " + mjText(ch.explanation || "");
       fb.classList.add("show");
