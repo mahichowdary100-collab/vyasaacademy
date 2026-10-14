@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Money Maths Tycoon | Money &amp; Financial Maths Game | Vyasa Academy</title>
+  <meta name="description" content="Run a virtual school shop, manage money and master financial maths. Set prices and discounts, plan a budget, save at the bank, grow compound interest and beat the Tycoon Showdown. Free CBSE money maths game, no login needed." />
+  <link rel="canonical" href="https://www.vyasaacademy.in/maths-games/money-maths-tycoon/" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vyasa Academy" />
+  <meta property="og:title" content="Money Maths Tycoon | Money &amp; Financial Maths Game | Vyasa Academy" />
+  <meta property="og:description" content="Run a virtual business, manage your money and master profit, loss, discounts, budgeting and interest. Free to play." />
+  <meta property="og:url" content="https://www.vyasaacademy.in/maths-games/money-maths-tycoon/" />
+  <meta property="og:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Money Maths Tycoon | Financial Maths Game | Vyasa Academy" />
+  <meta name="twitter:description" content="Run a virtual business and master money maths. Free to play, no login needed." />
+  <meta name="twitter:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.vyasaacademy.in/" },
+      { "@type": "ListItem", "position": 2, "name": "Vyasa Maths Games", "item": "https://www.vyasaacademy.in/maths-games/" },
+      { "@type": "ListItem", "position": 3, "name": "Money Maths Tycoon", "item": "https://www.vyasaacademy.in/maths-games/money-maths-tycoon/" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Money Maths Tycoon - Money Maths",
+    "applicationCategory": "GameApplication",
+    "url": "https://www.vyasaacademy.in/maths-games/money-maths-tycoon/",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "description": "Free interactive financial maths game covering money arithmetic, profit and loss, discounts, budgeting, simple and compound interest, break-even and business reports for CBSE students.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+    "publisher": { "@type": "Organization", "name": "Vyasa Academy", "url": "https://vyasaacademy.in/" }
+  }
+  </script>
+  <style>
+    /* ===== MONEY MATHS TYCOON - business simulator (page scoped) ===== */
+    .mm-app {
+      --mm-bg: #06170f;
+      --mm-bg2: #0a2418;
+      --mm-panel: rgba(15, 44, 32, 0.9);
+      --mm-panel2: rgba(20, 56, 40, 0.7);
+      --mm-line: rgba(94, 234, 168, 0.18);
+      --mm-green: #3ddc84;
+      --mm-mint: #7dffb0;
+      --mm-gold: #ffd54f;
+      --mm-gold-dark: #f9a825;
+      --mm-red: #ff7b7b;
+      --mm-blue: #6fb7ff;
+      --mm-text: #eafff5;
+      --mm-mute: #9fcdbb;
+      position: relative;
+      background:
+        radial-gradient(1100px 500px at 10% -6%, rgba(61,220,132,0.20), transparent 60%),
+        radial-gradient(900px 460px at 92% 4%, rgba(255,213,79,0.14), transparent 60%),
+        radial-gradient(800px 600px at 50% 116%, rgba(111,183,255,0.10), transparent 60%),
+        linear-gradient(180deg, var(--mm-bg) 0%, var(--mm-bg2) 100%);
+      color: var(--mm-text);
+      min-height: 100vh;
+      padding: 34px 0 70px;
+    }
+    .mm-wrap { position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; padding: 0 18px; }
+
+    .mm-crumbs { font-size: 0.82rem; color: var(--mm-mute); margin-bottom: 14px; }
+    .mm-crumbs a { color: var(--mm-green); text-decoration: underline; text-underline-offset: 3px; }
+
+    /* ---- screens ---- */
+    .mm-hidden { display: none !important; }
+    .mm-screen { animation: mmFade 0.32s ease; }
+    @keyframes mmFade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+    /* ---- hero ---- */
+    .mm-hero { text-align: center; padding: 12px 0 4px; }
+    .mm-logo {
+      display: inline-flex; align-items: center; gap: 12px;
+      font-family: 'Playfair Display', serif; font-weight: 700;
+      font-size: clamp(1.9rem, 5.6vw, 3.2rem);
+      background: linear-gradient(100deg, var(--mm-green), var(--mm-gold) 60%, var(--mm-gold-dark));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      letter-spacing: 0.5px; line-height: 1.15;
+    }
+    .mm-subtitle { color: var(--mm-mute); font-size: 1.05rem; margin: 8px 0 4px; font-weight: 600; }
+    .mm-lead { color: var(--mm-text); opacity: 0.86; max-width: 660px; margin: 4px auto 0; line-height: 1.6; }
+
+    .mm-cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin: 22px 0 8px; }
+    .mm-btn {
+      display: inline-flex; align-items: center; gap: 9px;
+      border: 1px solid var(--mm-line);
+      background: linear-gradient(180deg, rgba(61,220,132,0.16), rgba(61,220,132,0.05));
+      color: var(--mm-text); font-weight: 700; font-size: 0.96rem;
+      padding: 12px 22px; border-radius: 12px; cursor: pointer;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    }
+    .mm-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(61,220,132,0.22); }
+    .mm-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+    .mm-btn-primary {
+      background: linear-gradient(120deg, var(--mm-green), #2fae6a 60%, var(--mm-gold-dark));
+      color: #06210f; border-color: transparent; box-shadow: 0 10px 30px rgba(61,220,132,0.3);
+    }
+    .mm-btn-primary:hover { box-shadow: 0 14px 38px rgba(61,220,132,0.42); }
+    .mm-btn-gold { background: linear-gradient(120deg, var(--mm-gold), var(--mm-gold-dark)); color: #3a2600; border-color: transparent; }
+    .mm-btn-ghost { background: rgba(255,255,255,0.04); color: var(--mm-text); }
+    .mm-btn-danger { background: rgba(255,123,123,0.12); border-color: rgba(255,123,123,0.5); color: #ffc9c9; }
+    .mm-btn-sm { padding: 8px 14px; font-size: 0.85rem; border-radius: 10px; }
+    .mm-toggle-btn[aria-pressed="false"] { opacity: 0.65; }
+
+    /* ---- status bar ---- */
+    .mm-status { display: grid; grid-template-columns: 1.4fr 1fr; gap: 14px; align-items: center; margin: 22px 0 8px; background: var(--mm-panel); border: 1px solid var(--mm-line); border-radius: 16px; padding: 16px 18px; }
+    .mm-xp-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+    .mm-level-pill { font-weight: 800; color: var(--mm-green); }
+    .mm-xp-bar { height: 12px; border-radius: 999px; background: rgba(255,255,255,0.08); overflow: hidden; margin-top: 8px; }
+    .mm-xp-fill { height: 100%; width: 0%; border-radius: 999px; background: linear-gradient(90deg, var(--mm-green), var(--mm-gold)); transition: width 0.5s ease; }
+    .mm-mini-stats { display: flex; gap: 16px; flex-wrap: wrap; justify-content: flex-end; }
+    .mm-mini { text-align: center; min-width: 70px; }
+    .mm-mini b { display: block; font-size: 1.15rem; color: var(--mm-gold); font-variant-numeric: tabular-nums; }
+    .mm-mini span { font-size: 0.68rem; color: var(--mm-mute); text-transform: uppercase; letter-spacing: 0.5px; }
+
+    /* ---- section titles ---- */
+    .mm-sec-title { margin: 30px 0 14px; font-size: 1.15rem; color: var(--mm-text); display: flex; align-items: center; gap: 9px; }
+    .mm-sec-title i { color: var(--mm-green); }
+
+    /* ---- mode cards ---- */
+    .mm-modes { display: grid; grid-template-columns: repeat(auto-fill, minmax(238px, 1fr)); gap: 16px; }
+    .mm-mode {
+      text-align: left; background: var(--mm-panel); border: 1px solid var(--mm-line);
+      border-radius: 16px; padding: 20px; cursor: pointer; color: var(--mm-text);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .mm-mode:hover { transform: translateY(-4px); border-color: rgba(61,220,132,0.5); box-shadow: 0 14px 34px rgba(61,220,132,0.16); }
+    .mm-mode-ico { font-size: 1.9rem; display: block; margin-bottom: 10px; }
+    .mm-mode h3 { font-size: 1.08rem; margin-bottom: 6px; }
+    .mm-mode p { color: var(--mm-mute); font-size: 0.9rem; line-height: 1.5; }
+    .mm-mode-tag { display: inline-block; margin-top: 12px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: var(--mm-green); }
+
+    /* ---- achievements ---- */
+    .mm-ach-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+    .mm-ach { display: flex; gap: 10px; align-items: flex-start; background: var(--mm-panel); border: 1px solid var(--mm-line); border-radius: 12px; padding: 12px; opacity: 0.45; }
+    .mm-ach.earned { opacity: 1; border-color: rgba(125,255,176,0.5); box-shadow: 0 0 0 1px rgba(125,255,176,0.18) inset; }
+    .mm-ach-ico { font-size: 1.4rem; }
+    .mm-ach b { display: block; font-size: 0.9rem; }
+    .mm-ach span { font-size: 0.78rem; color: var(--mm-mute); }
+
+    /* ---- how to play ---- */
+    .mm-how { background: var(--mm-panel); border: 1px solid var(--mm-line); border-radius: 16px; padding: 18px 20px; }
+    .mm-how ol { margin: 8px 0 0 18px; color: var(--mm-mute); line-height: 1.7; }
+    .mm-how code { background: rgba(255,255,255,0.08); border-radius: 6px; padding: 1px 6px; color: var(--mm-green); font-family: inherit; }
+    .mm-kbd { display: inline-block; border: 1px solid var(--mm-line); border-bottom-width: 2px; border-radius: 6px; padding: 0 7px; font-size: 0.8rem; background: rgba(255,255,255,0.06); }
+
+    /* ---- generic panels ---- */
+    .mm-panel { background: var(--mm-panel); border: 1px solid var(--mm-line); border-radius: 16px; padding: 20px; }
+    .mm-panel + .mm-panel { margin-top: 16px; }
+    .mm-topline { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+    .mm-mode-name { font-weight: 800; font-size: 1.15rem; display: flex; align-items: center; gap: 9px; }
+    .mm-mute { color: var(--mm-mute); }
+    .mm-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+    .mm-pill { font-size: 0.78rem; font-weight: 700; border: 1px solid var(--mm-line); border-radius: 999px; padding: 5px 12px; color: var(--mm-mute); }
+    .mm-pill.on { color: #06210f; background: var(--mm-green); border-color: transparent; }
+
+    .mm-hud { display: grid; grid-template-columns: repeat(auto-fit, minmax(104px, 1fr)); gap: 10px; margin: 4px 0 16px; }
+    .mm-stat { background: var(--mm-panel2); border: 1px solid var(--mm-line); border-radius: 12px; padding: 10px 8px; text-align: center; }
+    .mm-stat b { display: block; font-size: 1.2rem; color: var(--mm-gold); font-variant-numeric: tabular-nums; }
+    .mm-stat span { font-size: 0.68rem; color: var(--mm-mute); text-transform: uppercase; letter-spacing: 0.5px; }
+    .mm-stat.good b { color: var(--mm-mint); }
+    .mm-stat.bad b { color: var(--mm-red); }
+
+    /* ---- tables ---- */
+    .mm-table-wrap { overflow-x: auto; }
+    table.mm-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .mm-table th, .mm-table td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--mm-line); vertical-align: middle; }
+    .mm-table th { color: var(--mm-mute); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.6px; font-weight: 700; }
+    .mm-table td.num, .mm-table th.num { text-align: right; font-variant-numeric: tabular-nums; }
+    .mm-table tr:last-child td { border-bottom: none; }
+    .mm-item-name { display: flex; align-items: center; gap: 8px; font-weight: 600; }
+    .mm-item-name .ico { font-size: 1.1rem; }
+
+    .mm-input {
+      background: rgba(255,255,255,0.05); border: 1.5px solid var(--mm-line);
+      color: var(--mm-text); border-radius: 10px; padding: 8px 10px; font-size: 0.9rem; font-variant-numeric: tabular-nums;
+      width: 100%;
+    }
+    .mm-input:focus { outline: 3px solid rgba(61,220,132,0.35); border-color: var(--mm-green); }
+    .mm-input-sm { width: 84px; }
+    .mm-qty-cell { display: flex; gap: 6px; align-items: center; }
+    .mm-qty-cell .mm-input { width: 62px; }
+
+    /* ---- question card ---- */
+    .mm-q { background: linear-gradient(180deg, rgba(61,220,132,0.08), rgba(61,220,132,0.01)); border: 1px solid var(--mm-line); border-radius: 14px; padding: 18px; }
+    .mm-q-topic { font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.8px; color: var(--mm-gold); font-weight: 700; }
+    .mm-q-text { font-size: clamp(1.02rem, 2.5vw, 1.28rem); margin: 8px 0 4px; line-height: 1.55; }
+    .mm-q-text .m { color: var(--mm-green); font-variant-numeric: tabular-nums; }
+    .mm-answer-row { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
+    .mm-answer-row .mm-input { flex: 1; min-width: 160px; font-size: 1.05rem; padding: 12px 14px; }
+    .mm-feedback { margin-top: 14px; border-radius: 12px; padding: 12px 14px; font-size: 0.95rem; line-height: 1.6; display: none; }
+    .mm-feedback.show { display: block; }
+    .mm-feedback.ok { background: rgba(125,255,176,0.12); border: 1px solid rgba(125,255,176,0.45); }
+    .mm-feedback.bad { background: rgba(255,123,123,0.1); border: 1px solid rgba(255,123,123,0.45); }
+    .mm-hint { margin-top: 12px; font-size: 0.9rem; color: var(--mm-gold); display: none; }
+    .mm-hint.show { display: block; }
+    .mm-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; align-items: center; }
+    .mm-flex-spacer { flex: 1; }
+
+    /* ---- budget bars ---- */
+    .mm-budget-row { display: grid; grid-template-columns: 1.4fr 1fr 1.2fr; gap: 10px; align-items: center; margin-bottom: 8px; }
+    .mm-budget-row label { font-size: 0.9rem; color: var(--mm-text); }
+    .mm-budget-bar { height: 10px; border-radius: 999px; background: rgba(255,255,255,0.08); overflow: hidden; }
+    .mm-budget-bar i { display: block; height: 100%; background: linear-gradient(90deg, var(--mm-green), var(--mm-gold)); }
+
+    /* ---- upgrade / level cards ---- */
+    .mm-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 14px; }
+    .mm-card { background: var(--mm-panel2); border: 1px solid var(--mm-line); border-radius: 14px; padding: 16px; display: flex; flex-direction: column; }
+    .mm-card h4 { font-size: 1rem; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+    .mm-card p { color: var(--mm-mute); font-size: 0.86rem; line-height: 1.5; flex: 1; margin-bottom: 12px; }
+    .mm-card-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .mm-price { color: var(--mm-gold); font-weight: 800; font-variant-numeric: tabular-nums; }
+    .mm-card.owned { border-color: rgba(125,255,176,0.5); }
+    .mm-req { font-size: 0.82rem; color: var(--mm-mute); }
+    .mm-req.met { color: var(--mm-mint); }
+    .mm-req.miss { color: var(--mm-red); }
+
+    /* ---- showdown ---- */
+    .mm-arena { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; align-items: center; margin-bottom: 14px; }
+    .mm-fighter { text-align: center; }
+    .mm-avatar { font-size: 2.4rem; display: block; }
+    .mm-vs { font-weight: 800; color: var(--mm-gold); font-size: 1.1rem; }
+    .mm-score { font-size: 1.3rem; font-weight: 800; color: var(--mm-gold); font-variant-numeric: tabular-nums; }
+    .mm-rel { height: 10px; border-radius: 999px; background: rgba(255,255,255,0.08); overflow: hidden; margin: 8px 0 2px; }
+    .mm-rel i { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--mm-green), var(--mm-mint)); transition: width 0.4s ease; }
+    .mm-rel.rival i { background: linear-gradient(90deg, var(--mm-red), var(--mm-gold)); }
+
+    /* ---- report chart ---- */
+    .mm-chart { width: 100%; height: auto; display: block; background: rgba(255,255,255,0.03); border: 1px solid var(--mm-line); border-radius: 12px; }
+    .mm-legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 0.82rem; color: var(--mm-mute); margin-top: 10px; }
+    .mm-legend b { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+
+    /* ---- result ---- */
+    .mm-result { text-align: center; padding: 8px 0; }
+    .mm-result h3 { font-size: 1.5rem; margin-bottom: 6px; }
+    .mm-big-emoji { font-size: 3rem; display: block; animation: mmPop 0.6s ease; }
+    @keyframes mmPop { from { transform: scale(0.4); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+    /* ---- toast ---- */
+    .mm-toast-wrap { position: fixed; z-index: 60; left: 50%; bottom: 22px; transform: translateX(-50%); display: flex; flex-direction: column; gap: 8px; align-items: center; pointer-events: none; width: min(92vw, 480px); }
+    .mm-toast { background: rgba(10,36,24,0.97); border: 1px solid var(--mm-line); color: var(--mm-text); border-radius: 12px; padding: 11px 16px; font-size: 0.9rem; box-shadow: 0 12px 32px rgba(0,0,0,0.45); text-align: center; }
+    .mm-toast.ok { border-color: rgba(125,255,176,0.6); }
+    .mm-toast.bad { border-color: rgba(255,123,123,0.6); }
+    .mm-toast.ach { border-color: var(--mm-gold); color: #fff3cd; }
+
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+    /* ---- focus ---- */
+    .mm-app a:focus-visible, .mm-app button:focus-visible, .mm-app input:focus-visible,
+    .mm-mode:focus-visible, .mm-select:focus-visible {
+      outline: 3px solid rgba(61,220,132,0.75); outline-offset: 2px;
+    }
+    .mm-select { background: rgba(255,255,255,0.05); border: 1.5px solid var(--mm-line); color: var(--mm-text); border-radius: 10px; padding: 9px 12px; font-size: 0.9rem; }
+
+    @media (max-width: 820px) {
+      .mm-status { grid-template-columns: 1fr; }
+      .mm-mini-stats { justify-content: space-between; }
+      .mm-budget-row { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 560px) {
+      .mm-answer-row { flex-direction: column; }
+      .mm-budget-row { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .mm-screen { animation: none; }
+      .mm-mode:hover, .mm-btn:hover { transform: none; }
+      .mm-big-emoji { animation: none; }
+      .mm-xp-fill, .mm-rel i { transition: none; }
+    }
+    .mm-app.mm-reduce .mm-screen, .mm-app.mm-reduce .mm-big-emoji { animation: none !important; transition: none !important; }
+    .mm-app.mm-reduce .mm-mode:hover, .mm-app.mm-reduce .mm-btn:hover { transform: none !important; }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="/" class="logo"><i class="fas fa-graduation-cap"></i> Vyasa Academy</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#courses">Courses</a></li>
+      <li><a href="/#papers">Practice Papers</a></li>
+      <li><a href="/cbse-study-material/">Study Material</a></li>
+      <li><a href="/maths-games/" class="active" aria-current="page">🎮 Maths Games</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main" class="mm-app">
+  <a href="#mmHome" class="sr-only">Skip to game controls</a>
+  <div class="mm-wrap">
+    <nav class="mm-crumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a> / <a href="/maths-games/">Maths Games</a> / <span aria-current="page">Money Maths Tycoon</span>
+    </nav>
+
+    <!-- ================= HOME ================= -->
+    <section class="mm-screen" id="mmHome" tabindex="-1">
+      <div class="mm-hero">
+        <h1 class="mm-logo"><span aria-hidden="true">🏦</span> Money Maths Tycoon</h1>
+        <p class="mm-subtitle">Run a Business. Manage Your Money. Master Financial Maths.</p>
+        <p class="mm-lead">Start with &#8377;10,000, stock your shelves, set prices and discounts, plan a budget, save at the bank and grow your shop &mdash; while mastering profit, loss, percentage, interest and break-even.</p>
+        <div class="mm-cta-row">
+          <button type="button" class="mm-btn mm-btn-primary" id="mmPlayBtn">▶ Play Now</button>
+          <button type="button" class="mm-btn mm-btn-ghost" id="mmHowBtn">❓ How to Play</button>
+          <button type="button" class="mm-btn mm-btn-ghost mm-toggle-btn" id="mmSoundBtn" aria-pressed="false" title="Toggle sound">🔇 Sound: Off</button>
+          <button type="button" class="mm-btn mm-btn-ghost mm-toggle-btn" id="mmReduceBtn" aria-pressed="false" title="Toggle reduced motion">🎞️ Motion: Full</button>
+        </div>
+      </div>
+
+      <div class="mm-status" aria-live="polite">
+        <div>
+          <div class="mm-xp-head">
+            <span class="mm-level-pill" id="mmLevelPill">Business Level 1</span>
+            <span class="mm-mute" id="mmXpText" style="font-size:0.86rem;">0 / 250 XP</span>
+          </div>
+          <div class="mm-xp-bar"><div class="mm-xp-fill" id="mmXpFill"></div></div>
+          <div class="mm-mute" id="mmBizName" style="font-size:0.82rem;margin-top:6px;">Neighbourhood Shop</div>
+        </div>
+        <div class="mm-mini-stats">
+          <div class="mm-mini"><b id="mmStatCash">&#8377;0</b><span>Cash</span></div>
+          <div class="mm-mini"><b id="mmStatDay">1</b><span>Day</span></div>
+          <div class="mm-mini"><b id="mmStatRep">50</b><span>Reputation</span></div>
+          <div class="mm-mini"><b id="mmStatProfit">&#8377;0</b><span>Total profit</span></div>
+        </div>
+      </div>
+
+      <h2 class="mm-sec-title"><i class="fas fa-store" aria-hidden="true"></i>Choose What to Do</h2>
+      <div class="mm-modes" id="mmModes">
+        <button type="button" class="mm-mode" data-mode="shop">
+          <span class="mm-mode-ico" aria-hidden="true">🏪</span>
+          <h3>Shop Manager</h3>
+          <p>Buy stock, set your selling prices and discounts, serve customers and close the day.</p>
+          <span class="mm-mode-tag">Run the business</span>
+        </button>
+        <button type="button" class="mm-mode" data-mode="practice">
+          <span class="mm-mode-ico" aria-hidden="true">🧮</span>
+          <h3>Money Maths Practice</h3>
+          <p>Sharpen money arithmetic, percentages, discounts, profit &amp; loss, interest and more.</p>
+          <span class="mm-mode-tag">Solve &amp; earn XP</span>
+        </button>
+        <button type="button" class="mm-mode" data-mode="budget">
+          <span class="mm-mode-ico" aria-hidden="true">📋</span>
+          <h3>Budget Planner</h3>
+          <p>Plan how to allocate your money across the shop and keep an emergency reserve.</p>
+          <span class="mm-mode-tag">Plan the money</span>
+        </button>
+        <button type="button" class="mm-mode" data-mode="bank">
+          <span class="mm-mode-ico" aria-hidden="true">🏦</span>
+          <h3>Bank &amp; Savings</h3>
+          <p>Deposit, withdraw and see how simple and compound interest grow your savings.</p>
+          <span class="mm-mode-tag">Grow savings</span>
+        </button>
+        <button type="button" class="mm-mode" data-mode="expand">
+          <span class="mm-mode-ico" aria-hidden="true">🏗️</span>
+          <h3>Business Expansion</h3>
+          <p>Buy upgrades, check the requirements and expand into bigger business levels.</p>
+          <span class="mm-mode-tag">Grow the shop</span>
+        </button>
+        <button type="button" class="mm-mode" data-mode="showdown">
+          <span class="mm-mode-ico" aria-hidden="true">🤝</span>
+          <h3>Tycoon Showdown</h3>
+          <p>Go head to head with a rival on financial maths questions. Three difficulties.</p>
+          <span class="mm-mode-tag">Compete</span>
+        </button>
+        <button type="button" class="mm-mode" data-mode="reports">
+          <span class="mm-mode-ico" aria-hidden="true">📈</span>
+          <h3>Business Reports</h3>
+          <p>See revenue, profit, expenses and inventory value, day by day, from your ledger.</p>
+          <span class="mm-mode-tag">Read the numbers</span>
+        </button>
+      </div>
+
+      <h2 class="mm-sec-title"><i class="fas fa-medal" aria-hidden="true"></i>Achievements</h2>
+      <div class="mm-ach-grid" id="mmAchievements"></div>
+
+      <h2 class="mm-sec-title" id="mmHow"><i class="fas fa-circle-info" aria-hidden="true"></i>How to Play</h2>
+      <div class="mm-how">
+        <ol>
+          <li><b>Shop Manager</b> &mdash; buy stock at cost, choose a selling price and an optional discount, then <b>open the shop</b> to serve daily customers. Customers are more likely to buy when your price is fair and your reputation is high. Finish each day with <b>Close Day</b>, which pays rent, staff and utilities.</li>
+          <li><b>Money Maths Practice</b> &mdash; answer questions on money arithmetic, percentages, discounts, profit &amp; loss, budgeting, simple and compound interest, successive discounts, markup &amp; margin, break-even and revenue. Every correct answer earns XP.</li>
+          <li><b>Budget Planner</b> &mdash; split your cash across inventory, rent, staff, utilities, marketing and an emergency reserve. The planner checks the numbers and shows what is left.</li>
+          <li><b>Bank &amp; Savings</b> &mdash; move money into savings, then see the difference between simple and compound interest. This is a maths model only &mdash; no real money is involved.</li>
+          <li><b>Business Expansion</b> &mdash; buy upgrades (bigger shelves, faster checkout, a better supplier) and meet the reputation, days and profit targets to unlock the next business level.</li>
+          <li><b>Tycoon Showdown</b> &mdash; you and a rival answer the same questions each round. Highest score wins.</li>
+        </ol>
+        <p style="margin-top:10px;color:var(--mm-mute);font-size:0.9rem;">Press <span class="mm-kbd">Esc</span> to return home. Your progress is stored privately on this device only. <button type="button" class="mm-btn mm-btn-danger mm-btn-sm" id="mmResetBtn" style="margin-left:6px;">Reset progress</button></p>
+      </div>
+    </section>
+
+    <!-- ================= SCREENS ================= -->
+    <section class="mm-screen mm-hidden" id="mmShop" tabindex="-1" aria-label="Shop Manager"></section>
+    <section class="mm-screen mm-hidden" id="mmPractice" tabindex="-1" aria-label="Money Maths Practice"></section>
+    <section class="mm-screen mm-hidden" id="mmBudget" tabindex="-1" aria-label="Budget Planner"></section>
+    <section class="mm-screen mm-hidden" id="mmBank" tabindex="-1" aria-label="Bank and Savings"></section>
+    <section class="mm-screen mm-hidden" id="mmExpand" tabindex="-1" aria-label="Business Expansion"></section>
+    <section class="mm-screen mm-hidden" id="mmShowdown" tabindex="-1" aria-label="Tycoon Showdown"></section>
+    <section class="mm-screen mm-hidden" id="mmReports" tabindex="-1" aria-label="Business Reports"></section>
+  </div>
+
+  <div class="mm-toast-wrap" id="mmToasts" aria-live="polite" aria-atomic="false"></div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-about">
+      <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+      <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#faculty">Faculty</a></li>
+        <li><a href="/#courses">Courses</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/cbse-study-material/">Study Material</a></li>
+        <li><a href="/maths-games/">🎮 Maths Games</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>More Maths Games</h4>
+      <ul>
+        <li><a href="/maths-games/speed-challenge/">Maths Speed Challenge</a></li>
+        <li><a href="/maths-games/equation-hunter/">Equation Hunter</a></li>
+        <li><a href="/maths-games/square-root-ninja/">Square &amp; Root Ninja</a></li>
+        <li><a href="/maths-games/geometry-builder/">Geometry Builder</a></li>
+        <li><a href="/maths-games/cube-quest/">Cube Quest</a></li>
+        <li><a href="/maths-games/fraction-quest/">Fraction Quest</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="/maths-games/money-maths-tycoon/money-maths.js"></script>
+<script>
+/* =====================================================================
+ * MONEY MATHS TYCOON - application shell
+ * Modules: utils, sound, store, progression, router, and one renderer
+ * per screen (home, shop, practice, budget, bank, expand, showdown,
+ * reports). All engine maths lives in money-maths.js (window.MoneyMaths).
+ * ===================================================================== */
+(function () {
+  "use strict";
+  var MM = window.MoneyMaths;
+  var app = document.getElementById("main");
+  if (!MM || !app) { return; }
+
+  var reduceMotionPref = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------------- utils ---------------- */
+  function $(id) { return document.getElementById(id); }
+  function el(tag, cls, html) { var n = document.createElement(tag); if (cls) { n.className = cls; } if (html != null) { n.innerHTML = html; } return n; }
+  function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+  function money(p) { return MM.formatMoney(p); }
+  function rupees(p) { return MM.formatRupees(p); }
+  function clampPct(n) { return Math.max(0, Math.min(100, n)); }
+  // Parse a rupee string typed by the user into integer paise.
+  function readRupees(value) {
+    var n = parseFloat(String(value == null ? "" : value).replace(/[^0-9.\-]/g, ""));
+    if (!isFinite(n)) { return NaN; }
+    return MM.toPaise(n);
+  }
+
+  var toastWrap = $("mmToasts");
+  function toast(msg, kind, ms) {
+    var t = el("div", "mm-toast" + (kind ? " " + kind : ""), msg);
+    toastWrap.appendChild(t);
+    setTimeout(function () { t.style.opacity = "0"; t.style.transition = "opacity .3s"; }, (ms || 2600) - 300);
+    setTimeout(function () { if (t.parentNode) { t.parentNode.removeChild(t); } }, ms || 2600);
+  }
+
+  /* ---------------- sound ---------------- */
+  var Sound = (function () {
+    var ctx = null, on = false;
+    function ensure() {
+      if (!ctx) { var AC = window.AudioContext || window.webkitAudioContext; if (AC) { ctx = new AC(); } }
+      return ctx;
+    }
+    function tone(freq, dur, type, gain) {
+      if (!on) { return; }
+      var c = ensure(); if (!c) { return; }
+      var o = c.createOscillator(), g = c.createGain();
+      o.type = type || "sine"; o.frequency.value = freq;
+      g.gain.value = 0.0001; o.connect(g); g.connect(c.destination);
+      var t = c.currentTime;
+      g.gain.exponentialRampToValueAtTime(gain || 0.12, t + 0.01);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+      o.start(t); o.stop(t + dur + 0.02);
+    }
+    return {
+      toggle: function () { on = !on; if (on) { ensure(); } return on; },
+      set: function (v) { on = !!v; },
+      isOn: function () { return on; },
+      correct: function () { tone(660, 0.14, "triangle", 0.1); setTimeout(function () { tone(990, 0.16, "triangle", 0.1); }, 110); },
+      wrong: function () { tone(200, 0.22, "sawtooth", 0.08); },
+      coin: function () { tone(880, 0.09, "square", 0.08); setTimeout(function () { tone(1320, 0.12, "square", 0.08); }, 80); },
+      win: function () { [523, 659, 784, 1046].forEach(function (f, i) { setTimeout(function () { tone(f, 0.16, "triangle", 0.1); }, i * 120); }); },
+      lose: function () { [392, 330, 262].forEach(function (f, i) { setTimeout(function () { tone(f, 0.2, "sine", 0.09); }, i * 140); }); }
+    };
+  })();
+
+  /* ---------------- store / persistence ---------------- */
+  var LS_KEY = "vyasa_money_tycoon_v1";
+  var PREF_KEY = "vyasa_money_tycoon_prefs";
+  var prefs = { sound: false, reduce: reduceMotionPref };
+
+  function loadPrefs() {
+    try {
+      var raw = window.localStorage.getItem(PREF_KEY);
+      if (raw) { var p = JSON.parse(raw); if (p && typeof p === "object") { prefs.sound = !!p.sound; prefs.reduce = !!p.reduce; } }
+    } catch (e) {}
+    Sound.set(prefs.sound);
+    app.classList.toggle("mm-reduce", prefs.reduce);
+  }
+  function savePrefs() { try { window.localStorage.setItem(PREF_KEY, JSON.stringify(prefs)); } catch (e) {} }
+
+  function freshGame(seed) { return MM.newGame(seed == null ? 20260101 : seed); }
+  function loadGame() {
+    try {
+      var raw = window.localStorage.getItem(LS_KEY);
+      if (raw) { var g = MM.deserialize(raw); if (g) { return g; } }
+    } catch (e) {}
+    return freshGame();
+  }
+  function saveGame() { try { window.localStorage.setItem(LS_KEY, MM.serialize(game)); } catch (e) {} }
+
+  var game = loadGame();
+
+  /* ---------------- progression ---------------- */
+  var knownAchievements = {};
+  (function seedKnown() {
+    var e = MM.earned(game);
+    Object.keys(e).forEach(function (k) { if (e[k]) { knownAchievements[k] = true; } });
+  })();
+
+  function syncChrome() {
+    var lv = MM.levelFromXp(game.xp);
+    $("mmLevelPill").textContent = "Business Level " + game.level;
+    $("mmXpText").textContent = lv.into + " / " + lv.span + " XP";
+    $("mmXpFill").style.width = clampPct(lv.pct) + "%";
+    $("mmBizName").textContent = MM.levelMeta(game.level).name + " · Player XP Level " + lv.level;
+    $("mmStatCash").textContent = rupees(game.cash);
+    $("mmStatDay").textContent = game.day;
+    $("mmStatRep").textContent = game.reputation;
+    $("mmStatProfit").textContent = rupees(game.stats.totalProfitPaise);
+  }
+
+  function checkNewAchievements() {
+    var status = MM.achievementStatus(game);
+    var fresh = [];
+    status.forEach(function (a) {
+      if (a.earned && !knownAchievements[a.id]) { knownAchievements[a.id] = true; fresh.push(a); }
+    });
+    fresh.forEach(function (a) { toast((a.icon || "") + " Achievement unlocked — <b>" + esc(a.name) + "</b>", "ach", 4200); if (Sound.win) { Sound.win(); } });
+    return fresh;
+  }
+
+  function afterMutation(opts) {
+    opts = opts || {};
+    if (opts.check !== false) { checkNewAchievements(); }
+    saveGame();
+    syncChrome();
+  }
+
+  function renderHome() {
+    syncChrome();
+    var wrap = $("mmAchievements"); wrap.innerHTML = "";
+    MM.achievementStatus(game).forEach(function (a) {
+      var d = el("div", "mm-ach" + (a.earned ? " earned" : ""));
+      d.innerHTML = '<span class="mm-ach-ico" aria-hidden="true">' + (a.icon || "•") + '</span><span><b>' + esc(a.name) + '</b><span>' + esc(a.desc) + '</span></span>';
+      wrap.appendChild(d);
+    });
+  }
+
+  /* ---------------- router ---------------- */
+  var screens = ["mmHome", "mmShop", "mmPractice", "mmBudget", "mmBank", "mmExpand", "mmShowdown", "mmReports"];
+  var current = "mmHome";
+  function show(id) {
+    current = id;
+    screens.forEach(function (s) { $(s).classList.toggle("mm-hidden", s !== id); });
+    window.scrollTo({ top: 0, behavior: prefs.reduce ? "auto" : "smooth" });
+    var sec = $(id); try { sec.focus({ preventScroll: true }); } catch (e) {}
+  }
+  function goHome() { renderHome(); show("mmHome"); }
+
+  function screenPanel(title, icon) {
+    var panel = el("div", "mm-panel");
+    var top = el("div", "mm-topline");
+    var name = el("div", "mm-mode-name", '<span aria-hidden="true">' + icon + '</span> ' + esc(title));
+    top.appendChild(name);
+    var actions = el("div", "mm-actions");
+    actions.style.marginTop = "0";
+    var home = el("button", "mm-btn mm-btn-ghost mm-btn-sm", "🏠 Home");
+    home.type = "button"; home.addEventListener("click", goHome);
+    actions.appendChild(home);
+    top.appendChild(actions);
+    panel.appendChild(top);
+    return panel;
+  }
+
+  function backBar(panel) { return panel; }
+
+  /* =====================================================================
+   * SHOP MANAGER
+   * ===================================================================== */
+  var Shop = (function () {
+    var root = $("mmShop");
+    var lastDay = null;
+
+    function render() {
+      root.innerHTML = "";
+      var panel = screenPanel("Shop Manager", "🏪");
+
+      var hud = el("div", "mm-hud");
+      hud.appendChild(stat("Cash", rupees(game.cash)));
+      hud.appendChild(stat("Storage", MM.totalStock(game) + " / " + MM.storageCapacity(game)));
+      hud.appendChild(stat("Inventory value", rupees(MM.inventoryValueOf(game))));
+      hud.appendChild(stat("Reputation", game.reputation));
+      hud.appendChild(stat("Satisfaction", game.satisfaction));
+      panel.appendChild(hud);
+
+      var dayBar = el("div", "mm-actions");
+      dayBar.style.marginBottom = "14px";
+      var dayLbl = el("span", "mm-pill on", "Day " + game.day);
+      dayBar.appendChild(dayLbl);
+      if (!game.servedToday) {
+        var open = el("button", "mm-btn mm-btn-primary", "🛎️ Open Shop &amp; Serve Customers");
+        open.type = "button";
+        open.addEventListener("click", openShop);
+        dayBar.appendChild(open);
+      } else {
+        var closed = el("button", "mm-btn mm-btn-gold", "🌙 Close Day (pay daily costs)");
+        closed.type = "button";
+        closed.addEventListener("click", closeDay);
+        dayBar.appendChild(closed);
+      }
+      var w = el("span", "mm-mute", "Daily costs: " + money(MM.dailyOperatingExpense(game)));
+      w.style.fontSize = "0.86rem";
+      dayBar.appendChild(w);
+      panel.appendChild(dayBar);
+
+      if (lastDay) { panel.appendChild(daySummary(lastDay)); }
+
+      panel.appendChild(el("h3", "mm-sec-title", "Stock, Prices &amp; Discounts"));
+      var tw = el("div", "mm-table-wrap");
+      var table = el("table", "mm-table");
+      table.innerHTML =
+        "<thead><tr>" +
+          "<th>Item</th><th class=\"num\">In stock</th><th class=\"num\">Cost</th>" +
+          "<th class=\"num\">Your price</th><th class=\"num\">Discount</th>" +
+          "<th class=\"num\">Sells at</th><th>Buy stock</th>" +
+        "</tr></thead>";
+      var tb = el("tbody");
+      MM.CATALOGUE.forEach(function (p) {
+        var tr = el("tr");
+        var stock = game.inventory[p.id] || 0;
+        var eff = MM.effectivePrice(game, p.id);
+        var disc = game.discounts[p.id] || 0;
+        tr.innerHTML =
+          '<td><span class="mm-item-name"><span class="ico" aria-hidden="true">' + p.icon + '</span>' + esc(p.name) + '</span></td>' +
+          '<td class="num">' + stock + '</td>' +
+          '<td class="num">' + rupees(p.costPaise) + '</td>' +
+          '<td class="num"><input class="mm-input mm-input-sm" type="number" min="0" step="1" inputmode="decimal" aria-label="Selling price for ' + esc(p.name) + ' in rupees" data-price="' + p.id + '" value="' + MM.toRupees(game.prices[p.id]) + '"></td>' +
+          '<td class="num"><input class="mm-input mm-input-sm" type="number" min="0" max="90" step="1" inputmode="numeric" aria-label="Discount percent for ' + esc(p.name) + '" data-disc="' + p.id + '" value="' + disc + '"></td>' +
+          '<td class="num">' + rupees(eff) + '</td>' +
+          '<td><div class="mm-qty-cell"><input class="mm-input" type="number" min="1" step="1" inputmode="numeric" aria-label="Quantity to buy of ' + esc(p.name) + '" data-qty="' + p.id + '" value="5"><button type="button" class="mm-btn mm-btn-sm mm-btn-primary" data-buy="' + p.id + '">Buy</button></div></td>';
+        tb.appendChild(tr);
+      });
+      table.appendChild(tb);
+      tw.appendChild(table);
+      panel.appendChild(tw);
+
+      var foot = el("div", "mm-actions");
+      var practice = el("button", "mm-btn mm-btn-ghost", "🧮 Practice money maths");
+      practice.type = "button"; practice.addEventListener("click", function () { Practice.open(); });
+      foot.appendChild(practice);
+      panel.appendChild(foot);
+
+      root.appendChild(panel);
+
+      // wire price/discount changes
+      Array.prototype.forEach.call(root.querySelectorAll("[data-price]"), function (inp) {
+        inp.addEventListener("change", function () {
+          var p = readRupees(inp.value);
+          var res = MM.setPrice(game, inp.getAttribute("data-price"), p);
+          if (!res.ok) { toast("⚠️ " + res.error, "bad"); render(); return; }
+          afterMutation();
+          render();
+        });
+      });
+      Array.prototype.forEach.call(root.querySelectorAll("[data-disc]"), function (inp) {
+        inp.addEventListener("change", function () {
+          var d = parseFloat(inp.value);
+          var res = MM.setDiscount(game, inp.getAttribute("data-disc"), d);
+          if (!res.ok) { toast("⚠️ " + res.error, "bad"); render(); return; }
+          afterMutation();
+          render();
+        });
+      });
+      Array.prototype.forEach.call(root.querySelectorAll("[data-buy]"), function (btn) {
+        btn.addEventListener("click", function () {
+          var id = btn.getAttribute("data-buy");
+          var qtyInp = root.querySelector('[data-qty="' + id + '"]');
+          var qty = parseInt(qtyInp.value, 10);
+          var res = MM.buyStock(game, id, qty);
+          if (!res.ok) { toast("⚠️ " + res.error, "bad"); return; }
+          toast("✅ Bought " + qty + " × " + MM.catalogById(id).name + " for " + money(res.total), "ok");
+          Sound.coin();
+          afterMutation();
+          render();
+        });
+      });
+    }
+
+    function stat(label, value, cls) {
+      var d = el("div", "mm-stat" + (cls ? " " + cls : ""));
+      d.innerHTML = "<b>" + esc(String(value)) + "</b><span>" + esc(label) + "</span>";
+      return d;
+    }
+
+    function daySummary(rec) {
+      var d = el("div", "mm-panel2");
+      d.style.cssText = "border:1px solid var(--mm-line);border-radius:12px;padding:14px;margin-bottom:14px;";
+      var profitCls = rec.profit >= 0 ? "good" : "bad";
+      d.innerHTML =
+        '<div class="mm-topline" style="margin-bottom:8px;"><b>Day ' + rec.day + " results</b>" +
+        '<span class="mm-stat ' + profitCls + '" style="border:none;padding:0;"><b>' + money(rec.profit) + '</b><span>Profit</span></span></div>' +
+        '<div class="mm-hud" style="margin:0;">' +
+        '<div class="mm-stat"><b>' + money(rec.revenue) + '</b><span>Revenue</span></div>' +
+        '<div class="mm-stat"><b>' + money(rec.cogs) + '</b><span>COGS</span></div>' +
+        '<div class="mm-stat"><b>' + money(rec.opex) + '</b><span>Expenses</span></div>' +
+        '<div class="mm-stat"><b>' + rupees(rec.closingCash) + '</b><span>Closing cash</span></div>' +
+        "</div>";
+      return d;
+    }
+
+    function openShop() {
+      var res = MM.serveCustomers(game);
+      if (!res.ok) { toast("⚠️ " + res.error, "bad"); return; }
+      var lines = res.sales.filter(function (s) { return s.units > 0; });
+      if (lines.length) {
+        var msg = lines.slice(0, 3).map(function (s) { return s.units + " × " + s.name; }).join(", ");
+        toast("🛎️ Sold " + res.units + " items (" + money(res.revenue) + "): " + msg, "ok", 3600);
+        Sound.coin();
+      } else {
+        toast("🛎️ No sales today — check your prices or stock.", "bad", 3600);
+      }
+      var missing = res.sales.filter(function (s) { return s.declined > 0; });
+      if (missing.length) { toast("ℹ️ Some demand was not met — restock or lower prices.", "", 3200); }
+      afterMutation();
+      render();
+    }
+
+    function closeDay() {
+      var res = MM.closeDay(game);
+      if (!res.ok) { toast("⚠️ " + res.error, "bad"); return; }
+      lastDay = res.record;
+      if (res.record.profit >= 0) { toast("📈 Day closed with a profit of " + money(res.record.profit), "ok"); }
+      else { toast("📉 Day closed with a loss of " + money(-res.record.profit), "bad"); }
+      afterMutation();
+      render();
+    }
+
+    return { render: render, resetDaySummary: function () { lastDay = null; } };
+  })();
+
+  /* =====================================================================
+   * MONEY MATHS PRACTICE
+   * ===================================================================== */
+  var Practice = (function () {
+    var root = $("mmPractice");
+    var topic = "percent";
+    var diff = 2;
+    var q = null;
+    var answered = false;
+
+    function nextQuestion() {
+      var seed = (Date.now() ^ (Math.random() * 1e9)) >>> 0;
+      q = MM.generateQuestion({ topic: topic, difficulty: diff, rng: MM.seededRng(seed || 1) });
+      answered = false;
+      render();
+    }
+
+    function render() {
+      root.innerHTML = "";
+      var panel = screenPanel("Money Maths Practice", "🧮");
+
+      var controls = el("div", "mm-actions");
+      controls.style.marginBottom = "14px";
+      var topicSel = el("select", "mm-select");
+      topicSel.setAttribute("aria-label", "Choose a topic");
+      MM.TOPICS.forEach(function (t) {
+        var o = el("option"); o.value = t; o.textContent = MM.topicLabel(t);
+        if (t === topic) { o.selected = true; }
+        topicSel.appendChild(o);
+      });
+      topicSel.addEventListener("change", function () { topic = topicSel.value; nextQuestion(); });
+      controls.appendChild(topicSel);
+
+      var diffSel = el("select", "mm-select");
+      diffSel.setAttribute("aria-label", "Choose a difficulty");
+      [["1", "Easy"], ["2", "Medium"], ["3", "Hard"]].forEach(function (d) {
+        var o = el("option"); o.value = d[0]; o.textContent = d[1];
+        if (Number(d[0]) === diff) { o.selected = true; }
+        diffSel.appendChild(o);
+      });
+      diffSel.addEventListener("change", function () { diff = Number(diffSel.value); nextQuestion(); });
+      controls.appendChild(diffSel);
+      panel.appendChild(controls);
+
+      if (!q) { nextQuestion(); root.appendChild(panel); return; }
+
+      var stats = el("div", "mm-hud");
+      stats.appendChild(stat("Answered", game.stats.questionsAnswered));
+      stats.appendChild(stat("Correct", game.stats.questionsCorrect));
+      stats.appendChild(stat("Best streak", game.stats.bestStreak));
+      panel.appendChild(stats);
+
+      var card = el("div", "mm-q");
+      card.appendChild(el("div", "mm-q-topic", esc(MM.topicLabel(q.topic)) + " · " + esc(["", "Easy", "Medium", "Hard"][q.difficulty] || "") + " · " + q.marks + " marks"));
+      var promptHtml = esc(q.prompt).replace(/(\d[\d,]*\.?\d*)/g, '<span class="m">$1</span>');
+      card.appendChild(el("p", "mm-q-text", promptHtml));
+
+      var row = el("div", "mm-answer-row");
+      var input = el("input", "mm-input");
+      input.type = "text"; input.inputMode = "decimal"; input.autocomplete = "off";
+      input.setAttribute("aria-label", "Your answer");
+      input.placeholder = q.unit ? ("Answer in " + q.unit) : "Type your answer";
+      var submit = el("button", "mm-btn mm-btn-primary", "Submit");
+      submit.type = "button";
+      row.appendChild(input); row.appendChild(submit);
+      card.appendChild(row);
+
+      var fb = el("div", "mm-feedback"); fb.setAttribute("role", "status");
+      card.appendChild(fb);
+      var hintEl = el("div", "mm-hint");
+      card.appendChild(hintEl);
+
+      var actions = el("div", "mm-actions");
+      var hintBtn = el("button", "mm-btn mm-btn-sm mm-btn-ghost", "💡 Hint");
+      hintBtn.type = "button";
+      hintBtn.addEventListener("click", function () { hintEl.classList.add("show"); hintEl.innerHTML = "💡 " + esc(q.hint); hintBtn.disabled = true; });
+      actions.appendChild(hintBtn);
+      actions.appendChild(el("div", "mm-flex-spacer"));
+      var nextBtn = el("button", "mm-btn mm-btn-sm mm-btn-ghost", "Next question ▶");
+      nextBtn.type = "button";
+      nextBtn.addEventListener("click", nextQuestion);
+      actions.appendChild(nextBtn);
+      card.appendChild(actions);
+      panel.appendChild(card);
+      root.appendChild(panel);
+
+      function lock() {
+        input.disabled = true; submit.disabled = true; hintBtn.disabled = true;
+      }
+      function submitAnswer() {
+        if (answered) { return; }
+        answered = true;
+        var res = MM.checkNumericAnswer(q, input.value);
+        lock();
+        fb.classList.add("show", res.correct ? "ok" : "bad");
+        var shown = answerText(q);
+        fb.innerHTML = (res.correct ? "✅ <b>Correct!</b> " : "❌ <b>Not quite.</b> ") +
+          (res.correct ? "" : "The answer is <b>" + esc(shown) + "</b>. ") + esc(q.explanation);
+        if (res.correct) { Sound.correct(); } else { Sound.wrong(); }
+        var gained = MM.recordAnswer(game, q, res.correct);
+        if (res.correct && gained.xpGained) { toast("+" + gained.xpGained + " XP", "ok", 1600); }
+        afterMutation();
+      }
+      submit.addEventListener("click", submitAnswer);
+      input.addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); submitAnswer(); } });
+      input.focus();
+    }
+
+    function answerText(qq) {
+      if (qq.unit === "rupees") { return money(MM.toPaise(qq.answerNumber)); }
+      if (qq.unit === "%") { return qq.answerNumber + "%"; }
+      if (qq.unit === "units") { return qq.answerNumber + " units"; }
+      return String(qq.answerNumber);
+    }
+    function stat(label, value) {
+      var d = el("div", "mm-stat"); d.innerHTML = "<b>" + esc(String(value)) + "</b><span>" + esc(label) + "</span>"; return d;
+    }
+    return { open: function () { q = null; render(); show("mmPractice"); }, render: render };
+  })();
+
+  /* =====================================================================
+   * BUDGET PLANNER
+   * ===================================================================== */
+  var Budget = (function () {
+    var root = $("mmBudget");
+
+    function render() {
+      root.innerHTML = "";
+      var panel = screenPanel("Budget Planner", "📋");
+      panel.appendChild(el("p", "mm-mute", "Allocate your available money across the shop. Try to keep an emergency reserve. Amounts are in rupees."));
+
+      var hud = el("div", "mm-hud");
+      hud.appendChild(stat("Cash available", rupees(game.cash)));
+      panel.appendChild(hud);
+
+      var form = el("div");
+      MM.BUDGET_CATEGORIES.forEach(function (c) {
+        var r = el("div", "mm-budget-row");
+        var lab = el("label", null, esc(c.name));
+        lab.setAttribute("for", "mmBudget_" + c.id);
+        var inp = el("input", "mm-input");
+        inp.type = "number"; inp.min = "0"; inp.step = "50"; inp.id = "mmBudget_" + c.id;
+        inp.setAttribute("inputmode", "decimal");
+        inp.value = "0";
+        var bar = el("div", "mm-budget-bar"); bar.appendChild(el("i"));
+        r.appendChild(lab); r.appendChild(inp); r.appendChild(bar);
+        form.appendChild(r);
+      });
+      panel.appendChild(form);
+
+      var summary = el("div", "mm-panel2");
+      summary.style.cssText = "border:1px solid var(--mm-line);border-radius:12px;padding:14px;margin-top:8px;";
+      panel.appendChild(summary);
+
+      var actions = el("div", "mm-actions");
+      var check = el("button", "mm-btn mm-btn-primary", "✅ Check my budget");
+      check.type = "button";
+      actions.appendChild(check);
+      var reset = el("button", "mm-btn mm-btn-ghost", "↺ Clear");
+      reset.type = "button";
+      actions.appendChild(reset);
+      panel.appendChild(actions);
+      root.appendChild(panel);
+
+      var inputs = MM.BUDGET_CATEGORIES.map(function (c) { return inpById(c.id); });
+      function inpById(id) { return root.querySelector("#mmBudget_" + id); }
+
+      function plan() {
+        var p = {};
+        MM.BUDGET_CATEGORIES.forEach(function (c) {
+          var v = readRupees(inpById(c.id).value);
+          p[c.id] = isFinite(v) ? v : 0;
+        });
+        return p;
+      }
+      function refresh() {
+        var p = plan();
+        var analysis = MM.budgetAnalysis(p, game.cash, 0);
+        var max = Math.max(game.cash, analysis.totalPaise, 1);
+        MM.BUDGET_CATEGORIES.forEach(function (c) {
+          var bar = inpById(c.id).parentNode.querySelector(".mm-budget-bar i");
+          bar.style.width = clampPct((p[c.id] || 0) / max * 100) + "%";
+        });
+        summary.innerHTML =
+          '<div class="mm-hud" style="margin:0;">' +
+          '<div class="mm-stat"><b>' + rupees(analysis.totalPaise) + '</b><span>Total planned</span></div>' +
+          '<div class="mm-stat ' + (analysis.overBudget ? "bad" : "good") + '"><b>' + rupees(analysis.remainingPaise) + '</b><span>' + (analysis.overBudget ? "Over budget" : "Left over") + '</span></div>' +
+          '<div class="mm-stat"><b>' + rupees(analysis.reserveKeptPaise) + '</b><span>Reserve kept</span></div>' +
+          '</div>' +
+          (analysis.errors.length ? '<p style="color:var(--mm-red);font-size:0.85rem;margin-top:8px;">' + analysis.errors.map(esc).join("<br>") + '</p>' : "");
+      }
+      inputs.forEach(function (i) { i.addEventListener("input", refresh); });
+      reset.addEventListener("click", function () { inputs.forEach(function (i) { i.value = "0"; }); refresh(); });
+      check.addEventListener("click", function () {
+        var p = plan();
+        var analysis = MM.budgetAnalysis(p, game.cash, 0);
+        if (!analysis.valid) { toast("⚠️ Fix the amounts first.", "bad"); return; }
+        if (analysis.overBudget) { toast("⚠️ You planned more than your cash. Reduce the totals.", "bad"); return; }
+        game.stats.budgetChallenges += 1;
+        game.xp += 15;
+        toast("✅ Budget accepted! Left over: " + rupees(analysis.remainingPaise), "ok");
+        Sound.correct();
+        afterMutation();
+        render();
+      });
+      refresh();
+    }
+
+    function stat(label, value) {
+      var d = el("div", "mm-stat"); d.innerHTML = "<b>" + esc(String(value)) + "</b><span>" + esc(label) + "</span>"; return d;
+    }
+    return { open: function () { render(); show("mmBudget"); } };
+  })();
+
+  /* =====================================================================
+   * BANK & SAVINGS
+   * ===================================================================== */
+  var Bank = (function () {
+    var root = $("mmBank");
+
+    function render() {
+      root.innerHTML = "";
+      var panel = screenPanel("Bank & Savings", "🏦");
+
+      var hud = el("div", "mm-hud");
+      hud.appendChild(stat("Cash", rupees(game.cash)));
+      hud.appendChild(stat("Savings", rupees(game.savings)));
+      hud.appendChild(stat("Interest earned", rupees(game.interestEarned)));
+      panel.appendChild(hud);
+      panel.appendChild(el("p", "mm-mute", "This is a maths simulation only — no real money or bank is involved."));
+
+      // deposit / withdraw
+      var move = el("div", "mm-actions");
+      var amt = el("input", "mm-input mm-input-sm");
+      amt.type = "number"; amt.min = "0"; amt.step = "100"; amt.setAttribute("inputmode", "decimal");
+      amt.setAttribute("aria-label", "Amount in rupees");
+      amt.placeholder = "Amount (rupees)";
+      amt.style.flex = "0 0 160px";
+      move.appendChild(amt);
+      var dep = el("button", "mm-btn mm-btn-primary", "⬇️ Deposit");
+      dep.type = "button";
+      var wd = el("button", "mm-btn mm-btn-ghost", "⬆️ Withdraw");
+      wd.type = "button";
+      move.appendChild(dep); move.appendChild(wd);
+      panel.appendChild(move);
+
+      // interest calculator
+      var calcTitle = el("h3", "mm-sec-title", "Interest Calculator");
+      panel.appendChild(calcTitle);
+      var calcRow = el("div", "mm-actions");
+      var rate = el("input", "mm-input mm-input-sm"); rate.type = "number"; rate.min = "0"; rate.step = "0.5"; rate.value = "5"; rate.setAttribute("aria-label", "Interest rate percent per year"); rate.style.flex = "0 0 110px";
+      var years = el("input", "mm-input mm-input-sm"); years.type = "number"; years.min = "1"; years.step = "1"; years.value = "3"; years.setAttribute("aria-label", "Number of years"); years.style.flex = "0 0 110px";
+      var mode = el("select", "mm-select"); mode.setAttribute("aria-label", "Interest type");
+      [["simple", "Simple interest"], ["compound", "Compound interest"]].forEach(function (m) { var o = el("option"); o.value = m[0]; o.textContent = m[1]; mode.appendChild(o); });
+      var calcBtn = el("button", "mm-btn mm-btn-gold", "Project growth");
+      calcBtn.type = "button";
+      calcRow.appendChild(rateLabel("Rate %/yr", rate));
+      calcRow.appendChild(rateLabel("", years));
+      calcRow.appendChild(mode);
+      calcRow.appendChild(calcBtn);
+      panel.appendChild(calcRow);
+
+      var out = el("div", "mm-panel2");
+      out.style.cssText = "border:1px solid var(--mm-line);border-radius:12px;padding:14px;margin-top:8px;";
+      out.innerHTML = '<p class="mm-mute">Enter a rate and years, then project how your current savings would grow.</p>';
+      panel.appendChild(out);
+
+      var credit = el("div", "mm-actions");
+      var creditBtn = el("button", "mm-btn mm-btn-primary", "💰 Credit this interest to savings");
+      creditBtn.type = "button";
+      credit.appendChild(creditBtn);
+      var note = el("span", "mm-mute", "Adds the interest for the chosen rate/years to your savings balance.");
+      note.style.fontSize = "0.82rem";
+      credit.appendChild(note);
+      panel.appendChild(credit);
+      root.appendChild(panel);
+
+      function rateLabel(text, node) {
+        var w = el("span");
+        if (text) { var l = el("label", "mm-mute", text + " "); l.style.fontSize = "0.82rem"; w.appendChild(l); }
+        w.appendChild(node);
+        return w;
+      }
+      function currentParams() {
+        var r = parseFloat(rate.value); var y = Math.max(1, Math.round(parseFloat(years.value)));
+        if (!isFinite(r) || r < 0) { r = 0; }
+        if (!isFinite(y) || y < 1) { y = 1; }
+        return { r: r, y: y, mode: mode.value };
+      }
+      calcBtn.addEventListener("click", function () {
+        var p = currentParams();
+        var rows = MM.savingsProjection(game.savings, p.r, p.y, p.mode);
+        var html = '<div class="mm-table-wrap"><table class="mm-table"><thead><tr><th>Year</th><th class="num">Amount</th><th class="num">Interest</th></tr></thead><tbody>';
+        rows.forEach(function (row) {
+          html += "<tr><td>" + row.year + "</td><td class=\"num\">" + rupees(row.amount) + "</td><td class=\"num\">" + rupees(row.interest) + "</td></tr>";
+        });
+        html += "</tbody></table></div>";
+        var label = p.mode === "compound" ? "compound" : "simple";
+        out.innerHTML = '<p class="mm-mute" style="margin-bottom:10px;">' + rupees(game.savings) + " at " + p.r + "% " + label + " for " + p.y + " years:</p>" + html;
+      });
+      dep.addEventListener("click", function () {
+        var p = readRupees(amt.value);
+        var res = MM.bankDeposit(game, p);
+        if (!res.ok) { toast("⚠️ " + res.error, "bad"); return; }
+        toast("⬇️ Deposited " + rupees(p), "ok"); Sound.coin(); afterMutation(); render();
+      });
+      wd.addEventListener("click", function () {
+        var p = readRupees(amt.value);
+        var res = MM.bankWithdraw(game, p);
+        if (!res.ok) { toast("⚠️ " + res.error, "bad"); return; }
+        toast("⬆️ Withdrew " + rupees(p), "ok"); afterMutation(); render();
+      });
+      creditBtn.addEventListener("click", function () {
+        if (game.savings <= 0) { toast("⚠️ Deposit some savings first.", "bad"); return; }
+        var p = currentParams();
+        var interest = MM.accrueSavings(game, p.r, p.y, p.mode);
+        toast("💰 Interest credited: " + rupees(interest), "ok"); Sound.coin(); afterMutation(); render();
+      });
+    }
+
+    function stat(label, value) {
+      var d = el("div", "mm-stat"); d.innerHTML = "<b>" + esc(String(value)) + "</b><span>" + esc(label) + "</span>"; return d;
+    }
+    return { open: function () { render(); show("mmBank"); } };
+  })();
+
+  /* =====================================================================
+   * BUSINESS EXPANSION
+   * ===================================================================== */
+  var Expand = (function () {
+    var root = $("mmExpand");
+
+    function render() {
+      root.innerHTML = "";
+      var panel = screenPanel("Business Expansion", "🏗️");
+
+      var hud = el("div", "mm-hud");
+      hud.appendChild(stat("Business level", game.level + " · " + MM.levelMeta(game.level).name));
+      hud.appendChild(stat("Cash", rupees(game.cash)));
+      hud.appendChild(stat("Reputation", game.reputation));
+      hud.appendChild(stat("Days", game.days.length));
+      panel.appendChild(hud);
+
+      // level requirement
+      var st = MM.levelUnlockStatus(game);
+      var lvl = el("div", "mm-panel2");
+      lvl.style.cssText = "border:1px solid var(--mm-line);border-radius:12px;padding:14px;margin-bottom:16px;";
+      if (st.atMax) {
+        lvl.innerHTML = "<b>🏆 You have reached the highest business level.</b>";
+      } else {
+        var reqs = st.requirements.map(function (r) {
+          var cls = r.met ? "met" : "miss";
+          var have = r.label === "Reputation" || typeof r.have === "number" ? r.have : r.have;
+          return '<div class="mm-req ' + cls + '">' + (r.met ? "✔" : "✖") + " " + esc(r.label) + ": " + esc(String(r.have)) + " / " + esc(String(r.need)) + "</div>";
+        }).join("");
+        lvl.innerHTML = "<b>Next: " + esc(st.next.name) + " (Level " + st.next.level + ")</b><div style=\"margin-top:8px;\">" + reqs + "</div>";
+        var up = el("button", "mm-btn " + (st.canUnlock ? "mm-btn-gold" : "mm-btn-ghost"), st.canUnlock ? "🚀 Expand to " + esc(st.next.name) : "🔒 Requirements not met");
+        up.type = "button"; up.disabled = !st.canUnlock;
+        up.style.marginTop = "12px";
+        up.addEventListener("click", function () {
+          var res = MM.unlockNextLevel(game);
+          if (!res.ok) { toast("⚠️ " + res.error, "bad"); return; }
+          toast("🚀 Promoted to " + res.name + "!", "ok"); Sound.win(); afterMutation(); render();
+        });
+        lvl.appendChild(up);
+      }
+      panel.appendChild(lvl);
+
+      panel.appendChild(el("h3", "mm-sec-title", "Upgrades"));
+      var grid = el("div", "mm-cards");
+      MM.UPGRADES.forEach(function (u) {
+        var owned = !!game.upgrades[u.id];
+        var card = el("div", "mm-card" + (owned ? " owned" : ""));
+        var preview = MM.upgradeEffectPreview(game, u.id);
+        var pv = preview ? ("<br><span class=\"mm-mute\" style=\"font-size:0.8rem;\">" + esc(preview.label) + ": " + esc(String(preview.before)) + " → " + esc(String(preview.after)) + "</span>") : "";
+        card.innerHTML =
+          "<h4><span aria-hidden=\"true\">" + u.icon + "</span> " + esc(u.name) + "</h4>" +
+          "<p>" + esc(u.desc) + pv + "</p>";
+        var foot = el("div", "mm-card-foot");
+        foot.appendChild(el("span", "mm-price", rupees(u.costPaise)));
+        var btn = el("button", "mm-btn mm-btn-sm " + (owned ? "mm-btn-ghost" : "mm-btn-primary"), owned ? "✓ Owned" : (game.cash >= u.costPaise ? "Buy" : "Need " + rupees(u.costPaise)));
+        btn.type = "button"; btn.disabled = owned || game.cash < u.costPaise;
+        btn.addEventListener("click", function () {
+          var res = MM.buyUpgrade(game, u.id);
+          if (!res.ok) { toast("⚠️ " + res.error, "bad"); return; }
+          toast("🔧 Bought " + res.upgrade.name, "ok"); Sound.coin(); afterMutation(); render();
+        });
+        foot.appendChild(btn);
+        card.appendChild(foot);
+        grid.appendChild(card);
+      });
+      panel.appendChild(grid);
+      root.appendChild(panel);
+    }
+
+    function stat(label, value) {
+      var d = el("div", "mm-stat"); d.innerHTML = "<b>" + esc(String(value)) + "</b><span>" + esc(label) + "</span>"; return d;
+    }
+    return { open: function () { render(); show("mmExpand"); } };
+  })();
+
+  /* =====================================================================
+   * TYCOON SHOWDOWN
+   * ===================================================================== */
+  var Showdown = (function () {
+    var root = $("mmShowdown");
+    var session = null;
+    var locked = false;
+
+    function render() {
+      root.innerHTML = "";
+      var panel = screenPanel("Tycoon Showdown", "🤝");
+
+      if (!session) {
+        panel.appendChild(el("p", "mm-mute", "You and a rival answer the same questions each round. The higher score wins. Choose a difficulty to begin."));
+        var grid = el("div", "mm-cards");
+        ["rookie", "professional", "master"].forEach(function (d) {
+          var cfg = MM.SHOWDOWN_DIFF[d];
+          var card = el("div", "mm-card");
+          card.innerHTML = "<h4>🤖 " + esc(cfg.label) + "</h4><p>Rival: " + esc(cfg.rival) + "<br>" + cfg.rounds + " rounds · Rival accuracy " + Math.round(cfg.accuracy * 100) + "%</p>";
+          var foot = el("div", "mm-card-foot");
+          var b = el("button", "mm-btn mm-btn-primary", "Start");
+          b.type = "button";
+          b.addEventListener("click", function () { start(d); });
+          foot.appendChild(b);
+          card.appendChild(foot);
+          grid.appendChild(card);
+        });
+        panel.appendChild(grid);
+        root.appendChild(panel);
+        return;
+      }
+
+      renderMatch(panel);
+      root.appendChild(panel);
+    }
+
+    function start(d) {
+      session = MM.createShowdown(d, (Date.now() ^ (Math.random() * 1e9)) >>> 0);
+      locked = false;
+      render();
+    }
+
+    function renderMatch(panel) {
+      var cfg = session.config;
+      var arena = el("div", "mm-arena");
+      var you = el("div", "mm-fighter");
+      you.innerHTML = '<span class="mm-avatar" aria-hidden="true">🧑‍💼</span><b>You</b><div class="mm-score">' + session.playerScore + "</div>";
+      var vs = el("div", "mm-vs", "VS");
+      var rival = el("div", "mm-fighter");
+      rival.innerHTML = '<span class="mm-avatar" aria-hidden="true">🤖</span><b>' + esc(cfg.rival) + '</b><div class="mm-score">' + session.rivalScore + "</div>";
+      arena.appendChild(you); arena.appendChild(vs); arena.appendChild(rival);
+      panel.appendChild(arena);
+
+      panel.appendChild(el("div", "mm-mute", "Round " + Math.min(session.index + 1, session.questions.length) + " of " + session.questions.length));
+      var rel = el("div", "mm-rel"); rel.appendChild(el("i"));
+      panel.appendChild(rel);
+
+      if (session.done) {
+        var win = session.winner === "player";
+        var tie = session.winner === "tie";
+        var res = el("div", "mm-result");
+        res.innerHTML = '<span class="mm-big-emoji" aria-hidden="true">' + (win ? "🏆" : tie ? "🤝" : "😅") + '</span>' +
+          "<h3>" + (win ? "You win!" : tie ? "It is a tie!" : "The rival wins") + "</h3>" +
+          '<p class="mm-mute">Final score ' + session.playerScore + " – " + session.rivalScore + "</p>";
+        panel.appendChild(res);
+        var actions = el("div", "mm-actions");
+        actions.style.justifyContent = "center";
+        var again = el("button", "mm-btn mm-btn-primary", "🔁 Rematch");
+        again.type = "button"; again.addEventListener("click", function () { start(session.difficulty); });
+        var home = el("button", "mm-btn mm-btn-ghost", "🏠 Home");
+        home.type = "button"; home.addEventListener("click", goHome);
+        actions.appendChild(again); actions.appendChild(home);
+        panel.appendChild(actions);
+        return;
+      }
+
+      var q = session.questions[session.index];
+      var card = el("div", "mm-q");
+      card.appendChild(el("div", "mm-q-topic", esc(MM.topicLabel(q.topic)) + " · " + q.marks + " marks"));
+      card.appendChild(el("p", "mm-q-text", esc(q.prompt).replace(/(\d[\d,]*\.?\d*)/g, '<span class="m">$1</span>')));
+      var row = el("div", "mm-answer-row");
+      var input = el("input", "mm-input");
+      input.type = "text"; input.inputMode = "decimal"; input.autocomplete = "off";
+      input.setAttribute("aria-label", "Your answer");
+      input.placeholder = q.unit ? ("Answer in " + q.unit) : "Type your answer";
+      var submit = el("button", "mm-btn mm-btn-primary", "Submit");
+      submit.type = "button";
+      row.appendChild(input); row.appendChild(submit);
+      card.appendChild(row);
+      var fb = el("div", "mm-feedback"); fb.setAttribute("role", "status");
+      card.appendChild(fb);
+      panel.appendChild(card);
+
+      function answer() {
+        if (locked) { return; }
+        locked = true;
+        input.disabled = true; submit.disabled = true;
+        var res = MM.answerShowdown(session, input.value);
+        fb.classList.add("show", res.correct ? "ok" : "bad");
+        fb.innerHTML = (res.correct ? "✅ <b>Correct!</b> " : "❌ <b>Answer: " + esc(displayAnswer(q)) + "</b> ") +
+          "Rival " + (res.rivalCorrect ? "also answered correctly." : "answered incorrectly.") + " " + esc(q.explanation);
+        if (res.correct) { Sound.correct(); } else { Sound.wrong(); }
+        if (session.done) {
+          game.stats.showdownsPlayed += 1;
+          if (session.winner === "player") { game.stats.showdownsWon += 1; }
+          game.xp += session.playerScore;
+          afterMutation();
+          setTimeout(render, 900);
+        } else {
+          var cont = el("button", "mm-btn mm-btn-primary mm-btn-sm", "Next round ▶");
+          cont.type = "button";
+          cont.style.marginTop = "12px";
+          cont.addEventListener("click", function () { locked = false; render(); });
+          card.appendChild(cont);
+        }
+      }
+      submit.addEventListener("click", answer);
+      input.addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); answer(); } });
+      input.focus();
+    }
+
+    function displayAnswer(q) {
+      if (q.unit === "rupees") { return money(MM.toPaise(q.answerNumber)); }
+      if (q.unit === "%") { return q.answerNumber + "%"; }
+      return String(q.answerNumber) + (q.unit ? " " + q.unit : "");
+    }
+
+    return { open: function () { session = null; render(); show("mmShowdown"); } };
+  })();
+
+  /* =====================================================================
+   * BUSINESS REPORTS
+   * ===================================================================== */
+  var Reports = (function () {
+    var root = $("mmReports");
+
+    function render() {
+      root.innerHTML = "";
+      var panel = screenPanel("Business Reports", "📈");
+      var r = MM.buildReport(game);
+
+      var hud = el("div", "mm-hud");
+      hud.appendChild(stat("Revenue", rupees(r.revenue)));
+      hud.appendChild(stat("COGS", rupees(r.cogs)));
+      hud.appendChild(stat("Gross profit", rupees(r.grossProfit)));
+      hud.appendChild(stat("Operating expenses", rupees(r.operatingExpenses)));
+      hud.appendChild(stat("Operating profit", rupees(r.operatingProfit), r.operatingProfit >= 0 ? "good" : "bad"));
+      hud.appendChild(stat("Closing cash", rupees(r.closingCash)));
+      hud.appendChild(stat("Inventory value", rupees(r.inventoryValue)));
+      hud.appendChild(stat("Savings", rupees(r.savings)));
+      hud.appendChild(stat("Units sold", r.unitsSold));
+      hud.appendChild(stat("Days", r.days));
+      panel.appendChild(hud);
+
+      panel.appendChild(el("div", "mm-mute", "Best seller: " + esc(r.bestSeller) + " · Upgrades spend: " + rupees(r.upgradesSpend) + " · Interest earned: " + rupees(r.interestEarned)));
+
+      panel.appendChild(el("h3", "mm-sec-title", "Revenue &amp; Profit by Day"));
+      var data = MM.chartData(game);
+      if (!data.length) {
+        panel.appendChild(el("p", "mm-mute", "Close a day to see your chart. There are no completed days yet."));
+      } else {
+        panel.appendChild(chartSvg(data));
+        var legend = el("div", "mm-legend");
+        legend.innerHTML = '<span><b style="background:var(--mm-green)"></b>Revenue</span><span><b style="background:var(--mm-gold)"></b>Profit</span>';
+        panel.appendChild(legend);
+      }
+
+      panel.appendChild(el("h3", "mm-sec-title", "Recent Transactions"));
+      var tw = el("div", "mm-table-wrap");
+      var table = el("table", "mm-table");
+      table.innerHTML = "<thead><tr><th>Day</th><th>Type</th><th>Note</th><th class=\"num\">Amount</th></tr></thead>";
+      var tb = el("tbody");
+      var ledger = game.ledger.slice(-15).reverse();
+      if (!ledger.length) {
+        var tr0 = el("tr"); tr0.innerHTML = '<td colspan="4" class="mm-mute">No transactions yet.</td>'; tb.appendChild(tr0);
+      }
+      ledger.forEach(function (e) {
+        var tr = el("tr");
+        var amt = e.amount;
+        var cls = amt < 0 ? "mm-red" : (amt > 0 ? "mm-mint" : "mm-mute");
+        tr.innerHTML = "<td>" + e.day + "</td><td>" + esc(e.kind) + "</td><td>" + esc(e.note) + "</td><td class=\"num\" style=\"color:var(--" + (amt < 0 ? "mm-red" : amt > 0 ? "mm-mint" : "mm-mute") + ")\">" + (amt > 0 ? "+" : "") + money(amt) + "</td>";
+        tb.appendChild(tr);
+      });
+      table.appendChild(tb); tw.appendChild(table); panel.appendChild(tw);
+
+      root.appendChild(panel);
+    }
+
+    function stat(label, value, cls) {
+      var d = el("div", "mm-stat" + (cls ? " " + cls : "")); d.innerHTML = "<b>" + esc(String(value)) + "</b><span>" + esc(label) + "</span>"; return d;
+    }
+
+    function chartSvg(data) {
+      var W = 720, H = 240, padL = 52, padR = 16, padT = 16, padB = 34;
+      var n = data.length;
+      var max = 1;
+      data.forEach(function (d) { max = Math.max(max, d.revenue, d.profit, Math.abs(d.profit)); });
+      var plotW = W - padL - padR, plotH = H - padT - padB;
+      var slot = plotW / n;
+      var barW = Math.min(26, slot * 0.28);
+      var parts = [];
+      parts.push('<svg class="mm-chart" viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Bar chart of daily revenue and profit">');
+      // gridlines
+      for (var g = 0; g <= 4; g++) {
+        var y = padT + plotH * (g / 4);
+        var val = Math.round((max * (4 - g)) / 4);
+        parts.push('<line x1="' + padL + '" y1="' + y.toFixed(1) + '" x2="' + (W - padR) + '" y2="' + y.toFixed(1) + '" stroke="rgba(255,255,255,0.08)" />');
+        parts.push('<text x="' + (padL - 6) + '" y="' + (y + 4).toFixed(1) + '" text-anchor="end" fill="#9fcdbb" font-size="10">' + MM.formatRupees(val * 100) + "</text>");
+      }
+      data.forEach(function (d, i) {
+        var cx = padL + slot * i + slot / 2;
+        var revH = Math.max(0, d.revenue / max * plotH);
+        var profH = Math.max(0, d.profit / max * plotH);
+        var base = padT + plotH;
+        parts.push('<rect x="' + (cx - barW - 2).toFixed(1) + '" y="' + (base - revH).toFixed(1) + '" width="' + barW.toFixed(1) + '" height="' + revH.toFixed(1) + '" rx="3" fill="#3ddc84" />');
+        parts.push('<rect x="' + (cx + 2).toFixed(1) + '" y="' + (base - profH).toFixed(1) + '" width="' + barW.toFixed(1) + '" height="' + profH.toFixed(1) + '" rx="3" fill="#ffd54f" />');
+        parts.push('<text x="' + cx.toFixed(1) + '" y="' + (H - 12) + '" text-anchor="middle" fill="#9fcdbb" font-size="10">D' + d.day + "</text>");
+      });
+      parts.push("</svg>");
+      return el("div", null, parts.join(""));
+    }
+
+    return { open: function () { render(); show("mmReports"); } };
+  })();
+
+  /* =====================================================================
+   * WIRING
+   * ===================================================================== */
+  function openMode(mode) {
+    if (mode === "shop") { Shop.render(); show("mmShop"); }
+    else if (mode === "practice") { Practice.open(); }
+    else if (mode === "budget") { Budget.open(); }
+    else if (mode === "bank") { Bank.open(); }
+    else if (mode === "expand") { Expand.open(); }
+    else if (mode === "showdown") { Showdown.open(); }
+    else if (mode === "reports") { Reports.open(); }
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll(".mm-mode"), function (btn) {
+    btn.addEventListener("click", function () { openMode(btn.getAttribute("data-mode")); });
+  });
+
+  $("mmPlayBtn").addEventListener("click", function () { openMode("shop"); });
+  $("mmHowBtn").addEventListener("click", function () { var h = $("mmHow"); if (h) { h.scrollIntoView({ behavior: prefs.reduce ? "auto" : "smooth", block: "start" }); } });
+
+  var soundBtn = $("mmSoundBtn");
+  soundBtn.setAttribute("aria-pressed", prefs.sound ? "true" : "false");
+  soundBtn.textContent = prefs.sound ? "🔊 Sound: On" : "🔇 Sound: Off";
+  soundBtn.addEventListener("click", function () {
+    var on = Sound.toggle(); prefs.sound = on; savePrefs();
+    soundBtn.setAttribute("aria-pressed", on ? "true" : "false");
+    soundBtn.textContent = on ? "🔊 Sound: On" : "🔇 Sound: Off";
+  });
+
+  var reduceBtn = $("mmReduceBtn");
+  reduceBtn.setAttribute("aria-pressed", prefs.reduce ? "true" : "false");
+  reduceBtn.textContent = prefs.reduce ? "🎞️ Motion: Reduced" : "🎞️ Motion: Full";
+  reduceBtn.addEventListener("click", function () {
+    prefs.reduce = !prefs.reduce; savePrefs();
+    app.classList.toggle("mm-reduce", prefs.reduce);
+    reduceBtn.setAttribute("aria-pressed", prefs.reduce ? "true" : "false");
+    reduceBtn.textContent = prefs.reduce ? "🎞️ Motion: Reduced" : "🎞️ Motion: Full";
+  });
+
+  $("mmResetBtn").addEventListener("click", function () {
+    if (!window.confirm("Reset all Money Maths Tycoon progress on this device?")) { return; }
+    game = freshGame();
+    knownAchievements = {};
+    Shop.resetDaySummary();
+    saveGame();
+    toast("Progress reset.", "ok");
+    goHome();
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && current !== "mmHome") { e.preventDefault(); goHome(); }
+  });
+
+  /* ---------------- init ---------------- */
+  loadPrefs();
+  syncChrome();
+  renderHome();
+
+  // expose for automated checks
+  window.MoneyMathsTycoon = {
+    version: MM.VERSION,
+    state: function () { return game; },
+    open: openMode,
+    home: goHome
+  };
+})();
+</script>
+
+<script>
+  (function () {
+    var hamburger = document.getElementById("hamburger");
+    var navLinks = document.getElementById("navLinks");
+    if (hamburger) {
+      hamburger.addEventListener("click", function () {
+        hamburger.classList.toggle("open");
+        if (navLinks) { navLinks.classList.toggle("show"); }
+      });
+    }
+  })();
+</script>
+</body>
+</html>
