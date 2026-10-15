@@ -286,7 +286,16 @@ foreach ($c in $data.classes) {
         $chBodyLine += "    <p class=""sm-chapter-desc"">$(Esc-Html $ch.desc)</p>$nl"
       }
       $chBodyLine += "    <p>ICSE Class $($c.number) &middot; $($s.label)</p>$nl"
-      $chBodyLine += "    <div class=""sm-chip-row"">$nl      <span class=""sm-chip"">Notes</span><span class=""sm-chip"">Concepts</span><span class=""sm-chip"">Practice</span><span class=""sm-chip"">Quiz</span><span class=""sm-chip"">Test</span>$nl    </div>$nl  </div>"
+      $chipSpans = ''
+      foreach ($r in $chapterResources) {
+        $rShort = if ($r.PSObject.Properties['short'] -and $r.short) { $r.short } else { $r.label }
+        if (Get-ContentOverride $c.number $s.slug $ch.slug $r.slug) {
+          $chipSpans += "<span class=""sm-chip"">$(Esc-Html $rShort)</span>"
+        } else {
+          $chipSpans += "<span class=""sm-chip is-soon"">$(Esc-Html $rShort)<span class=""sm-sr-only""> (coming soon)</span></span>"
+        }
+      }
+      $chBodyLine += "    <div class=""sm-chip-row"">$nl      $chipSpans$nl    </div>$nl  </div>"
       $chCards += "<a class=""$chCardClass"" href=""/icse-study-material/class-$($c.number)/$($s.slug)/$($ch.slug)/"" data-search=""$chSearchKey"">$nl" +
         "  $chMedia$nl" +
         $chBodyLine +

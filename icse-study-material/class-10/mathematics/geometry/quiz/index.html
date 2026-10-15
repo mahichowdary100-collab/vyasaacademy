@@ -699,6 +699,7 @@
     var ordered = shuffle(cards.slice());
     ordered.forEach(function (card) { form.appendChild(card); });
     ordered.forEach(function (card, idx) {
+      card.dataset.number = String(idx + 1);
       var num = card.querySelector(".q-num");
       if (num) num.textContent = "Question " + (idx + 1);
     });
@@ -719,13 +720,32 @@
     for (var i = 0; i < radios.length; i++) radios[i].checked = false;
   }
 
+  function answeredCount() {
+    var n = 0;
+    for (var i = 0; i < TOTAL; i++) {
+      if (form.querySelector('input[name="' + QUESTIONS[i].id + '"]:checked')) n++;
+    }
+    return n;
+  }
+
+  function updateProgress() {
+    var answered = answeredCount();
+    var pct = answered / TOTAL * 100;
+    progressFill.style.width = pct + "%";
+    progressBar.setAttribute("aria-valuenow", String(answered));
+    progressText.textContent = answered + " of " + TOTAL + " answered, " + (TOTAL - answered) + " remaining";
+  }
+
+  function domCards() {
+    return Array.prototype.slice.call(form.querySelectorAll(".quiz-q"));
+  }
+
   function showCard(idx) {
-    cards.forEach(function (c, i) { c.classList.toggle("is-active", i === idx); });
+    var ordered = domCards();
+    ordered.forEach(function (c, i) { c.classList.toggle("is-active", i === idx); });
     currentIndex = idx;
     counterEl.textContent = "Question " + (idx + 1) + " of " + TOTAL;
-    progressFill.style.width = ((idx) / TOTAL * 100) + "%";
-    progressBar.setAttribute("aria-valuenow", String(idx + 1));
-    progressText.textContent = "At question " + (idx + 1) + " of " + TOTAL;
+    updateProgress();
   }
 
   function updateTimerDisplay() {
@@ -811,7 +831,7 @@
 
   function buildReview() {
     explanations.innerHTML = "";
-    cards.forEach(function (card) {
+    Array.prototype.slice.call(form.querySelectorAll(".quiz-q")).forEach(function (card) {
       var q = questionById(card.id);
       var checked = card.querySelector('input[type="radio"]:checked');
       var yourVal = checked ? checked.value : null;
@@ -943,6 +963,7 @@
     if (currentIndex < TOTAL - 1) showCard(currentIndex + 1);
   });
 
+  form.addEventListener("change", updateProgress);
   document.getElementById("btnSubmit").addEventListener("click", requestSubmit);
   document.getElementById("confirmContinue").addEventListener("click", function () { confirmDialog.close(); });
   document.getElementById("confirmSubmit").addEventListener("click", function () { confirmDialog.close(); submitQuiz(false); });
@@ -952,10 +973,6 @@
   document.getElementById("btnBackResult").addEventListener("click", function () {
     reviewView.style.display = "none";
     resultView.style.display = "block";
-  });
-
-  cards.forEach(function (card, idx) {
-    card.setAttribute("data-number", String(idx + 1));
   });
 
   orderQuestions();

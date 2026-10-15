@@ -14,11 +14,11 @@
     ]
   },
   "resources": [
-    { "slug": "notes", "label": "Chapter Notes", "icon": "fa-book-open", "blurb": "Concise, exam-focused notes for this topic." },
-    { "slug": "concepts", "label": "Key Concepts & Definitions", "icon": "fa-lightbulb", "blurb": "Important concepts and definitions explained clearly." },
-    { "slug": "practice-paper", "label": "Worksheets & Practice", "icon": "fa-file-lines", "blurb": "Practice questions and worksheets to build confidence." },
-    { "slug": "quiz", "label": "Quiz (MCQs)", "icon": "fa-bullseye", "blurb": "A short interactive quiz with instant scoring." },
-    { "slug": "test", "label": "Chapter Test", "icon": "fa-clipboard-check", "blurb": "A timed chapter test with results and answers." }
+    { "slug": "notes", "label": "Chapter Notes", "short": "Notes", "icon": "fa-book-open", "blurb": "Concise, exam-focused notes for this topic." },
+    { "slug": "concepts", "label": "Key Concepts & Definitions", "short": "Concepts", "icon": "fa-lightbulb", "blurb": "Important concepts and definitions explained clearly." },
+    { "slug": "practice-paper", "label": "Practice Paper", "short": "Practice", "icon": "fa-file-lines", "blurb": "Practice questions and worksheets to build confidence." },
+    { "slug": "quiz", "label": "Quiz (MCQs)", "short": "Quiz", "icon": "fa-bullseye", "blurb": "A short interactive quiz with instant scoring." },
+    { "slug": "test", "label": "Chapter Test", "short": "Test", "icon": "fa-clipboard-check", "blurb": "A timed chapter test with results and answers." }
   ],
   "subjectResources": [
     { "slug": "revision", "label": "Revision Notes", "icon": "fa-bookmark", "blurb": "Quick revision notes for the whole subject before the exam." },

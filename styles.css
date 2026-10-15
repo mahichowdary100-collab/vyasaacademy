@@ -2295,6 +2295,23 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
   color: var(--primary);
 }
 
+.sm-chip.is-soon {
+  background: #f3f4f6;
+  color: #9ca3af;
+}
+
+.sm-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .sm-chapter-num {
   font-size: 0.72rem;
   font-weight: 800;
