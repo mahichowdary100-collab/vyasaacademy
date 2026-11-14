@@ -312,6 +312,10 @@ foreach ($c in $data.classes) {
 
     foreach ($ch in $chapters) {
       Add-TreeLine 3 $ch.label
+      $chapterResources = @($resourceList)
+      if ($c.number -eq 9 -and $s.slug -eq 'mathematics' -and $ch.slug -eq 'chapter-01') {
+        $chapterResources += [pscustomobject]@{ slug = 'solutions'; label = 'Chapter 1 Solutions'; icon = 'fa-square-root-variable'; blurb = 'Original step-by-step solutions for the chapter exercises.' }
+      }
       $chDir = Join-Path $subDir $ch.slug
       New-Item -ItemType Directory -Path $chDir -Force | Out-Null
       $chUrl = "$subUrl$($ch.slug)/"
@@ -333,7 +337,7 @@ foreach ($c in $data.classes) {
       $headCh = Build-Head $chTitle $chDesc $chUrl $false @((Get-BreadcrumbLd $crumbCh))
 
       $resCards = @()
-      foreach ($r in $resourceList) {
+      foreach ($r in $chapterResources) {
         $overridePath = Get-ContentOverride $c.number $s.slug $ch.slug $r.slug
         $pendingChip = if ($overridePath) {
           "<span class=""sm-card-go"">View <i class=""fas fa-arrow-right""></i></span>"
@@ -351,7 +355,7 @@ foreach ($c in $data.classes) {
       }
       Set-ContentUtf8 -Path (Join-Path $chDir 'index.html') -Value $chPage
 
-      foreach ($r in $resourceList) {
+      foreach ($r in $chapterResources) {
         Add-TreeLine 4 $r.label
         $resDir = Join-Path $chDir $r.slug
         New-Item -ItemType Directory -Path $resDir -Force | Out-Null
@@ -369,7 +373,7 @@ foreach ($c in $data.classes) {
         $headRes = Build-Head $resTitle $resDesc $resUrl $false @((Get-BreadcrumbLd $crumbRes))
 
         $chipLinks = @()
-        foreach ($rr in $resourceList) {
+        foreach ($rr in $chapterResources) {
           $activeClass = if ($rr.slug -eq $r.slug) { ' is-active' } else { '' }
           $chipLinks += "<a class=""sm-chip-link$activeClass"" href=""../$($rr.slug)/"">$($rr.label)</a>"
         }
