@@ -325,6 +325,9 @@ foreach ($c in $data.classes) {
       if ($c.number -eq 9 -and $s.slug -eq 'mathematics' -and $ch.slug -eq 'chapter-04') {
         $chapterResources += [pscustomobject]@{ slug = 'solutions'; label = 'Chapter 4 Solutions'; icon = 'fa-square-root-variable'; blurb = 'Original step-by-step solutions for the chapter exercises.' }
       }
+      if ($c.number -eq 9 -and $s.slug -eq 'mathematics' -and $ch.slug -eq 'chapter-05') {
+        $chapterResources += [pscustomobject]@{ slug = 'solutions'; label = 'Chapter 5 Solutions'; icon = 'fa-square-root-variable'; blurb = 'Original step-by-step solutions for the chapter exercises.' }
+      }
       $chDir = Join-Path $subDir $ch.slug
       New-Item -ItemType Directory -Path $chDir -Force | Out-Null
       $chUrl = "$subUrl$($ch.slug)/"
