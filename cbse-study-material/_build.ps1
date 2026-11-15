@@ -402,6 +402,22 @@ foreach ($c in $data.classes) {
         }
         Set-ContentUtf8 -Path (Join-Path $resDir 'index.html') -Value $resPage
       }
+
+      # Publish an explicitly authored solutions page only when that chapter
+      # has a matching content override. This avoids creating placeholder
+      # solutions pages for chapters that are still being prepared.
+      $solutionsOverridePath = Join-Path $smDir "content\class-$($c.number)\$($s.slug)\$($ch.slug)\solutions\index.html"
+      $hasSolutionsResource = @($chapterResources | Where-Object { $_.slug -eq 'solutions' }).Count -gt 0
+      if (-not $hasSolutionsResource -and (Test-Path -LiteralPath $solutionsOverridePath)) {
+        $solutionsDir = Join-Path $chDir 'solutions'
+        New-Item -ItemType Directory -Path $solutionsDir -Force | Out-Null
+        $solutionsPage = Get-Content -LiteralPath $solutionsOverridePath -Raw -Encoding UTF8
+        Set-ContentUtf8 -Path (Join-Path $solutionsDir 'index.html') -Value $solutionsPage
+        $solutionsUrl = "$chUrl`solutions/"
+        $indexableUrls += $solutionsUrl
+        Add-TreeLine 4 'Worked Solutions'
+        Write-Host "Generated $solutionsUrl (content override)"
+      }
     }
   }
 }
