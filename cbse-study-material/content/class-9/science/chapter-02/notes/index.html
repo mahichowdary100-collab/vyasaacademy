@@ -24,10 +24,31 @@
   <script>MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']],processEscapes:true}};</script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
   <style>
-    .sm-notes{font-size:1rem;line-height:1.78}.sm-notes h2{font-size:1.45rem;color:var(--primary);margin:42px 0 14px;padding-bottom:8px;border-bottom:2px solid var(--accent)}.sm-notes h3{font-size:1.15rem;color:var(--dark);margin:25px 0 10px}.sm-notes p{margin:0 0 13px}.sm-notes li{margin:0 0 7px}.sm-notes ul,.sm-notes ol{margin:10px 0 17px 24px}
+    .sm-notes { font-size: 1rem; line-height: 1.8; }
+    .sm-notes h2 { font-size: 1.45rem; color: var(--primary); margin: 44px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--accent); }
+    .sm-notes h3 { font-size: 1.15rem; color: var(--dark); margin: 28px 0 12px; }
+    .sm-notes h4 { font-size: 1.05rem; color: var(--dark); margin: 20px 0 8px; }
+    .sm-notes p { margin-bottom: 14px; }
+    .sm-notes ul, .sm-notes ol { margin: 10px 0 16px 24px; }
+    .sm-notes li { margin-bottom: 6px; }
+    .sm-notes ul { list-style: disc; }
     .sci-toc{position:sticky;top:76px;z-index:5;background:#fff;border:1px solid #dbe3ef;border-radius:12px;padding:14px 18px;margin:18px 0;box-shadow:0 5px 16px #1725540b}.sci-toc summary{font-weight:700;color:#1e3a8a;cursor:pointer}.sci-toc ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:4px 18px;margin:10px 0 2px 18px}.sci-toc a{font-size:.92rem}
-    .def-box,.result-box,.example-box,.tip-box,.warn-box{border-radius:0 10px 10px 0;padding:16px 19px;margin:16px 0}.def-box{background:#eef2ff;border-left:4px solid #3730a3}.result-box{background:#fff8e1;border-left:4px solid #d97706}.example-box{background:#f0fdf4;border-left:4px solid #16a34a}.tip-box{background:#eff6ff;border-left:4px solid #2563eb}.warn-box{background:#fef2f2;border-left:4px solid #dc2626}.box-label{font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:.76rem;margin-bottom:6px;color:#1e3a8a}
-    .table-wrap{overflow-x:auto;margin:14px 0 20px}.sm-notes table{width:100%;border-collapse:collapse;font-size:.94rem}.sm-notes th{background:#1e3a8a;color:#fff;text-align:left;padding:11px 13px}.sm-notes td{padding:10px 13px;border-bottom:1px solid #e5e7eb;vertical-align:top}.sm-notes tr:nth-child(even) td{background:#f8fafc}
+    .def-box { background: #eef2ff; border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+    .def-box .box-label { font-weight: 700; color: var(--primary); text-transform: uppercase; font-size: .78rem; letter-spacing: .5px; margin-bottom: 6px; }
+    .result-box { background: #fff8e1; border-left: 4px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+    .result-box .box-label { font-weight: 700; color: var(--accent-dark); text-transform: uppercase; font-size: .78rem; letter-spacing: .5px; margin-bottom: 6px; }
+    .example-box { background: #f0fdf4; border-left: 4px solid #16a34a; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+    .example-box .box-label { font-weight: 700; color: #16a34a; text-transform: uppercase; font-size: .78rem; letter-spacing: .5px; margin-bottom: 6px; }
+    .tip-box { background: #eff6ff; border-left: 4px solid #2563eb; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+    .tip-box .box-label { font-weight: 700; color: #2563eb; text-transform: uppercase; font-size: .78rem; letter-spacing: .5px; margin-bottom: 6px; }
+    .warn-box { background: #fef2f2; border-left: 4px solid #dc2626; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+    .warn-box .box-label { font-weight: 700; color: #dc2626; text-transform: uppercase; font-size: .78rem; letter-spacing: .5px; margin-bottom: 6px; }
+    .table-wrap { overflow-x: auto; margin: 16px 0; -webkit-overflow-scrolling: touch; }
+    .sm-notes table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+    .sm-notes th { background: var(--primary); color: var(--white); text-align: left; padding: 12px 14px; font-weight: 600; white-space: nowrap; }
+    .sm-notes td { padding: 10px 14px; border-bottom: 1px solid #e5e7eb; }
+    .sm-notes tr:nth-child(even) td { background: #f9fafb; }
+    .sm-notes tr:hover td { background: #eef2ff; }
     .figure{margin:18px 0;padding:14px;background:#f8fafc;border:1px solid #dbe3ef;border-radius:12px}.figure svg{width:100%;height:auto;display:block;margin:auto;max-width:760px}.fig-cap{text-align:center;font-size:.88rem;color:#475569;margin:9px 0 0}.figure details{margin-top:8px;text-align:center}.figure summary{display:inline-block;cursor:pointer;color:#1d4ed8;font-weight:700}.figure details svg{max-width:none}
     .sci-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:13px;margin:16px 0}.sci-card{border:1px solid #dbe3ef;border-top:4px solid #3730a3;background:#fff;border-radius:10px;padding:15px}.sci-card h3{margin:0 0 7px}.sci-card p{margin:0}
     .q-item{border:1px solid #dbe3ef;border-radius:10px;margin:10px 0;padding:13px 16px;background:#fff}.q-item summary{font-weight:650;cursor:pointer;color:#1e293b}.q-answer{margin:12px 0 0;padding:10px 13px;background:#f0fdf4;border-left:3px solid #16a34a;border-radius:4px}.mcq-options{margin:8px 0 8px 24px!important}.mcq-options li{padding-left:4px}.q-answer p:last-child{margin-bottom:0}
@@ -35,7 +56,12 @@
     .concept-map{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:10px;padding:16px;background:#f8fafc;border:1px solid #dbe3ef;border-radius:12px}.concept-node{flex:1 1 145px;max-width:230px;padding:12px;border-radius:10px;background:#e0e7ff;text-align:center;font-weight:700;color:#1e3a8a}.concept-arrow{align-self:center;color:#64748b;font-size:1.3rem}
     .formula{font-size:1.1rem;text-align:center;background:#f1f5f9;padding:12px;border-radius:8px;overflow-x:auto}.checklist{list-style:none;padding:0;margin-left:0!important}.checklist li{padding:7px 0 7px 28px;position:relative;border-bottom:1px dashed #dbe3ef}.checklist li:before{content:'□';position:absolute;left:2px;color:#1e3a8a;font-size:1.1rem}
     .chapter-nav{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:24px 0}.chapter-nav a{display:inline-block;padding:10px 14px;border:1px solid #cbd5e1;border-radius:8px;text-decoration:none;font-weight:650}.chapter-nav a:hover{background:#eff6ff}.source-note{font-size:.9rem;color:#475569;border-top:1px solid #cbd5e1;padding-top:14px}.small-note{font-size:.9rem;color:#475569}.notes-search{margin:18px 0;padding:14px;border:1px solid #cbd5e1;border-radius:10px;background:#f8fafc}.notes-search label{display:block;margin-bottom:7px}.notes-search input{width:min(100%,520px);padding:10px;border:1px solid #94a3b8;border-radius:7px;font:inherit}.notes-search span{display:block;font-size:.88rem;color:#475569;margin-top:6px}.table-scroll{overflow:auto}
-    @media(max-width:640px){.sm-notes{font-size:.96rem}.sm-notes h2{font-size:1.25rem}.sci-toc{position:static}.sci-toc ul{grid-template-columns:1fr}.figure{padding:8px 5px}.sm-notes table{font-size:.86rem}.sm-notes td,.sm-notes th{padding:8px}.sci-card{min-width:0}}
+    .resource-nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
+    .resource-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: var(--radius); border: 2px solid #e5e7eb; font-weight: 600; font-size: .92rem; color: var(--dark); background: var(--white); transition: var(--transition); text-decoration: none; }
+    .resource-nav a:hover, .resource-nav a.is-active { border-color: var(--primary); background: var(--primary); color: var(--white); }
+    .sm-back { display: inline-flex; align-items: center; gap: 8px; margin-top: 30px; padding: 10px 0; color: var(--primary); font-weight: 600; text-decoration: none; }
+    .sm-back:hover { color: var(--accent-dark); }
+    @media(max-width:640px){.sm-notes h2{font-size:1.25rem}.sm-notes{font-size:.95rem}.sci-toc{position:static}.sci-toc ul{grid-template-columns:1fr}.figure{padding:8px 4px}.resource-nav{gap:6px}.resource-nav a{padding:8px 12px;font-size:.85rem}.sm-notes table{font-size:.86rem}.sm-notes td,.sm-notes th{padding:8px}.sci-card{min-width:0}}
     @media print{.navbar,.resource-nav,.sci-toc,.sm-back,.chapter-nav,.flash-card button,.figure details summary{display:none!important}.sm-notes{font-size:10.5pt;line-height:1.5}.sm-notes h2{break-after:avoid}.figure,.q-item,.sci-card{break-inside:avoid;box-shadow:none}.q-answer{display:block!important}}
   </style>
 </head>
@@ -387,7 +413,8 @@
         <p class="source-note"><strong>Review status:</strong> explanations and practice items are original and align to the official CBSE learning outcomes. Direct checking of the chapter PDF's exact in-text and end-of-chapter question numbering is still pending; this page therefore uses concept-level exercise support and does not claim full question-by-question verification. Numerical examples are original; their arithmetic has been checked.</p>
       </section>
     </article>
-    <nav class="resource-nav" aria-label="Chapter resources"><a class="is-active" href="/cbse-study-material/class-9/science/chapter-02/notes/">Notes</a><a href="/cbse-study-material/class-9/science/chapter-02/quiz/">Practice Quiz</a><a href="/cbse-study-material/class-9/science/chapter-02/test/">Chapter Test</a></nav>
+    <a class="sm-back" href="/cbse-study-material/class-9/science/chapter-02/"><i class="fas fa-arrow-left"></i> Back to Chapter 2</a>
+    <a class="sm-back" href="/cbse-study-material/class-9/science/" style="margin-left: 12px;"><i class="fas fa-arrow-left"></i> All Science chapters</a>
     <nav class="chapter-nav" aria-label="Chapter navigation"><a href="/cbse-study-material/class-9/science/chapter-01/">← Previous: Chapter 1</a><a href="/cbse-study-material/class-9/science/">All Class 9 Science chapters</a><a href="/cbse-study-material/class-9/science/chapter-03/">Next: Chapter 3 →</a></nav>
   </div>
 </main>
