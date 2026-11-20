@@ -282,7 +282,7 @@ foreach ($c in $data.classes) {
         $chMedia = "<img class=""sm-chapter-img"" src=""$chImage"" alt=""$($ch.label) - CBSE Class $($c.number) $($s.label)"" loading=""lazy"" />"
       }
       $chNumHtml = ''
-      if ($ch.PSObject.Properties['number'] -and $ch.number) { $chNumHtml = '<p class="sm-chapter-num">Chapter ' + "$($ch.number)</p>" }
+      if ($ch.PSObject.Properties['number'] -and $ch.number) { $chNumHtml = '<p class="sm-chapter-num">Chapter ' + "$($ch.number)"; if ($ch.PSObject.Properties['supplementaryNote'] -and $ch.supplementaryNote) { $chNumHtml += ' <span class="sm-status-chip">Supplementary</span>' }; $chNumHtml += '</p>' }
       $chDescHtml = ''
       if ($ch.PSObject.Properties['desc'] -and $ch.desc) { $chDescHtml = '<p class="sm-chapter-desc">' + (Esc-Html $ch.desc) + '</p>' }
       $chStatusHtml = ''
@@ -374,6 +374,7 @@ foreach ($c in $data.classes) {
       }
 
       $chBody = "<main class=""sm-page"">$nl  <div class=""container sm-container"">$nl    $(Get-SmCrumbs $crumbCh)$nl    <section class=""sm-hero sm-hero-slim"">$nl      <p class=""sm-eyebrow"">CBSE Class $($c.number) &middot; $($s.label)</p>$nl      <h1>$($ch.label)</h1>$nl      <p>Choose a resource for this chapter. Notes, practice paper, quiz and chapter test will be published here shortly.</p>$nl    </section>$nl    <div class=""sm-grid sm-grid-2 sm-grid-4"" id=""smGrid"">$nl$($resCards -join "$nl$nl")$nl    </div>$nl    <a class=""sm-back"" href=""/cbse-study-material/class-$($c.number)/$($s.slug)/""><i class=""fas fa-arrow-left""></i> All $($s.label) chapters</a>$nl  </div>$nl</main>"
+      if ($ch.PSObject.Properties['supplementaryNote'] -and $ch.supplementaryNote) { $chBody = $chBody.Replace("<h1>$($ch.label)</h1>", "<h1>$($ch.label)</h1>$nl      <p class=""sm-status-chip"">$(Esc-Html $ch.supplementaryNote)</p>") }
       $chPage = "$headCh$nl<body>$nl$navHtml$nl$chBody$nl$footerHtml$nl<script src=""/cbse-study-material/sm.js""></script>$nl$authScripts$nl<script src=""/chatbot/chatbot-loader.js"" defer></script>$nl</body>$nl</html>"
       Write-Host "Generated /cbse-study-material/class-$($c.number)/$($s.slug)/$($ch.slug)/index.html"
       }
