@@ -32,7 +32,7 @@
     .sm-notes ul, .sm-notes ol { margin: 10px 0 16px 24px; }
     .sm-notes li { margin-bottom: 6px; }
     .sm-notes ul { list-style: disc; }
-    .sci-toc{position:sticky;top:76px;z-index:5;background:#fff;border:1px solid #dbe3ef;border-radius:12px;padding:14px 18px;margin:18px 0;box-shadow:0 5px 16px #1725540b}.sci-toc summary{font-weight:700;color:#1e3a8a;cursor:pointer}.sci-toc ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:4px 18px;margin:10px 0 2px 18px}.sci-toc a{font-size:.92rem}
+    .sci-toc{position:static;background:#fff;border:1px solid #dbe3ef;border-radius:10px;padding:8px 12px;margin:10px 0;box-shadow:none}.sci-toc summary{font-weight:700;color:#1e3a8a;cursor:pointer}.sci-toc ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:4px 18px;margin:8px 0 2px 18px;max-height:24vh;overflow-y:auto;overscroll-behavior:contain}.sci-toc a{font-size:.92rem}
     .def-box { background: #eef2ff; border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
     .def-box .box-label { font-weight: 700; color: var(--primary); text-transform: uppercase; font-size: .78rem; letter-spacing: .5px; margin-bottom: 6px; }
     .result-box { background: #fff8e1; border-left: 4px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
@@ -61,7 +61,7 @@
     .resource-nav a:hover, .resource-nav a.is-active { border-color: var(--primary); background: var(--primary); color: var(--white); }
     .sm-back { display: inline-flex; align-items: center; gap: 8px; margin-top: 30px; padding: 10px 0; color: var(--primary); font-weight: 600; text-decoration: none; }
     .sm-back:hover { color: var(--accent-dark); }
-    @media(max-width:640px){.sm-notes h2{font-size:1.25rem}.sm-notes{font-size:.95rem}.sci-toc{position:static}.sci-toc ul{grid-template-columns:1fr}.figure{padding:8px 4px}.resource-nav{gap:6px}.resource-nav a{padding:8px 12px;font-size:.85rem}.sm-notes table{font-size:.86rem}.sm-notes td,.sm-notes th{padding:8px}.sci-card{min-width:0}}
+    @media(max-width:640px){.sm-notes h2{font-size:1.25rem}.sm-notes{font-size:.95rem}.sci-toc{position:static}.sci-toc ul{grid-template-columns:1fr;max-height:20vh}.figure{padding:8px 4px}.resource-nav{gap:6px}.resource-nav a{padding:8px 12px;font-size:.85rem}.sm-notes table{font-size:.86rem}.sm-notes td,.sm-notes th{padding:8px}.sci-card{min-width:0}}
     @media print{.navbar,.resource-nav,.sci-toc,.sm-back,.chapter-nav,.flash-card button,.figure details summary{display:none!important}.sm-notes{font-size:10.5pt;line-height:1.5}.sm-notes h2{break-after:avoid}.figure,.q-item,.sci-card{break-inside:avoid;box-shadow:none}.q-answer{display:block!important}}
   </style>
 </head>
@@ -424,6 +424,7 @@
   <div class="footer-social"><h4>Follow Us</h4><div class="social-icons"><a href="https://www.instagram.com/vyasaacademy_/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="https://wa.me/919494901006" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></div></div>
 </div><div class="footer-bottom"><p>&copy; 2026 Vyasa Academy. All rights reserved.</p></div></footer>
 <script>
+var contentsPanel=document.querySelector('.sci-toc');if(contentsPanel)contentsPanel.open=false;
 document.querySelectorAll('.flash-card button').forEach(function(button){button.addEventListener('click',function(){var card=button.closest('.flash-card');var open=card.classList.toggle('open');button.setAttribute('aria-expanded',String(open));});});
 document.getElementById('notesSearch').addEventListener('input',function(){var term=this.value.trim().toLowerCase(),sections=Array.from(document.querySelectorAll('.sm-notes > section')),shown=0;sections.forEach(function(section){var match=!term||section.innerText.toLowerCase().includes(term);section.hidden=!match;if(match)shown++;});document.getElementById('notesSearchStatus').textContent=term?(shown+' topic sections match your search.'):'All topics are shown.';});
 
