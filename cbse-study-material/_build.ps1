@@ -328,6 +328,9 @@ foreach ($c in $data.classes) {
       if ($c.number -eq 9 -and $s.slug -eq 'mathematics' -and $ch.slug -eq 'chapter-05') {
         $chapterResources += [pscustomobject]@{ slug = 'solutions'; label = 'Chapter 5 Solutions'; icon = 'fa-square-root-variable'; blurb = 'Original step-by-step solutions for the chapter exercises.' }
       }
+      if ($c.number -eq 9 -and $s.slug -eq 'mathematics' -and $ch.slug -eq 'chapter-07') {
+        $chapterResources += [pscustomobject]@{ slug = 'solutions'; label = 'Chapter 7 Solutions'; icon = 'fa-square-root-variable'; blurb = 'Original step-by-step solutions for the probability exercises.' }
+      }
       if ($c.number -eq 9 -and $s.slug -eq 'mathematics' -and $ch.slug -eq 'chapter-08') {
         $chapterResources += [pscustomobject]@{ slug = 'solutions'; label = 'Chapter 8 Solutions'; icon = 'fa-square-root-variable'; blurb = 'Original step-by-step solutions for sequences and progressions.' }
       }
