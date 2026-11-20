@@ -1,4 +1,4 @@
-﻿# =====================================================================
+# =====================================================================
 # VYASA ACADEMY - CBSE STUDY MATERIAL GENERATOR
 # Data-driven static pages for /cbse-study-material/.
 #   Source of truth : cbse-study-material/study-data.json
@@ -331,6 +331,12 @@ foreach ($c in $data.classes) {
       if ($c.number -eq 9 -and $s.slug -eq 'mathematics' -and $ch.slug -eq 'chapter-07') {
         $chapterResources += [pscustomobject]@{ slug = 'solutions'; label = 'Chapter 7 Solutions'; icon = 'fa-square-root-variable'; blurb = 'Original step-by-step solutions for the probability exercises.' }
       }
+      if ($c.number -eq 9 -and $s.slug -eq 'mathematics' -and $ch.slug -eq 'chapter-10') {
+        $chapterResources += [pscustomobject]@{ slug = 'solutions'; label = 'Chapter 10 Solutions'; icon = 'fa-square-root-variable'; blurb = 'Original step-by-step solutions for averages, mixtures and charts.' }
+      }
+      if ($c.number -eq 9 -and $s.slug -eq 'mathematics' -and $ch.slug -eq 'chapter-09') {
+        $chapterResources += [pscustomobject]@{ slug = 'solutions'; label = 'Chapter 9 Solutions'; icon = 'fa-square-root-variable'; blurb = 'Original step-by-step solutions for propositions and converses.' }
+      }
       if ($c.number -eq 9 -and $s.slug -eq 'mathematics' -and $ch.slug -eq 'chapter-08') {
         $chapterResources += [pscustomobject]@{ slug = 'solutions'; label = 'Chapter 8 Solutions'; icon = 'fa-square-root-variable'; blurb = 'Original step-by-step solutions for sequences and progressions.' }
       }
@@ -434,3 +440,5 @@ Set-ContentUtf8 -Path (Join-Path $smDir 'study-tree.txt') -Value ($treeLines -jo
 
 Write-Host ""
 Write-Host "Done. Indexable URLs: $($indexableUrls.Count)"
+
+
