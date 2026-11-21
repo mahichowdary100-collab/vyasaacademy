@@ -36,6 +36,7 @@ function Add-VisualAssets([string]$html, [string]$scope, [string]$subject, [stri
     $html = $html.Replace('</body>', $js + "`n</body>")
   }
   $html = $html.Replace('chapter-visuals.css?v=1', 'chapter-visuals.css?v=2').Replace('chapter-visuals.js?v=1', 'chapter-visuals.js?v=2')
+  $html = $html.Replace('chapter-visuals.css?v=2', 'chapter-visuals.css?v=3').Replace('chapter-visuals.js?v=2', 'chapter-visuals.js?v=3')
   return $html
 }
 
@@ -81,6 +82,10 @@ function Add-SubjectChapterCards([string]$html, [string]$subjectKey) {
   })
 }
 
+function Remove-ChapterCardDescriptions([string]$html) {
+  return [regex]::Replace($html, '(?is)\s*<p\b[^>]*class="[^"]*sm-chapter-desc[^"]*"[^>]*>.*?</p>', '')
+}
+
 function Add-SubjectCards([string]$html) {
   $pattern = '(?s)<a\b(?=[^>]*class="[^"]*sm-subject-card[^"]*")[^>]*>.*?</a>'
   return [regex]::Replace($html, $pattern, {
@@ -123,6 +128,7 @@ foreach ($subject in $class9.subjects) {
       $html = $html.Replace('<section class="sm-hero sm-hero-slim">', ('<section class="sm-hero sm-hero-slim">' + "`n      " + (New-ArtMarkup ($subjectKey + '-hub') 'cbse-chapter-art--hero cbse-hero-art')))
     }
     $html = Add-SubjectChapterCards $html $subjectKey
+    $html = Remove-ChapterCardDescriptions $html
     Save-Page $subjectPage $html
   }
 

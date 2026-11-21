@@ -42,7 +42,7 @@ body[data-cbse-visual-scope="class-9"] .sm-search { z-index:2; }
 .cbse-visual-card > .sm-card-icon { display:none; }
 .cbse-visual-card .sm-card-body { padding:16px 19px 19px; width:100%; }
 .cbse-visual-card .sm-chapter-num { color:var(--card-accent); font-weight:800; }
-.cbse-chapter-art { position:relative; display:block; width:100%; aspect-ratio:2.08/1; min-height:126px; overflow:hidden; isolation:isolate;
+.cbse-chapter-art { position:relative; display:block; width:100%; aspect-ratio:1.8/1; min-height:150px; overflow:hidden; isolation:isolate;
   background:#071427;
 }
 .cbse-chapter-art img { display:block; width:100%; height:100%; object-fit:cover; object-position:center 48%; transform:translate3d(var(--parallax-x,0),var(--parallax-y,0),0); transition:transform .35s ease; }
@@ -58,7 +58,7 @@ body[data-cbse-visual-scope="class-9"] .sm-search { z-index:2; }
   body[data-cbse-visual-scope="class-9"] .cbse-hero-art { width:54%; }
   body[data-cbse-visual-scope="class-9"] .sm-hero h1 { max-width:100%; font-size:clamp(1.55rem,5.5vw,2rem); }
   body[data-cbse-visual-scope="class-9"] .sm-hero > p:not(.sm-eyebrow) { max-width:100%; font-size:.98rem; }
-  .cbse-chapter-art { min-height:110px; }
+  .cbse-chapter-art { min-height:132px; }
   .cbse-visual-card .sm-card-body { padding:14px 16px 17px; }
 }
 @media(max-width:420px) {
