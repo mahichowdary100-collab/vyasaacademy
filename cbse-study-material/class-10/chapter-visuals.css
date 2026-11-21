@@ -1,0 +1,75 @@
+/* Chapter-specific, locally hosted 3D artwork for Class 9 Mathematics and Science. */
+body[data-cbse-visual-scope="class-10"] { --cbse-viz-a:#2563eb; --cbse-viz-b:#7c3aed; }
+body[data-cbse-visual-scope="class-10"] .sm-hero {
+  position:relative; isolation:isolate; overflow:hidden; border:1px solid rgba(37,99,235,.12);
+  border-radius:24px; padding:34px 24px 30px; margin:18px 0 12px;
+  background:radial-gradient(ellipse at 90% 18%, color-mix(in srgb,var(--cbse-viz-a) 15%,transparent),transparent 40%),
+    radial-gradient(ellipse at 10% 95%, color-mix(in srgb,var(--cbse-viz-b) 9%,transparent),transparent 42%),#fff;
+}
+body[data-cbse-visual-scope="class-10"] .sm-hero::before {
+  content:""; position:absolute; z-index:1; inset:0 0 0 auto; width:64%; pointer-events:none;
+  background:linear-gradient(90deg,rgba(255,255,255,.98),rgba(255,255,255,.88) 38%,rgba(255,255,255,.42) 76%,rgba(255,255,255,.2));
+}
+body[data-cbse-visual-scope="class-10"] .sm-hero > :not(.cbse-hero-art) { position:relative; z-index:2; }
+body[data-cbse-visual-page="chapter"] .sm-hero,
+body[data-cbse-visual-page="subject"] .sm-hero {
+  display:flex; flex-direction:column; align-items:flex-start; justify-content:center; text-align:left;
+  min-height:278px; padding:34px clamp(26px,5vw,66px); gap:0;
+}
+body[data-cbse-visual-scope="class-10"] .cbse-hero-brand {
+  display:inline-flex; align-items:center; gap:8px; margin:0 0 10px; color:#334155;
+  font-size:.69rem; font-weight:800; letter-spacing:.13em; text-transform:uppercase;
+}
+body[data-cbse-visual-scope="class-10"] .cbse-hero-brand::before { content:""; width:22px; height:2px; border-radius:2px; background:var(--cbse-viz-a); }
+body[data-cbse-visual-scope="class-10"] .cbse-hero-art {
+  position:absolute; z-index:0; top:0; right:0; width:min(34%,390px); height:100%; display:flex;
+  align-items:center; justify-content:center; opacity:.16; pointer-events:none; overflow:hidden;
+  mask-image:linear-gradient(90deg,transparent 0%,#000 48%);
+}
+body[data-cbse-visual-scope="class-10"] .cbse-hero-art svg { width:100%; height:100%; filter:drop-shadow(0 18px 20px rgba(30,41,59,.12)); }
+body[data-cbse-visual-scope="class-10"] .sm-hero h1 { max-width:760px; width:min(100%,760px); margin-left:0; margin-right:0; }
+body[data-cbse-visual-scope="class-10"] .sm-hero > p:not(.sm-eyebrow) { max-width:650px; width:min(100%,650px); margin-left:0; margin-right:0; }
+body[data-cbse-visual-scope="class-10"] .sm-search { z-index:2; }
+
+.cbse-visual-card {
+  --card-accent:#2563eb; position:relative; display:flex; flex-direction:column; align-items:stretch;
+  gap:0; padding:0; overflow:hidden; min-height:100%; border-color:color-mix(in srgb,var(--card-accent) 22%,#dbe3ef);
+  background:linear-gradient(150deg,#fff 25%,color-mix(in srgb,var(--card-accent) 5%,#fff));
+  transform:translateZ(0); transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+.cbse-visual-card:hover { transform:translateY(-6px); border-color:color-mix(in srgb,var(--card-accent) 55%,#fff); box-shadow:0 18px 34px rgba(15,23,42,.14); }
+.cbse-visual-card:focus-visible { outline:3px solid var(--card-accent); outline-offset:3px; }
+.cbse-visual-card > .sm-card-icon { display:none; }
+.cbse-visual-card .sm-card-body { padding:16px 19px 19px; width:100%; }
+.cbse-visual-card .sm-chapter-num { color:var(--card-accent); font-weight:800; }
+.cbse-chapter-art { position:relative; display:block; width:100%; aspect-ratio:1.8/1; min-height:150px; overflow:hidden; isolation:isolate;
+  background:#071427;
+}
+.cbse-chapter-art img { display:block; width:100%; height:100%; object-fit:cover; object-position:center 48%; transform:translate3d(var(--parallax-x,0),var(--parallax-y,0),0); transition:transform .35s ease; }
+.cbse-visual-card:hover .cbse-chapter-art img { transform:translate3d(var(--parallax-x,0),var(--parallax-y,0),0) scale(1.045); }
+.cbse-chapter-art--hero { position:absolute; z-index:0; inset:0 0 0 auto; width:min(44%,560px); height:100%; aspect-ratio:auto; min-height:0; opacity:1;
+  mask-image:linear-gradient(90deg,transparent 0%,#000 40%); }
+.cbse-chapter-art--hero img { object-position:center 46%; }
+@media(max-width:700px) {
+  body[data-cbse-visual-scope="class-10"] .sm-hero { padding:27px 20px 25px; margin:12px 0 8px; border-radius:18px; }
+  body[data-cbse-visual-page="chapter"] .sm-hero,
+  body[data-cbse-visual-page="subject"] .sm-hero { min-height:260px; padding:26px 22px; }
+  body[data-cbse-visual-scope="class-10"] .sm-hero::before { width:80%; background:linear-gradient(90deg,rgba(255,255,255,.99),rgba(255,255,255,.92) 58%,rgba(255,255,255,.56)); }
+  body[data-cbse-visual-scope="class-10"] .cbse-hero-art { width:54%; }
+  body[data-cbse-visual-scope="class-10"] .sm-hero h1 { max-width:100%; font-size:clamp(1.55rem,5.5vw,2rem); }
+  body[data-cbse-visual-scope="class-10"] .sm-hero > p:not(.sm-eyebrow) { max-width:100%; font-size:.98rem; }
+  .cbse-chapter-art { min-height:132px; }
+  .cbse-visual-card .sm-card-body { padding:14px 16px 17px; }
+}
+@media(max-width:420px) {
+  body[data-cbse-visual-scope="class-10"] .sm-hero::before { width:100%; background:linear-gradient(90deg,rgba(255,255,255,.99),rgba(255,255,255,.9)); }
+  body[data-cbse-visual-scope="class-10"] .cbse-hero-art { width:42%; opacity:.48; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .cbse-visual-card,.cbse-chapter-art img { transition:none!important; }
+  .cbse-visual-card:hover { transform:none; }
+}
+@media print {
+  .cbse-hero-art { opacity:.14!important; }
+  .cbse-chapter-art { break-inside:avoid; }
+}

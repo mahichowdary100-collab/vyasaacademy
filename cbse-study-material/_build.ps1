@@ -443,7 +443,10 @@ Write-Host ""
 Write-Host "Done. Indexable URLs: $($indexableUrls.Count)"
 
 # Add lightweight, local Class 9 chapter illustrations after page generation.
-# The enhancer is safe to re-run and leaves static SVG artwork in the markup.
+# The enhancer is safe to re-run and uses locally hosted optimized images.
 & (Join-Path $smDir 'apply-class9-visuals.ps1')
+
+# Add chapter-specific 3D artwork and the compact card layout to Class 10 pages.
+& (Join-Path $smDir 'apply-class10-visuals.ps1')
 
 
