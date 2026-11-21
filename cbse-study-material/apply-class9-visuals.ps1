@@ -41,8 +41,10 @@ function New-ArtMarkup([string]$artId, [string]$extraClass) {
 }
 
 function Add-HeroBrand([string]$html) {
-  if ($html -match 'cbse-hero-brand') { return $html }
-  $brand = '<p class="cbse-hero-brand">VYASA ACADEMY <span aria-hidden="true">·</span> LEARN · UNDERSTAND · EXCEL</p>'
+  $brand = '<p class="cbse-hero-brand">VYASA ACADEMY | LEARN | UNDERSTAND | EXCEL</p>'
+  if ($html -match 'cbse-hero-brand') {
+    return [regex]::Replace($html, '<p\b[^>]*class="[^"]*cbse-hero-brand[^"]*"[^>]*>.*?</p>', $brand, 1)
+  }
   return [regex]::Replace($html, '(<section\b[^>]*class="[^"]*sm-hero[^>]*>)', ('$1' + "`n      " + $brand), 1)
 }
 
