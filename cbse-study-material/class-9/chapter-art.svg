@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+<symbol id="math-hub" viewBox="0 0 640 300">
+  <path d="M40 250H590M105 275V35" fill="none" stroke="#93c5fd" stroke-width="2" stroke-dasharray="5 8"/>
+  <path d="M80 220 180 180 270 190 385 105 520 75" fill="none" stroke="#2563eb" stroke-width="7" stroke-linecap="round"/>
+  <circle class="cbse-pulse" cx="270" cy="190" r="12" fill="#f97316"/><circle cx="385" cy="105" r="12" fill="#7c3aed"/>
+  <path d="M400 205 490 115 565 205Z" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="5"/><path d="M445 160H530" stroke="#f97316" stroke-width="5"/>
+</symbol>
+<symbol id="science-hub" viewBox="0 0 640 300">
+  <circle cx="330" cy="150" r="85" fill="#dcfce7" stroke="#15803d" stroke-width="5"/><circle class="cbse-orbit" cx="330" cy="150" r="42" fill="#86efac" stroke="#166534" stroke-width="4"/><circle cx="330" cy="150" r="18" fill="#f97316"/>
+  <path d="M70 95h65l28 115H94L70 95Zm13 50h73" fill="#bae6fd" stroke="#0369a1" stroke-width="5"/><path d="M480 70c48 0 86 39 86 86s-38 86-86 86" fill="none" stroke="#7c3aed" stroke-width="8"/><path d="M505 95c35 0 62 27 62 61s-27 61-62 61" fill="none" stroke="#2563eb" stroke-width="5"/>
+</symbol>
+<symbol id="math-01" viewBox="0 0 640 300">
+  <path d="M70 245H570M305 275V35" stroke="#bfdbfe" stroke-width="2" stroke-dasharray="4 8"/><path d="M90 245H555M305 265V45" stroke="#1e3a8a" stroke-width="5"/><path d="m555 45 11 16h-22Z" fill="#1e3a8a"/><path d="m305 35 11 16h-22Z" fill="#1e3a8a"/>
+  <path d="M185 205 430 95" stroke="#2563eb" stroke-width="5" stroke-dasharray="9 7"/><circle class="cbse-pulse" cx="430" cy="95" r="12" fill="#f97316"/><circle class="cbse-float" cx="185" cy="205" r="10" fill="#7c3aed"/><circle cx="305" cy="245" r="8" fill="#0ea5e9"/>
+</symbol>
+<symbol id="math-02" viewBox="0 0 640 300">
+  <path d="M70 245H570M305 275V35" stroke="#bfdbfe" stroke-width="2" stroke-dasharray="4 8"/><path d="M100 235 520 70" stroke="#2563eb" stroke-width="7" stroke-linecap="round"/><circle cx="260" cy="172" r="10" fill="#f97316"/><circle cx="410" cy="113" r="10" fill="#7c3aed"/>
+  <rect class="cbse-float" x="405" y="45" width="150" height="54" rx="16" fill="#dbeafe" stroke="#1d4ed8" stroke-width="3"/><path d="M432 78h95" stroke="#1d4ed8" stroke-width="4"/><circle cx="451" cy="68" r="4" fill="#f97316"/><circle cx="483" cy="68" r="4" fill="#f97316"/><circle cx="515" cy="68" r="4" fill="#f97316"/>
+</symbol>
+<symbol id="math-03" viewBox="0 0 640 300">
+  <path d="M70 226H570" stroke="#1e3a8a" stroke-width="5"/><path d="M110 214v24m75-24v24m75-24v24m75-24v24m75-24v24m75-24v24m75-24v24" stroke="#64748b" stroke-width="3"/>
+  <path d="M160 190 180 178 200 161 220 139 240 111 260 78" fill="none" stroke="#7c3aed" stroke-width="5"/><path d="M410 205c-33-45 36-86 67-42 31 43-30 84-61 48-30-35 22-70 49-39 25 29-15 56-35 33-18-20 9-39 23-23" fill="none" stroke="#f97316" stroke-width="5" class="cbse-draw"/>
+  <circle class="cbse-pulse" cx="410" cy="205" r="8" fill="#0ea5e9"/>
+</symbol>
+<symbol id="math-04" viewBox="0 0 640 300">
+  <rect x="170" y="55" width="270" height="200" rx="8" fill="#dbeafe" stroke="#1d4ed8" stroke-width="5"/><path d="M305 55v200M170 155h270" stroke="#2563eb" stroke-width="4"/><path d="M440 55 515 30v198l-75 27Z" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="4"/><path d="M440 255 515 228 515 30" stroke="#1d4ed8" stroke-width="4" fill="none"/>
+  <rect class="cbse-pulse" x="190" y="75" width="92" height="60" rx="9" fill="#fcd34d"/><rect class="cbse-float" x="325" y="173" width="92" height="60" rx="9" fill="#c4b5fd"/><path d="M210 105h52M345 203h52" stroke="#6d28d9" stroke-width="4"/>
+</symbol>
+<symbol id="math-05" viewBox="0 0 640 300">
+  <circle cx="315" cy="155" r="105" fill="#ede9fe" stroke="#6d28d9" stroke-width="5"/><path d="M215 125 405 105M315 155 215 125M315 155 405 105" fill="none" stroke="#2563eb" stroke-width="5"/><path d="M228 130A94 94 0 0 1 398 111" fill="none" stroke="#f97316" stroke-width="8" stroke-linecap="round"/><circle class="cbse-pulse" cx="315" cy="155" r="11" fill="#f97316"/><circle class="cbse-orbit" cx="315" cy="50" r="8" fill="#0ea5e9"/>
+</symbol>
+<symbol id="math-06" viewBox="0 0 640 300">
+  <path d="m130 230 130-170 180 170Z" fill="#dbeafe" stroke="#1d4ed8" stroke-width="5"/><path d="M130 230h310M260 60v170" stroke="#7c3aed" stroke-width="4" stroke-dasharray="7 7"/><path d="M120 250H450" stroke="#f97316" stroke-width="5"/><path d="m120 250 13-8v16Zm330 0-13-8v16Z" fill="#f97316"/><circle class="cbse-float" cx="352" cy="172" r="16" fill="#fde68a" stroke="#b45309" stroke-width="4"/>
+</symbol>
+<symbol id="math-07" viewBox="0 0 640 300">
+  <path d="m185 105 105-55 105 55v120l-105 55-105-55Z" fill="#bfdbfe" stroke="#1e40af" stroke-width="5"/><path d="m185 105 105 60 105-60M290 165v115" fill="none" stroke="#1e40af" stroke-width="4"/><g fill="#fff"><circle cx="230" cy="125" r="9"/><circle cx="340" cy="125" r="9"/><circle cx="290" cy="165" r="9"/><circle cx="230" cy="205" r="9"/><circle cx="340" cy="205" r="9"/></g>
+  <path class="cbse-orbit" d="M490 80a75 75 0 1 1-1 0" fill="#fef3c7" stroke="#f97316" stroke-width="5"/><path d="M490 155V80" stroke="#7c3aed" stroke-width="4"/><circle cx="490" cy="155" r="8" fill="#7c3aed"/>
+</symbol>
+<symbol id="math-08" viewBox="0 0 640 300">
+  <path d="M95 250H555M115 250V210h64v40m26 0v-70h64v70m26 0v-105h64v105m26 0v-145h64v145m26 0v-185h64v185" fill="#c4b5fd" stroke="#6d28d9" stroke-width="4"/>
+  <path d="M130 185 235 145 340 105 445 65 535 42" fill="none" stroke="#f97316" stroke-width="5" stroke-dasharray="7 7"/><g fill="#0ea5e9"><circle class="cbse-pulse" cx="130" cy="185" r="9"/><circle class="cbse-float" cx="235" cy="145" r="9"/><circle cx="340" cy="105" r="9"/><circle cx="445" cy="65" r="9"/></g>
+</symbol>
+<symbol id="math-09" viewBox="0 0 640 300">
+  <rect x="90" y="95" width="145" height="100" rx="20" fill="#dbeafe" stroke="#2563eb" stroke-width="5"/><rect x="405" y="95" width="145" height="100" rx="20" fill="#dcfce7" stroke="#15803d" stroke-width="5"/><path d="M245 125h140" stroke="#7c3aed" stroke-width="7"/><path d="m385 125-18-12v24Z" fill="#7c3aed"/><path d="M385 165H245" stroke="#f97316" stroke-width="5" stroke-dasharray="9 8"/><path d="m245 165 18-12v24Z" fill="#f97316"/><path class="cbse-pulse" d="m465 150 28-35 28 35Z" fill="#bbf7d0" stroke="#166534" stroke-width="4"/>
+</symbol>
+<symbol id="math-10" viewBox="0 0 640 300">
+  <path d="M90 245H560M120 245V210h65v35m30 0v-88h65v88m30 0V95h65v150m30 0V60h65v185m30 0v-125h65v125" fill="#bfdbfe" stroke="#2563eb" stroke-width="4"/><path d="M120 80h345" stroke="#cbd5e1" stroke-width="3" stroke-dasharray="6 7"/><path class="cbse-draw" d="M145 65c35-28 70-28 105 0s70 28 105 0 70-28 105 0" fill="none" stroke="#f97316" stroke-width="6"/><circle class="cbse-pulse" cx="355" cy="245" r="10" fill="#7c3aed"/>
+</symbol>
+<symbol id="math-11" viewBox="0 0 640 300">
+  <rect x="65" y="115" width="115" height="70" rx="18" fill="#dbeafe" stroke="#2563eb" stroke-width="4"/><path d="M180 150h72m0 0-16-12m16 12-16 12" stroke="#2563eb" stroke-width="4"/><path d="m310 85 62 65-62 65-62-65Z" fill="#fef3c7" stroke="#d97706" stroke-width="4"/><path d="M372 150h72m0 0-16-12m16 12-16 12" stroke="#2563eb" stroke-width="4"/><rect x="445" y="115" width="125" height="70" rx="18" fill="#dcfce7" stroke="#15803d" stroke-width="4"/><path class="cbse-orbit" d="M510 90c0-42-240-42-240 0" fill="none" stroke="#7c3aed" stroke-width="4" stroke-dasharray="7 7"/>
+</symbol>
+<symbol id="math-12" viewBox="0 0 640 300">
+  <path d="m150 85 280 0 95 140H245Z" fill="#dbeafe" stroke="#1d4ed8" stroke-width="5"/><path d="M150 85 525 225M430 85 245 225" stroke="#7c3aed" stroke-width="4"/><circle class="cbse-pulse" cx="338" cy="155" r="11" fill="#f97316"/><path d="M150 85 245 225M430 85 525 225" stroke="#2563eb" stroke-width="3" stroke-dasharray="7 7"/>
+</symbol>
+<symbol id="math-13" viewBox="0 0 640 300">
+  <path d="M75 245H565M315 270V35" stroke="#94a3b8" stroke-width="3"/><path d="M110 225 520 55" stroke="#2563eb" stroke-width="6"/><path d="M105 75 520 225" stroke="#f97316" stroke-width="6"/><circle class="cbse-pulse" cx="330" cy="135" r="14" fill="#7c3aed" stroke="#fff" stroke-width="4"/><path d="M330 135v110M330 135H75" stroke="#7c3aed" stroke-width="3" stroke-dasharray="5 7"/>
+</symbol>
+<symbol id="math-14" viewBox="0 0 640 300">
+  <path d="m95 130 95-55 100 55-95 55Z" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="4"/><path d="M95 130v105l100 55V185m95-55v105l-95 55" fill="#93c5fd" stroke="#1d4ed8" stroke-width="4"/><path d="M345 108c0-25 105-25 105 0v115c0 25-105 25-105 0Z" fill="#ddd6fe" stroke="#6d28d9" stroke-width="4"/><ellipse cx="397" cy="108" rx="52" ry="17" fill="#ede9fe" stroke="#6d28d9" stroke-width="4"/><circle class="cbse-orbit" cx="530" cy="160" r="58" fill="#fed7aa" stroke="#c2410c" stroke-width="4"/><path d="M470 160h120M530 102v116" stroke="#c2410c" stroke-width="3"/>
+</symbol>
+<symbol id="science-01" viewBox="0 0 640 300">
+  <path d="M115 60h75v65l60 90c15 23 1 45-26 45H85c-25 0-39-22-25-45l55-90Z" fill="#bae6fd" stroke="#0369a1" stroke-width="5"/><path d="M93 180h115M105 205h130" stroke="#0ea5e9" stroke-width="6"/><circle cx="145" cy="160" r="8" fill="#7c3aed"/><circle cx="183" cy="195" r="8" fill="#f97316"/>
+  <circle cx="420" cy="140" r="60" fill="#fef3c7" stroke="#b45309" stroke-width="7"/><path d="m465 185 74 74" stroke="#b45309" stroke-width="18" stroke-linecap="round"/><path class="cbse-pulse" d="M350 75h120M410 50v160" stroke="#2563eb" stroke-width="3" stroke-dasharray="5 8"/>
+</symbol>
+<symbol id="science-02" viewBox="0 0 640 300">
+  <path d="M100 150c0-70 75-112 190-112s190 42 190 112-75 112-190 112S100 220 100 150Z" fill="#dcfce7" stroke="#15803d" stroke-width="6"/><ellipse class="cbse-pulse" cx="280" cy="145" rx="64" ry="48" fill="#c4b5fd" stroke="#6d28d9" stroke-width="5"/><circle cx="280" cy="145" r="19" fill="#7c3aed"/><path class="cbse-float" d="M375 100c35-18 80 18 58 43-20 22-74 0-58-43Z" fill="#fda4af" stroke="#be123c" stroke-width="4"/><path d="M365 185c25-28 60-22 62-3-14 23-40 27-62 3Z" fill="#fde68a" stroke="#b45309" stroke-width="4"/>
+  <circle cx="160" cy="120" r="10" fill="#0ea5e9"/><circle cx="175" cy="193" r="8" fill="#f97316"/><circle cx="400" cy="195" r="8" fill="#0ea5e9"/>
+</symbol>
+<symbol id="science-03" viewBox="0 0 640 300">
+  <g fill="#dcfce7" stroke="#15803d" stroke-width="4"><rect x="75" y="85" width="90" height="55" rx="25"/><rect x="165" y="85" width="90" height="55" rx="25"/><rect x="255" y="85" width="90" height="55" rx="25"/><rect x="345" y="85" width="90" height="55" rx="25"/><rect x="435" y="85" width="90" height="55" rx="25"/></g><g class="cbse-float" fill="#bfdbfe" stroke="#2563eb" stroke-width="4"><path d="M90 195c40-40 78 40 118 0s78 40 118 0 78 40 118 0" fill="none" stroke-width="12"/><path d="M150 220c40-35 80 35 120 0s80 35 120 0" fill="none" stroke-width="8"/></g>
+  <path d="M110 155v25m95-25v25m95-25v25m95-25v25m95-25v25" stroke="#f97316" stroke-width="4"/><circle class="cbse-pulse" cx="510" cy="220" r="19" fill="#fde68a" stroke="#b45309" stroke-width="4"/>
+</symbol>
+<symbol id="science-04" viewBox="0 0 640 300">
+  <path d="M65 235H570M85 255V55" stroke="#94a3b8" stroke-width="3"/><path d="M100 220 190 190 300 145 415 100 520 60" fill="none" stroke="#2563eb" stroke-width="6"/><circle class="cbse-pulse" cx="415" cy="100" r="10" fill="#f97316"/>
+  <path d="m180 185 42-33 72 0 37 33v33H180Z" fill="#fcd34d" stroke="#b45309" stroke-width="4"/><circle cx="230" cy="220" r="17" fill="#1e293b"/><circle cx="300" cy="220" r="17" fill="#1e293b"/><path class="cbse-float" d="m370 80 70-24" stroke="#7c3aed" stroke-width="5" stroke-dasharray="8 7"/>
+</symbol>
+<symbol id="science-05" viewBox="0 0 640 300">
+  <path d="M100 55h80v75l95 120c15 20 0 35-22 35H62c-22 0-37-15-22-35l95-120Z" fill="#dbeafe" stroke="#2563eb" stroke-width="5"/><path d="M90 190h145M110 220h125" stroke="#0ea5e9" stroke-width="7"/><circle class="cbse-pulse" cx="155" cy="207" r="9" fill="#f97316"/>
+  <path d="M360 65h150l-65 105v80h-30v-80Z" fill="#fef3c7" stroke="#b45309" stroke-width="5"/><path d="M400 140h70" stroke="#f97316" stroke-width="7"/><circle class="cbse-float" cx="435" cy="215" r="17" fill="#c4b5fd" stroke="#6d28d9" stroke-width="4"/>
+</symbol>
+<symbol id="science-06" viewBox="0 0 640 300">
+  <rect x="255" y="105" width="130" height="100" rx="12" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="5"/><path d="M70 155H240m160 0h170" stroke="#f97316" stroke-width="8"/><path d="m240 155-22-14v28Zm130 0 22-14v28Z" fill="#f97316"/><path class="cbse-pulse" d="M320 55v42M320 213v45" stroke="#7c3aed" stroke-width="6"/><path d="m310 75 10 16 10-16m-20 162 10-16 10 16" fill="none" stroke="#7c3aed" stroke-width="5"/>
+</symbol>
+<symbol id="science-07" viewBox="0 0 640 300">
+  <path d="M110 210 460 135" stroke="#2563eb" stroke-width="12" stroke-linecap="round"/><path d="m270 210 40-76 42 58Z" fill="#fcd34d" stroke="#b45309" stroke-width="5"/><rect class="cbse-float" x="130" y="155" width="78" height="55" rx="8" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="4"/>
+  <path d="M470 70v42c0 70 95 70 95 0V70" fill="none" stroke="#7c3aed" stroke-width="5"/><circle cx="470" cy="70" r="8" fill="#7c3aed"/><circle class="cbse-pulse" cx="565" cy="70" r="8" fill="#7c3aed"/><path d="M470 70v85" stroke="#7c3aed" stroke-width="4"/><rect x="442" y="155" width="55" height="55" fill="#fed7aa" stroke="#c2410c" stroke-width="4"/>
+</symbol>
+<symbol id="science-08" viewBox="0 0 640 300">
+  <circle cx="315" cy="150" r="115" fill="none" stroke="#93c5fd" stroke-width="4"/><ellipse cx="315" cy="150" rx="155" ry="75" fill="none" stroke="#2563eb" stroke-width="4" transform="rotate(-30 315 150)"/><ellipse cx="315" cy="150" rx="155" ry="75" fill="none" stroke="#7c3aed" stroke-width="4" transform="rotate(30 315 150)"/><circle class="cbse-pulse" cx="315" cy="150" r="27" fill="#f97316"/><circle class="cbse-orbit" cx="430" cy="150" r="11" fill="#0ea5e9"/><circle class="cbse-float" cx="196" cy="91" r="10" fill="#7c3aed"/>
+</symbol>
+<symbol id="science-09" viewBox="0 0 640 300">
+  <g stroke="#2563eb" stroke-width="4"><path d="M180 100 300 65 405 125 300 190 180 100M300 65v125m105-65 45 90" fill="none"/></g><g fill="#bfdbfe" stroke="#1d4ed8" stroke-width="4"><circle cx="180" cy="100" r="22"/><circle cx="300" cy="65" r="22"/><circle cx="405" cy="125" r="22"/><circle class="cbse-pulse" cx="300" cy="190" r="22"/></g><circle class="cbse-orbit" cx="450" cy="215" r="36" fill="#fef3c7" stroke="#d97706" stroke-width="4"/><path d="M450 178v74M413 215h74" stroke="#d97706" stroke-width="3"/>
+</symbol>
+<symbol id="science-10" viewBox="0 0 640 300">
+  <path d="M70 150c45-100 90 100 135 0s90-100 135 0 90 100 135 0 90-100 135 0" fill="none" stroke="#2563eb" stroke-width="7"/><path class="cbse-draw" d="M80 225h470" stroke="#94a3b8" stroke-width="3" stroke-dasharray="5 9"/><path d="M315 60v180" stroke="#f97316" stroke-width="4" stroke-dasharray="8 7"/><circle class="cbse-pulse" cx="315" cy="150" r="13" fill="#7c3aed"/><path d="M530 90v120" stroke="#f97316" stroke-width="6"/>
+</symbol>
+<symbol id="science-11" viewBox="0 0 640 300">
+  <path d="M315 70c-5 55-5 110 0 165m0-120c-60-50-95-25-85 5 9 27 60 32 85-5Zm0 55c61-50 95-25 85 5-9 27-60 32-85-5Z" fill="#dcfce7" stroke="#15803d" stroke-width="5"/><circle cx="230" cy="115" r="12" fill="#f97316"/><circle class="cbse-pulse" cx="400" cy="170" r="12" fill="#7c3aed"/><path class="cbse-orbit" d="M165 90c40-50 87-50 120 0" fill="none" stroke="#f97316" stroke-width="4" stroke-dasharray="6 7"/>
+  <path d="M460 120c25-32 65-32 90 0v75h-90Z" fill="#fef3c7" stroke="#b45309" stroke-width="4"/><path d="M505 120v75m-45-38h90" stroke="#b45309" stroke-width="3"/>
+</symbol>
+<symbol id="science-12" viewBox="0 0 640 300">
+  <circle cx="320" cy="55" r="28" fill="#fef3c7" stroke="#b45309" stroke-width="4"/><path d="M320 83v50M320 115 180 170M320 115 460 170M180 170 110 235M180 170 245 235M460 170 395 235M460 170 530 235" fill="none" stroke="#2563eb" stroke-width="5"/>
+  <g fill="#dcfce7" stroke="#15803d" stroke-width="4"><circle class="cbse-pulse" cx="180" cy="170" r="22"/><circle cx="460" cy="170" r="22"/><circle cx="110" cy="235" r="17"/><circle cx="245" cy="235" r="17"/><circle class="cbse-float" cx="395" cy="235" r="17"/><circle cx="530" cy="235" r="17"/></g>
+</symbol>
+<symbol id="science-13" viewBox="0 0 640 300">
+  <circle cx="320" cy="150" r="110" fill="#dbeafe" stroke="#1d4ed8" stroke-width="5"/><path d="M210 150h220M320 40v220" stroke="#15803d" stroke-width="4"/><path d="M240 95a100 100 0 0 1 165-5" fill="none" stroke="#f97316" stroke-width="7"/><path d="m400 74 11 18-21-1Z" fill="#f97316"/><path class="cbse-orbit" d="M404 205a100 100 0 0 1-165 5" fill="none" stroke="#7c3aed" stroke-width="7"/><path d="m244 226-11-18 21 1Z" fill="#7c3aed"/><circle cx="320" cy="150" r="29" fill="#86efac" stroke="#15803d" stroke-width="4"/><circle class="cbse-pulse" cx="320" cy="150" r="10" fill="#f97316"/>
+</symbol>
+</svg>

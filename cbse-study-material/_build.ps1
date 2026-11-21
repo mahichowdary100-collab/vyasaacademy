@@ -442,4 +442,8 @@ Set-ContentUtf8 -Path (Join-Path $smDir 'study-tree.txt') -Value ($treeLines -jo
 Write-Host ""
 Write-Host "Done. Indexable URLs: $($indexableUrls.Count)"
 
+# Add lightweight, local Class 9 chapter illustrations after page generation.
+# The enhancer is safe to re-run and leaves static SVG artwork in the markup.
+& (Join-Path $smDir 'apply-class9-visuals.ps1')
+
 
