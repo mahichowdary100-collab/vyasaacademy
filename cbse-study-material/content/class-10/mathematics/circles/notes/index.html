@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class 10 Maths Circles Notes | CBSE | Vyasa Academy</title>
+  <meta name="description" content="Class 10 Maths Chapter 10 notes on tangent lines, radius–tangent properties, equal tangents from an external point, diagrams and original worked examples." />
+  <link rel="canonical" href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/circles/notes/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vyasa Academy" />
+  <meta property="og:title" content="Class 10 Maths Circles Notes | CBSE | Vyasa Academy" />
+  <meta property="og:description" content="Class 10 Mathematics notes for Circles: secants and tangents, the two tangent theorems, number of tangents, worked examples and revision tips." />
+  <meta property="og:url" content="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/circles/notes/" />
+  <meta property="og:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Class 10 Maths Circles Notes | CBSE | Vyasa Academy" />
+  <meta name="twitter:description" content="Learn circle and tangent properties with clear diagrams, original worked examples, proofs and exam tips." />
+  <meta name="twitter:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","itemListElement":[{"position":1,"name":"Home","item":"https://www.vyasaacademy.in/","@type":"ListItem"},{"position":2,"name":"CBSE Study Material","item":"https://www.vyasaacademy.in/cbse-study-material/","@type":"ListItem"},{"position":3,"name":"Class 10","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/","@type":"ListItem"},{"position":4,"name":"Mathematics","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/","@type":"ListItem"},{"position":5,"name":"Circles","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/circles/","@type":"ListItem"},{"position":6,"name":"Notes","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/circles/notes/","@type":"ListItem"}],"@type":"BreadcrumbList"}
+  </script>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['\\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+      processEscapes: true
+    }
+  };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <style>
+  .sm-notes { font-size: 1rem; line-height: 1.8; }
+  .sm-notes h2 { font-size: 1.45rem; color: var\(--primary\); margin: 44px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var\(--accent\); }
+  .sm-notes h3 { font-size: 1.15rem; color: var\(--dark\); margin: 28px 0 12px; }
+  .sm-notes h4 { font-size: 1.05rem; color: var\(--dark\); margin: 20px 0 8px; }
+  .sm-notes p { margin-bottom: 14px; }
+  .sm-notes ul, .sm-notes ol { margin: 10px 0 16px 24px; }
+  .sm-notes li { margin-bottom: 6px; }
+  .sm-notes ul { list-style: disc; }
+
+  .def-box { background: #eef2ff; border-left: 4px solid var\(--primary\); border-radius: 0 var\(--radius\) var\(--radius\) 0; padding: 18px 22px; margin: 18px 0; }
+  .def-box .box-label { font-weight: 700; color: var\(--primary\); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .result-box { background: #fff8e1; border-left: 4px solid var\(--accent\); border-radius: 0 var\(--radius\) var\(--radius\) 0; padding: 18px 22px; margin: 18px 0; }
+  .result-box .box-label { font-weight: 700; color: var\(--accent-dark\); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .example-box { background: #f0fdf4; border-left: 4px solid #16a34a; border-radius: 0 var\(--radius\) var\(--radius\) 0; padding: 18px 22px; margin: 18px 0; }
+  .example-box .box-label { font-weight: 700; color: #16a34a; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .tip-box { background: #eff6ff; border-left: 4px solid #2563eb; border-radius: 0 var\(--radius\) var\(--radius\) 0; padding: 18px 22px; margin: 18px 0; }
+  .tip-box .box-label { font-weight: 700; color: #2563eb; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .warn-box { background: #fef2f2; border-left: 4px solid #dc2626; border-radius: 0 var\(--radius\) var\(--radius\) 0; padding: 18px 22px; margin: 18px 0; }
+  .warn-box .box-label { font-weight: 700; color: #dc2626; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .steps { margin: 12px 0 16px; }
+  .steps .step { display: flex; gap: 12px; margin-bottom: 10px; }
+  .steps .step-num { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: var\(--primary\); color: var\(--white\); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; margin-top: 3px; }
+  .steps .step-text { flex: 1; }
+
+  .table-wrap { overflow-x: auto; margin: 16px 0; -webkit-overflow-scrolling: touch; }
+  .sm-notes table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .sm-notes th { background: var\(--primary\); color: var\(--white\); text-align: left; padding: 12px 14px; font-weight: 600; white-space: nowrap; }
+  .sm-notes td { padding: 10px 14px; border-bottom: 1px solid #e5e7eb; }
+  .sm-notes tr:nth-child(even) td { background: #f9fafb; }
+  .sm-notes tr:hover td { background: #eef2ff; }
+
+  .highlight { background: #fef9c3; padding: 2px 5px; border-radius: 4px; font-weight: 600; }
+  .qbox { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: var\(--radius\); padding: 16px 20px; margin: 12px 0; }
+  .qbox .q-label { font-weight: 700; color: var\(--primary\); margin-bottom: 4px; }
+
+  .app-box { background: #ecfeff; border-left: 4px solid #0891b2; border-radius: 0 var\(--radius\) var\(--radius\) 0; padding: 18px 22px; margin: 18px 0; }
+  .app-box .box-label { font-weight: 700; color: #0e7490; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .comp-box { background: #f5f3ff; border-left: 4px solid #7c3aed; border-radius: 0 var\(--radius\) var\(--radius\) 0; padding: 18px 22px; margin: 18px 0; }
+  .comp-box .box-label { font-weight: 700; color: #6d28d9; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .solved-box { background: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #16a34a; border-radius: var\(--radius\); padding: 18px 22px; margin: 18px 0; box-shadow: 0 2px 8px rgba\(15,23,42,.05\); }
+  .solved-box .s-label { font-weight: 700; color: #16a34a; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  .solved-box .s-part { margin: 10px 0 0; }
+  .solved-box .s-part b { color: var\(--primary\); }
+
+  .solution-box { background: #f8fafc; border-left: 4px solid var\(--primary\); border-radius: 0 var\(--radius\) var\(--radius\) 0; padding: 14px 18px; margin: 16px 0 4px; font-size: 0.95rem; }
+  .solution-box p { margin: 8px 0; }
+
+  .case-card { background: #fff; border: 1px solid #e2e8f0; border-radius: var\(--radius\); margin: 22px 0; box-shadow: 0 2px 8px rgba\(15,23,42,.05\); overflow: hidden; }
+  .case-card-header { background: linear-gradient(135deg, var\(--primary\), var\(--primary-light\)); color: #fff; padding: 14px 20px; }
+  .case-card-header h3 { margin: 0; font-size: 1.05rem; }
+  .case-card-body { padding: 18px 20px; }
+
+  .concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax\(220px, 1fr\)); gap: 14px; margin: 18px 0; }
+  .concept-card { background: #fff; border: 1px solid #e2e8f0; border-left: 4px solid var\(--primary\); border-radius: var\(--radius\); padding: 16px 18px; transition: var\(--transition\); }
+  .concept-card:hover { box-shadow: 0 6px 18px rgba\(79,70,229,.12\); transform: translateY\(-2px\); }
+  .concept-card h4 { color: var\(--primary\); margin: 0 0 6px; font-size: 1rem; }
+  .concept-card p { margin: 0; font-size: 0.92rem; }
+
+  .tag-pill { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: .4px; text-transform: uppercase; padding: 3px 10px; border-radius: 999px; vertical-align: middle; }
+  .tag-style { background: #e0e7ff; color: #3730a3; }
+
+  .sm-notes mjx-container { max-width: 100%; }
+  .sm-notes mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; }
+
+  .resource-nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
+  .resource-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: var\(--radius\); border: 2px solid #e5e7eb; font-weight: 600; font-size: 0.92rem; color: var\(--dark\); background: var\(--white\); transition: var\(--transition\); }
+  .resource-nav a:hover, .resource-nav a.is-active { border-color: var\(--primary\); background: var\(--primary\); color: var\(--white\); }
+
+  .sm-back { display: inline-flex; align-items: center; gap: 8px; margin-top: 30px; padding: 10px 0; color: var\(--primary\); font-weight: 600; }
+  .sm-back:hover { color: var\(--accent-dark\); }
+
+  .next-chapter { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; justify-content: space-between; margin-top: 26px; padding: 18px 22px; background: linear-gradient\(135deg, #eef2ff, #ffffff\); border: 1px solid #e0e7ff; border-radius: var\(--radius\); }
+  .next-chapter h3 { margin: 0; font-size: 1.02rem; }
+  .next-chapter p { margin: 4px 0 0; font-size: 0.9rem; }
+
+  @media \(max-width: 640px\) {
+    .sm-notes h2 { font-size: 1.25rem; }
+    .sm-notes { font-size: 0.95rem; }
+    .steps .step { gap: 8px; }
+    .steps .step-num { width: 22px; height: 22px; font-size: 0.75rem; }
+    .resource-nav { gap: 6px; }
+    .resource-nav a { padding: 8px 12px; font-size: 0.85rem; }
+    .concept-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media \(max-width: 420px\) {
+    .concept-grid { grid-template-columns: 1fr; }
+  }
+
+  .chapter-diagram { margin: 24px auto 30px; max-width: 980px; }
+  .chapter-diagram img { display: block; width: 100%; height: auto; border-radius: 18px; border: 1px solid #dce8ed; background: #f4f8fa; }
+  .chapter-diagram figcaption { color: var\(--muted, #526578\); font-size: .92rem; line-height: 1.6; padding: 10px 12px; }
+  .notes-toc { background: #f7f9ff; border: 1px solid #dbe3f5; border-radius: 14px; padding: 14px 20px; margin: 10px 0 30px; }
+  .notes-toc summary { color: var\(--primary\); font-size: 1.05rem; font-weight: 700; cursor: pointer; }
+  .notes-toc ul { columns: 2; column-gap: 36px; margin: 12px 0 4px 22px; }
+  .notes-toc li { break-inside: avoid; }
+  .notes-toc a { text-decoration: none; }
+  .answer-key { padding: 14px 18px; background: #f7f9fc; border-radius: 12px; border: 1px solid #e0e7ef; }
+  .answer-key summary { font-weight: 700; cursor: pointer; color: var\(--primary\); }
+  @media \(max-width: 640px\) { .notes-toc ul { columns: 1; } .chapter-diagram { margin: 18px auto 24px; } }
+  @media print { .navbar, .resource-nav, .footer, .sm-crumbs, .notes-toc, .next-chapter, .sm-back { display: none !important; } .sm-page, .sm-container { max-width: none !important; padding: 0 !important; } .chapter-diagram img { max-width: 100%; } .sm-notes h2 { break-after: avoid; } .solved-box { break-inside: avoid; } }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="/" class="logo"><i class="fas fa-graduation-cap"></i> Vyasa Academy</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="/">Home</a>
+      <a href="/#courses">Courses</a>
+      <a href="/cbse-study-material/" class="active">Study Material</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main class="sm-page">
+  <div class="container sm-container">
+    <nav class="sm-crumbs" aria-label="Breadcrumb">
+      <a href="https://www.vyasaacademy.in/">Home</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/">CBSE Study Material</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/">Class 10</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/">Mathematics</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/circles/">Circles</a> /
+      Notes
+    </nav>
+
+    <section class="sm-hero sm-hero-slim">
+      <p class="sm-eyebrow">CBSE Class 10 &middot; Mathematics</p>
+      <h1>Class 10 Mathematics &#8211; Chapter 10: Circles</h1>
+      <p>This chapter studies how a straight line meets a circle and what happens when the line just touches it. Learn the radius–tangent relationship, how the number of tangents depends on a point's position, and why two tangents from the same external point have equal lengths. Original diagrams and worked examples show each idea step by step.</p>
+    </section>
+
+    <nav class="resource-nav" aria-label="Chapter resources">
+      <a class="is-active" href="/cbse-study-material/class-10/mathematics/circles/notes/"><i class="fas fa-book-open"></i> Notes</a>
+      <a href="/cbse-study-material/class-10/mathematics/circles/practice-paper/"><i class="fas fa-file-lines"></i> Practice Paper</a>
+      <a href="/cbse-study-material/class-10/mathematics/circles/quiz/"><i class="fas fa-bullseye"></i> Quiz</a>
+      <a href="/cbse-study-material/class-10/mathematics/circles/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+    </nav>
+
+    <article class="sm-notes">
+      <nav class="notes-toc" aria-label="On this page"><details open><summary>On this page</summary><ul>
+        <li><a href="#circle-lines">A line and a circle</a></li><li><a href="#tangent">Tangent and point of contact</a></li><li><a href="#radius-theorem">Radius perpendicular to tangent</a></li><li><a href="#number-tangents">How many tangents?</a></li><li><a href="#equal-tangents">Equal tangents theorem</a></li><li><a href="#right-triangle">Tangent length and Pythagoras</a></li><li><a href="#examples">Step-by-step examples</a></li><li><a href="#mistakes">Common mistakes</a></li><li><a href="#exam-tips">Examination tips</a></li><li><a href="#revision">Quick revision</a></li><li><a href="#practice">Self-practice</a></li>
+      </ul></details></nav>
+      <section id="circle-lines"><h2>1. A straight line and a circle</h2>
+        <p>A straight line can meet a circle in three different ways. The number of common points tells us which case we have.</p>
+        <div class="concept-grid"><div class="concept-card"><h3>No common point</h3><p>The line lies outside the circle and does not meet it.</p></div><div class="concept-card"><h3>Two common points</h3><p>The line cuts the circle at two distinct points. It is called a <strong>secant</strong>.</p></div><div class="concept-card"><h3>One common point</h3><p>The line touches the circle at exactly one point. It is called a <strong>tangent</strong>.</p></div></div>
+        <p>A tangent's unique common point with the circle is its <strong>point of contact</strong> or <strong>point of tangency</strong>.</p>
+      </section>
+      <section id="tangent"><h2>2. Tangent and point of contact</h2>
+        <p>Imagine moving a secant so that its two intersection points get closer together. In the limiting position, they coincide and the line touches the circle at one point: the tangent.</p>
+        <p>In the diagram, line \(PT\) touches the circle at \(T\), whose centre is \(O\). Segment \(OT\) is the radius drawn to the point of contact.</p>
+        <figure class="chapter-diagram"><img src="/images/class-10/mathematics/chapters/circles/radius-perpendicular-to-tangent.png" alt="Circle with centre O, tangent PT touching at T, radius OT, and a right-angle marker at T" loading="lazy" decoding="async"><figcaption>The radius to the point of contact meets the tangent at a right angle. The slanted segment OP completes a right triangle.</figcaption></figure>
+      </section>
+      <section id="radius-theorem"><h2>3. The tangent is perpendicular to the radius</h2>
+        <div class="result-box"><div class="box-label">Theorem 10.1</div><p>The tangent at any point of a circle is perpendicular to the radius through the point of contact.</p></div>
+        <p>If \(PT\) is tangent at \(T\) to a circle with centre \(O\), then \(OT\perp PT\), so \(\angle OTP=90^\circ\).</p>
+        <p><strong>Useful converse:</strong> if a line through a point \(T\) on the circle is perpendicular to radius \(OT\), that line is the tangent at \(T\). The point must lie on the circle; being perpendicular to a radius somewhere else is not enough.</p>
+        <div class="tip-box"><div class="box-label">Diagram check</div><p>Mark the right angle where the radius ends on the circle. Do not place it at the centre or at the external point.</p></div>
+      </section>
+      <section id="number-tangents"><h2>4. Number of tangents from a point</h2>
+        <p>Whether a tangent can be drawn through a point depends on where that point lies relative to the circle.</p>
+        <figure class="chapter-diagram"><img src="/images/class-10/mathematics/chapters/circles/number-of-tangents-from-a-point.png" alt="Three panels show a point inside a circle with zero tangents, a point on the circle with one tangent, and an outside point with two tangents" loading="lazy" decoding="async"><figcaption>Inside: every line through the point cuts the circle twice. On the circle: there is exactly one tangent. Outside: exactly two tangents can be drawn.</figcaption></figure>
+        <div class="table-wrap"><table><thead><tr><th>Position of point P</th><th>Number of tangents</th><th>Reason</th></tr></thead><tbody><tr><td>Inside the circle</td><td>0</td><td>A line through P cuts the circle at two points.</td></tr><tr><td>On the circle</td><td>1</td><td>There is one tangent at the point of contact.</td></tr><tr><td>Outside the circle</td><td>2</td><td>Two distinct tangent lines can be drawn from P.</td></tr></tbody></table></div>
+        <p>The <strong>length of a tangent from an external point</strong> is the distance from that point to the point of contact, measured along the tangent segment.</p>
+      </section>
+      <section id="equal-tangents"><h2>5. Equal tangents from an external point</h2>
+        <div class="result-box"><div class="box-label">Theorem 10.2</div><p>The lengths of the two tangents drawn from an external point to a circle are equal.</p></div>
+        <figure class="chapter-diagram"><img src="/images/class-10/mathematics/chapters/circles/equal-tangents-from-external-point.png" alt="Two tangent segments from external point P touch a circle at T1 and T2; radii OT1 and OT2 and right angles at contact points are shown" loading="lazy" decoding="async"><figcaption>The radii to the contact points make two right triangles. The common hypotenuse and equal radii give RHS congruence.</figcaption></figure>
+        <h3>Proof using RHS congruence</h3><p>Let \(PA\) and \(PB\) touch the circle with centre \(O\) at \(A\) and \(B\). Join \(OA\), \(OB\) and \(OP\).</p>
+        <div class="steps"><div class="step"><span class="step-num">1</span><div><strong>Radii:</strong> \(OA=OB\), because both are radii of the same circle.</div></div><div class="step"><span class="step-num">2</span><div><strong>Right angles:</strong> \(OA\perp PA\) and \(OB\perp PB\), so \(\angle OAP=\angle OBP=90^\circ\).</div></div><div class="step"><span class="step-num">3</span><div><strong>Common hypotenuse:</strong> \(OP\) is common to right triangles \(\triangle OAP\) and \(\triangle OBP\).</div></div><div class="step"><span class="step-num">4</span><div><strong>Congruence and result:</strong> the triangles are congruent by RHS. Therefore, corresponding sides \(PA=PB\) \(CPCT\).</div></div></div>
+        <p>The same congruence also shows that \(OP\) bisects the angle between the two tangent segments.</p>
+      </section>
+      <section id="right-triangle"><h2>6. Tangent length and Pythagoras</h2>
+        <p>Join the centre \(O\) to the external point \(P\) and to the point of contact \(T\). Because \(OT\perp PT\), triangle \(OTP\) is right-angled at \(T\).</p>
+        <div class="formula-box"><div class="box-label">Tangent-length relationship</div><p>For radius \(r=OT\), tangent length \(t=PT\), and centre-to-external-point distance \(d=OP\):</p><p class="formula">\[d^2=r^2+t^2,\qquad t=\sqrt{d^2-r^2},\qquad d=\sqrt{r^2+t^2}.\]</p></div>
+        <p>The tangent is the shorter leg in the right triangle; \(OP\), opposite the right angle, is the hypotenuse. A useful check is \(OP>r\) for an external point.</p>
+        <figure class="chapter-diagram"><img src="/images/class-10/mathematics/chapters/circles/concentric-circles-tangent-chord.png" alt="Two concentric circles with a chord of the larger circle tangent to the smaller one at T; OT is perpendicular to chord AB and bisects it" loading="lazy" decoding="async"><figcaption>A related application: the perpendicular from a circle's centre to a chord bisects the chord. In concentric circles, the inner radius is the distance from the centre to a chord tangent to the inner circle.</figcaption></figure>
+      </section>
+      <section id="examples"><h2>7. Step-by-step examples</h2>
+        <div class="solved-box"><h3>Example 1: State the angle at contact</h3><p>A tangent touches a circle at \(T\). The centre is \(O\). Find the angle between radius \(OT\) and the tangent.</p><div class="solution"><p>By Theorem 10.1, the tangent at a point is perpendicular to the radius through that point.</p><p>\[\angle OTP=90^\circ.\]</p><p class="answer"><strong>Answer:</strong> \(90^\circ\).</p></div></div>
+        <div class="solved-box"><h3>Example 2: Find a tangent length</h3><p>A circle has radius \(5\text{ cm}\). The distance from its centre to an external point \(P\) is \(13\text{ cm}\). Find the tangent length.</p><div class="solution"><p>Let the tangent length be \(t\). Radius and tangent are perpendicular at contact, so \(OP\) is the hypotenuse:</p><p>\[t^2+5^2=13^2\Rightarrow t^2=169-25=144\Rightarrow t=12.\]</p><p>Lengths are positive, so take the positive square root.</p><p class="answer"><strong>Answer:</strong> \(12\text{ cm}\).</p></div></div>
+        <div class="solved-box"><h3>Example 3: Find the centre-to-point distance</h3><p>A circle's radius is \(7\text{ cm}\), and a tangent segment from an external point is \(24\text{ cm}\). Find the distance from the centre to that point.</p><div class="solution"><p>Use the right triangle formed by the radius and tangent:</p><p>\[OP^2=7^2+24^2=49+576=625\Rightarrow OP=25\text{ cm}.\]</p><p class="answer"><strong>Answer:</strong> \(25\text{ cm}\).</p></div></div>
+        <div class="solved-box"><h3>Example 4: Use equal tangents to find a variable</h3><p>Two tangents from \(P\) have lengths \(4x+1\text{ cm}\) and \(7x-11\text{ cm}\). Find \(x\) and the tangent length.</p><div class="solution"><p>Both are drawn from the same external point, so their lengths are equal:</p><p>\[4x+1=7x-11\Rightarrow12=3x\Rightarrow x=4.\]</p><p>Substitution gives (4\(4\)+1=17\text{ cm}); the other expression also gives \(28-11=17\text{ cm}\).</p><p class="answer"><strong>Answer:</strong> \(x=4\); each tangent is \(17\text{ cm}\).</p></div></div>
+        <div class="solved-box"><h3>Example 5: A chord tangent to an inner circle</h3><p>Two concentric circles have radii \(13\text{ cm}\) and \(5\text{ cm}\). A chord of the larger circle touches the smaller circle. Find the chord length.</p><div class="solution"><p>The perpendicular from the common centre to the chord reaches its midpoint. Its length equals the inner radius, \(5\text{ cm}\). If half the chord is \(x\), the right triangle has hypotenuse \(13\) and legs \(5,x\):</p><p>\[x^2+5^2=13^2\Rightarrow x^2=144\Rightarrow x=12\text{ cm}.\]</p><p>The full chord is twice its half:</p><p>\[AB=2x=24\text{ cm}.\]</p><p class="answer"><strong>Answer:</strong> \(24\text{ cm}\).</p></div></div>
+        <div class="solved-box"><h3>Example 6: Find the angle at the centre</h3><p>Two tangents from \(P\) touch a circle at \(A\) and \(B\). The angle between the tangents is \(60^\circ\). Find \(\angle AOB\).</p><div class="solution"><p>Radii to the contacts are perpendicular to the tangents. The four angles of quadrilateral \(OAPB\) sum to \(360^\circ\):</p><p>\[\angle AOB+90^\circ+60^\circ+90^\circ=360^\circ. \]</p><p>Therefore \(\angle AOB=120^\circ\).</p><p class="answer"><strong>Answer:</strong> \(120^\circ\).</p></div></div>
+        <div class="solved-box"><h3>Example 7: Check whether a line is tangent</h3><p>A circle has radius \(8\text{ cm}\). The perpendicular distance from the centre to a line is also \(8\text{ cm}\). What is the line's relationship to the circle?</p><div class="solution"><p>The foot of the perpendicular is \(8\text{ cm}\) from the centre, equal to the radius. Therefore that foot lies on the circle, and the line is perpendicular to the radius at the circle. By the converse tangent criterion, it is a tangent.</p><p class="answer"><strong>Answer:</strong> the line is tangent to the circle at the foot of the perpendicular.</p></div></div>
+      </section>
+      <section id="mistakes"><h2>8. Common mistakes</h2><ul>
+        <li><strong>Using the right-angle theorem at the wrong point:</strong> the radius must end at the tangent's point of contact.</li><li><strong>Calling a secant a tangent:</strong> a secant has two intersections; a tangent has one.</li><li><strong>Claiming every perpendicular line is tangent:</strong> it must be perpendicular at a point on the circle.</li><li><strong>Using equal tangent lengths from different points:</strong> the theorem compares two tangents drawn from the same external point.</li><li><strong>Putting the wrong side as hypotenuse:</strong> \(OP\), opposite the right angle at contact, is the hypotenuse.</li><li><strong>Forgetting that length is positive:</strong> reject a negative square root for a segment length.</li><li><strong>Confusing radius and diameter:</strong> use \(r\), not \(2r\), in the right triangle from the centre to contact.</li>
+      </ul></section>
+      <section id="exam-tips"><h2>9. Examination tips</h2><ul><li>Mark the contact point and right angle before applying Pythagoras.</li><li>For equal tangents, label both segments from the same external point and cite Theorem 10.2.</li><li>For the proof, state the three RHS facts: equal radii, right angles, and common hypotenuse.</li><li>When a chord touches an inner concentric circle, the inner radius is perpendicular to the chord and reaches its midpoint.</li><li>Write a short reason beside each equality: radii of same circle, tangent-radius theorem, Pythagoras, or RHS/CPCT.</li><li>Include units with every calculated length.</li></ul></section>
+      <section id="revision"><h2>10. Quick revision</h2><div class="formula-box"><p><strong>Secant:</strong> a line meeting a circle at two points.</p><p><strong>Tangent:</strong> a line meeting a circle at one point.</p><p><strong>Theorem 10.1:</strong> the radius through the contact point is perpendicular to the tangent there.</p><p><strong>Number of tangents:</strong> inside \(0\); on circle \(1\); outside \(2\).</p><p><strong>Theorem 10.2:</strong> tangent lengths from the same external point are equal.</p><p class="formula">\[OP^2=OT^2+PT^2,\qquad PT=\sqrt{OP^2-OT^2}.\]</p></div><p>Official textbook reference: NCERT Class 10 Mathematics, Chapter 10, <em>Circles</em>, Sections 10.1–10.4 and Exercises 10.1–10.2. <a href="https://ncert.nic.in/textbook/pdf/jemh110.pdf" target="_blank" rel="noopener">Open the official NCERT Chapter 10 PDF</a>. These notes use original examples and do not reproduce textbook question text.</p></section>
+      <section id="practice"><h2>11. Self-practice</h2><p>Original revision problems; use the chapter theorems and right-triangle reasoning.</p><ol><li>A circle has radius \(10\text{ cm}\). An external point is \(26\text{ cm}\) from the centre. Find a tangent length.</li><li>Two tangent segments from \(P\) have lengths \(3x+2\) and \(5x-10\). Find \(x\) and their common length.</li><li>The angle between two tangents from one external point is \(70^\circ\). Find the angle between the radii to the points of contact.</li><li>Concentric circles have radii \(12\text{ cm}\) and \(5\text{ cm}\). Find the length of a chord of the larger circle tangent to the smaller circle.</li><li>A point is \(4\text{ cm}\) from the centre of a circle of radius \(6\text{ cm}\). How many tangents can pass through it?</li><li>The radius of a circle is \(11\text{ cm}\). A line is \(11\text{ cm}\) from the centre, measured perpendicularly. Classify the line.</li></ol><details class="answer-key"><summary>Check your answers</summary><ol><li>\(24\text{ cm}\)</li><li>\(x=6\); each tangent is \(20\) units.</li><li>\(110^\circ\)</li><li>\(2\sqrt{119}\text{ cm}\) (about \(21.82\text{ cm}\)).</li><li>Zero; the point is inside the circle.</li><li>Tangent, because the perpendicular distance from the centre equals the radius.</li></ol></details></section>
+      <section id="related"><h2>12. Related resources</h2><ul><li><a href="/cbse-study-material/class-10/mathematics/some-applications-of-trigonometry/notes/">Chapter 9 &#8212; Some Applications of Trigonometry Notes</a></li><li><a href="/cbse-study-material/class-10/mathematics/circles/practice-paper/">Chapter 10 &#8212; Practice Paper</a></li><li><a href="/cbse-study-material/class-10/mathematics/circles/quiz/">Chapter 10 &#8212; Quiz</a></li><li><a href="/cbse-study-material/class-10/mathematics/circles/test/">Chapter 10 &#8212; Chapter Test</a></li><li><a href="/cbse-study-material/class-10/mathematics/circles/">Chapter 10 &#8212; Overview</a></li><li><a href="/cbse-study-material/class-10/mathematics/">Class 10 CBSE Mathematics</a></li></ul></section>
+    </article>
+
+    <nav class="resource-nav" aria-label="More from this chapter">
+      <a href="/cbse-study-material/class-10/mathematics/circles/notes/" class="is-active"><i class="fas fa-book-open"></i> Notes</a>
+      <a href="/cbse-study-material/class-10/mathematics/circles/practice-paper/"><i class="fas fa-file-lines"></i> Practice Paper</a>
+      <a href="/cbse-study-material/class-10/mathematics/circles/quiz/"><i class="fas fa-bullseye"></i> Quiz</a>
+      <a href="/cbse-study-material/class-10/mathematics/circles/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+    </nav>
+
+    <div class="next-chapter"><div><h3><i class="fas fa-arrow-right"></i> Next: Chapter 11 &#8212; Areas Related to Circles</h3><p>Continue by measuring sectors, segments, arcs and circular regions.</p></div><a class="btn btn-primary" href="/cbse-study-material/class-10/mathematics/areas-related-to-circles/">Open Chapter</a></div>
+
+    <a class="sm-back" href="/cbse-study-material/class-10/mathematics/circles/"><i class="fas fa-arrow-left"></i> Back to Chapter 10 overview</a>
+    <a class="sm-back" href="/cbse-study-material/class-10/mathematics/" style="margin-left: 12px;"><i class="fas fa-arrow-left"></i> All Mathematics chapters</a>
+
+  </div>
+</main>
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-about">
+      <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+      <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#courses">Courses</a></li>
+        <li><a href="/cbse-study-material/">Study Material</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Popular Searches</h4>
+      <ul>
+        <li><a href="/cbse-study-material/">CBSE Study Material</a></li>
+        <li><a href="/best-tuition-centre-hulimavu/">Best Tuition Centre in Hulimavu</a></li>
+        <li><a href="/cbse-tuition-hulimavu/">CBSE Tuition in Hulimavu</a></li>
+        <li><a href="/maths-tuition-hulimavu/">Maths Tuition in Hulimavu</a></li>
+        <li><a href="/science-tuition-hulimavu/">Science Tuition in Hulimavu</a></li>
+        <li><a href="/class-10-tuition-hulimavu/">Class 10 Tuition Hulimavu</a></li>
+        <li><a href="/class-12-tuition-hulimavu/">Class 12 Tuition Hulimavu</a></li>
+        <li><a href="/tuition-centre-bangalore/">Best Tuition Centre in Bangalore</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/cbse-study-material/sm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/supabase-config.js"></script>
+<script src="/supabase-auth.js"></script>
+<script src="/supabase-nav.js" defer></script>
+<script src="/chatbot/chatbot-loader.js" defer></script></body>
+</html>
