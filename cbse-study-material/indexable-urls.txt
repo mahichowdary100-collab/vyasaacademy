@@ -64,6 +64,7 @@ https://www.vyasaacademy.in/cbse-study-material/class-8/science/
 https://www.vyasaacademy.in/cbse-study-material/class-9/
 https://www.vyasaacademy.in/cbse-study-material/class-9/mathematics/
 https://www.vyasaacademy.in/cbse-study-material/class-9/mathematics/chapter-01/notes/
+https://www.vyasaacademy.in/cbse-study-material/class-9/mathematics/chapter-01/quiz/
 https://www.vyasaacademy.in/cbse-study-material/class-9/mathematics/chapter-01/solutions/
 https://www.vyasaacademy.in/cbse-study-material/class-9/mathematics/chapter-02/notes/
 https://www.vyasaacademy.in/cbse-study-material/class-9/mathematics/chapter-02/quiz/
@@ -76,6 +77,7 @@ https://www.vyasaacademy.in/cbse-study-material/class-9/mathematics/chapter-04/s
 https://www.vyasaacademy.in/cbse-study-material/class-9/mathematics/chapter-05/notes/
 https://www.vyasaacademy.in/cbse-study-material/class-9/mathematics/chapter-05/quiz/
 https://www.vyasaacademy.in/cbse-study-material/class-9/mathematics/chapter-05/solutions/
+https://www.vyasaacademy.in/cbse-study-material/class-9/mathematics/chapter-06/
 https://www.vyasaacademy.in/cbse-study-material/class-9/mathematics/chapter-06/notes/
 https://www.vyasaacademy.in/cbse-study-material/class-9/mathematics/chapter-06/quiz/
 https://www.vyasaacademy.in/cbse-study-material/class-9/mathematics/chapter-06/solutions/
@@ -84,15 +86,18 @@ https://www.vyasaacademy.in/cbse-study-material/class-9/mathematics/chapter-07/s
 https://www.vyasaacademy.in/cbse-study-material/class-9/mathematics/chapter-08/notes/
 https://www.vyasaacademy.in/cbse-study-material/class-9/mathematics/chapter-08/solutions/
 https://www.vyasaacademy.in/cbse-study-material/class-9/mathematics/chapter-09/notes/
-https://www.vyasaacademy.in/cbse-study-material/class-9/mathematics/chapter-10/solutions/
 https://www.vyasaacademy.in/cbse-study-material/class-9/mathematics/chapter-09/solutions/
+https://www.vyasaacademy.in/cbse-study-material/class-9/mathematics/chapter-10/solutions/
 https://www.vyasaacademy.in/cbse-study-material/class-9/science/
 https://www.vyasaacademy.in/cbse-study-material/class-9/science/chapter-01/notes/
+https://www.vyasaacademy.in/cbse-study-material/class-9/science/chapter-01/quiz/
 https://www.vyasaacademy.in/cbse-study-material/class-9/science/chapter-02/notes/
+https://www.vyasaacademy.in/cbse-study-material/class-9/science/chapter-02/quiz/
 https://www.vyasaacademy.in/cbse-study-material/class-9/science/chapter-03/notes/
+https://www.vyasaacademy.in/cbse-study-material/class-9/science/chapter-03/quiz/
 https://www.vyasaacademy.in/cbse-study-material/class-9/science/chapter-04/notes/
 https://www.vyasaacademy.in/cbse-study-material/class-9/science/chapter-05/notes/
-
+https://www.vyasaacademy.in/cbse-study-material/class-9/science/chapter-06/notes/
 https://www.vyasaacademy.in/cbse-study-material/class-9/science/chapter-07/notes/
 https://www.vyasaacademy.in/cbse-study-material/class-9/science/chapter-08/notes/
 https://www.vyasaacademy.in/cbse-study-material/class-9/science/chapter-09/notes/
