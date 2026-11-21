@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class 10 Maths Some Applications of Trigonometry Notes | CBSE | Vyasa Academy</title>
+  <meta name="description" content="Class 10 Maths Chapter 9 notes on heights and distances, angles of elevation and depression, right-triangle methods, worked examples and exam tips." />
+  <link rel="canonical" href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/some-applications-of-trigonometry/notes/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vyasa Academy" />
+  <meta property="og:title" content="Class 10 Maths Some Applications of Trigonometry Notes | CBSE | Vyasa Academy" />
+  <meta property="og:description" content="Class 10 Mathematics notes for Some Applications of Trigonometry: line of sight, angles of elevation and depression, heights and distances, worked examples and common mistakes." />
+  <meta property="og:url" content="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/some-applications-of-trigonometry/notes/" />
+  <meta property="og:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Class 10 Maths Some Applications of Trigonometry Notes | CBSE | Vyasa Academy" />
+  <meta name="twitter:description" content="Learn heights and distances with angles of elevation and depression, original worked examples, clear diagrams and exam tips." />
+  <meta name="twitter:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","itemListElement":[{"position":1,"name":"Home","item":"https://www.vyasaacademy.in/","@type":"ListItem"},{"position":2,"name":"CBSE Study Material","item":"https://www.vyasaacademy.in/cbse-study-material/","@type":"ListItem"},{"position":3,"name":"Class 10","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/","@type":"ListItem"},{"position":4,"name":"Mathematics","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/","@type":"ListItem"},{"position":5,"name":"Some Applications of Trigonometry","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/some-applications-of-trigonometry/","@type":"ListItem"},{"position":6,"name":"Notes","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/some-applications-of-trigonometry/notes/","@type":"ListItem"}],"@type":"BreadcrumbList"}
+  </script>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['\\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+      processEscapes: true
+    }
+  };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <style>
+  .sm-notes { font-size: 1rem; line-height: 1.8; }
+  .sm-notes h2 { font-size: 1.45rem; color: var\(--primary\); margin: 44px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var\(--accent\); }
+  .sm-notes h3 { font-size: 1.15rem; color: var\(--dark\); margin: 28px 0 12px; }
+  .sm-notes h4 { font-size: 1.05rem; color: var\(--dark\); margin: 20px 0 8px; }
+  .sm-notes p { margin-bottom: 14px; }
+  .sm-notes ul, .sm-notes ol { margin: 10px 0 16px 24px; }
+  .sm-notes li { margin-bottom: 6px; }
+  .sm-notes ul { list-style: disc; }
+
+  .def-box { background: #eef2ff; border-left: 4px solid var\(--primary\); border-radius: 0 var\(--radius\) var\(--radius\) 0; padding: 18px 22px; margin: 18px 0; }
+  .def-box .box-label { font-weight: 700; color: var\(--primary\); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .result-box { background: #fff8e1; border-left: 4px solid var\(--accent\); border-radius: 0 var\(--radius\) var\(--radius\) 0; padding: 18px 22px; margin: 18px 0; }
+  .result-box .box-label { font-weight: 700; color: var\(--accent-dark\); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .example-box { background: #f0fdf4; border-left: 4px solid #16a34a; border-radius: 0 var\(--radius\) var\(--radius\) 0; padding: 18px 22px; margin: 18px 0; }
+  .example-box .box-label { font-weight: 700; color: #16a34a; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .tip-box { background: #eff6ff; border-left: 4px solid #2563eb; border-radius: 0 var\(--radius\) var\(--radius\) 0; padding: 18px 22px; margin: 18px 0; }
+  .tip-box .box-label { font-weight: 700; color: #2563eb; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .warn-box { background: #fef2f2; border-left: 4px solid #dc2626; border-radius: 0 var\(--radius\) var\(--radius\) 0; padding: 18px 22px; margin: 18px 0; }
+  .warn-box .box-label { font-weight: 700; color: #dc2626; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .steps { margin: 12px 0 16px; }
+  .steps .step { display: flex; gap: 12px; margin-bottom: 10px; }
+  .steps .step-num { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: var\(--primary\); color: var\(--white\); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; margin-top: 3px; }
+  .steps .step-text { flex: 1; }
+
+  .table-wrap { overflow-x: auto; margin: 16px 0; -webkit-overflow-scrolling: touch; }
+  .sm-notes table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .sm-notes th { background: var\(--primary\); color: var\(--white\); text-align: left; padding: 12px 14px; font-weight: 600; white-space: nowrap; }
+  .sm-notes td { padding: 10px 14px; border-bottom: 1px solid #e5e7eb; }
+  .sm-notes tr:nth-child(even) td { background: #f9fafb; }
+  .sm-notes tr:hover td { background: #eef2ff; }
+
+  .highlight { background: #fef9c3; padding: 2px 5px; border-radius: 4px; font-weight: 600; }
+  .qbox { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: var\(--radius\); padding: 16px 20px; margin: 12px 0; }
+  .qbox .q-label { font-weight: 700; color: var\(--primary\); margin-bottom: 4px; }
+
+  .app-box { background: #ecfeff; border-left: 4px solid #0891b2; border-radius: 0 var\(--radius\) var\(--radius\) 0; padding: 18px 22px; margin: 18px 0; }
+  .app-box .box-label { font-weight: 700; color: #0e7490; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .comp-box { background: #f5f3ff; border-left: 4px solid #7c3aed; border-radius: 0 var\(--radius\) var\(--radius\) 0; padding: 18px 22px; margin: 18px 0; }
+  .comp-box .box-label { font-weight: 700; color: #6d28d9; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .solved-box { background: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #16a34a; border-radius: var\(--radius\); padding: 18px 22px; margin: 18px 0; box-shadow: 0 2px 8px rgba\(15,23,42,.05\); }
+  .solved-box .s-label { font-weight: 700; color: #16a34a; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  .solved-box .s-part { margin: 10px 0 0; }
+  .solved-box .s-part b { color: var\(--primary\); }
+
+  .solution-box { background: #f8fafc; border-left: 4px solid var\(--primary\); border-radius: 0 var\(--radius\) var\(--radius\) 0; padding: 14px 18px; margin: 16px 0 4px; font-size: 0.95rem; }
+  .solution-box p { margin: 8px 0; }
+
+  .case-card { background: #fff; border: 1px solid #e2e8f0; border-radius: var\(--radius\); margin: 22px 0; box-shadow: 0 2px 8px rgba\(15,23,42,.05\); overflow: hidden; }
+  .case-card-header { background: linear-gradient(135deg, var\(--primary\), var\(--primary-light\)); color: #fff; padding: 14px 20px; }
+  .case-card-header h3 { margin: 0; font-size: 1.05rem; }
+  .case-card-body { padding: 18px 20px; }
+
+  .concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax\(220px, 1fr\)); gap: 14px; margin: 18px 0; }
+  .concept-card { background: #fff; border: 1px solid #e2e8f0; border-left: 4px solid var\(--primary\); border-radius: var\(--radius\); padding: 16px 18px; transition: var\(--transition\); }
+  .concept-card:hover { box-shadow: 0 6px 18px rgba\(79,70,229,.12\); transform: translateY\(-2px\); }
+  .concept-card h4 { color: var\(--primary\); margin: 0 0 6px; font-size: 1rem; }
+  .concept-card p { margin: 0; font-size: 0.92rem; }
+
+  .tag-pill { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: .4px; text-transform: uppercase; padding: 3px 10px; border-radius: 999px; vertical-align: middle; }
+  .tag-style { background: #e0e7ff; color: #3730a3; }
+
+  .sm-notes mjx-container { max-width: 100%; }
+  .sm-notes mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; }
+
+  .resource-nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
+  .resource-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: var\(--radius\); border: 2px solid #e5e7eb; font-weight: 600; font-size: 0.92rem; color: var\(--dark\); background: var\(--white\); transition: var\(--transition\); }
+  .resource-nav a:hover, .resource-nav a.is-active { border-color: var\(--primary\); background: var\(--primary\); color: var\(--white\); }
+
+  .sm-back { display: inline-flex; align-items: center; gap: 8px; margin-top: 30px; padding: 10px 0; color: var\(--primary\); font-weight: 600; }
+  .sm-back:hover { color: var\(--accent-dark\); }
+
+  .next-chapter { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; justify-content: space-between; margin-top: 26px; padding: 18px 22px; background: linear-gradient\(135deg, #eef2ff, #ffffff\); border: 1px solid #e0e7ff; border-radius: var\(--radius\); }
+  .next-chapter h3 { margin: 0; font-size: 1.02rem; }
+  .next-chapter p { margin: 4px 0 0; font-size: 0.9rem; }
+
+  @media \(max-width: 640px\) {
+    .sm-notes h2 { font-size: 1.25rem; }
+    .sm-notes { font-size: 0.95rem; }
+    .steps .step { gap: 8px; }
+    .steps .step-num { width: 22px; height: 22px; font-size: 0.75rem; }
+    .resource-nav { gap: 6px; }
+    .resource-nav a { padding: 8px 12px; font-size: 0.85rem; }
+    .concept-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media \(max-width: 420px\) {
+    .concept-grid { grid-template-columns: 1fr; }
+  }
+
+  .chapter-diagram { margin: 24px auto 30px; max-width: 980px; }
+  .chapter-diagram img { display: block; width: 100%; height: auto; border-radius: 18px; border: 1px solid #dce8ed; background: #f4f8fa; }
+  .chapter-diagram figcaption { color: var\(--muted, #526578\); font-size: .92rem; line-height: 1.6; padding: 10px 12px; }
+  .notes-toc { background: #f7f9ff; border: 1px solid #dbe3f5; border-radius: 14px; padding: 14px 20px; margin: 10px 0 30px; }
+  .notes-toc summary { color: var\(--primary\); font-size: 1.05rem; font-weight: 700; cursor: pointer; }
+  .notes-toc ul { columns: 2; column-gap: 36px; margin: 12px 0 4px 22px; }
+  .notes-toc li { break-inside: avoid; }
+  .notes-toc a { text-decoration: none; }
+  .answer-key { padding: 14px 18px; background: #f7f9fc; border-radius: 12px; border: 1px solid #e0e7ef; }
+  .answer-key summary { font-weight: 700; cursor: pointer; color: var\(--primary\); }
+  @media \(max-width: 640px\) { .notes-toc ul { columns: 1; } .chapter-diagram { margin: 18px auto 24px; } }
+  @media print { .navbar, .resource-nav, .footer, .sm-crumbs, .notes-toc, .next-chapter, .sm-back { display: none !important; } .sm-page, .sm-container { max-width: none !important; padding: 0 !important; } .chapter-diagram img { max-width: 100%; } .sm-notes h2 { break-after: avoid; } .solved-box { break-inside: avoid; } }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="/" class="logo"><i class="fas fa-graduation-cap"></i> Vyasa Academy</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="/">Home</a>
+      <a href="/#courses">Courses</a>
+      <a href="/cbse-study-material/" class="active">Study Material</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main class="sm-page">
+  <div class="container sm-container">
+    <nav class="sm-crumbs" aria-label="Breadcrumb">
+      <a href="https://www.vyasaacademy.in/">Home</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/">CBSE Study Material</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/">Class 10</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/">Mathematics</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/some-applications-of-trigonometry/">Some Applications of Trigonometry</a> /
+      Notes
+    </nav>
+
+    <section class="sm-hero sm-hero-slim">
+      <p class="sm-eyebrow">CBSE Class 10 &middot; Mathematics</p>
+      <h1>Class 10 Mathematics &#8211; Chapter 9: Some Applications of Trigonometry</h1>
+      <p>Trigonometry becomes a practical measuring tool in this chapter. Learn how a line of sight, an angle of elevation or depression, and a right triangle help estimate heights and distances that are difficult to measure directly. These original notes explain the diagrams, formulas, worked methods and checks step by step.</p>
+    </section>
+
+    <nav class="resource-nav" aria-label="Chapter resources">
+      <a class="is-active" href="/cbse-study-material/class-10/mathematics/some-applications-of-trigonometry/notes/"><i class="fas fa-book-open"></i> Notes</a>
+      <a href="/cbse-study-material/class-10/mathematics/some-applications-of-trigonometry/practice-paper/"><i class="fas fa-file-lines"></i> Practice Paper</a>
+      <a href="/cbse-study-material/class-10/mathematics/some-applications-of-trigonometry/quiz/"><i class="fas fa-bullseye"></i> Quiz</a>
+      <a href="/cbse-study-material/class-10/mathematics/some-applications-of-trigonometry/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+    </nav>
+
+    <article class="sm-notes">
+      <nav class="notes-toc" aria-label="On this page"><details open><summary>On this page</summary><ul>
+        <li><a href="#idea">The measuring idea</a></li><li><a href="#sight-lines">Line of sight and angles</a></li><li><a href="#models">Build the right-triangle model</a></li><li><a href="#ratios">Choosing a trigonometric ratio</a></li><li><a href="#workflow">A reliable solution method</a></li><li><a href="#examples">Step-by-step examples</a></li><li><a href="#mistakes">Common mistakes</a></li><li><a href="#exam-tips">Examination tips</a></li><li><a href="#revision">Quick revision</a></li><li><a href="#practice">Self-practice</a></li>
+      </ul></details></nav>
+      <section id="idea"><h2>1. The measuring idea</h2>
+        <p>Some distances are awkward to measure directly: the height of a tower, the width of a river, or the distance from a viewing point to the foot of a structure. If we can measure an angle and one suitable length, trigonometric ratios let us calculate the unknown side of a right triangle.</p>
+        <div class="result-box"><div class="box-label">Chapter focus</div><p>Represent the situation with a clear right-angled triangle, identify the known angle and side, select a ratio, and solve for the required height or distance.</p></div>
+        <ul><li><strong>Height</strong> is a vertical distance.</li><li><strong>Horizontal distance</strong> is measured along a level line.</li><li><strong>Line of sight</strong> is the straight line from the observer's eye to the object being viewed.</li></ul>
+      </section>
+      <section id="sight-lines"><h2>2. Line of sight, elevation and depression</h2>
+        <p>The line of sight and a horizontal line through the observer form the angle used in the problem.</p>
+        <div class="concept-grid"><div class="concept-card"><h3>Angle of elevation</h3><p>When the observer looks upward, the angle between the horizontal through the observer and the upward line of sight is the <strong>angle of elevation</strong>.</p></div><div class="concept-card"><h3>Angle of depression</h3><p>When the observer looks downward, the angle between the horizontal through the observer and the downward line of sight is the <strong>angle of depression</strong>.</p></div></div>
+        <figure class="chapter-diagram"><img src="/images/class-10/mathematics/chapters/some-applications-of-trigonometry/angle-of-elevation.png" alt="Right triangle showing vertical height h, horizontal ground distance d, and angle of elevation theta at the observer" loading="lazy" decoding="async"><figcaption><strong>Elevation:</strong> measure the angle upward from the observer's horizontal. The vertical object, ground and line of sight form a right triangle.</figcaption></figure>
+        <figure class="chapter-diagram"><img src="/images/class-10/mathematics/chapters/some-applications-of-trigonometry/angle-of-depression.png" alt="Observer at height h looks down at an object a horizontal distance d away; theta marks the angle of depression" loading="lazy" decoding="async"><figcaption><strong>Depression:</strong> draw the horizontal through the observer first. Since it is parallel to the ground, the angle of depression equals the corresponding angle of elevation at the object.</figcaption></figure>
+        <div class="tip-box"><div class="box-label">Why the two angles match</div><p>The horizontal through the observer and the ground are parallel. The line of sight is a transversal, so the angle of depression equals the alternate interior angle of elevation. This lets us use the same right-triangle ratios.</p></div>
+      </section>
+      <section id="models"><h2>3. Build the right-triangle model</h2>
+        <ol><li>Mark the top and foot of the object, the observer and the line of sight.</li><li>Draw a horizontal from the observer and a vertical through the object's foot. A vertical and horizontal meet at \(90^\circ\).</li><li>Mark the measured angle at the observer. For a depression angle, use its equal angle of elevation at the ground point.</li><li>Label known and unknown sides. Add the observer's eye height separately if the observer is above ground.</li></ol>
+        <figure class="chapter-diagram"><img src="/images/class-10/mathematics/chapters/some-applications-of-trigonometry/two-observation-points.png" alt="Two observation points looking at the same tower; the nearer point has a larger angle of elevation than the farther point" loading="lazy" decoding="async"><figcaption>For two points on the same level, the same object height appears in both triangles. The closer point has the larger angle of elevation.</figcaption></figure>
+      </section>
+      <section id="ratios"><h2>4. Choosing a trigonometric ratio</h2>
+        <p>For an acute angle \(\theta\), name sides relative to that angle: opposite, adjacent and hypotenuse. The hypotenuse is always opposite the right angle.</p>
+        <div class="table-wrap"><table><thead><tr><th>Side pair</th><th>Ratio</th><th>Useful rearrangement</th></tr></thead><tbody>
+          <tr><td>Opposite and adjacent</td><td>\\(\tan\theta=\dfrac{\text{opposite}}{\text{adjacent}}\)</td><td>\\(\text{opposite}=\text{adjacent}\tan\theta\)</td></tr><tr><td>Opposite and hypotenuse</td><td>\\(\sin\theta=\dfrac{\text{opposite}}{\text{hypotenuse}}\)</td><td>\\(\text{opposite}=\text{hypotenuse}\sin\theta\)</td></tr><tr><td>Adjacent and hypotenuse</td><td>\\(\cos\theta=\dfrac{\text{adjacent}}{\text{hypotenuse}}\)</td><td>\\(\text{adjacent}=\text{hypotenuse}\cos\theta\)</td></tr>
+        </tbody></table></div>
+        <div class="formula-box"><div class="box-label">Most common setup</div><p>If vertical height is \(h\), horizontal distance is \(d\), and elevation angle is \(\theta\), then</p><p class="formula">\[\tan\theta=\frac{h}{d},\qquad h=d\tan\theta,\qquad d=\frac{h}{\tan\theta}.\]</p></div>
+        <p>Use sine or cosine when the given length is the line of sight (the hypotenuse). Choose the ratio connecting the two sides in the question.</p>
+        <div class="table-wrap"><table><thead><tr><th>Angle</th><th>\\(\sin\theta\)</th><th>\\(\cos\theta\)</th><th>\\(\tan\theta\)</th></tr></thead><tbody><tr><td>\\(30^\circ\)</td><td>\\(\frac12\)</td><td>\\(\frac{\sqrt3}{2}\)</td><td>\\(\frac1{\sqrt3}\)</td></tr><tr><td>\\(45^\circ\)</td><td>\\(\frac1{\sqrt2}\)</td><td>\\(\frac1{\sqrt2}\)</td><td>\\(1\)</td></tr><tr><td>\\(60^\circ\)</td><td>\\(\frac{\sqrt3}{2}\)</td><td>\\(\frac12\)</td><td>\\(\sqrt3\)</td></tr></tbody></table></div>
+      </section>
+      <section id="workflow"><h2>5. A reliable solution method</h2><div class="steps">
+        <div class="step"><span class="step-num">1</span><div><strong>Sketch and label.</strong> Mark the right angle, horizontal, line of sight and measured angle.</div></div><div class="step"><span class="step-num">2</span><div><strong>Translate the wording.</strong> Decide whether the angle is elevation or depression and whether height is measured from eye level or ground.</div></div><div class="step"><span class="step-num">3</span><div><strong>Choose a ratio.</strong> Identify opposite, adjacent and hypotenuse relative to the marked angle.</div></div><div class="step"><span class="step-num">4</span><div><strong>Solve exactly.</strong> Substitute known values and retain exact forms such as \(8\sqrt3\) until the last step.</div></div><div class="step"><span class="step-num">5</span><div><strong>Check and state.</strong> Adjust for eye height if needed, include units and check whether the result fits the diagram.</div></div>
+      </div></section>
+      <section id="examples"><h2>6. Step-by-step examples</h2>
+        <div class="solved-box"><h3>Example 1: Find a tower's height</h3><p>An observer stands \(24\text{ m}\) from a tower's foot. Its top is seen at \(30^\circ\). Find its height.</p><div class="solution"><p>Let the height be \(h\). Tangent connects opposite and adjacent sides:</p><p>\[\tan30^\circ=\frac{h}{24}\Rightarrow h=24\cdot\frac1{\sqrt3}=8\sqrt3\text{ m}\approx13.86\text{ m}.\]</p><p class="answer"><strong>Answer:</strong> \(8\sqrt3\text{ m}\) (about \(13.86\text{ m}\)).</p></div></div>
+        <div class="solved-box"><h3>Example 2: Include eye height</h3><p>A student's eye is \(1.6\text{ m}\) above level ground. From \(18\text{ m}\) away, the building top is at \(45^\circ\). Find the building's height.</p><div class="solution"><p>Height above eye level is \(18\tan45^\circ=18\text{ m}\). Add eye height:</p><p>\[H=18+1.6=19.6\text{ m}.\]</p><p class="answer"><strong>Answer:</strong> \(19.6\text{ m}\).</p></div></div>
+        <div class="solved-box"><h3>Example 3: Horizontal distance from depression</h3><p>From a \(24\text{ m}\)-high tower, the angle of depression to a point on level ground is \(30^\circ\). Find its distance from the tower's foot.</p><div class="solution"><p>The equal elevation angle at the ground point is \(30^\circ\). If distance is \(d\):</p><p>\[\tan30^\circ=\frac{24}{d}\Rightarrow d=24\sqrt3\text{ m}\approx41.57\text{ m}.\]</p><p class="answer"><strong>Answer:</strong> \(24\sqrt3\text{ m}\) (about \(41.57\text{ m}\)).</p></div></div>
+        <div class="solved-box"><h3>Example 4: Two observation points</h3><p>From the nearer point, a tower is seen at \(60^\circ\); from a point \(16\text{ m}\) farther along the same level path, it is seen at \(30^\circ\). Find the nearer distance and tower height.</p><div class="solution"><p>Let the nearer distance be \(x\text{ m}\) and height be \(h\text{ m}\). Then</p><p>\[h=x\tan60^\circ=\sqrt3x,\qquad h=\(x+16\)\tan30^\circ=\frac{x+16}{\sqrt3}.\]</p><p>Equating gives \(3x=x+16\), so \(x=8\). Thus \(h=8\sqrt3\text{ m}\).</p><p class="answer"><strong>Answer:</strong> nearer distance \(8\text{ m}\); height \(8\sqrt3\text{ m}\) (about \(13.86\text{ m}\)).</p></div></div>
+        <div class="solved-box"><h3>Example 5: Flagstaff on a building</h3><p>From a ground point, the roof of a \(12\text{ m}\)-high building is seen at \(30^\circ\), and the flagstaff top at \(45^\circ\). Find the flagstaff height.</p><div class="solution"><p>First find the horizontal distance using the roof:</p><p>\[\tan30^\circ=\frac{12}{d}\Rightarrow d=12\sqrt3\text{ m}.\]</p><p>Total height to the top is \(d\tan45^\circ=12\sqrt3\text{ m}\). Subtract building height:</p><p>\[12\sqrt3-12=12\(\sqrt3-1\)\text{ m}\approx8.78\text{ m}.\]</p><p class="answer"><strong>Answer:</strong> (12\(\sqrt3-1\)\text{ m}) (about \(8.78\text{ m}\)).</p></div></div>
+        <div class="solved-box"><h3>Example 6: Compare two shadow lengths</h3><p>A vertical pole casts shadows when the sun's elevation is \(30^\circ\) and \(60^\circ\). The longer shadow is \(18\text{ m}\) longer. Find the pole's height.</p><div class="solution"><p>For height \(h\), shadow lengths are \(h\cot30^\circ=h\sqrt3\) and \(h\cot60^\circ=\frac{h}{\sqrt3}\). So</p><p>\[h\sqrt3-\frac{h}{\sqrt3}=18\Rightarrow\frac{2h}{\sqrt3}=18\Rightarrow h=9\sqrt3\text{ m}\approx15.59\text{ m}.\]</p><p class="answer"><strong>Answer:</strong> \(9\sqrt3\text{ m}\) (about \(15.59\text{ m}\)).</p></div></div>
+        <div class="solved-box"><h3>Example 7: A level span with two markers</h3><p>An observer is \(6\text{ m}\) above a level span. Angles of depression to markers on opposite sides of the point directly below are \(45^\circ\) and \(30^\circ\). Find the distance between them.</p><div class="solution"><p>Horizontal distances from the foot point are \(6\cot45^\circ=6\text{ m}\) and \(6\cot30^\circ=6\sqrt3\text{ m}\). The markers are on opposite sides, so add:</p><p>\[D=6+6\sqrt3=6\(1+\sqrt3\)\text{ m}\approx16.39\text{ m}.\]</p><p class="answer"><strong>Answer:</strong> (6\(1+\sqrt3\)\text{ m}) (about \(16.39\text{ m}\)).</p></div></div>
+        <div class="solved-box"><h3>Example 8: Ladder against a wall</h3><p>A \(5\text{ m}\) ladder makes a \(60^\circ\) angle with level ground. Find its vertical reach and the foot's distance from the wall.</p><div class="solution"><p>The ladder is the hypotenuse:</p><p>\[\text{height}=5\sin60^\circ=\frac{5\sqrt3}{2}\text{ m},\qquad\text{distance}=5\cos60^\circ=2.5\text{ m}.\]</p><p class="answer"><strong>Answer:</strong> reach \(\frac{5\sqrt3}{2}\text{ m}\) (about \(4.33\text{ m}\)); foot distance \(2.5\text{ m}\).</p></div></div>
+      </section>
+      <section id="mistakes"><h2>7. Common mistakes</h2><ul><li><strong>Measuring from the vertical:</strong> elevation and depression are measured from a horizontal line.</li><li><strong>Mixing the side ratio:</strong> tangent uses vertical height over horizontal distance.</li><li><strong>Forgetting eye height:</strong> add it when converting eye-level height to total height from ground.</li><li><strong>Adding/subtracting the wrong heights:</strong> check if the question asks total height or only a part above a roof/platform.</li><li><strong>Adding distances on the same side:</strong> use the difference for separation on one side; add only if the required span crosses the foot point.</li><li><strong>Rounding too soon:</strong> keep exact radicals until the final line.</li><li><strong>Omitting units:</strong> state metres or the units given.</li></ul></section>
+      <section id="exam-tips"><h2>8. Examination tips</h2><ul><li>Draw a labelled right triangle, even if none is provided.</li><li>Write opposite, adjacent and hypotenuse relative to the marked angle before selecting a ratio.</li><li>For depression, copy the angle to the ground point using parallel horizontals.</li><li>For multiple observation points, set a variable for the nearer distance and equate expressions for the same height.</li><li>Keep exact values such as \(24\sqrt3\), adding a decimal only when useful or requested.</li><li>Say whether the result is total height, horizontal distance or line-of-sight length.</li></ul></section>
+      <section id="revision"><h2>9. Quick revision</h2><div class="formula-box"><p><strong>Elevation:</strong> upward line of sight from observer's horizontal.</p><p><strong>Depression:</strong> downward line of sight from observer's horizontal.</p><p><strong>Corresponding angles:</strong> depression = elevation.</p><p class="formula">\[\tan\theta=\frac{\text{vertical height}}{\text{horizontal distance}}\]</p><p><strong>Eye height:</strong> total object height = height above eye level + observer's eye height.</p><p><strong>Line-of-sight length:</strong> use sine for vertical height and cosine for horizontal distance.</p></div><p>Official NCERT reference: <a href="https://ncert.nic.in/textbook/pdf/jemh109.pdf" target="_blank" rel="noopener">Chapter 9, Some Applications of Trigonometry (PDF)</a>, section 9.1, “Heights and Distances.” Follow your textbook edition for exercise numbering.</p></section>
+      <section id="practice"><h2>10. Self-practice</h2><p>Original revision prompts; these do not reproduce textbook questions.</p><ol><li>From a point \(15\text{ m}\) from a pole's foot, its top is seen at \(45^\circ\). Find its height.</li><li>A \(20\text{ m}\) tower is viewed at \(30^\circ\). Find the horizontal distance.</li><li>An observer's eye is \(1.5\text{ m}\) above ground and \(10\text{ m}\) from a wall. The top is at \(60^\circ\). Find the wall height.</li><li>At \(12\text{ m}\) from a tower, elevation is \(30^\circ\). Find its height exactly and approximately.</li><li>A \(10\text{ m}\) cable from level ground to a pole top makes \(30^\circ\) with the ground. Find height and horizontal distance.</li></ol><details class="answer-key"><summary>Check your answers</summary><ol><li>\(15\text{ m}\)</li><li>\(20\sqrt3\text{ m}\approx34.64\text{ m}\)</li><li>\(10\sqrt3+1.5\text{ m}\approx18.82\text{ m}\)</li><li>\(4\sqrt3\text{ m}\approx6.93\text{ m}\)</li><li>Height \(5\text{ m}\); horizontal distance \(5\sqrt3\text{ m}\)</li></ol></details></section>
+      <section id="related"><h2>11. Related resources</h2><ul><li><a href="/cbse-study-material/class-10/mathematics/introduction-to-trigonometry/notes/">Chapter 8 &#8212; Introduction to Trigonometry Notes</a></li><li><a href="/cbse-study-material/class-10/mathematics/some-applications-of-trigonometry/practice-paper/">Chapter 9 &#8212; Practice Paper</a></li><li><a href="/cbse-study-material/class-10/mathematics/some-applications-of-trigonometry/quiz/">Chapter 9 &#8212; Quiz</a></li><li><a href="/cbse-study-material/class-10/mathematics/some-applications-of-trigonometry/test/">Chapter 9 &#8212; Chapter Test</a></li><li><a href="/cbse-study-material/class-10/mathematics/some-applications-of-trigonometry/">Chapter 9 &#8212; Overview</a></li><li><a href="/cbse-study-material/class-10/mathematics/">Class 10 CBSE Mathematics</a></li></ul></section>
+    </article>
+
+    <nav class="resource-nav" aria-label="More from this chapter">
+      <a href="/cbse-study-material/class-10/mathematics/some-applications-of-trigonometry/notes/" class="is-active"><i class="fas fa-book-open"></i> Notes</a>
+      <a href="/cbse-study-material/class-10/mathematics/some-applications-of-trigonometry/practice-paper/"><i class="fas fa-file-lines"></i> Practice Paper</a>
+      <a href="/cbse-study-material/class-10/mathematics/some-applications-of-trigonometry/quiz/"><i class="fas fa-bullseye"></i> Quiz</a>
+      <a href="/cbse-study-material/class-10/mathematics/some-applications-of-trigonometry/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+    </nav>
+
+    <div class="next-chapter"><div><h3><i class="fas fa-arrow-right"></i> Next: Chapter 10 &#8212; Circles</h3><p>Continue with tangents and the geometric properties of circles.</p></div><a class="btn btn-primary" href="/cbse-study-material/class-10/mathematics/circles/">Open Chapter</a></div>
+    <a class="sm-back" href="/cbse-study-material/class-10/mathematics/some-applications-of-trigonometry/"><i class="fas fa-arrow-left"></i> Back to Chapter 9 overview</a>
+    <a class="sm-back" href="/cbse-study-material/class-10/mathematics/" style="margin-left: 12px;"><i class="fas fa-arrow-left"></i> All Mathematics chapters</a>
+
+  </div>
+</main>
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-about">
+      <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+      <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#courses">Courses</a></li>
+        <li><a href="/cbse-study-material/">Study Material</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Popular Searches</h4>
+      <ul>
+        <li><a href="/cbse-study-material/">CBSE Study Material</a></li>
+        <li><a href="/best-tuition-centre-hulimavu/">Best Tuition Centre in Hulimavu</a></li>
+        <li><a href="/cbse-tuition-hulimavu/">CBSE Tuition in Hulimavu</a></li>
+        <li><a href="/maths-tuition-hulimavu/">Maths Tuition in Hulimavu</a></li>
+        <li><a href="/science-tuition-hulimavu/">Science Tuition in Hulimavu</a></li>
+        <li><a href="/class-10-tuition-hulimavu/">Class 10 Tuition Hulimavu</a></li>
+        <li><a href="/class-12-tuition-hulimavu/">Class 12 Tuition Hulimavu</a></li>
+        <li><a href="/tuition-centre-bangalore/">Best Tuition Centre in Bangalore</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/cbse-study-material/sm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/supabase-config.js"></script>
+<script src="/supabase-auth.js"></script>
+<script src="/supabase-nav.js" defer></script>
+<script src="/chatbot/chatbot-loader.js" defer></script></body>
+</html>
