@@ -1,16 +1,20 @@
-# Applies static chapter-art fallbacks and optional progressive animation to
-# generated Class 9 pages. Run at the end of _build.ps1; safe to run repeatedly.
+# Applies optimized chapter images and optional pointer depth to generated
+# Class 9 pages. Run at the end of _build.ps1; safe to run repeatedly.
 $ErrorActionPreference = 'Stop'
 $smDir = $PSScriptRoot
 $data = Get-Content -LiteralPath (Join-Path $smDir 'study-data.json') -Raw -Encoding UTF8 | ConvertFrom-Json
 $class9 = @($data.classes | Where-Object { [int]$_.number -eq 9 })[0]
 if (-not $class9) { throw 'Class 9 was not found in study-data.json' }
 $assetBase = '/cbse-study-material/class-9/'
-$sprite = $assetBase + 'chapter-art.svg'
+$imageBase = $assetBase + 'images/'
+$imageDir = Join-Path $smDir 'class-9/images'
 $cssPath = Join-Path $smDir 'class-9/chapter-visuals.css'
 $scriptPath = Join-Path $smDir 'class-9/chapter-visuals.js'
-if (-not (Test-Path $cssPath) -or -not (Test-Path $scriptPath) -or -not (Test-Path (Join-Path $smDir 'class-9/chapter-art.svg'))) {
+if (-not (Test-Path $cssPath) -or -not (Test-Path $scriptPath) -or -not (Test-Path $imageDir)) {
   throw 'Class 9 chapter visual assets are missing.'
+}
+foreach ($artId in @('math-hub', 'science-hub') + @($class9.subjects | ForEach-Object { $subjectKey = if ($_.slug -eq 'mathematics') { 'math' } else { 'science' }; $_.chapters | ForEach-Object { $subjectKey + '-' + ([int]$_.number).ToString('00') } })) {
+  if (-not (Test-Path -LiteralPath (Join-Path $imageDir ($artId + '.webp')))) { throw "Class 9 chapter image is missing: $artId.webp" }
 }
 
 function Add-VisualAssets([string]$html, [string]$scope, [string]$subject, [string]$chapter) {
@@ -31,13 +35,15 @@ function Add-VisualAssets([string]$html, [string]$scope, [string]$subject, [stri
     $js = '<script src="/cbse-study-material/class-9/chapter-visuals.js?v=1" defer></script>'
     $html = $html.Replace('</body>', $js + "`n</body>")
   }
+  $html = $html.Replace('chapter-visuals.css?v=1', 'chapter-visuals.css?v=2').Replace('chapter-visuals.js?v=1', 'chapter-visuals.js?v=2')
   return $html
 }
 
 function New-ArtMarkup([string]$artId, [string]$extraClass) {
   $class = 'cbse-chapter-art' + $(if ($extraClass) { ' ' + $extraClass } else { '' })
-  $use = $script:sprite + '#' + $artId
-  return '<div class="' + $class + '" data-art-id="' + $artId + '" aria-hidden="true"><svg viewBox="0 0 640 300" focusable="false"><use href="' + $use + '" xlink:href="' + $use + '"></use></svg></div>'
+  $loading = if ($extraClass -match 'cbse-hero-art') { 'loading="eager" fetchpriority="high"' } else { 'loading="lazy"' }
+  $image = $script:imageBase + $artId + '.webp'
+  return '<div class="' + $class + '" data-art-id="' + $artId + '" aria-hidden="true"><img src="' + $image + '" alt="" width="640" height="320" ' + $loading + ' decoding="async" /></div>'
 }
 
 function Add-HeroBrand([string]$html) {
@@ -46,6 +52,15 @@ function Add-HeroBrand([string]$html) {
     return [regex]::Replace($html, '<p\b[^>]*class="[^"]*cbse-hero-brand[^"]*"[^>]*>.*?</p>', $brand, 1)
   }
   return [regex]::Replace($html, '(<section\b[^>]*class="[^"]*sm-hero[^>]*>)', ('$1' + "`n      " + $brand), 1)
+}
+
+function Refresh-ArtMarkup([string]$html) {
+  $pattern = '(?s)<div class="([^"]*\bcbse-chapter-art\b[^"]*)" data-art-id="([^"]+)" aria-hidden="true">.*?</div>'
+  return [regex]::Replace($html, $pattern, {
+    param($match)
+    $extraClass = (($match.Groups[1].Value -split '\s+') | Where-Object { $_ -and $_ -ne 'cbse-chapter-art' }) -join ' '
+    New-ArtMarkup $match.Groups[2].Value $extraClass
+  })
 }
 
 function Add-SubjectChapterCards([string]$html, [string]$subjectKey) {
@@ -82,7 +97,10 @@ function Add-SubjectCards([string]$html) {
 }
 
 function Save-Page([string]$path, [string]$html) {
-  if (Test-Path -LiteralPath $path) { [System.IO.File]::WriteAllText($path, $html, [System.Text.UTF8Encoding]::new($false)) }
+  if (Test-Path -LiteralPath $path) {
+    $html = Refresh-ArtMarkup $html
+    [System.IO.File]::WriteAllText($path, $html, [System.Text.UTF8Encoding]::new($false))
+  }
 }
 
 $classPage = Join-Path $smDir 'class-9/index.html'

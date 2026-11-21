@@ -1,5 +1,4 @@
-/* Lightweight, local Chapter 9 illustration system. The SVG sprite remains visible
-   as a static poster without JavaScript; CSS only animates small SVG groups. */
+/* Chapter-specific, locally hosted 3D artwork for Class 9 Mathematics and Science. */
 body[data-cbse-visual-scope="class-9"] { --cbse-viz-a:#2563eb; --cbse-viz-b:#7c3aed; }
 body[data-cbse-visual-scope="class-9"] .sm-hero {
   position:relative; isolation:isolate; overflow:hidden; border:1px solid rgba(37,99,235,.12);
@@ -8,12 +7,17 @@ body[data-cbse-visual-scope="class-9"] .sm-hero {
     radial-gradient(ellipse at 10% 95%, color-mix(in srgb,var(--cbse-viz-b) 9%,transparent),transparent 42%),#fff;
 }
 body[data-cbse-visual-scope="class-9"] .sm-hero::before {
-  content:""; position:absolute; z-index:1; inset:0 0 0 auto; width:54%; pointer-events:none;
-  background:linear-gradient(90deg,rgba(255,255,255,.58),rgba(255,255,255,.16) 58%,transparent);
+  content:""; position:absolute; z-index:1; inset:0 0 0 auto; width:64%; pointer-events:none;
+  background:linear-gradient(90deg,rgba(255,255,255,.98),rgba(255,255,255,.88) 38%,rgba(255,255,255,.42) 76%,rgba(255,255,255,.2));
 }
 body[data-cbse-visual-scope="class-9"] .sm-hero > :not(.cbse-hero-art) { position:relative; z-index:2; }
+body[data-cbse-visual-page="chapter"] .sm-hero,
+body[data-cbse-visual-page="subject"] .sm-hero {
+  display:flex; flex-direction:column; align-items:flex-start; justify-content:center; text-align:left;
+  min-height:278px; padding:34px clamp(26px,5vw,66px); gap:0;
+}
 body[data-cbse-visual-scope="class-9"] .cbse-hero-brand {
-  display:inline-flex; align-items:center; gap:8px; margin:0 auto 10px; color:#334155;
+  display:inline-flex; align-items:center; gap:8px; margin:0 0 10px; color:#334155;
   font-size:.69rem; font-weight:800; letter-spacing:.13em; text-transform:uppercase;
 }
 body[data-cbse-visual-scope="class-9"] .cbse-hero-brand::before { content:""; width:22px; height:2px; border-radius:2px; background:var(--cbse-viz-a); }
@@ -23,8 +27,8 @@ body[data-cbse-visual-scope="class-9"] .cbse-hero-art {
   mask-image:linear-gradient(90deg,transparent 0%,#000 48%);
 }
 body[data-cbse-visual-scope="class-9"] .cbse-hero-art svg { width:100%; height:100%; filter:drop-shadow(0 18px 20px rgba(30,41,59,.12)); }
-body[data-cbse-visual-scope="class-9"] .sm-hero h1 { max-width:920px; margin-left:auto; margin-right:auto; }
-body[data-cbse-visual-scope="class-9"] .sm-hero > p:not(.sm-eyebrow) { max-width:720px; }
+body[data-cbse-visual-scope="class-9"] .sm-hero h1 { max-width:760px; width:min(100%,760px); margin-left:0; margin-right:0; }
+body[data-cbse-visual-scope="class-9"] .sm-hero > p:not(.sm-eyebrow) { max-width:650px; width:min(100%,650px); margin-left:0; margin-right:0; }
 body[data-cbse-visual-scope="class-9"] .sm-search { z-index:2; }
 
 .cbse-visual-card {
@@ -39,42 +43,31 @@ body[data-cbse-visual-scope="class-9"] .sm-search { z-index:2; }
 .cbse-visual-card .sm-card-body { padding:16px 19px 19px; width:100%; }
 .cbse-visual-card .sm-chapter-num { color:var(--card-accent); font-weight:800; }
 .cbse-chapter-art { position:relative; display:block; width:100%; aspect-ratio:2.08/1; min-height:126px; overflow:hidden; isolation:isolate;
-  background:radial-gradient(circle at 70% 25%,color-mix(in srgb,var(--card-accent) 20%,white),transparent 45%),linear-gradient(135deg,#eff6ff,#faf5ff 58%,#fff7ed);
+  background:#071427;
 }
-.cbse-chapter-art::after { content:""; position:absolute; inset:auto 0 0; height:25%; z-index:1; background:linear-gradient(transparent,rgba(255,255,255,.84)); pointer-events:none; }
-.cbse-chapter-art svg { display:block; width:100%; height:100%; filter:drop-shadow(0 7px 8px rgba(15,23,42,.14)); transform:translate3d(var(--parallax-x,0),var(--parallax-y,0),0); transition:transform .18s ease-out; }
-.cbse-art-fallback { fill:var(--card-accent); }
-.cbse-visual-card:hover .cbse-chapter-art svg { transform:translate3d(var(--parallax-x,0),var(--parallax-y,0),0) scale(1.035); }
-.cbse-chapter-art--hero { position:absolute; z-index:0; inset:0 0 0 auto; width:min(54%,620px); height:100%; aspect-ratio:auto; min-height:0; background:transparent; }
-.cbse-chapter-art--hero::after { display:none; }
-.cbse-chapter-art--hero svg { filter:drop-shadow(0 18px 20px rgba(15,23,42,.16)); }
-.cbse-scene-enhanced .cbse-float { transform-box:fill-box; transform-origin:center; animation:cbse-float 7.5s ease-in-out infinite; animation-play-state:paused; }
-.cbse-scene-enhanced .cbse-pulse { transform-box:fill-box; transform-origin:center; animation:cbse-pulse 5s ease-in-out infinite; animation-play-state:paused; }
-.cbse-scene-enhanced .cbse-orbit { transform-box:fill-box; transform-origin:center; animation:cbse-orbit 18s linear infinite; animation-play-state:paused; }
-.cbse-scene-enhanced .cbse-draw { stroke-dasharray:12 8; animation:cbse-draw 8s linear infinite; animation-play-state:paused; }
-.cbse-chapter-art.cbse-art-visible .cbse-scene-enhanced .cbse-float,
-.cbse-chapter-art.cbse-art-visible .cbse-scene-enhanced .cbse-pulse,
-.cbse-chapter-art.cbse-art-visible .cbse-scene-enhanced .cbse-orbit,
-.cbse-chapter-art.cbse-art-visible .cbse-scene-enhanced .cbse-draw { animation-play-state:running; }
-@keyframes cbse-float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
-@keyframes cbse-pulse { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.09);opacity:.82} }
-@keyframes cbse-orbit { to{transform:rotate(360deg)} }
-@keyframes cbse-draw { to{stroke-dashoffset:-80} }
+.cbse-chapter-art img { display:block; width:100%; height:100%; object-fit:cover; object-position:center 48%; transform:translate3d(var(--parallax-x,0),var(--parallax-y,0),0); transition:transform .35s ease; }
+.cbse-visual-card:hover .cbse-chapter-art img { transform:translate3d(var(--parallax-x,0),var(--parallax-y,0),0) scale(1.045); }
+.cbse-chapter-art--hero { position:absolute; z-index:0; inset:0 0 0 auto; width:min(44%,560px); height:100%; aspect-ratio:auto; min-height:0; opacity:1;
+  mask-image:linear-gradient(90deg,transparent 0%,#000 40%); }
+.cbse-chapter-art--hero img { object-position:center 46%; }
 @media(max-width:700px) {
-  body[data-cbse-visual-scope="class-9"] .sm-hero { padding:27px 18px 25px; margin:12px 0 8px; border-radius:18px; }
-  body[data-cbse-visual-scope="class-9"] .sm-hero::before { width:66%; background:linear-gradient(90deg,rgba(255,255,255,.76),rgba(255,255,255,.36)); }
-  body[data-cbse-visual-scope="class-9"] .cbse-hero-art { width:42%; opacity:.12; }
+  body[data-cbse-visual-scope="class-9"] .sm-hero { padding:27px 20px 25px; margin:12px 0 8px; border-radius:18px; }
+  body[data-cbse-visual-page="chapter"] .sm-hero,
+  body[data-cbse-visual-page="subject"] .sm-hero { min-height:260px; padding:26px 22px; }
+  body[data-cbse-visual-scope="class-9"] .sm-hero::before { width:80%; background:linear-gradient(90deg,rgba(255,255,255,.99),rgba(255,255,255,.92) 58%,rgba(255,255,255,.56)); }
+  body[data-cbse-visual-scope="class-9"] .cbse-hero-art { width:54%; }
+  body[data-cbse-visual-scope="class-9"] .sm-hero h1 { max-width:100%; font-size:clamp(1.55rem,5.5vw,2rem); }
+  body[data-cbse-visual-scope="class-9"] .sm-hero > p:not(.sm-eyebrow) { max-width:100%; font-size:.98rem; }
   .cbse-chapter-art { min-height:110px; }
   .cbse-visual-card .sm-card-body { padding:14px 16px 17px; }
 }
 @media(max-width:420px) {
-  body[data-cbse-visual-scope="class-9"] .sm-hero::before { width:74%; background:linear-gradient(90deg,rgba(255,255,255,.82),rgba(255,255,255,.48)); }
-  body[data-cbse-visual-scope="class-9"] .cbse-hero-art { width:38%; opacity:.1; }
+  body[data-cbse-visual-scope="class-9"] .sm-hero::before { width:100%; background:linear-gradient(90deg,rgba(255,255,255,.99),rgba(255,255,255,.9)); }
+  body[data-cbse-visual-scope="class-9"] .cbse-hero-art { width:42%; opacity:.48; }
 }
 @media(prefers-reduced-motion:reduce) {
-  .cbse-visual-card,.cbse-chapter-art svg { transition:none!important; }
+  .cbse-visual-card,.cbse-chapter-art img { transition:none!important; }
   .cbse-visual-card:hover { transform:none; }
-  .cbse-scene-enhanced * { animation:none!important; scroll-behavior:auto!important; }
 }
 @media print {
   .cbse-hero-art { opacity:.14!important; }
