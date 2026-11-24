@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arithmetic Expressions Class 7 CBSE Maths Notes | Ganita Prakash | Vyasa Academy</title>
+  <meta name="description" content="Class 7 Arithmetic Expressions notes for 2026–27. Learn signed terms, BODMAS, brackets and properties, with 30 solved examples, 67 questions and interactive tools." />
+  <link rel="canonical" href="https://www.vyasaacademy.in/cbse-study-material/class-7/mathematics/chapter-02/notes/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vyasa Academy" />
+  <meta property="og:title" content="Arithmetic Expressions Class 7 CBSE Maths Notes | Ganita Prakash | Vyasa Academy" />
+  <meta property="og:description" content="Class 7 Arithmetic Expressions notes for 2026–27. Learn signed terms, BODMAS, brackets and properties, with 30 solved examples, 67 questions and interactive tools." />
+  <meta property="og:url" content="https://www.vyasaacademy.in/cbse-study-material/class-7/mathematics/chapter-02/notes/" />
+  <meta property="og:image" content="https://www.vyasaacademy.in/cbse-study-material/class-7/images/mathematics/chapter-02.webp" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Arithmetic Expressions Class 7 CBSE Maths Notes | Ganita Prakash | Vyasa Academy" />
+  <meta name="twitter:description" content="Class 7 Arithmetic Expressions notes for 2026–27. Learn signed terms, BODMAS, brackets and properties, with 30 solved examples, 67 questions and interactive tools." />
+  <meta name="twitter:image" content="https://www.vyasaacademy.in/cbse-study-material/class-7/images/mathematics/chapter-02.webp" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.vyasaacademy.in/"}, {"@type": "ListItem", "position": 2, "name": "CBSE Study Material", "item": "https://www.vyasaacademy.in/cbse-study-material/"}, {"@type": "ListItem", "position": 3, "name": "Class 7", "item": "https://www.vyasaacademy.in/cbse-study-material/class-7/"}, {"@type": "ListItem", "position": 4, "name": "Mathematics", "item": "https://www.vyasaacademy.in/cbse-study-material/class-7/mathematics/"}, {"@type": "ListItem", "position": 5, "name": "Arithmetic Expressions", "item": "https://www.vyasaacademy.in/cbse-study-material/class-7/mathematics/chapter-02/"}, {"@type": "ListItem", "position": 6, "name": "Notes", "item": "https://www.vyasaacademy.in/cbse-study-material/class-7/mathematics/chapter-02/notes/"}]}
+  </script>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+      processEscapes: true
+    }
+  };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <style>
+  .sm-notes { font-size: 1rem; line-height: 1.8; }
+  .sm-notes h2 { font-size: 1.45rem; color: var(--primary); margin: 44px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--accent); }
+  .sm-notes h3 { font-size: 1.15rem; color: var(--dark); margin: 28px 0 12px; }
+  .sm-notes h4 { font-size: 1.05rem; color: var(--dark); margin: 20px 0 8px; }
+  .sm-notes p { margin-bottom: 14px; }
+  .sm-notes ul, .sm-notes ol { margin: 10px 0 16px 24px; }
+  .sm-notes li { margin-bottom: 6px; }
+  .sm-notes ul { list-style: disc; }
+
+  .def-box { background: #eef2ff; border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .def-box .box-label { font-weight: 700; color: var(--primary); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .result-box { background: #fff8e1; border-left: 4px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .result-box .box-label { font-weight: 700; color: var(--accent-dark); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .example-box { background: #f0fdf4; border-left: 4px solid #16a34a; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .example-box .box-label { font-weight: 700; color: #16a34a; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .tip-box { background: #eff6ff; border-left: 4px solid #2563eb; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .tip-box .box-label { font-weight: 700; color: #2563eb; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .warn-box { background: #fef2f2; border-left: 4px solid #dc2626; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .warn-box .box-label { font-weight: 700; color: #dc2626; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .steps { margin: 12px 0 16px; }
+  .steps .step { display: flex; gap: 12px; margin-bottom: 10px; }
+  .steps .step-num { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: var(--primary); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; margin-top: 3px; }
+  .steps .step-text { flex: 1; }
+
+  .table-wrap { overflow-x: auto; margin: 16px 0; -webkit-overflow-scrolling: touch; }
+  .sm-notes table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .sm-notes th { background: var(--primary); color: var(--white); text-align: left; padding: 12px 14px; font-weight: 600; white-space: nowrap; }
+  .sm-notes td { padding: 10px 14px; border-bottom: 1px solid #e5e7eb; }
+  .sm-notes tr:nth-child(even) td { background: #f9fafb; }
+  .sm-notes tr:hover td { background: #eef2ff; }
+
+  .highlight { background: #fef9c3; padding: 2px 5px; border-radius: 4px; font-weight: 600; }
+  .qbox { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: var(--radius); padding: 16px 20px; margin: 12px 0; }
+  .qbox .q-label { font-weight: 700; color: var(--primary); margin-bottom: 4px; }
+
+  .app-box { background: #ecfeff; border-left: 4px solid #0891b2; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .app-box .box-label { font-weight: 700; color: #0e7490; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .comp-box { background: #f5f3ff; border-left: 4px solid #7c3aed; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .comp-box .box-label { font-weight: 700; color: #6d28d9; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .solved-box { background: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #16a34a; border-radius: var(--radius); padding: 18px 22px; margin: 18px 0; box-shadow: 0 2px 8px rgba(15,23,42,.05); }
+  .solved-box .s-label { font-weight: 700; color: #16a34a; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  .solved-box .s-part { margin: 10px 0 0; }
+  .solved-box .s-part b { color: var(--primary); }
+
+  .solution-box { background: #f8fafc; border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 16px 0 4px; font-size: 0.95rem; }
+  .solution-box p { margin: 8px 0; }
+
+  .case-card { background: #fff; border: 1px solid #e2e8f0; border-radius: var(--radius); margin: 22px 0; box-shadow: 0 2px 8px rgba(15,23,42,.05); overflow: hidden; }
+  .case-card-header { background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: #fff; padding: 14px 20px; }
+  .case-card-header h3 { margin: 0; font-size: 1.05rem; }
+  .case-card-body { padding: 18px 20px; }
+
+  .concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 18px 0; }
+  .concept-card { background: #fff; border: 1px solid #e2e8f0; border-left: 4px solid var(--primary); border-radius: var(--radius); padding: 16px 18px; transition: var(--transition); }
+  .concept-card:hover { box-shadow: 0 6px 18px rgba(79,70,229,.12); transform: translateY(-2px); }
+  .concept-card h4 { color: var(--primary); margin: 0 0 6px; font-size: 1rem; }
+  .concept-card p { margin: 0; font-size: 0.92rem; }
+
+  .tag-pill { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: .4px; text-transform: uppercase; padding: 3px 10px; border-radius: 999px; vertical-align: middle; }
+  .tag-style { background: #e0e7ff; color: #3730a3; }
+
+  .sm-notes mjx-container { max-width: 100%; }
+  .sm-notes mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; }
+
+  .resource-nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
+  .resource-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: var(--radius); border: 2px solid #e5e7eb; font-weight: 600; font-size: 0.92rem; color: var(--dark); background: var(--white); transition: var(--transition); }
+  .resource-nav a:hover, .resource-nav a.is-active { border-color: var(--primary); background: var(--primary); color: var(--white); }
+
+  .sm-back { display: inline-flex; align-items: center; gap: 8px; margin-top: 30px; padding: 10px 0; color: var(--primary); font-weight: 600; }
+  .sm-back:hover { color: var(--accent-dark); }
+
+  .next-chapter { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; justify-content: space-between; margin-top: 26px; padding: 18px 22px; background: linear-gradient(135deg, #eef2ff, #ffffff); border: 1px solid #e0e7ff; border-radius: var(--radius); }
+  .next-chapter h3 { margin: 0; font-size: 1.02rem; }
+  .next-chapter p { margin: 4px 0 0; font-size: 0.9rem; }
+
+  @media (max-width: 640px) {
+    .sm-notes h2 { font-size: 1.25rem; }
+    .sm-notes { font-size: 0.95rem; }
+    .steps .step { gap: 8px; }
+    .steps .step-num { width: 22px; height: 22px; font-size: 0.75rem; }
+    .resource-nav { gap: 6px; }
+    .resource-nav a { padding: 8px 12px; font-size: 0.85rem; }
+    .concept-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 420px) {
+    .concept-grid { grid-template-columns: 1fr; }
+  }
+
+  .chapter-diagram { margin: 24px auto 30px; max-width: 980px; }
+  .chapter-diagram img { display: block; width: 100%; height: auto; border-radius: 18px; border: 1px solid #dce8ed; background: #f4f8fa; }
+  .chapter-diagram figcaption { color: var(--muted, #526578); font-size: .92rem; line-height: 1.6; padding: 10px 12px; }
+  .notes-toc { background: #f7f9ff; border: 1px solid #dbe3f5; border-radius: 14px; padding: 14px 20px; margin: 10px 0 30px; }
+  .notes-toc summary { color: var(--primary); font-size: 1.05rem; font-weight: 700; cursor: pointer; }
+  .notes-toc ul { columns: 2; column-gap: 36px; margin: 12px 0 4px 22px; }
+  .notes-toc li { break-inside: avoid; }
+  .notes-toc a { text-decoration: none; }
+  .answer-key { padding: 14px 18px; background: #f7f9fc; border-radius: 12px; border: 1px solid #e0e7ef; }
+  .answer-key summary { font-weight: 700; cursor: pointer; color: var(--primary); }
+  @media (max-width: 640px) { .notes-toc ul { columns: 1; } .chapter-diagram { margin: 18px auto 24px; } }
+  @media print { .navbar, .resource-nav, .footer, .sm-crumbs, .notes-toc, .next-chapter, .sm-back { display: none !important; } .sm-page, .sm-container { max-width: none !important; padding: 0 !important; } .chapter-diagram img { max-width: 100%; } .sm-notes h2 { break-after: avoid; } .solved-box { break-inside: avoid; } }
+
+  .expression-notes section[id] { scroll-margin-top: 86px; }
+  .expression-notes table caption { text-align: left; padding: 6px 3px; font-weight: 700; }
+  .expression-notes .scroller:focus-visible, .expression-notes summary:focus-visible { outline: 3px solid #2563eb; outline-offset: 3px; }
+  .expression-notes .tip-box { background: #fff7ed; border-color: #c2410c; }
+  .expression-notes .tip-box .box-label { color: #9a3412; }
+  .expression-notes .warn-box .box-label { color: #991b1b; }
+  .expression-notes .comp-box .box-label { color: #5b21b6; }
+  .expression-cover { max-width: 560px; position: relative; }
+  .expression-cover img { background: #08172b; }
+  .floating-operators { pointer-events: none; position: absolute; inset: 0 0 auto; aspect-ratio: 3/2; color: #fff; }
+  .floating-operators span { position: absolute; font-weight: 800; background: rgba(8,24,44,.8); box-shadow: 0 0 12px #38bdf8; width: 1.8rem; height: 1.8rem; display: grid; place-items: center; border-radius: 50%; animation: operator-float 5s ease-in-out 2; }
+  .floating-operators span:nth-child(1) { top: 10%; left: 8%; }
+  .floating-operators span:nth-child(2) { top: 10%; right: 8%; animation-delay: .6s; }
+  .floating-operators span:nth-child(3) { bottom: 12%; right: 8%; animation-delay: .3s; }
+  @keyframes operator-float { 50% { transform: translateY(-6px); } }
+  .term-diagram { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0 16px; }
+  .term-diagram span { font-weight: 700; padding: 5px 14px; border-radius: 8px; }
+  .positive-term { color: #1e3a8a; background: #dbeafe; }
+  .negative-term { color: #991b1b; background: #fee2e2; }
+  .distribution-demo { margin: 18px 0; }
+  .distribution-demo figcaption { font-weight: 700; }
+  .distribution-strip { display: grid; grid-template-columns: 5fr 3fr; min-height: 62px; margin: 8px 0; border-radius: 8px; overflow: hidden; }
+  .distribution-strip span { display: grid; place-items: center; text-align: center; background: #dbeafe; color: #1e3a8a; font-weight: 700; padding: 6px; }
+  .distribution-strip span + span { background: #ede9fe; color: #4c1d95; }
+  .expression-notes .tool-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,285px),1fr)); gap: 16px; }
+  .expression-notes .lab-card { display: grid; align-content: start; min-width: 0; gap: 8px; margin: 12px 0; background: #ecfeff; border-color: #a5dfe4; }
+  .expression-notes .tool-grid .lab-card { margin: 0; }
+  .expression-notes .lab-stack { display: grid; gap: 16px; }
+  .expression-notes .lab-card h3, .expression-notes .lab-card p { margin: 0; }
+  .expression-notes .lab-card input, .expression-notes .lab-card select { box-sizing: border-box; width: 100%; min-width: 0; padding: 9px 10px; border: 1px solid #64748b; border-radius: 6px; font: inherit; background: #fff; color: #172554; }
+  .expression-notes .lab-card button { justify-self: start; margin-top: 4px; }
+  .expression-notes output { display: block; color: #164e63; font-weight: 700; overflow-wrap: anywhere; }
+  .expression-notes .inline-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+  .expression-notes #evaluation-steps { margin-bottom: 0; overflow-wrap: anywhere; }
+  .expression-notes #evaluation-steps li { animation: reveal-step .3s ease-out both; }
+  .expression-notes #evaluation-steps mark { background: #ccfbf1; color: #134e4a; border-radius: 4px; padding: 2px 4px; }
+  .expression-notes .lab-expression { font-size: 1.15rem; font-weight: 700; }
+  .expression-notes details > summary { cursor: pointer; font-weight: 700; }
+  .expression-notes .worked-example { padding: 12px 18px; }
+  .expression-notes .worked-example summary { color: #166534; }
+  .expression-notes details[open] > summary { margin-bottom: 10px; }
+  .expression-notes .answer-key { margin-bottom: 10px; }
+  .expression-notes .practice-items ol { margin-top: 4px; }
+  @keyframes reveal-step { from { opacity: .35; transform: translateY(3px); } to { opacity: 1; transform: translateY(0); } }
+  @media (prefers-reduced-motion: reduce) { .floating-operators span, .expression-notes #evaluation-steps li { animation: none; } }
+  @media print { .expression-notes #tools, .expression-notes .expression-check, .floating-operators { display: none; } }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="/" class="logo"><i class="fas fa-graduation-cap"></i> Vyasa Academy</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="/">Home</a>
+      <a href="/#courses">Courses</a>
+      <a href="/cbse-study-material/" class="active">Study Material</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main class="sm-page">
+  <div class="container sm-container">
+    <nav class="sm-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/cbse-study-material/">CBSE Study Material</a> / <a href="/cbse-study-material/class-7/">Class 7</a> / <a href="/cbse-study-material/class-7/mathematics/">Mathematics</a> / <a href="/cbse-study-material/class-7/mathematics/chapter-02/">Arithmetic Expressions</a> / <span aria-current="page">Notes</span></nav>
+    <section class="sm-hero sm-hero-slim">
+      <p class="sm-eyebrow">CBSE Class 7 &middot; Mathematics &middot; Ganita Prakash Part I</p>
+      <h1>Chapter 2: Arithmetic Expressions</h1>
+      <p>Write and evaluate arithmetic expressions, understand brackets, and use properties to simplify calculations.</p>
+    </section>
+    <nav class="resource-nav" aria-label="Chapter resources"><a class="is-active" aria-current="page" href="/cbse-study-material/class-7/mathematics/chapter-02/notes/"><i class="fas fa-book-open" aria-hidden="true"></i> Notes</a><a href="/cbse-study-material/class-7/mathematics/chapter-02/practice-paper/"><i class="fas fa-file-lines" aria-hidden="true"></i> Practice Paper</a><a href="/cbse-study-material/class-7/mathematics/chapter-02/quiz/"><i class="fas fa-bolt" aria-hidden="true"></i> Quiz</a><a href="/cbse-study-material/class-7/mathematics/chapter-02/test/"><i class="fas fa-clipboard-check" aria-hidden="true"></i> Chapter Test</a></nav>
+    <article class="sm-notes expression-notes">
+      <figure class="chapter-diagram expression-cover">
+        <img src="/cbse-study-material/class-7/images/mathematics/chapter-02.webp" width="720" height="480" alt="Glowing groups of cubes and arithmetic symbols illustrate operations and grouping." decoding="async">
+        <div class="floating-operators" aria-hidden="true"><span>+</span><span>&times;</span><span>&divide;</span></div>
+        <figcaption>Grouping changes which calculation is done first.</figcaption>
+      </figure>
+      <details class="notes-toc"><summary>On this page</summary><ul><li><a href="#intro">Introduction</a></li><li><a href="#simple">Simple expressions</a></li><li><a href="#terms">Signed terms</a></li><li><a href="#precedence">BODMAS</a></li><li><a href="#brackets">Brackets</a></li><li><a href="#properties">Properties and equivalence</a></li><li><a href="#tinker">Mental methods and puzzles</a></li><li><a href="#tools">Interactive tools</a></li><li><a href="#worked">30 solved examples</a></li><li><a href="#mistakes">Common mistakes</a></li><li><a href="#revision">Quick revision</a></li><li><a href="#practice">67 practice questions</a></li><li><a href="#answers">Answer key</a></li><li><a href="#sources">References</a></li></ul></details>
+
+<section id="intro">
+<h2>1. How expressions describe a situation</h2>
+<p>An <strong>arithmetic expression</strong> combines numbers with operations and, when needed, brackets. It gives a way to describe a quantity before calculating it. A number such as <strong>24</strong> names a value. An expression such as <strong>4 × 6</strong> tells you how to get it. An equation such as <strong>4 × 6 = 24</strong> states that two sides have the same value. An equation can be true or false.</p>
+<div class="concept-grid">
+<div class="concept-card"><h3>Shopping</h3><p>One ₹48 pouch and three ₹12 pencils cost \(48+3\times12=84\) rupees.</p></div>
+<div class="concept-card"><h3>Distances</h3><p>Four laps of 250 m followed by 80 m gives \(4\times250+80=1{,}080\) m.</p></div>
+<div class="concept-card"><h3>Sharing</h3><p>Sharing six bundles of nine cards among three groups gives \((6\times9)\div3=18\) cards per group.</p></div>
+</div>
+<div class="def-box"><p class="box-label">Learning objectives</p><ul><li>Write expressions for real situations and explain the operation signs.</li><li>Identify signed terms, read brackets and evaluate mixed operations in the correct order.</li><li>Compare and rewrite expressions using valid properties, then explain why the value stays the same.</li><li>Use mental shortcuts, interpret units and check common mistakes.</li></ul></div>
+<form class="qbox lab-card expression-check"><h3>Number, expression or equation?</h3><label for="check-intro">Which item is an equation?</label><select id="check-intro"><option value="">Choose one</option><option value="1" data-feedback="Try looking for a statement that uses an equals sign.">18 + 7</option><option value="correct" data-feedback="The equals sign states that the expression and 25 have the same value.">18 + 7 = 25</option><option value="3" data-feedback="25 is a number.">25</option></select><button class="btn btn-primary" type="submit">Check answer</button><output role="status"></output></form>
+</section>
+
+<section id="simple">
+<h2>2. Simple expressions and their values</h2>
+<div class="table-wrap scroller " tabindex="0" role="region" aria-label="Four operations"><table><caption>Four operations</caption><thead><tr><th scope="col">Sign</th><th scope="col">Action</th><th scope="col">Example</th></tr></thead><tbody><tr><th scope="row">+</th><td>Add quantities or join groups</td><td>18 + 7 = 25</td></tr><tr><th scope="row">−</th><td>Subtract, compare differences, or show a negative sign</td><td>18 − 7 = 11</td></tr><tr><th scope="row">×</th><td>Multiply to count equal groups or scale a quantity</td><td>6 × 7 = 42</td></tr><tr><th scope="row">÷ or /</th><td>Share equally or count equal groups</td><td>42 ÷ 7 = 6</td></tr></tbody></table></div>
+<p>To translate a statement, identify the quantities, their units and which calculation is repeated. “Five less than 32” gives \(32-5\); “five times the sum of 32 and 7” gives \(5\times(32+7)\). “Share 32 equally among four groups” gives \(32\div4\). Order matters for subtraction and division.</p>
+<p>For a quick comparison, look for common pieces before evaluating. If both expressions add 46, the one adding it to 73 is greater than the one adding it to 70. When subtraction has a common starting number, the expression that subtracts more gives less.</p>
+<div class="tip-box"><p class="box-label">Write an expression before calculating</p><p>If two adults pay ₹55 each and a child pays ₹25, write \(2\times55+25\), not \(2\times(55+25)\). Only the adult fare is repeated. Then calculate the cost as ₹135.</p></div>
+</section>
+
+<section id="terms">
+<h2>3. Identify terms and carry their signs</h2>
+<p>To see the terms, rewrite subtraction as <strong>adding the opposite</strong>. Then split at top-level addition signs. A plus sign inside a bracket stays inside its group. A product or quotient stays together until evaluated. The signed terms of \(24-3\times5+8\) are \(24\), \(-(3\times5)\), and \(8\).</p>
+<div class="term-diagram" aria-label="The terms of 24 minus 3 times 5 plus 8 are positive 24, negative the product 3 times 5, and positive 8.">
+  <span class="positive-term">+24</span><span class="negative-term">−(3 × 5)</span><span class="positive-term">+8</span>
+</div>
+<p>Evaluate each term and then add: \(24+(-15)+8 = 9+8 = 17\). You can pair 24 and 8 first to get 32, then subtract 15. Both methods respect the sign of the middle term.</p>
+<div class="comp-box"><p class="box-label">Signed-number reminder</p><p>Adding a negative value moves left on a number line. Subtracting a negative value is adding its opposite: \(8-(-3)=8+3=11\). When adding opposite signs, subtract the smaller magnitude from the larger and keep the sign of the larger magnitude. For products and quotients, like signs give a positive result and unlike signs give a negative result for nonzero operands. These multiplication and division sign rules are a supporting preview of the fuller integer work in Part II.</p></div>
+<form class="qbox lab-card expression-check"><h3>Check the sign of a term</h3><label for="check-terms">Which is the second term of 18 − 2 × 5 + 3?</label><select id="check-terms"><option value="">Choose one</option><option value="1" data-feedback="The 2 is a factor inside a product.">2</option><option value="correct" data-feedback="Rewriting the subtraction gives 18 + (−(2 × 5)) + 3.">−(2 × 5)</option><option value="3" data-feedback="The minus belongs to the entire product.">−5</option></select><button class="btn btn-primary" type="submit">Check answer</button><output role="status"></output></form>
+</section>
+
+<section id="precedence">
+<h2>4. Order of operations and BODMAS</h2>
+<p>Without brackets, multiplication and division belong inside terms before the addition or subtraction between terms. BODMAS helps you remember the order. The letters D and M share one priority level, as do A and S.</p>
+<div class="table-wrap scroller comp-box" tabindex="0" role="region" aria-label="BODMAS quick-reference chart"><table><caption>BODMAS quick-reference chart</caption><thead><tr><th scope="col">Priority</th><th scope="col">Operations</th><th scope="col">Rule</th></tr></thead><tbody><tr><th scope="row">1</th><td>Brackets</td><td>Work from the innermost group out.</td></tr><tr><th scope="row">2</th><td>Orders (powers)</td><td>The mnemonic includes powers. Powers are not a main calculation topic in this chapter.</td></tr><tr><th scope="row">3</th><td>Division and multiplication</td><td>Same priority. Work left to right within the group.</td></tr><tr><th scope="row">4</th><td>Addition and subtraction</td><td>Same priority. Work left to right within the group.</td></tr></tbody></table></div>
+<div class="example-box"><p class="box-label">Why the order matters</p><p>\(36\div6\times2=6\times2=12\). To make the product come first, write \(36\div(6\times2)=36\div12=3\). Likewise \(20-8+3=12+3=15\), while \(20-(8+3)=20-11=9\).</p></div>
+<p>A fraction bar groups its numerator and its denominator. For example, \(\dfrac{18+6}{3+1}=\dfrac{24}{4}=6\). Using slash notation, write <strong>(18 + 6) / (3 + 1)</strong> to retain both groups. Dividing by zero has no defined value.</p>
+<form class="qbox lab-card expression-check"><h3>Check equal priority</h3><label for="check-precedence">What comes first in 48 ÷ 8 × 3?</label><select id="check-precedence"><option value="">Choose one</option><option value="1" data-feedback="Division and multiplication share priority. Read from the left.">8 × 3</option><option value="correct" data-feedback="Evaluate this division first, then multiply by 3.">48 ÷ 8</option></select><button class="btn btn-primary" type="submit">Check answer</button><output role="status"></output></form>
+</section>
+
+<section id="brackets">
+<h2>5. Brackets and changing the grouping</h2>
+<p>Brackets tell the reader which calculation belongs together. In a nested expression, begin with the innermost brackets. A bare minus in front of an additive group reverses all signs in that group, because you are adding its opposite. A plus in front of the group preserves each sign.</p>
+<div class="table-wrap scroller " tabindex="0" role="region" aria-label="How the position of brackets changes an expression"><table><caption>How the position of brackets changes an expression</caption><thead><tr><th scope="col">Expression</th><th scope="col">First calculation</th><th scope="col">Value</th></tr></thead><tbody><tr><th scope="row">7 + 5 × 3</th><td>5 × 3 = 15</td><td>22</td></tr><tr><th scope="row">(7 + 5) × 3</th><td>7 + 5 = 12</td><td>36</td></tr><tr><th scope="row">35 − (9 + 6)</th><td>9 + 6 = 15</td><td>20</td></tr><tr><th scope="row">35 − (9 − 6)</th><td>9 − 6 = 3</td><td>32</td></tr><tr><th scope="row">24 − [3 + (8 − 5)]</th><td>8 − 5 = 3</td><td>18</td></tr></tbody></table></div>
+<div class="comp-box"><p class="box-label">Keep the meaning of the group</p><p>\(60-(20-7)=60-20+7=47\). In \(60\div(20-7)\), the bracket is the whole divisor. Work it out first; it cannot simply be removed. In a product such as \(6\times(20-7)\), you may evaluate the bracket first or distribute the 6 to both terms.</p></div>
+<p>To obtain a target, try grouping a different pair but keep the original numbers and operation signs in order. With \(6+5\times4\), the usual value is 26. Moving the sum into a bracket makes \((6+5)\times4=44\).</p>
+<form class="qbox lab-card expression-check"><h3>Check bracket removal</h3><label for="check-brackets">Rewrite 55 − (18 − 4).</label><select id="check-brackets"><option value="">Choose one</option><option value="correct" data-feedback="Subtracting the bracket changes the sign of both terms.">55 − 18 + 4</option><option value="2" data-feedback="The second inside term is negative, so it becomes positive.">55 − 18 − 4</option></select><button class="btn btn-primary" type="submit">Check answer</button><output role="status"></output></form>
+</section>
+
+<section id="properties">
+<h2>6. Equivalent expressions and operation properties</h2>
+<p>Two numerical expressions are <strong>equivalent</strong> when they have the same value. You can check both sides by calculation or transform one into the other using a property. Carry every sign with its term when rearranging. Matching digits by appearance does not prove equivalence.</p>
+<div class="table-wrap scroller comp-box" tabindex="0" role="region" aria-label="What each property allows"><table><caption>What each property allows</caption><thead><tr><th scope="col">Property</th><th scope="col">Addition or multiplication</th><th scope="col">Subtraction or division</th></tr></thead><tbody><tr><th scope="row">Commutative · swap</th><td>7 + 4 = 4 + 7; 7 × 4 = 4 × 7</td><td>7 − 4 ≠ 4 − 7; 12 ÷ 4 ≠ 4 ÷ 12</td></tr><tr><th scope="row">Associative · regroup</th><td>(2 + 3) + 4 = 2 + (3 + 4); (2 × 3) × 4 = 2 × (3 × 4)</td><td>Grouping can change the value; see the counterexamples below.</td></tr><tr><th scope="row">Distributive · multiply each term</th><td>6 × (10 + 3) = 6 × 10 + 6 × 3; 6 × (10 − 3) = 6 × 10 − 6 × 3</td><td>Works for multiplication across a bracketed sum or difference. It is not a general rule for division across the divisor.</td></tr><tr><th scope="row">Identity · leave unchanged</th><td>14 + 0 = 14; 14 × 1 = 14</td><td>14 − 0 = 14 and 14 ÷ 1 = 14 hold on the right. Reversing operands does not give the same general rule.</td></tr></tbody></table></div>
+<p>Subtracting and dividing are not generally associative. For example, \((30-12)-6=12\), but \(30-(12-6)=24\). Likewise \((48\div8)\div2=3\), but \(48\div(8\div2)=12\). Rewriting subtraction as addition of signed terms is what allows you to regroup those terms safely.</p>
+<figure class="distribution-demo">
+<figcaption>Area model for \(4\times(5+3)=4\times5+4\times3\)</figcaption>
+<div class="distribution-strip"><span>4 × 5 = 20</span><span>4 × 3 = 12</span></div>
+<p>Both regions have the same height, 4. Their widths add to 8, so the total is \(4\times8=32\) square units.</p>
+</figure>
+<p>The distributive property works with a sum or a difference and with the common factor on either side of a product. You can reverse the rule to factor: \(9\times42+9\times8=9\times(42+8)=450\). A division may be split over a sum in the <em>numerator</em> with a shared nonzero divisor. Do not split a sum in the denominator: \(48\div(4+2)=8\), whereas \(48\div4+48\div2=36\).</p>
+<form class="qbox lab-card expression-check"><h3>Check distribution</h3><label for="check-properties">Expand 5 × (13 + 2).</label><select id="check-properties"><option value="">Choose one</option><option value="1" data-feedback="Multiply both terms by 5.">5 × 13 + 2</option><option value="correct" data-feedback="Both parts have five copies. Their sum is 65 + 10 = 75.">5 × 13 + 5 × 2</option></select><button class="btn btn-primary" type="submit">Check answer</button><output role="status"></output></form>
+</section>
+
+<section id="tinker">
+<h2>7. Simplify, tinker and build expressions</h2>
+<div class="concept-grid">
+<div class="concept-card"><h3>Tinker with a sum</h3><p>Move 2 from 27 to 48: \(48+27=50+25=75\). Opposite changes of the same size keep a sum constant.</p></div>
+<div class="concept-card"><h3>Tinker with a difference</h3><p>Shift both numbers by 3: \(76-37=79-40=39\). Equal changes preserve the difference.</p></div>
+<div class="concept-card"><h3>Tinker with a product</h3><p>If \(32\times15=480\), then \(34\times15=480+2\times15=510\). Increasing a factor adds copies of the other one.</p></div>
+<div class="concept-card"><h3>Compare by structure</h3><p>\(14\times(30+5)\) and \(14\times30+5\) share \(14\times30\); their remaining parts are 70 and 5, so the first is larger by 65.</p></div>
+</div>
+<p>Use arrays, classroom groups, repeated payments or a rectangular area to find what each term means. Two different groupings can describe the same collection. For instance, 4 rows of 7 counters and 4 rows of 3 counters make 4 rows of 10 when placed side by side.</p>
+<div class="app-box"><p class="box-label">Expression engineer</p><p>Use four 5s and the four operations as needed to build a target. Try <strong>5, 10 and 20</strong>. For 5, use \(5+(5-5)\times5=5\). For 10 use \(5+5+5-5=10\); for 20 use \(5+5+5+5=20\). Decide in advance which digits, signs and brackets are allowed, then check each proposal against the rules.</p></div>
+<form class="qbox lab-card expression-check"><h3>Check a difference</h3><label for="check-tinker">Which matches 83 − 26 without evaluating it?</label><select id="check-tinker"><option value="">Choose one</option><option value="1" data-feedback="This adds 2 to the first number and removes 2 from the second. The difference increases by 4.">85 − 24</option><option value="correct" data-feedback="Adding 2 to each number preserves their difference.">85 − 28</option></select><button class="btn btn-primary" type="submit">Check answer</button><output role="status"></output></form>
+</section>
+
+<section id="tools">
+<h2>8. Interactive practice lab</h2>
+<p>The tools run in your browser. Use whole-number inputs up to nine digits, the four operations, and parentheses or square brackets. Division results are kept as exact fractions. For the bracket builder, leave the numbers and operation signs in their original order.</p>
+<div class="tool-grid">
+<form id="expression-evaluator" class="qbox lab-card">
+<h3>Step-by-step expression evaluator</h3>
+<label for="expression-input">Expression</label><input id="expression-input" value="24 − (6 + 3) × 2" maxlength="120" autocomplete="off" spellcheck="false">
+<button type="submit" class="btn btn-primary">Evaluate</button>
+<output id="evaluation-summary" role="status">24 − (6 + 3) × 2 = 6</output>
+<ol id="evaluation-steps" aria-label="Evaluation steps"></ol>
+</form>
+<div class="qbox lab-card" id="bodmas-challenge">
+<h3>BODMAS challenge</h3><label for="bodmas-level">Difficulty</label>
+<select id="bodmas-level"><option value="basic">Basic · operation groups</option><option value="middle">Intermediate · equal priority</option><option value="advanced">Advanced · nested brackets</option></select>
+<p id="bodmas-expression" class="lab-expression"></p><p>Which operation should you do first?</p>
+<div id="bodmas-choices" class="inline-actions"></div><output id="bodmas-feedback" role="status"></output>
+<button id="bodmas-new" type="button" class="btn btn-primary">New expression</button>
+</div>
+<form id="bracket-builder" class="qbox lab-card">
+<h3>Bracket builder</h3><label for="bracket-puzzle">Target puzzle</label>
+<select id="bracket-puzzle"><option value="0">Make 36</option><option value="1">Make 4</option><option value="2">Make 14</option></select>
+<p id="bracket-instruction">Insert brackets into 8 + 4 × 3 to make 36.</p>
+<label for="bracket-input">Your version</label><input id="bracket-input" value="8 + 4 × 3" maxlength="120" autocomplete="off" spellcheck="false">
+<div class="inline-actions"><button type="submit" class="btn btn-primary">Check target</button><button type="button" id="bracket-reveal" class="btn btn-secondary">Show a solution</button></div><output id="bracket-feedback" role="status"></output>
+</form>
+<div class="lab-stack"><form class="qbox lab-card expression-check"><h3>Equivalent expression matcher</h3><label for="check-matcher">Which is equal to 7 × (18 − 2)?</label><select id="check-matcher"><option value="">Choose one</option><option value="1" data-feedback="Distribute the 7 to both terms.">7 × 18 − 2</option><option value="2" data-feedback="The sign inside the bracket is subtraction.">7 × 18 + 7 × 2</option><option value="correct" data-feedback="This uses distribution. It gives 126 − 14 = 112.">7 × 18 − 7 × 2</option></select><button class="btn btn-primary" type="submit">Check answer</button><output role="status"></output></form><form class="qbox lab-card expression-check"><h3>Find the mistake</h3><label for="check-mistake_tool">A pupil writes 45 − (16 − 6) = 45 − 16 − 6 = 23. Where is the first error?</label><select id="check-mistake_tool"><option value="">Choose one</option><option value="1" data-feedback="The original expression begins with 45.">45 is the wrong starting value</option><option value="correct" data-feedback="After removing the bracket write 45 − 16 + 6 = 35.">The −6 inside the bracket should become +6</option><option value="3" data-feedback="45 − 16 − 6 does equal 23, but the first equality was already wrong.">Only the final subtraction is wrong</option></select><button class="btn btn-primary" type="submit">Check answer</button><output role="status"></output></form></div>
+</div>
+<noscript><p>Interactive tools require JavaScript. The worked examples and practice answers remain available below.</p></noscript>
+</section>
+<section id="worked"><h2>9. Step-by-step solved examples</h2><p>Try each question before opening the solution. The sets progress from 9 basic examples to 12 intermediate and 9 advanced examples.</p><h3>Basic · Examples 1–9</h3><details class="solved-box worked-example"><summary>Example 1 · A number, an expression and an equation</summary><p><strong>Question:</strong> Classify 19, 12 + 7, and 12 + 7 = 19.</p><ol><li><strong>Rule:</strong> An equals sign states equality; operations form an arithmetic expression.</li><li><strong>Work:</strong> 19 names a value. 12 + 7 tells what to calculate. The equality is true because 12 plus 7 gives 19.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">Number; arithmetic expression; true equation.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 2 · Write a shopping expression</summary><p><strong>Question:</strong> A notebook costs ₹42 and an eraser costs ₹8. Write a total.</p><ol><li><strong>Rule:</strong> Add amounts with the same unit.</li><li><strong>Work:</strong> Write 42 + 8. Count 8 more from 42 to get 50.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">42 + 8 = 50 rupees.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 3 · Use a difference</summary><p><strong>Question:</strong> A walker has covered 760 m of a 1,250 m circuit. How much remains?</p><ol><li><strong>Rule:</strong> Subtract distance covered from total distance.</li><li><strong>Work:</strong> 1,250 − 760 = (1,250 − 750) − 10 = 500 − 10.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">490 m.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 4 · Share equally</summary><p><strong>Question:</strong> Divide 84 counters among six pupils.</p><ol><li><strong>Rule:</strong> Division by the number of groups gives the size of each group.</li><li><strong>Work:</strong> 84 ÷ 6 = (60 + 24) ÷ 6 = 10 + 4. Check 14 × 6 = 84.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">14 counters each.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 5 · Translate an ordered phrase</summary><p><strong>Question:</strong> Write and evaluate “7 less than 20”.</p><ol><li><strong>Rule:</strong> Less than names the amount to take away from the second quantity.</li><li><strong>Work:</strong> Start at 20, subtract 7, and arrive at 13.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">20 − 7 = 13.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 6 · Split signed terms</summary><p><strong>Question:</strong> List the terms of 28 − 3 × 4 + 9 and find its value.</p><ol><li><strong>Rule:</strong> Replace subtraction by adding the opposite of the entire product.</li><li><strong>Work:</strong> The terms are 28, −(3 × 4), and 9. Their values are 28, −12, and 9. Add 28 + (−12) = 16, then add 9.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">25.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 7 · Do a product first</summary><p><strong>Question:</strong> Evaluate 11 + 5 × 6.</p><ol><li><strong>Rule:</strong> Multiplication takes precedence over addition.</li><li><strong>Work:</strong> 5 × 6 = 30, so the expression becomes 11 + 30.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">41.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 8 · Use brackets first</summary><p><strong>Question:</strong> Evaluate (11 + 5) × 6.</p><ol><li><strong>Rule:</strong> The bracket specifies a sum before multiplication.</li><li><strong>Work:</strong> 11 + 5 = 16. Multiply 16 × 6 = 16 × (5 + 1) = 80 + 16.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">96.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 9 · Compare without totals</summary><p><strong>Question:</strong> Compare 152 + 97 with 152 + 101.</p><ol><li><strong>Rule:</strong> With a common addend, compare the other addends.</li><li><strong>Work:</strong> The second expression adds 4 more. Therefore it is greater by 4.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">152 + 97 &lt; 152 + 101.</mark></p></details>
+<h3>Intermediate · Examples 10–21</h3><details class="solved-box worked-example"><summary>Example 10 · Handle division and multiplication</summary><p><strong>Question:</strong> Evaluate 48 ÷ 6 × 2.</p><ol><li><strong>Rule:</strong> Equal precedence: work left to right.</li><li><strong>Work:</strong> Divide 48 ÷ 6 = 8 first. Then multiply 8 × 2. Multiplying 6 × 2 first would change the grouping.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">16.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 11 · Handle subtraction and addition</summary><p><strong>Question:</strong> Evaluate 33 − 12 + 5.</p><ol><li><strong>Rule:</strong> Subtract and add from left to right, or add signed terms.</li><li><strong>Work:</strong> 33 − 12 = 21; 21 + 5 = 26. Equivalently, combine −12 and +5 to get −7.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">26.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 12 · Keep the signs attached</summary><p><strong>Question:</strong> Simplify −13 + 24 − 7.</p><ol><li><strong>Rule:</strong> Take every signed term with it when regrouping.</li><li><strong>Work:</strong> Rewrite as (−13) + 24 + (−7). Group the two negative terms to make −20. Add 24.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">4.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 13 · Remove plus brackets</summary><p><strong>Question:</strong> Simplify 19 + (12 − 8).</p><ol><li><strong>Rule:</strong> A plus in front keeps the signs inside.</li><li><strong>Work:</strong> 19 + 12 − 8 = 31 − 8 = 23. Alternatively, the bracket gives 4 first.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">23.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 14 · Remove minus brackets</summary><p><strong>Question:</strong> Simplify 64 − (27 − 9).</p><ol><li><strong>Rule:</strong> A minus in front changes both signs.</li><li><strong>Work:</strong> 64 − 27 + 9 = 37 + 9 = 46. Check by doing 27 − 9 = 18 first.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">46.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 15 · Work inside nested brackets</summary><p><strong>Question:</strong> Evaluate 75 − [10 + (8 − 5) × 4].</p><ol><li><strong>Rule:</strong> Start with the innermost grouping.</li><li><strong>Work:</strong> 8 − 5 = 3, then 3 × 4 = 12. The square bracket is 10 + 12 = 22. Subtract 22 from 75.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">53.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 16 · Make a target</summary><p><strong>Question:</strong> Add brackets to 9 + 3 × 4 to make 48.</p><ol><li><strong>Rule:</strong> Change which quantities are multiplied.</li><li><strong>Work:</strong> Without brackets the result is 9 + 12 = 21. Group 9 + 3 to get 12, then multiply by 4.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">(9 + 3) × 4 = 48.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 17 · Distribute over addition</summary><p><strong>Question:</strong> Evaluate 18 × (20 + 3) mentally.</p><ol><li><strong>Rule:</strong> Multiply each term in the bracket by 18.</li><li><strong>Work:</strong> 18 × 20 = 360; 18 × 3 = 54; add them.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">414.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 18 · Distribute over subtraction</summary><p><strong>Question:</strong> Calculate 47 × 98 without long multiplication.</p><ol><li><strong>Rule:</strong> Use 98 = 100 − 2.</li><li><strong>Work:</strong> 47 × 100 − 47 × 2 = 4,700 − 94 = 4,606.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">4,606.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 19 · Factor a common multiplier</summary><p><strong>Question:</strong> Evaluate 7 × 38 + 7 × 12.</p><ol><li><strong>Rule:</strong> Reverse distribution.</li><li><strong>Work:</strong> Each addend has factor 7, so take 7 × (38 + 12), then 7 × 50.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">350.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 20 · Choose useful factor groups</summary><p><strong>Question:</strong> Simplify 25 × 9 × 4.</p><ol><li><strong>Rule:</strong> Multiplication is commutative and associative.</li><li><strong>Work:</strong> Reorder to (25 × 4) × 9. The first product is 100.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">900.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 21 · Check an identity</summary><p><strong>Question:</strong> What numbers fill 53 + □ = 53 and 53 × □ = 53?</p><ol><li><strong>Rule:</strong> The additive identity is 0 and the multiplicative identity is 1.</li><li><strong>Work:</strong> Adding zero changes no amount. Multiplying by one gives one copy of 53.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">0 and 1, respectively.</mark></p></details>
+<h3>Advanced and competency based · Examples 22–30</h3><details class="solved-box worked-example"><summary>Example 22 · Model an arrangement</summary><p><strong>Question:</strong> There are 8 rows of 6 chairs and 7 loose chairs. Another room has 8 rows of 7 chairs. Which room has more?</p><ol><li><strong>Rule:</strong> Build the expressions from the quantities in each arrangement.</li><li><strong>Work:</strong> First room: 8 × 6 + 7 = 48 + 7 = 55. Second: 8 × 7 = 56. Their difference is 56 − 55.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">The second room has 1 more chair.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 23 · Calculate change</summary><p><strong>Question:</strong> Three markers at ₹18 each and a ₹35 folder are paid for with ₹100. Find the change.</p><ol><li><strong>Rule:</strong> Subtract the entire bill, using a bracket.</li><li><strong>Work:</strong> 100 − (3 × 18 + 35) = 100 − (54 + 35) = 100 − 89.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">₹11.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 24 · Use a fixed discount</summary><p><strong>Question:</strong> A club buys four kits at ₹125 and receives ₹45 off the whole order. It then pays ₹30 delivery. Find the final payment.</p><ol><li><strong>Rule:</strong> Apply the discount once, then add delivery.</li><li><strong>Work:</strong> 4 × 125 − 45 + 30 = 500 − 45 + 30 = 455 + 30.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">₹485.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 25 · Tinker with a sum and difference</summary><p><strong>Question:</strong> Compare 58 + 47 with 60 + 45, and compare 58 − 47 with 60 − 49.</p><ol><li><strong>Rule:</strong> Opposite changes preserve a sum; equal changes preserve a difference.</li><li><strong>Work:</strong> First pair: transfer 2 from 47 to 58, keeping 105. Second pair: add 2 to both numbers; each difference is 11.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">Both pairs are equal.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 26 · Tinker with a product</summary><p><strong>Question:</strong> Given 24 × 35 = 840, find 27 × 35 without multiplying from scratch.</p><ol><li><strong>Rule:</strong> The first factor increased by 3, so add three additional copies of 35.</li><li><strong>Work:</strong> 27 × 35 = (24 + 3) × 35 = 840 + 105.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">945.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 27 · Interpret distance and time</summary><p><strong>Question:</strong> A shuttle goes 18 km from town to school and returns along the same route. It makes three round trips, then travels 7 km to refuel. Find the total distance.</p><ol><li><strong>Rule:</strong> The pair of 18 km legs is repeated three times.</li><li><strong>Work:</strong> 3 × (18 + 18) + 7 = 3 × 36 + 7 = 108 + 7.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">115 km.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 28 · Track money with signed terms</summary><p><strong>Question:</strong> A balance is ₹120. Three payments of ₹52 and a refund of ₹25 follow. Find the arithmetic balance.</p><ol><li><strong>Rule:</strong> Treat money leaving as negative and a refund as positive.</li><li><strong>Work:</strong> 120 − 3 × 52 + 25 = 120 − 156 + 25 = −36 + 25.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">−₹11, an ₹11 shortfall.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 29 · Compare structures before calculating</summary><p><strong>Question:</strong> Which is larger: 6 × (22 + 5) or 6 × 22 + 5? By how much?</p><ol><li><strong>Rule:</strong> Distribute and cancel the shared product.</li><li><strong>Work:</strong> The first is 6 × 22 + 30; the second is 6 × 22 + 5. Compare 30 and 5 after cancelling the shared term.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">The first is larger by 25.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 30 · Design an expression</summary><p><strong>Question:</strong> Use 2, 5, 6 and 9 once each to make 16 using operations and brackets.</p><ol><li><strong>Rule:</strong> Build a factor 8 so that multiplication by the remaining 2 gives 16.</li><li><strong>Work:</strong> From 9 and 5 form 14, then subtract 6 to get 8. Group that calculation before multiplying by 2. Without the group the product 6 × 2 would occur first.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">(9 + 5 − 6) × 2 = 16.</mark></p></details></section>
+<section id="mistakes"><h2>10. Common mistakes and corrections</h2><div class="table-wrap scroller warn-box" tabindex="0" role="region" aria-label="Incorrect method, correct result and reason"><table><caption>Incorrect method, correct result and reason</caption><thead><tr><th scope="col">Misconception</th><th scope="col">Incorrect</th><th scope="col">Correct</th><th scope="col">Why</th></tr></thead><tbody><tr><th scope="row">Everything left to right</th><td>8 + 3 × 4 = 44</td><td>8 + 12 = 20</td><td>Multiply inside the term first.</td></tr><tr><th scope="row">Multiplication always before division</th><td>42 ÷ 7 × 2 = 3</td><td>6 × 2 = 12</td><td>The first of the equal-priority operations is division.</td></tr><tr><th scope="row">Addition always before subtraction</th><td>25 − 7 + 5 = 13</td><td>18 + 5 = 23</td><td>Work left to right or add signed terms.</td></tr><tr><th scope="row">Ignoring brackets</th><td>(8 + 3) × 4 = 20</td><td>11 × 4 = 44</td><td>The entire bracket is one factor.</td></tr><tr><th scope="row">Flip just the first sign</th><td>60 − (18 + 5) = 47</td><td>60 − 18 − 5 = 37</td><td>Subtract both terms.</td></tr><tr><th scope="row">Swap subtraction or division</th><td>18 ÷ 3 = 3 ÷ 18</td><td>6 ≠ 1/6</td><td>Division does not generally commute.</td></tr><tr><th scope="row">Distribute to only one term</th><td>6 × (10 − 2) = 58</td><td>60 − 12 = 48</td><td>Multiply each bracketed term by 6.</td></tr><tr><th scope="row">Lose a negative sign</th><td>12 − (−5) = 7</td><td>12 + 5 = 17</td><td>Subtracting a negative adds its opposite.</td></tr><tr><th scope="row">Expression versus equation</th><td>6 × 4 is a true equation.</td><td>6 × 4 is an expression; 6 × 4 = 24 is a true equation.</td><td>An equation needs an equals sign.</td></tr><tr><th scope="row">Similar digits mean equivalence</th><td>22 − 7 + 3 equals 22 − (7 + 3).</td><td>18 ≠ 12</td><td>Grouping determines whether +3 is added or subtracted.</td></tr></tbody></table></div></section>
+<section id="revision">
+<h2>11. Quick revision and exam preparation</h2>
+<div class="concept-grid" aria-label="Chapter mind map">
+<div class="concept-card"><h3>Read → Translate</h3><p>Identify quantities, operations and units. Use brackets when an entire quantity repeats or is taken away.</p></div>
+<div class="concept-card"><h3>Split → Evaluate</h3><p>Rewrite subtraction as adding an opposite. Start inside brackets, then do × and ÷, then + and −. Equal-priority operations run left to right.</p></div>
+<div class="concept-card"><h3>Rewrite → Compare</h3><p>Reorder signed addends, regroup products, or distribute across all terms. Compare any parts left after shared terms cancel.</p></div>
+<div class="concept-card"><h3>Check → Explain</h3><p>Use the answer’s size, units, sign and context. Check with a second equivalent expression when practical.</p></div>
+</div>
+<div class="tip-box"><p class="box-label">Assessment checklist</p><ol><li>Read the word order carefully, especially “less than” and “divide by”.</li><li>Write one valid equality per line. Do not use “=” between unequal intermediate values.</li><li>Check every sign when a minus precedes a bracket. Keep all factors when distributing.</li><li>In assertion–reason questions, test the two statements separately before checking whether the reason explains the assertion.</li><li>Review the <a href="#precedence">BODMAS chart</a>, <a href="#properties">property table</a> and <a href="#worked">worked examples</a>.</li></ol></div>
+</section>
+<section id="practice"><h2>12. Practice bank</h2><p>67 original school practice questions. Attempt the questions before opening the corresponding set in the answer key.</p><details class="qbox"><summary>Multiple choice · Questions 1–15</summary><ol class="practice-items" start="1"><li>What is 9 + 4 × 5?<ol type="A"><li>65</li><li>29</li><li>45</li><li>25</li></ol></li><li>What is (9 + 4) × 5?<ol type="A"><li>29</li><li>55</li><li>65</li><li>69</li></ol></li><li>Evaluate 36 ÷ 6 × 2.<ol type="A"><li>3</li><li>6</li><li>12</li><li>18</li></ol></li><li>Evaluate 25 − 8 + 4.<ol type="A"><li>13</li><li>21</li><li>17</li><li>29</li></ol></li><li>Which is the negative term in 19 − 2 × 6 + 5?<ol type="A"><li>2</li><li>−6</li><li>−(2 × 6)</li><li>5</li></ol></li><li>Which expression is equivalent to 42 − (8 + 9)?<ol type="A"><li>42 − 8 + 9</li><li>42 − 8 − 9</li><li>42 + 8 − 9</li><li>42 + 8 + 9</li></ol></li><li>Which is equivalent to 50 − (16 − 3)?<ol type="A"><li>50 − 16 − 3</li><li>50 + 16 − 3</li><li>50 + 16 + 3</li><li>50 − 16 + 3</li></ol></li><li>What is the additive identity?<ol type="A"><li>1</li><li>−1</li><li>0</li><li>10</li></ol></li><li>Which illustrates commutativity?<ol type="A"><li>7 + 11 = 11 + 7</li><li>7 − 11 = 11 − 7</li><li>12 ÷ 4 = 4 ÷ 12</li><li>7 × 1 = 7</li></ol></li><li>Which expands 8 × (15 − 2)?<ol type="A"><li>8 × 15 − 2</li><li>8 − (15 × 2)</li><li>8 × 15 − 8 × 2</li><li>8 × 15 + 8 × 2</li></ol></li><li>Which equals 15 × 6 + 25 × 6?<ol type="A"><li>15 × (6 + 25)</li><li>25 × (15 + 6)</li><li>(15 + 25) × 6</li><li>(15 + 25) × 12</li></ol></li><li>Which is a true equation?<ol type="A"><li>3 + 7</li><li>16</li><li>9 + 2 = 12</li><li>5 × 3 = 15</li></ol></li><li>A bag costs ₹60 and each of five pens costs ₹9. Which expression gives the bill?<ol type="A"><li>5 × (60 + 9)</li><li>60 + 5 × 9</li><li>(60 + 5) × 9</li><li>60 − 5 × 9</li></ol></li><li>Which equals 13 + 28 without changing the sum?<ol type="A"><li>14 + 29</li><li>12 + 27</li><li>15 + 26</li><li>15 + 27</li></ol></li><li>Which is greater, 8 × (10 + 3) or 8 × 10 + 3?<ol type="A"><li>First, by 21</li><li>Second, by 21</li><li>First, by 24</li><li>They are equal</li></ol></li></ol></details>
+<details class="qbox"><summary>Fill in the blanks · Questions 16–20</summary><ol class="practice-items" start="16"><li>Complete 27 − (10 − 6) = 27 − 10 + ___.</li><li>Complete 9 × (20 + 7) = 9 × 20 + 9 × ___.</li><li>Complete 41 × ___ = 41 using the multiplicative identity.</li><li>Complete 16 + (−9) = 16 − ___.</li><li>Complete 5 × 17 + 5 × 13 = 5 × ___.</li></ol></details>
+<details class="qbox"><summary>True or false · Questions 21–25</summary><ol class="practice-items" start="21"><li>Multiplication must always come before division.</li><li>8 − (5 − 2) = 8 − 5 − 2.</li><li>Changing the order of signed terms leaves their sum unchanged.</li><li>Dividing 0 by 6 gives 0.</li><li>7 × (10 + 2) has the same value as 7 × 10 + 7 × 2.</li></ol></details>
+<details class="qbox"><summary>Very short answer · Questions 26–35</summary><ol class="practice-items" start="26"><li>Evaluate 17 + 6 × 4.</li><li>Evaluate 72 ÷ 8 ÷ 3.</li><li>Evaluate 18 − 9 + 6.</li><li>Name the signed terms of 8 − 4 × 3 + 7.</li><li>Write “twice the sum of 17 and 6”.</li><li>Simplify 35 + (−12).</li><li>Evaluate 21 − (7 + 5).</li><li>State the first operation in 4 × (13 − 8) + 19.</li><li>Give a true equation using 14 + 8 as its left side.</li><li>Give a counterexample to commutativity of division.</li></ol></details>
+<details class="qbox"><summary>Short answer · Questions 36–45</summary><ol class="practice-items" start="36"><li>Evaluate 49 − (14 − 6) two ways.</li><li>Compare 78 + 65 with 80 + 63 without finding either total.</li><li>Compare 92 − 38 with 90 − 38 without computing each.</li><li>Evaluate 15 × (100 − 4) using distribution.</li><li>Factor and evaluate 13 × 16 + 13 × 4.</li><li>Use convenient grouping to evaluate 56 + 19 − 36 + 1.</li><li>Add brackets to 20 − 8 ÷ 4 to make 3.</li><li>Evaluate 16 + [3 × (9 − 5) − 7].</li><li>Use 35 × 12 = 420 to find 34 × 12.</li><li>A box contains 9 red and 11 blue buttons. How many buttons are in six boxes? Give two equivalent expressions.</li></ol></details>
+<details class="qbox"><summary>Long answer · Questions 46–50</summary><ol class="practice-items" start="46"><li>A family buys four ₹72 tickets and two ₹45 tickets. They use a ₹25 coupon and pay with ₹500. Write the bill and change as expressions, then evaluate.</li><li>A cyclist rides 12 km in the morning and 9 km in the evening for five days. On day six she rides only 16 km. Find the total using two equivalent forms.</li><li>Evaluate 108 − [30 − (6 × 4 − 7)] by working inside out, then show a check by removing brackets.</li><li>A shop sells four sets containing 18 green beads and 12 red beads each. After adding 15 loose beads, divide all beads equally among five groups. Build and evaluate a single expression.</li><li>A canteen earns ₹1,250 per day and spends ₹480 on ingredients and ₹270 on supplies. Over six days it also pays a one-time ₹350 repair charge. Find the amount left.</li></ol></details>
+<details class="qbox"><summary>Competency based · Questions 51–55</summary><ol class="practice-items" start="51"><li>An estimate says 6 × (48 + 2) and 6 × 48 + 2 are the same. Without doing both full products, judge that statement.</li><li>A fruit stall records 74 − 26 sales after returns. A correction adds 3 to both quantities. Does the net change?</li><li>A lift starts at floor 2, moves down four floors, then up seven. Use signed terms and find where it stops, treating ground as 0.</li><li>A teacher can buy either eight packs of 12 chalks plus three loose chalks, or nine packs of 11. Are the plans equal?</li><li>An ₹18 discount is applied per kit, rather than once on the order. Four kits originally cost ₹90 each. Write the correct expression and explain the difference from a one-time discount.</li></ol></details>
+<details class="qbox"><summary>Assertion–reason · Questions 56–60</summary><p>Choose A if both statements are true and the reason explains the assertion. Choose B if both are true but the reason does not explain it. Choose C if only the assertion is true, or D if only the reason is true.</p><ol class="practice-items" start="56"><li>Assertion: 36 ÷ 6 × 2 equals 12. Reason: Division and multiplication have equal precedence and are evaluated left to right within one group.</li><li>Assertion: 7 × (19 + 1) equals 140. Reason: Multiplication has identity 1.</li><li>Assertion: 45 − (12 − 3) equals 36. Reason: Removing a bracket after subtraction keeps all the inside signs unchanged.</li><li>Assertion: 17 − 8 equals 8 − 17. Reason: Subtraction is generally not commutative.</li><li>Assertion: 12 × (7 − 2) equals 12 × 7 − 12 × 2. Reason: Multiplication distributes over subtraction.</li></ol></details>
+<details class="qbox"><summary>Case study · Questions 61–62</summary><ol class="practice-items" start="61"><li>School fair. Three activity tickets cost ₹28 each and two snack coupons cost ₹35 each. An order gets one ₹12 discount. (a) Write the amount due. (b) Find the change from ₹200. (c) Find the amount due if the discount were ₹12 on each activity ticket instead.</li><li>Garden teams. Six teams each plant nine tall and seven short plants. Four plants are removed. (a) Write one total expression. (b) Evaluate by grouping and by distribution. (c) Find the difference from 6 × 9 + 7 − 4.</li></ol></details>
+<details class="qbox"><summary>Higher-order thinking · Questions 63–67</summary><ol class="practice-items" start="63"><li>Make 42 by adding brackets to 9 + 5 × 3. Explain why the unbracketed form gives another result.</li><li>Insert either + or − in 20 □ (8 □ 3) to make 15.</li><li>Use 4, 5, 7 and 8 once each to get 24. Explain your grouping.</li><li>Can 6 × (18 + 4) equal 6 × 18 + 4? If we could replace 6 by a whole number, which number makes the equality true?</li><li>Using only the expression 23 − 15 as a starting point, describe three distinct ways to make its value rise by 4 by changing one or both numbers.</li></ol></details></section>
+<section id="answers"><h2>13. Answer key and explanations</h2><details class="answer-key"><summary>Multiple choice · Answers 1–15</summary><ol class="answer-items" start="1"><li>B. 29. Multiply 4 × 5 = 20 first, then add 9 to get 29.</li><li>C. 65. The bracket gives 13. Multiplying by 5 gives 65.</li><li>C. 12. Division and multiplication share priority. Compute 36 ÷ 6 = 6, then 6 × 2 = 12.</li><li>B. 21. Subtract 8 to get 17, then add 4 to get 21.</li><li>C. −(2 × 6). The minus applies to the whole product; the terms are 19, −(2 × 6), and 5.</li><li>B. 42 − 8 − 9. Subtracting the group changes the sign of both terms. The equivalent expression gives 25.</li><li>D. 50 − 16 + 3. Subtract 16 and add 3, as subtraction of the negative term reverses its sign.</li><li>C. 0. Adding zero to a number leaves the number unchanged.</li><li>A. 7 + 11 = 11 + 7. The two addends switch places. The last choice instead shows the identity.</li><li>C. 8 × 15 − 8 × 2. Multiply both terms by 8 and keep the subtraction between the products.</li><li>C. (15 + 25) × 6. Both addends have factor 6. Factoring gives 40 × 6 = 240.</li><li>D. 5 × 3 = 15. It has an equals sign and both sides are 15. The first two do not state equality.</li><li>B. 60 + 5 × 9. Only the pen price repeats five times. Add the single bag price to that product.</li><li>C. 15 + 26. Transferring 2 from the second addend to the first preserves the total.</li><li>A. First, by 21. Both include 80. The extras are 8 × 3 = 24 and 3, differing by 21.</li></ol></details>
+<details class="answer-key"><summary>Fill in the blanks · Answers 16–20</summary><ol class="answer-items" start="16"><li>6. The sign before the negative term inside the bracket reverses.</li><li>7. Distribute the multiplier to the second term as well.</li><li>1. One copy of 41 is still 41.</li><li>9. Adding the opposite of 9 subtracts 9.</li><li>30. Factor out 5 and add 17 + 13.</li></ol></details>
+<details class="answer-key"><summary>True or false · Answers 21–25</summary><ol class="answer-items" start="21"><li>False. They have equal priority. In 24 ÷ 4 × 2, divide first to get 6, then multiply to get 12.</li><li>False. The left side is 8 − 3 = 5. The right side is 3 − 2 = 1. Correct removal gives 8 − 5 + 2.</li><li>True. For example, 12 + (−8) + 5 and 12 + 5 + (−8) both give 9.</li><li>True. 6 × 0 = 0. Dividing any number by 0 is undefined.</li><li>True. Both give 70 + 14 = 84 by distribution.</li></ol></details>
+<details class="answer-key"><summary>Very short answer · Answers 26–35</summary><ol class="answer-items" start="26"><li>6 × 4 = 24, so 17 + 24 = 41.</li><li>Work left to right: 72 ÷ 8 = 9 and 9 ÷ 3 = 3.</li><li>18 − 9 = 9, then 9 + 6 = 15.</li><li>8, −(4 × 3), and 7. The product and its minus sign stay together.</li><li>2 × (17 + 6). Double the entire sum.</li><li>Replace adding −12 with subtracting 12. The answer is 23.</li><li>7 + 5 = 12; 21 − 12 = 9.</li><li>Subtract 8 from 13 inside the bracket first.</li><li>14 + 8 = 22, because adding 8 to 14 yields 22.</li><li>16 ÷ 4 = 4, while 4 ÷ 16 = 1/4. Swapping changes the value.</li></ol></details>
+<details class="answer-key"><summary>Short answer · Answers 36–45</summary><ol class="answer-items" start="36"><li>Bracket first: 14 − 6 = 8, then 49 − 8 = 41. Or reverse the signs: 49 − 14 + 6 = 35 + 6 = 41.</li><li>The first addend increases by 2 and the second falls by 2. Their sum is unchanged, so the expressions are equal.</li><li>With the same amount subtracted, the expression starting with 92 is greater by 2.</li><li>15 × 100 − 15 × 4 = 1,500 − 60 = 1,440.</li><li>Factor out 13: 13 × (16 + 4) = 13 × 20 = 260.</li><li>Treat −36 as a signed term. Group (56 − 36) + (19 + 1) = 20 + 20 = 40.</li><li>Use (20 − 8) ÷ 4. First subtract to get 12, then divide by 4 to get 3.</li><li>9 − 5 = 4; 3 × 4 = 12; 12 − 7 = 5; 16 + 5 = 21.</li><li>Removing one copy of 12 gives 420 − 12 = 408.</li><li>6 × (9 + 11) = 6 × 20 = 120; equivalently, 6 × 9 + 6 × 11 = 54 + 66 = 120.</li></ol></details>
+<details class="answer-key"><summary>Long answer · Answers 46–50</summary><ol class="answer-items" start="46"><li>Bill: 4 × 72 + 2 × 45 − 25 = 288 + 90 − 25 = ₹353. Change: 500 − (4 × 72 + 2 × 45 − 25) = 500 − 353 = ₹147.</li><li>5 × (12 + 9) + 16 = 5 × 21 + 16 = 121 km. Distribute to get 5 × 12 + 5 × 9 + 16 = 60 + 45 + 16 = 121 km.</li><li>Inside: 6 × 4 − 7 = 24 − 7 = 17. Then 30 − 17 = 13 and 108 − 13 = 95. Removing both groups gives 108 − 30 + 6 × 4 − 7 = 78 + 24 − 7 = 95.</li><li>[4 × (18 + 12) + 15] ÷ 5 = (4 × 30 + 15) ÷ 5 = 135 ÷ 5 = 27 beads per group.</li><li>Daily remainder = 1,250 − (480 + 270) = 1,250 − 750 = ₹500. Six such remainders less repair: 6 × 500 − 350 = 3,000 − 350 = ₹2,650.</li></ol></details>
+<details class="answer-key"><summary>Competency based · Answers 51–55</summary><ol class="answer-items" start="51"><li>They share 6 × 48. The first adds 6 × 2 = 12, while the second adds only 2. The first is 10 greater.</li><li>No. The new difference is (74 + 3) − (26 + 3) = 74 + 3 − 26 − 3. The extra +3 and −3 cancel.</li><li>2 + (−4) + 7 = −2 + 7 = 5. The lift stops at floor 5.</li><li>First: 8 × 12 + 3 = 96 + 3 = 99. Second: 9 × 11 = 99. The plans yield equal counts.</li><li>Per kit: 4 × (90 − 18) = 4 × 72 = ₹288. Once: 4 × 90 − 18 = ₹342. The first plan has three additional discounts, worth ₹54.</li></ol></details>
+<details class="answer-key"><summary>Assertion–reason · Answers 56–60</summary><ol class="answer-items" start="56"><li>A. Both are true, and the reason explains the assertion: first find 6, then multiply by 2.</li><li>B. Both are true, but identity does not explain the calculation. The bracket gives 20, producing 140.</li><li>C. The assertion is true because 45 − 9 = 36. The reason is false; the signs reverse.</li><li>D. The assertion is false because the expressions are 9 and −9. The reason is true.</li><li>A. Both are true and the reason explains the equality. Each expression gives 60.</li></ol></details>
+<details class="answer-key"><summary>Case study · Answers 61–62</summary><ol class="answer-items" start="61"><li>(a) 3 × 28 + 2 × 35 − 12 = 84 + 70 − 12 = ₹142. (b) 200 − 142 = ₹58. (c) 3 × (28 − 12) + 2 × 35 = 48 + 70 = ₹118.</li><li>(a) 6 × (9 + 7) − 4. (b) Group: 6 × 16 − 4 = 92; distribute: 54 + 42 − 4 = 92. (c) The other expression counts seven short plants only once, giving 57. The difference is 35 plants.</li></ol></details>
+<details class="answer-key"><summary>Higher-order thinking · Answers 63–67</summary><ol class="answer-items" start="63"><li>(9 + 5) × 3 = 14 × 3 = 42. Without the bracket, the product is 5 × 3 = 15, so the sum is 24.</li><li>Choose outer − and inner −: 20 − (8 − 3) = 20 − 5 = 15. The other three sign choices give 9, 25 and 31.</li><li>Make 12 as 8 + 4 and 2 as 7 − 5. Then multiply the two groups: (8 + 4) × (7 − 5) = 12 × 2 = 24.</li><li>The common term cancels. Six copies of 4 give 24, not 4. Exactly one copy of 4 is 4, so replace 6 by 1.</li><li>Its value is 8, so target 12. Increase the first by 4: 27 − 15. Decrease the second by 4: 23 − 11. Increase the first by 2 and decrease the second by 2: 25 − 13. Each gives 12.</li></ol></details></section>
+<section id="sources"><h2>Textbook references</h2><p>Based on NCERT <cite>Ganita Prakash</cite>, Class 7, Part I, Chapter 2, 2026–27 reprint. The notes follow simple expressions and the reading and evaluation of complex expressions, including the end-of-chapter expression-building activity. The examples and practice questions are original. <a href="https://ncert.nic.in/textbook/pdf/gegp1ps.pdf">NCERT textbook contents</a> · <a href="https://ncert.nic.in/textbook/pdf/gegp102.pdf">NCERT Chapter 2</a> · <a href="https://edustud.nic.in/edu/Syllabus_2026_27/7/7_MATH_SYLLABUS_2026_27_EM.pdf">Class 7 chapter sequence and learning outcomes</a>.</p></section>
+    </article>
+    <nav class="next-chapter" aria-label="Adjacent chapters">
+      <a class="btn btn-secondary" href="/cbse-study-material/class-7/mathematics/chapter-01/notes/">Previous: Large Numbers Around Us</a>
+      <a class="btn btn-primary" href="/cbse-study-material/class-7/mathematics/chapter-03/">Next: A Peek Beyond the Point</a>
+    </nav>
+    <a class="sm-back" href="/cbse-study-material/class-7/mathematics/chapter-02/"><i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Chapter 2 resources</a>
+  </div>
+</main>
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-about">
+      <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+      <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#courses">Courses</a></li>
+        <li><a href="/cbse-study-material/">Study Material</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Popular Searches</h4>
+      <ul>
+        <li><a href="/cbse-study-material/">CBSE Study Material</a></li>
+        <li><a href="/best-tuition-centre-hulimavu/">Best Tuition Centre in Hulimavu</a></li>
+        <li><a href="/cbse-tuition-hulimavu/">CBSE Tuition in Hulimavu</a></li>
+        <li><a href="/maths-tuition-hulimavu/">Maths Tuition in Hulimavu</a></li>
+        <li><a href="/science-tuition-hulimavu/">Science Tuition in Hulimavu</a></li>
+        <li><a href="/class-10-tuition-hulimavu/">Class 10 Tuition Hulimavu</a></li>
+        <li><a href="/class-12-tuition-hulimavu/">Class 12 Tuition Hulimavu</a></li>
+        <li><a href="/tuition-centre-bangalore/">Best Tuition Centre in Bangalore</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/cbse-study-material/sm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/supabase-config.js"></script>
+<script src="/supabase-auth.js"></script>
+<script src="/supabase-nav.js" defer></script>
+<script src="/chatbot/chatbot-loader.js" defer></script>
+<script id="arithmetic-tools">
+(() => {
+  'use strict';
+  const symbol = {'+':'+','-':'−','*':'×','/':'÷'};
+  const valueNode = (n, d = 1n) => ({kind:'value', n, d});
+  function reduced(n,d) {
+    if (d === 0n) throw new Error('Division by zero is undefined. Check the divisor.');
+    if (d < 0n) { n = -n; d = -d; }
+    let a = n < 0n ? -n : n, b = d;
+    while (b) [a,b] = [b,a%b];
+    return valueNode(n/a,d/a);
+  }
+  function combine(op,a,b) {
+    switch(op) {
+      case '+': return reduced(a.n*b.d+b.n*a.d,a.d*b.d);
+      case '-': return reduced(a.n*b.d-b.n*a.d,a.d*b.d);
+      case '*': return reduced(a.n*b.n,a.d*b.d);
+      case '/': return reduced(a.n*b.d,a.d*b.n);
+      default: throw new Error('Use a supported operation.');
+    }
+  }
+  function parse(raw) {
+    if (!raw.trim() || raw.length > 120) throw new Error('Enter an expression of 1 to 120 characters.');
+    const clean = raw.replaceAll('−','-').replaceAll('×','*').replaceAll('÷','/');
+    const tokens = clean.match(/\d+|[+\-*/()[\]\s]|./gu) || [];
+    const parts = tokens.filter(piece=>!(/^\s+$/u).test(piece));
+    if (parts.some(piece=>!(/^\d{1,9}$|^[+\-*/()[\]]$/).test(piece))) {
+      throw new Error('Use whole-number inputs up to nine digits, +, −, ×, ÷ and matching brackets. Use ÷ or / to write fractions.');
+    }
+    let i=0;
+    function atom() {
+      const token=parts[i++];
+      if (token==='-' || token==='+') return {kind:'sign',token,child:atom()};
+      if (token==='(' || token==='[') {
+        const child = level(0);
+        if (parts[i++] !== (token==='('?')':']')) throw new Error('Close each bracket with its matching bracket.');
+        return {kind:'group',token,child};
+      }
+      if (token && /^\d+$/.test(token)) return valueNode(BigInt(token));
+      throw new Error('A number or opening bracket is needed here.');
+    }
+    const bands=[['+','-'],['*','/']];
+    function level(n) {
+      if (n===bands.length) return atom();
+      let node=level(n+1);
+      while (bands[n].includes(parts[i])) {
+        const token=parts[i++];
+        node={kind:'binary',token,left:node,right:level(n+1)};
+      }
+      return node;
+    }
+    const tree=level(0);
+    if (i!==parts.length) throw new Error('Check for a missing operation or an extra bracket.');
+    return tree;
+  }
+  function show(node, nested = false) {
+    if (node.kind==='value') {
+      const numeral=node.n.toString().replace('-','−')+(node.d===1n?'':'/'+node.d);
+      return nested&&(node.n<0n||node.d!==1n)?'('+numeral+')':numeral;
+    }
+    if (node.kind==='sign') return symbol[node.token]+show(node.child,true);
+    if (node.kind==='group') return node.token+show(node.child)+(node.token==='('?')':']');
+    return show(node.left,true)+' '+symbol[node.token]+' '+show(node.right,true);
+  }
+  function calculate(raw) {
+    let tree=parse(raw);
+    const initial=show(tree);
+    const steps=[];
+    function walk(node,parent,key,level,list) {
+      if (node.kind==='group') walk(node.child,node,'child',level+1,list);
+      if (node.kind==='sign') walk(node.child,node,'child',level,list);
+      if (node.kind==='binary') {
+        walk(node.left,node,'left',level,list);
+        walk(node.right,node,'right',level,list);
+      }
+      const isValue=child=>child.kind==='value';
+      let precedence=-1;
+      if (node.kind==='group' && isValue(node.child)) precedence=4;
+      if (node.kind==='sign' && isValue(node.child)) precedence=3;
+      if (node.kind==='binary' && isValue(node.left)&&isValue(node.right)) {
+        precedence=node.token==='*'||node.token==='/'?2:1;
+      }
+      if (precedence>=0) list.push({node,parent,key,level,precedence});
+    }
+    while(tree.kind!=='value') {
+      const choices=[];
+      walk(tree,null,null,0,choices);
+      const best=choices.reduce((a,b)=>b.level>a.level||(b.level===a.level&&b.precedence>a.precedence)?b:a);
+      const {node,parent,key}=best;
+      const before=show(node);
+      let result;
+      if(node.kind==='binary') result=combine(node.token,node.left,node.right);
+      else if(node.kind==='sign') result=valueNode(node.token==='-'?-node.child.n:node.child.n,node.child.d);
+      else result=node.child;
+      if(parent) parent[key]=result;
+      else tree=result;
+      steps.push({operation:before+' → '+show(result), expression:show(tree)});
+    }
+    return {initial,steps,result:show(tree),value:tree};
+  }
+  const get=id=>document.getElementById(id);
+  const target=get('expression-evaluator');
+  target.addEventListener('submit',event=>{
+    event.preventDefault();
+    const output=get('evaluation-summary');
+    const list=get('evaluation-steps');
+    list.replaceChildren();
+    try {
+      const answer=calculate(get('expression-input').value);
+      for(const step of answer.steps){
+        const item=document.createElement('li');
+        const highlight=document.createElement('mark');
+        highlight.textContent=step.operation;
+        const expression=document.createElement('span');
+        expression.textContent='  ⇒  '+step.expression;
+        item.append(highlight,expression);
+        list.append(item);
+      }
+      output.textContent=answer.initial+' = '+answer.result;
+    } catch(error) {
+      output.textContent=error.message;
+    }
+  });
+  target.requestSubmit();
+  const levels=get('bodmas-level');
+  const prompt=get('bodmas-expression');
+  const choices=get('bodmas-choices');
+  const bodmasFeedback=get('bodmas-feedback');
+  const newProblem=get('bodmas-new');
+  const pick=(low,high)=>low+Math.floor(Math.random()*(high-low+1));
+  function generate(){
+    const a=pick(3,9), b=pick(2,5), c=pick(6,9), d=pick(2,4);
+    let expression,options,reason;
+    if(levels.value==='basic'){
+      expression=a+' + '+b+' × '+c;
+      options=[b+' × '+c,a+' + '+b];
+      reason='Multiplication is evaluated before addition.';
+    } else if(levels.value==='middle'){
+      expression=(a*b)+' ÷ '+b+' × '+c+' − '+d;
+      options=[(a*b)+' ÷ '+b,b+' × '+c,c+' − '+d];
+      reason='The first division and multiplication have equal priority. Begin on the left.';
+    } else {
+      expression=(a+20)+' − ['+b+' + ('+(c+d)+' − '+d+') × '+a+']';
+      options=[(c+d)+' − '+d,b+' + '+(c+d),d+' × '+a];
+      reason='The subtraction in the innermost bracket must be evaluated first.';
+    }
+    prompt.textContent=expression;
+    const correct=options[0];
+    const offset=pick(0,options.length-1);
+    choices.replaceChildren();
+    bodmasFeedback.textContent='';
+    options.slice(offset).concat(options.slice(0,offset)).forEach(option=>{
+      const button=document.createElement('button');
+      button.type='button';
+      button.className='btn btn-secondary';
+      button.textContent=option;
+      button.addEventListener('click',()=>{
+        const ok=option===correct;
+        bodmasFeedback.textContent=(ok?'Correct. ':'Try again. ')+reason;
+      });
+      choices.append(button);
+    });
+  }
+  newProblem.addEventListener('click',()=>{generate();choices.firstElementChild.focus();});
+  levels.addEventListener('change',generate);
+  generate();
+  const puzzles=[
+    {base:'8 + 4 × 3',target:'36',solution:'(8 + 4) × 3'},
+    {base:'24 − 12 ÷ 3',target:'4',solution:'(24 − 12) ÷ 3'},
+    {base:'18 − 6 − 2',target:'14',solution:'18 − (6 − 2)'}
+  ];
+  const puzzleSelect=get('bracket-puzzle');
+  const bracketInput=get('bracket-input');
+  const bracketFeedback=get('bracket-feedback');
+  function setPuzzle(){
+    const current=puzzles[Number(puzzleSelect.value)];
+    get('bracket-instruction').textContent='Insert brackets into '+current.base+' to make '+current.target+'.';
+    bracketInput.value=current.base;
+    bracketFeedback.textContent='';
+  }
+  const core=value=>value.replaceAll('−','-').replaceAll('×','*').replaceAll('÷','/').replace(/[[\]()\s]/g,'');
+  puzzleSelect.addEventListener('change',setPuzzle);
+  get('bracket-builder').addEventListener('submit',event=>{
+    event.preventDefault();
+    const current=puzzles[Number(puzzleSelect.value)];
+    try{
+      if(core(bracketInput.value)!==core(current.base)) throw new Error('Keep the given numbers and operations in the same order. Add brackets only.');
+      const result=calculate(bracketInput.value).result;
+      bracketFeedback.textContent='Your result is '+result+'. '+(result===current.target?'Target reached!':'Try grouping a different pair. The original gives '+calculate(current.base).result+'.');
+    }catch(error){bracketFeedback.textContent=error.message;}
+  });
+  get('bracket-reveal').addEventListener('click',()=>{
+    const current=puzzles[Number(puzzleSelect.value)];
+    bracketFeedback.textContent='One solution: '+current.solution+' = '+current.target+'.';
+  });
+  setPuzzle();
+  for(const form of document.querySelectorAll('.expression-check')){
+    form.addEventListener('submit',event=>{
+      event.preventDefault();
+      const selected=form.querySelector('select').selectedOptions[0];
+      const output=form.querySelector('output');
+      const message=selected.dataset.feedback;
+      output.textContent=(selected.value==='correct'?'Correct. ':message?'Try again. ':'')+(message||'Choose an answer first.');
+    });
+  }
+})();
+
+</script>
+</body>
+</html>
