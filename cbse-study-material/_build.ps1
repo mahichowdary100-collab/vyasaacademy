@@ -200,8 +200,20 @@ foreach ($c in $data.classes) {
   $subLabels = @()
   foreach ($s in $c.subjects) { $subLabels += $s.label }
   $searchKey = "cbse class $($c.number) $($subLabels -join ' ') "
-  $classCards += "<a class=""sm-card sm-class-card"" href=""/cbse-study-material/class-$($c.number)/"" data-search=""$searchKey"">$nl" +
-    "  <span class=""sm-card-icon sm-class-num"">$($c.number)</span>$nl" +
+  $classCardClass = "sm-card sm-class-card"
+  $classMedia = "<span class=""sm-card-icon sm-class-num"">$($c.number)</span>"
+  if ($c.PSObject.Properties['cover'] -and $c.cover) {
+    $coverDir = Join-Path $smDir 'images/class-covers'
+    if (-not (Test-Path -LiteralPath (Join-Path $coverDir $c.cover) -PathType Leaf)) {
+      throw "Missing class artwork: $coverDir/$($c.cover)"
+    }
+    $classCardClass += " sm-chapter-card-has-img sm-chapter-card-has-cover"
+    $coverUrl = Esc-Attr "/cbse-study-material/images/class-covers/$($c.cover)"
+    $loading = if ($classCards.Count -lt 3) { '' } else { ' loading="lazy"' }
+    $classMedia = "<img class=""sm-chapter-img"" src=""$coverUrl"" alt="""" width=""720"" height=""480"" decoding=""async""$loading />"
+  }
+  $classCards += "<a class=""$classCardClass"" href=""/cbse-study-material/class-$($c.number)/"" data-search=""$searchKey"">$nl" +
+    "  $classMedia$nl" +
     "  <div class=""sm-card-body"">$nl    <h3>CBSE Class $($c.number)</h3>$nl    <p>$($subLabels -join ' + ')</p>$nl    <span class=""sm-card-go"">Explore <i class=""fas fa-arrow-right""></i></span>$nl  </div>$nl</a>"
 }
 $relatedMain = Get-RelatedHtml $main.related

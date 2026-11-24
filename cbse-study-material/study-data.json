@@ -23,6 +23,7 @@
   "classes": [
     {
       "number": 6,
+      "cover": "class-6.webp",
       "label": "Class 6",
       "title": "CBSE Class 6 Study Material | Maths & Science | Vyasa Academy",
       "description": "CBSE Class 6 study material at Vyasa Academy - Mathematics and Science chapters with notes, practice papers, quizzes and chapter tests aligned to the CBSE NCERT syllabus.",
@@ -50,6 +51,7 @@
     },
     {
       "number": 7,
+      "cover": "class-7.webp",
       "label": "Class 7",
       "title": "CBSE Class 7 Study Material | Maths & Science | Vyasa Academy",
       "description": "CBSE Class 7 study material at Vyasa Academy - Mathematics and Science chapters with notes, practice papers, quizzes and chapter tests aligned to the CBSE NCERT syllabus.",
@@ -110,6 +112,7 @@
     },
     {
       "number": 8,
+      "cover": "class-8.webp",
       "label": "Class 8",
       "title": "CBSE Class 8 Study Material | Maths & Science | Vyasa Academy",
       "description": "CBSE Class 8 study material at Vyasa Academy - Mathematics and Science chapters with notes, practice papers, quizzes and chapter tests aligned to the CBSE NCERT syllabus.",
@@ -137,6 +140,7 @@
     },
     {
       "number": 9,
+      "cover": "class-9.webp",
       "label": "Class 9",
       "title": "CBSE Class 9 Study Material | Maths & Science | Vyasa Academy",
       "description": "CBSE Class 9 study material at Vyasa Academy - Mathematics and Science chapters with notes, practice papers, quizzes and chapter tests aligned to the CBSE NCERT syllabus.",
@@ -198,6 +202,7 @@
     },
     {
       "number": 10,
+      "cover": "class-10.webp",
       "label": "Class 10",
       "title": "CBSE Class 10 Study Material | Maths & Science | Vyasa Academy",
       "description": "CBSE Class 10 study material at Vyasa Academy - Mathematics and Science chapters with notes, practice papers, quizzes and chapter tests aligned to the CBSE NCERT syllabus.",
@@ -262,6 +267,7 @@
     },
     {
       "number": 11,
+      "cover": "class-11.webp",
       "label": "Class 11",
       "title": "CBSE Class 11 Study Material | Maths & Science | Vyasa Academy",
       "description": "CBSE Class 11 study material at Vyasa Academy - Mathematics and Science chapters with notes, practice papers, quizzes and chapter tests aligned to the CBSE NCERT syllabus.",
@@ -289,6 +295,7 @@
     },
     {
       "number": 12,
+      "cover": "class-12.webp",
       "label": "Class 12",
       "title": "CBSE Class 12 Study Material | Maths & Science | Vyasa Academy",
       "description": "CBSE Class 12 study material for board exam preparation - Mathematics and Science chapters with notes, practice papers, quizzes and chapter tests at Vyasa Academy.",
