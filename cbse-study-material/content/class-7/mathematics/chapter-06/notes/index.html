@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Number Play Class 7 CBSE Maths Notes | Ganita Prakash | Vyasa Academy</title>
+  <meta name="description" content="Class 7 Number Play notes with parity, magic squares, Virahāṅka numbers, digit puzzles, 30 worked examples, 67 practice questions, and interactive activities." />
+  <link rel="canonical" href="https://www.vyasaacademy.in/cbse-study-material/class-7/mathematics/chapter-06/notes/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vyasa Academy" />
+  <meta property="og:title" content="Number Play Class 7 CBSE Maths Notes | Ganita Prakash | Vyasa Academy" />
+  <meta property="og:description" content="Class 7 Number Play notes with parity, magic squares, Virahāṅka numbers, digit puzzles, 30 worked examples, 67 practice questions, and interactive activities." />
+  <meta property="og:url" content="https://www.vyasaacademy.in/cbse-study-material/class-7/mathematics/chapter-06/notes/" />
+  <meta property="og:image" content="https://www.vyasaacademy.in/cbse-study-material/class-7/images/mathematics/chapter-06-notes.webp" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Number Play Class 7 CBSE Maths Notes | Ganita Prakash | Vyasa Academy" />
+  <meta name="twitter:description" content="Class 7 Number Play notes with parity, magic squares, Virahāṅka numbers, digit puzzles, 30 worked examples, 67 practice questions, and interactive activities." />
+  <meta name="twitter:image" content="https://www.vyasaacademy.in/cbse-study-material/class-7/images/mathematics/chapter-06-notes.webp" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.vyasaacademy.in/"}, {"@type": "ListItem", "position": 2, "name": "CBSE Study Material", "item": "https://www.vyasaacademy.in/cbse-study-material/"}, {"@type": "ListItem", "position": 3, "name": "Class 7", "item": "https://www.vyasaacademy.in/cbse-study-material/class-7/"}, {"@type": "ListItem", "position": 4, "name": "Mathematics", "item": "https://www.vyasaacademy.in/cbse-study-material/class-7/mathematics/"}, {"@type": "ListItem", "position": 5, "name": "Number Play", "item": "https://www.vyasaacademy.in/cbse-study-material/class-7/mathematics/chapter-06/"}, {"@type": "ListItem", "position": 6, "name": "Notes", "item": "https://www.vyasaacademy.in/cbse-study-material/class-7/mathematics/chapter-06/notes/"}]}
+  </script>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+      processEscapes: true
+    }
+  };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <style>
+  .sm-notes { font-size: 1rem; line-height: 1.8; }
+  .sm-notes h2 { font-size: 1.45rem; color: var(--primary); margin: 44px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--accent); }
+  .sm-notes h3 { font-size: 1.15rem; color: var(--dark); margin: 28px 0 12px; }
+  .sm-notes h4 { font-size: 1.05rem; color: var(--dark); margin: 20px 0 8px; }
+  .sm-notes p { margin-bottom: 14px; }
+  .sm-notes ul, .sm-notes ol { margin: 10px 0 16px 24px; }
+  .sm-notes li { margin-bottom: 6px; }
+  .sm-notes ul { list-style: disc; }
+
+  .def-box { background: #eef2ff; border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .def-box .box-label { font-weight: 700; color: var(--primary); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .result-box { background: #fff8e1; border-left: 4px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .result-box .box-label { font-weight: 700; color: var(--accent-dark); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .example-box { background: #f0fdf4; border-left: 4px solid #16a34a; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .example-box .box-label { font-weight: 700; color: #16a34a; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .tip-box { background: #eff6ff; border-left: 4px solid #2563eb; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .tip-box .box-label { font-weight: 700; color: #2563eb; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .warn-box { background: #fef2f2; border-left: 4px solid #dc2626; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .warn-box .box-label { font-weight: 700; color: #dc2626; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .steps { margin: 12px 0 16px; }
+  .steps .step { display: flex; gap: 12px; margin-bottom: 10px; }
+  .steps .step-num { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: var(--primary); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; margin-top: 3px; }
+  .steps .step-text { flex: 1; }
+
+  .table-wrap { overflow-x: auto; margin: 16px 0; -webkit-overflow-scrolling: touch; }
+  .sm-notes table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .sm-notes th { background: var(--primary); color: var(--white); text-align: left; padding: 12px 14px; font-weight: 600; white-space: nowrap; }
+  .sm-notes td { padding: 10px 14px; border-bottom: 1px solid #e5e7eb; }
+  .sm-notes tr:nth-child(even) td { background: #f9fafb; }
+  .sm-notes tr:hover td { background: #eef2ff; }
+
+  .highlight { background: #fef9c3; padding: 2px 5px; border-radius: 4px; font-weight: 600; }
+  .qbox { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: var(--radius); padding: 16px 20px; margin: 12px 0; }
+  .qbox .q-label { font-weight: 700; color: var(--primary); margin-bottom: 4px; }
+
+  .app-box { background: #ecfeff; border-left: 4px solid #0891b2; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .app-box .box-label { font-weight: 700; color: #0e7490; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .comp-box { background: #f5f3ff; border-left: 4px solid #7c3aed; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .comp-box .box-label { font-weight: 700; color: #6d28d9; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .solved-box { background: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #16a34a; border-radius: var(--radius); padding: 18px 22px; margin: 18px 0; box-shadow: 0 2px 8px rgba(15,23,42,.05); }
+  .solved-box .s-label { font-weight: 700; color: #16a34a; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  .solved-box .s-part { margin: 10px 0 0; }
+  .solved-box .s-part b { color: var(--primary); }
+
+  .solution-box { background: #f8fafc; border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 16px 0 4px; font-size: 0.95rem; }
+  .solution-box p { margin: 8px 0; }
+
+  .case-card { background: #fff; border: 1px solid #e2e8f0; border-radius: var(--radius); margin: 22px 0; box-shadow: 0 2px 8px rgba(15,23,42,.05); overflow: hidden; }
+  .case-card-header { background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: #fff; padding: 14px 20px; }
+  .case-card-header h3 { margin: 0; font-size: 1.05rem; }
+  .case-card-body { padding: 18px 20px; }
+
+  .concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 18px 0; }
+  .concept-card { background: #fff; border: 1px solid #e2e8f0; border-left: 4px solid var(--primary); border-radius: var(--radius); padding: 16px 18px; transition: var(--transition); }
+  .concept-card:hover { box-shadow: 0 6px 18px rgba(79,70,229,.12); transform: translateY(-2px); }
+  .concept-card h4 { color: var(--primary); margin: 0 0 6px; font-size: 1rem; }
+  .concept-card p { margin: 0; font-size: 0.92rem; }
+
+  .tag-pill { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: .4px; text-transform: uppercase; padding: 3px 10px; border-radius: 999px; vertical-align: middle; }
+  .tag-style { background: #e0e7ff; color: #3730a3; }
+
+  .sm-notes mjx-container { max-width: 100%; }
+  .sm-notes mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; }
+
+  .resource-nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
+  .resource-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: var(--radius); border: 2px solid #e5e7eb; font-weight: 600; font-size: 0.92rem; color: var(--dark); background: var(--white); transition: var(--transition); }
+  .resource-nav a:hover, .resource-nav a.is-active { border-color: var(--primary); background: var(--primary); color: var(--white); }
+
+  .sm-back { display: inline-flex; align-items: center; gap: 8px; margin-top: 30px; padding: 10px 0; color: var(--primary); font-weight: 600; }
+  .sm-back:hover { color: var(--accent-dark); }
+
+  .next-chapter { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; justify-content: space-between; margin-top: 26px; padding: 18px 22px; background: linear-gradient(135deg, #eef2ff, #ffffff); border: 1px solid #e0e7ff; border-radius: var(--radius); }
+  .next-chapter h3 { margin: 0; font-size: 1.02rem; }
+  .next-chapter p { margin: 4px 0 0; font-size: 0.9rem; }
+
+  @media (max-width: 640px) {
+    .sm-notes h2 { font-size: 1.25rem; }
+    .sm-notes { font-size: 0.95rem; }
+    .steps .step { gap: 8px; }
+    .steps .step-num { width: 22px; height: 22px; font-size: 0.75rem; }
+    .resource-nav { gap: 6px; }
+    .resource-nav a { padding: 8px 12px; font-size: 0.85rem; }
+    .concept-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 420px) {
+    .concept-grid { grid-template-columns: 1fr; }
+  }
+
+  .chapter-diagram { margin: 24px auto 30px; max-width: 980px; }
+  .chapter-diagram img { display: block; width: 100%; height: auto; border-radius: 18px; border: 1px solid #dce8ed; background: #f4f8fa; }
+  .chapter-diagram figcaption { color: var(--muted, #526578); font-size: .92rem; line-height: 1.6; padding: 10px 12px; }
+  .notes-toc { background: #f7f9ff; border: 1px solid #dbe3f5; border-radius: 14px; padding: 14px 20px; margin: 10px 0 30px; }
+  .notes-toc summary { color: var(--primary); font-size: 1.05rem; font-weight: 700; cursor: pointer; }
+  .notes-toc ul { columns: 2; column-gap: 36px; margin: 12px 0 4px 22px; }
+  .notes-toc li { break-inside: avoid; }
+  .notes-toc a { text-decoration: none; }
+  .answer-key { padding: 14px 18px; background: #f7f9fc; border-radius: 12px; border: 1px solid #e0e7ef; }
+  .answer-key summary { font-weight: 700; cursor: pointer; color: var(--primary); }
+  @media (max-width: 640px) { .notes-toc ul { columns: 1; } .chapter-diagram { margin: 18px auto 24px; } }
+  @media print { .navbar, .resource-nav, .footer, .sm-crumbs, .notes-toc, .next-chapter, .sm-back { display: none !important; } .sm-page, .sm-container { max-width: none !important; padding: 0 !important; } .chapter-diagram img { max-width: 100%; } .sm-notes h2 { break-after: avoid; } .solved-box { break-inside: avoid; } }
+
+  .number-notes section[id]{scroll-margin-top:86px;}
+  .number-notes table caption{text-align:left;padding:6px 3px;font-weight:700;}
+  .number-notes :is(summary,.np-scroll):focus-visible{outline:3px solid #2563eb;outline-offset:3px;}
+  .number-notes .tip-box{background:#fff7ed;border-color:#c2410c;}
+  .number-notes .tip-box .box-label{color:#9a3412;}
+  .number-notes .warn-box .box-label{color:#991b1b;}
+  .number-notes .comp-box .box-label{color:#5b21b6;}
+  .np-cover{position:relative;max-width:600px;}
+  .np-float{position:absolute;inset:0 0 auto;aspect-ratio:3/2;pointer-events:none;}
+  .np-float span{position:absolute;color:#fff;background:#102b4f;border:1px solid #4dd5f1;padding:2px 9px;border-radius:18px;font-weight:750;}
+  .np-float span:first-child{top:10%;left:8%;}
+  .np-float span:nth-child(2){top:12%;right:8%;}
+  .np-float span:nth-child(3){bottom:10%;left:8%;}
+  .np-float span:nth-child(4){bottom:12%;right:7%;}
+  .np-cover.np-visible .np-float span{animation:np-drift 4s ease-in-out 2;}
+  @keyframes np-drift{50%{transform:translateY(-6px) rotate(6deg);box-shadow:0 0 10px #39d5fd;}}
+  .np-figure{margin:14px auto 24px;max-width:420px;}
+  .np-figure figcaption{margin-top:6px;color:#475569;font-size:.92rem;}
+  .np-height{height:106px;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;align-items:end;text-align:center;border-bottom:2px solid #64748b;}
+  .np-height span{display:grid;place-items:center;height:var(--height);background:#dbeafe;color:#1e3a8a;border-radius:7px 7px 0 0;}
+  .np-counters,.np-actions,.np-sequence{display:flex;flex-wrap:wrap;align-items:center;gap:6px;}
+  .np-dot{display:block;height:15px;width:15px;background:#1d4ed8;border:1px solid #173d89;border-radius:50%;}
+  .np-dot:nth-child(2n){margin-right:5px;}
+  .np-pair-alt{background:#0f766e;border-color:#115e59;}
+  .np-leftover{background:#f97316;border-color:#9a3412;}
+  .np-sequence span,.np-sequence button,.np-static-grid span{display:grid;min-width:36px;min-height:36px;place-items:center;padding:2px 7px;border-radius:6px;border:1px solid #9eaee0;background:#e0e7ff;color:#312e81;font:inherit;font-weight:750;}
+  .np-sequence button[aria-pressed=true]{outline:2px solid #0f766e;background:#ccfbf1;}
+  .np-sequence button{cursor:pointer;}
+  .np-sequence span{animation:np-appear .25s ease-out;}
+  @keyframes np-appear{from{opacity:.35;transform:translateY(3px);}to{opacity:1;transform:translateY(0);}}
+  .np-magic{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;width:100%;max-width:192px;}
+  .np-magic input{text-align:center;}
+  .np-tools,.np-checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,295px),1fr));gap:14px;margin:14px 0;}
+  .np-tools>.np-checks{margin:0;grid-template-columns:1fr;}
+  .number-notes .np-lab{display:grid;gap:8px;align-content:start;min-width:0;background:#ecfeff;border-color:#a5dfe4;margin:0;}
+  .number-notes .np-lab form{display:grid;gap:8px;}
+  .number-notes .np-lab :is(h3,p){margin:0;}
+  .number-notes .np-lab :is(input,select){box-sizing:border-box;min-width:0;width:100%;padding:8px 10px;border:1px solid #64748b;border-radius:6px;font:inherit;background:#fff;color:#172554;}
+  .number-notes .np-lab input[type=range]{padding:0;accent-color:#0f766e;}
+  .number-notes .np-lab .btn{justify-self:start;}
+  .number-notes .np-lab output{display:block;overflow-wrap:anywhere;color:#164e63;font-weight:700;}
+  .np-prompt{font-size:1.15rem;font-weight:750;}
+  .number-notes details>summary{cursor:pointer;font-weight:700;}
+  .number-notes .worked-example{padding:12px 18px;}
+  .number-notes .worked-example summary{color:#166534;}
+  .number-notes details[open]>summary,.number-notes .answer-key{margin-bottom:10px;}
+  .number-notes .practice-items ol{margin-top:4px;}
+  @media(prefers-reduced-motion:reduce){.np-cover.np-visible .np-float span,.np-sequence span{animation:none;}}
+  @media print{.number-notes #lab,.number-notes .np-checks,.np-float{display:none;}}
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="/" class="logo"><i class="fas fa-graduation-cap"></i> Vyasa Academy</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="/">Home</a>
+      <a href="/#courses">Courses</a>
+      <a href="/cbse-study-material/" class="active">Study Material</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main class="sm-page">
+  <div class="container sm-container">
+    <nav class="sm-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/cbse-study-material/">CBSE Study Material</a> / <a href="/cbse-study-material/class-7/">Class 7</a> / <a href="/cbse-study-material/class-7/mathematics/">Mathematics</a> / <a href="/cbse-study-material/class-7/mathematics/chapter-06/">Number Play</a> / <span aria-current="page">Notes</span></nav>
+    <section class="sm-hero sm-hero-slim">
+      <p class="sm-eyebrow">CBSE Class 7 &middot; Mathematics &middot; Ganita Prakash Part I</p>
+      <h1>Chapter 6: Number Play</h1>
+      <p>Use patterns and logical clues to predict parity, build magic squares, count rhythms and solve digit puzzles.</p>
+    </section>
+    <nav class="resource-nav" aria-label="Chapter resources"><a class="is-active" aria-current="page" href="/cbse-study-material/class-7/mathematics/chapter-06/notes/"><i class="fas fa-book-open" aria-hidden="true"></i> Notes</a><a href="/cbse-study-material/class-7/mathematics/chapter-06/practice-paper/"><i class="fas fa-file-lines" aria-hidden="true"></i> Practice Paper</a><a href="/cbse-study-material/class-7/mathematics/chapter-06/quiz/"><i class="fas fa-bolt" aria-hidden="true"></i> Quiz</a><a href="/cbse-study-material/class-7/mathematics/chapter-06/test/"><i class="fas fa-clipboard-check" aria-hidden="true"></i> Chapter Test</a></nav>
+    <article class="sm-notes number-notes">
+      <figure class="chapter-diagram np-cover">
+        <img src="/cbse-study-material/class-7/images/mathematics/chapter-06-notes.webp" width="900" height="600" alt="Glowing tiles, counters and puzzle pieces illustrate number patterns." loading="lazy" decoding="async">
+        <div class="np-float" aria-hidden="true"><span>2n</span><span>1, 2, 3, 5</span><span>0–9</span><span>15</span></div>
+        <figcaption>Pairs, grids and digit clues reveal patterns worth testing.</figcaption>
+      </figure>
+      <details class="notes-toc"><summary>On this page</summary><ul><li><a href="#opening">Opening puzzle and objectives</a></li><li><a href="#height">Height-order codes</a></li><li><a href="#parity">Parity and consecutive numbers</a></li><li><a href="#grids">Grids and magic squares</a></li><li><a href="#rhythms">Virahāṅka–Fibonacci rhythms</a></li><li><a href="#digits">Cryptarithms and digit tricks</a></li><li><a href="#lab">Interactive number lab</a></li><li><a href="#worked">30 worked examples</a></li><li><a href="#mistakes">Common mistakes</a></li><li><a href="#revision">Quick revision</a></li><li><a href="#practice">67 practice questions</a></li><li><a href="#answers">Answer key</a></li><li><a href="#sources">References</a></li></ul></details>
+
+<section id="opening"><h2>1. What can you tell without doing the whole calculation?</h2>
+<p>A lamp is off. Flip its switch 63 times. What is its final state?</p>
+<details class="solved-box"><summary>Reveal the observation</summary><p>Each pair of flips restores the starting state. After 31 pairs, the lamp is still off. The last flip turns it on. Only the parity of 63 matters.</p></details>
+<div class="def-box"><p class="box-label">Learning objectives</p><ul><li>Use relative sizes and repeating or growing rules to make predictions.</li><li>Reason about even and odd numbers, test grid constraints, and construct magic squares.</li><li>Explain the Virahāṅka–Fibonacci rule and solve digit puzzles using place value and carries.</li><li>Distinguish an observation from a proof, and use a counterexample to disprove an always-claim.</li></ul></div>
+<p>Number play turns everyday observations into reasoning. Think of seating people in pairs, adding prices from the units digits, checking a set of totals, or building a drum rhythm from one- and two-beat notes.</p></section>
+<section id="height"><h2>2. Numbers tell us things</h2>
+<p>Read a queue from the front. Each person calls the number of <strong>strictly taller people ahead</strong>. The calls describe relative order without giving actual heights. In the queue 146, 158, 142, 151 cm, the calls are 0, 0, 2, 1.</p>
+<figure class="np-figure"><div class="np-height" aria-hidden="true"><span style="--height:56px">146</span><span style="--height:96px">158</span><span style="--height:42px">142</span><span style="--height:73px">151</span></div><figcaption>Read from left to right, with the front of the queue at the left.</figcaption></figure>
+<p>The call at position \(i\) lies from 0 to \(i-1\). A 0 means that nobody <em>ahead</em> is taller, so several people can call 0. Call 0 is guaranteed for the first person and any tallest person. Call \(i-1\) means that everyone ahead is taller.</p>
+<div class="app-box"><p class="box-label">Investigation · Rebuild a queue</p><p>Make cards of different heights. Record the calls, then hide the order. For distinct heights, reconstruct it from the back: when the last person calls \(k\), choose the \((k+1)\)th tallest remaining card. Remove it and repeat. For the calls 0, 1, 0, the last card is tallest, the second is shortest of the two remaining, and the first is the last card left. Using 1 for the shortest and 3 for the tallest, the ranks from front to back are 2, 1, 3.</p><p>Try calls 0, 1, 2, 3. Can any other relative order fit? Explain by checking how many taller people each position requires.</p></div>
+<p><strong>Test a claim:</strong> “A person calling 0 must be tallest” is sometimes true. It holds for a tallest person, but fails for the first person if someone later is taller. Finding one such counterexample disproves “always true.” To prove an always-claim, give a reason that works for every allowed input.</p>
+<div class="np-checks"><form class="qbox np-lab np-quick"><h3>Quick check 1</h3><label for="np-height_checks-1">First call in the queue?</label><select id="np-height_checks-1"><option value="">Choose one</option><option value="1" data-feedback="There is nobody ahead.">1</option><option value="correct" data-feedback="There is nobody ahead.">0</option><option value="3" data-feedback="There is nobody ahead.">Varies</option></select><button class="btn btn-primary" type="submit">Check answer</button><output role="status"></output></form><form class="qbox np-lab np-quick"><h3>Quick check 2</h3><label for="np-height_checks-2">Calls for 7, 4, 6?</label><select id="np-height_checks-2"><option value="">Choose one</option><option value="correct" data-feedback="For the third person, only 7 is taller.">0, 1, 1</option><option value="2" data-feedback="For the third person, only 7 is taller.">0, 1, 2</option><option value="3" data-feedback="For the third person, only 7 is taller.">0, 0, 1</option></select><button class="btn btn-primary" type="submit">Check answer</button><output role="status"></output></form><form class="qbox np-lab np-quick"><h3>Quick check 3</h3><label for="np-height_checks-3">What is the maximum call at position 5?</label><select id="np-height_checks-3"><option value="">Choose one</option><option value="correct" data-feedback="There are at most four people ahead.">4</option><option value="2" data-feedback="There are at most four people ahead.">5</option><option value="3" data-feedback="There are at most four people ahead.">0</option></select><button class="btn btn-primary" type="submit">Check answer</button><output role="status"></output></form></div></section>
+<section id="parity"><h2>3. Picking parity</h2>
+<p><strong>Parity</strong> describes whether an integer is even or odd. An even number of objects forms complete pairs. An odd number leaves one object unpaired. Zero is even because it is \(2\times0\); negative integers follow the same multiple-of-two test.</p>
+<figure class="np-figure"><div class="np-counters" aria-hidden="true"><span class="np-dot"></span><span class="np-dot"></span><span class="np-dot np-pair-alt"></span><span class="np-dot np-pair-alt"></span><span class="np-dot np-leftover"></span></div><figcaption>Five counters make two pairs and one leftover.</figcaption></figure>
+<div class="table-wrap np-scroll comp-box" tabindex="0" role="region" aria-label="Parity quick-reference"><table><caption>Parity quick-reference</caption><thead><tr><th scope="col">Operation</th><th scope="col">Parity</th><th scope="col">Example</th></tr></thead><tbody><tr><th scope="row">Even + even</th><td>Even</td><td>8 + 4 = 12</td></tr><tr><th scope="row">Odd + odd</th><td>Even</td><td>7 + 5 = 12</td></tr><tr><th scope="row">Even + odd</th><td>Odd</td><td>8 + 5 = 13</td></tr><tr><th scope="row">Even − even</th><td>Even</td><td>8 − 4 = 4</td></tr><tr><th scope="row">Odd − odd</th><td>Even</td><td>7 − 5 = 2</td></tr><tr><th scope="row">Even − odd</th><td>Odd</td><td>8 − 5 = 3</td></tr><tr><th scope="row">Odd − even</th><td>Odd</td><td>7 − 4 = 3</td></tr><tr><th scope="row">Even × even</th><td>Even</td><td>8 × 4 = 32</td></tr><tr><th scope="row">Even × odd</th><td>Even</td><td>8 × 5 = 40</td></tr><tr><th scope="row">Odd × odd</th><td>Odd</td><td>7 × 5 = 35</td></tr></tbody></table></div>
+<p>Two odd sums pair their leftover counters, which makes an even total. An even factor supplies a factor 2. For two odd factors, multiply \((2a+1)(2b+1)\): the two-factor term and the two middle terms are all even, with one extra unit left. A subtraction has the same parity as the corresponding addition because a number and its opposite have the same parity.</p>
+<p>Write any even integer as \(2n\), and any odd integer as \(2n+1\), for integer \(n\). When listing the positive even and odd numbers from position 1, use \(2n\) and \(2n-1\) respectively. Consecutive integers \(n,n+1,n+2\) alternate in parity. Consecutive evens are \(2n,2n+2,2n+4\); consecutive odds can be \(2n+1,2n+3,2n+5\).</p>
+<div class="comp-box"><p class="box-label">Use the structure instead of calculating</p><p>A sum has the parity of its number of odd addends. Five odds have odd sum, even if the values are unknown. A product is even when at least one factor is even. To check a large numeral, check its units digit: every other place contributes a multiple of 10, which is even.</p></div>
+<div class="app-box"><p class="box-label">Investigation · Can this total happen?</p><p>Pick three odd cards and two even cards. Predict the parity before adding. Now replace one odd card with an even card. The new sum must change parity because the count of odd cards drops from three to two. Try to construct an even total with three odd and two even cards without changing the counts. Explain why no trial can work.</p></div>
+<p>Other useful checks follow the same pattern. Consecutive page labels on a double-sided sheet are one odd and one even, so those two labels total an odd number. The total of an even number of such complete sheets is even. Check the page-number assumption before using this shortcut.</p>
+<div class="np-checks"><form class="qbox np-lab np-quick"><h3>Quick check 1</h3><label for="np-parity_checks-1">Parity of 701 + 513?</label><select id="np-parity_checks-1"><option value="">Choose one</option><option value="correct" data-feedback="Two odd addends pair their leftovers.">Even</option><option value="2" data-feedback="Two odd addends pair their leftovers.">Odd</option></select><button class="btn btn-primary" type="submit">Check answer</button><output role="status"></output></form><form class="qbox np-lab np-quick"><h3>Quick check 2</h3><label for="np-parity_checks-2">Parity of 80 × 71?</label><select id="np-parity_checks-2"><option value="">Choose one</option><option value="1" data-feedback="An even factor supplies a factor of 2.">Odd</option><option value="correct" data-feedback="An even factor supplies a factor of 2.">Even</option></select><button class="btn btn-primary" type="submit">Check answer</button><output role="status"></output></form><form class="qbox np-lab np-quick"><h3>Quick check 3</h3><label for="np-parity_checks-3">Value of the 12th positive odd number?</label><select id="np-parity_checks-3"><option value="">Choose one</option><option value="1" data-feedback="Apply 2n − 1, giving 24 − 1.">21</option><option value="correct" data-feedback="Apply 2n − 1, giving 24 − 1.">23</option><option value="3" data-feedback="Apply 2n − 1, giving 24 − 1.">25</option></select><button class="btn btn-primary" type="submit">Check answer</button><output role="status"></output></form></div></section>
+<section id="grids"><h2>4. Number grids and magic squares</h2>
+<p>A row-and-column puzzle using 1–9 once each has total 45. The three row sums and the three column sums must each add to 45. Any individual row or column sum lies from \(1+2+3=6\) through \(7+8+9=24\). These are <strong>necessary checks</strong>; passing them does not guarantee a solution. If only the parities are known, the number of odd row sums and odd column sums must have the same parity.</p>
+<figure class="np-figure"><div class="np-magic np-static-grid" aria-hidden="true"><span>4</span><span>9</span><span>2</span><span>3</span><span>5</span><span>7</span><span>8</span><span>1</span><span>6</span></div><figcaption>A 1–9 magic square. Rows: 4, 9, 2 | 3, 5, 7 | 8, 1, 6. Subtract 5 from every cell to see the offsets −1, 4, −3 | −2, 0, 2 | 3, −4, 1. Each line's offsets add to zero, so replacing the centre by m while keeping the offsets gives magic sum 3m.</figcaption></figure>
+<p>A <strong>magic square</strong> has the same sum on all three rows, three columns and two diagonals. For the digits 1–9, each row totals \(45/3=15\). Its centre is 5. To see why, add the four lines through the centre \(m\). Their combined sum is \(4S\), where \(S\) is the magic sum. These lines count the full grid once and count the centre three extra times, so \(4S=3S+3m\). Therefore \(S=3m\).</p>
+<div class="app-box"><p class="box-label">Investigation · Construct and transform</p><p>Start with centre 5. Opposite cells on a line through 5 must total 10. The digit 1 cannot be in a corner: a corner belongs to three magic lines, but only the pairs 5 and 9, or 6 and 8, can join 1 to total 15. The same reasoning for 9 uses pairs 1 and 5, or 2 and 4. Put 1 and 9 opposite each other at edge middles. The other edge middles are 3 and 7; the even numbers take the corners. Complete the grid and check its eight lines. Rotating or reflecting gives eight layouts of the same 1–9 arrangement.</p><p>Add the same \(k\) to all entries and the sum becomes \(S+3k\). Multiply every entry by \(k\) and it becomes \(kS\). Try subtracting 5 for a square with magic sum 0, or doubling to get nonconsecutive entries. In the diagram’s orientation, use its offsets from the centre to build a square centred at any integer \(m\).</p></div>
+<p><strong>History and culture:</strong> The chapter connects magic squares with the Lo Shu and Indian yantras. The Chautīsā Yantra at the Pārśhvanath Jain temple in Khajuraho is a 4 × 4 example. The numbers 1–16 total 136; four equal row sums therefore give 34. Look for other sets of four with the same sum.</p>
+<div class="np-checks"><form class="qbox np-lab np-quick"><h3>Quick check 1</h3><label for="np-grid_checks-1">Total of the three row sums in a 1–9 grid?</label><select id="np-grid_checks-1"><option value="">Choose one</option><option value="1" data-feedback="Each entry appears in exactly one row.">15</option><option value="correct" data-feedback="Each entry appears in exactly one row.">45</option><option value="3" data-feedback="Each entry appears in exactly one row.">90</option></select><button class="btn btn-primary" type="submit">Check answer</button><output role="status"></output></form><form class="qbox np-lab np-quick"><h3>Quick check 2</h3><label for="np-grid_checks-2">Centre of a 3 × 3 magic square with sum 21?</label><select id="np-grid_checks-2"><option value="">Choose one</option><option value="1" data-feedback="S = 3m, so divide 21 by 3.">3</option><option value="correct" data-feedback="S = 3m, so divide 21 by 3.">7</option><option value="3" data-feedback="S = 3m, so divide 21 by 3.">21</option></select><button class="btn btn-primary" type="submit">Check answer</button><output role="status"></output></form><form class="qbox np-lab np-quick"><h3>Quick check 3</h3><label for="np-grid_checks-3">A square has sum 15. Add 3 to each cell. New sum?</label><select id="np-grid_checks-3"><option value="">Choose one</option><option value="1" data-feedback="Each line has three cells and gains 9.">18</option><option value="2" data-feedback="Each line has three cells and gains 9.">21</option><option value="correct" data-feedback="Each line has three cells and gains 9.">24</option></select><button class="btn btn-primary" type="submit">Check answer</button><output role="status"></output></form></div></section>
+<section id="rhythms"><h2>5. Virahāṅka–Fibonacci rhythms</h2>
+<p>The textbook starts the sequence at <strong>1, 2</strong>. Each later term adds the previous two: 1, 2, 3, 5, 8, 13, 21, 34, … . State the starting values when numbering positions; other Fibonacci conventions start differently. To go backwards, subtract the earlier known term from the later one.</p>
+<div class="app-box"><p class="box-label">Investigation · Count rhythms without listing all of them</p><p>Use ordered short notes of one beat and long notes of two beats. One beat allows only 1. Two beats allow 1+1 and 2. Three beats allow 1+1+1, 1+2, and 2+1. For \(n\) beats, a rhythm begins with either 1 or 2. The remaining part then takes \(n-1\) or \(n-2\) beats. These two groups do not overlap, so their counts add.</p><p>Make a table through six beats: 1, 2, 3, 5, 8, 13 ways. Try listing the five rhythms of length four to check the count. The same reasoning counts stair climbs made with one- and two-step moves.</p></div>
+<p>The parities repeat in the block <strong>odd, even, odd</strong>. After the first three terms, the next three follow the same recurrence with the same parity pattern. Even terms are at positions 2, 5, 8, …, or \(3k+2\), for whole \(k\ge 0\). For example, 20 is \(3\times6+2\), so term 20 is even without calculating its value.</p>
+<p>NCERT traces the rule to Virahāṅka’s work on poetic metre and relates it to the later Fibonacci naming. It uses examples from art, music and nature to prompt observation. A pattern seen in some flowers is a clue to investigate, not a rule for every flower.</p>
+<div class="np-checks"><form class="qbox np-lab np-quick"><h3>Quick check 1</h3><label for="np-rhythm_checks-1">What follows 5, 8, 13 under the chapter’s rule?</label><select id="np-rhythm_checks-1"><option value="">Choose one</option><option value="1" data-feedback="Add the last two terms: 8 + 13.">20</option><option value="correct" data-feedback="Add the last two terms: 8 + 13.">21</option><option value="3" data-feedback="Add the last two terms: 8 + 13.">22</option></select><button class="btn btn-primary" type="submit">Check answer</button><output role="status"></output></form><form class="qbox np-lab np-quick"><h3>Quick check 2</h3><label for="np-rhythm_checks-2">How many ordered rhythms use exactly four beats?</label><select id="np-rhythm_checks-2"><option value="">Choose one</option><option value="1" data-feedback="Split by the first note: the counts for 3 and 2 beats add to 5.">3</option><option value="correct" data-feedback="Split by the first note: the counts for 3 and 2 beats add to 5.">5</option><option value="3" data-feedback="Split by the first note: the counts for 3 and 2 beats add to 5.">8</option></select><button class="btn btn-primary" type="submit">Check answer</button><output role="status"></output></form><form class="qbox np-lab np-quick"><h3>Quick check 3</h3><label for="np-rhythm_checks-3">What is the parity of term 11 in the chapter’s sequence?</label><select id="np-rhythm_checks-3"><option value="">Choose one</option><option value="correct" data-feedback="11 = 3 × 3 + 2, an even-term position.">Even</option><option value="2" data-feedback="11 = 3 × 3 + 2, an even-term position.">Odd</option></select><button class="btn btn-primary" type="submit">Check answer</button><output role="status"></output></form></div></section>
+<section id="digits"><h2>6. Digits in disguise</h2>
+<p>A <strong>cryptarithm</strong> replaces digits with letters. The same letter always means the same digit; different letters mean different digits. A leading digit of a multi-digit number cannot be zero. Use the ones column first, account for a carry, and then verify the whole sum.</p>
+<div class="example-box"><p class="box-label">Work through the digit restrictions</p><p>In A + A + A = BA, the right side means \(10B+A\), not a product. Rearrange \(3A=10B+A\) to \(2A=10B\). Since \(A\le 9\) and \(B\) is nonzero, \(B=1\) and \(A=5\). Check \(5+5+5=15\).</p><p>A puzzle can have more than one solution. For AB + AB = B4, \(2B\) ends in 4, so \(B\) may be 2 or 7. Carry 0 or 1 as appropriate. Both 12 + 12 = 24 and 37 + 37 = 74 pass all the stated rules.</p></div>
+<p>For digits \(a,b,c\), a two-digit numeral AB means \(10a+b\), and a three-digit numeral ABC means \(100a+10b+c\). The reversed two-digit numeral has value \(10b+a\). If \(b=0\), its written reversal begins with zero, so it is not a two-digit number.</p>
+<div class="comp-box"><p class="box-label">Place-value extension · Why the reversal trick works</p><p>Choose a two-digit number such as 72. Reverse it and subtract: \(72-27=45\). In letters the signed difference is \(9(a-b)\), which is always a multiple of 9. This also explains why the results can be negative or zero. For a digit-sum check, write a numeral as its digit sum plus multiples of 9: each of 10, 100 and 1,000 is one more than a multiple of 9. Rearranging digits preserves the digit sum. These checks support the puzzles without requiring a catalogue of divisibility rules.</p></div>
+<p><strong>Patterns and claims:</strong> A repeating block and a growing sequence use different rules. A finite list can fit many rules. For 2, 4, 6, the constant-step rule gives 8 next, while repeating the block gives 2. Ask which rule is intended. Check a proposed rule on several positions, then justify it from its construction.</p>
+<div class="np-checks"><form class="qbox np-lab np-quick"><h3>Quick check 1</h3><label for="np-digit_checks-1">What is the value represented by 6B?</label><select id="np-digit_checks-1"><option value="">Choose one</option><option value="1" data-feedback="6 is in the tens place.">6 + B</option><option value="correct" data-feedback="6 is in the tens place.">60 + B</option><option value="3" data-feedback="6 is in the tens place.">600 + B</option></select><button class="btn btn-primary" type="submit">Check answer</button><output role="status"></output></form><form class="qbox np-lab np-quick"><h3>Quick check 2</h3><label for="np-digit_checks-2">In B+B, a ones digit of 6 is possible for which B?</label><select id="np-digit_checks-2"><option value="">Choose one</option><option value="1" data-feedback="3+3=6, and 8+8=16 with a carry.">3 only</option><option value="2" data-feedback="3+3=6, and 8+8=16 with a carry.">8 only</option><option value="correct" data-feedback="3+3=6, and 8+8=16 with a carry.">3 or 8</option></select><button class="btn btn-primary" type="submit">Check answer</button><output role="status"></output></form><form class="qbox np-lab np-quick"><h3>Quick check 3</h3><label for="np-digit_checks-3">Why is 73 − 37 divisible by 9?</label><select id="np-digit_checks-3"><option value="">Choose one</option><option value="correct" data-feedback="The difference is 9(7 − 3) = 36.">A reversal difference equals 9 times the digit difference.</option><option value="2" data-feedback="The difference is 9(7 − 3) = 36.">Every two-digit number divides by 9.</option></select><button class="btn btn-primary" type="submit">Check answer</button><output role="status"></output></form></div></section>
+<section id="lab"><h2>7. Interactive number lab</h2><p>Try a prediction before checking. The tools run in your browser, and the arena saves only the puzzle numbers you solve on this browser.</p>
+<div class="np-tools">
+<div class="qbox np-lab"><h3>Even and odd explorer</h3>
+<label for="pair-a">First number: <strong id="pair-a-label"></strong></label><input id="pair-a" type="range" min="0" max="18" value="5"><div id="pair-a-dots" class="np-counters" aria-hidden="true"></div>
+<label for="pair-b">Second number: <strong id="pair-b-label"></strong></label><input id="pair-b" type="range" min="0" max="18" value="3"><div id="pair-b-dots" class="np-counters" aria-hidden="true"></div>
+<label for="pair-operation">Operation</label><select id="pair-operation"><option value="+">Add</option><option value="−">Subtract</option><option value="×">Multiply</option></select>
+<div id="pair-result-dots" class="np-counters" aria-hidden="true"></div><output id="pair-result" role="status"></output></div>
+<form id="pattern-form" class="qbox np-lab"><h3>Find the missing term</h3>
+<label for="pattern-level">Rule family</label><select id="pattern-level"><option value="basic">Basic · constant step</option><option value="middle">Intermediate · repeated block</option><option value="advanced">Advanced · add neighbours</option></select>
+<div id="pattern-tiles" class="np-sequence" aria-label="Sequence with one missing term"></div>
+<label for="pattern-input">Missing term</label><input id="pattern-input" type="number" min="0" max="10000">
+<div class="np-actions"><button class="btn btn-primary" type="submit">Check term</button><button class="btn btn-secondary" id="pattern-hint" type="button">Hint</button><button class="btn btn-secondary" id="pattern-next" type="button">New pattern</button></div><output id="pattern-feedback" role="status"></output></form>
+<form class="qbox np-lab" id="predict-form"><h3>Parity predictor</h3><p id="predict-expression" class="np-prompt"></p>
+<label for="predict-choice">Predict without completing the calculation</label><select id="predict-choice"><option value="">Choose one</option><option value="even">Even</option><option value="odd">Odd</option></select>
+<div class="np-actions"><button class="btn btn-primary" type="submit">Check parity</button><button id="predict-next" type="button" class="btn btn-secondary">New expression</button></div><output id="predict-feedback" role="status"></output></form>
+<div class="qbox np-lab"><h3>Digit rearrangement lab</h3><form id="digit-form"><label for="digit-input">Three digits</label><input id="digit-input" value="407" inputmode="numeric" maxlength="3"><button class="btn btn-primary" type="submit">Load digits</button></form>
+<p>Select two tiles to swap them. A selected tile is marked until the swap.</p><div id="digit-tiles" class="np-sequence"></div>
+<div class="np-actions"><button class="btn btn-secondary" type="button" id="digit-reverse">Reverse order</button><button class="btn btn-secondary" type="button" id="digit-max">Check greatest number</button></div><output id="digit-result" role="status"></output><output id="digit-feedback" role="status"></output></div>
+<form id="trick-form" class="qbox np-lab"><h3>Explain the reversal trick</h3>
+<label for="trick-input">Choose a two-digit number</label><input id="trick-input" type="number" min="10" max="99" value="72">
+<button type="submit" class="btn btn-primary">Reverse and subtract</button><output id="trick-result" role="status"></output></form>
+<form id="detective-form" class="qbox np-lab"><h3>Mathematical detective</h3><label for="detective-level">Statement</label><select id="detective-level"><option value="0">Basic · adding one</option><option value="1">Intermediate · parity depends on n</option><option value="2">Advanced · look for a factor</option></select>
+<p id="detective-statement"></p><label for="detective-choice">Classify it</label><select id="detective-choice"><option value="">Choose one</option><option value="always">Always true</option><option value="sometimes">Sometimes true</option><option value="never">Never true</option></select>
+<label for="detective-n">Test integer n (−20 to 20)</label><input id="detective-n" inputmode="text" value="1" maxlength="3"><div class="np-actions"><button class="btn btn-secondary" id="detective-test" type="button">Test this n</button><button class="btn btn-primary" type="submit">Check claim</button></div><output id="detective-test-result" role="status"></output><output id="detective-feedback" role="status"></output></form>
+<form id="arena-form" class="qbox np-lab"><h3>Number puzzle arena</h3>
+<label for="arena-task">Choose a puzzle</label><select id="arena-task"><option value="0">Queue detective</option><option value="1">Parity grid</option><option value="2">Missing magic cell</option><option value="3">Rhythm count</option><option value="4">Hidden digit</option><option value="5">Number sequence</option></select>
+<p id="arena-progress" role="status"></p><p id="arena-prompt"></p><label for="arena-answer">Your answer</label><input id="arena-answer" maxlength="10">
+<div class="np-actions"><button class="btn btn-primary" type="submit">Check puzzle</button><button class="btn btn-secondary" id="arena-hint" type="button">Hint</button><button class="btn btn-secondary" id="arena-reveal" type="button">Reveal</button></div><output id="arena-feedback" role="status"></output></form>
+<form id="magic-form" class="qbox np-lab"><h3>Build a magic square</h3><p>Change entries and compare the three rows, three columns and two diagonals.</p>
+<div class="np-magic" id="magic-inputs"><input type="text" inputmode="text" maxlength="4" aria-label="Row 1, column 1" value="4"><input type="text" inputmode="text" maxlength="4" aria-label="Row 1, column 2" value="9"><input type="text" inputmode="text" maxlength="4" aria-label="Row 1, column 3" value="2"><input type="text" inputmode="text" maxlength="4" aria-label="Row 2, column 1" value="3"><input type="text" inputmode="text" maxlength="4" aria-label="Row 2, column 2" value="5"><input type="text" inputmode="text" maxlength="4" aria-label="Row 2, column 3" value="7"><input type="text" inputmode="text" maxlength="4" aria-label="Row 3, column 1" value="8"><input type="text" inputmode="text" maxlength="4" aria-label="Row 3, column 2" value="1"><input type="text" inputmode="text" maxlength="4" aria-label="Row 3, column 3" value="6"></div>
+<div class="np-actions"><button class="btn btn-primary" type="submit">Check all lines</button><button class="btn btn-secondary" type="button" id="magic-normal">Load sum 15</button><button class="btn btn-secondary" type="button" id="magic-zero">Load sum 0</button></div><output id="magic-feedback" role="status"></output></form>
+<div class="np-checks"><form class="qbox np-lab np-quick"><h3>Find the mistake</h3><label for="np-mistake_tool-1">A learner writes 1+3+5=9 and still claims odd sums always contain exactly one odd addend. What failed?</label><select id="np-mistake_tool-1"><option value="">Choose one</option><option value="1" data-feedback="The sum is right. Three odd addends give an odd total, disproving the claim.">The sum calculation</option><option value="correct" data-feedback="The sum is right. Three odd addends give an odd total, disproving the claim.">The always-claim</option><option value="3" data-feedback="The sum is right. Three odd addends give an odd total, disproving the claim.">The three numbers are even</option></select><button class="btn btn-primary" type="submit">Check answer</button><output role="status"></output></form></div>
+</div><noscript><p>The tools use JavaScript. The diagrams, examples, and answer key are available below without it.</p></noscript></section>
+<section id="worked"><h2>8. Step-by-step solved examples</h2><p>Try each question before opening its solution. The 30 examples include 9 basic, 12 intermediate, and 9 advanced questions.</p><h3>Basic · Examples 1–9</h3><details class="solved-box worked-example"><summary>Example 1 · How many taller people are ahead?</summary><p><strong>Question:</strong> Heights in order from front: 150, 160, 145, 155. What does the last person call?</p><ol><li><strong>Rule:</strong> Count only taller people ahead.</li><li><strong>Work:</strong> The earlier heights are 150, 160 and 145. Only 160 exceeds 155.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">1</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 2 · Read the front position</summary><p><strong>Question:</strong> What number must the first person in any line call?</p><ol><li><strong>Rule:</strong> There is nobody ahead of the first person.</li><li><strong>Work:</strong> The set of earlier people is empty, whatever the first person’s height.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">0</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 3 · Pair counters</summary><p><strong>Question:</strong> Decide whether 17 is odd or even.</p><ol><li><strong>Rule:</strong> Group objects in twos.</li><li><strong>Work:</strong> Sixteen objects make 8 pairs. One object is left.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">Odd</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 4 · Check zero</summary><p><strong>Question:</strong> Is 0 even?</p><ol><li><strong>Rule:</strong> An even integer is a multiple of 2.</li><li><strong>Work:</strong> Write 0 = 2 × 0. Zero counters leave no unmatched counter.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">Even</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 5 · Predict a sum</summary><p><strong>Question:</strong> Is 235 + 487 odd or even?</p><ol><li><strong>Rule:</strong> Two odd addends have two leftovers that form one pair.</li><li><strong>Work:</strong> Both units digits are odd. Their sum has even parity without needing the full sum.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">Even</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 6 · Predict a difference</summary><p><strong>Question:</strong> What is the parity of 974 − 231?</p><ol><li><strong>Rule:</strong> Equal parities give an even difference; different parities give an odd one.</li><li><strong>Work:</strong> 974 is even and 231 is odd. Taking an odd number from an even number leaves an odd result.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">Odd</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 7 · Predict a product</summary><p><strong>Question:</strong> What is the parity of 41 × 62?</p><ol><li><strong>Rule:</strong> An even factor makes the product even.</li><li><strong>Work:</strong> 62 = 2 × 31, so the whole product contains the factor 2.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">Even</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 8 · Use a position rule</summary><p><strong>Question:</strong> Find the 37th positive odd number.</p><ol><li><strong>Rule:</strong> The nth positive odd number is 2n − 1.</li><li><strong>Work:</strong> Substitute n = 37: 74 − 1.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">73</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 9 · Write a number using digits</summary><p><strong>Question:</strong> Represent a two-digit number with tens digit a and ones digit b.</p><ol><li><strong>Rule:</strong> The tens digit is worth ten times its face value.</li><li><strong>Work:</strong> Add the contributions 10 × a and 1 × b. For a = 6 and b = 2, this gives 62.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">10a + b</mark></p></details>
+<h3>Intermediate · Examples 10–21</h3><details class="solved-box worked-example"><summary>Example 10 · Read a complete height code</summary><p><strong>Question:</strong> Find the calls for heights 158, 141, 166, 150.</p><ol><li><strong>Rule:</strong> For each position, count strictly taller predecessors.</li><li><strong>Work:</strong> First says 0. At 141, only 158 is taller. At 166, none is taller. At 150, 158 and 166 are taller.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">0, 1, 0, 2</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 11 · Rebuild from height calls</summary><p><strong>Question:</strong> For four distinct height ranks, shortest = 1, find the order for calls 0, 0, 2, 1.</p><ol><li><strong>Rule:</strong> From the back, choose the (call + 1)th tallest remaining rank.</li><li><strong>Work:</strong> Last calls 1, so choose 3. Third calls 2, so choose the shortest remaining, 1. Second calls 0, so choose 4. The remaining rank is 2.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">2, 4, 1, 3</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 12 · Count flips</summary><p><strong>Question:</strong> A switch starts off and is flipped 57 times. Where does it end?</p><ol><li><strong>Rule:</strong> Two flips restore the original state.</li><li><strong>Work:</strong> There are 28 pairs and one extra flip. Only the extra one changes the state.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">On</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 13 · Group three odds</summary><p><strong>Question:</strong> Is 9 + 15 + 23 + 100 odd or even?</p><ol><li><strong>Rule:</strong> Count the odd addends.</li><li><strong>Work:</strong> There are three odd addends, so there is one leftover after two leftovers pair. Adding 100 changes no parity.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">Odd</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 14 · Choose an algebraic form</summary><p><strong>Question:</strong> Is 6n + 7 always odd for integer n?</p><ol><li><strong>Rule:</strong> An even coefficient makes the variable part even.</li><li><strong>Work:</strong> 6n is twice 3n. The constant 7 is odd; their sum is odd.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">Always odd</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 15 · Use consecutive integers</summary><p><strong>Question:</strong> Find the sum of three consecutive integers starting at n. When is it even?</p><ol><li><strong>Rule:</strong> Write them as n, n + 1, n + 2.</li><li><strong>Work:</strong> The sum is 3n + 3 = 3(n + 1). Three is odd, so the parity equals that of n + 1.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">Even exactly when the middle integer n + 1 is even.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 16 · Spot an impossible grid total</summary><p><strong>Question:</strong> A 1–9 grid has row sums 12, 15, 18 and claimed column sums 9, 15, 20. Is it possible?</p><ol><li><strong>Rule:</strong> Adding all row sums or all column sums counts the same grid.</li><li><strong>Work:</strong> The row total is 45. The column total is 44. No arrangement can have both.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">Impossible</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 17 · Restrict a row total</summary><p><strong>Question:</strong> Could a row in a 1–9 grid sum to 25?</p><ol><li><strong>Rule:</strong> Three distinct entries have a maximum allowed sum.</li><li><strong>Work:</strong> The greatest possible three entries are 9, 8 and 7. They sum to 24, below 25.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">No</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 18 · Complete one magic-square row</summary><p><strong>Question:</strong> A 1–9 magic square has top row 4, 9, □. Find the missing number.</p><ol><li><strong>Rule:</strong> Total 45 split equally across three rows gives 15 per row.</li><li><strong>Work:</strong> Subtract 4 + 9 = 13 from 15. The missing entry is compatible with the rotated square shown in the notes.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">2</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 19 · Shift a magic square</summary><p><strong>Question:</strong> Add 4 to all cells of a magic square of sum 15. Find its new sum.</p><ol><li><strong>Rule:</strong> Every line has three entries.</li><li><strong>Work:</strong> The line gains 4 + 4 + 4 = 12. The centre increases from 5 to 9.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">27</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 20 · Continue the chapter’s sequence</summary><p><strong>Question:</strong> Continue 1, 2, 3, 5, 8 with the Virahāṅka rule.</p><ol><li><strong>Rule:</strong> Add the previous two terms.</li><li><strong>Work:</strong> 5 + 8 = 13. Then 8 + 13 = 21.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">13, 21</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 21 · Go backwards in the sequence</summary><p><strong>Question:</strong> Two successive terms are 34, 55. Find the previous two terms in increasing order.</p><ol><li><strong>Rule:</strong> Subtract the smaller known term from the larger to reverse the rule.</li><li><strong>Work:</strong> 55 − 34 = 21. Then 34 − 21 = 13.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">13, 21</mark></p></details>
+<h3>Advanced and application · Examples 22–30</h3><details class="solved-box worked-example"><summary>Example 22 · Prove a magic centre rule</summary><p><strong>Question:</strong> A 3 × 3 magic square has sum S and centre m. Show that S = 3m.</p><ol><li><strong>Rule:</strong> Add the four lines passing through the centre.</li><li><strong>Work:</strong> The eight outside cells appear once, the centre four times. These lines total 3S + 3m because the whole square is 3S. They also total 4S, so S = 3m.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">S = 3m</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 23 · Build a magic square with zero sum</summary><p><strong>Question:</strong> Construct a nonzero integer magic square with sum 0.</p><ol><li><strong>Rule:</strong> Translate a 1–9 magic square by subtracting 5 from every entry.</li><li><strong>Work:</strong> Start with rows 4,9,2; 3,5,7; 8,1,6. Every line decreases by 15, so its sum is zero.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">Rows −1,4,−3; −2,0,2; 3,−4,1.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 24 · Solve a parity-grid constraint</summary><p><strong>Question:</strong> Can a 2 × 3 grid have two odd row sums and exactly one odd column sum?</p><ol><li><strong>Rule:</strong> Parity of the whole total is independent of grouping.</li><li><strong>Work:</strong> Odd + odd gives an even total. One odd column with two even columns gives an odd total. The two conclusions conflict.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">Impossible</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 25 · Count rhythms</summary><p><strong>Question:</strong> How many ordered rhythms of seven beats use only notes of length 1 or 2?</p><ol><li><strong>Rule:</strong> Split by the first note.</li><li><strong>Work:</strong> Lengths 5 and 6 have 8 and 13 rhythms. Starting with 1 leaves 6 beats and starting with 2 leaves 5. Add 13 and 8.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">21</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 26 · Find a distant term’s parity</summary><p><strong>Question:</strong> Find the parity of the 29th term in 1, 2, 3, 5, 8, … without finding its value.</p><ol><li><strong>Rule:</strong> The parity cycle is odd, even, odd, and repeats.</li><li><strong>Work:</strong> Each next parity is the sum of the preceding two. Even terms occupy positions 2, 5, 8, … . As 29 = 3 × 9 + 2, position 29 is even.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">Even</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 27 · Solve a cryptarithm</summary><p><strong>Question:</strong> In A + A + A = BA, different letters are different digits and B is nonzero. Find them.</p><ol><li><strong>Rule:</strong> Use 3A = 10B + A.</li><li><strong>Work:</strong> Then 2A = 10B. Since A is at most 9, B must be 1. This gives A = 5 and 5 + 5 + 5 = 15.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">A = 5; B = 1.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 28 · Use a carry</summary><p><strong>Question:</strong> In AB + AB = B4, find the digits using the usual distinct-letter and leading rules.</p><ol><li><strong>Rule:</strong> The ones column forces 2B to end in 4.</li><li><strong>Work:</strong> B is 2 or 7. For B = 2, carry 0 gives 2A = 2, so A = 1. For B = 7, carry 1 gives 2A + 1 = 7, so A = 3.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">12 + 12 = 24 and 37 + 37 = 74.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 29 · Explain a reversal trick</summary><p><strong>Question:</strong> Why is the difference between a two-digit number and its reverse divisible by 9?</p><ol><li><strong>Rule:</strong> Use place-value expressions and subtract.</li><li><strong>Work:</strong> (10a + b) − (10b + a) = 9a − 9b = 9(a − b). An initial 0 in the reverse does not affect the value.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">The signed difference is always a multiple of 9.</mark></p></details>
+<details class="solved-box worked-example"><summary>Example 30 · Refute a universal claim</summary><p><strong>Question:</strong> A learner says an odd total always comes from exactly one odd addend. Is that true?</p><ol><li><strong>Rule:</strong> One counterexample disproves an always-claim.</li><li><strong>Work:</strong> 1 + 3 + 5 = 9 gives an odd sum from three odd addends. The condition is an odd number of odd addends.</li></ol><p><strong>Final answer:</strong> <mark class="highlight">False; three odd addends can give an odd total.</mark></p></details></section>
+<section id="mistakes"><h2>9. Common mistakes and corrections</h2><div class="table-wrap np-scroll warn-box" tabindex="0" role="region" aria-label="Common traps and ways to check them"><table><caption>Common traps and ways to check them</caption><thead><tr><th scope="col">Misconception</th><th scope="col">Incorrect</th><th scope="col">Correct</th><th scope="col">Quick check</th></tr></thead><tbody><tr><th scope="row">Two odd addends</th><td>Their sum is odd.</td><td>7 + 9 = 16 is even.</td><td>Pair the two leftovers.</td></tr><tr><th scope="row">Two odd factors</th><td>Their product is even.</td><td>3 × 5 = 15 is odd.</td><td>An odd number of odd groups leaves an odd count.</td></tr><tr><th scope="row">Zero</th><td>Zero has no parity.</td><td>0 is even because 2 × 0 = 0.</td><td>Check divisibility by 2.</td></tr><tr><th scope="row">Negative parity</th><td>−7 is neither even nor odd.</td><td>−7 = 2(−4)+1 is odd.</td><td>For an integer, sign does not change parity.</td></tr><tr><th scope="row">Consecutive integers</th><td>n, n + 2, n + 4.</td><td>n, n + 1, n + 2.</td><td>Step by 1 for all integers; step by 2 only within one parity.</td></tr><tr><th scope="row">Consecutive evens</th><td>2n, 2n + 1.</td><td>2n, 2n + 2.</td><td>Adding one changes parity.</td></tr><tr><th scope="row">A single pattern</th><td>2, 4, 6 always continues with 8.</td><td>8 follows from the add-two rule; a repeated block gives 2.</td><td>Name the intended rule.</td></tr><tr><th scope="row">Two-digit notation</th><td>AB = A + B or A × B.</td><td>AB = 10A + B when A and B label digits.</td><td>12 is 10 × 1 + 2.</td></tr><tr><th scope="row">Leading zero</th><td>Reversing 90 gives a two-digit number.</td><td>09 has numerical value 9.</td><td>Keep the reversed digit string separate from its value.</td></tr><tr><th scope="row">Wrong divisibility shortcut</th><td>A last digit of 9 makes 19 divisible by 9.</td><td>19 has digit sum 10 and is not divisible by 9.</td><td>Use the digit sum for 9, the last digit for 2.</td></tr><tr><th scope="row">A grid with equal rows</th><td>Equal row sums prove it is magic.</td><td>Check all columns and both diagonals too.</td><td>Rows 4,9,2; 8,1,6; 3,5,7 have equal totals but a diagonal fails.</td></tr><tr><th scope="row">Testing versus proving</th><td>Several agreeing tests prove an identity.</td><td>Use a reason that works for every allowed input.</td><td>One different case disproves an always-claim.</td></tr><tr><th scope="row">Ignoring a counterexample</th><td>A 0 call means tallest, even in 2, 4.</td><td>The first person of height 2 calls 0 but is shorter.</td><td>Test an extreme position.</td></tr><tr><th scope="row">Omitting a carry</th><td>If B+B ends in 4, B can only be 2.</td><td>B can be 2 or 7; the carry separates the cases.</td><td>Check the tens column for both.</td></tr><tr><th scope="row">Misreading sequence positions</th><td>The textbook starts 1,1.</td><td>This chapter uses 1,2,3,5,… .</td><td>Write the first two terms before finding an nth term.</td></tr></tbody></table></div></section>
+<section id="revision"><h2>10. Quick revision and exam preparation</h2>
+<div class="concept-grid" aria-label="Chapter mind map"><div class="concept-card"><h3>Compare → Encode</h3><p>Only count taller people ahead. With distinct heights, decode from the back using the remaining ranks.</p></div><div class="concept-card"><h3>Pair → Predict</h3><p>Even means no leftover; odd means one. Count odd addends, or look for an even factor.</p></div><div class="concept-card"><h3>Count → Check</h3><p>Grid totals must agree. A magic square adds diagonal constraints. For rhythms, split by the first note.</p></div><div class="concept-card"><h3>Reason → Verify</h3><p>Use place value in digit puzzles, check carries and distinct digits, and test a conjecture with counterexamples.</p></div></div>
+<div class="tip-box"><p class="box-label">Last-minute checklist</p><ol><li>Did I state the rule and where counting starts?</li><li>Did I explain why a parity shortcut is valid?</li><li>Did I test both diagonal sums as well as rows and columns?</li><li>Does a proposed cryptarithm solution satisfy every column and the original sum?</li><li>For assertion–reason questions, decide whether both parts are true before checking the explanation.</li></ol></div><p>Review the <a href="#parity">parity table</a>, <a href="#grids">magic-square rules</a>, and <a href="#worked">worked examples</a> for a final recap.</p></section>
+<section id="practice"><h2>11. Practice bank</h2><p>67 original Class 7 questions. Attempt a set before opening the matching answers.</p><details class="qbox"><summary>Multiple choice · Questions 1–15</summary><ol class="practice-items" start="1"><li>In a line, what does the first person call when counting taller people ahead?<ol type="A"><li>0</li><li>1</li><li>The tallest height</li><li>The line length</li></ol></li><li>In heights 9, 5, 8, what does the person of height 8 call?<ol type="A"><li>0</li><li>1</li><li>2</li><li>3</li></ol></li><li>Which of these is even?<ol type="A"><li>−7</li><li>0</li><li>31</li><li>115</li></ol></li><li>What is the parity of odd + odd + odd?<ol type="A"><li>Even</li><li>Odd</li><li>Sometimes even</li><li>Cannot tell</li></ol></li><li>Which product is odd?<ol type="A"><li>16 × 9</li><li>13 × 18</li><li>37 × 11</li><li>22 × 25</li></ol></li><li>Which always gives an even integer for integer n?<ol type="A"><li>2n + 1</li><li>5n + 1</li><li>4n − 2</li><li>7n</li></ol></li><li>What is the 26th positive even number?<ol type="A"><li>51</li><li>52</li><li>54</li><li>26</li></ol></li><li>What is the smallest possible sum of three distinct entries from 1 to 9?<ol type="A"><li>3</li><li>5</li><li>6</li><li>9</li></ol></li><li>What must the three column sums add to in a 1–9 grid?<ol type="A"><li>15</li><li>30</li><li>45</li><li>90</li></ol></li><li>What is the centre of a 1–9 magic square?<ol type="A"><li>1</li><li>3</li><li>5</li><li>9</li></ol></li><li>If each entry increases by 2, by how much does a 3 × 3 magic sum increase?<ol type="A"><li>2</li><li>3</li><li>6</li><li>18</li></ol></li><li>Using the rule “add the previous two,” what follows 3, 5, 8, 13?<ol type="A"><li>18</li><li>20</li><li>21</li><li>26</li></ol></li><li>In the sequence 1, 2, 3, 5, 8, …, which position is even?<ol type="A"><li>3</li><li>4</li><li>5</li><li>6</li></ol></li><li>In AB, what is the contribution of A?<ol type="A"><li>A</li><li>A + B</li><li>10A</li><li>100A</li></ol></li><li>An always-claim fails for one allowed input. What have you found?<ol type="A"><li>A proof of the claim</li><li>A counterexample</li><li>A new assumption</li><li>A repeated pattern</li></ol></li></ol></details>
+<details class="qbox"><summary>Fill in the blanks · Questions 16–20</summary><ol class="practice-items" start="16"><li>The value of the nth positive odd number is ___.</li><li>The sum of an odd number and an even number is ___.</li><li>A parity sequence for 1,2,3,5,8,13,… starts odd, even, odd, odd, even, ___.</li><li>In ABC, the place-value expression is ___.</li><li>If the magic sum of a 3 × 3 square is 36, its centre is ___.</li></ol></details>
+<details class="qbox"><summary>True or false · Questions 21–25</summary><ol class="practice-items" start="21"><li>The tallest person in the queue always calls zero.</li><li>Anyone who calls zero must be the tallest.</li><li>The product of two odd integers must be odd.</li><li>A 1–9 grid with all row sums equal is necessarily magic.</li><li>Reversing 70 gives the value 7.</li></ol></details>
+<details class="qbox"><summary>Very short answer · Questions 26–35</summary><ol class="practice-items" start="26"><li>Read the calls for 7, 4, 6 in that order.</li><li>Can the fourth person call 4?</li><li>What is the parity of 76 − 59?</li><li>What is the parity of 111 × 112 × 113?</li><li>Write the next two consecutive even numbers after 2n.</li><li>Can 21 be written as 2n for an integer n?</li><li>Give one row of three distinct 1–9 numbers with sum 24.</li><li>If two successive sequence terms are 13 and 21, what follows?</li><li>How many rhythms use 1- and 2-beat notes to make exactly three beats?</li><li>What does it mean if AA is written as a two-digit cryptarithm number?</li></ol></details>
+<details class="qbox"><summary>Short answer · Questions 36–45</summary><ol class="practice-items" start="36"><li>Make a rank order of four distinct heights with calls 0, 1, 0, 2.</li><li>Prove that every integer of the form 10k + 5 is odd.</li><li>What is the parity of 4n + 3n + 2 for even n and for odd n?</li><li>What is the parity of the sum of the first 51 positive integers? Give a short method.</li><li>The rows of a 1–9 grid total 14, 19 and 12. Two column sums are 16 and 11. Find the third.</li><li>Find the missing bottom-right cell if the row is 8, 1, □ and its sum is 15.</li><li>Triple each entry of a magic square with sum 15, then subtract 2 from each new entry. What is the magic sum?</li><li>Two consecutive Virahāṅka terms are 21 and 34. Find one before and one after.</li><li>Write 83 and its reversed form with a and b digits. Find their difference.</li><li>Solve A + A = A0 for a nonzero digit A, or prove it has no solution.</li></ol></details>
+<details class="qbox"><summary>Long answer · Questions 46–50</summary><ol class="practice-items" start="46"><li>Justify why an even × odd product is even and an odd × odd product is odd, using letters.</li><li>Use a 1–9 magic square to make a magic square using 6 through 14. Show the row and centre checks.</li><li>Show why an intended 2 × 3 parity puzzle with one odd row sum and two odd column sums cannot be filled.</li><li>Make a step-count table for one- and two-step climbs of 1 through 6 steps and explain the rule.</li><li>Solve A + A = BC when the two-digit result is known to be 18. Verify whether the distinct-letter rule is met.</li></ol></details>
+<details class="qbox"><summary>Competency based · Questions 51–55</summary><ol class="practice-items" start="51"><li>A class of 27 wants pairs with nobody left out. Can this work? What if three more people arrive?</li><li>A gate starts open. One group flips it 12 times and next group flips it 9 times. State the final position without listing flips.</li><li>A shop totals an odd count of ₹5 tokens and an even count of ₹10 tokens. Could the total be ₹96?</li><li>A row of consecutive house numbers contains 28 and 29. What can you say about their parities, and why?</li><li>The sequence 2, 4, 6 is shown with no rule. Is the next term guaranteed to be 8?</li></ol></details>
+<details class="qbox"><summary>Assertion–reason · Questions 56–60</summary><p>Choose A if both statements are true and the reason explains the assertion, B if both are true without that explanation, C if only the assertion is true, or D if only the reason is true.</p><ol class="practice-items" start="56"><li>Assertion: The sum of two odd integers is even. Reason: Their two unmatched counters form one extra pair.</li><li>Assertion: Every 1–9 magic square has magic sum 15. Reason: Two odd integers add to an even integer.</li><li>Assertion: 2n − 1 gives the nth positive odd number. Reason: n must start at zero to obtain 1.</li><li>Assertion: A three-digit numeral ABC has value A+B+C. Reason: A in the hundreds column contributes 100A.</li><li>Assertion: Two tallies for a grid, one by rows and one by columns, have the same sum. Reason: Both tally every cell exactly once.</li></ol></details>
+<details class="qbox"><summary>Case study · Questions 61–62</summary><ol class="practice-items" start="61"><li>School music club. A short beat occupies 1 time unit and a long beat occupies 2. (a) List the rhythms of length 2. (b) Find the number at length 4. (c) Use previous counts to find length 7.</li><li>Puzzle fair. A 1–9 magic square has rows 4,9,2; 3,5,7; 8,1,6. (a) Verify both diagonals. (b) Give the new centre after subtracting 5 from every cell. (c) Find the new magic sum.</li></ol></details>
+<details class="qbox"><summary>Higher-order thinking · Questions 63–67</summary><ol class="practice-items" start="63"><li>Can three consecutive integers all have the same parity? Explain.</li><li>A 1–9 grid has three row sums adding to 45 and three column sums also adding to 45. Is this enough to guarantee a filling? Give a counterexample.</li><li>A 1–9 magic square is changed using “double the entry, then subtract 10”. Find the new centre and sum. Are the entries consecutive?</li><li>A cryptarithm AB+AB=B2 has different nonzero leading letters. Find every solution.</li><li>When do AB and BA have the same value? When is AB greater?</li></ol></details></section>
+<section id="answers"><h2>12. Answer key and explanations</h2><details class="answer-key"><summary>Multiple choice · Answers 1–15</summary><ol class="answer-items" start="1"><li>A. 0. Nobody is ahead of the first person.</li><li>B. 1. Only 9 is greater than 8 among the earlier heights.</li><li>B. 0. Zero is 2 × 0.</li><li>B. Odd. The first two odds sum to an even number, leaving one odd addend.</li><li>C. 37 × 11. A product is odd only if both factors are odd.</li><li>C. 4n − 2. 4n − 2 = 2(2n − 1).</li><li>B. 52. Use 2n at n = 26.</li><li>C. 6. The smallest available three are 1, 2 and 3.</li><li>C. 45. Every entry is counted once when column sums are added.</li><li>C. 5. The total is 45, so the magic sum is 15. A 3 × 3 magic square has centre equal to one third of its magic sum.</li><li>C. 6. There are three entries on each line, so each line gains 3 × 2.</li><li>C. 21. Add 8 and 13.</li><li>C. 5. Position 5 contains 8. Even terms occur at positions 2, 5, 8, … .</li><li>C. 10A. A is the tens digit.</li><li>B. A counterexample. One failing input is enough to disprove an always-claim.</li></ol></details>
+<details class="answer-key"><summary>Fill in the blanks · Answers 16–20</summary><ol class="answer-items" start="16"><li>2n − 1. It is one less than the nth positive even number.</li><li>Odd: the even addend adds no leftover after pairing.</li><li>Odd. 8 is even and 5 is odd, so 13 is odd.</li><li>100A + 10B + C.</li><li>12, since S = 3m.</li></ol></details>
+<details class="answer-key"><summary>True or false · Answers 21–25</summary><ol class="answer-items" start="21"><li>True. There cannot be anyone taller ahead.</li><li>False. In 2, 4, the first person calls 0 but is shorter.</li><li>True. Both factors leave one unpaired unit; multiplying (2a + 1)(2b + 1) gives an even contribution plus 1.</li><li>False. For example, rows 4,9,2; 8,1,6; 3,5,7 all sum to 15, but the diagonal 4 + 1 + 7 is 12.</li><li>True. The reversed digit string 07 has zero tens and seven ones.</li></ol></details>
+<details class="answer-key"><summary>Very short answer · Answers 26–35</summary><ol class="answer-items" start="26"><li>0, 1, 1. For the third person, 7 alone is taller.</li><li>No. There are only three predecessors, so their count is at most 3.</li><li>Odd. The original parities differ.</li><li>Even because 112 supplies a factor 2.</li><li>2n + 2 and 2n + 4. The step is two.</li><li>No. Every 2n is even and 21 is odd.</li><li>7, 8, 9. These are the three largest entries.</li><li>13 + 21 = 34.</li><li>Three: 1+1+1, 1+2, and 2+1. Order matters.</li><li>Both digits are A. Its value is 10A + A = 11A.</li></ol></details>
+<details class="answer-key"><summary>Short answer · Answers 36–45</summary><ol class="answer-items" start="36"><li>Build from the back in ranks 1–4. Pick third tallest (2), then tallest remaining (4), then second tallest of ranks 1 and 3 (1), then 3. Order: 3, 1, 4, 2.</li><li>10k is even, since it equals 2(5k). Adding odd 5 makes an odd result.</li><li>It simplifies to 7n + 2. The product 7n has n’s parity and adding 2 preserves it.</li><li>There are 26 odd terms, an even count. Pair their leftovers; the sum is even.</li><li>The whole grid totals 45. Subtract 16 + 11 = 27, giving 18. This is a necessary total, not a proof of a filling.</li><li>8 + 1 = 9, leaving 6.</li><li>Tripling gives 45. Subtracting 2 from each of three entries removes 6. New sum: 39.</li><li>The earlier one is 34 − 21 = 13. The next one is 21 + 34 = 55.</li><li>Set a=8, b=3. 10a+b=83 and 10b+a=38. Difference 45 = 9(8−3).</li><li>2A = 10A gives 8A = 0, so A would have to be 0. A cannot lead a two-digit number.</li></ol></details>
+<details class="answer-key"><summary>Long answer · Answers 46–50</summary><ol class="answer-items" start="46"><li>Write them as (2a)(2b+1) and (2a+1)(2b+1). The first visibly has factor 2. The second is 4ab+2a+2b+1, an even part plus 1.</li><li>Add 5 to each entry. Rows 9,14,7; 8,10,12; 13,6,11 are one result. Every line gains 15, so the sum is 30; the centre 10 gives 3×10=30.</li><li>The parity of the total from the rows is odd, since only one row is odd. The parity from the columns is even because two odd sums combine to even. Both count all cells once, so the conditions conflict.</li><li>Counts are 1,2,3,5,8,13. Paths start with exactly one of the two step sizes, leaving n−1 or n−2 steps. These groups do not overlap, so their counts add.</li><li>A=9 by doubling. B=1 and C=8. The digits 9,1,8 are distinct and B is nonzero, so 9+9=18 satisfies all conditions.</li></ol></details>
+<details class="answer-key"><summary>Competency based · Answers 51–55</summary><ol class="answer-items" start="51"><li>27 is odd, so one person is left out. With three more people there are 30, an even total, so 15 pairs fit.</li><li>Twelve is even and has no net effect. Nine is odd and changes the gate once overall. It ends closed.</li><li>An odd × odd subtotal is odd; the other subtotal is even. Their sum is odd, so ₹96, an even amount, cannot be right.</li><li>28 is even, 29 is odd. Consecutive integers differ by one, so one has a leftover and the other does not.</li><li>No. Repeatedly adding 2 gives 8, but a cycle 2,4,6,2,4,6,… gives 2 next. A rule is needed.</li></ol></details>
+<details class="answer-key"><summary>Assertion–reason · Answers 56–60</summary><ol class="answer-items" start="56"><li>A. Both true; the two leftovers explain the even result.</li><li>B. Both true, but the magic sum follows from three equal rows sharing total 45.</li><li>C. The assertion is true; n starts at 1, whereas n=0 gives −1.</li><li>D. The assertion is false and the place-value reason is true.</li><li>A. Both true; counting the same entries proves equality.</li></ol></details>
+<details class="answer-key"><summary>Case study · Answers 61–62</summary><ol class="answer-items" start="61"><li>(a) 1+1, 2. (b) Counts for lengths 1,2,3,4 are 1,2,3,5. (c) Length 5 has 8 and length 6 has 13, so length 7 has 8+13=21.</li><li>(a) 4+5+6=15 and 2+5+8=15. (b) 5−5=0. (c) Each line loses 15, giving 0.</li></ol></details>
+<details class="answer-key"><summary>Higher-order thinking · Answers 63–67</summary><ol class="answer-items" start="63"><li>No. n and n+1 already have opposite parity. The third has the same parity as the first.</li><li>No. Row sums 5, 16, 24 and column sums 15,15,15 meet the total test, but a row sum 5 is below the minimum 6.</li><li>Centre becomes 2×5−10=0. The line sum becomes 2×15−30=0. The entries are −8,−6,…,8, which differ by 2, so they are not consecutive integers.</li><li>The ones column requires 2B to end in 2, so B=1 or 6. For B=1 no carry gives 2A=1, impossible. B=6 carries 1, so 2A+1=6, impossible. There are no solutions.</li><li>Subtract: AB−BA=9(A−B). Equality needs A=B; a positive difference needs A&gt;B. This is a statement about digit values, including a possible leading zero in the reversal.</li></ol></details></section>
+<section id="sources"><h2>Textbook references</h2><p>Based on NCERT <cite>Ganita Prakash</cite>, Class 7, Part I, Chapter 6, sections 6.1–6.5, 2026–27 reprint. Examples and practice questions are original. <a href="https://ncert.nic.in/textbook/pdf/gegp1ps.pdf">NCERT contents</a> · <a href="https://ncert.nic.in/textbook/pdf/gegp106.pdf">NCERT Chapter 6</a> · <a href="https://edustud.nic.in/edu/Syllabus_2026_27/7/7_MATH_SYLLABUS_2026_27_EM.pdf">Class 7 chapter sequence and outcomes</a>.</p></section>
+    </article>
+    <nav class="next-chapter" aria-label="Adjacent chapters">
+      <a class="btn btn-secondary" href="/cbse-study-material/class-7/mathematics/chapter-05/notes/">Previous: Parallel and Intersecting Lines</a>
+      <a class="btn btn-primary" href="/cbse-study-material/class-7/mathematics/chapter-07/">Next: A Tale of Three Intersecting Lines</a>
+    </nav>
+    <a class="sm-back" href="/cbse-study-material/class-7/mathematics/chapter-06/"><i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Chapter 6 resources</a>
+  </div>
+</main>
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-about">
+      <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+      <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#courses">Courses</a></li>
+        <li><a href="/cbse-study-material/">Study Material</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Popular Searches</h4>
+      <ul>
+        <li><a href="/cbse-study-material/">CBSE Study Material</a></li>
+        <li><a href="/best-tuition-centre-hulimavu/">Best Tuition Centre in Hulimavu</a></li>
+        <li><a href="/cbse-tuition-hulimavu/">CBSE Tuition in Hulimavu</a></li>
+        <li><a href="/maths-tuition-hulimavu/">Maths Tuition in Hulimavu</a></li>
+        <li><a href="/science-tuition-hulimavu/">Science Tuition in Hulimavu</a></li>
+        <li><a href="/class-10-tuition-hulimavu/">Class 10 Tuition Hulimavu</a></li>
+        <li><a href="/class-12-tuition-hulimavu/">Class 12 Tuition Hulimavu</a></li>
+        <li><a href="/tuition-centre-bangalore/">Best Tuition Centre in Bangalore</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/cbse-study-material/sm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/supabase-config.js"></script>
+<script src="/supabase-auth.js"></script>
+<script src="/supabase-nav.js" defer></script>
+<script src="/chatbot/chatbot-loader.js" defer></script>
+<script id="number-play-tools">
+(() => {
+'use strict';
+const get=id=>document.getElementById(id);
+const value=id=>get(id).value;
+const out=(id,text)=>{get(id).textContent=text;};
+const random=(low,high)=>low+Math.floor(Math.random()*(high-low+1));
+const even=n=>n%2===0;
+const parity=n=>even(n)?'even':'odd';
+const ops={'+' : (a,b)=>a+b,'−':(a,b)=>a-b,'×':(a,b)=>a*b};
+const respond=(form,fn)=>get(form).addEventListener('submit',e=>{e.preventDefault();fn();});
+const change=(ids,fn)=>{ids.forEach(id=>get(id).addEventListener('input',fn));fn();};
+function integer(raw,min,max){
+  const s=raw.trim().replace('−','-');
+  if(!/^-?\d+$/.test(s)) return null;
+  const n=Number(s);
+  return Number.isSafeInteger(n)&&n>=min&&n<=max?n:null;
+}
+function explain(a,b,op){
+  if(op==='×')return even(a)||even(b)?'At least one factor is even, so the product has a factor of 2.':'Both factors are odd, so their product is odd.';
+  return even(a)===even(b)?'The inputs have the same parity, so their '+(op==='+'?'sum':'difference')+' is even.':'The inputs have different parity, so the result is odd.';
+}
+function counters(id,n){
+  const count=Math.abs(n);
+  const tray=get(id);
+  tray.replaceChildren();
+  for(let i=0;i<count;i++){
+    const dot=document.createElement('span');
+    dot.className='np-dot'+(i===count-1&&!even(count)?' np-leftover':i%4>1?' np-pair-alt':'');
+    tray.append(dot);
+  }
+}
+change(['pair-a','pair-b','pair-operation'],()=>{
+  const a=Number(value('pair-a')),b=Number(value('pair-b')),op=value('pair-operation'),result=ops[op](a,b);
+  out('pair-a-label',a+' ('+parity(a)+')');out('pair-b-label',b+' ('+parity(b)+')');
+  counters('pair-a-dots',a);counters('pair-b-dots',b);
+  if(Math.abs(result)<=36) counters('pair-result-dots',result);
+  else counters('pair-result-dots',even(result)?8:9);
+  out('pair-result',a+' '+op+' '+b+' = '+result+' ('+parity(result)+'). '+explain(a,b,op)+(Math.abs(result)>36?' The small counter model shows parity only.':result<0?' The diagram shows the magnitude; the sign does not change parity.':''));
+});
+let pattern;
+function makePattern(){
+  const level=value('pattern-level');
+  const start=random(2,12),step=random(2,7);
+  let list,rule,hint;
+  if(level==='basic'){
+    list=Array.from({length:6},(_,i)=>start+i*step);rule='Add '+step+' each time.';hint='Compare the gaps between neighbouring numbers.';
+  }else if(level==='middle'){
+    const a=random(2,6),b=random(7,12);
+    list=[start,a,b,start,a,b];rule='Repeat the block '+[start,a,b].join(', ')+'.';hint='Look for a block of three terms that repeats.';
+  }else{
+    list=[start,step];while(list.length<6)list.push(list.at(-1)+list.at(-2));
+    rule='Each term after the first two is the sum of the preceding two.';hint='Add two neighbours and compare the result with the following term.';
+  }
+  const blank=level==='middle'?random(3,5):random(2,4);
+  pattern={list,rule,hint,blank};
+  get('pattern-tiles').replaceChildren(...list.map((n,i)=>{const s=document.createElement('span');s.textContent=i===blank?'?':n;return s;}));
+  out('pattern-feedback','');get('pattern-input').value='';
+}
+get('pattern-level').addEventListener('change',makePattern);get('pattern-next').addEventListener('click',makePattern);
+get('pattern-hint').addEventListener('click',()=>out('pattern-feedback',pattern.hint));
+respond('pattern-form',()=>{
+  const guess=integer(value('pattern-input'),0,10000);
+  const correct=pattern.list[pattern.blank];
+  out('pattern-feedback',guess===null?'Enter a whole number.':(guess===correct?'Correct. ':'Try the rule again. ')+pattern.rule+' The missing term is '+correct+'.');
+});makePattern();
+let predict;
+function makePredict(){
+  const a=random(11,99),b=random(3,99),op=['+','−','×'][random(0,2)];
+  predict={a,b,op};
+  out('predict-expression',a+' '+op+' '+b);get('predict-choice').value='';out('predict-feedback','');
+}
+get('predict-next').addEventListener('click',makePredict);
+respond('predict-form',()=>{
+  const guess=value('predict-choice'),{a,b,op}=predict,answer=parity(ops[op](a,b));
+  out('predict-feedback',!guess?'Choose even or odd.':(guess===answer?'Correct. ':'Try again. ')+explain(a,b,op)+' The result is '+answer+'.');
+});makePredict();
+
+let digits=['4','0','7'],initialDigits=digits.join(''),selected=null;
+function renderDigits(message=''){
+  out('digit-feedback','');
+  get('digit-tiles').replaceChildren(...digits.map((d,i)=>{
+    const tile=document.createElement('button');tile.type='button';tile.textContent=d;
+    tile.setAttribute('aria-pressed',String(selected===i));
+    tile.setAttribute('aria-label','Position '+(i+1)+', digit '+d);
+    tile.addEventListener('click',()=>{
+      if(selected===null)selected=i;
+      else{[digits[selected],digits[i]]=[digits[i],digits[selected]];selected=null;}
+      renderDigits();get('digit-tiles').children[i].focus();
+    });
+    return tile;
+  }));
+  const numeral=digits.join(''),valid=digits[0]!=='0';
+  const [a,b,c]=digits.map(Number);
+  out('digit-result',(message?message+' ':'')+'Order '+numeral+' represents '+Number(numeral)+'. '+
+    (valid?'It is a three-digit number. ':'A leading zero makes it less than 100. ')+
+    'Place values: '+100*a+' + '+10*b+' + '+c+'. Digit sum: '+(a+b+c)+'. Original order: '+initialDigits+'.');
+}
+respond('digit-form',()=>{
+  const raw=value('digit-input').trim();
+  if(!/^\d{3}$/.test(raw)){out('digit-result','Enter exactly three digits, such as 407.');return;}
+  digits=[...raw];initialDigits=raw;selected=null;renderDigits();
+});
+get('digit-reverse').addEventListener('click',()=>{digits.reverse();selected=null;renderDigits();});
+get('digit-max').addEventListener('click',()=>{
+  const max=[...digits].sort((a,b)=>Number(b)-Number(a)).join('');
+  out('digit-feedback',max==='000'?'These digits cannot make a three-digit number.':
+    digits.join('')===max?'Correct. '+max+' is greatest.':'Try placing the largest remaining digit first. The maximum is '+max+'.');
+});renderDigits();
+
+respond('trick-form',()=>{
+  const n=integer(value('trick-input'),10,99);
+  if(n===null){out('trick-result','Choose a two-digit number from 10 to 99.');return;}
+  const a=Math.floor(n/10),b=n%10,rev=10*b+a,diff=n-rev;
+  out('trick-result','1. Write '+n+' as 10×'+a+' + '+b+'. 2. Reverse the digits: '+String(rev).padStart(2,'0')+
+    ' has value '+rev+'. 3. Subtract: '+n+' − '+rev+' = '+diff+'. 4. This is 9 × ('+a+' − '+b+') = '+diff+
+    '. In letters, (10a + b) − (10b + a) = 9(a − b), so the difference is always a multiple of 9.');
+});
+
+const detectives=[
+  {q:'2n + 1 is odd.',kind:'always',f:n=>2*n+1,check:n=>!even(n),why:'2n is even for every integer n. Adding 1 gives odd.'},
+  {q:'3n + 2 is even.',kind:'sometimes',f:n=>3*n+2,check:even,why:'It holds at n = 2 (8) and fails at n = 1 (5). The parity depends on n.'},
+  {q:'4n + 6 is odd.',kind:'never',f:n=>4*n+6,check:n=>!even(n),why:'4n + 6 = 2(2n + 3), so it is always even.'}
+];
+function detective(){
+  out('detective-statement',detectives[Number(value('detective-level'))].q+' Here n is any integer.');
+  get('detective-choice').value='';out('detective-feedback','');out('detective-test-result','');
+}
+get('detective-level').addEventListener('change',detective);detective();
+get('detective-test').addEventListener('click',()=>{
+  const n=integer(value('detective-n'),-20,20), row=detectives[Number(value('detective-level'))];
+  if(n===null){out('detective-test-result','Enter an integer from −20 to 20.');return;}
+  const result=row.f(n);
+  out('detective-test-result','At n = '+n+', the expression is '+result+' ('+parity(result)+'). The statement '+(row.check(result)?'holds for this input.':'fails here. This is a counterexample to “always true.”'));
+});
+respond('detective-form',()=>{
+  const guess=value('detective-choice'),row=detectives[Number(value('detective-level'))];
+  out('detective-feedback',!guess?'Choose a category.':(guess===row.kind?'Correct. ':'Check your claim. ')+row.why);
+});
+
+const tasks=[
+  {q:'Queue: heights 13, 9, 11, 7. What is the fourth call?',hint:'Count the earlier heights larger than 7.',valid:s=>integer(s,0,9)===3,why:'13, 9 and 11 are all taller and earlier, so the call is 3.'},
+  {q:'A grid has one odd row sum and two odd column sums. Is that possible? Type yes or no.',hint:'The parity of the whole grid must agree when counted two ways.',valid:s=>s.trim().toLowerCase()==='no',why:'The rows give an odd total, while the columns give an even total. So no.'},
+  {q:'The top row of a 1–9 magic square is 4, 9, ?. Find the missing cell.',hint:'Every row sums to 45 ÷ 3.',valid:s=>integer(s,1,9)===2,why:'The target is 15. Since 4+9=13, the missing entry is 2.'},
+  {q:'How many rhythms of length six use ordered notes of length 1 or 2?',hint:'Split by the first note, leaving four or five beats.',valid:s=>integer(s,0,40)===13,why:'Five beats give eight rhythms and four beats give five. Add to get 13.'},
+  {q:'In A + A + A = BA, find the digit A.',hint:'Subtract A from both sides of 3A = 10B + A.',valid:s=>integer(s,0,9)===5,why:'2A = 10B. With A at most 9 and B nonzero, B=1 and A=5.'},
+  {q:'Fill 6, 11, ?, 21 with the constant-step rule.',hint:'The first gap is 5.',valid:s=>integer(s,0,100)===16,why:'Add 5 at each step: 6, 11, 16, 21.'}
+];
+const scoreKey='vyasa-class7-number-play-v1';
+let solved=new Set();
+try{
+  const saved=JSON.parse(localStorage.getItem(scoreKey)||'[]');
+  if(Array.isArray(saved))solved=new Set(saved.filter(i=>Number.isInteger(i)&&i>=0&&i<tasks.length));
+}catch(error){/* The puzzles remain usable without storage. */}
+const score=()=>out('arena-progress',solved.size+' of '+tasks.length+' puzzles solved on this browser.');
+function arena(){
+  out('arena-prompt',tasks[Number(value('arena-task'))].q);
+  get('arena-answer').value='';out('arena-feedback','');score();
+}
+get('arena-task').addEventListener('change',arena);arena();
+get('arena-hint').addEventListener('click',()=>out('arena-feedback',tasks[Number(value('arena-task'))].hint));
+get('arena-reveal').addEventListener('click',()=>out('arena-feedback',tasks[Number(value('arena-task'))].why));
+respond('arena-form',()=>{
+  const index=Number(value('arena-task')),reply=value('arena-answer'),task=tasks[index];
+  if(!reply.trim()){out('arena-feedback','Enter a response before checking.');return;}
+  if(!task.valid(reply)){out('arena-feedback','Try again. Hint: '+task.hint);return;}
+  solved.add(index);try{localStorage.setItem(scoreKey,JSON.stringify([...solved]));}catch(error){}
+  out('arena-feedback','Correct. '+task.why);score();
+});
+
+const square=get('magic-inputs'), squareBase=[4,9,2,3,5,7,8,1,6], lines=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+function setSquare(offset){
+  [...square.querySelectorAll('input')].forEach((input,i)=>{input.value=squareBase[i]+offset;});
+  out('magic-feedback','');
+}
+get('magic-zero').addEventListener('click',()=>setSquare(-5));
+get('magic-normal').addEventListener('click',()=>setSquare(0));
+respond('magic-form',()=>{
+  const values=[...square.querySelectorAll('input')].map(input=>integer(input.value,-999,999));
+  if(values.some(v=>v===null)){out('magic-feedback','Give an integer from −999 to 999 in all nine cells.');return;}
+  const sums=lines.map(indices=>indices.reduce((s,i)=>s+values[i],0));
+  const equal=sums.every(s=>s===sums[0]);
+  out('magic-feedback',(equal?'All eight lines match: magic sum '+sums[0]+'. ':'The line totals differ. ')+
+    'Rows: '+sums.slice(0,3).join(', ')+'; columns: '+sums.slice(3,6).join(', ')+'; diagonals: '+sums.slice(6).join(', ')+'. '+new Set(values).size+' distinct entries.');
+});
+
+for(const card of document.querySelectorAll('.np-quick'))card.addEventListener('submit',event=>{
+  event.preventDefault();
+  const option=card.querySelector('select').selectedOptions[0],f=option.dataset.feedback;
+  card.querySelector('output').textContent=f?(option.value==='correct'?'Correct. ':'Try again. ')+f:'Choose an answer first.';
+});
+const art=document.querySelector('.np-cover');
+if('IntersectionObserver' in window)new IntersectionObserver(entries=>entries.forEach(entry=>entry.target.classList.toggle('np-visible',entry.isIntersecting))).observe(art);
+})();
+
+</script>
+</body>
+</html>
