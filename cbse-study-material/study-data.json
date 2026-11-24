@@ -60,18 +60,49 @@
           "label": "Mathematics",
           "icon": "fa-square-root-variable",
           "title": "CBSE Class 7 Mathematics Study Material | Vyasa Academy",
-          "description": "CBSE Class 7 Mathematics study material - chapter-wise notes, practice papers, quizzes and chapter tests at Vyasa Academy, aligned to the NCERT syllabus.",
-          "heroSub": "Explore CBSE Class 7 Mathematics chapter by chapter.",
-          "chapterCount": 15
+          "description": "CBSE Class 7 Mathematics study material for NCERT Ganita Prakash Parts I and II - chapter names, notes, practice papers, quizzes and chapter tests at Vyasa Academy.",
+          "heroSub": "Explore all 15 chapters of NCERT Ganita Prakash, Parts I and II. Chapter numbering restarts in Part II; each card shows its textbook part.",
+          "related": [{"href": "https://ncert.nic.in/textbook/pdf/gegp1ps.pdf", "label": "NCERT Ganita Prakash Part I - contents"}, {"href": "https://ncert.nic.in/textbook/pdf/gegp2ps.pdf", "label": "NCERT Ganita Prakash Part II - contents"}],
+          "chapters": [
+            {"slug": "chapter-01", "label": "Large Numbers Around Us", "number": "1 (Part I)"},
+            {"slug": "chapter-02", "label": "Arithmetic Expressions", "number": "2 (Part I)"},
+            {"slug": "chapter-03", "label": "A Peek Beyond the Point", "number": "3 (Part I)"},
+            {"slug": "chapter-04", "label": "Expressions using Letter-Numbers", "number": "4 (Part I)"},
+            {"slug": "chapter-05", "label": "Parallel and Intersecting Lines", "number": "5 (Part I)"},
+            {"slug": "chapter-06", "label": "Number Play", "number": "6 (Part I)"},
+            {"slug": "chapter-07", "label": "A Tale of Three Intersecting Lines", "number": "7 (Part I)"},
+            {"slug": "chapter-08", "label": "Working with Fractions", "number": "8 (Part I)"},
+            {"slug": "chapter-09", "label": "Geometric Twins", "number": "1 (Part II)"},
+            {"slug": "chapter-10", "label": "Operations with Integers", "number": "2 (Part II)"},
+            {"slug": "chapter-11", "label": "Finding Common Ground", "number": "3 (Part II)"},
+            {"slug": "chapter-12", "label": "Another Peek Beyond the Point", "number": "4 (Part II)"},
+            {"slug": "chapter-13", "label": "Connecting the Dots...", "number": "5 (Part II)"},
+            {"slug": "chapter-14", "label": "Constructions and Tilings", "number": "6 (Part II)"},
+            {"slug": "chapter-15", "label": "Finding the Unknown", "number": "7 (Part II)"}
+          ]
         },
         {
           "slug": "science",
           "label": "Science",
           "icon": "fa-flask",
           "title": "CBSE Class 7 Science Study Material | Vyasa Academy",
-          "description": "CBSE Class 7 Science study material - chapter-wise notes, practice papers, quizzes and chapter tests at Vyasa Academy, aligned to the NCERT syllabus.",
-          "heroSub": "Explore CBSE Class 7 Science chapter by chapter.",
-          "chapterCount": 13
+          "description": "CBSE Class 7 Science study material for NCERT Curiosity - chapter names, notes, practice papers, quizzes and chapter tests at Vyasa Academy.",
+          "heroSub": "Explore all 12 chapters of NCERT Curiosity, the Class 7 Science textbook.",
+          "related": [{"href": "https://ncert.nic.in/textbook/pdf/gecu1ps.pdf", "label": "NCERT Curiosity - contents"}],
+          "chapters": [
+            {"slug": "chapter-01", "label": "The Ever-Evolving World of Science", "number": 1},
+            {"slug": "chapter-02", "label": "Exploring Substances: Acidic, Basic, and Neutral", "number": 2},
+            {"slug": "chapter-03", "label": "Electricity: Circuits and their Components", "number": 3},
+            {"slug": "chapter-04", "label": "The World of Metals and Non-metals", "number": 4},
+            {"slug": "chapter-05", "label": "Changes Around Us: Physical and Chemical", "number": 5},
+            {"slug": "chapter-06", "label": "Adolescence: A Stage of Growth and Change", "number": 6},
+            {"slug": "chapter-07", "label": "Heat Transfer in Nature", "number": 7},
+            {"slug": "chapter-08", "label": "Measurement of Time and Motion", "number": 8},
+            {"slug": "chapter-09", "label": "Life Processes in Animals", "number": 9},
+            {"slug": "chapter-10", "label": "Life Processes in Plants", "number": 10},
+            {"slug": "chapter-11", "label": "Light: Shadows and Reflections", "number": 11},
+            {"slug": "chapter-12", "label": "Earth, Moon, and the Sun", "number": 12}
+          ]
         }
       ]
     },
