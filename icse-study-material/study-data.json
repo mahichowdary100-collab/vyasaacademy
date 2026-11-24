@@ -27,6 +27,7 @@
   "classes": [
     {
       "number": 6,
+      "cover": "class-6.webp",
       "label": "Class 6",
       "title": "ICSE Class 6 Study Material | Maths & Science | Vyasa Academy",
       "description": "ICSE Class 6 study material at Vyasa Academy - Mathematics and Science (Physics, Chemistry, Biology) topic-wise notes, worksheets, quizzes and chapter tests aligned to the CISCE syllabus.",
@@ -104,6 +105,7 @@
     },
     {
       "number": 7,
+      "cover": "class-7.webp",
       "label": "Class 7",
       "title": "ICSE Class 7 Study Material | Maths & Science | Vyasa Academy",
       "description": "ICSE Class 7 study material at Vyasa Academy - Mathematics and Science (Physics, Chemistry, Biology) topic-wise notes, worksheets, quizzes and chapter tests aligned to the CISCE syllabus.",
@@ -183,6 +185,7 @@
     },
     {
       "number": 8,
+      "cover": "class-8.webp",
       "label": "Class 8",
       "title": "ICSE Class 8 Study Material | Maths & Science | Vyasa Academy",
       "description": "ICSE Class 8 study material at Vyasa Academy - Mathematics and Science (Physics, Chemistry, Biology) topic-wise notes, worksheets, quizzes and chapter tests aligned to the CISCE syllabus.",
@@ -264,6 +267,7 @@
     },
     {
       "number": 9,
+      "cover": "class-9.webp",
       "label": "Class 9",
       "title": "ICSE Class 9 Study Material | Maths, Physics, Chemistry & Biology | Vyasa Academy",
       "description": "ICSE Class 9 study material at Vyasa Academy - Mathematics, Physics, Chemistry and Biology topic-wise notes, worksheets, quizzes and chapter tests aligned to the CISCE syllabus.",
@@ -353,6 +357,7 @@
     },
     {
       "number": 10,
+      "cover": "class-10.webp",
       "label": "Class 10",
       "title": "ICSE Class 10 Study Material | Maths, Physics, Chemistry & Biology | Vyasa Academy",
       "description": "ICSE Class 10 study material for board exam preparation - Mathematics, Physics, Chemistry and Biology topic-wise notes, worksheets, quizzes and chapter tests at Vyasa Academy.",
