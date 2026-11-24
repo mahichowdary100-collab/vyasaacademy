@@ -276,7 +276,15 @@ foreach ($c in $data.classes) {
       $chSearchKey = "cbse class $($c.number) $($s.label) $($ch.label) "
       $chCardClass = "sm-card sm-chapter-card"
       $chMedia = "<span class=""sm-card-icon""><i class=""fas fa-book""></i></span>"
-      if ($ch.PSObject.Properties['image'] -and $ch.image) {
+      if ($ch.PSObject.Properties['cover'] -and $ch.cover) {
+        $coverDir = Join-Path $smDir "class-$($c.number)/images/$($s.slug)"
+        if (-not (Test-Path -LiteralPath (Join-Path $coverDir $ch.cover) -PathType Leaf)) {
+          throw "Missing chapter artwork: $coverDir/$($ch.cover)"
+        }
+        $chCardClass += " sm-chapter-card-has-img sm-chapter-card-has-cover"
+        $coverUrl = Esc-Attr "/cbse-study-material/class-$($c.number)/images/$($s.slug)/$($ch.cover)"
+        $chMedia = "<img class=""sm-chapter-img"" src=""$coverUrl"" alt="""" width=""720"" height=""480"" loading=""lazy"" decoding=""async"" />"
+      } elseif ($ch.PSObject.Properties['image'] -and $ch.image) {
         $chCardClass += " sm-chapter-card-has-img"
         $chImage = "/images/$($ch.image).svg"
         $chMedia = "<img class=""sm-chapter-img"" src=""$chImage"" alt=""$($ch.label) - CBSE Class $($c.number) $($s.label)"" loading=""lazy"" />"
@@ -374,6 +382,12 @@ foreach ($c in $data.classes) {
       }
 
       $chBody = "<main class=""sm-page"">$nl  <div class=""container sm-container"">$nl    $(Get-SmCrumbs $crumbCh)$nl    <section class=""sm-hero sm-hero-slim"">$nl      <p class=""sm-eyebrow"">CBSE Class $($c.number) &middot; $($s.label)</p>$nl      <h1>$($ch.label)</h1>$nl      <p>Choose a resource for this chapter. Notes, practice paper, quiz and chapter test will be published here shortly.</p>$nl    </section>$nl    <div class=""sm-grid sm-grid-2 sm-grid-4"" id=""smGrid"">$nl$($resCards -join "$nl$nl")$nl    </div>$nl    <a class=""sm-back"" href=""/cbse-study-material/class-$($c.number)/$($s.slug)/""><i class=""fas fa-arrow-left""></i> All $($s.label) chapters</a>$nl  </div>$nl</main>"
+      if ($ch.PSObject.Properties['cover'] -and $ch.cover) {
+        $coverUrl = Esc-Attr "/cbse-study-material/class-$($c.number)/images/$($s.slug)/$($ch.cover)"
+        $cover = "<img class=""sm-chapter-cover"" src=""$coverUrl"" alt="""" width=""720"" height=""480"" decoding=""async"" />"
+        $heroEnd = "    </section>$nl    <div class=""sm-grid"
+        $chBody = $chBody.Replace($heroEnd, "      $cover$nl$heroEnd")
+      }
       if ($ch.PSObject.Properties['supplementaryNote'] -and $ch.supplementaryNote) { $chBody = $chBody.Replace("<h1>$($ch.label)</h1>", "<h1>$($ch.label)</h1>$nl      <p class=""sm-status-chip"">$(Esc-Html $ch.supplementaryNote)</p>") }
       $chPage = "$headCh$nl<body>$nl$navHtml$nl$chBody$nl$footerHtml$nl<script src=""/cbse-study-material/sm.js""></script>$nl$authScripts$nl<script src=""/chatbot/chatbot-loader.js"" defer></script>$nl</body>$nl</html>"
       Write-Host "Generated /cbse-study-material/class-$($c.number)/$($s.slug)/$($ch.slug)/index.html"

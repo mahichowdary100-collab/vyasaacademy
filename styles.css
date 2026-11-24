@@ -2364,6 +2364,19 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
   transition: transform 0.3s ease;
 }
 
+.sm-chapter-card-has-cover .sm-chapter-img {
+  height: auto;
+  aspect-ratio: 3 / 2;
+}
+
+.sm-chapter-cover {
+  display: block;
+  width: min(100%, 420px);
+  height: auto;
+  margin: 1rem auto 0;
+  border-radius: 14px;
+}
+
 .sm-chapter-card-has-img .sm-card-body {
   padding: 16px 20px 20px;
 }
