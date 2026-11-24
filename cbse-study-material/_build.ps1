@@ -246,8 +246,19 @@ foreach ($c in $data.classes) {
   $subCards = @()
   foreach ($s in $c.subjects) {
     $chCnt = @(Get-ChapterList $s).Count
-    $subCards += "<a class=""sm-card sm-subject-card"" href=""/cbse-study-material/class-$($c.number)/$($s.slug)/"">$nl" +
-      "  <span class=""sm-card-icon""><i class=""fas $($s.icon)""></i></span>$nl" +
+    $subjectCardClass = "sm-card sm-subject-card"
+    $subjectMedia = "<span class=""sm-card-icon""><i class=""fas $($s.icon)""></i></span>"
+    if ($s.PSObject.Properties['cover'] -and $s.cover) {
+      $coverDir = Join-Path $classDir "images/$($s.slug)"
+      if (-not (Test-Path -LiteralPath (Join-Path $coverDir $s.cover) -PathType Leaf)) {
+        throw "Missing subject artwork: $coverDir/$($s.cover)"
+      }
+      $subjectCardClass += " sm-chapter-card-has-img sm-chapter-card-has-cover"
+      $coverUrl = Esc-Attr "/cbse-study-material/class-$($c.number)/images/$($s.slug)/$($s.cover)"
+      $subjectMedia = "<img class=""sm-chapter-img"" src=""$coverUrl"" alt="""" width=""720"" height=""480"" decoding=""async"" />"
+    }
+    $subCards += "<a class=""$subjectCardClass"" href=""/cbse-study-material/class-$($c.number)/$($s.slug)/"">$nl" +
+      "  $subjectMedia$nl" +
       "  <div class=""sm-card-body"">$nl    <h3>$($s.label)</h3>$nl    <p>$chCnt chapters</p>$nl    <span class=""sm-card-go"">Open subject <i class=""fas fa-arrow-right""></i></span>$nl  </div>$nl</a>"
   }
 

@@ -57,6 +57,7 @@
       "subjects": [
         {
           "slug": "mathematics",
+          "cover": "subject-cover.webp",
           "label": "Mathematics",
           "icon": "fa-square-root-variable",
           "title": "CBSE Class 7 Mathematics Study Material | Vyasa Academy",
@@ -83,6 +84,7 @@
         },
         {
           "slug": "science",
+          "cover": "subject-cover.webp",
           "label": "Science",
           "icon": "fa-flask",
           "title": "CBSE Class 7 Science Study Material | Vyasa Academy",
