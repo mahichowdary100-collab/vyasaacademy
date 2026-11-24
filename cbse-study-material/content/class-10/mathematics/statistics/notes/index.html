@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class 10 Maths Statistics Notes | CBSE | Vyasa Academy</title>
+  <meta name="description" content="Class 10 Maths Chapter 13 Statistics notes for 2026-27: grouped mean by three methods, median, mode, worked tables and practice answers." />
+  <link rel="canonical" href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/statistics/notes/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vyasa Academy" />
+  <meta property="og:title" content="Class 10 Maths Statistics Notes | CBSE | Vyasa Academy" />
+  <meta property="og:description" content="Class 10 Maths Chapter 13 Statistics notes for 2026-27: grouped mean by three methods, median, mode, worked tables and practice answers." />
+  <meta property="og:url" content="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/statistics/notes/" />
+  <meta property="og:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Class 10 Maths Statistics Notes | CBSE | Vyasa Academy" />
+  <meta name="twitter:description" content="Class 10 Maths Chapter 13 Statistics notes for 2026-27: grouped mean by three methods, median, mode, worked tables and practice answers." />
+  <meta name="twitter:image" content="https://www.vyasaacademy.in/images/classroom.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","itemListElement":[{"position":1,"name":"Home","item":"https://www.vyasaacademy.in/","@type":"ListItem"},{"position":2,"name":"CBSE Study Material","item":"https://www.vyasaacademy.in/cbse-study-material/","@type":"ListItem"},{"position":3,"name":"Class 10","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/","@type":"ListItem"},{"position":4,"name":"Mathematics","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/","@type":"ListItem"},{"position":5,"name":"Statistics","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/statistics/","@type":"ListItem"},{"position":6,"name":"Notes","item":"https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/statistics/notes/","@type":"ListItem"}],"@type":"BreadcrumbList"}
+  </script>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+      processEscapes: true
+    }
+  };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <style>
+  .sm-notes { font-size: 1rem; line-height: 1.8; }
+  .sm-notes h2 { font-size: 1.45rem; color: var(--primary); margin: 44px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--accent); }
+  .sm-notes h3 { font-size: 1.15rem; color: var(--dark); margin: 28px 0 12px; }
+  .sm-notes h4 { font-size: 1.05rem; color: var(--dark); margin: 20px 0 8px; }
+  .sm-notes p { margin-bottom: 14px; }
+  .sm-notes ul, .sm-notes ol { margin: 10px 0 16px 24px; }
+  .sm-notes li { margin-bottom: 6px; }
+  .sm-notes ul { list-style: disc; }
+
+  .def-box { background: #eef2ff; border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .def-box .box-label { font-weight: 700; color: var(--primary); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .result-box { background: #fff8e1; border-left: 4px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .result-box .box-label { font-weight: 700; color: var(--accent-dark); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .example-box { background: #f0fdf4; border-left: 4px solid #16a34a; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .example-box .box-label { font-weight: 700; color: #16a34a; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .tip-box { background: #eff6ff; border-left: 4px solid #2563eb; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .tip-box .box-label { font-weight: 700; color: #2563eb; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .warn-box { background: #fef2f2; border-left: 4px solid #dc2626; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .warn-box .box-label { font-weight: 700; color: #dc2626; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .steps { margin: 12px 0 16px; }
+  .steps .step { display: flex; gap: 12px; margin-bottom: 10px; }
+  .steps .step-num { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: var(--primary); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; margin-top: 3px; }
+  .steps .step-text { flex: 1; }
+
+  .table-wrap { overflow-x: auto; margin: 16px 0; -webkit-overflow-scrolling: touch; }
+  .sm-notes table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .sm-notes th { background: var(--primary); color: var(--white); text-align: left; padding: 12px 14px; font-weight: 600; white-space: nowrap; }
+  .sm-notes td { padding: 10px 14px; border-bottom: 1px solid #e5e7eb; }
+  .sm-notes tr:nth-child(even) td { background: #f9fafb; }
+  .sm-notes tr:hover td { background: #eef2ff; }
+
+  .highlight { background: #fef9c3; padding: 2px 5px; border-radius: 4px; font-weight: 600; }
+  .qbox { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: var(--radius); padding: 16px 20px; margin: 12px 0; }
+  .qbox .q-label { font-weight: 700; color: var(--primary); margin-bottom: 4px; }
+
+  .app-box { background: #ecfeff; border-left: 4px solid #0891b2; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .app-box .box-label { font-weight: 700; color: #0e7490; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .comp-box { background: #f5f3ff; border-left: 4px solid #7c3aed; border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 18px 0; }
+  .comp-box .box-label { font-weight: 700; color: #6d28d9; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+  .solved-box { background: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #16a34a; border-radius: var(--radius); padding: 18px 22px; margin: 18px 0; box-shadow: 0 2px 8px rgba(15,23,42,.05); }
+  .solved-box .s-label { font-weight: 700; color: #16a34a; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  .solved-box .s-part { margin: 10px 0 0; }
+  .solved-box .s-part b { color: var(--primary); }
+
+  .solution-box { background: #f8fafc; border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 16px 0 4px; font-size: 0.95rem; }
+  .solution-box p { margin: 8px 0; }
+
+  .case-card { background: #fff; border: 1px solid #e2e8f0; border-radius: var(--radius); margin: 22px 0; box-shadow: 0 2px 8px rgba(15,23,42,.05); overflow: hidden; }
+  .case-card-header { background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: #fff; padding: 14px 20px; }
+  .case-card-header h3 { margin: 0; font-size: 1.05rem; }
+  .case-card-body { padding: 18px 20px; }
+
+  .concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 18px 0; }
+  .concept-card { background: #fff; border: 1px solid #e2e8f0; border-left: 4px solid var(--primary); border-radius: var(--radius); padding: 16px 18px; transition: var(--transition); }
+  .concept-card:hover { box-shadow: 0 6px 18px rgba(79,70,229,.12); transform: translateY(-2px); }
+  .concept-card h4 { color: var(--primary); margin: 0 0 6px; font-size: 1rem; }
+  .concept-card p { margin: 0; font-size: 0.92rem; }
+
+  .tag-pill { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: .4px; text-transform: uppercase; padding: 3px 10px; border-radius: 999px; vertical-align: middle; }
+  .tag-style { background: #e0e7ff; color: #3730a3; }
+
+  .sm-notes mjx-container { max-width: 100%; }
+  .sm-notes mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; }
+
+  .resource-nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
+  .resource-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: var(--radius); border: 2px solid #e5e7eb; font-weight: 600; font-size: 0.92rem; color: var(--dark); background: var(--white); transition: var(--transition); }
+  .resource-nav a:hover, .resource-nav a.is-active { border-color: var(--primary); background: var(--primary); color: var(--white); }
+
+  .sm-back { display: inline-flex; align-items: center; gap: 8px; margin-top: 30px; padding: 10px 0; color: var(--primary); font-weight: 600; }
+  .sm-back:hover { color: var(--accent-dark); }
+
+  .next-chapter { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; justify-content: space-between; margin-top: 26px; padding: 18px 22px; background: linear-gradient(135deg, #eef2ff, #ffffff); border: 1px solid #e0e7ff; border-radius: var(--radius); }
+  .next-chapter h3 { margin: 0; font-size: 1.02rem; }
+  .next-chapter p { margin: 4px 0 0; font-size: 0.9rem; }
+
+  @media (max-width: 640px) {
+    .sm-notes h2 { font-size: 1.25rem; }
+    .sm-notes { font-size: 0.95rem; }
+    .steps .step { gap: 8px; }
+    .steps .step-num { width: 22px; height: 22px; font-size: 0.75rem; }
+    .resource-nav { gap: 6px; }
+    .resource-nav a { padding: 8px 12px; font-size: 0.85rem; }
+    .concept-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 420px) {
+    .concept-grid { grid-template-columns: 1fr; }
+  }
+
+  .chapter-diagram { margin: 24px auto 30px; max-width: 980px; }
+  .chapter-diagram img { display: block; width: 100%; height: auto; border-radius: 18px; border: 1px solid #dce8ed; background: #f4f8fa; }
+  .chapter-diagram figcaption { color: var(--muted, #526578); font-size: .92rem; line-height: 1.6; padding: 10px 12px; }
+  .notes-toc { background: #f7f9ff; border: 1px solid #dbe3f5; border-radius: 14px; padding: 14px 20px; margin: 10px 0 30px; }
+  .notes-toc summary { color: var(--primary); font-size: 1.05rem; font-weight: 700; cursor: pointer; }
+  .notes-toc ul { columns: 2; column-gap: 36px; margin: 12px 0 4px 22px; }
+  .notes-toc li { break-inside: avoid; }
+  .notes-toc a { text-decoration: none; }
+  .answer-key { padding: 14px 18px; background: #f7f9fc; border-radius: 12px; border: 1px solid #e0e7ef; }
+  .answer-key summary { font-weight: 700; cursor: pointer; color: var(--primary); }
+  @media (max-width: 640px) { .notes-toc ul { columns: 1; } .chapter-diagram { margin: 18px auto 24px; } }
+  @media print { .navbar, .resource-nav, .footer, .sm-crumbs, .notes-toc, .next-chapter, .sm-back { display: none !important; } .sm-page, .sm-container { max-width: none !important; padding: 0 !important; } .chapter-diagram img { max-width: 100%; } .sm-notes h2 { break-after: avoid; } .solved-box { break-inside: avoid; } }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="/" class="logo"><i class="fas fa-graduation-cap"></i> Vyasa Academy</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="/">Home</a>
+      <a href="/#courses">Courses</a>
+      <a href="/cbse-study-material/" class="active">Study Material</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main class="sm-page">
+  <div class="container sm-container">
+    <nav class="sm-crumbs" aria-label="Breadcrumb">
+      <a href="https://www.vyasaacademy.in/">Home</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/">CBSE Study Material</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/">Class 10</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/">Mathematics</a> /
+      <a href="https://www.vyasaacademy.in/cbse-study-material/class-10/mathematics/statistics/">Statistics</a> /
+      Notes
+    </nav>
+
+    <section class="sm-hero sm-hero-slim">
+      <p class="sm-eyebrow">CBSE Class 10 &middot; Mathematics &middot; Chapter 13</p>
+      <h1>Class 10 Mathematics &#8211; Chapter 13: Statistics</h1><p>Learn to summarise grouped data using mean, median and mode. Follow complete calculation tables, compare three methods for the mean, and practise choosing the correct class and formula.</p>
+    </section>
+
+    <nav class="resource-nav" aria-label="Chapter resources">
+      <a class="is-active" href="/cbse-study-material/class-10/mathematics/statistics/notes/"><i class="fas fa-book-open"></i> Notes</a>
+      <a href="/cbse-study-material/class-10/mathematics/statistics/practice-paper/"><i class="fas fa-file-lines"></i> Practice Paper</a>
+      <a href="/cbse-study-material/class-10/mathematics/statistics/quiz/"><i class="fas fa-bullseye"></i> Quiz</a>
+      <a href="/cbse-study-material/class-10/mathematics/statistics/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+    </nav>
+
+    <article class="sm-notes">
+<nav class="notes-toc" aria-label="On this page"><details open><summary>On this page</summary><ul>
+<li><a href="#scope">Syllabus and key ideas</a></li><li><a href="#grouping">Classes and boundaries</a></li><li><a href="#data">Shared worked dataset</a></li><li><a href="#direct">Direct mean</a></li><li><a href="#assumed">Assumed mean</a></li><li><a href="#step">Step deviation</a></li><li><a href="#median">Median</a></li><li><a href="#mode">Mode</a></li><li><a href="#missing">Missing frequency</a></li><li><a href="#revision">Revision and exam tips</a></li><li><a href="#practice">Self-practice with answers</a></li><li><a href="#sources">Sources</a></li></ul></details></nav>
+<section id="scope"><h2>1. Syllabus and key ideas</h2><p>The 2026–27 CBSE Class X syllabus includes mean, median and mode of grouped data. It names the direct, assumed-mean and step-deviation methods for the mean and algebraic methods for median and mode. Bimodal situations are excluded.</p><div class="concept-grid"><div class="concept-card"><h3>Mean</h3><p>A weighted average: every class contributes according to its frequency.</p></div><div class="concept-card"><h3>Median</h3><p>The central value, with half the observations on either side in the underlying ordered data.</p></div><div class="concept-card"><h3>Mode</h3><p>The value around which observations are most concentrated; estimate it from the modal class.</p></div></div><p>Grouped data give intervals rather than every individual value. The calculated mean uses class midpoints, while median and mode use interpolation within a class. They are estimates of the measures for the original observations.</p></section>
+<section id="grouping"><h2>2. Classes, boundaries and class marks</h2><p>The <strong>frequency</strong> \(f_i\) counts observations in class \(i\). The total is \(N=\sum f_i\). The class mark is the midpoint \(x_i=(\text{lower boundary}+\text{upper boundary})/2\). Class width is the difference between the boundaries.</p><p>Here, intervals such as 20–30 mean \(20\leq x&lt;30\). Thus 30 belongs to the next class, avoiding double counting. For inclusive classes of values recorded to the nearest whole unit, such as 10–19 and 20–29, use continuous boundaries 9.5–19.5 and 19.5–29.5 when applying grouped median or mode formulas. This uses half the gap between consecutive class limits; do not subtract 0.5 from already continuous classes like 10–20 and 20–30.</p><figure class="chapter-diagram"><img src="/images/class-10/mathematics/chapters/statistics/class-mark.png" width="1400" height="760" alt="Number line from 20 to 30, midpoint 25, class width 10." loading="lazy" decoding="async"><figcaption>Use the midpoint for the mean; use the appropriate boundary in median and mode formulas.</figcaption></figure>
+<div class="tip-box"><div class="box-label">Cumulative frequency</div><p>Add frequencies successively. For frequencies 4, 7 and 12, the cumulative totals are 4, 11 and 23. The last cumulative total must equal \(N\).</p></div></section>
+<section id="data"><h2>3. One dataset for comparing the methods</h2><p>Forty students record their daily reading time. Use the original grouped table below for Examples 1–5. Every class has width 10 minutes.</p><div class="table-wrap"><table><caption>Original dataset: daily reading time of 40 students</caption><thead><tr><th scope="col">Reading time (minutes)</th><th scope="col">Frequency \(f_i\)</th><th scope="col">Class mark \(x_i\)</th><th scope="col">\(f_ix_i\)</th><th scope="col">Cumulative frequency</th></tr></thead><tbody><tr><td>0–10</td><td>4</td><td>5</td><td>20</td><td>4</td></tr><tr><td>10–20</td><td>7</td><td>15</td><td>105</td><td>11</td></tr><tr><td>20–30</td><td>12</td><td>25</td><td>300</td><td>23</td></tr><tr><td>30–40</td><td>10</td><td>35</td><td>350</td><td>33</td></tr><tr><td>40–50</td><td>7</td><td>45</td><td>315</td><td>40</td></tr><tr><td>Total</td><td>40</td><td>—</td><td>1090</td><td>—</td></tr></tbody></table></div><p>The modal class and median class happen to coincide here. That is not true for every distribution.</p></section>
+<section id="direct"><h2>4. Mean by the direct method</h2><div class="result-box"><p>\[\bar{x}=\frac{\sum f_ix_i}{\sum f_i}.\]</p><p>Multiply every class mark by its frequency, add the products and divide by the total frequency.</p></div><div class="solved-box"><h3>Example 1: Direct mean of reading time</h3><ol><li>Class marks are \(5,15,25,35,45\) minutes.</li><li>The products \(f_ix_i\) are \(20,105,300,350,315\).</li><li>Their sum is \(1090\), and the frequency total is \(40\).</li></ol><p>\[\bar{x}=\frac{1090}{40}=27.25\text{ minutes}.\]</p><p><strong>Answer:</strong> the estimated mean reading time is <strong>27.25 minutes</strong>.</p></div><p>Do not divide by the number of classes. The denominator is the number of observations, \(40\), rather than \(5\).</p></section>
+<section id="assumed"><h2>5. Mean by the assumed-mean method</h2><p>Choose a convenient class mark \(a\) near the centre of the distribution. Put \(d_i=x_i-a\), retaining negative signs for class marks below \(a\).</p><div class="result-box"><p>\[\bar{x}=a+\frac{\sum f_id_i}{N}.\]</p></div><p>This follows from \(x_i=a+d_i\): \(\sum f_ix_i=aN+\sum f_id_i\). Choosing \(a\) simplifies arithmetic; it does not change the answer.</p><div class="table-wrap"><table><caption>Calculation table for assumed mean and step deviation</caption><thead><tr><th scope="col">Class</th><th scope="col">\(f_i\)</th><th scope="col">\(d_i=x_i-25\)</th><th scope="col">\(f_id_i\)</th><th scope="col">\(u_i=d_i/10\)</th><th scope="col">\(f_iu_i\)</th></tr></thead><tbody><tr><td>0–10</td><td>4</td><td>-20</td><td>-80</td><td>-2</td><td>-8</td></tr><tr><td>10–20</td><td>7</td><td>-10</td><td>-70</td><td>-1</td><td>-7</td></tr><tr><td>20–30</td><td>12</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>30–40</td><td>10</td><td>10</td><td>100</td><td>1</td><td>10</td></tr><tr><td>40–50</td><td>7</td><td>20</td><td>140</td><td>2</td><td>14</td></tr><tr><td>Total</td><td>40</td><td>—</td><td>90</td><td>—</td><td>9</td></tr></tbody></table></div>
+<div class="solved-box"><h3>Example 2: Use \(a=25\) minutes</h3><p>The deviations are \(-20,-10,0,10,20\). Their weighted sum is \(-80-70+0+100+140=90\).</p><p>\[\bar{x}=25+\frac{90}{40}=27.25\text{ minutes}.\]</p><p><strong>Check:</strong> this agrees with the direct method.</p></div></section>
+<section id="step"><h2>6. Mean by the step-deviation method</h2><p>When class marks are equally spaced, divide the deviations by the common class width \(h\). Set \(u_i=(x_i-a)/h\). This produces smaller numbers.</p><div class="result-box"><p>\[\bar{x}=a+h\frac{\sum f_iu_i}{N}.\]</p></div><div class="solved-box"><h3>Example 3: Use \(a=25\) and \(h=10\)</h3><p>The values of \(u_i\) are \(-2,-1,0,1,2\). The weighted values are \(-8,-7,0,10,14\), giving \(\sum f_iu_i=9\).</p><p>\[\bar{x}=25+10\left(\frac9{40}\right)=27.25\text{ minutes}.\]</p><p><strong>Check:</strong> all three methods give the same mean. Remember to multiply the correction by \(h\).</p></div><p>Use the direct method when products are simple, assumed mean when subtracting a central value helps, and step deviation when the common spacing makes \(u_i\) small integers. If widths vary, direct or assumed mean avoids assuming a common class width.</p></section>
+<section id="median"><h2>7. Median of grouped data</h2><p>Find \(N/2\), then select the class whose cumulative frequency first exceeds \(N/2\). For a value exactly at a cumulative boundary, the interpolation gives that shared class boundary.</p><figure class="chapter-diagram"><img src="/images/class-10/mathematics/chapters/statistics/median-class.png" width="1400" height="760" alt="Classes 0–10 to 40–50 have cumulative frequencies 4, 11, 23, 33, 40. Class 20–30 contains the halfway position 20." loading="lazy" decoding="async"><figcaption>The previous cumulative frequency is 11; the median-class frequency is 12.</figcaption></figure>
+<div class="result-box"><p>\[\text{Median}=l+\left(\frac{N/2-cf}{f}\right)h.\]</p><ul><li>\(l\): lower boundary of the median class.</li><li>\(cf\): cumulative frequency <strong>before</strong> the median class.</li><li>\(f\): frequency of the median class, not its cumulative frequency.</li><li>\(h\): width of the median class.</li></ul></div>
+<div class="solved-box"><h3>Example 4: Median reading time</h3><ol><li>\(N/2=40/2=20\).</li><li>Cumulative totals are \(4,11,23,33,40\); the first exceeding 20 is 23, so the median class is 20–30.</li><li>Use \(l=20,\ cf=11,\ f=12,\ h=10\).</li></ol><p>\[\text{Median}=20+\frac{20-11}{12}\times10=20+7.5=27.5\text{ minutes}.\]</p><p><strong>Answer:</strong> estimated median = <strong>27.5 minutes</strong>. It lies within the selected class, as it should.</p></div><p>The expression \((N/2-cf)/f\) gives the fraction of the median class needed to reach the halfway point. Multiplying by \(h\) converts that fraction into a distance along the interval.</p></section>
+<section id="mode"><h2>8. Mode of grouped data</h2><p>For the equal-width distributions used here, the modal class has the highest frequency. The mode formula also uses the frequencies of the immediately preceding and succeeding classes.</p><figure class="chapter-diagram"><img src="/images/class-10/mathematics/chapters/statistics/modal-class.png" width="1400" height="760" alt="Equal-width frequency histogram: frequencies 4, 7, 12, 10, 7 for successive ten-minute intervals. Class 20–30 has the tallest bar." loading="lazy" decoding="async"><figcaption>This picture illustrates the modal-class choice. Use the algebraic formula to estimate the mode.</figcaption></figure>
+<div class="result-box"><p>\[\text{Mode}=l+\left(\frac{f_1-f_0}{2f_1-f_0-f_2}\right)h.\]</p><ul><li>\(l\): lower boundary of the modal class; \(h\): its width.</li><li>\(f_1\): modal-class frequency.</li><li>\(f_0\): preceding-class frequency; \(f_2\): succeeding-class frequency.</li></ul></div>
+<div class="solved-box"><h3>Example 5: Modal reading time</h3><p>The largest frequency is 12 in class 20–30. Therefore \(l=20,\ h=10,\ f_1=12,\ f_0=7,\ f_2=10\).</p><p>\[\text{Mode}=20+\frac{12-7}{2(12)-7-10}\times10=20+\frac{50}{7}\approx27.14\text{ minutes}.\]</p><p><strong>Answer:</strong> estimated mode = <strong>27.14 minutes</strong>. The modal class is an interval; the mode is an estimated value inside it.</p></div><p>The mean (27.25), median (27.5) and mode (about 27.14) need not be equal. The approximate empirical relation \(\text{Mode}\approx3\text{Median}-2\text{Mean}\) is a supplementary rule of thumb for some distributions, not an exact identity or a replacement for these formulas.</p></section>
+<section id="missing"><h2>9. Finding a missing frequency</h2><div class="solved-box"><h3>Example 6: A given mean</h3><p>For the same intervals 0–10, 10–20, 20–30, 30–40 and 40–50, a new distribution has frequencies \(3,p,8,5,2\). Its grouped mean is 25. Find \(p\).</p><ol><li>The total frequency is \(N=18+p\).</li><li>Using class marks \(5,15,25,35,45\), the weighted sum is \(15+15p+200+175+90=480+15p\).</li><li>Substitute in the mean formula and solve:</li></ol><p>\[25=\frac{480+15p}{18+p}\Rightarrow450+25p=480+15p\Rightarrow p=3.\]</p><p><strong>Verification:</strong> \(N=21\), \(\sum f_ix_i=525\), and \(525/21=25\). The frequency is a non-negative integer.</p></div></section>
+<section id="revision"><h2>10. Revision and examination tips</h2><ul><li>Label every calculation column: \(f_i,x_i,f_ix_i\), or \(d_i,f_id_i\), or \(u_i,f_iu_i\).</li><li>Use class marks for the mean and class boundaries for the median and mode.</li><li>For median, use the cumulative frequency before the median class. For mode, use ordinary neighbouring frequencies.</li><li>Keep negative deviations and brackets in the mode denominator.</li><li>Check \(\sum f_i=N\) and the last cumulative frequency \(=N\).</li><li>Retain fractions during calculation and round only the final result. Mean, median and mode carry the data's original units.</li><li>For less-than cumulative data, recover ordinary frequencies by subtracting consecutive cumulative totals before using the mean or mode formulas.</li></ul>
+<div class="table-wrap"><table><caption>Quick formula reference</caption><thead><tr><th scope="col">Measure / method</th><th scope="col">Formula</th></tr></thead><tbody><tr><td>Direct mean</td><td>\(\bar x=\sum f_ix_i/N\)</td></tr><tr><td>Assumed mean</td><td>\(\bar x=a+\sum f_id_i/N\)</td></tr><tr><td>Step deviation</td><td>\(\bar x=a+h\sum f_iu_i/N\)</td></tr><tr><td>Median</td><td>\(l+[(N/2-cf)/f]h\)</td></tr><tr><td>Mode</td><td>\(l+[(f_1-f_0)/(2f_1-f_0-f_2)]h\)</td></tr></tbody></table></div></section>
+<section id="practice"><h2>11. Self-practice with answers</h2><p>Original questions. For Questions 1–3, use classes 0–10, 10–20, 20–30, 30–40 and 40–50 minutes with respective frequencies \(2,5,9,6,3\).</p><ol><li>Find the mean by the direct method, then check using \(a=25,\ h=10\).</li><li>Find the median class and estimate the median.</li><li>Identify the modal class and estimate the mode.</li><li>Less-than cumulative frequencies at upper boundaries 10, 20, 30, 40, 50 are \(3,8,17,23,25\). Recover the five class frequencies.</li><li>Values recorded in whole units are grouped as 10–19, 20–29 and 30–39. Give continuous class boundaries and the class mark of the second class.</li><li>In Example 6, explain why \(18+p\), rather than 5, is the denominator in the mean formula.</li></ol>
+<details class="answer-key"><summary>Check your answers and working</summary><ol><li>\(N=25,\ \sum f_ix_i=655\), so \(\bar x=26.2\) minutes. Step values are \(-2,-1,0,1,2\); \(\sum f_iu_i=-4-5+0+6+6=3\). Hence \(25+10(3/25)=26.2\).</li><li>Cumulative totals \(2,7,16,22,25\) put \(N/2=12.5\) in 20–30. Median \(=20+[(12.5-7)/9]10\approx26.11\) minutes.</li><li>20–30 is modal. Mode \(=20+[(9-5)/(18-5-6)]10\approx25.71\) minutes.</li><li>Frequencies: \(3,5,9,6,2\); their sum is 25.</li><li>Boundaries: 9.5–19.5, 19.5–29.5, 29.5–39.5. Second class mark \(=(19.5+29.5)/2=24.5\).</li><li>The denominator counts observations. Five is only the number of classes; \(18+p\) is the sum of their frequencies.</li></ol></details></section>
+<section id="sources"><h2>Sources and review status</h2><p>Scope checked against the <a href="https://cbseacademic.nic.in/web_material/CurriculumMain27/SecPart1/Maths_SecP1X_2026-27.pdf" target="_blank" rel="noopener">official CBSE Class X Mathematics syllabus for 2026–27</a>, Unit VII: Statistics. Consult the <a href="https://ncert.nic.in/textbook.php" target="_blank" rel="noopener">NCERT textbook portal</a> for the prescribed textbook. These notes contain original explanations, datasets and diagrams; examples are not presented as textbook questions or past examination questions.</p><p>Calculations were checked during preparation. Independent teacher review is pending.</p></section>
+<section id="related"><h2>Related resources</h2><ul><li><a href="/cbse-study-material/class-10/mathematics/surface-areas-and-volumes/notes/">Chapter 12 — Surface Areas and Volumes Notes</a></li><li><a href="/cbse-study-material/class-10/mathematics/statistics/">Chapter 13 — Statistics overview</a></li><li><a href="/cbse-study-material/class-10/mathematics/">All Class 10 Mathematics chapters</a></li></ul></section></article>
+
+    <nav class="resource-nav" aria-label="More from this chapter">
+      <a href="/cbse-study-material/class-10/mathematics/statistics/notes/" class="is-active"><i class="fas fa-book-open"></i> Notes</a>
+      <a href="/cbse-study-material/class-10/mathematics/statistics/practice-paper/"><i class="fas fa-file-lines"></i> Practice Paper</a>
+      <a href="/cbse-study-material/class-10/mathematics/statistics/quiz/"><i class="fas fa-bullseye"></i> Quiz</a>
+      <a href="/cbse-study-material/class-10/mathematics/statistics/test/"><i class="fas fa-clipboard-check"></i> Chapter Test</a>
+    </nav>
+
+    <div class="next-chapter"><div><h3>Next: Chapter 14 &#8212; Probability</h3><p>Continue with elementary probability and simple events.</p></div><a class="btn btn-primary" href="/cbse-study-material/class-10/mathematics/probability/">Open Chapter 14</a></div>
+
+    <a class="sm-back" href="/cbse-study-material/class-10/mathematics/statistics/"><i class="fas fa-arrow-left"></i> Back to Chapter 13 overview</a>
+    <a class="sm-back" href="/cbse-study-material/class-10/mathematics/" style="margin-left: 12px;"><i class="fas fa-arrow-left"></i> All Mathematics chapters</a>
+
+  </div>
+</main>
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-about">
+      <h3><i class="fas fa-graduation-cap"></i> Vyasa Academy</h3>
+      <p>Empowering students from Classes VI to XII with quality CBSE and ICSE tuition. Building foundations for a brighter tomorrow.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#courses">Courses</a></li>
+        <li><a href="/cbse-study-material/">Study Material</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#papers">Practice Papers</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Popular Searches</h4>
+      <ul>
+        <li><a href="/cbse-study-material/">CBSE Study Material</a></li>
+        <li><a href="/best-tuition-centre-hulimavu/">Best Tuition Centre in Hulimavu</a></li>
+        <li><a href="/cbse-tuition-hulimavu/">CBSE Tuition in Hulimavu</a></li>
+        <li><a href="/maths-tuition-hulimavu/">Maths Tuition in Hulimavu</a></li>
+        <li><a href="/science-tuition-hulimavu/">Science Tuition in Hulimavu</a></li>
+        <li><a href="/class-10-tuition-hulimavu/">Class 10 Tuition Hulimavu</a></li>
+        <li><a href="/class-12-tuition-hulimavu/">Class 12 Tuition Hulimavu</a></li>
+        <li><a href="/tuition-centre-bangalore/">Best Tuition Centre in Bangalore</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/chennupatimahendra/photos/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vyasaacademy_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/vyasa-academy/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919494901006" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Vyasa Academy. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/cbse-study-material/sm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/supabase-config.js"></script>
+<script src="/supabase-auth.js"></script>
+<script src="/supabase-nav.js" defer></script>
+<script src="/chatbot/chatbot-loader.js" defer></script></body>
+</html>
